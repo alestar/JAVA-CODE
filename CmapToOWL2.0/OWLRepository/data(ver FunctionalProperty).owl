@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF 
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+xmlns:owl="http://www.w3.org/2002/07/owl#" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#" 
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+xmlns="http://sweet.jpl.nasa.gov/ontology/data.owl#">
+<owl:Ontology rdf:about="">
+<!--
+<dc:title>
+Data</dc:title>
+<dc:date>
+1/8/2004 8:24:59 PM</dc:date>
+<dc:creator>
+SWEET project</dc:creator>
+<dc:description>
+</dc:description>
+<dc:subject>
+</dc:subject>
+-->
+<owl:versionInfo>
+1.0</owl:versionInfo>
+</owl:Ontology>
+<owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+<owl:Class rdf:ID="If"/>
+<owl:Class rdf:ID="NetCDF">
+<rdfs:subClassOf rdf:resource="#FileFormat"/>
+</owl:Class>
+<owl:Class rdf:ID="FileFormat"/>
+<owl:Class rdf:ID="Offset">
+<rdfs:subClassOf rdf:resource="#Value"/>
+</owl:Class>
+<owl:Class rdf:ID="Value"/>
+<owl:Class rdf:ID="Series">
+<rdfs:subClassOf rdf:resource="#DataModel"/>
+</owl:Class>
+<owl:Class rdf:ID="DataModel"/>
+<owl:Class rdf:ID="Survey">
+<rdfs:subClassOf rdf:resource="#DataProduct"/>
+</owl:Class>
+<owl:Class rdf:ID="DataProduct"/>
+<owl:Class rdf:ID="BigEndian">
+<rdfs:subClassOf rdf:resource="#ByteOrder"/>
+</owl:Class>
+<owl:Class rdf:ID="ByteOrder"/>
+<owl:Class rdf:ID="Z">
+<rdfs:subClassOf rdf:resource="#Compression"/>
+</owl:Class>
+<owl:Class rdf:ID="Compression"/>
+<owl:Class rdf:ID="ReducedGrid">
+<rdfs:subClassOf rdf:resource="#Grid"/>
+</owl:Class>
+<owl:Class rdf:ID="Grid">
+<rdfs:subClassOf rdf:resource="#DataModel"/>
+</owl:Class>
+<owl:Class rdf:ID="ASCII">
+<rdfs:subClassOf rdf:resource="#FileFormat"/>
+</owl:Class>
+<owl:Class rdf:ID="Field"/>
+<owl:Class rdf:ID="Image">
+<rdfs:subClassOf rdf:resource="#DataProduct"/>
+</owl:Class>
+<owl:Class rdf:ID="Layer"/>
+<owl:Class rdf:ID="Swath">
+<rdfs:subClassOf rdf:resource="#DataModel"/>
+</owl:Class>
+<owl:Class rdf:ID="LittleEndian">
+<rdfs:subClassOf rdf:resource="#ByteOrder"/>
+</owl:Class>
+<owl:Class rdf:ID="MaxValid">
+<rdfs:subClassOf rdf:resource="#Value"/>
+</owl:Class>
+<owl:Class rdf:ID="Profile">
+<rdfs:subClassOf rdf:resource="#DataProduct"/>
+</owl:Class>
+<owl:Class rdf:ID="Character"/>
+<owl:Class rdf:ID="Cell">
+<rdfs:subClassOf rdf:resource="#DataModel"/>
+</owl:Class>
+<owl:Class rdf:ID="Grib">
+<rdfs:subClassOf rdf:resource="#FileFormat"/>
+</owl:Class>
+<owl:Class rdf:ID="Gzip">
+<rdfs:subClassOf rdf:resource="#Compression"/>
+</owl:Class>
+<owl:Class rdf:ID="GeoTIFF">
+<rdfs:subClassOf rdf:resource="#FileFormat"/>
+</owl:Class>
+<owl:Class rdf:ID="Row">
+<rdfs:subClassOf rdf:resource="#DataModel"/>
+</owl:Class>
+<owl:Class rdf:ID="Parameter"/>
+<owl:Class rdf:ID="Interface">
+<rdfs:subClassOf rdf:resource="#Service"/>
+</owl:Class>
+<owl:Class rdf:ID="Interpolation">
+<rdfs:subClassOf rdf:resource="#Service"/>
+</owl:Class>
+<owl:Class rdf:ID="Discovery">
+<rdfs:subClassOf rdf:resource="#Service"/>
+</owl:Class>
+<owl:Class rdf:ID="Reformat">
+<rdfs:subClassOf rdf:resource="#Service"/>
+</owl:Class>
+<owl:Class rdf:ID="Mining">
+<rdfs:subClassOf rdf:resource="#Service"/>
+</owl:Class>
+<owl:Class rdf:ID="Archive">
+<rdfs:subClassOf rdf:resource="#Service"/>
+</owl:Class>
+<owl:Class rdf:ID="Subset">
+<rdfs:subClassOf rdf:resource="#Service"/>
+</owl:Class>
+<owl:Class rdf:ID="CoordinateTransformation">
+<rdfs:subClassOf rdf:resource="#Service"/>
+</owl:Class>
+<owl:Class rdf:ID="FormatConversion">
+<rdfs:subClassOf rdf:resource="#Service"/>
+</owl:Class>
+<owl:Class rdf:ID="Visualization">
+<rdfs:subClassOf rdf:resource="#Service"/>
+</owl:Class>
+<owl:Class rdf:ID="Regridding">
+<rdfs:subClassOf rdf:resource="#Service"/>
+</owl:Class>
+<owl:Class rdf:ID="Resolution">
+<rdfs:subClassOf rdf:resource="#Increment"/>
+</owl:Class>
+<owl:Class rdf:ID="WebMapServer">
+<rdfs:subClassOf rdf:resource="#Interface"/>
+</owl:Class>
+<owl:Class rdf:ID="WebCoverageServer">
+<rdfs:subClassOf rdf:resource="#Interface"/>
+</owl:Class>
+<owl:Class rdf:ID="WebFeatureServer">
+<rdfs:subClassOf rdf:resource="#Interface"/>
+</owl:Class>
+<owl:Class rdf:ID="WMS">
+<owl:equivalentClass rdf:resource="#WebMapServer"/>
+</owl:Class>
+<owl:Class rdf:ID="WCS">
+<owl:equivalentClass rdf:resource="#WebCoverageServer"/>
+</owl:Class>
+<owl:Class rdf:ID="WFS">
+<owl:equivalentClass rdf:resource="#WebFeatureServer"/>
+</owl:Class>
+<owl:Class rdf:ID="Increment"/>
+<owl:Class rdf:ID="Trajectory">
+<rdfs:subClassOf rdf:resource="#DataModel"/>
+</owl:Class>
+<owl:Class rdf:ID="BinaryMask">
+<rdfs:subClassOf rdf:resource="#Image"/>
+</owl:Class>
+<owl:Class rdf:ID="ScaleFactor">
+<rdfs:subClassOf rdf:resource="#Value"/>
+</owl:Class>
+<owl:Class rdf:ID="MissingValue">
+<rdfs:subClassOf rdf:resource="#Value"/>
+</owl:Class>
+<owl:Class rdf:ID="FillValue"/>
+<owl:Class rdf:ID="Map">
+<rdfs:subClassOf rdf:resource="#DataProduct"/>
+</owl:Class>
+<owl:Class rdf:ID="SynopticMap">
+<rdfs:subClassOf rdf:resource="#Map"/>
+</owl:Class>
+<owl:Class rdf:ID="Dataset">
+<rdfs:subClassOf rdf:resource="#DataProduct"/>
+</owl:Class>
+<owl:Class rdf:ID="TimeStep">
+<rdfs:subClassOf rdf:resource="#Increment"/>
+</owl:Class>
+<owl:Class rdf:ID="NearestNeighbor">
+<rdfs:subClassOf rdf:resource="#Interpolation"/>
+</owl:Class>
+<owl:Class rdf:ID="MinValid">
+<rdfs:subClassOf rdf:resource="#Value"/>
+</owl:Class>
+<owl:Class rdf:ID="Delimiter">
+<rdfs:subClassOf rdf:resource="#Character"/>
+</owl:Class>
+<owl:Class rdf:ID="DataStructure"/>
+<owl:Class rdf:ID="Variable"/>
+<owl:Class rdf:ID="Binary">
+<rdfs:subClassOf rdf:resource="#FileFormat"/>
+</owl:Class>
+<owl:Class rdf:ID="StratigraphicSequence">
+<rdfs:subClassOf rdf:resource="#DataProduct"/>
+</owl:Class>
+<owl:Class rdf:ID="Column">
+<rdfs:subClassOf rdf:resource="#DataModel"/>
+</owl:Class>
+<owl:Class rdf:ID="HDFEOS">
+<rdfs:subClassOf rdf:resource="#FileFormat"/>
+</owl:Class>
+<owl:Class rdf:ID="Simulation">
+<rdfs:subClassOf rdf:resource="#Investigation"/>
+</owl:Class>
+<owl:Class rdf:ID="Resource"/>
+<owl:Class rdf:ID="File"/>
+<owl:Class rdf:ID="Service"/>
+<owl:Class rdf:ID="Input"/>
+<owl:Class rdf:ID="Output"/>
+<owl:Class rdf:ID="Header"/>
+<owl:Class rdf:ID="Project"/>
+<owl:Class rdf:ID="Ensemble"/>
+<owl:Class rdf:ID="Collection"/>
+<owl:Class rdf:ID="Campaign"/>
+<owl:Class rdf:ID="Version"/>
+<owl:Class rdf:ID="Investigation"/>
+<owl:Class rdf:ID="Analysis">
+<rdfs:subClassOf rdf:resource="#Investigation"/>
+</owl:Class>
+<owl:Class rdf:ID="Experiment">
+<rdfs:subClassOf rdf:resource="#Investigation"/>
+</owl:Class>
+<owl:Class rdf:ID="Observation">
+<rdfs:subClassOf rdf:resource="#Investigation"/>
+</owl:Class>
+<owl:ObjectProperty rdf:ID="hasFieldFormat">
+	<!--rdf:type rdf:value="FunctionalProperty"/>-->
+	<rdfs:domain rdf:resource="#Field"/>
+	<rdfs:range>
+		<owl:Class rdf:ID="string"/>
+	</rdfs:range>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="hasFieldSize">
+		<!--rdf:type rdf:resource="FunctionalProperty"/>-->
+	<rdfs:domain rdf:resource="#Field"/>
+	<rdfs:range>
+			<owl:Class rdf:ID="integer"/>
+	</rdfs:range>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="version"/>
+<owl:ObjectProperty rdf:ID="transparent"/>
+<owl:ObjectProperty rdf:ID="hasByteOrder">
+<rdfs:domain rdf:resource="#Field"/>
+<rdfs:range rdf:resource="#ByteOrder"/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="hasField">
+<rdfs:domain rdf:resource="#DataModel"/>
+<rdfs:range rdf:resource="#Field"/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="hasFillValue">
+<rdfs:domain rdf:resource="#Field"/>
+<rdfs:range rdf:resource="#FillValue"/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="hasProjection">
+<rdfs:domain rdf:resource="#DataModel"/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="hasResolution">
+<rdfs:domain rdf:resource="#Field"/>
+<rdfs:range rdf:resource="#Resolution"/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="bgcolor"/>
+</rdf:RDF>
+
+

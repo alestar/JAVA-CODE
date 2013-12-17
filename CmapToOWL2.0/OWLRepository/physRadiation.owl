@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Processes -->
+
+  <owl:Class rdf:ID="PhysicalProcess"/>
+  <owl:Class rdf:ID="Emission"/>
+  <owl:Class rdf:ID="Absorption"/>
+  <owl:Class rdf:ID="Wavelength"/>
+  <owl:Class rdf:ID="Flux"/>
+  <owl:Class rdf:ID="IntervalQuantity"/>
+  <owl:Class rdf:ID="dimensionlessUnit"/>
+  <owl:Class rdf:ID="watt_perMeterSquared"/>
+  <owl:Class rdf:ID="PhysicalProperty"/>
+  <owl:Class rdf:ID="watt_perMeterSquared_perSteradian"/>
+  <owl:Class rdf:ID="Energy"/>
+  <owl:Class rdf:ID="candela_perMeterSquared"/>
+  <owl:Class rdf:ID="WavePropagation"/>
+  <owl:Class rdf:ID="Direction"/>
+  <owl:Class rdf:ID="Wave"/>
+  <owl:Class rdf:ID="Particle"/>
+  
+  
+  <owl:Class rdf:ID="Bioluminescence">
+    <rdfs:subClassOf rdf:resource="#Luminescence"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ElectromagneticRadiation">
+    <rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+    <owl:equivalentClass rdf:resource="#ElectromagneticWave"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Fluorescence">
+    <rdfs:subClassOf rdf:resource="#Luminescence"/>
+    <rdfs:comment xml:lang="en">Fluorescence is a luminescence that is mostly found as an optical phenomenon in cold bodies, in which the molecular absorption of a photon triggers the emission of another photon with a longer wavelength. The energy difference between the absorbed and emitted photons ends up as molecular vibrations or heat. Usually the absorbed photon is in the ultraviolet range, and the emitted light is in the visible range, but this depends on the absorbance curve and Stokes shift of the particular fluorophore. Fluorescence is named after the mineral fluorite, composed of calcium fluoride, which often exhibits this phenomenon.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LineEmission">
+    <rdfs:subClassOf rdf:resource="#Emission"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Luminescence">
+    <rdfs:subClassOf rdf:resource="#Radiation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Photolysis">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhysicalProcess"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Absorption" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#RadiativeTransfer" />
+    <rdfs:comment xml:lang="en">The process by which a chemical species undergoes a chemical change as the result of the absorption of a photon of light energy.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Radiation">
+    <rdfs:subClassOf rdf:resource="#RadiativeTransfer" />
+    <rdfs:label>Radiation</rdfs:label>
+    <rdfs:comment>radiative process</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="RadiativeTransfer">
+    <rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Diffuse">
+    <rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Direct">
+    <rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+  </owl:Class>
+
+<!-- Properties -->
+  <owl:Class rdf:ID="SpectralRadiance">
+    <rdfs:subClassOf rdf:resource="#Radiance" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhysicalProperty"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Wavelength" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The radiance per unit wavelength or wavenumber interval.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="RadiativeFlux">
+    <rdfs:subClassOf rdf:resource="#Flux"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ElectromagneticSpectrum">
+    <rdfs:subClassOf rdf:resource="#IntervalQuantity"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#ElectromagneticRadiation"/>
+        <owl:onProperty rdf:resource="#hasPhysicalProcess"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The electromagnetic (EM) spectrum is the range of all possible electromagnetic radiation. The electromagnetic spectrum (usually just spectrum) of an object is the characteristic distribution of electromagnetic radiation from that object.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Emissivity">
+    <rdfs:subClassOf rdf:resource="#ElectromagneticRadiationProperty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasDefaultUnit"/>	
+		</owl:onProperty>
+        <owl:hasValue rdf:resource="#dimensionlessUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Irradiance">
+    <rdfs:subClassOf rdf:resource="#ElectromagneticRadiationProperty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#watt_perMeterSquared"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ElectromagneticRadiationProperty">
+    <rdfs:subClassOf rdf:resource="#PhysicalProperty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProcess" />
+        <owl:allValuesFrom rdf:resource="#RadiativeTransfer" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass rdf:resource="#ElectromagneticRadiationQuantity" />
+  </owl:Class>
+  <owl:Class rdf:ID="ElectromagneticRadiationQuantity"/>
+
+  <owl:Class rdf:ID="Radiance">
+    <rdfs:subClassOf rdf:resource="#ElectromagneticRadiationProperty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#watt_perMeterSquared_perSteradian"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProperty" />
+        <owl:allValuesFrom rdf:resource="#RadiantEnergy" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A radiometric term for the rate at which radiant energy in a set of directions confined to a unit solid angle around a particular direction is transferred across unit area of a surface (real or imaginary) projected onto this direction.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="RadiantEnergy">
+    <rdfs:subClassOf rdf:resource="#Energy"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProcess" />
+        <owl:allValuesFrom rdf:resource="#Radiation" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Infrequently, any energy propagated by a physical quantity governed by a wave equation.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="RadiantFlux">
+    <rdfs:subClassOf rdf:resource="#Flux" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProperty" />
+        <owl:someValuesFrom rdf:resource="#Radiance" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Radiant energy per unit time passing some specified area from one side.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Brightness">
+    <rdfs:subClassOf rdf:resource="#ElectromagneticRadiationProperty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#candela_perMeterSquared"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="RadiationBalanceQuantity">
+    <rdfs:subClassOf rdf:resource="#ElectromagneticRadiationProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DepolarizationRatio">
+    <rdfs:subClassOf rdf:resource="#Ratio"/>
+    <rdfs:comment xml:lang="en">In Raman spectroscopy, the depolarization ratio is the intensity ratio between the perpendicular component and the parallel component of the Raman scattered light.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="RadiativeForcing">
+    <rdfs:subClassOf rdf:resource="#RadiationBalanceQuantity"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#watt_perMeterSquared"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  <rdfs:subClassOf rdf:resource="#RadiantFlux" />
+  <rdfs:comment xml:lang="en">In radiation, the net flux of radiation into or out of a system.  As a consequence of radiative forcing there must be some change to the nonradiative energy states of the system.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Color">
+    <rdfs:subClassOf rdf:resource="#ElectromagneticSpectrum"/>
+  </owl:Class>
+
+<!-- Pheonomena -->
+  <owl:Class rdf:ID="LineOfSightPropagation">
+    <rdfs:subClassOf rdf:resource="#WavePropagation"/>
+    <rdfs:comment xml:lang="en">Line-of-sight propagation refers to electromagnetic radiation or electromagnetic waves travelling in a straight line. The rays or waves are deviated or reflected by obstructions and cannot travel over the horizon or behind obstacles. Beyond that, material disperses the rays respectively the energy of the waves.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ViewingGeometry">
+    <rdfs:subClassOf rdf:resource="#Direction"/>
+  </owl:Class>
+
+<!-- Substances -->
+  <owl:Class rdf:ID="ElectromagneticWave">
+    <rdfs:subClassOf rdf:resource="#Wave"/>
+    <rdfs:subClassOf rdf:resource="#Particle"/>
+  </owl:Class>
+
+</rdf:RDF>

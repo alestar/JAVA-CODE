@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Phenomena -->
+
+  <owl:Class rdf:ID="MeteorologicalPhenomena"/>
+  <owl:Class rdf:ID="Circulation"/>
+  <owl:Class rdf:ID="PlanetaryPhenomena"/>
+  <owl:Class rdf:ID="Mixing"/>
+  <owl:Class rdf:ID="Temperature"/>
+  <owl:Class rdf:ID="Wave"/>
+  <owl:Class rdf:ID="Axis"/>
+  <owl:Class rdf:ID="Sand"/>
+  <owl:Class rdf:ID="Rotation"/>
+  <owl:Class rdf:ID="AtmosphericPhenomena"/>
+  <owl:Class rdf:ID="PhysicalLaw"/>
+  <owl:Class rdf:ID="Pressure"/>
+  <owl:Class rdf:ID="Trajectory"/>
+  <owl:Class rdf:ID="AbsoluteVorticity"/>
+  <owl:Class rdf:ID="FarFieldForce"/>
+  <owl:Class rdf:ID="Index"/>
+  <owl:Class rdf:ID="Velocity"/>
+  <owl:Class rdf:ID="PhysicalProperty"/>
+  <owl:Class rdf:ID="KineticEnergy"/>
+  <owl:Class rdf:ID="WaveNumber"/>
+
+  <owl:Class rdf:ID="AgeostrophicWind">
+    <rdfs:subClassOf rdf:resource="#Wind" />
+    <rdfs:comment>The vector difference between the real (or observed) wind and the geostrophic wind</rdfs:comment>
+    <rdfs:label>Ageostrophic Wind</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:ID="AtmosphericCirculation">
+    <rdfs:subClassOf rdf:resource="#MeteorologicalPhenomena"/>
+    <rdfs:subClassOf rdf:resource="#Circulation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Blowing">
+    <rdfs:comment>When dust, sand, snow, and/or spray is raised by the wind to a height of 6 feet or more</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Wind"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="CrossWind">
+    <rdfs:subClassOf rdf:resource="#Wind" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Derecho">
+    <rdfs:subClassOf rdf:resource="#WindStorm" />
+    <rdfs:comment xml:lang="en">A widespread convectively induced straight-line windstorm.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DrainageWind">
+    <rdfs:subClassOf rdf:resource="#Wind" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Entrainment">
+    <rdfs:subClassOf rdf:resource="#PlanetaryPhenomena" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhysicalProcess"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Mixing" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>Entrainment</rdfs:label>
+    <rdfs:comment>In meteorology, the mixing of environmental air into a preexisting organized air current so that the environmental air becomes part of the current; the opposite of detrainment.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="EulerianWind">
+    <rdfs:subClassOf rdf:resource="#Wind" />
+    <rdfs:comment xml:lang="en">In the classification of Jeffreys, a wind motion only in response to the pressure force.
+    </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Gust">
+    <owl:equivalentClass rdf:resource="#WindGust"/>
+    <rdfs:subClassOf rdf:resource="#Wind" />
+    <rdfs:comment xml:lang="en">1. A sudden, brief increase in the speed of the wind. It is of a more transient character than a squall and is followed by a lull or slackening in the wind speed. Generally, winds are least gusty over large water surfaces and most gusty over rough land and near high buildings. According to U.S. weather observing practice, gusts are reported when the peak wind speed reaches at least 16 knots and the variation in wind speed between the peaks and lulls is at least 9 knots. The duration of a gust is usually less than 20 s. 2. With respect to aircraft turbulence, a sharp change in wind speed relative to the aircraft; a sudden increase in airspeed due to fluctuations in the airflow, resulting in increased structural stresses upon the aircraft. 3. (Rare.) Same as cloudburst.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="HeadWind">
+    <rdfs:subClassOf rdf:resource="#Wind" />
+    <rdfs:comment xml:lang="en">A wind that opposes the intended progress of an exposed, moving object, for example, rendering an airborne object's airspeed greater than its groundspeed; the opposite of a tailwind.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="HotWind">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	  	<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhysicalProperty"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Temperature" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Wind" />
+    <rdfs:comment xml:lang="en">General term for winds characterized by intense heat and low relative humidity, such as summertime desert winds or an extreme foehn.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="JetEffectWind">
+    <rdfs:subClassOf rdf:resource="#Wind" />
+    <rdfs:comment xml:lang="en">A local wind created by acceleration of the airflow through a gap, constriction, or channel in a mountain range or between ranges.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LocalWind">
+    <rdfs:subClassOf rdf:resource="#Wind" />
+    <rdfs:comment xml:lang="en">1. Winds that, over a small area, differ from those that would be appropriate to the general large-scale pressure distribution, or that possess some other peculiarity. Often these winds have names unique to the area where they occur. Local winds may be classified into three main groups. The first includes diurnally varying airflows that are driven by local gradients of surface heat flux (e.g., near the shore of a sea or lake) or by diurnal heating or cooling of the ground surface in areas of sloping or mountainous terrain. These include land and sea breezes, mountain?valley circulations, and drainage and slope winds. The second group consists of winds produced by the interaction of a synoptic-scale flow with orography. These may be further subdivided into barrier jets, gap winds, downslope windstorms, and include such local phenomena as the tehuantepecer, Santa Ana, foehn, mistral, and bora. The third group includes those winds accompanying convective activity, more specifically individual thunderstorms or mesoscale convective systems. These are generally the surface manifestations of precipitation- cooled diverging outflow and in some locations are given special names due to the distinctive character of the weather associated with them (e.g., the haboob). 2. Local or colloquial names given to frequently occurring or particularly noteworthy winds (sometimes because of the bad weather associated with them), usually from a certain direction. Often these names reflect the direction from which the wind comes (e.g., sou'wester, nor'easter).</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MeridionalWind">
+    <rdfs:subClassOf rdf:resource="#Wind" />
+    <rdfs:comment xml:lang="en">The wind or wind component along the local meridian, as distinguished from the zonal wind. In a horizontal coordinate system fixed locally with the x axis directed eastward and the y axis northward, the meridional wind is positive if from the south, and negative if from the north.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="JetStream">
+    <rdfs:subClassOf rdf:resource="#Wind" />
+    <rdfs:subClassOf rdf:resource="#Wave" />
+    <owl:equivalentClass rdf:resource="#JetStreamWind" />
+    <rdfs:comment xml:lang="en">Relatively strong winds concentrated within a narrow stream in the atmosphere.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="JetStreamWind" />
+
+  <owl:Class rdf:ID="JetStreak">
+    <rdfs:subClassOf rdf:resource="#JetStream" />
+    <rdfs:comment xml:lang="en">The region of a jet stream axis with the greatest winds.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="JetStreamAxis">
+    <rdfs:subClassOf rdf:resource="#Axis" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasMeteorologicalPhenomena"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#JetStream" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The axis of maximum wind speed in a jet stream.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SandStorm">
+    <rdfs:subClassOf rdf:resource="#Wind"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Sand"/>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasSubstance"/>	
+		</owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="TradeWinds">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPlanetaryPhenomena"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#AtmosphericCirculation" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Wind" />
+    <rdfs:comment xml:lang="en">The wind system, occupying most of the Tropics, that blows from the subtropical highs toward the equatorial trough; a major component of the general circulation of the atmosphere.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ThermalWind">
+    <rdfs:subClassOf rdf:resource="#Wind" />
+    <rdfs:comment xml:lang="en">The mean wind-shear vector in geostrophic balance with the gradient of mean temperature of a layer bounded by two isobaric surfaces.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="VeeringWind">
+    <rdfs:subClassOf rdf:resource="#Wind" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProcess" />
+        <owl:allValuesFrom rdf:resource="#Rotation" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">In the Northern Hemisphere, a wind that rotates in a clockwise direction with increasing height; the opposite of backing wind.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="WarmConveyorBelt">
+    <rdfs:subClassOf rdf:resource="#Wind" />
+    <rdfs:subClassOf rdf:resource="#AtmosphericCirculation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ZonalFlow">
+    <rdfs:subClassOf rdf:resource="#Wind" />
+    <rdfs:comment xml:lang="en">In meteorology, the flow of air along a latitude circle; more specifically, the latitudinal (east or west) component of existing flow.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ZonalWind">
+    <rdfs:subClassOf rdf:resource="#Wind" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasMeteorologicalPhenomena" />
+        <owl:allValuesFrom rdf:resource="#ZonalFlow" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Wind">
+    <rdfs:subClassOf rdf:resource="#AtmosphericPhenomena" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="WindGust">
+    <rdfs:subClassOf rdf:resource="#Wind"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="WindStorm">
+    <rdfs:subClassOf rdf:resource="#Wind"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="TertiaryCirculation">
+    <rdfs:subClassOf rdf:resource="#AtmosphericCirculation" />
+    <rdfs:comment xml:lang="en">The generally small, localized atmospheric circulations.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ConstantAbsoluteVorticityTrajectory">
+    <rdfs:subClassOf rdf:resource="#Trajectory" />
+     <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProperty" />
+        <owl:allValuesFrom rdf:resource="#AbsoluteVorticity" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The path of an air parcel with absolute vorticity that remains constant in horizontal flow.
+    </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Downdraft">
+    <rdfs:subClassOf rdf:resource="#Wind" />
+    <rdfs:comment xml:lang="en">Small-scale downward moving air current in a cumulonimbus cloud.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="AtmosphericPumping">
+    <rdfs:subClassOf rdf:resource="#AtmosphericCirculation"/>
+    <rdfs:subClassOf rdf:resource="#FarFieldForce"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DustStorm">
+    <rdfs:subClassOf rdf:resource="#LocalWind"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Windborne">
+    <rdfs:subClassOf rdf:resource="#AtmosphericPhenomena" />
+  </owl:Class>
+
+<!-- Properties -->
+  <owl:Class rdf:ID="BlockingIndex">
+    <rdfs:subClassOf rdf:resource="#Index"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Omega">
+    <rdfs:subClassOf rdf:resource="#Velocity" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="DopplersVelocity">
+    <rdfs:subClassOf rdf:resource="#Velocity" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="RadialVelocity">
+    <rdfs:subClassOf rdf:resource="#Velocity" />
+    <rdfs:comment xml:lang="en">The component of a three-dimensional velocity vector oriented along the radial direction from the origin point or axis in polar, cylindrical, or spherical coordinates.  In connection with Doppler radar, the radial velocity component is called Doppler velocity.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="WindChillIndex">
+    <rdfs:subClassOf rdf:resource="#Temperature"/>
+    <owl:equivalentClass rdf:resource="#WindChill" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProperty" />
+        <owl:allValuesFrom rdf:resource="#Wind"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A means of quantifying the threat of rapid cooling during breezy or windy conditions that may result in hypothermia in cold conditions.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="WindChill"/>
+
+  <owl:Class rdf:ID="ZonalIndex">
+    <rdfs:subClassOf rdf:resource="#PhysicalProperty" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasMeteorologicalPhenomena" />
+        <owl:allValuesFrom rdf:resource="#ZonalFlow" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A measure of strength of the middle-latitude westerlies, usually expressed as the horizontal pressure difference between 35 and 55N latitude, or as the corresponding geostrophic wind.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ZonalKineticEnergy">
+    <rdfs:subClassOf rdf:resource="#KineticEnergy" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasMeteorologicalPhenomena" />
+        <owl:allValuesFrom rdf:resource="#ZonalFlow" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The kinetic energy of the mean zonal wind, obtained by averaging the component of the wind along a fixed latitude circle.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ZonalWaveNumber">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#ZonalFlow" />
+        <owl:onProperty rdf:resource="#hasMeteorologicalPhenomena" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#WaveNumber" />
+    <rdfs:comment xml:lang="en">The wavenumber in the zonal direction, that is, along a line of constant latitude.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="WindShear">
+    <rdfs:subClassOf rdf:resource="#AtmosphericPhenomena" />
+  </owl:Class>
+
+<!-- Laws -->
+  <owl:Class rdf:ID="BuysBallotLaw">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasMeteorologicalPhenomena" />
+        <owl:allValuesFrom rdf:resource="#Wind" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#PhysicalLaw" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProperty" />
+        <owl:allValuesFrom rdf:resource="#Pressure" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A law describing the relationship of the horizontal wind direction in the atmosphere to the pressure distribution.</rdfs:comment>
+  </owl:Class>
+
+</rdf:RDF>

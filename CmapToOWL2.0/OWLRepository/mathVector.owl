@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Classes -->
+  <owl:Class rdf:ID="Scalar"/>
+  <owl:Class rdf:ID="ReferenceSystem"/>
+  <owl:Class rdf:ID="NumericalEntity"/>
+  <owl:Class rdf:ID="Function"/>
+  <owl:Class rdf:ID="Subtraction"/>
+  <owl:Class rdf:ID="Summation"/>
+  <owl:Class rdf:ID="Multiplication"/>
+  <owl:Class rdf:ID="Field"/>  
+  <owl:Class rdf:ID="OperationOnFunction"/>  
+  <owl:Class rdf:ID="Slope"/>  
+  <owl:Class rdf:ID="ScalarField"/>  
+  <owl:Class rdf:ID="meterSquared_perSecond"/>  
+  <owl:Class rdf:ID="perSecond"/>  
+  <owl:Class rdf:ID="meterCubed_perSecond"/>  
+  
+  
+  <owl:Class rdf:ID="Array">
+    <rdfs:subClassOf rdf:resource="#Seq"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Coordinates">
+    <rdfs:subClassOf rdf:resource="#Array"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Coordinate"/>
+        <owl:onProperty rdf:resource="#eachElementHasType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Coordinate">
+    <rdfs:subClassOf rdf:resource="#Scalar"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="CoordinateSystem">
+    <rdfs:subClassOf rdf:resource="#ReferenceSystem"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Matrix">
+    <rdfs:subClassOf rdf:resource="#Seq"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Array"/>
+        <owl:onProperty rdf:resource="#eachElementHasType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="OrderedPair">
+    <rdfs:subClassOf rdf:resource="#Seq"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasArity"/>	
+		</owl:onProperty>
+        <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Order"/>
+
+  <owl:Class rdf:ID="Seq">
+    <rdfs:subClassOf rdf:resource="#NumericalEntity"/>
+    <owl:equivalentClass rdf:resource="#Order"/>
+    <owl:equivalentClass rdf:resource="#Sequence"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Sequence"/>
+
+  <owl:Class rdf:ID="Tensor">
+    <rdfs:subClassOf rdf:resource="#Seq"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Matrix"/>
+        <owl:onProperty rdf:resource="#eachElementHasType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Vector">
+    <rdfs:subClassOf rdf:resource="#Array"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Scalar"/>
+        <owl:onProperty rdf:resource="#eachElementHasType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Any quantity, such as force, velocity, or acceleration, that has both magnitude and direction at each point in space, as opposed to a scalar that has magnitude only.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="VectorFunction">
+    <rdfs:subClassOf rdf:resource="#Function"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasOutput"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Vector"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="VectorSubtraction">
+    <rdfs:subClassOf rdf:resource="#Subtraction"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	  	<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasSecondOperand"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Vector"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasFirstOperand"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Vector"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Vector"/>
+        <owl:onProperty rdf:resource="#hasOutput"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="VectorSummation">
+    <rdfs:subClassOf rdf:resource="#Summation"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Vector"/>
+        <owl:onProperty rdf:resource="#hasSecondOperand"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Vector"/>
+        <owl:onProperty rdf:resource="#hasFirstOperand"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Vector"/>
+        <owl:onProperty rdf:resource="#hasOutput"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Vector_3D">
+    <rdfs:subClassOf rdf:resource="#Vector"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:datatype="&xsd;integer">3</owl:hasValue>
+        <owl:onProperty rdf:resource="#hasArity"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="CrossProduct">
+    <rdfs:subClassOf rdf:resource="#Multiplication"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Vector"/>
+        <owl:onProperty rdf:resource="#hasSecondOperand"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Vector"/>
+        <owl:onProperty rdf:resource="#hasFirstOperand"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Vector"/>
+        <owl:onProperty rdf:resource="#hasOutput"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DotProduct">
+    <rdfs:subClassOf rdf:resource="#Multiplication"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Vector"/>
+        <owl:onProperty rdf:resource="#hasSecondOperand"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Vector"/>
+        <owl:onProperty rdf:resource="#hasFirstOperand"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Scalar"/>
+        <owl:onProperty rdf:resource="#hasOutput"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+
+  <owl:Class rdf:ID="VectorField">
+    <rdfs:subClassOf rdf:resource="#Field"/>
+    <rdfs:subClassOf rdf:resource="#VectorFunction"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="VectorFieldOperation">
+    <rdfs:subClassOf rdf:resource="#OperationOnFunction"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasInput"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#VectorField"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="TensorField">
+    <rdfs:subClassOf rdf:resource="#Field"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Tensor"/>
+        <owl:onProperty rdf:resource="#hasOutput"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Gradient">
+    <rdfs:subClassOf rdf:resource="#Slope"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#ScalarField"/>
+        <owl:onProperty rdf:resource="#hasInput"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#VectorField"/>
+        <owl:onProperty rdf:resource="#hasOutput"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Convergence">
+    <rdfs:subClassOf rdf:resource="#VectorFieldOperation"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#VectorField"/>
+        <owl:onProperty rdf:resource="#hasOutput"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="VelocityPotential">
+    <rdfs:subClassOf rdf:resource="#VectorFieldOperation"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Vector"/>
+        <owl:onProperty rdf:resource="#hasOutput"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasDefaultUnit"/>	
+		</owl:onProperty>
+        <owl:hasValue rdf:resource="#meterSquared_perSecond"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Vorticity">
+    <rdfs:subClassOf rdf:resource="#VectorFieldOperation"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#perSecond"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PotentialVorticity">
+    <rdfs:subClassOf rdf:resource="#VectorFieldOperation"/>
+    <rdfs:comment xml:lang="en">The vertically averaged vorticity of a layer divided by layer thickness.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Circulation">
+    <rdfs:subClassOf rdf:resource="#LineIntegral"/>
+    <rdfs:subClassOf rdf:resource="#VectorFieldOperation"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#VectorField"/>
+        <owl:onProperty rdf:resource="#hasInput"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Divergence">
+    <rdfs:subClassOf rdf:resource="#VectorFieldOperation"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#VectorField"/>
+        <owl:onProperty rdf:resource="#hasOutput"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#ScalarField"/>
+        <owl:onProperty rdf:resource="#hasInput"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The expansion or spreading out of a vector field; also, a precise measure thereof.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Curl">
+    <rdfs:subClassOf rdf:resource="#VectorFieldOperation"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#VectorField"/>
+        <owl:onProperty rdf:resource="#hasOutput"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Laplacian">
+    <rdfs:subClassOf rdf:resource="#VectorFieldOperation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Biharmonic">
+    <rdfs:subClassOf rdf:resource="#VectorFieldOperation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Streamfunction">
+    <rdfs:subClassOf rdf:resource="#VectorFieldOperation"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Vector"/>
+        <owl:onProperty rdf:resource="#hasOutput"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#meterCubed_perSecond"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+   <owl:ObjectProperty rdf:ID="eachElementHasType">
+    <rdfs:domain rdf:resource="#Seq"/>
+    <rdfs:range rdf:resource="#NumericalEntity"/>
+  </owl:ObjectProperty>
+
+</rdf:RDF>

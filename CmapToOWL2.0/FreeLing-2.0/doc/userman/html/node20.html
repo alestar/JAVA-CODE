@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Word form dictionary file</TITLE>
+<META NAME="description" CONTENT="Word form dictionary file">
+<META NAME="keywords" CONTENT="userman">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="userman.css">
+
+<LINK REL="next" HREF="node21.html">
+<LINK REL="previous" HREF="node19.html">
+<LINK REL="up" HREF="node9.html">
+<LINK REL="next" HREF="node21.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html362"
+  HREF="node21.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html358"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html352"
+  HREF="node19.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html360"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html363"
+  HREF="node21.html">Named entity recognition data</A>
+<B> Up:</B> <A NAME="tex2html359"
+  HREF="node9.html">Using the sample main</A>
+<B> Previous:</B> <A NAME="tex2html353"
+  HREF="node19.html">Lexical Probabilities file</A>
+ &nbsp; <B>  <A NAME="tex2html361"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00390000000000000000"></A>
+<A NAME="file-dict"></A>
+<BR>
+Word form dictionary file
+</H1>
+
+<P>
+Berkeley DB indexed file.
+
+<P>
+It may be created with the
+  <TT>src/utilities/indexdict</TT> program provided with FreeLing. The source
+  file must have the lemma-PoS list for a word form at each line.
+<BR>
+<P>
+Each line has format: <TT>form lemma1 PoS1 lemma2 PoS2 ...</TT>.  E.g. 
+<BR>  <code>casa casa NCFS000 casar VMIP3S0 casar VMM02S0</code>
+
+<P>
+Lines corresponding to word that are contractions may have an
+  alternative format if the contraction is to be splitted. The format
+  is  <TT>form form1+form2+... PoS1+PoS2+...</TT>. 
+<BR>
+For instance:
+
+<P>
+<code>del de+el SPS+DA</code>
+
+<P>
+This line expresses that whenever the form <I CLASS="slanted">del</I> is found, it is
+  replaced with two words:  <I CLASS="slanted">de</I> and <I CLASS="slanted">el</I>. Each of the new two
+  word forms are searched in the dictionary, and assigned any tag
+  matching their correspondig tag in the third field. So, <I CLASS="slanted">de</I>
+  will be assigned all tags starting with <TT>SPS</TT> that this
+  entry may have in the dictionary, and <I CLASS="slanted">el</I> will get any
+  tag starting with <TT>DA</TT>.
+
+<P>
+If all tags for one of the new forms are to be used, a wildcard may
+   be written as a tag. E.g.:
+<BR>
+<P>
+<code>pal para+el SPS+*</code>
+
+<P>
+This will replace <I CLASS="slanted">pal</I> with two words, <I CLASS="slanted">para</I> with only its
+   <TT>SPS</TT> analysis, plus <I CLASS="slanted">el</I> with all its possible tags.  
+
+<P>
+Note that a contraction cannot be splitted in two different ways, so
+  only a combination of lemmas and a combination of tags may appear
+  in the dictionary.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html362"
+  HREF="node21.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html358"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html352"
+  HREF="node19.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html360"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html363"
+  HREF="node21.html">Named entity recognition data</A>
+<B> Up:</B> <A NAME="tex2html359"
+  HREF="node9.html">Using the sample main</A>
+<B> Previous:</B> <A NAME="tex2html353"
+  HREF="node19.html">Lexical Probabilities file</A>
+ &nbsp; <B>  <A NAME="tex2html361"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2008-01-24
+</ADDRESS>
+</BODY>
+</HTML>

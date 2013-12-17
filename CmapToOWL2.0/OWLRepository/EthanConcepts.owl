@@ -1,0 +1,1911 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+xmlns:owl="http://www.w3.org/2002/07/owl#"
+xmlns="http://spire.umbc.edu/ontologies/EthanConcepts.owl#"
+xml:base="http://spire.umbc.edu/ontologies/EthanConcepts.owl#">
+<owl:Ontology rdf:about=""/>
+<owl:Class rdf:ID="Measurement"/>
+<owl:DatatypeProperty rdf:ID="units">
+<rdfs:domain rdf:resource="#Measurement"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:ID="high">
+<rdfs:domain rdf:resource="#Measurement"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:ID="average">
+<rdfs:domain rdf:resource="#Measurement"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+<owl:DatatypeProperty rdf:ID="low">
+<rdfs:domain rdf:resource="#Measurement"/>
+<rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+</owl:DatatypeProperty>
+<owl:Class rdf:ID="NativeThing"/>
+<owl:Class rdf:ID="IntroducedThing"/>
+<owl:Class rdf:ID="ThingWithGeographicRange"/>
+<owl:Class rdf:ID="NearcticThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithGeographicRange"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="NearcticIntroducedThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#NearcticThing"/>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Class rdf:about="#IntroducedThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="NearcticNativeThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#NearcticThing"/>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Class rdf:about="#NativeThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="PalearcticThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithGeographicRange"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="PalearcticIntroducedThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#PalearcticThing"/>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Class rdf:about="#IntroducedThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="PalearcticNativeThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#PalearcticThing"/>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Class rdf:about="#NativeThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="OrientalThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithGeographicRange"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="OrientalIntroducedThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#OrientalThing"/>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Class rdf:about="#IntroducedThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="OrientalNativeThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#OrientalThing"/>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Class rdf:about="#NativeThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="EthiopianThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithGeographicRange"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="EthiopianIntroducedThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#EthiopianThing"/>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Class rdf:about="#IntroducedThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="EthiopianNativeThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#EthiopianThing"/>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Class rdf:about="#NativeThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="NeotropicalThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithGeographicRange"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="NeotropicalIntroducedThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#NeotropicalThing"/>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Class rdf:about="#IntroducedThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="NeotropicalNativeThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#NeotropicalThing"/>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Class rdf:about="#NativeThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="AustralianThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithGeographicRange"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="AustralianIntroducedThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#AustralianThing"/>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Class rdf:about="#IntroducedThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="AustralianNativeThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#AustralianThing"/>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Class rdf:about="#NativeThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="AntarcticaThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithGeographicRange"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="AntarcticaIntroducedThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#AntarcticaThing"/>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Class rdf:about="#IntroducedThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="AntarcticaNativeThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#AntarcticaThing"/>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Class rdf:about="#NativeThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="OceanicIslandsThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithGeographicRange"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="OceanicIslandsIntroducedThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#OceanicIslandsThing"/>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Class rdf:about="#IntroducedThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="OceanicIslandsNativeThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#OceanicIslandsThing"/>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Class rdf:about="#NativeThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ArcticOceanThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithGeographicRange"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ArcticOceanIntroducedThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ArcticOceanThing"/>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Class rdf:about="#IntroducedThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ArcticOceanNativeThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ArcticOceanThing"/>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Class rdf:about="#NativeThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="IndianOceanThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithGeographicRange"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="IndianOceanIntroducedThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#IndianOceanThing"/>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Class rdf:about="#IntroducedThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="IndianOceanNativeThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#IndianOceanThing"/>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Class rdf:about="#NativeThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="AtlanticOceanThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithGeographicRange"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="AtlanticOceanIntroducedThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#AtlanticOceanThing"/>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Class rdf:about="#IntroducedThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="AtlanticOceanNativeThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#AtlanticOceanThing"/>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Class rdf:about="#NativeThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="PacificOceanThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithGeographicRange"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="PacificOceanIntroducedThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#PacificOceanThing"/>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Class rdf:about="#IntroducedThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="PacificOceanNativeThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#PacificOceanThing"/>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Class rdf:about="#NativeThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="MediterraneanSeaThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithGeographicRange"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="MediterraneanSeaIntroducedThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#MediterraneanSeaThing"/>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Class rdf:about="#IntroducedThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="MediterraneanSeaNativeThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#MediterraneanSeaThing"/>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Class rdf:about="#NativeThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="HolarcticThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithGeographicRange"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="CosmopolitanThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithGeographicRange"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="IslandEndemicThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithGeographicRange"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithHabitat"/>
+<owl:Class rdf:ID="TemperateLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="TropicalLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="PolarLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="TerrestrialLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="SaltwaterOrMarineLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="FreshwaterLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="TundraLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="TaigaLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="DesertOrDuneLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="SavannaOrGrasslandLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ChaparralLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ForestLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="RainforestLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ScrubForestLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="MountainsLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="IcecapLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="PelagicLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="BenthicLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ReefLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="OceanicVentLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="LakesAndPondsLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="RiversAndStreamsLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="TemporaryPoolsLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="CoastalLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="AbyssalLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="BrackishWaterLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="WetlandsLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="WetlandsMarshLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#WetlandsLivingThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="WetlandsSwampLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#WetlandsLivingThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="WetlandsBogLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#WetlandsLivingThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="UrbanLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="SuburbanLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="AgriculturalLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="RiparianLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="EstuarineLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="IntertidalOrLittoralLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="CavesLivingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithHabitat"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithPhysicalDescription"/>
+<owl:Class rdf:ID="EndothermicThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithPhysicalDescription"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="EctothermicThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithPhysicalDescription"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="HeterothermicThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithPhysicalDescription"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="HomoiothermicThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithPhysicalDescription"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithBilateralSymmetry">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithPhysicalDescription"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithRadialSymmetry">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithPhysicalDescription"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="PolymorphicThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithPhysicalDescription"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="PoisonousThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithPhysicalDescription"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="VenomousThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithPhysicalDescription"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithSexualDimorphism">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithPhysicalDescription"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithSexualDimorphismSexesAlike">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithSexualDimorphism"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithSexualDimorphismFemaleLarger">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithSexualDimorphism"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithSexualDimorphismMaleLarger">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithSexualDimorphism"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithSexualDimorphismSexesColoredOrPatternedDifferently">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithSexualDimorphism"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithSexualDimorphismFemaleMoreColorful">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithSexualDimorphism"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithSexualDimorphismMaleMoreColorful">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithSexualDimorphism"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithSexualDimorphismSexesShapedDifferently">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithSexualDimorphism"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithSexualDimorphismOrnamentation">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithSexualDimorphism"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithDevelopment"/>
+<owl:Class rdf:ID="Neotenic">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithDevelopment"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="NeotenicPaedomorphicThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#Neotenic"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithMetamorphosis">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithDevelopment"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithTemperatureSexDetermination">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithDevelopment"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithColonialGrowth">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithDevelopment"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithIndeterminateGrowth">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithDevelopment"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithDiapause">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithDevelopment"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithReproductionMatingSystems"/>
+<owl:Class rdf:ID="MonogamousThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionMatingSystems"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="PolyandrousThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionMatingSystems"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="PolygynousThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionMatingSystems"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="PolygynandrousPromiscuousThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionMatingSystems"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithCooperativeBreeder">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionMatingSystems"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="EusocialThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionMatingSystems"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithReproductionGeneralBehavior"/>
+<owl:Class rdf:ID="SemelparousThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionGeneralBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="IteroparousThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionGeneralBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithSeasonalBreeding">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionGeneralBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithYearRoundBreeding">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionGeneralBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Gonochoric">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionGeneralBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="GonochoricGonochoristic">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionGeneralBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithGonochoricGonochoristicDioeciousSexesSeparate">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#GonochoricGonochoristic"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="SimultaneousHermaphroditeThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionGeneralBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="SequentialHermaphroditeThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionGeneralBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="SequentialHermaphroditeProtandrousThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#SequentialHermaphroditeThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="SequentialHermaphroditeProtogynousThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#SequentialHermaphroditeThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ParthenogenicThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionGeneralBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="SexualThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionGeneralBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="AsexualThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionGeneralBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithInducedOvulation">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionGeneralBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithFertilization">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionGeneralBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="FertilizationExternalThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFertilization"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="FertilizationInternalThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFertilization"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithBroadcastGroupSpawning">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionGeneralBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ViviparousThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionGeneralBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="OvoviviparousThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionGeneralBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="OviparousThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionGeneralBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithSpermStoring">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionGeneralBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithDelayedFertilization">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionGeneralBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithDelayedImplantation">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionGeneralBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithEmbryonicDiapause">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionGeneralBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="PostPartumEstrousThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionGeneralBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithReproductionParentalInvestment"/>
+<owl:Class rdf:ID="ThingWithNoParentalInvolvement">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionParentalInvestment"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="AltricialThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionParentalInvestment"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="PrecocialThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionParentalInvestment"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithMaleParentalCare">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionParentalInvestment"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithFemaleParentalCare">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionParentalInvestment"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithPreFertilization">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionParentalInvestment"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithPreFertilizationProvisioning">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithPreFertilization"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithPreFertilizationProtecting">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithPreFertilization"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithPreFertilizationProtectingMale">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithPreFertilizationProtecting"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithPreFertilizationProtectingFemale">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithPreFertilizationProtecting"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="PreHatching">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionParentalInvestment"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithPreHatchingBirth">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#PreHatching"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="PreWeaning">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionParentalInvestment"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithPreWeaningFledging">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#PreWeaning"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithPreWeaningFledgingProtectingFemale">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithPreWeaningFledgingProtecting"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithPreIndependence">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionParentalInvestment"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithPreIndependenceProvisioning">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithPreIndependence"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithPreIndependenceProvisioningMale">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithPreIndependenceProvisioning"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithPreIndependenceProvisioningFemale">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithPreIndependenceProvisioning"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithPreIndependenceProtecting">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithPreIndependence"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithPreIndependenceProtectingMale">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithPreIndependenceProtecting"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithPreIndependenceProtectingFemale">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithPreIndependenceProtecting"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithPostIndependenceAssociationWithParents">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionParentalInvestment"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithExtendedPeriodOfJuvenileLearning">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionParentalInvestment"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="InheritsMaternal">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionParentalInvestment"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="InheritsMaternalPaternalTerritoryThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#InheritsMaternal"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithMaternalPositionInTheDominanceHierarchyAffectsStatusOfYoung">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithReproductionParentalInvestment"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithLifespan"/>
+<owl:Class rdf:ID="ThingWithBehavior"/>
+<owl:Class rdf:ID="ArborealThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ScansorialThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="CursorialThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="TerricolousThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="FossorialThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="TroglophilicThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingThatFlies">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingThatGlides">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="SaltatorialThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="NatatorialThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="DiurnalThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="NocturnalThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithCrepuscular">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ParasiteThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="SessileThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="MotileThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="NomadicThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="MigratoryThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="SedentaryThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithHibernation">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithAestivation">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithDailyTorpor">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="SolitaryThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="TerritorialThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="SocialThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ColonialThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithDominanceHierarchies">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithBehavior"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithCommunication"/>
+<owl:Class rdf:ID="Visual">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithCommunication"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Tactile">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithCommunication"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Acoustic">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithCommunication"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Chemical">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithCommunication"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Electric">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithCommunication"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Photic">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithCommunication"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="PhoticBioluminescent">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#Photic"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Mimicry">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithCommunication"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Duets">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithCommunication"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Choruses">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithCommunication"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Pheromones">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithCommunication"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ScentMarks">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithCommunication"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Vibrations">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithCommunication"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Infrared">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithCommunication"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="InfraredHeat">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#Infrared"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Ultraviolet">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithCommunication"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="PolarizedLight">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithCommunication"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Ultrasound">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithCommunication"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Echolocation">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithCommunication"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Magnetic">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithCommunication"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithFoodHabits"/>
+<owl:Class rdf:ID="CarnivoreEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="CarnivoreEatsTerrestrialVertebratesEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#CarnivoreEatingThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="CarnivorePiscivoreEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#CarnivoreEatingThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="CarnivoreEatsEggsEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#CarnivoreEatingThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="CarnivoreSanguivoreEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#CarnivoreEatingThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="CarnivoreEatsBodyFluidsEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#CarnivoreEatingThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="CarnivoreInsectivoreEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#CarnivoreEatingThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="CarnivoreEatsNonInsectArthropodsEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#CarnivoreEatingThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="CarnivoreMolluscivoreEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#CarnivoreEatingThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="CarnivoreVermivoreEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#CarnivoreEatingThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="CarnivoreEatsOtherMarineInvertebratesEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#CarnivoreEatingThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="CarnivoreScavengerEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#CarnivoreEatingThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="HerbivoreEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="HerbivoreFolivoreEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#HerbivoreEatingThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="HerbivoreFrugivoreEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#HerbivoreEatingThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="HerbivoreGranivoreEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#HerbivoreEatingThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="HerbivoreLignivoreEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#HerbivoreEatingThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="HerbivoreNectarivoreEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#HerbivoreEatingThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="HerbivoreAlgivoreEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#HerbivoreEatingThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="HerbivoreEatsSapOrOtherPlantFoodsEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#HerbivoreEatingThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="OmnivoreEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="PlanktivoreEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="MycophageEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="DetritivoreEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="CoprophageEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="BirdsEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="MammalsEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="AmphibiansEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ReptilesEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="FishEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="EggsEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="BloodEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="BodyFluidsEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="CarrionEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="InsectsEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="TerrestrialNonInsectArthropodsEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="MollusksEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="TerrestrialWormsEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="AquaticOrMarineWormsEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="AquaticCrustaceansEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="EchinodermsEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="CnidariansEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="OtherMarineInvertebratesEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ZooplanktonEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="LeavesEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="RootsAndTubersEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="WoodBarkOrStemsEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="SeedsGrainsAndNutsEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="FruitEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="NectarEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="PollenEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="FlowersEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="SapOrOtherPlantFluidsEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="BryophytesEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="LichensEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="AlgaeEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="MacroalgaeEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="PhytoplanktonEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="FungusEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="DetritusEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="DungEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="MicrobesEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="StoresOrCachesFoodEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="FilterFeedingEatingThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithFoodHabits"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithPredation"/>
+<owl:Class rdf:ID="MimicThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithPredation"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="AposematicThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithPredation"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="CrypticThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithPredation"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithEcosystemRoles"/>
+<owl:Class rdf:ID="ThingProvidingDispersesSeeds">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithEcosystemRoles"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingProvidingPollinates">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithEcosystemRoles"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingProvidingCreatesHabitat">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithEcosystemRoles"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingProvidingBiodegradation">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithEcosystemRoles"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingProvidingSoilAeration">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithEcosystemRoles"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingProvidingKeystoneSpecies">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithEcosystemRoles"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingProvidingParasite">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithEcosystemRoles"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithEconomicImportancePositive"/>
+<owl:Class rdf:ID="ThingProvidingPetTrade">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithEconomicImportancePositive"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingProvidingFood">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithEconomicImportancePositive"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingProvidingBodyPartsAreSourceOfValuableMaterial">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithEconomicImportancePositive"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingProvidingEcotourism">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithEconomicImportancePositive"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingProvidingSourceOfMedicineOrDrug">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithEconomicImportancePositive"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingProvidingResearchAndEducation">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithEconomicImportancePositive"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingProvidingProducesFertilizer">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithEconomicImportancePositive"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingProvidingPollinatesCrops">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithEconomicImportancePositive"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingProvidingControlsPestPopulation">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithEconomicImportancePositive"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithEconomicImportanceNegative"/>
+<owl:Class rdf:ID="ThingThatInjuresHumans">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithEconomicImportanceNegative"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingThatInjuresHumansBitesOrStings">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingThatInjuresHumans"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingThatInjuresHumansCausesDiseaseInHumans">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingThatInjuresHumans"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingThatInjuresHumansCarriesHumanDisease">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingThatInjuresHumans"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingThatInjuresHumansPoisonous">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingThatInjuresHumans"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingThatInjuresHumansVenomous">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingThatInjuresHumans"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingThatCropPest">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithEconomicImportanceNegative"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingThatCausesOrCarriesDomesticAnimalDisease">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithEconomicImportanceNegative"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingThatHouseholdPest">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithEconomicImportanceNegative"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithConservationStatus"/>
+<owl:Class rdf:ID="IucnThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithConservationStatus"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="IucnExtinctThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#IucnThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="IucnExtinctInTheWildThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#IucnThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="IucnCriticallyEndangeredThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#IucnThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="IucnEndangeredThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#IucnThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="IucnVulnerableThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#IucnThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="IucnLowerRiskThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#IucnThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="IucnLeastConcernThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#IucnThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="IucnDataDeficientThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#IucnThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="IucnNotEvaluatedThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#IucnThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="IucnNoSpecialStatusThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#IucnThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="UsmbaThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithConservationStatus"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="UsmbaProtectedThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#UsmbaThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="UsmbaNoSpecialStatusThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#UsmbaThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="UsfwsThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithConservationStatus"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="UsfwsEndangeredThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#UsfwsThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="UsfwsThreatenedThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#UsfwsThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="UsfwsNoSpecialStatusThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#UsfwsThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="CitesThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithConservationStatus"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="CitesAppendixIThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#CitesThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="CitesAppendixIIThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#CitesThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="CitesAppendixIIIThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#CitesThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="CitesNoSpecialStatusThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#CitesThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="StateOfMichiganListThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#ThingWithConservationStatus"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="StateOfMichiganListProbablyExtirpatedThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#StateOfMichiganListThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="StateOfMichiganListEndangeredThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#StateOfMichiganListThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="StateOfMichiganListThreatenedThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#StateOfMichiganListThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="StateOfMichiganListSpecialConcernThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#StateOfMichiganListThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="StateOfMichiganListNoSpecialStatusThing">
+<rdfs:subClassOf>
+<owl:Class rdf:about="#StateOfMichiganListThing"/>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="ThingWithOtherComments"/>
+<owl:AnnotationProperty rdf:ID="elevation">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="depth">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="mass">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="length">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="wingspan">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="basalMetabolicRate">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="breedingInterval">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="howOftenDoesReproductionOccur">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="breedingSeason">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="breedingSpawningSeason">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="eggsPerSeason">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="numberOfOffspring">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="timeToHatching">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="gestationPeriod">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="timeToFledging">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="timeToWeaning">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="timeToIndependence">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="ageAtSexualOrReproductiveMaturityFemale">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="ageAtSexualOrReproductiveMaturityFemaleOrAsexual">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="ageAtSexualOrReproductiveMaturityMale">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="longestKnownLifespanInWild">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="longestKnownLifespanInCaptivity">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="expectedLifespanInWild">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="expectedLifespanInCaptivity">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="homeRange">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="territorySize">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="foodsEaten">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="knownPredators">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="speciesOrLargerTaxonomicGroupsUsedAsHostsByThisSpecies">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="speciesOrLargerTaxonomicGroupsThatAreMutualistsWithThisSpecies">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="commensalOrParasiticSpeciesOrLargerTaxonomicGroupsThatUseThisSpeciesAsAHost">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+<owl:AnnotationProperty rdf:ID="conservationStatus">
+<rdfs:range rdf:resource="#Measurement"/>
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</owl:AnnotationProperty>
+</rdf:RDF>

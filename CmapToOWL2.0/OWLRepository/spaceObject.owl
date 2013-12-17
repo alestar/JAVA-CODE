@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Classes -->
+  <owl:Class rdf:ID="NumericalEntity"/>
+  
+  <owl:Class rdf:ID="Arc">
+    <rdfs:subClassOf rdf:resource="#GeometricalObject_1D"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Barrier">
+    <rdfs:subClassOf rdf:resource="#GeometricalObject"/>
+  </owl:Class>
+  
+  <owl:Class rdf:ID="Body">
+    <rdfs:subClassOf rdf:resource="#GeometricalObject"/>
+  </owl:Class>
+  
+  <owl:Class rdf:ID="Boundary">
+    <rdfs:subClassOf rdf:resource="#GeometricalObject"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Cavity">
+    <rdfs:subClassOf rdf:resource="#Surface"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Center">
+    <rdfs:subClassOf rdf:resource="#Point"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Circle">
+    <rdfs:subClassOf rdf:resource="#GeometricalObject_2D"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Cluster">
+    <rdfs:subClassOf rdf:resource="#Region"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Cone">
+    <rdfs:subClassOf rdf:resource="#GeometricalObject_3D"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Contour">
+    <rdfs:subClassOf rdf:resource="#Surface"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Conic">
+    <rdfs:subClassOf rdf:resource="#GeometricalObject_2D"/>
+    <owl:equivalentClass rdf:resource="#ConicSection"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ConicSection"/>
+
+  <owl:Class rdf:ID="Curve">
+    <rdfs:subClassOf rdf:resource="#GeometricalObject_1D"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Cylinder">
+    <rdfs:subClassOf rdf:resource="#GeometricalObject_3D"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Depression">
+    <rdfs:subClassOf rdf:resource="#Surface"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Edge">
+    <owl:equivalentClass rdf:resource="#Boundary"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Ellipse">
+    <rdfs:subClassOf rdf:resource="#ConicSection"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Ellipsoid">
+    <rdfs:subClassOf rdf:resource="#GeometricalObject_3D"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="FuzzyPoint">
+    <rdfs:subClassOf rdf:resource="#GeometricalObject"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="GeometricalObject">
+    <rdfs:subClassOf rdf:resource="#NumericalEntity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="GeometricalObject_0D">
+    <rdfs:subClassOf rdf:resource="#GeometricalObject"/>
+    <owl:equivalentClass rdf:resource="#Point"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasDimension"/>	
+		</owl:onProperty>
+        <owl:hasValue rdf:datatype="&xsd;integer">0</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="GeometricalObject_1D">
+    <rdfs:subClassOf rdf:resource="#GeometricalObject"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:datatype="&xsd;integer">1</owl:hasValue>
+        <owl:onProperty rdf:resource="#hasDimension"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="GeometricalObject_2D">
+    <rdfs:subClassOf rdf:resource="#GeometricalObject"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+        <owl:onProperty rdf:resource="#hasDimension"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="GeometricalObject_3D">
+    <rdfs:subClassOf rdf:resource="#GeometricalObject"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:datatype="&xsd;integer">3</owl:hasValue>
+        <owl:onProperty rdf:resource="#hasDimension"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Hemisphere">
+    <rdfs:subClassOf rdf:resource="#GeometricalObject_3D"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Hyperbola">
+    <rdfs:subClassOf rdf:resource="#ConicSection"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Hyperplane">
+    <rdfs:subClassOf rdf:resource="#GeometricalObject"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Layer">
+    <rdfs:subClassOf rdf:resource="#GeometricalObject_3D"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Line">
+    <rdfs:subClassOf rdf:resource="#Curve"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Margin">
+    <rdfs:subClassOf rdf:resource="#Boundary"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Obstruction">
+    <rdfs:subClassOf rdf:resource="#Barrier"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Orbit">
+    <rdfs:subClassOf rdf:resource="#Path"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Parabola">
+    <rdfs:subClassOf rdf:resource="#ConicSection"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Plane">
+    <rdfs:subClassOf rdf:resource="#Surface"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Point">
+  </owl:Class>
+
+  <owl:Class rdf:ID="Polygon">
+    <rdfs:subClassOf rdf:resource="#GeometricalObject_2D"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Point"/>
+        <owl:onProperty rdf:resource="#hasVertices"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Polyhedron">
+    <rdfs:subClassOf rdf:resource="#GeometricalObject_3D"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Rectangle">
+    <rdfs:subClassOf rdf:resource="#Polygon"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Region">
+   <rdfs:subClassOf rdf:resource="#GeometricalObject_2D"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Ridge">
+   <rdfs:subClassOf rdf:resource="#GeometricalObject_3D"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Trough">
+   <rdfs:subClassOf rdf:resource="#GeometricalObject_3D"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Ring">
+    <rdfs:subClassOf rdf:resource="#GeometricalObject"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Separation">
+    <rdfs:subClassOf rdf:resource="#GeometricalObject"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Sphere">
+    <rdfs:subClassOf rdf:resource="#GeometricalObject_3D"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Spheroid">
+    <rdfs:subClassOf rdf:resource="#GeometricalObject_3D"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Square">
+    <rdfs:subClassOf rdf:resource="#Rectangle"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Surface">
+    <rdfs:subClassOf rdf:resource="#GeometricalObject_2D"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Trajectory">
+    <rdfs:subClassOf rdf:resource="#Curve"/>
+    <owl:equivalentClass rdf:resource="#Path"/>
+    <rdfs:comment xml:lang="en">Curve in space tracing the points successivley occupied by a particle in motion</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Path"/>
+
+  <owl:Class rdf:ID="Horizon">
+    <rdfs:subClassOf rdf:resource="#GeometricalObject_3D"/>
+    <owl:equivalentClass rdf:resource="#Profile"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Profile"/>
+
+  <owl:Class rdf:ID="VerticalProfile">
+    <rdfs:subClassOf rdf:resource="#Profile"/>
+  </owl:Class>
+
+   <owl:ObjectProperty rdf:ID="overlaps">
+    <rdfs:domain rdf:resource="#GeometricalObject"/>
+    <rdfs:range rdf:resource="#GeometricalObject"/>
+  </owl:ObjectProperty>
+
+   <owl:ObjectProperty rdf:ID="hasGeometricalObject">
+    <rdfs:range rdf:resource="#GeometricalObject"/>
+  </owl:ObjectProperty>
+
+   <owl:ObjectProperty rdf:ID="hasVertices">
+    <rdfs:domain rdf:resource="#Polygon"/>
+  </owl:ObjectProperty>
+
+   <owl:ObjectProperty rdf:ID="hasBoundary">
+    <rdfs:range rdf:resource="#Boundary"/>
+  </owl:ObjectProperty>
+
+</rdf:RDF>

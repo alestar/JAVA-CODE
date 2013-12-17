@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>classification of life</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Classification of life"/>
+            <concept id="2" label="Kingdom">
+                <sense domains="[biology]"
+                    gloss="one of five biological categories: Monera or Protista or Plantae or Fungi or Animalia"
+                    number="05956482" pos="n" terms="[kingdom]"/>
+            </concept>
+            <concept id="3" label="Phylum">
+                <sense domains="[biology]"
+                    gloss="(biology) the major taxonomic group of animals and plants; contains classes"
+                    number="06038109" pos="n" terms="[phylum]"/>
+            </concept>
+            <concept id="4" label="Class">
+                <sense domains="[biology]"
+                    gloss="(biology) a taxonomic group containing one or more orders"
+                    number="06039237" pos="n" terms="[class]"/>
+            </concept>
+            <concept id="5" label="Order">
+                <sense domains="[biology]"
+                    gloss="(biology) taxonomic group containing one or more families"
+                    number="06042229" pos="n" terms="[order]"/>
+            </concept>
+            <concept id="6" label="Family">
+                <sense domains="[biology]"
+                    gloss="(biology) a taxonomic group containing one or more genera; &quot;sharks belong to the fish family&quot;"
+                    number="06042737" pos="n" terms="[family]"/>
+            </concept>
+            <concept id="7" label="Genus">
+                <sense domains="[biology]"
+                    gloss="(biology) taxonomic group containing one or more species"
+                    number="06043947" pos="n" terms="[genus]"/>
+            </concept>
+            <concept id="8" label="Species">
+                <sense domains="[biology]"
+                    gloss="(biology) taxonomic group whose members can interbreed"
+                    number="06045216" pos="n" terms="[species]"/>
+            </concept>
+            <concept id="9" label="Eukaryotic">
+                <sense domains="[biology]"
+                    gloss="having cells with `good' or membrane-bound nuclei"
+                    number="02648831" pos="a" terms="[eukaryotic, eucaryotic]"/>
+            </concept>
+            <concept id="10" label="Prokaryotic">
+                <sense domains="[biology]"
+                    gloss="having cells that lack membrane-bound nuclei"
+                    number="02649004" pos="a" terms="[prokaryotic, procaryotic]"/>
+            </concept>
+            <concept id="11" label="Archaebacteria">
+                <sense domains="[biology]"
+                    gloss="considered ancient life forms that evolved separately from bacteria and blue-green algae"
+                    number="00883862" pos="n" terms="[archaebacteria, archaebacterium, archaeobacteria]"/>
+            </concept>
+            <concept id="12" label="Eubacteria">
+                <sense domains="[biology]"
+                    gloss="a large group of bacteria having rigid cell walls; motile types have flagella"
+                    number="00889066" pos="n" terms="[eubacteria, eubacterium, true_bacteria]"/>
+            </concept>
+            <concept id="13" label="Harsh environments"/>
+            <concept id="14" label="Everywhere">
+                <sense domains="[factotum]"
+                    gloss="to or in any or all places; &quot;You find fast food stores everywhere&quot;; &quot;people everywhere are becoming aware of the problem&quot;; &quot;he carried a gun everywhere he went&quot;; &quot;looked all over for a suitable gift&quot;; (`everyplace' is used informally for `everywhere')"
+                    number="00024775" pos="r" terms="[everywhere, everyplace, all_over]"/>
+            </concept>
+            <concept id="15" label="Harmful">
+                <sense domains="[factotum]"
+                    gloss="able or likely to do harm" number="01982806"
+                    pos="a" terms="[harmful]"/>
+                <sense domains="[factotum]"
+                    gloss="injurious to physical or mental health; &quot;noxious chemical wastes&quot;; &quot;noxious ideas&quot;"
+                    number="01552949" pos="a" terms="[noxious, harmful]"/>
+                <sense domains="[factotum]"
+                    gloss="causing or capable of causing harm; &quot;too much sun is harmful to the skin&quot;; &quot;harmful effects of smoking&quot;"
+                    number="01113641" pos="a" terms="[harmful]"/>
+                <sense domains="[factotum]"
+                    gloss="constituting a disadvantage"
+                    number="00067911" pos="a" terms="[disadvantageous, harmful]"/>
+                <sense domains="[factotum]"
+                    gloss="contrary to your interests or welfare; &quot;adverse circumstances&quot;; &quot;made a place for themselves under the most untoward conditions&quot;"
+                    number="00944856" pos="a" terms="[adverse, harmful, inauspicious, untoward]"/>
+                <sense domains="[quality]"
+                    gloss="tending to cause great harm"
+                    number="00224559" pos="a" terms="[evil, harmful, injurious]"/>
+            </concept>
+            <concept id="16" label="Beneficial">
+                <sense domains="[factotum]"
+                    gloss="promoting or enhancing well-being; &quot;an arms limitation agreement beneficial to all countries&quot;; &quot;the beneficial effects of a temperate climate&quot;; &quot;the experience was good for her&quot;"
+                    number="00067152" pos="a" terms="[beneficial, good]"/>
+                <sense domains="[factotum]"
+                    gloss="tending to promote physical well-being; beneficial to health; &quot;beneficial effects of a balanced diet&quot;; &quot;a good night's sleep&quot;; &quot;the salutary influence of pure air&quot;"
+                    number="01119178" pos="a" terms="[beneficial, good, salutary]"/>
+            </concept>
+            <concept id="17" label="Unicellular">
+                <sense domains="[biology]"
+                    gloss="having or consisting of a single cell"
+                    number="02617584" pos="a" terms="[unicellular]"/>
+            </concept>
+            <concept id="18" label="Multicellular">
+                <sense domains="[factotum]"
+                    gloss="consisting of many cells; &quot;multicellular organisms&quot;"
+                    number="00319611" pos="a" terms="[multicellular]"/>
+            </concept>
+            <concept id="19" label="Protista">
+                <sense domains="[biology, plants]"
+                    gloss="eukaryotic one-celled living organisms distinct from multicellular plants and animals: protozoa, slime molds, and eukaryotic algae"
+                    number="00914596" pos="n" terms="[Protista, division_Protista]"/>
+            </concept>
+            <concept id="20" label="Plantae">
+                <sense domains="[biology]"
+                    gloss="taxonomic kingdom comprising all living or extinct plants"
+                    number="07851510" pos="n" terms="[Plantae, kingdom_Plantae, plant_kingdom]"/>
+            </concept>
+            <concept id="21" label="Fungi">
+                <sense domains="[biology, plants]"
+                    gloss="the taxonomic kingdom of lower plants"
+                    number="09288350" pos="n" terms="[Fungi, kingdom_Fungi, fungus_kingdom]"/>
+            </concept>
+            <concept id="22" label="Animalia">
+                <sense domains="[animals, biology]"
+                    gloss="taxonomic kingdom comprising all living or extinct animals"
+                    number="00861689" pos="n" terms="[Animalia, kingdom_Animalia, animal_kingdom]"/>
+            </concept>
+            <concept id="23" label="Photosynthesis">
+                <sense domains="[chemistry]"
+                    gloss="synthesis of compounds with the aid of radiant energy (especially in plants)"
+                    number="09705163" pos="n" terms="[photosynthesis]"/>
+            </concept>
+            <concept id="24" label="Absorb nutrients"/>
+            <concept id="25" label="Internally digest"/>
+            <concept id="26" label="Scientific names"/>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="27" label="largest group is"/>
+            <linking-phrase id="28" label="more specific is"/>
+            <linking-phrase id="29" label="two are"/>
+            <linking-phrase id="30" label="four are"/>
+            <linking-phrase id="31" label="more specific is"/>
+            <linking-phrase id="32" label="more specific is"/>
+            <linking-phrase id="33" label="more specific is"/>
+            <linking-phrase id="34" label="more specific is"/>
+            <linking-phrase id="35" label="more specific is"/>
+            <linking-phrase id="36" label="used for"/>
+            <linking-phrase id="37" label="used for"/>
+            <linking-phrase id="38" label="some are"/>
+            <linking-phrase id="39" label="includes"/>
+            <linking-phrase id="40" label="live in"/>
+            <linking-phrase id="41" label="live almost"/>
+            <linking-phrase id="42" label="some are"/>
+            <linking-phrase id="43" label="includes"/>
+            <linking-phrase id="44" label="includes"/>
+            <linking-phrase id="45" label="create sugars through"/>
+            <linking-phrase id="46" label="externally digest then"/>
+            <linking-phrase id="47" label="eat food and then"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="27"/>
+            <connection from-id="27" to-id="2"/>
+            <connection from-id="2" to-id="28"/>
+            <connection from-id="28" to-id="3"/>
+            <connection from-id="2" to-id="29"/>
+            <connection from-id="29" to-id="10"/>
+            <connection from-id="2" to-id="30"/>
+            <connection from-id="30" to-id="9"/>
+            <connection from-id="3" to-id="31"/>
+            <connection from-id="31" to-id="4"/>
+            <connection from-id="4" to-id="32"/>
+            <connection from-id="32" to-id="5"/>
+            <connection from-id="5" to-id="33"/>
+            <connection from-id="33" to-id="6"/>
+            <connection from-id="6" to-id="34"/>
+            <connection from-id="34" to-id="7"/>
+            <connection from-id="7" to-id="35"/>
+            <connection from-id="35" to-id="8"/>
+            <connection from-id="7" to-id="36"/>
+            <connection from-id="36" to-id="26"/>
+            <connection from-id="8" to-id="37"/>
+            <connection from-id="37" to-id="26"/>
+            <connection from-id="9" to-id="38"/>
+            <connection from-id="38" to-id="17"/>
+            <connection from-id="38" to-id="18"/>
+            <connection from-id="10" to-id="39"/>
+            <connection from-id="39" to-id="11"/>
+            <connection from-id="39" to-id="12"/>
+            <connection from-id="11" to-id="40"/>
+            <connection from-id="40" to-id="13"/>
+            <connection from-id="12" to-id="41"/>
+            <connection from-id="41" to-id="14"/>
+            <connection from-id="14" to-id="42"/>
+            <connection from-id="42" to-id="15"/>
+            <connection from-id="42" to-id="16"/>
+            <connection from-id="17" to-id="43"/>
+            <connection from-id="43" to-id="19"/>
+            <connection from-id="18" to-id="44"/>
+            <connection from-id="44" to-id="20"/>
+            <connection from-id="44" to-id="21"/>
+            <connection from-id="44" to-id="22"/>
+            <connection from-id="20" to-id="45"/>
+            <connection from-id="45" to-id="23"/>
+            <connection from-id="21" to-id="46"/>
+            <connection from-id="46" to-id="24"/>
+            <connection from-id="22" to-id="47"/>
+            <connection from-id="47" to-id="25"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="305" y="18"/>
+            <concept-appearance id="2" x="328" y="119"/>
+            <concept-appearance id="3" x="326" y="225"/>
+            <concept-appearance id="4" x="327" y="327"/>
+            <concept-appearance id="5" x="326" y="424"/>
+            <concept-appearance id="6" x="329" y="520"/>
+            <concept-appearance id="7" x="328" y="620"/>
+            <concept-appearance id="8" x="327" y="713"/>
+            <concept-appearance id="9" x="512" y="162"/>
+            <concept-appearance id="10" x="94" y="161"/>
+            <concept-appearance id="11" x="41" y="254"/>
+            <concept-appearance id="12" x="146" y="256"/>
+            <concept-appearance id="13" x="33" y="347"/>
+            <concept-appearance id="14" x="159" y="349"/>
+            <concept-appearance id="15" x="135" y="442"/>
+            <concept-appearance id="16" x="231" y="445"/>
+            <concept-appearance id="17" x="441" y="246"/>
+            <concept-appearance id="18" x="595" y="254"/>
+            <concept-appearance id="19" x="445" y="347"/>
+            <concept-appearance id="20" x="523" y="346"/>
+            <concept-appearance id="21" x="602" y="348"/>
+            <concept-appearance id="22" x="676" y="347"/>
+            <concept-appearance id="23" x="508" y="465"/>
+            <concept-appearance id="24" x="601" y="463"/>
+            <concept-appearance id="25" x="671" y="462"/>
+            <concept-appearance id="26" x="486" y="670"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="27" x="308" y="85"/>
+            <linking-phrase id="28" x="304" y="194"/>
+            <linking-phrase id="29" x="211" y="154"/>
+            <linking-phrase id="30" x="416" y="154"/>
+            <linking-phrase id="31" x="312" y="295"/>
+            <linking-phrase id="32" x="311" y="396"/>
+            <linking-phrase id="33" x="309" y="491"/>
+            <linking-phrase id="34" x="308" y="588"/>
+            <linking-phrase id="35" x="313" y="689"/>
+            <linking-phrase id="36" x="401" y="661"/>
+            <linking-phrase id="37" x="400" y="712"/>
+            <linking-phrase id="38" x="515" y="228"/>
+            <linking-phrase id="39" x="95" y="226"/>
+            <linking-phrase id="40" x="40" y="320"/>
+            <linking-phrase id="41" x="156" y="321"/>
+            <linking-phrase id="42" x="167" y="417"/>
+            <linking-phrase id="43" x="442" y="316"/>
+            <linking-phrase id="44" x="601" y="323"/>
+            <linking-phrase id="45" x="498" y="421"/>
+            <linking-phrase id="46" x="604" y="419"/>
+            <linking-phrase id="47" x="667" y="420"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

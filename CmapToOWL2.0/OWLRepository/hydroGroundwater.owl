@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Realm -->
+  <owl:Class rdf:ID="HydrosphereFeature"/>
+  <owl:Class rdf:ID="Trough"/>
+  <owl:Class rdf:ID="Ridge"/>
+  <owl:Class rdf:ID="Confined"/>
+  <owl:Class rdf:ID="LiquidWater"/>
+  <owl:Class rdf:ID="Geosphere"/>
+  <owl:Class rdf:ID="HydrospherePhenomena"/>
+  <owl:Class rdf:ID="Transport"/>
+  <owl:Class rdf:ID="Height"/>
+  <owl:Class rdf:ID="Distance"/>
+  <owl:Class rdf:ID="Velocity"/>
+  <owl:Class rdf:ID="FluidProperty"/>
+  <owl:Class rdf:ID="Gradient"/>
+  
+  <owl:Class rdf:ID="Aquifer">
+    <rdfs:subClassOf rdf:resource="#HydrosphereFeature"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="partOf"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#SaturatedZone"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="CascadingWater">
+    <rdfs:subClassOf rdf:resource="#HydrosphereFeature"/>
+    <rdfs:subClassOf rdf:resource="#Groundwater"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ConeOfDepression"> 
+    <rdfs:subClassOf rdf:resource="#HydrosphereFeature"/>
+    <rdfs:subClassOf rdf:resource="#Trough"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ConeOfImpression"> 
+    <rdfs:subClassOf rdf:resource="#HydrosphereFeature"/>
+    <rdfs:subClassOf rdf:resource="#Ridge"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ConfinedAquifer"> 
+    <rdfs:subClassOf rdf:resource="#Aquifer"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasSpatialExtent"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Confined"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ConfinedBed"> 
+    <rdfs:subClassOf rdf:resource="#HydrosphereFeature"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ConfinedUnit"> 
+    <rdfs:subClassOf rdf:resource="#HydrosphereFeature"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ConfinedZone"> 
+    <rdfs:subClassOf rdf:resource="#HydrosphereFeature"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ConnateWater"> 
+    <rdfs:subClassOf rdf:resource="#HydrosphereFeature"/>
+    <rdfs:subClassOf rdf:resource="#Groundwater"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Groundwater">
+    <rdfs:subClassOf rdf:resource="#LiquidWater"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="inside"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Geosphere"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="VadoseZone">
+    <rdfs:subClassOf rdf:resource="#HydrosphereFeature"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="UnsaturatedZone">
+    <owl:equivalentClass rdf:resource="#VadoseZone"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="UndergroundWater">
+    <rdfs:subClassOf rdf:resource="#Groundwater"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#inside"/>
+        <owl:allValuesFrom rdf:resource="#VadoseZone"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SaturatedZone">
+    <rdfs:subClassOf rdf:resource="#HydrosphereFeature"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#partOf"/>
+        <owl:allValuesFrom rdf:resource="#Aquifer"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="WaterTable">
+    <rdfs:subClassOf rdf:resource="#HydrosphereFeature"/>
+  <rdfs:comment xml:lang="en">The water table or phreatic surface is the surface where the water pressure is equal to atmospheric pressure. A sustainable amount of water within a unit of sediment or rock, below the water table, in the phreatic zone is called an aquifer. The ability of the aquifer to store groundwater is dependent on the primary and secondary porosity and permeability </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Aquiclude">
+    <rdfs:subClassOf rdf:resource="#HydrosphereFeature"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Aquifuge">
+    <rdfs:subClassOf rdf:resource="#HydrosphereFeature"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Aquitard">
+    <rdfs:subClassOf rdf:resource="#HydrosphereFeature"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="WarmPool">
+    <rdfs:subClassOf rdf:resource="#HydrosphereFeature"/>
+  </owl:Class>
+
+<!-- Phenomena -->
+  <owl:Class rdf:ID="WaterSurfaceHeightChangeEvent">
+    <rdfs:subClassOf rdf:resource="#HydrospherePhenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="HydrothermalAlteration">
+    <rdfs:subClassOf rdf:resource="#HydrospherePhenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Infiltration">
+    <rdfs:subClassOf rdf:resource="#LandWaterCirculation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Intrusion">
+    <rdfs:subClassOf rdf:resource="#LandWaterCirculation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LandWaterCirculation">
+    <rdfs:subClassOf rdf:resource="#HydrospherePhenomena"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPlanetaryRealm"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#UndergroundWater"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhysicalProcess"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Transport"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Percolation">
+    <rdfs:subClassOf rdf:resource="#LandWaterCirculation"/>
+    <rdfs:comment xml:lang="en">In chemistry and materials science, percolation concerns the movement and filtering of fluids through porous materials. During the last three decades, percolation theory, an extensive mathematical model of percolation, has brought new understanding and techniques to a broad range of topics in physics, materials science as well as geography.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Recharge">
+    <rdfs:subClassOf rdf:resource="#Transport"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Aquifer"/>
+        <owl:onProperty rdf:resource="#hasPlanetaryRealm"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DeepPercolation">
+    <rdfs:subClassOf rdf:resource="#Percolation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Drawdown">
+    <rdfs:subClassOf rdf:resource="#WaterSurfaceHeightChangeEvent"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Uptakee">
+    <rdfs:subClassOf rdf:resource="#Transport"/>
+  </owl:Class>
+
+<!-- Property -->
+  <owl:Class rdf:ID="GroundwaterLevel">
+    <rdfs:subClassOf rdf:resource="#Height"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Fetch">
+    <rdfs:subClassOf rdf:resource="#Distance"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PotentiometricSurface">
+    <rdfs:subClassOf rdf:resource="#HydrogeologicalProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SeepageVelocity">
+    <rdfs:subClassOf rdf:resource="#HydrogeologicalProperty"/>
+    <rdfs:subClassOf rdf:resource="#Velocity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Sodicity">
+    <rdfs:subClassOf rdf:resource="#HydrogeologicalProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Transmissibility">
+    <rdfs:subClassOf rdf:resource="#HydrogeologicalProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Transmissivity">
+    <rdfs:subClassOf rdf:resource="#HydrogeologicalProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="HydrogeologicalProperty">
+
+    <rdfs:subClassOf rdf:resource="#FluidProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="HydraulicGradient">
+    <rdfs:subClassOf rdf:resource="#HydrogeologicalProperty"/>
+    <rdfs:subClassOf rdf:resource="#Gradient"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DarcySlope">
+    <owl:equivalentClass rdf:resource="#HydraulicGradient"/>
+  </owl:Class>
+
+</rdf:RDF>

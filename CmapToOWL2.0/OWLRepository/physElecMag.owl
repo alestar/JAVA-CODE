@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Physical Properties -->
+  <owl:Class rdf:ID="Conductivity"/>
+  <owl:Class rdf:ID="Potential"/>
+  <owl:Class rdf:ID="watt"/>
+  <owl:Class rdf:ID="PhysicalProperty"/>
+  <owl:Class rdf:ID="henry"/>
+  <owl:Class rdf:ID="PhysicalProcess"/>
+  <owl:Class rdf:ID="VectorField"/>
+  
+  <owl:Class rdf:ID="ElectricalConductivity">
+    <rdfs:subClassOf rdf:resource="#Conductivity"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhysicalProcess"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#ElectricPotential" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ElectricPotential">
+    <rdfs:subClassOf rdf:resource="#Potential"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProcess" />
+        <owl:allValuesFrom rdf:resource="#ChargeDistribution" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasDefaultUnit"/>	
+		</owl:onProperty>
+        <owl:hasValue rdf:resource="#watt"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Inductance">
+    <rdfs:subClassOf rdf:resource="#PhysicalProperty" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProcess" />
+        <owl:allValuesFrom rdf:resource="#Magnetism" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#henry"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PoyntingVector">
+    <rdfs:subClassOf rdf:resource="#PhysicalProperty" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="ChargeDistribution">
+    <rdfs:subClassOf rdf:resource="#PhysicalProcess" />
+  </owl:Class>
+
+<!-- Physical Processes -->
+  <owl:Class rdf:ID="ElectromagneticInduction">
+    <rdfs:subClassOf rdf:resource="#PhysicalProcess" />
+    <owl:equivalentClass rdf:resource="#Induction"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhysicalPhenomena"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Magnetism" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Induction"/>
+
+  <owl:Class rdf:ID="Current">
+    <rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+    <owl:equivalentClass rdf:resource="#ElectricCurrent"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ElectricCurrent"/>
+
+  <owl:Class rdf:ID="ElectricField">
+    <rdfs:subClassOf rdf:resource="#VectorField"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProcess" />
+        <owl:allValuesFrom rdf:resource="#ChargeDistribution" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Magnetism">
+    <rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MagneticField">
+    <rdfs:subClassOf rdf:resource="#VectorField"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProcess" />
+        <owl:allValuesFrom rdf:resource="#Magnetism" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+</rdf:RDF>

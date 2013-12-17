@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+<!-- Realms -->
+
+  <owl:Class rdf:ID="Landform"/>
+  <owl:Class rdf:ID="BodyOfWater"/>
+  <owl:Class rdf:ID="OceanTide"/>
+  <owl:Class rdf:ID="PlanetaryRealm"/>
+  <owl:Class rdf:ID="OceanRegion"/>
+  <owl:Class rdf:ID="Land"/>
+  <owl:Class rdf:ID="River"/>
+  <owl:Class rdf:ID="OceanPhenomena"/>
+  
+  <owl:Class rdf:ID="Beach">
+    <rdfs:subClassOf rdf:resource="#Landform"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="isAdjacentTo"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#BodyOfWater" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A beach, or strand, is a geological landform consisting of loose rock particles - such as sand, gravel, shingle, pebbles, cobble - or even shell fragments, along the shoreline of a body of water. Beaches occur along coastal areas, where wave or current action deposits and reworks sediments, or at the margin of land along a lake or river subject to erosion caused by rainfall. Beaches are not necessarily found in conjunction with salt water, such as the ocean, in all instances. A seashore beach is merely one type of beach but it is the most commonly associated with the perception of the word beach.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Shore">
+    <rdfs:subClassOf rdf:resource="#Land"/>
+    <rdfs:subClassOf rdf:resource="#CoastalRegion"/>
+  <rdfs:comment xml:lang="en">A shore or shoreline is the fringe of land at the edge of a large body of water, such as an ocean, sea, or lake.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Shoreline">
+    <owl:equivalentClass rdf:resource="#Shore"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="IntertidalZone">
+    <rdfs:subClassOf rdf:resource="#CoastalRegion"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPlanetaryPhenomena"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#OceanTide" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The intertidal zone, also known as the littoral zone, in marine aquatic environments is the area of the foreshore and seabed that is exposed to the air at low tide and submerged at high tide, for example, the area between tide marks. </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LittoralZone">
+    <owl:equivalentClass rdf:resource="#IntertidalZone"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Tidal">
+    <rdfs:subClassOf rdf:resource="#CoastalRegion"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Supratidal">
+    <rdfs:subClassOf rdf:resource="#CoastalRegion"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="CoastalRegion">
+    <rdfs:subClassOf rdf:resource="#PlanetaryRealm"/>
+    <rdfs:subClassOf>
+     <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasCommon2DBorderWith"/>	
+		</owl:onProperty>
+       <owl:someValuesFrom rdf:resource="#OceanRegion"/>
+     </owl:Restriction>
+   </rdfs:subClassOf>
+   <rdfs:subClassOf>
+     <owl:Restriction>
+       <owl:onProperty rdf:resource="#hasCommon2DBorderWith"/>
+       <owl:someValuesFrom rdf:resource="#Land"/>
+     </owl:Restriction>
+   </rdfs:subClassOf>
+ </owl:Class>
+
+  <owl:Class rdf:ID="RiparianZone">
+    <rdfs:subClassOf rdf:resource="#CoastalRegion"/>
+    <rdfs:comment xml:lang="en">A riparian zone is the interface between land and a flowing surface water body. Plant communities along the river margins are called riparian vegetation, characterized by hydrophilic plants. Riparian zones are significant in ecology, environmental management, and civil engineering due to their role in soil conservation, their biodiversity, and the influence they have on aquatic ecosystems. Riparian zones occur in many forms including grassland, woodland, wetland or even non-vegetative. In some regions the terms riparian woodland, riparian forest, riparian buffer zone or riparian strip are used to characterize a riparian zone. </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Cove">
+    <rdfs:subClassOf rdf:resource="#CoastalRegion"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Delta">
+    <rdfs:subClassOf rdf:resource="#Landform"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPlanetaryRealm"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#River" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A delta is a landform where the mouth of a river flows into an ocean, sea, desert, estuary, lake or another river. It builds up sediment outwards into the flat area which the river's flow encounters (as a deltaic deposit) transported by the water and set down as the currents slow. Deltaic deposits of larger, heavily-laden rivers are characterized by the main channel dividing amongst often substantial land masses into multiple streams known as distributaries. These divide and come together again to form a maze of active and inactive channels.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Harbor">
+    <rdfs:subClassOf rdf:resource="#CoastalRegion"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Isthmus">
+    <rdfs:subClassOf rdf:resource="#CoastalRegion"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Shoal">
+    <rdfs:subClassOf rdf:resource="#Landform"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPlanetaryRealm" />
+        <owl:allValuesFrom rdf:resource="#BodyOfWater" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+   <rdfs:comment xml:lang="en">A shoal is a somewhat linear landform within or extending into a body of water, typically comprised of sand, silt or small pebbles. Alternatively termed sandbar or sandbank, a bar is characteristically long and narrow (linear) and develops where a stream or ocean current promote deposition of granular material, resulting in localized shallowing (shoaling) of the water. Bars can appear in the sea, in a lake, or in a river. Alternatively a bar may separate a lake from the sea, as in the case of an ayre. They are typically composed of sand, although could be of any granular matter that the moving water has access to and is capable of shifting around (for example, soil, silt, gravel, cobble, shingle, or even boulders). The grain size of the material comprising a bar is related to the size of the waves or the strength of the currents moving the material, but the availability of material to be worked by waves and currents is also important.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="BreakingWave">
+    <rdfs:subClassOf rdf:resource="#OceanPhenomena"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPlanetaryRealm" />
+        <owl:allValuesFrom rdf:resource="#CoastalRegion" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Breaker">
+    <rdfs:subClassOf rdf:resource="#BreakingWave"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PlungingBreaker">
+    <rdfs:subClassOf rdf:resource="#Breaker"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SpillingBreaker">
+    <rdfs:subClassOf rdf:resource="#Breaker"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SurgingBreaker">
+    <rdfs:subClassOf rdf:resource="#Breaker"/>
+  </owl:Class>
+
+</rdf:RDF>

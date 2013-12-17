@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+              owl:versionInfo="2.0">
+   </owl:Ontology>
+
+<!-- Classes -->
+ <owl:Class rdf:ID="AgriculturalProductionFacility">
+    <rdfs:subClassOf rdf:resource="#ProductionFacility"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Antenna">
+    <rdfs:subClassOf rdf:resource="#CommunicationEquipment"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="ArtesianWell">
+    <rdfs:subClassOf rdf:resource="#ConfinedWell"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Building">
+    <rdfs:subClassOf rdf:resource="#Structure"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Buoy">
+    <rdfs:subClassOf rdf:resource="#NavigationEquipment"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="CommunicationEquipment">
+    <rdfs:subClassOf rdf:resource="#Equipment"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Communications"/>
+		<owl:onProperty rdf:resource="#hasAssociatedActivity"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+ <owl:Class rdf:ID="CommunicationFacility">
+    <rdfs:subClassOf rdf:resource="#Facility"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Computer">
+    <rdfs:subClassOf rdf:resource="#Equipment"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="ConfinedWell">
+    <rdfs:subClassOf rdf:resource="#Well"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Dome">
+    <rdfs:subClassOf rdf:resource="#Equipment"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="DopplerRadar">
+    <rdfs:subClassOf rdf:resource="#Radar"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Electricity">
+    <rdfs:subClassOf rdf:resource="#IndustrialProduct"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="ElectricityEquipment">
+    <rdfs:subClassOf rdf:resource="#Equipment"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Equipment">
+    <rdfs:subClassOf rdf:resource="#Infrastructure"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Facility">
+    <rdfs:subClassOf rdf:resource="#Infrastructure"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Farm">
+    <rdfs:subClassOf rdf:resource="#AgriculturalProductionFacility"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Fishery">
+    <rdfs:subClassOf rdf:resource="#AgriculturalProductionFacility"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="IndustrialProduct">
+    <rdfs:subClassOf rdf:resource="#Product"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Infrastructure"/>
+ <owl:Class rdf:ID="Instrument">
+    <rdfs:subClassOf rdf:resource="#Equipment"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Internet">
+    <rdfs:subClassOf rdf:resource="#CommunicationFacility"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="MeteorologicalFacility">
+    <rdfs:subClassOf rdf:resource="#Facility"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Meteostation">
+    <rdfs:subClassOf rdf:resource="#MeteorologicalFacility"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Mine">
+    <rdfs:subClassOf rdf:resource="#MiningFacility"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="MiningFacility">
+    <rdfs:subClassOf rdf:resource="#Facility"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="MonitoringWell">
+    <rdfs:subClassOf rdf:resource="#Well"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="NavigationEquipment">
+    <rdfs:subClassOf rdf:resource="#Equipment"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Phone_mainline">
+    <rdfs:subClassOf rdf:resource="#CommunicationEquipment"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Phone_mobile">
+    <rdfs:subClassOf rdf:resource="#CommunicationEquipment"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Piezometer">
+    <rdfs:subClassOf rdf:resource="#Well"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="PowerTransmissionFacility">
+    <rdfs:subClassOf rdf:resource="#TransportationFacility"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Product"/>
+ <owl:Class rdf:ID="ProductionFacility">
+    <rdfs:subClassOf rdf:resource="#Facility"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Production"/>
+        <owl:onProperty rdf:resource="#hasAssociatedActivity"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+ <owl:Class rdf:ID="PumpingWell">
+    <rdfs:subClassOf rdf:resource="#Well"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Radar">
+    <rdfs:subClassOf rdf:resource="#Equipment"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="RechargeWell">
+    <rdfs:subClassOf rdf:resource="#Well"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Satellite">
+    <rdfs:subClassOf rdf:resource="#Equipment"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Sensor">
+    <rdfs:subClassOf rdf:resource="#Instrument"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Structure">
+    <rdfs:subClassOf rdf:resource="#Facility"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="TransportationEquipment">
+    <rdfs:subClassOf rdf:resource="#Equipment"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Transportation"/>
+        <owl:onProperty rdf:resource="#hasAssociatedActivity"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+ <owl:Class rdf:ID="TransportationFacility">
+    <rdfs:subClassOf rdf:resource="#Facility"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="UnconfinedWell">
+    <rdfs:subClassOf rdf:resource="#Well"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Well">
+    <rdfs:subClassOf rdf:resource="#Structure"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Communications"/>
+ <owl:Class rdf:ID="Production"/>
+ <owl:Class rdf:ID="Transportation"/>
+
+<!-- Annotation Properties -->
+  <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+
+<!-- Object Properties -->
+  <owl:ObjectProperty rdf:ID="hasAssociatedActivity"/>
+</rdf:RDF>
+

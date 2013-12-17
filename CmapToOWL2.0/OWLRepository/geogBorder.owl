@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Classes -->
+ <owl:Class rdf:ID="Region"/>
+
+  <owl:Class rdf:ID="AdministrativeRegion">
+    <rdfs:subClassOf rdf:resource="#Region"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="City">
+    <rdfs:subClassOf rdf:resource="#AdministrativeRegion"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Continent">
+    <rdfs:subClassOf rdf:resource="#AdministrativeRegion"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Country">
+    <rdfs:subClassOf rdf:resource="#AdministrativeRegion"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="County">
+    <rdfs:subClassOf rdf:resource="#AdministrativeRegion"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+       	<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="partOf"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#State"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class> 
+
+  <owl:Class rdf:ID="Province">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#partOf"/>
+        <owl:allValuesFrom rdf:resource="#Country"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#AdministrativeRegion"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="State">
+   <rdfs:subClassOf rdf:resource="#AdministrativeRegion"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#partOf"/>
+        <owl:allValuesFrom rdf:resource="#Country"/>
+      </owl:Restriction>
+   </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="UrbanArea">
+   <rdfs:subClassOf rdf:resource="#AdministrativeRegion"/>
+    <rdfs:comment xml:lang="en">An urban area is an area with an increased density of human-created structures in comparison to the areas surrounding it. This term is at one end of the spectrum of suburban and rural areas. An urban area is more frequently called a city or town. </rdfs:comment>
+  </owl:Class>
+
+</rdf:RDF>

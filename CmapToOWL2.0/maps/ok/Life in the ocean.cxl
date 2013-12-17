@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Life in the ocean</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Life in the ocean"/>
+            <concept id="2" label="Biotic factors"/>
+            <concept id="3" label="Abiotic factors"/>
+            <concept id="4" label="Plankton">
+                <sense domains="[biology]"
+                    gloss="the aggregate of small plant and animal organisms that float or drift in great numbers in fresh or salt water"
+                    number="00911399" pos="n" words="[plankton]"/>
+            </concept>
+            <concept id="5" label="Animals">
+                <sense domains="[animals, biology]"
+                    gloss="a living organism characterized by voluntary movement"
+                    number="00008019" pos="n" words="[animal, animate_being, beast, brute, creature, fauna]"/>
+            </concept>
+            <concept id="6" label="Fish">
+                <sense domains="[animals, biology]"
+                    gloss="any of various mostly cold-blooded aquatic vertebrates usually having scales and breathing through gills"
+                    number="02005782" pos="n" words="[fish]"/>
+            </concept>
+            <concept id="7" label="Mammals"/>
+            <concept id="8" label="Invertebrates"/>
+            <concept id="9" label="Vertebrates"/>
+            <concept id="10" label="Carnivore">
+                <sense domains="[animals, biology]"
+                    gloss="any animal that feeds on flesh: &quot;Tyrannosaurus Rex was a large carnivore&quot;; &quot;insectivorous plants are considered carnivores&quot;"
+                    number="00868118" pos="n" words="[carnivore]"/>
+            </concept>
+            <concept id="11" label="Cetacea">
+                <sense domains="[animals, biology]"
+                    gloss="an order of Eutheria" number="01573837"
+                    pos="n" words="[Cetacea, order_Cetacea]"/>
+            </concept>
+            <concept id="12" label="Pinnipeda"/>
+            <concept id="13" label="Sirenia">
+                <sense domains="[animals, biology]"
+                    gloss="manatees; dugongs; Stellar's sea cow"
+                    number="01584361" pos="n" words="[Sirenia, order_Sirenia]"/>
+            </concept>
+            <concept id="14" label="Odostocete"/>
+            <concept id="15" label="Mysticete"/>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="16" label="consists of"/>
+            <linking-phrase id="17" label="includes"/>
+            <linking-phrase id="18" label="includes"/>
+            <linking-phrase id="19" label="includes"/>
+            <linking-phrase id="20" label="includes"/>
+            <linking-phrase id="21" label="includes"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="16"/>
+            <connection from-id="16" to-id="2"/>
+            <connection from-id="16" to-id="3"/>
+            <connection from-id="2" to-id="17"/>
+            <connection from-id="17" to-id="4"/>
+            <connection from-id="17" to-id="5"/>
+            <connection from-id="5" to-id="18"/>
+            <connection from-id="18" to-id="8"/>
+            <connection from-id="18" to-id="9"/>
+            <connection from-id="7" to-id="19"/>
+            <connection from-id="19" to-id="10"/>
+            <connection from-id="19" to-id="11"/>
+            <connection from-id="19" to-id="12"/>
+            <connection from-id="19" to-id="13"/>
+            <connection from-id="9" to-id="20"/>
+            <connection from-id="20" to-id="6"/>
+            <connection from-id="20" to-id="7"/>
+            <connection from-id="11" to-id="21"/>
+            <connection from-id="21" to-id="14"/>
+            <connection from-id="21" to-id="15"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="325" y="17"/>
+            <concept-appearance id="2" x="252" y="118"/>
+            <concept-appearance id="3" x="398" y="121"/>
+            <concept-appearance id="4" x="191" y="230"/>
+            <concept-appearance id="5" x="316" y="233"/>
+            <concept-appearance id="6" x="312" y="415"/>
+            <concept-appearance id="7" x="444" y="416"/>
+            <concept-appearance id="8" x="236" y="330"/>
+            <concept-appearance id="9" x="367" y="335"/>
+            <concept-appearance id="10" x="289" y="522"/>
+            <concept-appearance id="11" x="369" y="531"/>
+            <concept-appearance id="12" x="439" y="528"/>
+            <concept-appearance id="13" x="518" y="524"/>
+            <concept-appearance id="14" x="300" y="637"/>
+            <concept-appearance id="15" x="434" y="638"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="16" x="320" y="109"/>
+            <linking-phrase id="17" x="245" y="206"/>
+            <linking-phrase id="18" x="305" y="305"/>
+            <linking-phrase id="19" x="434" y="490"/>
+            <linking-phrase id="20" x="370" y="401"/>
+            <linking-phrase id="21" x="364" y="610"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

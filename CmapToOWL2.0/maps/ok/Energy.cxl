@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Energy</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Energy">
+                <sense domains="[physics]"
+                    gloss="(physics) the capacity of a physical system to do work; the units of energy are joules or ergs; &quot;energy can take a wide variety of forms&quot;"
+                    number="07794689" pos="n" words="[energy]"/>
+            </concept>
+            <concept id="2" label="Transfered"/>
+            <concept id="3" label="Converted">
+                <sense domains="[factotum]"
+                    gloss="spiritually reborn or converted; &quot;a born-again Christian&quot;; &quot;a converted sinner&quot;"
+                    number="01888932" pos="a" words="[born-again, converted, reborn]"/>
+            </concept>
+            <concept id="4" label="Created">
+                <sense domains="[factotum]"
+                    gloss="make or cause to be or to become; &quot;make a mess in one's office&quot;; &quot;create a furor&quot;"
+                    number="01111638" pos="v" words="[make, create]"/>
+            </concept>
+            <concept id="5" label="Distroyed"/>
+            <concept id="6" label="Nuclear">
+                <sense domains="[atomic_physic]"
+                    gloss="(physics) &quot;nuclear physics&quot;; &quot;nuclear fission&quot;; &quot;nuclear forces&quot;"
+                    number="02650931" pos="a" words="[nuclear]"/>
+            </concept>
+            <concept id="7" label="Mechanical">
+                <sense domains="[physics]"
+                    gloss="relating to or governed by or in accordance with mechanics; &quot;a belief that the universe is a mechanical contrivance&quot;; &quot;the mechanical pressure of a strong wind&quot;"
+                    number="02672408" pos="a" words="[mechanical]"/>
+            </concept>
+            <concept id="8" label="Chemical">
+                <sense domains="[chemistry]"
+                    gloss="relating to or used in chemistry; &quot;chemical engineer&quot;; &quot;chemical balance&quot;"
+                    number="02543445" pos="a" words="[chemical, chemic]"/>
+                <sense domains="[chemistry]"
+                    gloss="of or made from or using substances produced by or used in reactions involving atomic or molecular changes; &quot;chemical fertilizer&quot;"
+                    number="02543733" pos="a" words="[chemical]"/>
+                <sense domains="[chemistry]"
+                    gloss="produced by or used in a reaction involving changes in atoms or molecules"
+                    number="10622194" pos="n" words="[chemical]"/>
+            </concept>
+            <concept id="9" label="Electrical">
+                <sense domains="[electricity]"
+                    gloss="relating to or concerned with electricity; &quot;an electrical engineer&quot;; &quot;electrical and mechanical engineering industries&quot;"
+                    number="02622245" pos="a" words="[electrical]"/>
+            </concept>
+            <concept id="10" label="Radiant">
+                <sense domains="[physics]"
+                    gloss="radiating or as if radiating light; &quot;the beaming sun&quot;; &quot;the effulgent daffodils&quot;; &quot;a radiant sunrise&quot;; &quot;a refulgent sunset&quot;"
+                    number="00275515" pos="a" words="[beaming, beamy, effulgent, radiant, refulgent]"/>
+            </concept>
+            <concept id="11" label="Potential energy">
+                <sense domains="[physics]"
+                    gloss="the mechanical energy that a body has by virtue of its position"
+                    number="07825060" pos="n" words="[potential_energy]"/>
+            </concept>
+            <concept id="12" label="Kinetic energy">
+                <sense domains="[physics]"
+                    gloss="the mechanical energy that a body has by virtue of its motion"
+                    number="07808565" pos="n" words="[kinetic_energy]"/>
+            </concept>
+            <concept id="13" label="Height">
+                <sense domains="[factotum]"
+                    gloss="the vertical dimension of extension; distance from the base of something to the top"
+                    number="04002199" pos="n" words="[height, tallness]"/>
+            </concept>
+            <concept id="14" label="Gravity">
+                <sense domains="[physics]"
+                    gloss="the force of attraction between all masses in the universe; especially the attraction of the earth's mass for bodies near its surface; &quot;gravitation cannot be held responsible for people falling in love&quot;--Albert Einstein"
+                    number="07804383" pos="n" words="[gravity, gravitation, gravitational_attraction, gravitational_force]"/>
+            </concept>
+            <concept id="15" label="Weight">
+                <sense domains="[physics]"
+                    gloss="the vertical force exerted by a mass as a result of gravity"
+                    number="03925610" pos="n" words="[weight]"/>
+            </concept>
+            <concept id="16" label="Velocity">
+                <sense domains="[metrology, physics, transport]"
+                    gloss="distance travelled per unit time"
+                    number="10978183" pos="n" words="[speed, velocity]"/>
+            </concept>
+            <concept id="17" label="Mass">
+                <sense domains="[physics]"
+                    gloss="the property of a body that causes it to have weight in a gravitational field"
+                    number="03923435" pos="n" words="[mass]"/>
+            </concept>
+            <concept id="18" label="Work">
+                <sense domains="[physics]"
+                    gloss="(physics) a manifestation of energy; the transfer of energy from one physical system to another expressed as the product of a force and the distance through which it moves a body in the direction of that force; &quot;work equals force times distance&quot;"
+                    number="07795444" pos="n" words="[work]"/>
+            </concept>
+            <concept id="19" label="Power">
+                <sense domains="[physics]"
+                    gloss="(physics) the rate of doing work; measured in watts (= joules/second)"
+                    number="07795077" pos="n" words="[power]"/>
+            </concept>
+            <concept id="20" label="Joule">
+                <sense domains="[metrology]"
+                    gloss="a unit of electrical energy equal to the work done when a current of one ampere passes through a resistance of one ohm for one second"
+                    number="09882076" pos="n" words="[joule, J, watt_second]"/>
+            </concept>
+            <concept id="21" label="Force">
+                <sense domains="[physics]"
+                    gloss="the physical influence that produces a change in a physical quantity; &quot;force equals mass times acceleration&quot;"
+                    number="07799815" pos="n" words="[force]"/>
+            </concept>
+            <concept id="22" label="Distance">
+                <sense domains="[time_period]"
+                    gloss="a remote point in time; &quot;if that happens it will be at some distance in the future&quot;; &quot;at a distance of ten years he had forgotten many of the details&quot;"
+                    number="10890499" pos="n" words="[distance]"/>
+            </concept>
+            <concept id="23" label="Newton">
+                <sense domains="[mathematics, physics]"
+                    gloss="English mathematician and physicist; remembered for developing the calculus and for his law of gravitation and his three laws of motion (1642-1727)"
+                    number="07744245" pos="n" words="[Newton, Isaac_Newton, Sir_Isaac_Newton]"/>
+            </concept>
+            <concept id="24" label="Meter">
+                <sense domains="[pure_science]"
+                    gloss="measure with a meter; &quot;meter the flow of water&quot;"
+                    number="00341548" pos="v" words="[meter]"/>
+            </concept>
+            <concept id="25" label="Watt">
+                <sense domains="[metrology]"
+                    gloss="a unit of power equal to 1 joule per second; the power dissipated by a current of 1 ampere flowing across a resistance of 1 ohm"
+                    number="09809274" pos="n" words="[watt, W]"/>
+            </concept>
+            <concept id="26" label="Horsepower">
+                <sense domains="[metrology]"
+                    gloss="a unit of power equal to 746 watts"
+                    number="09809762" pos="n" words="[horsepower, HP, H.P., h.p., hp]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="27" label="can be"/>
+            <linking-phrase id="28" label="can not be"/>
+            <linking-phrase id="29" label="forms are"/>
+            <linking-phrase id="30" label="consists of"/>
+            <linking-phrase id="31" label="ability to do"/>
+            <linking-phrase id="32" label="relies on"/>
+            <linking-phrase id="33" label="can convert to"/>
+            <linking-phrase id="34" label="relies on"/>
+            <linking-phrase id="35" label="measured in"/>
+            <linking-phrase id="36" label="over time measures"/>
+            <linking-phrase id="37" label="measured using"/>
+            <linking-phrase id="38" label="measured using"/>
+            <linking-phrase id="39" label="one per second is a"/>
+            <linking-phrase id="40" label="measured in"/>
+            <linking-phrase id="41" label="measured in"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="27"/>
+            <connection from-id="27" to-id="2"/>
+            <connection from-id="27" to-id="3"/>
+            <connection from-id="1" to-id="28"/>
+            <connection from-id="28" to-id="4"/>
+            <connection from-id="28" to-id="5"/>
+            <connection from-id="1" to-id="29"/>
+            <connection from-id="29" to-id="6"/>
+            <connection from-id="29" to-id="7"/>
+            <connection from-id="29" to-id="8"/>
+            <connection from-id="29" to-id="9"/>
+            <connection from-id="29" to-id="10"/>
+            <connection from-id="1" to-id="30"/>
+            <connection from-id="30" to-id="11"/>
+            <connection from-id="30" to-id="12"/>
+            <connection from-id="1" to-id="31"/>
+            <connection from-id="31" to-id="18"/>
+            <connection from-id="11" to-id="32"/>
+            <connection from-id="32" to-id="13"/>
+            <connection from-id="32" to-id="14"/>
+            <connection from-id="32" to-id="15"/>
+            <connection from-id="11" to-id="33"/>
+            <connection from-id="33" to-id="12"/>
+            <connection from-id="12" to-id="34"/>
+            <connection from-id="34" to-id="16"/>
+            <connection from-id="34" to-id="17"/>
+            <connection from-id="18" to-id="35"/>
+            <connection from-id="35" to-id="20"/>
+            <connection from-id="18" to-id="36"/>
+            <connection from-id="36" to-id="19"/>
+            <connection from-id="19" to-id="37"/>
+            <connection from-id="37" to-id="25"/>
+            <connection from-id="37" to-id="26"/>
+            <connection from-id="20" to-id="38"/>
+            <connection from-id="38" to-id="21"/>
+            <connection from-id="38" to-id="22"/>
+            <connection from-id="20" to-id="39"/>
+            <connection from-id="39" to-id="25"/>
+            <connection from-id="21" to-id="40"/>
+            <connection from-id="40" to-id="23"/>
+            <connection from-id="22" to-id="41"/>
+            <connection from-id="41" to-id="24"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="168" y="42"/>
+            <concept-appearance id="2" x="-250" y="140"/>
+            <concept-appearance id="3" x="-170" y="141"/>
+            <concept-appearance id="4" x="-82" y="143"/>
+            <concept-appearance id="5" x="-2" y="146"/>
+            <concept-appearance id="6" x="111" y="200"/>
+            <concept-appearance id="7" x="170" y="203"/>
+            <concept-appearance id="8" x="238" y="206"/>
+            <concept-appearance id="9" x="294" y="207"/>
+            <concept-appearance id="10" x="352" y="209"/>
+            <concept-appearance id="11" x="-62" y="282"/>
+            <concept-appearance id="12" x="64" y="283"/>
+            <concept-appearance id="13" x="-105" y="405"/>
+            <concept-appearance id="14" x="-38" y="403"/>
+            <concept-appearance id="15" x="-171" y="404"/>
+            <concept-appearance id="16" x="62" y="404"/>
+            <concept-appearance id="17" x="142" y="404"/>
+            <concept-appearance id="18" x="382" y="54"/>
+            <concept-appearance id="19" x="585" y="62"/>
+            <concept-appearance id="20" x="430" y="215"/>
+            <concept-appearance id="21" x="371" y="354"/>
+            <concept-appearance id="22" x="495" y="352"/>
+            <concept-appearance id="23" x="363" y="453"/>
+            <concept-appearance id="24" x="503" y="456"/>
+            <concept-appearance id="25" x="579" y="221"/>
+            <concept-appearance id="26" x="696" y="211"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="27" x="-199" y="99"/>
+            <linking-phrase id="28" x="-37" y="108"/>
+            <linking-phrase id="29" x="222" y="151"/>
+            <linking-phrase id="30" x="2" y="239"/>
+            <linking-phrase id="31" x="269" y="64"/>
+            <linking-phrase id="32" x="-112" y="363"/>
+            <linking-phrase id="33" x="-1" y="359"/>
+            <linking-phrase id="34" x="87" y="367"/>
+            <linking-phrase id="35" x="401" y="168"/>
+            <linking-phrase id="36" x="474" y="70"/>
+            <linking-phrase id="37" x="602" y="155"/>
+            <linking-phrase id="38" x="430" y="310"/>
+            <linking-phrase id="39" x="494" y="229"/>
+            <linking-phrase id="40" x="358" y="422"/>
+            <linking-phrase id="41" x="493" y="420"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Environment</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Environment">
+                <sense domains="[geography]"
+                    gloss="the area in which something exists or lives: &quot;the country--the flat agricultural surround&quot;"
+                    number="06315687" pos="n" terms="[environment, environs, surroundings, surround]"/>
+            </concept>
+            <concept id="2" label="Habitats">
+                <sense domains="[geography]"
+                    gloss="the type of environment in which an organism or group normally lives or occurs: &quot;a marine habitat&quot;"
+                    number="06325667" pos="n" terms="[habitat]"/>
+            </concept>
+            <concept id="3" label="Change">
+                <sense domains="[factotum]"
+                    gloss="an event that occurs when something passes from one state or phase to another: &quot;the change was intended to increase sales&quot;; &quot;this storm is certainly a change for the worse&quot;"
+                    number="05441797" pos="n" terms="[change, alteration, modification]"/>
+            </concept>
+            <concept id="4" label="Nonliving things"/>
+            <concept id="5" label="Living things"/>
+            <concept id="6" label="Light">
+                <sense domains="[biology, psychological_features]"
+                    gloss="brightness and animation of countenance; &quot;he had a sparkle in his eye&quot;"
+                    number="03873827" pos="n" terms="[sparkle, spark, light]"/>
+            </concept>
+            <concept id="7" label="Air">
+                <sense domains="[meteorology]"
+                    gloss="a slight wind (usually refreshing); &quot;the breeze was cooled by the lake&quot;"
+                    number="07780411" pos="n" terms="[breeze, zephyr, gentle_wind, air]"/>
+            </concept>
+            <concept id="8" label="Water">
+                <sense domains="[biology]"
+                    gloss="secrete or form water, as tears or saliva: &quot;My mouth watered at the prospect of a good dinner&quot;; &quot;His eyes watered&quot;"
+                    number="00048541" pos="v" terms="[water]"/>
+            </concept>
+            <concept id="9" label="Needs">
+                <sense domains="[factotum]"
+                    gloss="in such a manner as could not be otherwise; &quot;it is necessarily so&quot;; &quot;we must needs by objective&quot;"
+                    number="00109884" pos="r" terms="[inevitably, necessarily, of_necessity, needs]"/>
+            </concept>
+            <concept id="10" label="Physical characteristics"/>
+            <concept id="11" label="Animals">
+                <sense domains="[animals, biology]"
+                    gloss="a living organism characterized by voluntary movement"
+                    number="00008019" pos="n" terms="[animal, animate_being, beast, brute, creature, fauna]"/>
+            </concept>
+            <concept id="12" label="Plants">
+                <sense domains="[biology, plants]"
+                    gloss="a living organism lacking the power of locomotion"
+                    number="00008864" pos="n" terms="[plant, flora, plant_life]"/>
+            </concept>
+            <concept id="13" label="Food">
+                <sense domains="[food]"
+                    gloss="any substance that can be metabolized by an organism to give energy and build tissue"
+                    number="00011575" pos="n" terms="[food, nutrient]"/>
+            </concept>
+            <concept id="14" label="Food chains"/>
+            <concept id="15" label="Senses">
+                <sense domains="[physiology]"
+                    gloss="the faculty through which the external world is apprehended"
+                    number="04371175" pos="n" terms="[sense, sensation, sentience, sentiency, sensory_faculty]"/>
+            </concept>
+            <concept id="16" label="Environmental stimuli"/>
+            <concept id="17" label="Hearing">
+                <sense domains="[physiology]"
+                    gloss="the ability to hear; the auditory faculty; &quot;his hearing was impaired&quot;"
+                    number="04374245" pos="n" terms="[hearing, audition, auditory_sense, sense_of_hearing, auditory_modality]"/>
+            </concept>
+            <concept id="18" label="Sight">
+                <sense domains="[physiology]"
+                    gloss="the ability to see; the faculty of vision"
+                    number="04373072" pos="n" terms="[sight, vision, visual_sense, visual_modality]"/>
+            </concept>
+            <concept id="19" label="Touch">
+                <sense domains="[physiology]"
+                    gloss="the faculty of touch; &quot;only sight and touch enable us to locate objects in the space around us&quot;"
+                    number="04373543" pos="n" terms="[touch, sense_of_touch, skin_senses, touch_modality, cutaneous_senses]"/>
+            </concept>
+            <concept id="20" label="Smell">
+                <sense domains="[physiology]"
+                    gloss="the faculty of smell" number="04374903"
+                    pos="n" terms="[smell, sense_of_smell, olfaction, olfactory_modality]"/>
+            </concept>
+            <concept id="21" label="Taste">
+                <sense domains="[physiology]"
+                    gloss="the faculty of taste; &quot;his cold deprived him of his sense of taste&quot;"
+                    number="04374716" pos="n" terms="[taste, gustation, sense_of_taste, gustatory_modality]"/>
+            </concept>
+            <concept id="22" label="Insects">
+                <sense domains="[biology, entomology]"
+                    gloss="small air-breathing arthropod"
+                    number="01667395" pos="n" terms="[insect]"/>
+            </concept>
+            <concept id="23" label="Fish">
+                <sense domains="[animals, biology]"
+                    gloss="any of various mostly cold-blooded aquatic vertebrates usually having scales and breathing through gills"
+                    number="02005782" pos="n" terms="[fish]"/>
+            </concept>
+            <concept id="24" label="Birds">
+                <sense domains="[animals, biology]"
+                    gloss="warm-blooded egg-laying vertebrates characterized by feathers and forelimbs modified as wings"
+                    number="01026695" pos="n" terms="[bird]"/>
+            </concept>
+            <concept id="25" label="Mammals"/>
+            <concept id="26" label="Life cycles"/>
+            <concept id="27" label="Birth">
+                <sense domains="[animals, biology]"
+                    gloss="give birth (to a newborn); &quot;My wife had twins yesterday!&quot;"
+                    number="00039991" pos="v" terms="[give_birth, deliver, bear, birthe, birth, have]"/>
+            </concept>
+            <concept id="28" label="Growth">
+                <sense domains="[law]"
+                    gloss="a progression from simpler to more complex forms; &quot;the growth of culture&quot;"
+                    number="09725434" pos="n" terms="[growth]"/>
+            </concept>
+            <concept id="29" label="Development">
+                <sense domains="[biology]"
+                    gloss="the process of an individual organism growing organically; a purely biological unfolding of events involved in an organism changing gradually from a simple to a more complex level; &quot;he proposed an indicator of osseous development in children&quot;"
+                    number="09708563" pos="n" terms="[growth, growing, maturation, development, ontogeny, ontogenesis]"/>
+            </concept>
+            <concept id="30" label="Reproduction">
+                <sense domains="[biology]"
+                    gloss="the process of generating offspring"
+                    number="09698499" pos="n" terms="[reproduction]"/>
+            </concept>
+            <concept id="31" label="Death">
+                <sense domains="[biology]"
+                    gloss="the permanent end of all life functions in an organism or part of an organism; &quot;the animal died a painful death&quot;"
+                    number="07788946" pos="n" terms="[death]"/>
+            </concept>
+            <concept id="32" label="Metamorphosis">
+                <sense domains="[animals, biology]"
+                    gloss="the marked and rapid transformation of a larva into an adult that occurs in some animals"
+                    number="09697495" pos="n" terms="[metamorphosis, metabolism]"/>
+            </concept>
+            <concept id="33" label="Butterfly">
+                <sense domains="[biology, entomology]"
+                    gloss="diurnal insect typically having a slender body with knobbed antennae and broad colorful wings"
+                    number="01777374" pos="n" terms="[butterfly]"/>
+            </concept>
+            <concept id="34" label="Frog">
+                <sense domains="[animals, biology]"
+                    gloss="any of various tailless stout-bodied amphibians with long hind limbs for leaping; semiaquatic and terrestrial species"
+                    number="01161215" pos="n" terms="[frog, toad, toadfrog, anuran, batrachian, salientian]"/>
+            </concept>
+            <concept id="35" label="Offspring resemble parents"/>
+            <concept id="36" label="Egg">
+                <sense domains="[biology]"
+                    gloss="animal reproductive body consisting of an ovum or embryo together with nutritive and protective envelopes; esp. the thin-shelled reproductive body laid by e.g. female birds"
+                    number="00986478" pos="n" terms="[egg]"/>
+            </concept>
+            <concept id="37" label="Larva">
+                <sense domains="[animals, biology]"
+                    gloss="the immature free-living form of most invertebrates and amphibians and fish which at hatching from the egg is fundamentally unlike its parent and must metamorphose"
+                    number="01813568" pos="n" terms="[larva]"/>
+            </concept>
+            <concept id="38" label="Chrysalis">
+                <sense domains="[biology, entomology]"
+                    gloss="pupa of a moth or butterfly enclosed in a cocoon"
+                    number="01815040" pos="n" terms="[chrysalis]"/>
+            </concept>
+            <concept id="39" label="Adult">
+                <sense domains="[animals, biology]"
+                    gloss="any mature animal" number="00865569" pos="n" terms="[adult]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="40" label="made of many"/>
+            <linking-phrase id="41" label="undergo"/>
+            <linking-phrase id="42" label="made of"/>
+            <linking-phrase id="43" label="include"/>
+            <linking-phrase id="44" label="have"/>
+            <linking-phrase id="45" label="have characteristic"/>
+            <linking-phrase id="46" label="vary in"/>
+            <linking-phrase id="47" label="help distinguish"/>
+            <linking-phrase id="48" label="need"/>
+            <linking-phrase id="49" label="need"/>
+            <linking-phrase id="50" label="have"/>
+            <linking-phrase id="51" label="classified into"/>
+            <linking-phrase id="52" label="need"/>
+            <linking-phrase id="53" label="from"/>
+            <linking-phrase id="54" label="enable response to"/>
+            <linking-phrase id="55" label="include"/>
+            <linking-phrase id="56" label="include"/>
+            <linking-phrase id="57" label="in some animals may include"/>
+            <linking-phrase id="58" label="in which"/>
+            <linking-phrase id="59" label="in"/>
+            <linking-phrase id="60" label="stages include"/>
+            <linking-phrase id="61" label="explains inherited"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="40"/>
+            <connection from-id="40" to-id="2"/>
+            <connection from-id="2" to-id="41"/>
+            <connection from-id="41" to-id="3"/>
+            <connection from-id="2" to-id="42"/>
+            <connection from-id="42" to-id="4"/>
+            <connection from-id="42" to-id="5"/>
+            <connection from-id="4" to-id="43"/>
+            <connection from-id="43" to-id="7"/>
+            <connection from-id="43" to-id="8"/>
+            <connection from-id="43" to-id="6"/>
+            <connection from-id="5" to-id="44"/>
+            <connection from-id="44" to-id="9"/>
+            <connection from-id="44" to-id="10"/>
+            <connection from-id="5" to-id="45"/>
+            <connection from-id="45" to-id="26"/>
+            <connection from-id="9" to-id="46"/>
+            <connection from-id="46" to-id="11"/>
+            <connection from-id="46" to-id="12"/>
+            <connection from-id="10" to-id="47"/>
+            <connection from-id="47" to-id="12"/>
+            <connection from-id="47" to-id="11"/>
+            <connection from-id="11" to-id="48"/>
+            <connection from-id="48" to-id="13"/>
+            <connection from-id="11" to-id="49"/>
+            <connection from-id="49" to-id="8"/>
+            <connection from-id="49" to-id="7"/>
+            <connection from-id="11" to-id="50"/>
+            <connection from-id="50" to-id="15"/>
+            <connection from-id="11" to-id="51"/>
+            <connection from-id="51" to-id="23"/>
+            <connection from-id="51" to-id="22"/>
+            <connection from-id="51" to-id="25"/>
+            <connection from-id="51" to-id="24"/>
+            <connection from-id="12" to-id="52"/>
+            <connection from-id="52" to-id="6"/>
+            <connection from-id="52" to-id="7"/>
+            <connection from-id="52" to-id="8"/>
+            <connection from-id="13" to-id="53"/>
+            <connection from-id="53" to-id="14"/>
+            <connection from-id="15" to-id="54"/>
+            <connection from-id="54" to-id="16"/>
+            <connection from-id="15" to-id="55"/>
+            <connection from-id="55" to-id="17"/>
+            <connection from-id="55" to-id="18"/>
+            <connection from-id="55" to-id="19"/>
+            <connection from-id="55" to-id="20"/>
+            <connection from-id="55" to-id="21"/>
+            <connection from-id="26" to-id="56"/>
+            <connection from-id="56" to-id="27"/>
+            <connection from-id="56" to-id="28"/>
+            <connection from-id="56" to-id="29"/>
+            <connection from-id="56" to-id="30"/>
+            <connection from-id="56" to-id="31"/>
+            <connection from-id="29" to-id="57"/>
+            <connection from-id="57" to-id="32"/>
+            <connection from-id="30" to-id="58"/>
+            <connection from-id="58" to-id="35"/>
+            <connection from-id="32" to-id="59"/>
+            <connection from-id="59" to-id="33"/>
+            <connection from-id="59" to-id="34"/>
+            <connection from-id="33" to-id="60"/>
+            <connection from-id="60" to-id="37"/>
+            <connection from-id="60" to-id="36"/>
+            <connection from-id="60" to-id="38"/>
+            <connection from-id="60" to-id="39"/>
+            <connection from-id="35" to-id="61"/>
+            <connection from-id="61" to-id="10"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="-19" y="-219"/>
+            <concept-appearance id="2" x="-4" y="-119"/>
+            <concept-appearance id="3" x="-198" y="-44"/>
+            <concept-appearance id="4" x="-50" y="-19"/>
+            <concept-appearance id="5" x="60" y="-20"/>
+            <concept-appearance id="6" x="-250" y="139"/>
+            <concept-appearance id="7" x="-157" y="137"/>
+            <concept-appearance id="8" x="-59" y="140"/>
+            <concept-appearance id="9" x="50" y="116"/>
+            <concept-appearance id="10" x="191" y="93"/>
+            <concept-appearance id="11" x="104" y="228"/>
+            <concept-appearance id="12" x="-62" y="248"/>
+            <concept-appearance id="13" x="76" y="346"/>
+            <concept-appearance id="14" x="64" y="456"/>
+            <concept-appearance id="15" x="164" y="336"/>
+            <concept-appearance id="16" x="151" y="450"/>
+            <concept-appearance id="17" x="235" y="466"/>
+            <concept-appearance id="18" x="288" y="469"/>
+            <concept-appearance id="19" x="339" y="468"/>
+            <concept-appearance id="20" x="393" y="449"/>
+            <concept-appearance id="21" x="380" y="383"/>
+            <concept-appearance id="22" x="249" y="304"/>
+            <concept-appearance id="23" x="310" y="313"/>
+            <concept-appearance id="24" x="368" y="290"/>
+            <concept-appearance id="25" x="326" y="219"/>
+            <concept-appearance id="26" x="308" y="-2"/>
+            <concept-appearance id="27" x="356" y="106"/>
+            <concept-appearance id="28" x="440" y="105"/>
+            <concept-appearance id="29" x="506" y="94"/>
+            <concept-appearance id="30" x="606" y="39"/>
+            <concept-appearance id="31" x="600" y="-40"/>
+            <concept-appearance id="32" x="534" y="242"/>
+            <concept-appearance id="33" x="469" y="317"/>
+            <concept-appearance id="34" x="619" y="313"/>
+            <concept-appearance id="35" x="679" y="328"/>
+            <concept-appearance id="36" x="477" y="445"/>
+            <concept-appearance id="37" x="544" y="445"/>
+            <concept-appearance id="38" x="605" y="453"/>
+            <concept-appearance id="39" x="666" y="437"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="40" x="-13" y="-155"/>
+            <linking-phrase id="41" x="-107" y="-66"/>
+            <linking-phrase id="42" x="-15" y="-47"/>
+            <linking-phrase id="43" x="-110" y="75"/>
+            <linking-phrase id="44" x="82" y="68"/>
+            <linking-phrase id="45" x="180" y="7"/>
+            <linking-phrase id="46" x="47" y="196"/>
+            <linking-phrase id="47" x="164" y="192"/>
+            <linking-phrase id="48" x="84" y="313"/>
+            <linking-phrase id="49" x="31" y="254"/>
+            <linking-phrase id="50" x="128" y="298"/>
+            <linking-phrase id="51" x="189" y="245"/>
+            <linking-phrase id="52" x="-159" y="236"/>
+            <linking-phrase id="53" x="49" y="421"/>
+            <linking-phrase id="54" x="151" y="409"/>
+            <linking-phrase id="55" x="274" y="410"/>
+            <linking-phrase id="56" x="402" y="51"/>
+            <linking-phrase id="57" x="525" y="181"/>
+            <linking-phrase id="58" x="643" y="198"/>
+            <linking-phrase id="59" x="531" y="302"/>
+            <linking-phrase id="60" x="500" y="397"/>
+            <linking-phrase id="61" x="600" y="391"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

@@ -1,0 +1,318 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Relaxation Labelling constraint grammar file</TITLE>
+<META NAME="description" CONTENT="Relaxation Labelling constraint grammar file">
+<META NAME="keywords" CONTENT="userman">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="userman.css">
+
+<LINK REL="next" HREF="node27.html">
+<LINK REL="previous" HREF="node25.html">
+<LINK REL="up" HREF="node9.html">
+<LINK REL="next" HREF="node27.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html434"
+  HREF="node27.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html430"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html424"
+  HREF="node25.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html432"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html435"
+  HREF="node27.html">Chart parser CFG file</A>
+<B> Up:</B> <A NAME="tex2html431"
+  HREF="node9.html">Using the sample main</A>
+<B> Previous:</B> <A NAME="tex2html425"
+  HREF="node25.html">HMM tagger parameter file</A>
+ &nbsp; <B>  <A NAME="tex2html433"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION003150000000000000000"></A>
+<A NAME="file-relax"></A>
+<BR>
+Relaxation Labelling constraint grammar file
+</H1>
+
+<P>
+The syntax of the file is based on that of Constraint Grammars
+   [<A
+ HREF="node49.html#karlsson95">KVHA95</A>], but simplified in many aspects, and modified to 
+   include weighted constraints.
+
+<P>
+An initial file based on statistical constraints may be generated
+   from a tagged corpus using the <TT>src/utilities/train-relax.perl</TT>
+   script provided with FreeLing.
+   Later, hand written constraints can be added to the file to improve
+   the tagger behaviour.
+
+<P>
+The file consists of two sections: <TT>SETS</TT> and <TT>CONSTRAINTS</TT>.
+
+<P>
+The <TT>SETS</TT> section consists of a list of set definitions, each of the form
+   <TT>Set-name = element1 element2 ... elementN ; </TT>
+
+<P>
+Where the <TT>Set-name</TT> is any alphanumeric string starting with a capital letter, and the elements are either forms, lemmas, plain PoS tags, or senses. Forms   are enclosed in parenthesis -e.g. <code>(comimos)</code>-, lemmas in angle brackets -e.g. <code>&lt;comer&gt;</code>-, PoS tags are alphanumeric strings starting with a capital letter -e.g. <code>NCMS000</code>-, and senses are enclosed in square brackets -e.g. <code>[00794578]</code>.
+   The sets must be homogeneous: That is, all the elements of a set
+   have to be of the same kind. 
+
+<P>
+Examples of set definitions:
+<BR><PRE>
+   DetMasc = DA0MS0 DA0MP0 DD0MS0 DD0MP0 DI0MS0 DI0MP0 DP1MSP DP1MPP
+             DP2MSP DP2MPP DT0MS0 DT0MP0 DE0MS0 DE0MP0 AQ0MS0 AQ0MP0;
+   VerbPron = &lt;dar_cuenta&gt; &lt;atrever&gt; &lt;arrepentir&gt; &lt;equivocar&gt; &lt;inmutar&gt;
+              &lt;morir&gt; &lt;ir&gt; &lt;manifestar&gt; &lt;precipitar&gt; &lt;referir&gt; &lt;reír&gt; &lt;venir&gt;;
+   Animal = [00008019] [00862484] [00862617] [00862750] [00862871] [00863425]
+            [00863992] [00864099] [00864394] [00865075] [00865379] [00865569]
+            [00865638] [00867302] [00867448] [00867773] [00867864] [00868028]
+            [00868297] [00868486] [00868585] [00868729] [00911889] [00985200]
+            [00990770] [01420347] [01586897] [01661105] [01661246] [01664986] 
+            [01813568] [01883430] [01947400] [07400072] [07501137];
+</PRE>
+
+<P>
+The <TT>CONSTRAINTS</TT> section consists of a series of context
+   constraits, each of the form: <TT>weight core context;</TT>
+
+<P>
+Where:
+    
+<UL>
+<LI><TT>weight</TT> is a real value stating the compatibility (or
+	incompatibility if negative) degree of the <TT>label</TT> with the
+	<TT>context</TT>.
+</LI>
+<LI><TT>core</TT> indicates the analysis or
+	analyses  (form interpretation) in a word that will 
+        be affected by the constraint. It may be:
+	
+<UL>
+<LI>Plain tag:  A plain complete PoS tag,  e.g. <TT>VMIP3S0</TT>
+</LI>
+<LI>Wildcarded tag:  A PoS tag prefix, right-wilcarded, 
+              e.g. <TT>VMI*</TT>, <TT>VMIP*</TT>. 
+</LI>
+<LI>Lemma: A lemma enclosed in angle brackets, optionaly
+	  preceded by a tag or a wildcarded tag.
+	  e.g.  <code>&lt;comer&gt;</code>, <code>VMIP3S0&lt;comer&gt;</code>,
+	  <code>VMI*&lt;comer&gt;</code> will match any
+	  word analysis with those tag/prefix and lemma.
+</LI>
+<LI>Form: Form enclosed in parenthesis, preceded by a PoS tag (or a
+	  wilcarded tag).
+	  e.g.  <TT>VMIP3S0(comi&#243;)</TT>,  <TT>VMI*(comi&#243;)</TT> will match any
+	  word analysis with those tag/prefix and form.
+          Note that the form alone <EM>is not</EM> allowed in the rule core,
+	  since the rule woull to distinguish among different analysis of
+	  the same form.
+</LI>
+<LI>Sense: A sense code enclosed in square brackets, optionaly
+	  preceded by a tag or a wildcarded tag.
+	  e.g.  <code>[00862617]</code>, <code>NCMS000[00862617]</code>,
+          <code>NC*[00862617]</code> will match any
+	  word analysis with those tag/prefix and sense.
+	
+</LI>
+</UL>
+</LI>
+<LI><TT>context</TT> is a list of conditions that the context of
+        the word must satisfy for the constraint to be applied.
+	Each condition is enclosed in parenthesis and the list (and
+        thus the constraint) is finished with a semicolon.
+	Each condition has the form: 
+<BR>	<TT>(position terms)</TT> 
+<BR>
+or either:
+<BR>	<TT>(position terms barrier terms)</TT> 
+
+<P>
+Conditions may be negated using the token <TT>not</TT>,
+         i.e. <TT>(not pos terms)</TT>
+
+<P>
+Where: 
+	
+<UL>
+<LI><TT>position</TT> is the relative position where the condition
+	  must be satisfied: -1 indicates the previous word and +1 the
+	  next word. A position with a star (e.g. -2*) indicates that
+	  any word is allowed to match starting from the indicated
+	  position and advancing towards the beggining/end of the sentence.
+</LI>
+<LI><TT>terms</TT> is a list of one or more terms separated by
+ 	the token <TT>or</TT>. Each term may be:
+    	   
+<UL>
+<LI>Plain tag:  A plain complete PoS tag,  e.g. <TT>VMIP3S0</TT>
+</LI>
+<LI>Wildcarded tag:  A PoS tag prefix, right-wilcarded, 
+               e.g. <TT>VMI*</TT>, <TT>VMIP*</TT>. 
+</LI>
+<LI>Lemma: A lemma enclosed in angle brackets, optionaly
+	       preceded by a tag or a wildcarded tag.
+	       e.g.  <code>&lt;comer&gt;</code>, <code>VMIP3S0&lt;comer&gt;</code>,
+	       <code>VMI*&lt;comer&gt;</code> will match any
+	       word analysis with those tag/prefix and lemma.
+</LI>
+<LI>Form: Form enclosed in parenthesis, optionally
+	       preceded by a PoS tag (or a wilcarded tag).
+	       e.g.  <TT>(comi&#243;)</TT>, <TT>VMIP3S0(comi&#243;)</TT>, 
+               <TT>VMI*(comi&#243;)</TT> will match any
+	       word analysis with those tag/prefix and form.
+               Note that -contrarily to when defining the rule core- 
+               the form alone <EM>is</EM> allowed in the context.
+</LI>
+<LI>Sense: A sense code enclosed in square brackets, optionaly
+	       preceded by a tag or a wildcarded tag.
+	       e.g.  <code>[00862617]</code>, <code>NCMS000[00862617]</code>, 
+               <code>NC*[00862617]</code> will match any
+	       word analysis with those tag/prefix and sense.
+</LI>
+<LI>Set reference: A name of a previously defined <EM>SET</EM>
+	       in curly brackets.
+	       e.g.  <code>{DetMasc}</code>, <code>{VerbPron}</code>  will match any
+	       word analysis with a tag, lemma or sense in the
+	       specified set.
+	   
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI><TT>barrier</TT> states that the a match of the first term
+	list is only acceptable if between the focus word and the
+	matching word there is no match for the second term list.
+	
+</LI>
+</UL>
+</LI>
+</UL>
+
+<P>
+Note that the use of sense information in the rules of 
+    the constraint grammar (either in the core or in the context) 
+    only makes sense when this information distinguishes one analysis
+    from another. If the sense tagging has been performed with the 
+    option <code>DuplicateAnalysis=no</code>, each PoS tag will have a list
+    with all analysis, so the sense information will not distinguish
+    one analysis from the other (there will be only one analysis with
+    that sense, which will have at the same time all the other senses
+    as well). 
+    If the option <code>DuplicateAnalysis</code> was active, the sense
+    tagger duplicates the analysis, creating a new entry for each
+    sense. So, when a rule selects an analysis having a certain sense,
+    it is unselecting the other copies of the same analysis with 
+    different senses.
+
+<P>
+Examples:
+<BR>
+The next constraint states a high incompatibility for a word
+	being a definite determiner (<TT>DA*</TT>) if the next word is a personal form
+	of a verb (<TT>VMI*</TT>):
+<BR>        <TT>-8.143  DA*  (1 VMI*); </TT>
+
+<P>
+The next constraint states a very high compatibility for the
+        word <I CLASS="slanted">mucho</I> (much) being an indefinite determiner (<TT>DI*</TT>) 
+        -and thus not being a pronoun or an adverb, or any
+        other analysis it may have- if the following word is a noun (<TT>NC*</TT>):
+<BR>        <TT>60.0 DI* (mucho) (1 NC*);</TT>
+
+<P>
+The next constraint states a positive compatibility value for
+	a word being a noun (<TT>NC*</TT>) if somewhere to its left
+	there is a determiner or an adjective (<TT>DA* or AQ*</TT>), and
+	between them there is not any other noun:
+<BR>        <TT>5.0 NC* (-1* DA* or AQ* barrier NC*);</TT>
+
+<P>
+The next constraint states a positive compatibility value for
+	a word being a masculine noun (<TT>NCM*</TT>) if the word to its
+	left is a masculine determiner. It refers to a previously
+	defined <EM>SET</EM> which should contain the list of all tags
+	that are masculine determiners. This rule could be useful to
+	correctly tag Spanish words which have two different NC
+	analysis differing in gender: e.g. <EM>el cura</EM> (the priest)
+	vs. <EM>la cura</EM> (the cure):
+<BR>        <TT>5.0 NCM* (-1* DetMasc;</TT>
+
+<P>
+The next constraint adds some positive compatibility to a
+	3rd person personal pronoun being of undefined gender and
+	number (<TT>PP3CNA00</TT>) if it has the possibility of being
+        masculine singular (<TT>PP3MSA00</TT>), the next word may have
+        lemma <I CLASS="slanted">estar</I> (to be), and the sencond word to the right
+	is not a gerund (<TT>VMG</TT>). This rule is intended to solve the 
+        different behaviour of the Spanish word <I CLASS="slanted">lo</I> in sentences 
+        such as <I CLASS="slanted">si, lo estoy</I> or <I CLASS="slanted">lo estoy viendo</I>.
+<BR>	<TT>0.5 PP3CNA00   (0 PP3MSA00) (1 <code>&lt;estar&gt;</code>) (not 2 VMG*);</TT>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html434"
+  HREF="node27.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html430"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html424"
+  HREF="node25.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html432"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html435"
+  HREF="node27.html">Chart parser CFG file</A>
+<B> Up:</B> <A NAME="tex2html431"
+  HREF="node9.html">Using the sample main</A>
+<B> Previous:</B> <A NAME="tex2html425"
+  HREF="node25.html">HMM tagger parameter file</A>
+ &nbsp; <B>  <A NAME="tex2html433"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2008-01-24
+</ADDRESS>
+</BODY>
+</HTML>

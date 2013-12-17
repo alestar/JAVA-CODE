@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>animals</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Animals">
+                <sense domains="[animals, biology]"
+                    gloss="a living organism characterized by voluntary movement"
+                    number="00008019" pos="n" words="[animal, animate_being, beast, brute, creature, fauna]"/>
+            </concept>
+            <concept id="2" label="Food">
+                <sense domains="[food]"
+                    gloss="any substance that can be metabolized by an organism to give energy and build tissue"
+                    number="00011575" pos="n" words="[food, nutrient]"/>
+            </concept>
+            <concept id="3" label="Air">
+                <sense domains="[factotum]"
+                    gloss="relating to or characteristic of or occurring in the air; &quot;air war&quot;; &quot;air safety&quot;; &quot;air travel&quot;"
+                    number="01327490" pos="a" words="[air(a)]"/>
+                <sense domains="[physics]"
+                    gloss="a mixture of gases (especially oxygen) required for breathing; the stuff that the wind consists of"
+                    number="10646492" pos="n" words="[air]"/>
+                <sense domains="[aviation]"
+                    gloss="travel via aircraft; &quot;air travel involves too much waiting in airports&quot;; &quot;if you've time to spare go by air&quot;"
+                    number="00194802" pos="n" words="[air_travel, aviation, air]"/>
+                <sense domains="[factotum]"
+                    gloss="the region above the ground; &quot;her hand stopped in mid air&quot;; &quot;the hanged man danced on air&quot;"
+                    number="06373203" pos="n" words="[air]"/>
+                <sense domains="[telecommunication]"
+                    gloss="medium for radio and television broadcasting; &quot;the program was on the air from 9 til midnight&quot;; &quot;the president used the airwaves to take his message to the people&quot;"
+                    number="04730801" pos="n" words="[air, airwave]"/>
+                <sense domains="[psychological_features]"
+                    gloss="a distinctive manner; &quot;an air of mystery&quot;"
+                    number="03844605" pos="n" words="[air]"/>
+                <sense domains="[meteorology]"
+                    gloss="a slight wind (usually refreshing); &quot;the breeze was cooled by the lake&quot;"
+                    number="07780411" pos="n" words="[breeze, zephyr, gentle_wind, air]"/>
+                <sense domains="[factotum]"
+                    gloss="a distinctive but intangible quality surrounding a person or thing: &quot;an atmosphere of defeat pervaded the candidate's headquarters&quot;; &quot;the place had an aura of romance&quot;"
+                    number="03716758" pos="n" words="[air, aura, atmosphere]"/>
+                <sense domains="[factotum]"
+                    gloss="where the air is unconfined; &quot;he wanted to get out in the air a little&quot;; &quot;the concert was held in the open air&quot;; &quot;camping in the open&quot;"
+                    number="06346269" pos="n" words="[outdoors, out-of-doors, air, open_air, open]"/>
+                <sense domains="[telecommunication]"
+                    gloss="medium for spoken communication; &quot;he gave air to his objections&quot;"
+                    number="04730687" pos="n" words="[air]"/>
+                <sense domains="[factotum]"
+                    gloss="nowhere to be found in a giant void; &quot;it vanished into thin air&quot;"
+                    number="10371356" pos="n" words="[air]"/>
+                <sense domains="[music]"
+                    gloss="a succession of notes forming a distinctive sequence; &quot;she was humming an air from Beethoven&quot;"
+                    number="05270417" pos="n" words="[tune, melody, air, strain, melodic_line, line, melodic_phrase]"/>
+                <sense domains="[philosophy]"
+                    gloss="(archaic) once thought to be one of four elements composing the universe"
+                    number="10647377" pos="n" words="[air]"/>
+                <sense domains="[free_time]"
+                    gloss="an short excursion (a walk or ride) in the open air; &quot;after lunch he took the air&quot;; &quot;he took the dogs for an airing&quot;"
+                    number="00202658" pos="n" words="[air, airing]"/>
+                <sense domains="[factotum]"
+                    gloss="expose to fresh air, as of old clothing"
+                    number="01446290" pos="v" words="[air_out, air]"/>
+                <sense domains="[telecommunication]"
+                    gloss="be broadcast; &quot;This show will air Saturdays at 2 P.M.&quot;"
+                    number="00659045" pos="v" words="[air]"/>
+                <sense domains="[telecommunication]"
+                    gloss="broadcast over the airwaves, as in radio or television; &quot;We cannot air this X-rated song&quot;"
+                    number="00658752" pos="v" words="[air, send, broadcast, beam, transmit]"/>
+                <sense domains="[factotum]"
+                    gloss="make public; &quot;She aired her opinions on welfare&quot;"
+                    number="00646076" pos="v" words="[publicize, publicise, air, bare]"/>
+                <sense domains="[factotum]"
+                    gloss="expose to warm or heated air, so as to dry; &quot;Air linen&quot;"
+                    number="00340460" pos="v" words="[air]"/>
+                <sense domains="[factotum]"
+                    gloss="expose to cool or cold air so as to cool or freshen; &quot;air the old winter clothes&quot;; &quot;air out the smoke-filled rooms&quot;"
+                    number="00340255" pos="v" words="[vent, ventilate, air_out, air]"/>
+            </concept>
+            <concept id="4" label="Plants">
+                <sense domains="[biology, plants]"
+                    gloss="a living organism lacking the power of locomotion"
+                    number="00008864" pos="n" words="[plant, flora, plant_life]"/>
+            </concept>
+            <concept id="5" label="Other animals"/>
+            <concept id="6" label="Energy">
+                <sense domains="[biology, psychological_features]"
+                    gloss="an imaginative lively style (especially style of writing); &quot;his writing conveys great energy&quot;"
+                    number="03654225" pos="n" words="[energy, vigor, vigour, vim]"/>
+            </concept>
+            <concept id="7" label="All living things"/>
+            <concept id="8" label="All around"/>
+            <concept id="9" label="Water">
+                <sense domains="[biology]"
+                    gloss="secrete or form water, as tears or saliva: &quot;My mouth watered at the prospect of a good dinner&quot;; &quot;His eyes watered&quot;"
+                    number="00048541" pos="v" words="[water]"/>
+            </concept>
+            <concept id="10" label="Fish">
+                <sense domains="[animals, biology]"
+                    gloss="any of various mostly cold-blooded aquatic vertebrates usually having scales and breathing through gills"
+                    number="02005782" pos="n" words="[fish]"/>
+            </concept>
+            <concept id="11" label="Lungs">
+                <sense domains="[anatomy]"
+                    gloss="either of two saclike respiratory organs in the chest of vertebrates; serves to remove carbon dioxide and provide oxygen to the blood"
+                    number="04187344" pos="n" words="[lung]"/>
+            </concept>
+            <concept id="12" label="Tiny holes"/>
+            <concept id="13" label="Gills"/>
+            <concept id="14" label="Many animals"/>
+            <concept id="15" label="Insects">
+                <sense domains="[biology, entomology]"
+                    gloss="small air-breathing arthropod"
+                    number="01667395" pos="n" words="[insect]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="16" label="need"/>
+            <linking-phrase id="17" label="may come from"/>
+            <linking-phrase id="18" label="needed for"/>
+            <linking-phrase id="19" label="needed for"/>
+            <linking-phrase id="20" label="is"/>
+            <linking-phrase id="21" label="may come from"/>
+            <linking-phrase id="22" label="absorbed by"/>
+            <linking-phrase id="23" label="needed by"/>
+            <linking-phrase id="24" label="for"/>
+            <linking-phrase id="25" label="use"/>
+            <linking-phrase id="26" label="found in"/>
+            <linking-phrase id="27" label="in"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="16"/>
+            <connection from-id="16" to-id="2"/>
+            <connection from-id="16" to-id="3"/>
+            <connection from-id="2" to-id="17"/>
+            <connection from-id="17" to-id="4"/>
+            <connection from-id="17" to-id="5"/>
+            <connection from-id="2" to-id="18"/>
+            <connection from-id="18" to-id="6"/>
+            <connection from-id="3" to-id="19"/>
+            <connection from-id="19" to-id="6"/>
+            <connection from-id="3" to-id="20"/>
+            <connection from-id="20" to-id="8"/>
+            <connection from-id="3" to-id="21"/>
+            <connection from-id="21" to-id="8"/>
+            <connection from-id="21" to-id="9"/>
+            <connection from-id="3" to-id="22"/>
+            <connection from-id="22" to-id="11"/>
+            <connection from-id="22" to-id="12"/>
+            <connection from-id="22" to-id="13"/>
+            <connection from-id="6" to-id="23"/>
+            <connection from-id="23" to-id="7"/>
+            <connection from-id="9" to-id="24"/>
+            <connection from-id="24" to-id="10"/>
+            <connection from-id="10" to-id="25"/>
+            <connection from-id="25" to-id="13"/>
+            <connection from-id="11" to-id="26"/>
+            <connection from-id="26" to-id="14"/>
+            <connection from-id="12" to-id="27"/>
+            <connection from-id="27" to-id="15"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="413" y="9"/>
+            <concept-appearance id="2" x="339" y="123"/>
+            <concept-appearance id="3" x="495" y="129"/>
+            <concept-appearance id="4" x="181" y="237"/>
+            <concept-appearance id="5" x="281" y="258"/>
+            <concept-appearance id="6" x="323" y="347"/>
+            <concept-appearance id="7" x="197" y="403"/>
+            <concept-appearance id="8" x="442" y="276"/>
+            <concept-appearance id="9" x="642" y="242"/>
+            <concept-appearance id="10" x="679" y="367"/>
+            <concept-appearance id="11" x="474" y="348"/>
+            <concept-appearance id="12" x="537" y="354"/>
+            <concept-appearance id="13" x="601" y="355"/>
+            <concept-appearance id="14" x="475" y="454"/>
+            <concept-appearance id="15" x="551" y="462"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="16" x="413" y="93"/>
+            <linking-phrase id="17" x="254" y="196"/>
+            <linking-phrase id="18" x="369" y="216"/>
+            <linking-phrase id="19" x="403" y="254"/>
+            <linking-phrase id="20" x="475" y="227"/>
+            <linking-phrase id="21" x="575" y="205"/>
+            <linking-phrase id="22" x="540" y="275"/>
+            <linking-phrase id="23" x="254" y="391"/>
+            <linking-phrase id="24" x="658" y="326"/>
+            <linking-phrase id="25" x="625" y="462"/>
+            <linking-phrase id="26" x="468" y="417"/>
+            <linking-phrase id="27" x="542" y="428"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

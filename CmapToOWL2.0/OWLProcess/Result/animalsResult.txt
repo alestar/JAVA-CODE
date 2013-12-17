@@ -1,0 +1,68 @@
+Nombre Mapa: animals
+
+Relevancia Semantica del Repositorio de Ontologías para este mapa: 0.03526315789473685
+Conceptos: 15
+
+Proposiciones: 17
+
+Proposiciones codificadas: 12
+
+Proposiciones encontradas por semantica: 6
+
+Proposiciones codificadas por semantica: 3
+
+Proposiciones codificadas por f.e: 9
+
+Relaciones encontradas en las Bases de Conocimiento :
+
+<WordNet>
+
+Hype_Hypo_Relations: 0
+Mero_Holo_Relations: 0
+Mero_Holo_Type_Relations: 0
+
+<OpenCyc>
+
+OpenCyc_Hierarchy_Relations: 0
+OpenCyc_Instance_Relations 0
+
+<OWLRepository>
+
+OWL_ClassSubClass_Relations : 6
+OWL_Instance_Relations : 0
+OWL_ObjectProperty_Relations : 0
+OWL_RestricProperty_Relations : 0
+
+Inferencias obtenidas por las Bases de Conocimiento:
+
+<WordNet>
+
+Hype_Hypo_Infered: 0
+Mero_Holo_Ifered: 0
+Mero_Holo_Type_Infered: 0
+
+<OpenCyc>
+
+OpenCyc_Hierarchy_Infered : 0
+OpenCyc_Instance_Infered : 0
+
+<OWLRepository>
+
+OWL_ClassSubClass_Infered : 3
+OWL_Instance_Infered : 0
+OWL_ObjectProperty_Infered : 0
+OWL_RestricProperty_Infered : 0
+
+Cantidad de ejecuciones de cada regla: 
+
+R1: 5
+R2: 3
+R3: 2
+R4: 1
+R5: 0
+R6: 0
+R7: 3
+R8: 1
+R9: 0
+R10: 0
+R11: 0

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+             owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Phenomena -->
+ <owl:Class rdf:ID="Active">
+    <rdfs:subClassOf rdf:resource="#ActivityLevel"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Budget">
+    <rdfs:subClassOf rdf:resource="#State"/>
+    <owl:equivalentClass rdf:resource="#Balance"/>
+  </owl:Class>
+ <owl:Class rdf:ID="Balance"/>
+
+ <owl:Class rdf:ID="BudgetEquation">
+    <owl:equivalentClass rdf:resource="#BalanceEquation"/>
+    <rdfs:subClassOf rdf:resource="#Equation" />
+    <rdfs:comment xml:lang="en">In general, an equation expressing a balance of quantities in the sense that the local or individual rates of change are zero.</rdfs:comment>
+  </owl:Class>
+ <owl:Class rdf:ID="BalanceEquation"/>
+
+ <owl:Class rdf:ID="Component">
+    <rdfs:subClassOf rdf:resource="#Dimension"/>
+    <owl:equivalentClass rdf:resource="#SystemComponent"/>
+  </owl:Class>
+ <owl:Class rdf:ID="SystemComponent"/>
+
+ <owl:Class rdf:ID="Demand">
+    <rdfs:subClassOf rdf:resource="#SystemPhenomena"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Direct">
+    <rdfs:subClassOf rdf:resource="#SystemComponent"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Environment">
+    <rdfs:subClassOf rdf:resource="#SystemComponent" />
+  </owl:Class>
+
+ <owl:Class rdf:ID="Equilibrium">
+    <rdfs:subClassOf rdf:resource="#State" />
+    <rdfs:comment>In mechanics, a state in which the vector sum of all forces, that is, the acceleration vector, is zero. 
+In hydrodynamics, it is usually further required that a steady state exist throughout the atmospheric or fluid model. The equilibrium may be stable or unstable with respect to displacements therefrom. See also hydrostatic equilibrium, geostrophic equilibrium, instability. 2. In thermodynamics, any state of a system that would not undergo change if the system were to be isolated.</rdfs:comment>
+    <rdfs:label>Equilibrium</rdfs:label>
+  </owl:Class>
+
+ <owl:Class rdf:ID="External">
+    <rdfs:subClassOf rdf:resource="#SystemComponent" />
+  </owl:Class>
+
+ <owl:Class rdf:ID="Gross">
+    <rdfs:subClassOf rdf:resource="#SystemComponent" />
+  </owl:Class>
+
+ <owl:Class rdf:ID="Heterogeneous">
+    <rdfs:subClassOf rdf:resource="#SystemState"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Homogeneous">
+    <rdfs:subClassOf rdf:resource="#SystemState"/>
+    <owl:disjointWith rdf:resource="#Heterogeneous"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Resource">
+    <rdfs:subClassOf rdf:resource="#SystemComponent"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Internal">
+    <rdfs:subClassOf rdf:resource="#SystemComponent" />
+    <owl:disjointWith rdf:resource="#External" />
+  </owl:Class>
+
+ <owl:Class rdf:ID="Net">
+    <rdfs:subClassOf rdf:resource="#SystemComponent" />
+  </owl:Class>
+
+ <owl:Class rdf:ID="System">
+    <rdfs:subClassOf rdf:resource="#Model"/>
+    <rdfs:comment> System is a set of interacting or interdependent entities, real or abstract, forming an integrated whole.
+    </rdfs:comment>
+  </owl:Class>
+  
+ <owl:Class rdf:ID="SystemPhenomena">
+    <rdfs:subClassOf rdf:resource="#SystemComponent" />
+    <rdfs:subClassOf rdf:resource="#Phenomena"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:ID="hasComponent">
+    <rdfs:range rdf:resource="#Component"/>
+  </owl:ObjectProperty>
+
+<!-- Properties -->
+ <owl:Class rdf:ID="ActivityLevel">
+    <rdfs:subClassOf rdf:resource="#Level"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Ambient">
+    <rdfs:subClassOf rdf:resource="#SystemState"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Broken">
+    <rdfs:subClassOf rdf:resource="#SystemState"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Closed">
+    <rdfs:subClassOf rdf:resource="#SystemState"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="CriticalPoint">
+    <rdfs:subClassOf rdf:resource="#Threshold"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Inactive">
+    <owl:disjointWith rdf:resource="#Active"/>
+    <rdfs:subClassOf rdf:resource="#SystemState"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Level">
+    <rdfs:subClassOf rdf:resource="#SystemState"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Artificial">
+    <rdfs:subClassOf rdf:resource="#SystemState"/>
+    <owl:disjointWith rdf:resource="#Natural" />
+  </owl:Class>
+
+ <owl:Class rdf:ID="Natural">
+    <rdfs:subClassOf rdf:resource="#SystemState"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Open">
+    <owl:disjointWith rdf:resource="#Closed" />
+    <rdfs:subClassOf rdf:resource="#SystemState"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Role">
+    <rdfs:subClassOf rdf:resource="#Component"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Saturate">
+    <rdfs:subClassOf rdf:resource="#SystemState"/>
+    <owl:equivalentClass rdf:resource="#Saturated"/>
+    <owl:equivalentClass rdf:resource="#Saturation"/>
+  </owl:Class>
+ <owl:Class rdf:ID="Saturation"/>
+ <owl:Class rdf:ID="Saturated"/>
+
+ <owl:Class rdf:ID="Stable">
+    <rdfs:subClassOf rdf:resource="#SystemState"/>
+    <owl:equivalentClass rdf:resource="#Stability"/>
+    <rdfs:comment xml:lang="en">The characteristic of a system if sufficiently small disturbances have only small effects, either decreasing in amplitude or oscillating periodically; it is asymptotically stable if the effect of small disturbances vanishes for long time periods.</rdfs:comment>
+  </owl:Class>
+ <owl:Class rdf:ID="Stability"/>
+
+ <owl:Class rdf:ID="State">
+    <rdfs:subClassOf rdf:resource="#Property"/>
+    <owl:equivalentClass rdf:resource="#SystemState"/>
+  </owl:Class>
+ <owl:Class rdf:ID="SystemState"/>
+
+ <owl:Class rdf:ID="Unsaturated">
+    <owl:disjointWith rdf:resource="#Saturated" />
+    <rdfs:subClassOf rdf:resource="#SystemState"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:ID="approximates">
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="hasRole">
+    <rdfs:range rdf:resource="#Role"/>
+  </owl:ObjectProperty>
+
+ <owl:Class rdf:ID="Storage">
+    <rdfs:subClassOf rdf:resource="#SystemComponent"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Threshold">
+    <rdfs:subClassOf rdf:resource="#SystemState"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Unstable">
+    <owl:disjointWith rdf:resource="#Stable" />
+    <rdfs:subClassOf rdf:resource="#SystemState"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="ComplexSystem">
+    <rdfs:subClassOf rdf:resource="#System"/>
+    <rdfs:comment>A complex system is a system composed of interconnected parts that as a whole exhibit one or more properties (behavior among the possible properties) not obvious from the properties</rdfs:comment>
+  </owl:Class>
+
+</rdf:RDF>

@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://www.owl-ontologies.com/unnamed.owl#"
+  xml:base="http://www.owl-ontologies.com/unnamed.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="Conjugate_acid-base_pairs"/>
+  <owl:Class rdf:ID="Base"/>
+  <owl:Class rdf:about="#Hydrogen_ions=Hydroxide_ions"/>
+  <owl:Class rdf:ID="Aqueous_solution"/>
+  <owl:Class rdf:about="#Hydrogen_ions&gt;Hydroxide_ions"/>
+  <owl:Class rdf:about="#pH&gt;7">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="pH"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Hydrogen_ions&lt;Hydroxide_ions"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Water"/>
+  <owl:Class rdf:ID="Acid-base_reactions"/>
+  <owl:Class rdf:ID="Hydrogen_ions"/>
+  <owl:Class rdf:about="#pH">
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#pH&lt;7"/>
+          <owl:Class rdf:about="#pH&gt;7"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Neutral"/>
+  <owl:Class rdf:ID="Bases"/>
+  <owl:Class rdf:ID="Acids"/>
+  <owl:Class rdf:ID="Salt"/>
+  <owl:Class rdf:ID="Amphoteric_substances"/>
+  <owl:Class rdf:ID="Acid">
+    <rdfs:subClassOf rdf:resource="#Salt"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="#pH&lt;7">
+    <rdfs:subClassOf rdf:resource="#pH"/>
+    <rdfs:subClassOf rdf:resource="#Hydrogen_ions&gt;Hydroxide_ions"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="in">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Acids"/>
+          <owl:Class rdf:about="#Bases"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="#Aqueous_solution"/>
+  </owl:ObjectProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.2, Build 355)  http://protege.stanford.edu -->

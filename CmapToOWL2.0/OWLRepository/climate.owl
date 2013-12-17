@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Phenomena -->
+
+  <owl:Class rdf:ID="GlobalOscillation"/> 
+  <owl:Class rdf:ID="PlanetaryPhenomena"/> 
+  <owl:Class rdf:ID="FarFieldForce"/> 
+  <owl:Class rdf:ID="SeaSurfaceTemperature"/> 
+  <owl:Class rdf:ID="Ocean"/> 
+  <owl:Class rdf:ID="Decadal"/> 
+  <owl:Class rdf:ID="Mesoscale"/> 
+  <owl:Class rdf:ID="Biannual"/> 
+  <owl:Class rdf:ID="Index"/> 
+  <owl:Class rdf:ID="Evapotranspiration"/> 
+  <owl:Class rdf:ID="PlanetaryScience"/> 
+
+  <owl:Class rdf:ID="AntarcticOscillation">
+    <rdfs:subClassOf rdf:resource="#GlobalOscillation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ArcticOscillation">
+    <rdfs:subClassOf rdf:resource="#GlobalOscillation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Climate">
+    <rdfs:subClassOf rdf:resource="#PlanetaryPhenomena"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	  	<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasForce"/>	
+		</owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#FarFieldForce"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ClimateAnomaly">
+    <rdfs:subClassOf rdf:resource="#ClimateChange"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ClimatePhenomena">
+    <rdfs:subClassOf rdf:resource="#PlanetaryPhenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DrySeason">
+    <rdfs:subClassOf rdf:resource="#ClimatePhenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Drought">
+    <rdfs:subClassOf rdf:resource="#ClimateAnomaly"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ElNino">
+    <rdfs:subClassOf rdf:resource="#GlobalOscillation"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	  	<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhysicalProperty"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#SeaSurfaceTemperature" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass rdf:resource="#ElNinoSouthernOscillation"/>
+    <owl:equivalentClass rdf:resource="#ENSO"/>
+    <rdfs:comment xml:lang="en">A significant increase in sea surface temperature over the eastern and central equatorial Pacific that occurs at irregular intervals, generally ranging between two and seven years.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="ElNinoSouthernOscillation"/>
+  <owl:Class rdf:ID="ENSO"/>
+
+  <owl:Class rdf:ID="GlobalClimate">
+    <rdfs:subClassOf rdf:resource="#Climate"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="LaNina">
+    <rdfs:subClassOf rdf:resource="#PlanetaryPhenomena" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	  	<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPlanetaryRealm"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Ocean" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProperty" />
+        <owl:allValuesFrom rdf:resource="#SeaSurfaceTemperature" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The most common of several names given toa significant decrease in sea surface temperature ("cold events") in the central and eastern equatorial Pacific.  La Nina is the counterpart to the El Nino "warm event," and its spatial and temporal evolution in the equatorial Pacific is, to a considerable extent, the mirror image of El Nino, although La Nina events tend to be somewhat less regular in their behavior and duration.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LocalClimate">
+    <rdfs:subClassOf rdf:resource="#Climate"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MaddenJulianOscillation">
+    <rdfs:subClassOf rdf:resource="#GlobalOscillation"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	  	<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasTemporalScale"/>	
+		</owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#Decadal"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Mesoclimate">
+    <rdfs:subClassOf rdf:resource="#Climate" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasSpatialScale"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Mesoscale" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The climate of a natural region of small extent, for example, valley, forest, plantation, and park. Because of subtle differences in elevation and exposure, the climate may not be representative of the general climate of the region.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Microclimate">
+    <rdfs:subClassOf rdf:resource="#Climate"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MoistureClimate">
+    <rdfs:subClassOf rdf:resource="#Climate"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PacificDecadalOscillation">
+    <rdfs:subClassOf rdf:resource="#GlobalOscillation"/>
+    <owl:equivalentClass rdf:resource="#PDO"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PDO"/>
+
+  <owl:Class rdf:ID="PacificNorthAmericanPattern">
+    <rdfs:subClassOf rdf:resource="#GlobalOscillation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Paleoclimate">
+    <rdfs:subClassOf rdf:resource="#Climate"/>
+    <rdfs:comment xml:lang="en">Climate for periods prior to the development of measuring instruments, including historic and geologic time, for which only proxy climate records are available.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="QuasiBiennialOscillation">
+    <rdfs:subClassOf rdf:resource="#GlobalOscillation"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasTemporalScale"/>
+        <owl:someValuesFrom rdf:resource="#Biannual"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="RegionalClimate">
+    <rdfs:subClassOf rdf:resource="#Climate"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SouthernOscillation">
+    <rdfs:subClassOf rdf:resource="#GlobalOscillation"/>
+    <owl:equivalentClass rdf:resource="#ENSO"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Teleconnection">
+    <rdfs:subClassOf rdf:resource="#PlanetaryPhenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ThermalClimate">
+    <rdfs:subClassOf rdf:resource="#Climate"/>
+  </owl:Class>
+
+<!-- Properties -->
+  <owl:Class rdf:ID="ClimateIndicator">
+    <rdfs:subClassOf rdf:resource="#Index"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	  	<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="measureOf"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Climate"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="CommonSenseClimateIndex">
+    <rdfs:subClassOf rdf:resource="#Index"/>
+    <rdfs:comment>The Common Sense Climate Index is a simple measure of the degree (if any) to which practical climate change is occurring. The index is a composite of several everyday climate indicators. It is expected to have positive values when warming occurs and negative values for cooling. If the Index reaches and consistently maintains a value of 1 or more, the climate change should be noticeable to most people who have lived at that location for a few decades.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="NorthAtlanticOscillationIndex">
+    <rdfs:subClassOf rdf:resource="#Index"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="NorthPacificOscillationIndex">
+    <rdfs:subClassOf rdf:resource="#Index"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PalmerDroughtSeverityIndex">
+    <rdfs:subClassOf rdf:resource="#Index"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Drought"/>
+        <owl:onProperty rdf:resource="#measureOf"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PotentialEvapotranspiration">
+    <rdfs:subClassOf rdf:resource="#Evapotranspiration"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Climatology">
+    <rdfs:subClassOf rdf:resource="#PlanetaryScience"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Paleoclimatology">
+    <rdfs:subClassOf rdf:resource="#Climatology"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Phenology">
+    <rdfs:subClassOf rdf:resource="#Climatology"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ClimateChange">
+    <rdfs:subClassOf rdf:resource="#PlanetaryPhenomena"/>
+  </owl:Class>
+
+</rdf:RDF>

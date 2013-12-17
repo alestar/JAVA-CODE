@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Realms -->
+ <owl:Class rdf:ID="Cavity"/>
+ <owl:Class rdf:ID="CoastalRegion"/>
+ <owl:Class rdf:ID="EolianProcess"/>
+ <owl:Class rdf:ID="Sand"/>
+ <owl:Class rdf:ID="Elevation"/>
+ <owl:Class rdf:ID="KarstProcess"/>
+ <owl:Class rdf:ID="BodyOfWater"/>
+ <owl:Class rdf:ID="Cluster"/>
+ <owl:Class rdf:ID="Lagoon"/>
+ 
+ <owl:Class rdf:ID="AlluvialFan">
+    <rdfs:subClassOf rdf:resource="#Landform" />
+  </owl:Class>
+
+ <owl:Class rdf:ID="AlluvialPlain">
+    <rdfs:subClassOf rdf:resource="#FluvialPlain"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Bajadas">
+    <rdfs:subClassOf rdf:resource="#Landform" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="MudFlat">
+    <rdfs:subClassOf rdf:resource="#Landform" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="SaltFlat">
+    <rdfs:subClassOf rdf:resource="#Landform" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Sabkha">
+    <rdfs:subClassOf rdf:resource="#SaltFlat" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Canyon">
+    <rdfs:subClassOf rdf:resource="#Landform" />
+    <rdfs:label>Canyon</rdfs:label>
+    <rdfs:comment xml:lang="en">A canyon, or gorge, is a deep valley between cliffs often carved from the landscape by a river. Most canyons were formed by a process of long-time erosion from a plateau level. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Catchment">
+    <rdfs:subClassOf rdf:resource="#Watershed"/>
+    <rdfs:comment xml:lang="en">A catchment, or drainage basin, is an extent of land where water from precipitation drains into a body of water [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Cave">
+    <rdfs:subClassOf rdf:resource="#Landform"/>
+    <rdfs:subClassOf rdf:resource="#Cavity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="CoastalPlain">
+    <rdfs:subClassOf rdf:resource="#Plain"/>
+    <rdfs:subClassOf rdf:resource="#CoastalRegion"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Continent">
+    <rdfs:subClassOf rdf:resource="#LandRegion"/>
+    <rdfs:comment xml:lang="en">A continent is one of several large landmasses on Earth. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Crater">
+    <rdfs:subClassOf rdf:resource="#Landform"/>
+    <rdfs:subClassOf rdf:resource="#Cavity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DrainageBasin">
+    <rdfs:subClassOf rdf:resource="#LandRegion"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DryLand">
+    <rdfs:subClassOf rdf:resource="#LandRegion"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Desert">
+    <rdfs:subClassOf rdf:resource="#Landform"/>
+    <rdfs:comment xml:lang="en">A desert is a landscape form or region that receives very little precipitation.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DryLake">
+    <owl:equivalentClass rdf:resource="#Playa"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Dune">
+    <rdfs:subClassOf rdf:resource="#Hill"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhysicalProcess"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#EolianProcess" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasSubstance"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Sand" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+   <rdfs:comment xml:lang="en">A dune is a hill of sand built by eolian processes. Dunes are subject to different forms and sizes based on their interaction with the wind. Most kinds of dune are longer on the windward side where the sand is pushed up the dune, and a shorter slip face in the lee of the wind. The valley or trough between dunes is called a slack. A dune field is an area covered by extensive sand dunes. Large dune fields are known as ergs </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="FaultZone">
+    <rdfs:subClassOf rdf:resource="#"/>
+    <rdfs:comment xml:lang="en">Since faults do not usually consist of a single, clean fracture, the term fault zone is used when referring to the zone of complex deformation that is associated with the fault plane. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Field">
+    <rdfs:subClassOf rdf:resource="#Landform"/>
+    <rdfs:comment xml:lang="en">Field (agriculture), an area of land used to cultivate crops, or to keep livestock [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="FloodBasalt">
+    <rdfs:subClassOf rdf:resource="#TectonicLandform"/>
+    <rdfs:comment xml:lang="en">A flood basalt or trap basalt is the result of a giant volcanic eruption or series of eruptions that coats large stretches of land or the ocean floor with basalt lava. Flood basalts have occurred on continental scales (large igneous provinces) in prehistory, creating great plateaus and mountain ranges. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="FloodPlain">
+    <rdfs:subClassOf rdf:resource="#FluvialPlain"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="FluvialPlain">
+    <rdfs:subClassOf rdf:resource="#Plain"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="GiantDikeSwarm">
+    <rdfs:subClassOf rdf:resource="#Landform"/>
+    <rdfs:comment xml:lang="en">A dike swarm or dyke swarm in geology is a major group of parallel, linear, or radially oriented dikes intruded within continental crust. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="GlacialPlain">
+    <rdfs:subClassOf rdf:resource="#Plain"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Gorge">
+    <rdfs:subClassOf rdf:resource="#Canyon" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Hinterland">
+    <rdfs:subClassOf rdf:resource="#LandRegion"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Hill">
+    <rdfs:subClassOf rdf:resource="#Landform"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhysicalProperty"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Elevation" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A hill is a landform that extends above the surrounding terrain, in a limited area. Hills often have a distinct summit, although in areas with scarp/dip topography a hill may refer to a particular section of scarp slope without a well-defined summit (e.g. Box Hill). A hillock is a small hill. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="KarstLandform">
+    <rdfs:subClassOf rdf:resource="#Landform"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProcess" />
+        <owl:allValuesFrom rdf:resource="#KarstProcess" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Karst topography is a landscape shaped by the dissolution of a layer or layers of soluble bedrock, usually carbonate rock such as limestone or dolomite. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LacustrinePlain">
+    <rdfs:subClassOf rdf:resource="#Plain"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Land">
+    <rdfs:subClassOf rdf:resource="#Region"/>
+    <owl:equivalentClass rdf:resource="#LandRegion"/>
+    <owl:equivalentClass rdf:resource="#SurfaceRegion"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SurfaceRegion"/>
+  <owl:Class rdf:ID="LandRegion"/>
+
+  <owl:Class rdf:ID="LandCover">
+    <rdfs:subClassOf rdf:resource="#Landform"/>
+    <rdfs:comment xml:lang="en">Land cover is the physical material at the surface of the earth. Land covers include grass, asphalt, trees, bare ground, water, etc. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Landscape">
+    <rdfs:subClassOf rdf:resource="#Landform"/>
+    <rdfs:comment xml:lang="en">A landscape comprises the visible features of an area of land, including physical elements such as landforms, living elements of flora and fauna, abstract elements such as lighting and weather conditions, and human elements, for instance human activity or the built environment. Landscape may also signify the objects around one in a building. </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Landform">
+    <rdfs:subClassOf rdf:resource="#LandRegion"/>
+    <rdfs:comment xml:lang="en">A landform comprises a geomorphological unit, and is largely defined by its surface form and location in the landscape, as part of the terrain, and as such, is typically an element of topography. Landforms are categorised by features such as elevation, slope, orientation, stratification, rock exposure, and soil type. They include berms, mounds, hills, cliffs, valleys, rivers and numerous other elements.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LavaPlain">
+    <rdfs:subClassOf rdf:resource="#Plain"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LIP">
+    <rdfs:subClassOf rdf:resource="#SurfaceRegion"/>
+    <owl:equivalentClass rdf:resource="#LargeIgneousProvince"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPlanetaryRealm"/>	
+		</owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#FloodBasalt"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#GiantDikeSwarm"/>
+        <owl:onProperty rdf:resource="#hasPlanetaryRealm"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="LargeIgneousProvince"/>
+
+  <owl:Class rdf:ID="Montane">
+    <rdfs:subClassOf rdf:resource="#LandRegion"/>
+    <rdfs:comment xml:lang="en">Montane is a biogeographic term which refers to highland areas located below the subalpine zone.[1] Montane regions generally have cooler temperatures and often have higher rainfall than the adjacent lowland regions, and are frequently home to distinct communities of plants and animals. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="NonOrographic">
+    <rdfs:subClassOf rdf:resource="#Landform"/>
+    <owl:disjointWith rdf:resource="#Orographic"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PiedmontSlope">
+    <rdfs:subClassOf rdf:resource="#Landform"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Plateau">
+    <rdfs:subClassOf rdf:resource="#Landform"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Plain">
+    <rdfs:subClassOf rdf:resource="#Landform"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Playa">
+    <rdfs:subClassOf rdf:resource="#Landform"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Protrusion">
+    <rdfs:subClassOf rdf:resource="#Ridge"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Ridge">
+    <rdfs:subClassOf rdf:resource="#Mountain"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="RockGlacier">
+    <rdfs:subClassOf rdf:resource="#Landform"/>
+    <rdfs:comment xml:lang="en">Rock glaciers are distinctive geomorphological landforms of blocky detritus which may extend outward and downslope from talus cones or from glaciers or the terminal moraines of glaciers. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:ID="Sandur">
+    <rdfs:subClassOf rdf:resource="#GlacialPlain"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ScrollPlain">
+    <rdfs:subClassOf rdf:resource="#FluvialPlain"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="TillPlain">
+    <rdfs:subClassOf rdf:resource="#GlacialPlain"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Trench">
+    <rdfs:subClassOf rdf:resource="#Canyon"/>
+    <rdfs:comment xml:lang="en">A trench is a type of excavation or depression in the ground. Trenches are generally defined by being deeper than they are wide (as opposed to a wider gully or ditch), and by being narrow compared to their length (as opposed to a simple hole). Trenches are a natural feature in many landscapes. Some are created by rivers in flow (which may have long since fallen dry), others are features created by geological movement, such as oceanic trenches. The latter form is relatively deep, linear and narrow, and is formed by plate subduction. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="TectonicLandform">
+    <rdfs:subClassOf rdf:resource="#Landform" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="TopographicalRegion">
+    <rdfs:subClassOf rdf:resource="#SurfaceRegion"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Valley">
+    <rdfs:subClassOf rdf:resource="#Landform" />
+    <rdfs:comment xml:lang="en">A valley (also called a vale, dale, glen or strath and near or in Appalachia, a draw) is a depression with predominant extent in one direction. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Watershed">
+    <rdfs:subClassOf rdf:resource="#LandRegion" />
+    <rdfs:comment xml:lang="en">A watershed refers to a divide that separates one drainage area from another drainage area. However, in the United States and Canada, the term is often used to mean a drainage basin or catchment area itself. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="BarrierLagoon">
+    <rdfs:subClassOf rdf:resource="#Lagoon"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="BarrierIsland">
+    <rdfs:subClassOf rdf:resource="#Island"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Island">
+    <rdfs:subClassOf rdf:resource="#Landform"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="surroundedBy"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#BodyOfWater" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="IslandArc">
+    <rdfs:subClassOf rdf:resource="#Landform"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#TectonicLandform"/>
+        <owl:onProperty rdf:resource="#hasGeomorphologicalType"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+   <owl:ObjectProperty rdf:ID="hasGeomorphologicalType">
+  </owl:ObjectProperty>
+
+<!-- Mountain environments -->
+ <owl:Class rdf:ID="Alpine">
+    <rdfs:subClassOf rdf:resource="#Mountain"/>
+    <rdfs:comment xml:lang="en">Alpine region is one above the tree line. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Foothill">
+    <rdfs:subClassOf rdf:resource="#Landform"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Mountain">
+    <rdfs:subClassOf rdf:resource="#Landform"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MountainRange">
+    <rdfs:subClassOf rdf:resource="#Cluster"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Mountain"/>
+        <owl:onProperty rdf:resource="#hasPlanetaryRealm"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Orography">
+    <rdfs:subClassOf rdf:resource="#Landform"/>
+    <owl:equivalentClass rdf:resource="#Mountain"/>
+    <owl:equivalentClass rdf:resource="#Orographic"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Orographic"/>
+
+  <owl:Class rdf:ID="Ubac">
+    <rdfs:subClassOf rdf:resource="#LandRegion" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="partOf"/>	
+		</owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#Mountain" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment>The shady (usually poleward) side of a mountain.</rdfs:comment>
+    <rdfs:label>Ubac</rdfs:label>
+  </owl:Class>
+
+</rdf:RDF>

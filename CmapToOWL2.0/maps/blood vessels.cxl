@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>blood vessels</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Blood vessel">
+                <sense domains="[anatomy]"
+                    gloss="a vessel in which blood circulates"
+                    number="04207149" pos="n" words="[blood_vessel]"/>
+            </concept>
+            <concept id="2" label="Vein">
+                <sense domains="[anatomy]"
+                    gloss="a blood vessel that carries blood from the capillaries toward the heart; all veins except the pulmonary carry unaerated blood"
+                    number="04207481" pos="n" words="[vein, vena]"/>
+            </concept>
+            <concept id="3" label="Artery">
+                <sense domains="[anatomy]"
+                    gloss="a blood vessel that carries blood from the heart to the body"
+                    number="04137243" pos="n" words="[artery, arteria]"/>
+            </concept>
+            <concept id="4" label="Fibrous">
+                <sense domains="[factotum]"
+                    gloss="having or resembling fibers especially fibers used in making cordage such as those of jute"
+                    number="02326658" pos="a" words="[hempen, fibrous]"/>
+                <sense domains="[factotum]"
+                    gloss="full of sinews; especially impossible to chew"
+                    number="02326527" pos="a" words="[fibrous, sinewy, stringy, unchewable]"/>
+            </concept>
+            <concept id="5" label="Aorta">
+                <sense domains="[anatomy]"
+                    gloss="the large trunk artery that carries blood from the left ventricle of the heart to branch arteries"
+                    number="04139323" pos="n" words="[aorta]"/>
+            </concept>
+            <concept id="6" label="Muscular">
+                <sense domains="[anatomy]"
+                    gloss="of or relating to or consisting of muscle; &quot;muscular contraction&quot;"
+                    number="02666558" pos="a" words="[muscular]"/>
+                <sense domains="[anatomy]"
+                    gloss="(anatomy) having a robust muscular body-build characterized by predominance of structures (bone and muscle and connective tissue) developed from the embryonic mesodermal layer"
+                    number="00789443" pos="a" words="[mesomorphic, muscular]"/>
+                <sense domains="[quality]"
+                    gloss="having or suggesting great physical power or force; &quot;the muscular and passionate Fifth Symphony&quot;"
+                    number="01755784" pos="a" words="[muscular]"/>
+                <sense domains="[quality]"
+                    gloss="possessing physical strength and weight; rugged and powerful; &quot;a hefty athlete&quot;; &quot;a muscular boxer&quot;; &quot;powerful arms&quot;"
+                    number="02211044" pos="a" words="[brawny, hefty, muscular, powerful]"/>
+            </concept>
+            <concept id="7" label="Platelet">
+                <sense domains="[biology]"
+                    gloss="tiny bits of protoplasm found in vertebrate blood; essential for blood clotting"
+                    number="10783182" pos="n" words="[platelet, blood_platelet, thrombocyte]"/>
+            </concept>
+            <concept id="8" label="Leukocyte">
+                <sense domains="[biology]"
+                    gloss="blood cells that engulf and digest bacteria and fungi; an important part of the body's defense system"
+                    number="04227852" pos="n" words="[leukocyte, leucocyte, white_blood_cell, white_cell, white_blood_corpuscle, white_corpuscle]"/>
+            </concept>
+            <concept id="9" label="Red blood cell">
+                <sense domains="[biology]"
+                    gloss="a mature blood cell that contains hemoglobin to carry oxygen to the bodily tissues; a biconcave disc that has no nucleus"
+                    number="04230628" pos="n" words="[red_blood_cell, erythrocyte]"/>
+            </concept>
+            <concept id="10" label="Water">
+                <sense domains="[geography]"
+                    gloss="the part of the earth's surface covered with water; &quot;they invaded our territorial waters&quot;"
+                    number="06666185" pos="n" words="[body_of_water, water]"/>
+            </concept>
+            <concept id="11" label="Blood">
+                <sense domains="[anatomy, physiology]"
+                    gloss="the fluid (red in vertebrates) that is pumped by the heart; &quot;blood carries oxygen and nutrients to the tissues and carries waste products away&quot;; &quot;the ancients believed that blood was the seat of the emotions&quot;"
+                    number="04197156" pos="n" words="[blood]"/>
+            </concept>
+            <concept id="12" label="Tabular">
+                <sense domains="[factotum]"
+                    gloss="arranged or displayed systematically in table form"
+                    number="02270891" pos="a" words="[tabular]"/>
+                <sense domains="[geometry]"
+                    gloss="flat; like a table in form" number="00622018"
+                    pos="a" words="[tabular]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="13" label="groups"/>
+            <linking-phrase id="14" label="has shape"/>
+            <linking-phrase id="15" label="transports"/>
+            <linking-phrase id="16" label="wall"/>
+            <linking-phrase id="17" label="for example"/>
+            <linking-phrase id="18" label="wall"/>
+            <linking-phrase id="19" label="contains"/>
+            <linking-phrase id="20" label="contains"/>
+            <linking-phrase id="21" label="contains"/>
+            <linking-phrase id="22" label="contains"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="13"/>
+            <connection from-id="13" to-id="2"/>
+            <connection from-id="13" to-id="3"/>
+            <connection from-id="1" to-id="14"/>
+            <connection from-id="14" to-id="12"/>
+            <connection from-id="1" to-id="15"/>
+            <connection from-id="15" to-id="11"/>
+            <connection from-id="2" to-id="16"/>
+            <connection from-id="16" to-id="4"/>
+            <connection from-id="3" to-id="17"/>
+            <connection from-id="17" to-id="5"/>
+            <connection from-id="3" to-id="18"/>
+            <connection from-id="18" to-id="6"/>
+            <connection from-id="11" to-id="19"/>
+            <connection from-id="19" to-id="7"/>
+            <connection from-id="11" to-id="20"/>
+            <connection from-id="20" to-id="8"/>
+            <connection from-id="11" to-id="21"/>
+            <connection from-id="21" to-id="9"/>
+            <connection from-id="11" to-id="22"/>
+            <connection from-id="22" to-id="10"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="264" y="57"/>
+            <concept-appearance id="2" x="155" y="202"/>
+            <concept-appearance id="3" x="272" y="203"/>
+            <concept-appearance id="4" x="76" y="340"/>
+            <concept-appearance id="5" x="182" y="348"/>
+            <concept-appearance id="6" x="282" y="351"/>
+            <concept-appearance id="7" x="383" y="364"/>
+            <concept-appearance id="8" x="464" y="358"/>
+            <concept-appearance id="9" x="557" y="304"/>
+            <concept-appearance id="10" x="594" y="216"/>
+            <concept-appearance id="11" x="459" y="155"/>
+            <concept-appearance id="12" x="381" y="204"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="13" x="221" y="161"/>
+            <linking-phrase id="14" x="310" y="149"/>
+            <linking-phrase id="15" x="370" y="132"/>
+            <linking-phrase id="16" x="109" y="287"/>
+            <linking-phrase id="17" x="205" y="291"/>
+            <linking-phrase id="18" x="271" y="293"/>
+            <linking-phrase id="19" x="410" y="305"/>
+            <linking-phrase id="20" x="466" y="278"/>
+            <linking-phrase id="21" x="510" y="253"/>
+            <linking-phrase id="22" x="535" y="212"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

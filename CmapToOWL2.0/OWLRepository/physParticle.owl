@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+  
+<!-- Particles -->
+  <owl:Class rdf:ID="SubstanceForm"/>
+  <owl:Class rdf:ID="Substance"/>
+  <owl:Class rdf:ID="Radioactive"/>
+  
+  <owl:Class rdf:ID="AlphaParticle">
+    <rdfs:subClassOf rdf:resource="#EnergeticParticle"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Atom">
+    <rdfs:subClassOf rdf:resource="#SubstanceForm"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="BetaParticle">
+    <rdfs:subClassOf rdf:resource="#EnergeticParticle"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="CosmicRay">
+    <rdfs:subClassOf rdf:resource="#EnergeticParticle"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Electron">
+    <rdfs:subClassOf rdf:resource="#SubatomicParticle"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="EnergeticParticle">
+    <rdfs:subClassOf rdf:resource="#SubatomicParticle"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="GammaRay">
+    <rdfs:subClassOf rdf:resource="#Photon"/>
+    <rdfs:comment>Gamma rays are a form of electromagnetic radiation or light emission of frequencies produced by sub-atomic particle interactions, such as electron-positron annihilation or radioactive decay. Gamma rays are generally characterized as electromagnetic radiation having the highest frequency and energy, and also the shortest wavelength, within the electromagnetic spectrum, i.e. high energy photons. Due to their high energy content, they can cause serious damage when absorbed by living cells.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="HeavyNuclei">
+    <rdfs:subClassOf rdf:resource="#SubatomicParticle"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Molecule">
+    <rdfs:subClassOf rdf:resource="#SubstanceForm"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Neutrino">
+    <rdfs:subClassOf rdf:resource="#SubatomicParticle"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Nucleon">
+    <owl:subClassOf>
+          <owl:Class>
+            <owl:unionOf rdf:parseType="Collection">
+              <owl:Class rdf:about="#Neutron"/>
+              <owl:Class rdf:about="#Proton"/>
+            </owl:unionOf>
+          </owl:Class>
+    </owl:subClassOf>
+    <rdfs:comment>A collective name for the two baryons: neutron and the proton. </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Neutron">
+    <rdfs:subClassOf rdf:resource="#SubatomicParticle"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Particle">
+    <rdfs:subClassOf rdf:resource="#Substance"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Photon">
+    <rdfs:subClassOf rdf:resource="#SubatomicParticle"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Proton">
+    <rdfs:subClassOf rdf:resource="#SubatomicParticle"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Radiocarbon">
+    <rdfs:subClassOf rdf:resource="#Radioactive"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Radioisotope">
+    <owl:equivalentClass rdf:resource="#Radionuclide"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Radionuclide">
+    <rdfs:subClassOf rdf:resource="#Radioactive"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SubatomicParticle">
+    <rdfs:subClassOf rdf:resource="#Substance"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Radiation">
+    <rdfs:subClassOf rdf:resource="#Substance"/>
+  </owl:Class>
+
+</rdf:RDF>

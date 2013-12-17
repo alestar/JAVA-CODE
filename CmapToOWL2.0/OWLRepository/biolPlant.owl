@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Classes -->
+ <owl:Class rdf:ID="LivingEntity"/>
+ <owl:Class rdf:ID="Organism"/>
+ <owl:Class rdf:ID="OrganicSubstance"/>
+ 
+   <owl:Class rdf:ID="Broadleaf">
+      <rdfs:subClassOf rdf:resource="#Vegetation"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Canopy">
+      <rdfs:subClassOf rdf:resource="#Vegetation"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Conifer">
+      <rdfs:subClassOf rdf:resource="#Plant"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Crown">
+      <rdfs:subClassOf rdf:resource="#Vegetation"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Deciduous">
+      <rdfs:subClassOf rdf:resource="#Vegetation"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="DominantSpecies">
+       <rdfs:subClassOf rdf:resource="#Vegetation"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Evergreen">
+      <rdfs:subClassOf rdf:resource="#Vegetation"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Exotic">
+      <rdfs:subClassOf rdf:resource="#Vegetation"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Fern">
+      <rdfs:subClassOf rdf:resource="#Plant"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Flora">
+     <rdfs:subClassOf rdf:resource="#Plant"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="FloweringPlant">
+      <rdfs:subClassOf rdf:resource="#Plant"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Fruit">
+      <rdfs:subClassOf rdf:resource="#Plant"/>
+     <rdfs:comment>In botany, a fruit is the ripened ovary—together with seeds—of a flowering plant. In many species, the fruit incorporates the ripened ovary and surrounding tissues. Fruits are the means by which flowering plants disseminate seeds.</rdfs:comment>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Grass">
+      <rdfs:subClassOf rdf:resource="#Vegetation"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Indigenous">
+      <rdfs:subClassOf rdf:resource="#Vegetation"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Lichen">
+      <rdfs:subClassOf rdf:resource="#Plant"/>
+   </owl:Class>
+   
+   <owl:Class rdf:ID="Litter">
+      <rdfs:subClassOf rdf:resource="#Vegetation"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Liverwort">
+      <rdfs:subClassOf rdf:resource="#Plant"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Macroalgae">
+      <rdfs:subClassOf rdf:resource="#Plant"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Macrophyte">
+      <rdfs:subClassOf rdf:resource="#Vegetation"/>
+   </owl:Class>
+
+ <owl:Class rdf:ID="Mangrove">
+      <rdfs:subClassOf rdf:resource="#Tree"/>
+   <rdfs:comment xml:lang="en">Mangroves (generally) are trees and shrubs that grow in saline coastal habitats in the tropics and subtropics. The word is used in at least three senses, (1) most broadly to refer to the habitat and entire plant assemblage or mangal, for which the terms mangrove swamp and mangrove forest are also used, (2) to refer to all trees and large shrubs in the mangal, and (3) narrowly to refer to the mangrove family of plants, the Rhizophoraceae, or even more specifically just to mangrove trees of the genus Rhizophora. Mangals are found in depositional coastal environments where fine sediments, often with high organic content, collect in areas protected from high energy wave action.</rdfs:comment>
+  </owl:Class>
+
+   <owl:Class rdf:ID="MarinePlant">
+      <rdfs:subClassOf rdf:resource="#Plant"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Moss">
+      <rdfs:subClassOf rdf:resource="#Plant"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Mushroom">
+      <rdfs:subClassOf rdf:resource="#FungiTaxonomy"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Native">
+      <rdfs:subClassOf rdf:resource="#Vegetation"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Needleleaf">
+      <rdfs:subClassOf rdf:resource="#Vegetation"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="OldGrowth">
+      <rdfs:subClassOf rdf:resource="#Vegetation"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Paleovegetation">
+      <rdfs:subClassOf rdf:resource="#Vegetation"/>
+  </owl:Class>
+
+   <owl:Class rdf:ID="Pollen">
+      <rdfs:subClassOf rdf:resource="#Vegetation"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="PlantPart">
+      <rdfs:subClassOf rdf:resource="#LivingEntity"/>
+     <rdfs:subClassOf>
+       <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="partOf"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Plant"/>
+       </owl:Restriction>
+     </rdfs:subClassOf>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Branch">
+      <rdfs:subClassOf rdf:resource="#PlantPart"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Twig">
+      <rdfs:subClassOf rdf:resource="#PlantPart"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Trunk">
+      <rdfs:subClassOf rdf:resource="#PlantPart"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Leaf">
+      <rdfs:subClassOf rdf:resource="#PlantPart"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Root">
+      <rdfs:subClassOf rdf:resource="#PlantPart"/>
+     <rdfs:comment>n vascular plants, the root is the organ of a plant body that typically lies below the surface of the soil (compare with stem). However, this is not always the case, since a root can also be aerial (that is, growing above the ground) or aerating (that is, growing up above the ground or especially above water). On the other hand, a stem normally occurring below ground is not exceptional either (see rhizome). So, it is better to define root as a part of a plant body that bears no leaves, and therefore also lacks nodes. There are also important internal structural differences between stems and roots. The two major functions of roots are 1.) absorption of water and inorganic nutrients and 2.) anchoring the plant body to the ground. Roots also function in cytokinin synthesis, which supplies some of shoot needs. They often function in storage of food. The roots of most vascular plant species enter into symbiosis with certain fungi to form mycorrhizas, and a large range of other organisms including bacteria also closely associate with roots. </rdfs:comment>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Sclerophyll">
+      <rdfs:subClassOf rdf:resource="#Vegetation"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Scrub">
+      <rdfs:subClassOf rdf:resource="#Vegetation"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="SecondGrowth">
+      <rdfs:subClassOf rdf:resource="#Vegetation"/>
+      <owl:disjointWith rdf:resource="#OldGrowth"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Thorn">
+      <rdfs:subClassOf rdf:resource="#Vegetation"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Tree">
+      <rdfs:subClassOf rdf:resource="#Vegetation"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="PonderosaPine">
+      <rdfs:subClassOf rdf:resource="#Tree"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="DouglasFir">
+      <rdfs:subClassOf rdf:resource="#Tree"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="TreeRing">
+      <rdfs:subClassOf rdf:resource="#LivingEntity"/>
+     <rdfs:subClassOf>
+       <owl:Restriction>
+         <owl:onProperty rdf:resource="#partOf"/>
+         <owl:allValuesFrom rdf:resource="#Tree"/>
+       </owl:Restriction>
+     </rdfs:subClassOf>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Vegetation">
+      <rdfs:subClassOf rdf:resource="#Plant"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="VegetationCover">
+      <rdfs:subClassOf rdf:resource="#Vegetation"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="VegetationSpecies">
+      <rdfs:subClassOf rdf:resource="#Vegetation"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Plant">
+      <rdfs:subClassOf rdf:resource="#Organism"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Chlorophyll">
+      <rdfs:subClassOf rdf:resource="#LivingEntity"/>
+    <rdfs:comment xml:lang="en">Chlorophyll is a green pigment found in most plants, algae, and cyanobacteria. Chlorophyll absorbs light most strongly in the blue and red but poorly in the green portions of the electromagnetic spectrum, hence the green color of chlorophyll-containing tissues like plant leaves. </rdfs:comment>
+  </owl:Class>
+
+   <owl:Class rdf:ID="ChlorophyllA">
+      <rdfs:subClassOf rdf:resource="#Chlorophyll"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Pheophytin">
+      <rdfs:subClassOf rdf:resource="#Chlorophyll"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Gelbstoff">
+    <rdfs:subClassOf rdf:resource="#OrganicSubstance"/>
+  </owl:Class>
+
+   <owl:Class rdf:ID="Fungi">
+      <rdfs:subClassOf rdf:resource="#Plant"/>
+   </owl:Class>
+
+   <owl:Class rdf:ID="FungiTaxonomy">
+      <rdfs:subClassOf rdf:resource="#Fungi"/>
+   </owl:Class>
+
+   <owl:ObjectProperty rdf:ID="hasVegetation"/>
+
+</rdf:RDF>

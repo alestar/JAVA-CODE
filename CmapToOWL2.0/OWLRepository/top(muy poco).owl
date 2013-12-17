@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+             owl:versionInfo="2.0">
+  </owl:Ontology>
+
+
+ <owl:Class rdf:ID="Matter" />
+ <owl:Class rdf:ID="NaturalLaw" />
+ <owl:Class rdf:ID="Phenomena"/>
+ <owl:Class rdf:ID="Process"/>
+ <owl:Class rdf:ID="Property" />
+ <owl:Class rdf:ID="Realm" />
+ <owl:Class rdf:ID="SpaceTime" />
+
+ <owl:Class rdf:ID="Quantity">
+    <rdfs:subClassOf rdf:resource="#Property"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="IntervalQuantity">
+    <rdfs:subClassOf rdf:resource="#Quantity"/>
+  </owl:Class>
+<!--
+ <owl:Class rdf:ID="HumanActivity" />
+-->
+  <owl:ObjectProperty rdf:ID="hasProcess"/>
+
+  <owl:ObjectProperty rdf:ID="hasProperty">
+    <rdfs:range rdf:resource="#Property"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="hasPhenomena">
+    <rdfs:range rdf:resource="#Phenomena"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="hasQuantity">
+    <rdfs:range rdf:resource="#Quantity"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="partOf"/>
+
+  <owl:ObjectProperty rdf:ID="hasPart">
+    <owl:inverseOf rdf:resource="#partOf"/>
+  </owl:ObjectProperty>
+
+</rdf:RDF>

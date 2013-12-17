@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Birds</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Birds">
+                <sense domains="[animals, biology]"
+                    gloss="warm-blooded egg-laying vertebrates characterized by feathers and forelimbs modified as wings"
+                    number="01026695" pos="n" words="[bird]"/>
+            </concept>
+            <concept id="2" label="Endotherms"/>
+            <concept id="3" label="Feet">
+                <sense domains="[anatomy, animals]"
+                    gloss="any of various organs of locomotion or attachment in invertebrates"
+                    number="01824376" pos="n" words="[foot, invertebrate_foot]"/>
+            </concept>
+            <concept id="4" label="Feathers">
+                <sense domains="[animals]"
+                    gloss="the light horny waterproof structure forming the external covering of birds"
+                    number="01411980" pos="n" words="[feather, plume, plumage]"/>
+            </concept>
+            <concept id="5" label="Insulation">
+                <sense domains="[factotum]"
+                    gloss="the state of being insulated"
+                    number="10343743" pos="n" words="[insulation, insularity, insularism, detachment]"/>
+                <sense domains="[buildings]"
+                    gloss="an insulating material" number="10706467"
+                    pos="n" words="[insulating_material, insulant, insulation]"/>
+                <sense domains="[factotum]"
+                    gloss="the act of insulating for the purposes of protecting something"
+                    number="00529661" pos="n" words="[insulation]"/>
+            </concept>
+            <concept id="6" label="Hollow bones"/>
+            <concept id="7" label="Beaks"/>
+            <concept id="8" label="Wings">
+                <sense domains="[factotum]"
+                    gloss="a means of flight or ascent; &quot;necessity lends wings to inspiration&quot;"
+                    number="00117527" pos="n" words="[wings]"/>
+                <sense domains="[sociology]"
+                    gloss="stylized bird wings worn as an insignia by qualified pilots or air crew members"
+                    number="05424632" pos="n" words="[wings]"/>
+            </concept>
+            <concept id="9" label="Eggs">
+                <sense domains="[gastronomy]"
+                    gloss="oval reproductive body of a fowl (especially a hen) used as food"
+                    number="05872618" pos="n" words="[egg, eggs]"/>
+            </concept>
+            <concept id="10" label="Food">
+                <sense domains="[food]"
+                    gloss="any substance that can be metabolized by an organism to give energy and build tissue"
+                    number="00011575" pos="n" words="[food, nutrient]"/>
+            </concept>
+            <concept id="11" label="Sexually">
+                <sense domains="[anatomy, physiology, sexuality]"
+                    gloss="with respect to sexuality; &quot;sexually ambiguous&quot;"
+                    number="00132508" pos="r" words="[sexually]"/>
+                <sense domains="[anatomy, physiology, sexuality]"
+                    gloss="by sexual means; &quot;reproduce sexually&quot;"
+                    number="00132416" pos="r" words="[sexually]"/>
+            </concept>
+            <concept id="12" label="Light body weights"/>
+            <concept id="13" label="Rapid digestive system"/>
+            <concept id="14" label="High metabolism"/>
+            <concept id="15" label="Warm blooded animals"/>
+            <concept id="16" label="Body temperature">
+                <sense domains="[physics]"
+                    gloss="normal body temperature; 98.6F or 37 C"
+                    number="03916659" pos="n" words="[body_temperature, blood_heat]"/>
+            </concept>
+            <concept id="17" label="Heat">
+                <sense domains="[animals]"
+                    gloss="applies to nonhuman mammals: a state or period of heightened sexual arousal and activity"
+                    number="10111948" pos="n" words="[estrus, oestrus, heat, rut]"/>
+            </concept>
+            <concept id="18" label="Fly">
+                <sense domains="[biology, entomology]"
+                    gloss="two-winged insects characterized by active flight"
+                    number="01694570" pos="n" words="[fly]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="19" label="are"/>
+            <linking-phrase id="20" label="have"/>
+            <linking-phrase id="21" label="lay"/>
+            <linking-phrase id="22" label="require"/>
+            <linking-phrase id="23" label="reproduce"/>
+            <linking-phrase id="24" label="can"/>
+            <linking-phrase id="25" label="are"/>
+            <linking-phrase id="26" label="offer"/>
+            <linking-phrase id="27" label="used to"/>
+            <linking-phrase id="28" label="caused by"/>
+            <linking-phrase id="29" label="maintain constant"/>
+            <linking-phrase id="30" label="produce"/>
+            <linking-phrase id="31" label="from"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="19"/>
+            <connection from-id="19" to-id="2"/>
+            <connection from-id="1" to-id="20"/>
+            <connection from-id="20" to-id="3"/>
+            <connection from-id="20" to-id="4"/>
+            <connection from-id="20" to-id="6"/>
+            <connection from-id="20" to-id="7"/>
+            <connection from-id="20" to-id="8"/>
+            <connection from-id="20" to-id="12"/>
+            <connection from-id="20" to-id="13"/>
+            <connection from-id="1" to-id="21"/>
+            <connection from-id="21" to-id="9"/>
+            <connection from-id="1" to-id="22"/>
+            <connection from-id="22" to-id="10"/>
+            <connection from-id="1" to-id="23"/>
+            <connection from-id="23" to-id="11"/>
+            <connection from-id="1" to-id="24"/>
+            <connection from-id="24" to-id="18"/>
+            <connection from-id="2" to-id="25"/>
+            <connection from-id="25" to-id="15"/>
+            <connection from-id="4" to-id="26"/>
+            <connection from-id="26" to-id="5"/>
+            <connection from-id="8" to-id="27"/>
+            <connection from-id="27" to-id="18"/>
+            <connection from-id="13" to-id="28"/>
+            <connection from-id="28" to-id="14"/>
+            <connection from-id="15" to-id="29"/>
+            <connection from-id="29" to-id="16"/>
+            <connection from-id="15" to-id="30"/>
+            <connection from-id="30" to-id="17"/>
+            <connection from-id="17" to-id="31"/>
+            <connection from-id="31" to-id="10"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="311" y="51"/>
+            <concept-appearance id="2" x="487" y="83"/>
+            <concept-appearance id="3" x="19" y="62"/>
+            <concept-appearance id="4" x="74" y="152"/>
+            <concept-appearance id="5" x="31" y="288"/>
+            <concept-appearance id="6" x="131" y="179"/>
+            <concept-appearance id="7" x="183" y="189"/>
+            <concept-appearance id="8" x="276" y="182"/>
+            <concept-appearance id="9" x="361" y="174"/>
+            <concept-appearance id="10" x="428" y="175"/>
+            <concept-appearance id="11" x="494" y="152"/>
+            <concept-appearance id="12" x="16" y="130"/>
+            <concept-appearance id="13" x="224" y="254"/>
+            <concept-appearance id="14" x="243" y="377"/>
+            <concept-appearance id="15" x="559" y="220"/>
+            <concept-appearance id="16" x="627" y="341"/>
+            <concept-appearance id="17" x="453" y="308"/>
+            <concept-appearance id="18" x="348" y="307"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="19" x="400" y="82"/>
+            <linking-phrase id="20" x="169" y="84"/>
+            <linking-phrase id="21" x="367" y="130"/>
+            <linking-phrase id="22" x="402" y="144"/>
+            <linking-phrase id="23" x="421" y="118"/>
+            <linking-phrase id="24" x="330" y="155"/>
+            <linking-phrase id="25" x="549" y="167"/>
+            <linking-phrase id="26" x="38" y="237"/>
+            <linking-phrase id="27" x="320" y="265"/>
+            <linking-phrase id="28" x="244" y="343"/>
+            <linking-phrase id="29" x="615" y="291"/>
+            <linking-phrase id="30" x="491" y="281"/>
+            <linking-phrase id="31" x="434" y="265"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

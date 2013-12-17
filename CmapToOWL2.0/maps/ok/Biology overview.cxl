@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Biology overview</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Biology">
+                <sense domains="[biology]"
+                    gloss="the science that studies living organisms"
+                    number="04622530" pos="n" terms="[biology, biological_science]"/>
+            </concept>
+            <concept id="2" label="Biosphere"/>
+            <concept id="3" label="Study">
+                <sense domains="[buildings]"
+                    gloss="a room used for reading and writing and studying; &quot;he knocked lightly on the closed door of the study&quot;"
+                    number="03434704" pos="n" terms="[study]"/>
+            </concept>
+            <concept id="4" label="Life">
+                <sense domains="[biology]"
+                    gloss="living things collectively; &quot;the oceans are teeming with life&quot;"
+                    number="00002880" pos="n" terms="[life]"/>
+            </concept>
+            <concept id="5" label="Ecosystems"/>
+            <concept id="6" label="Communities">
+                <sense domains="[religion]"
+                    gloss="a group of people having ethnic or cultural or religious characteristics in common; &quot;the Christian community of the apostolic age&quot;; &quot;he was well known throughout the Catholic community&quot;"
+                    number="06105250" pos="n" terms="[community]"/>
+            </concept>
+            <concept id="7" label="Populations">
+                <sense domains="[geography]"
+                    gloss="the people who inhabit a territory or state; &quot;the population seemd to be well fed and clothed&quot;"
+                    number="06080139" pos="n" terms="[population]"/>
+            </concept>
+            <concept id="8" label="Organisms">
+                <sense domains="[biology]" gloss="any living entity"
+                    number="00002086" pos="n" terms="[life_form, organism, being, living_thing]"/>
+            </concept>
+            <concept id="9" label="Organ systems"/>
+            <concept id="10" label="Organs">
+                <sense domains="[gastronomy]"
+                    gloss="edible viscera of a butchered animal"
+                    number="05695897" pos="n" terms="[variety_meat, organs]"/>
+            </concept>
+            <concept id="11" label="Tissues">
+                <sense domains="[anatomy]"
+                    gloss="a part of an organism consisting of an aggregate of cells having a similar structure and function"
+                    number="04087702" pos="n" terms="[tissue]"/>
+            </concept>
+            <concept id="12" label="Cells">
+                <sense domains="[biology]"
+                    gloss="the basic structural and functional unit of all organisms; cells may exist as independent units of life (as in monads) or may form colonies or tissues as in higher plants and animals"
+                    number="00003095" pos="n" terms="[cell]"/>
+            </concept>
+            <concept id="13" label="Organic chemicals"/>
+            <concept id="14" label="Ecology">
+                <sense domains="[biology, environment]"
+                    gloss="the branch of biology concerned with the relations between organisms and their environment"
+                    number="04639880" pos="n" terms="[ecology, bionomics, environmental_science]"/>
+            </concept>
+            <concept id="15" label="Evolution">
+                <sense domains="[biology]"
+                    gloss="the sequence of events involved in the evolutionary development of a species or taxonomic group of organisms"
+                    number="09704382" pos="n" terms="[evolution, phylogeny, phylogenesis]"/>
+            </concept>
+            <concept id="16" label="Genetics">
+                <sense domains="[biology]"
+                    gloss="the branch of biology that studies heredity and variation in organisms"
+                    number="04637179" pos="n" terms="[genetics, genetic_science]"/>
+            </concept>
+            <concept id="17" label="Chemistry of life"/>
+            <concept id="18" label="Biodiversity of organisms"/>
+            <concept id="19" label="Plants">
+                <sense domains="[biology, plants]"
+                    gloss="a living organism lacking the power of locomotion"
+                    number="00008864" pos="n" terms="[plant, flora, plant_life]"/>
+            </concept>
+            <concept id="20" label="Animals">
+                <sense domains="[animals, biology]"
+                    gloss="a living organism characterized by voluntary movement"
+                    number="00008019" pos="n" terms="[animal, animate_being, beast, brute, creature, fauna]"/>
+            </concept>
+            <concept id="21" label="Kingdoms">
+                <sense domains="[biology]"
+                    gloss="one of five biological categories: Monera or Protista or Plantae or Fungi or Animalia"
+                    number="05956482" pos="n" terms="[kingdom]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="22" label="is the"/>
+            <linking-phrase id="23" label="studies the"/>
+            <linking-phrase id="24" label="made of"/>
+            <linking-phrase id="25" label="of"/>
+            <linking-phrase id="26" label="made of"/>
+            <linking-phrase id="27" label="made of"/>
+            <linking-phrase id="28" label="made of"/>
+            <linking-phrase id="29" label="made of"/>
+            <linking-phrase id="30" label="made of"/>
+            <linking-phrase id="31" label="made of"/>
+            <linking-phrase id="32" label="made of"/>
+            <linking-phrase id="33" label="made of"/>
+            <linking-phrase id="34" label="studies"/>
+            <linking-phrase id="35" label="applies to"/>
+            <linking-phrase id="36" label="sum over time of"/>
+            <linking-phrase id="37" label="studies"/>
+            <linking-phrase id="38" label="applies to"/>
+            <linking-phrase id="39" label="applies to"/>
+            <linking-phrase id="40" label="includes"/>
+            <linking-phrase id="41" label="has five"/>
+            <linking-phrase id="42" label="to"/>
+            <linking-phrase id="43" label="to"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="22"/>
+            <connection from-id="22" to-id="3"/>
+            <connection from-id="1" to-id="23"/>
+            <connection from-id="23" to-id="2"/>
+            <connection from-id="2" to-id="24"/>
+            <connection from-id="24" to-id="5"/>
+            <connection from-id="3" to-id="25"/>
+            <connection from-id="25" to-id="4"/>
+            <connection from-id="5" to-id="26"/>
+            <connection from-id="26" to-id="6"/>
+            <connection from-id="6" to-id="27"/>
+            <connection from-id="27" to-id="7"/>
+            <connection from-id="7" to-id="28"/>
+            <connection from-id="28" to-id="8"/>
+            <connection from-id="8" to-id="29"/>
+            <connection from-id="29" to-id="9"/>
+            <connection from-id="9" to-id="30"/>
+            <connection from-id="30" to-id="10"/>
+            <connection from-id="10" to-id="31"/>
+            <connection from-id="31" to-id="11"/>
+            <connection from-id="11" to-id="32"/>
+            <connection from-id="32" to-id="12"/>
+            <connection from-id="12" to-id="33"/>
+            <connection from-id="33" to-id="13"/>
+            <connection from-id="14" to-id="34"/>
+            <connection from-id="34" to-id="2"/>
+            <connection from-id="34" to-id="5"/>
+            <connection from-id="34" to-id="6"/>
+            <connection from-id="34" to-id="7"/>
+            <connection from-id="15" to-id="35"/>
+            <connection from-id="35" to-id="7"/>
+            <connection from-id="35" to-id="8"/>
+            <connection from-id="15" to-id="36"/>
+            <connection from-id="36" to-id="16"/>
+            <connection from-id="16" to-id="37"/>
+            <connection from-id="37" to-id="8"/>
+            <connection from-id="37" to-id="9"/>
+            <connection from-id="37" to-id="10"/>
+            <connection from-id="37" to-id="11"/>
+            <connection from-id="37" to-id="12"/>
+            <connection from-id="37" to-id="13"/>
+            <connection from-id="17" to-id="38"/>
+            <connection from-id="38" to-id="13"/>
+            <connection from-id="18" to-id="39"/>
+            <connection from-id="39" to-id="8"/>
+            <connection from-id="18" to-id="40"/>
+            <connection from-id="40" to-id="19"/>
+            <connection from-id="40" to-id="20"/>
+            <connection from-id="18" to-id="41"/>
+            <connection from-id="41" to-id="21"/>
+            <connection from-id="19" to-id="42"/>
+            <connection from-id="42" to-id="13"/>
+            <connection from-id="20" to-id="43"/>
+            <connection from-id="43" to-id="13"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="336" y="-186"/>
+            <concept-appearance id="2" x="336" y="-68"/>
+            <concept-appearance id="3" x="500" y="-145"/>
+            <concept-appearance id="4" x="648" y="-111"/>
+            <concept-appearance id="5" x="331" y="39"/>
+            <concept-appearance id="6" x="329" y="130"/>
+            <concept-appearance id="7" x="329" y="232"/>
+            <concept-appearance id="8" x="332" y="331"/>
+            <concept-appearance id="9" x="318" y="415"/>
+            <concept-appearance id="10" x="334" y="507"/>
+            <concept-appearance id="11" x="338" y="611"/>
+            <concept-appearance id="12" x="337" y="708"/>
+            <concept-appearance id="13" x="312" y="808"/>
+            <concept-appearance id="14" x="602" y="79"/>
+            <concept-appearance id="15" x="90" y="179"/>
+            <concept-appearance id="16" x="78" y="417"/>
+            <concept-appearance id="17" x="95" y="809"/>
+            <concept-appearance id="18" x="572" y="329"/>
+            <concept-appearance id="19" x="538" y="437"/>
+            <concept-appearance id="20" x="642" y="435"/>
+            <concept-appearance id="21" x="722" y="420"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="22" x="415" y="-143"/>
+            <linking-phrase id="23" x="330" y="-101"/>
+            <linking-phrase id="24" x="333" y="3"/>
+            <linking-phrase id="25" x="563" y="-106"/>
+            <linking-phrase id="26" x="329" y="104"/>
+            <linking-phrase id="27" x="331" y="202"/>
+            <linking-phrase id="28" x="328" y="298"/>
+            <linking-phrase id="29" x="333" y="392"/>
+            <linking-phrase id="30" x="328" y="478"/>
+            <linking-phrase id="31" x="328" y="582"/>
+            <linking-phrase id="32" x="333" y="680"/>
+            <linking-phrase id="33" x="333" y="778"/>
+            <linking-phrase id="34" x="486" y="95"/>
+            <linking-phrase id="35" x="211" y="247"/>
+            <linking-phrase id="36" x="73" y="296"/>
+            <linking-phrase id="37" x="179" y="551"/>
+            <linking-phrase id="38" x="208" y="825"/>
+            <linking-phrase id="39" x="447" y="343"/>
+            <linking-phrase id="40" x="584" y="408"/>
+            <linking-phrase id="41" x="672" y="381"/>
+            <linking-phrase id="42" x="432" y="636"/>
+            <linking-phrase id="43" x="484" y="635"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

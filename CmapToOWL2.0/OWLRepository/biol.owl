@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Living Things -->
+
+   <owl:Class rdf:ID="Matter"/>
+   <owl:Class rdf:ID="Group"/>
+   <owl:Class rdf:ID="Category"/>
+   <owl:Class rdf:ID="Classification"/>
+   <owl:Class rdf:ID="Quantity"/>
+   <owl:Class rdf:ID="Index"/>
+   <owl:Class rdf:ID="Rate"/>
+   <owl:Class rdf:ID="History"/>
+   <owl:Class rdf:ID="Science"/>
+
+   <owl:Class rdf:ID="AquaticOrganism">
+      <rdfs:subClassOf rdf:resource="#Organism"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Honey">
+    <rdfs:subClassOf rdf:resource="#Food"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Food">
+    <rdfs:subClassOf rdf:resource="#Nutrient"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Litter">
+    <rdfs:subClassOf rdf:resource="#Biomass"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Humus">
+    <rdfs:subClassOf rdf:resource="#Biomass"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Detritus">
+    <rdfs:subClassOf rdf:resource="#Biomass"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Micronutrient">
+    <rdfs:subClassOf rdf:resource="#Nutrient"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Nutrient">
+    <rdfs:subClassOf rdf:resource="#Food"/>
+    <rdfs:subClassOf rdf:resource="#Role"/>
+  </owl:Class>
+
+   <owl:Class rdf:ID="Organism">
+    <rdfs:subClassOf rdf:resource="#LivingEntity"/>
+  </owl:Class>
+
+   <owl:Class rdf:ID="LivingEntity">
+    <rdfs:subClassOf rdf:resource="#Matter"/>
+  </owl:Class>
+
+   <owl:Class rdf:ID="Species">
+     <rdfs:subClassOf rdf:resource="#Organism"/>
+     <rdfs:subClassOf rdf:resource="#Community"/>
+  </owl:Class>
+
+   <owl:Class rdf:ID="IndicatorSpecies">
+     <rdfs:subClassOf rdf:resource="#Species"/>
+     <rdfs:comment>An indicator species is any biological species that defines a trait or characteristic of the environment. For example, a species may delineate an ecoregion or indicate an environmental condition such as a disease outbreak, pollution, species competition or climate change. Indicator species can be among the most sensitive species in a region, acting as an early warning to monitoring biologists.</rdfs:comment>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Community">
+     <rdfs:subClassOf rdf:resource="#Group"/>
+     <rdfs:comment>A community is a social group of organisms sharing an environment, normally with shared interests.</rdfs:comment>
+   </owl:Class>
+
+   <owl:Class rdf:ID="Pest">
+    <rdfs:subClassOf rdf:resource="#Organism"/>
+    <rdfs:subClassOf rdf:resource="#Role"/>
+   </owl:Class>
+
+<!-- Properties -->
+  <owl:Class rdf:ID="AgeGroup">
+    <rdfs:subClassOf rdf:resource="#Category"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Adult">
+    <rdfs:subClassOf rdf:resource="#AgeGroup"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Bioavailability">
+    <rdfs:subClassOf rdf:resource="#BiologicalProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="BiologicalClassification">
+    <rdfs:subClassOf rdf:resource="#Classification"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="BiologicalOxygenDemand">
+    <rdfs:subClassOf rdf:resource="#BiologicalProperty"/>
+     <owl:equivalentClass rdf:resource="#OxygenDemand" />
+  </owl:Class>
+  <owl:Class rdf:ID="OxygenDemand"/>
+
+  <owl:Class rdf:ID="BiologicalProperty">
+    <rdfs:subClassOf rdf:resource="#Quantity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Biomass">
+    <rdfs:subClassOf rdf:resource="#BiologicalProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Fertility">
+    <rdfs:subClassOf rdf:resource="#BiologicalProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="HealthIndex">
+    <rdfs:subClassOf rdf:resource="#Index"/>
+    <rdfs:subClassOf rdf:resource="#BiologicalProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LeafAreaIndex">
+    <rdfs:subClassOf rdf:resource="#Index"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="IncidenceRate">
+    <rdfs:subClassOf rdf:resource="#Rate"/>
+    <rdfs:comment xml:lang="en">The incidence rate is the number of new cases per unit of person-time at risk to some disease.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PhysiologicalParameter">
+    <rdfs:subClassOf rdf:resource="#Health"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Pigment">
+    <rdfs:subClassOf rdf:resource="#BiologicalProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Productivity">
+    <rdfs:subClassOf rdf:resource="#BiologicalProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PsycologicalParameter">
+    <rdfs:subClassOf rdf:resource="#Health"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="VitalStatistics">
+    <rdfs:subClassOf rdf:resource="#BiologicalProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LifeHistory">
+    <rdfs:subClassOf rdf:resource="#BiologicalProperty"/>
+    <rdfs:subClassOf rdf:resource="#History"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Disease">
+    <rdfs:subClassOf rdf:resource="#BiologicalProperty"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Health">
+    <rdfs:subClassOf rdf:resource="#BiologicalProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Epidemic">
+    <rdfs:subClassOf rdf:resource="#Disease"/>
+    <rdfs:comment xml:lang="en">In epidemiology, an epidemic is a classification of a disease that appears as new cases in a given human population, during a given period, at a rate that substantially exceeds what is expected based on recent experience (the number of new cases in the population during a specified period of time is called the incidence rate).</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Anatomy">
+    <rdfs:subClassOf rdf:resource="#Biology"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Biochemistry">
+    <rdfs:subClassOf rdf:resource="#Biology"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Biology">
+    <rdfs:subClassOf rdf:resource="#Science"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Epidemiology">
+    <rdfs:subClassOf rdf:resource="#Biology"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="studyOf"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Disease"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Genetics">
+    <rdfs:subClassOf rdf:resource="#Biology"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="NutritionScience">
+    <rdfs:subClassOf rdf:resource="#Biology"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Food"/>
+        <owl:onProperty rdf:resource="#studyOf"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Physiology">
+    <rdfs:subClassOf rdf:resource="#Biology"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Toxicology">
+    <rdfs:subClassOf rdf:resource="#Biology"/>
+  </owl:Class>
+
+<!-- OWL Properties -->
+   <owl:ObjectProperty rdf:ID="hasOrganism">
+    <rdfs:range rdf:resource="#Organism"/>
+   </owl:ObjectProperty>
+
+</rdf:RDF>

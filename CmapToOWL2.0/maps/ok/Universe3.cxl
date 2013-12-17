@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Universe3</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Universe">
+                <sense domains="[astronomy, physics]"
+                    gloss="everything that exists anywhere; &quot;they study the evolution of the universe&quot;; &quot;the biggest tree in existence&quot;"
+                    number="06691078" pos="n" words="[universe, existence, nature, creation, world, cosmos, macrocosm]"/>
+            </concept>
+            <concept id="2" label="Matter">
+                <sense domains="[physics]"
+                    gloss="that which has mass and occupies space; &quot;an atom is the smallest indivisible unit of matter&quot;"
+                    number="00010572" pos="n" words="[substance, matter]"/>
+            </concept>
+            <concept id="3" label="Energy">
+                <sense domains="[physics]"
+                    gloss="(physics) the capacity of a physical system to do work; the units of energy are joules or ergs; &quot;energy can take a wide variety of forms&quot;"
+                    number="07794689" pos="n" words="[energy]"/>
+            </concept>
+            <concept id="4" label="Usually conserved"/>
+            <concept id="5" label="Particulate">
+                <sense domains="[factotum]"
+                    gloss="composed of distinct particles"
+                    number="01661102" pos="a" words="[particulate]"/>
+            </concept>
+            <concept id="6" label="Mass">
+                <sense domains="[physics]"
+                    gloss="the property of a body that causes it to have weight in a gravitational field"
+                    number="03923435" pos="n" words="[mass]"/>
+            </concept>
+            <concept id="7" label="Organized">
+                <sense domains="[factotum]"
+                    gloss="formed into a structured or coherent whole; &quot;organized religion&quot;; &quot;organized crime&quot;; &quot;an organized tour&quot;"
+                    number="01611101" pos="a" words="[organized]"/>
+                <sense domains="[factotum]"
+                    gloss="methodical and efficient in arrangement or function; &quot;how well organized she is&quot;; &quot;his life was almost too organized&quot;"
+                    number="01609078" pos="a" words="[organized]"/>
+                <sense domains="[factotum]"
+                    gloss="being a member of or formed into a labor union; &quot;organized labor&quot;; &quot;unionized workers&quot;; &quot;a unionized shop&quot;"
+                    number="02355415" pos="a" words="[organized, unionized]"/>
+            </concept>
+            <concept id="8" label="Stored">
+                <sense domains="[gastronomy]"
+                    gloss="put away for storage; &quot;where should we stow the vegetables for the winter?&quot;"
+                    number="01025171" pos="v" words="[stow, store, garner]"/>
+            </concept>
+            <concept id="9" label="Forms">
+                <sense domains="[factotum]"
+                    gloss="create, as of a social group or a company, for example"
+                    number="01668018" pos="v" words="[form, organize]"/>
+            </concept>
+            <concept id="10" label="Heat">
+                <sense domains="[physics]"
+                    gloss="a form of energy that is transferred by a difference in temperature"
+                    number="07805780" pos="n" words="[heat, heat_energy]"/>
+            </concept>
+            <concept id="11" label="Light">
+                <sense domains="[aviation]"
+                    gloss=" to come to rest, settle: &quot;Misfortune lighted upon him.&quot;"
+                    number="01347698" pos="v" words="[alight, light, perch]"/>
+            </concept>
+            <concept id="12" label="Chemical">
+                <sense domains="[chemistry]"
+                    gloss="produced by or used in a reaction involving changes in atoms or molecules"
+                    number="10622194" pos="n" words="[chemical]"/>
+            </concept>
+            <concept id="13" label="Electrical">
+                <sense domains="[electricity]"
+                    gloss="relating to or concerned with electricity; &quot;an electrical engineer&quot;; &quot;electrical and mechanical engineering industries&quot;"
+                    number="02622245" pos="a" words="[electrical]"/>
+                <sense domains="[electricity]"
+                    gloss="using or providing or producing or transmitting or operated by electricity; &quot;electric current&quot;; &quot;electric wiring&quot;; &quot;electrical appliances&quot;; &quot;an electrical storm&quot;"
+                    number="02622421" pos="a" words="[electric, electrical]"/>
+            </concept>
+            <concept id="14" label="Nuclear">
+                <sense domains="[atomic_physic]"
+                    gloss="(physics) &quot;nuclear physics&quot;; &quot;nuclear fission&quot;; &quot;nuclear forces&quot;"
+                    number="02650931" pos="a" words="[nuclear]"/>
+            </concept>
+            <concept id="15" label="from Mass"/>
+            <concept id="16" label="Atoms">
+                <sense domains="[chemistry, physics]"
+                    gloss="(physics and chemistry) the smallest component of an element having the chemical properties of the element"
+                    number="10471843" pos="n" words="[atom]"/>
+            </concept>
+            <concept id="17" label="Molecules">
+                <sense domains="[chemistry, physics]"
+                    gloss="(physics and chemistry) the simplest structural unit of an element or compound"
+                    number="10472898" pos="n" words="[molecule]"/>
+            </concept>
+            <concept id="18" label="Elements">
+                <sense domains="[meteorology]"
+                    gloss="violent or severe weather (viewed as caused by the action of the four elements); &quot;they felt the full fury of the elements&quot;"
+                    number="07848440" pos="n" words="[elements]"/>
+            </concept>
+            <concept id="19" label="Space">
+                <sense domains="[factotum]"
+                    gloss="a blank area; &quot;write your name in the space provided&quot;"
+                    number="04817735" pos="n" words="[space, blank_space, place]"/>
+            </concept>
+            <concept id="20" label="Carbon">
+                <sense domains="[chemistry]"
+                    gloss="an abundant nonmetallic tetravalent element occurring in three allotropic forms: amorphous carbon and graphite and diamond; occurs in all organic compounds"
+                    number="10482489" pos="n" words="[carbon, C, atomic_number_6]"/>
+            </concept>
+            <concept id="21" label="Oxygen">
+                <sense domains="[chemistry, geography]"
+                    gloss="a nonmetallic bivalent element that is normally a colorless odorless tasteless nonflammable diatomic gas; constitutes 28 percent of the atmosphere by volume; the most abundant element in the earth's crust"
+                    number="10495237" pos="n" words="[oxygen, O, atomic_number_8]"/>
+            </concept>
+            <concept id="22" label="Gases">
+                <sense domains="[physics]"
+                    gloss="a fluid in the gaseous state having neither independent shape nor volume and being able to expand indefinitely"
+                    number="10671811" pos="n" words="[gas]"/>
+            </concept>
+            <concept id="23" label="Liquids">
+                <sense domains="[chemistry]"
+                    gloss="the state in which a substance exhibits a characteristic readiness to flow with little or no tendency to disperse and relatively high incompressibility"
+                    number="10387643" pos="n" words="[liquid, liquidness, liquidity]"/>
+            </concept>
+            <concept id="24" label="Solids"/>
+            <concept id="25" label="State of matter">
+                <sense domains="[chemistry]"
+                    gloss="(chemistry) the three traditional states of matter are solids (fixed shape and volume) and liquids (fixed volume and shaped by the container) and gases (filling the container); &quot;the solid state of water is called ice&quot;"
+                    number="10386919" pos="n" words="[state_of_matter, state]"/>
+            </concept>
+            <concept id="26" label="Transformed one to another"/>
+            <concept id="27" label="Time">
+                <sense domains="[pure_science]"
+                    gloss="measure the time or duration of an event or action or the person who performs an action in a certain period of time; &quot;he clocked the runners&quot;"
+                    number="00341780" pos="v" words="[clock, time]"/>
+            </concept>
+            <concept id="28" label="Motion">
+                <sense domains="[optics]"
+                    gloss="an optical illusion of motion produced by viewing a rapid succession of still pictures of a moving object; &quot;the cinema relies on apparent motion&quot;; &quot;the succession of flashing lights gave an illusion of movement&quot;"
+                    number="07775426" pos="n" words="[apparent_motion, motion, apparent_movement, movement]"/>
+            </concept>
+            <concept id="29" label="Position">
+                <sense domains="[factotum]"
+                    gloss="put into a certain place: &quot;Put your things here&quot;; &quot;Set the tray down&quot;; &quot;Set the dogs on the scent of the mising children&quot;; also with abstract objects and locations: &quot;Place emphasis on a certain point&quot;"
+                    number="01026409" pos="v" words="[put, set, place, pose, position, lay]"/>
+            </concept>
+            <concept id="30" label="Kinetic energy">
+                <sense domains="[physics]"
+                    gloss="the mechanical energy that a body has by virtue of its motion"
+                    number="07808565" pos="n" words="[kinetic_energy]"/>
+            </concept>
+            <concept id="31" label="Potential energy">
+                <sense domains="[physics]"
+                    gloss="the mechanical energy that a body has by virtue of its position"
+                    number="07825060" pos="n" words="[potential_energy]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="32" label="contains"/>
+            <linking-phrase id="33" label="transformed where E=mc2"/>
+            <linking-phrase id="34" label="is"/>
+            <linking-phrase id="35" label="is"/>
+            <linking-phrase id="36" label="has"/>
+            <linking-phrase id="37" label="may be"/>
+            <linking-phrase id="38" label="transformed where E=mc2"/>
+            <linking-phrase id="39" label="is"/>
+            <linking-phrase id="40" label="used to make things"/>
+            <linking-phrase id="41" label="can be"/>
+            <linking-phrase id="42" label="comes in"/>
+            <linking-phrase id="43" label="such as"/>
+            <linking-phrase id="44" label="may be"/>
+            <linking-phrase id="45" label="can be"/>
+            <linking-phrase id="46" label="increases motion of"/>
+            <linking-phrase id="47" label="is a major determinant of"/>
+            <linking-phrase id="48" label="may be in"/>
+            <linking-phrase id="49" label="vary in"/>
+            <linking-phrase id="50" label="combine to form"/>
+            <linking-phrase id="51" label="wich are"/>
+            <linking-phrase id="52" label="are separated by"/>
+            <linking-phrase id="53" label="may form"/>
+            <linking-phrase id="54" label="such as"/>
+            <linking-phrase id="55" label="is greater in"/>
+            <linking-phrase id="56" label="is a"/>
+            <linking-phrase id="57" label="is a"/>
+            <linking-phrase id="58" label="is a"/>
+            <linking-phrase id="59" label="requires"/>
+            <linking-phrase id="60" label="is"/>
+            <linking-phrase id="61" label="is"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="32"/>
+            <connection from-id="32" to-id="2"/>
+            <connection from-id="32" to-id="3"/>
+            <connection from-id="2" to-id="33"/>
+            <connection from-id="33" to-id="3"/>
+            <connection from-id="2" to-id="34"/>
+            <connection from-id="34" to-id="4"/>
+            <connection from-id="2" to-id="35"/>
+            <connection from-id="35" to-id="5"/>
+            <connection from-id="2" to-id="36"/>
+            <connection from-id="36" to-id="6"/>
+            <connection from-id="2" to-id="37"/>
+            <connection from-id="37" to-id="7"/>
+            <connection from-id="3" to-id="38"/>
+            <connection from-id="38" to-id="2"/>
+            <connection from-id="3" to-id="39"/>
+            <connection from-id="39" to-id="4"/>
+            <connection from-id="3" to-id="40"/>
+            <connection from-id="40" to-id="7"/>
+            <connection from-id="3" to-id="41"/>
+            <connection from-id="41" to-id="8"/>
+            <connection from-id="3" to-id="42"/>
+            <connection from-id="42" to-id="9"/>
+            <connection from-id="5" to-id="43"/>
+            <connection from-id="43" to-id="16"/>
+            <connection from-id="9" to-id="44"/>
+            <connection from-id="44" to-id="10"/>
+            <connection from-id="44" to-id="11"/>
+            <connection from-id="44" to-id="12"/>
+            <connection from-id="44" to-id="13"/>
+            <connection from-id="44" to-id="14"/>
+            <connection from-id="44" to-id="15"/>
+            <connection from-id="9" to-id="45"/>
+            <connection from-id="45" to-id="26"/>
+            <connection from-id="10" to-id="46"/>
+            <connection from-id="46" to-id="17"/>
+            <connection from-id="10" to-id="47"/>
+            <connection from-id="47" to-id="25"/>
+            <connection from-id="47" to-id="30"/>
+            <connection from-id="15" to-id="48"/>
+            <connection from-id="48" to-id="28"/>
+            <connection from-id="48" to-id="29"/>
+            <connection from-id="16" to-id="49"/>
+            <connection from-id="49" to-id="6"/>
+            <connection from-id="16" to-id="50"/>
+            <connection from-id="50" to-id="17"/>
+            <connection from-id="16" to-id="51"/>
+            <connection from-id="51" to-id="18"/>
+            <connection from-id="16" to-id="52"/>
+            <connection from-id="52" to-id="19"/>
+            <connection from-id="17" to-id="53"/>
+            <connection from-id="53" to-id="22"/>
+            <connection from-id="53" to-id="23"/>
+            <connection from-id="53" to-id="24"/>
+            <connection from-id="18" to-id="54"/>
+            <connection from-id="54" to-id="20"/>
+            <connection from-id="54" to-id="21"/>
+            <connection from-id="19" to-id="55"/>
+            <connection from-id="55" to-id="22"/>
+            <connection from-id="22" to-id="56"/>
+            <connection from-id="56" to-id="25"/>
+            <connection from-id="23" to-id="57"/>
+            <connection from-id="57" to-id="25"/>
+            <connection from-id="24" to-id="58"/>
+            <connection from-id="58" to-id="25"/>
+            <connection from-id="26" to-id="59"/>
+            <connection from-id="59" to-id="27"/>
+            <connection from-id="28" to-id="60"/>
+            <connection from-id="60" to-id="30"/>
+            <connection from-id="29" to-id="61"/>
+            <connection from-id="61" to-id="31"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="110" y="19"/>
+            <concept-appearance id="2" x="-22" y="121"/>
+            <concept-appearance id="3" x="228" y="116"/>
+            <concept-appearance id="4" x="101" y="220"/>
+            <concept-appearance id="5" x="-200" y="169"/>
+            <concept-appearance id="6" x="-132" y="265"/>
+            <concept-appearance id="7" x="-27" y="275"/>
+            <concept-appearance id="8" x="249" y="243"/>
+            <concept-appearance id="9" x="351" y="214"/>
+            <concept-appearance id="10" x="247" y="332"/>
+            <concept-appearance id="11" x="332" y="333"/>
+            <concept-appearance id="12" x="410" y="335"/>
+            <concept-appearance id="13" x="474" y="338"/>
+            <concept-appearance id="14" x="543" y="334"/>
+            <concept-appearance id="15" x="610" y="332"/>
+            <concept-appearance id="16" x="-233" y="360"/>
+            <concept-appearance id="17" x="-10" y="356"/>
+            <concept-appearance id="18" x="-240" y="462"/>
+            <concept-appearance id="19" x="-149" y="463"/>
+            <concept-appearance id="20" x="-271" y="559"/>
+            <concept-appearance id="21" x="-151" y="562"/>
+            <concept-appearance id="22" x="-64" y="460"/>
+            <concept-appearance id="23" x="10" y="460"/>
+            <concept-appearance id="24" x="83" y="466"/>
+            <concept-appearance id="25" x="-10" y="565"/>
+            <concept-appearance id="26" x="496" y="238"/>
+            <concept-appearance id="27" x="672" y="282"/>
+            <concept-appearance id="28" x="574" y="434"/>
+            <concept-appearance id="29" x="646" y="435"/>
+            <concept-appearance id="30" x="574" y="534"/>
+            <concept-appearance id="31" x="651" y="534"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="32" x="105" y="102"/>
+            <linking-phrase id="33" x="83" y="182"/>
+            <linking-phrase id="34" x="38" y="193"/>
+            <linking-phrase id="35" x="-95" y="161"/>
+            <linking-phrase id="36" x="-90" y="221"/>
+            <linking-phrase id="37" x="-24" y="229"/>
+            <linking-phrase id="38" x="95" y="140"/>
+            <linking-phrase id="39" x="190" y="192"/>
+            <linking-phrase id="40" x="101" y="300"/>
+            <linking-phrase id="41" x="232" y="195"/>
+            <linking-phrase id="42" x="283" y="181"/>
+            <linking-phrase id="43" x="-218" y="277"/>
+            <linking-phrase id="44" x="374" y="290"/>
+            <linking-phrase id="45" x="420" y="240"/>
+            <linking-phrase id="46" x="99" y="360"/>
+            <linking-phrase id="47" x="151" y="529"/>
+            <linking-phrase id="48" x="608" y="405"/>
+            <linking-phrase id="49" x="-188" y="327"/>
+            <linking-phrase id="50" x="-131" y="368"/>
+            <linking-phrase id="51" x="-246" y="435"/>
+            <linking-phrase id="52" x="-174" y="431"/>
+            <linking-phrase id="53" x="-19" y="435"/>
+            <linking-phrase id="54" x="-225" y="537"/>
+            <linking-phrase id="55" x="-109" y="537"/>
+            <linking-phrase id="56" x="-37" y="530"/>
+            <linking-phrase id="57" x="18" y="530"/>
+            <linking-phrase id="58" x="82" y="538"/>
+            <linking-phrase id="59" x="594" y="277"/>
+            <linking-phrase id="60" x="568" y="505"/>
+            <linking-phrase id="61" x="644" y="503"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

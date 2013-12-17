@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+<!-- Classes -->
+  <owl:Class rdf:ID="OperationOnFunction"/>
+  <owl:Class rdf:ID="Variable"/>
+  <owl:Class rdf:ID="Function"/>
+  
+  <owl:Class rdf:ID="Derivative">
+    <rdfs:subClassOf rdf:resource="#OperationOnFunction"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Variable"/>
+        <owl:onProperty rdf:resource="#derivativeWithRespectTo"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Function"/>
+        <owl:onProperty rdf:resource="#isDerivativeOf"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasOutput"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Function"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PartialDerivative">
+    <rdfs:subClassOf rdf:resource="#Derivative"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Integral">
+    <rdfs:subClassOf rdf:resource="#OperationOnFunction"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasInput"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Function"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Variable"/>
+        <owl:onProperty rdf:resource="#integralWithRespectTo"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+
+  <owl:Class rdf:ID="DefiniteIntegral">
+    <rdfs:subClassOf rdf:resource="#Integral"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasInterval"/>	
+		</owl:onProperty>
+        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LineIntegral">
+    <rdfs:subClassOf rdf:resource="#Integral"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SurfaceIntegral">
+    <rdfs:subClassOf rdf:resource="#Integral"/>
+  </owl:Class>
+  
+  <owl:Class rdf:ID="VolumeIntegral">
+    <rdfs:subClassOf rdf:resource="#Integral"/>
+  </owl:Class>
+
+   <owl:ObjectProperty rdf:ID="derivativeWithRespectTo">
+    <rdfs:domain rdf:resource="#Derivative"/>
+  </owl:ObjectProperty>
+
+   <owl:ObjectProperty rdf:ID="isDerivativeOf">
+  </owl:ObjectProperty>
+
+   <owl:ObjectProperty rdf:ID="integralWithRespectTo">
+    <rdfs:domain rdf:resource="#Integral"/>
+    <rdfs:range rdf:resource="#Variable"/>
+  </owl:ObjectProperty>
+
+</rdf:RDF>

@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Evolution</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Evolution">
+                <sense domains="[biology]"
+                    gloss="the sequence of events involved in the evolutionary development of a species or taxonomic group of organisms"
+                    number="09704382" pos="n" words="[evolution, phylogeny, phylogenesis]"/>
+            </concept>
+            <concept id="2" label="Changes">
+                <sense domains="[factotum]"
+                    gloss="cause to change; make different; cause a transformation; &quot;The advent of the automobile may have altered the growth pattern of the city&quot;; &quot;The discussion has changed my thinking about the issue&quot;"
+                    number="00083947" pos="v" words="[change, alter]"/>
+            </concept>
+            <concept id="3" label="Antecedent">
+                <sense domains="[factotum]"
+                    gloss="preceding in time or order" number="00124764"
+                    pos="a" words="[antecedent, preceding]"/>
+                <sense domains="[factotum]"
+                    gloss="someone from whom you are descended (but usually more remote that a grandparent)"
+                    number="07075378" pos="n" words="[ancestor, ascendant, ascendent, antecedent]"/>
+                <sense domains="[philosophy]"
+                    gloss="a preceding occurrence or cause or event"
+                    number="05460392" pos="n" words="[antecedent]"/>
+                <sense domains="[time_period]"
+                    gloss="anything that precedes something similar in time; &quot;phrenology was an antecedent of modern neuroscience&quot;"
+                    number="09974104" pos="n" words="[antecedent, forerunner]"/>
+                <sense domains="[factotum]"
+                    gloss="the referent of an anaphor; a phrase or clause that is referred to by an anaphoric pronoun"
+                    number="04953355" pos="n" words="[antecedent]"/>
+            </concept>
+            <concept id="4" label="Scientific theory">
+                <sense domains="[factotum]"
+                    gloss="a theory derived from or used in science"
+                    number="04593129" pos="n" words="[scientific_theory]"/>
+            </concept>
+            <concept id="5" label="Evidence">
+                <sense domains="[factotum]"
+                    gloss="provide evidence for; stand as proof of; &quot;His high fever attested to his illness&quot;; &quot;The buildings in Rome manifest a high level of architectural sophistication&quot;"
+                    number="00557499" pos="v" words="[attest, certify, manifest, demonstrate, evidence]"/>
+            </concept>
+            <concept id="6" label="Process">
+                <sense domains="[anatomy]"
+                    gloss="a natural prolongation or projection from a part of an organism either animal or plant; &quot;a bony process&quot;"
+                    number="04241916" pos="n" words="[process, outgrowth, appendage]"/>
+            </concept>
+            <concept id="7" label="Genetic">
+                <sense domains="[factotum]"
+                    gloss="tending to occur among members of a family usually by heredity; &quot;an inherited disease&quot;; &quot;familial traits&quot;; &quot;genetically transmitted features&quot;"
+                    number="01259845" pos="a" words="[familial, genetic, hereditary, inherited, transmitted, transmissible]"/>
+                <sense domains="[biology]"
+                    gloss="of or relating to or produced by or being a gene; &quot;genic combinations&quot;; &quot;genetic code&quot;"
+                    number="02570519" pos="a" words="[genic, genetic]"/>
+                <sense domains="[biology]"
+                    gloss="of or relating to the science of genetics; &quot;genetic research&quot;"
+                    number="02570392" pos="a" words="[genetic, genetical]"/>
+            </concept>
+            <concept id="8" label="Organisms">
+                <sense domains="[biology]" gloss="any living entity"
+                    number="00002086" pos="n" words="[life_form, organism, being, living_thing]"/>
+            </concept>
+            <concept id="9" label="Geologic time">
+                <sense domains="[geology]"
+                    gloss="the time of the physical formation and development of the earth (especially prior to human history)"
+                    number="10845909" pos="n" words="[geological_time, geologic_time]"/>
+            </concept>
+            <concept id="10" label="Lamarck">
+                <sense domains="[biology]"
+                    gloss="French naturalist who proposed that evolution resulted from the inheritance of acquired characteristics (1744-1829)"
+                    number="07735370" pos="n" words="[Lamarck, Jean_Baptiste_Pierre_Antoine_de_Monet, Chevalier_de_Lamarck]"/>
+            </concept>
+            <concept id="11" label="Biology">
+                <sense domains="[biology]"
+                    gloss="the science that studies living organisms"
+                    number="04622530" pos="n" words="[biology, biological_science]"/>
+            </concept>
+            <concept id="12" label="Use and disuse"/>
+            <concept id="13" label="Darwin">
+                <sense domains="[biology]"
+                    gloss="English natural scientist whose `On the Origin of Species' formulated a theory of evolution by natural selection (1809-1882)"
+                    number="07708872" pos="n" words="[Darwin, Charles_Darwin, Charles_Robert_Darwin]"/>
+            </concept>
+            <concept id="14" label="Wallace"/>
+            <concept id="15" label="Natural selection">
+                <sense domains="[animals]"
+                    gloss="a natural process resulting in the evolution of organisms best adapted to the environment"
+                    number="09742697" pos="n" words="[survival, survival_of_the_fittest, natural_selection, selection]"/>
+            </concept>
+            <concept id="16" label="Types">
+                <sense domains="[biology]"
+                    gloss="(biology) the taxonomic group whose characteristics are used to define the next higher taxon"
+                    number="06045841" pos="n" words="[type]"/>
+            </concept>
+            <concept id="17" label="Stabilizing">
+                <sense domains="[factotum]"
+                    gloss="causing to become stable; &quot;the family is one of the great stabilizing elements in society&quot;"
+                    number="01148040" pos="a" words="[stabilizing]"/>
+            </concept>
+            <concept id="18" label="Directional">
+                <sense domains="[quality]"
+                    gloss="relating to or indicating directions in space; &quot;a directional microphone&quot;"
+                    number="02558036" pos="a" words="[directional]"/>
+                <sense domains="[economy, politics]"
+                    gloss="relating to direction toward a (nonspatial) goal; &quot;he tried to explain the directional trends of modern science&quot;"
+                    number="02558307" pos="a" words="[directional]"/>
+                <sense domains="[factotum]"
+                    gloss="showing the way by conducting or leading; imposing direction on; &quot;felt his mother's directing arm around him&quot;; &quot;the directional role of science on industrial progress&quot;"
+                    number="00198966" pos="a" words="[directing, directional, directive, guiding]"/>
+            </concept>
+            <concept id="19" label="Disruptive">
+                <sense domains="[factotum]"
+                    gloss="characterized by unrest or disorder or insubordination; &quot;effects of the struggle will be violent and disruptive&quot;; &quot;riotous times&quot;; &quot;these troubled areas&quot;; &quot;the tumultuous years of his administration&quot;; &quot;a turbulent and unruly childhood&quot;"
+                    number="01855460" pos="a" words="[disruptive, riotous, troubled, tumultuous, turbulent]"/>
+            </concept>
+            <concept id="20" label="Paleontology">
+                <sense domains="[anthropology, archaeology]"
+                    gloss="the branch of archeology that studies fossil organisms and related remains"
+                    number="04635943" pos="n" words="[paleontology, palaeontology, fossilology]"/>
+            </concept>
+            <concept id="21" label="Anatomy">
+                <sense domains="[anatomy]"
+                    gloss="alternative names for the body of a human being; &quot;Leonardo studied the human body&quot;; &quot;he has a strong physique&quot;; &quot;the spirit is willing but the flesh is weak&quot;"
+                    number="04055717" pos="n" words="[human_body, physical_body, material_body, soma, build, figure, physique, anatomy, shape, bod, chassis, frame, form, flesh]"/>
+            </concept>
+            <concept id="22" label="Fossils">
+                <sense domains="[person]"
+                    gloss="(informal) someone whose style is out of fashion"
+                    number="07221327" pos="n" words="[dodo, fogy, fogey, fossil, dotard]"/>
+                <sense domains="[archaeology]"
+                    gloss="a relic or impression of a plant or animal that existed in a past geological age"
+                    number="06670747" pos="n" words="[fossil, archeological_remains]"/>
+            </concept>
+            <concept id="23" label="Organs">
+                <sense domains="[gastronomy]"
+                    gloss="edible viscera of a butchered animal"
+                    number="05695897" pos="n" words="[variety_meat, organs]"/>
+            </concept>
+            <concept id="24" label="Homologous">
+                <sense domains="[biology]"
+                    gloss="(biology) having the same evolutionary origin but serving different functions; &quot;the wing of a bat and the arm of a man are homologous&quot;"
+                    number="01169615" pos="a" words="[homologous]"/>
+            </concept>
+            <concept id="25" label="Analogous">
+                <sense domains="[biology]"
+                    gloss="(biology) corresponding in function but not in evolutionary origin; &quot;the wings of a bee and those of a hummingbird are analogous"
+                    number="01170142" pos="a" words="[analogous]"/>
+            </concept>
+            <concept id="26" label="Speciation">
+                <sense domains="[biology]"
+                    gloss="the evolution of a biological species"
+                    number="09705069" pos="n" words="[speciation]"/>
+            </concept>
+            <concept id="27" label="Allopatric">
+                <sense domains="[biology]"
+                    gloss="(of biological species or speciation) occurring in areas isolated geographically from one another"
+                    number="02265308" pos="a" words="[allopatric]"/>
+            </concept>
+            <concept id="28" label="Simpatric"/>
+            <concept id="29" label="Mendel's Laws"/>
+            <concept id="30" label="Neo-darwinism">
+                <sense domains="[animals]"
+                    gloss="a modern Darwinian theory that explains new species in terms of genetic mutations"
+                    number="04651356" pos="n" words="[Neo-Darwinism]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="31" label="is defined as"/>
+            <linking-phrase id="32" label="has an"/>
+            <linking-phrase id="33" label="is based on the"/>
+            <linking-phrase id="34" label="shows"/>
+            <linking-phrase id="35" label="enables the"/>
+            <linking-phrase id="36" label="compliments with the"/>
+            <linking-phrase id="37" label="in the"/>
+            <linking-phrase id="38" label="the ideas of"/>
+            <linking-phrase id="39" label="of"/>
+            <linking-phrase id="40" label="as"/>
+            <linking-phrase id="41" label="as"/>
+            <linking-phrase id="42" label="of"/>
+            <linking-phrase id="43" label="by means of"/>
+            <linking-phrase id="44" label="through"/>
+            <linking-phrase id="45" label="who created the term"/>
+            <linking-phrase id="46" label="who postulated the mechanism of"/>
+            <linking-phrase id="47" label="who propose the mechanism of"/>
+            <linking-phrase id="48" label="who propose the mechanism of"/>
+            <linking-phrase id="49" label="wich has different"/>
+            <linking-phrase id="50" label="as the type"/>
+            <linking-phrase id="51" label="as the type"/>
+            <linking-phrase id="52" label="as the type"/>
+            <linking-phrase id="53" label="related to"/>
+            <linking-phrase id="54" label="that studies"/>
+            <linking-phrase id="55" label="of type"/>
+            <linking-phrase id="56" label="of type"/>
+            <linking-phrase id="57" label="in way"/>
+            <linking-phrase id="58" label="in way"/>
+            <linking-phrase id="59" label="to create"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="31"/>
+            <connection from-id="31" to-id="2"/>
+            <connection from-id="1" to-id="32"/>
+            <connection from-id="32" to-id="3"/>
+            <connection from-id="1" to-id="33"/>
+            <connection from-id="33" to-id="4"/>
+            <connection from-id="1" to-id="34"/>
+            <connection from-id="34" to-id="5"/>
+            <connection from-id="1" to-id="35"/>
+            <connection from-id="35" to-id="6"/>
+            <connection from-id="1" to-id="36"/>
+            <connection from-id="36" to-id="7"/>
+            <connection from-id="2" to-id="37"/>
+            <connection from-id="37" to-id="8"/>
+            <connection from-id="3" to-id="38"/>
+            <connection from-id="38" to-id="10"/>
+            <connection from-id="4" to-id="39"/>
+            <connection from-id="39" to-id="13"/>
+            <connection from-id="39" to-id="14"/>
+            <connection from-id="5" to-id="40"/>
+            <connection from-id="40" to-id="20"/>
+            <connection from-id="5" to-id="41"/>
+            <connection from-id="41" to-id="21"/>
+            <connection from-id="6" to-id="42"/>
+            <connection from-id="42" to-id="26"/>
+            <connection from-id="7" to-id="43"/>
+            <connection from-id="43" to-id="29"/>
+            <connection from-id="8" to-id="44"/>
+            <connection from-id="44" to-id="9"/>
+            <connection from-id="10" to-id="45"/>
+            <connection from-id="45" to-id="11"/>
+            <connection from-id="10" to-id="46"/>
+            <connection from-id="46" to-id="12"/>
+            <connection from-id="13" to-id="47"/>
+            <connection from-id="47" to-id="15"/>
+            <connection from-id="14" to-id="48"/>
+            <connection from-id="48" to-id="15"/>
+            <connection from-id="15" to-id="49"/>
+            <connection from-id="49" to-id="16"/>
+            <connection from-id="16" to-id="50"/>
+            <connection from-id="50" to-id="17"/>
+            <connection from-id="16" to-id="51"/>
+            <connection from-id="51" to-id="18"/>
+            <connection from-id="16" to-id="52"/>
+            <connection from-id="52" to-id="19"/>
+            <connection from-id="20" to-id="53"/>
+            <connection from-id="53" to-id="22"/>
+            <connection from-id="21" to-id="54"/>
+            <connection from-id="54" to-id="23"/>
+            <connection from-id="23" to-id="55"/>
+            <connection from-id="55" to-id="24"/>
+            <connection from-id="23" to-id="56"/>
+            <connection from-id="56" to-id="25"/>
+            <connection from-id="26" to-id="57"/>
+            <connection from-id="57" to-id="27"/>
+            <connection from-id="26" to-id="58"/>
+            <connection from-id="58" to-id="28"/>
+            <connection from-id="29" to-id="59"/>
+            <connection from-id="59" to-id="30"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="450" y="17"/>
+            <concept-appearance id="2" x="68" y="135"/>
+            <concept-appearance id="3" x="212" y="137"/>
+            <concept-appearance id="4" x="405" y="133"/>
+            <concept-appearance id="5" x="562" y="138"/>
+            <concept-appearance id="6" x="773" y="135"/>
+            <concept-appearance id="7" x="893" y="138"/>
+            <concept-appearance id="8" x="58" y="239"/>
+            <concept-appearance id="9" x="53" y="349"/>
+            <concept-appearance id="10" x="223" y="242"/>
+            <concept-appearance id="11" x="156" y="356"/>
+            <concept-appearance id="12" x="295" y="352"/>
+            <concept-appearance id="13" x="368" y="225"/>
+            <concept-appearance id="14" x="468" y="223"/>
+            <concept-appearance id="15" x="395" y="384"/>
+            <concept-appearance id="16" x="422" y="489"/>
+            <concept-appearance id="17" x="304" y="564"/>
+            <concept-appearance id="18" x="414" y="600"/>
+            <concept-appearance id="19" x="540" y="576"/>
+            <concept-appearance id="20" x="554" y="231"/>
+            <concept-appearance id="21" x="652" y="234"/>
+            <concept-appearance id="22" x="554" y="355"/>
+            <concept-appearance id="23" x="654" y="362"/>
+            <concept-appearance id="24" x="597" y="470"/>
+            <concept-appearance id="25" x="690" y="471"/>
+            <concept-appearance id="26" x="780" y="239"/>
+            <concept-appearance id="27" x="743" y="368"/>
+            <concept-appearance id="28" x="825" y="373"/>
+            <concept-appearance id="29" x="887" y="242"/>
+            <concept-appearance id="30" x="885" y="374"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="31" x="200" y="86"/>
+            <linking-phrase id="32" x="326" y="85"/>
+            <linking-phrase id="33" x="405" y="99"/>
+            <linking-phrase id="34" x="524" y="98"/>
+            <linking-phrase id="35" x="626" y="99"/>
+            <linking-phrase id="36" x="693" y="84"/>
+            <linking-phrase id="37" x="61" y="209"/>
+            <linking-phrase id="38" x="204" y="212"/>
+            <linking-phrase id="39" x="413" y="201"/>
+            <linking-phrase id="40" x="555" y="200"/>
+            <linking-phrase id="41" x="601" y="202"/>
+            <linking-phrase id="42" x="770" y="210"/>
+            <linking-phrase id="43" x="884" y="206"/>
+            <linking-phrase id="44" x="60" y="310"/>
+            <linking-phrase id="45" x="161" y="310"/>
+            <linking-phrase id="46" x="253" y="310"/>
+            <linking-phrase id="47" x="350" y="314"/>
+            <linking-phrase id="48" x="445" y="310"/>
+            <linking-phrase id="49" x="414" y="447"/>
+            <linking-phrase id="50" x="348" y="540"/>
+            <linking-phrase id="51" x="416" y="569"/>
+            <linking-phrase id="52" x="488" y="536"/>
+            <linking-phrase id="53" x="545" y="315"/>
+            <linking-phrase id="54" x="647" y="314"/>
+            <linking-phrase id="55" x="623" y="430"/>
+            <linking-phrase id="56" x="671" y="435"/>
+            <linking-phrase id="57" x="727" y="323"/>
+            <linking-phrase id="58" x="812" y="322"/>
+            <linking-phrase id="59" x="886" y="322"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

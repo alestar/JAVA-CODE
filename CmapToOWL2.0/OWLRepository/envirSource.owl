@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+             owl:versionInfo="2.0">
+  </owl:Ontology>
+  
+<owl:Class rdf:ID="Product"/>
+<owl:Class rdf:ID="PlanetaryPhenomena"/>
+<owl:Class rdf:ID="Noise"/>
+<owl:Class rdf:ID="Source"/>
+<owl:Class rdf:ID="HumanActivity"/>
+
+ <owl:Class rdf:ID="BiochemicalRelease">
+    <rdfs:subClassOf rdf:resource="#Release"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="ByProduct">
+    <rdfs:subClassOf rdf:resource="#Product"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Disaster">
+    <rdfs:subClassOf rdf:resource="#PlanetaryPhenomena"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Emission">
+     <rdfs:subClassOf rdf:resource="#ByProduct"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Explosion">
+    <rdfs:subClassOf rdf:resource="#Disaster"/>
+    <rdfs:subClassOf rdf:resource="#Noise"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Fire">
+    <rdfs:subClassOf rdf:resource="#Disaster"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="FluidLeak">
+    <rdfs:subClassOf rdf:resource="#Leak"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="GasFlare">
+    <rdfs:subClassOf rdf:resource="#Disaster"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="GasLeak">
+    <rdfs:subClassOf rdf:resource="#Leak"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="IndustrialEmission">
+    <rdfs:subClassOf rdf:resource="#Emission"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Leak">
+    <rdfs:subClassOf rdf:resource="#Disaster"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="MobileSource">
+    <rdfs:subClassOf rdf:resource="#Source"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="NonPointEmissionSource">
+    <rdfs:subClassOf rdf:resource="#Source"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="OilSpill">
+    <rdfs:subClassOf rdf:resource="#FluidLeak"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Release">
+    <rdfs:subClassOf rdf:resource="#Emission"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Spill">
+    <rdfs:subClassOf rdf:resource="#FluidLeak"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="StationarySource">
+    <rdfs:subClassOf rdf:resource="#Source"/>
+    <owl:disjointWith rdf:resource="#MobileSource" />
+  </owl:Class>
+
+ <owl:Class rdf:ID="Urbanization">
+    <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+  </owl:Class>
+
+</rdf:RDF>

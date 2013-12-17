@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+             owl:versionInfo="2.0">
+  </owl:Ontology>
+  
+<owl:Class rdf:ID="EcologicalPhenomena"/>
+<owl:Class rdf:ID="Environment"/>
+<owl:Class rdf:ID="HumanActivity"/>
+<owl:Class rdf:ID="Management"/>
+	
+ <owl:Class rdf:ID="Biodiversity">
+    <rdfs:subClassOf rdf:resource="#Sustainability"/>
+    <rdfs:comment xml:lang="en">Biodiversity is the variation of life forms within a given ecosystem, biome or for the entire Earth. Biodiversity is often used as a measure of the health of biological systems.</rdfs:comment>
+  </owl:Class>
+
+ <owl:Class rdf:ID="CarbonNeutrality">
+    <rdfs:subClassOf rdf:resource="#Sustainability"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Conservation">
+    <rdfs:subClassOf rdf:resource="#Sustainability"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="EcosystemService">
+    <rdfs:subClassOf rdf:resource="EcologicalPhenomena"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="EnergyConservation">
+    <rdfs:subClassOf rdf:resource="#Conservation"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Habitat">
+    <rdfs:subClassOf rdf:resource="Environment" />
+  </owl:Class>
+
+ <owl:Class rdf:ID="NaturalCapital">
+    <rdfs:subClassOf rdf:resource="#Sustainability"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="RenewableResource">
+    <rdfs:subClassOf rdf:resource="#Sustainability"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Sustainability">
+    <rdfs:subClassOf rdf:resource="HumanActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="SustainableDevelopment">
+    <rdfs:subClassOf rdf:resource="#Sustainability"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="WildlifeRefuge">
+    <rdfs:subClassOf rdf:resource="#LandReserve"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="LandManagement">
+    <rdfs:subClassOf rdf:resource="Management"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="LandPreservation">
+    <rdfs:subClassOf rdf:resource="#LandManagement"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="LandReserve">
+    <rdfs:subClassOf rdf:resource="#LandResource"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="LandResource">
+    <rdfs:subClassOf rdf:resource="#LandManagement"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="NationalPark">
+    <rdfs:subClassOf rdf:resource="#LandReserve"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Park">
+    <rdfs:subClassOf rdf:resource="#LandReserve" />
+    <owl:equivalentClass rdf:resource="#Parkland"/>
+  </owl:Class>
+ <owl:Class rdf:ID="Parkland"/>
+
+ <owl:Class rdf:ID="StateForest">
+    <rdfs:subClassOf rdf:resource="#LandReserve"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="StatePark">
+    <rdfs:subClassOf rdf:resource="#Park"/>
+  </owl:Class>
+
+
+</rdf:RDF>

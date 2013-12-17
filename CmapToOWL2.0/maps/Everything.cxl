@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Everything</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Everything"/>
+            <concept id="2" label="Molecules">
+                <sense domains="[chemistry, physics]"
+                    gloss="(physics and chemistry) the simplest structural unit of an element or compound"
+                    number="10472898" pos="n" words="[molecule]"/>
+            </concept>
+            <concept id="3" label="Properties">
+                <sense domains="[factotum]"
+                    gloss="a basic or essential attribute shared by all members of a class; &quot;a study of the physical properties of atomic particles&quot;"
+                    number="03848700" pos="n" words="[property]"/>
+            </concept>
+            <concept id="4" label="Ice">
+                <sense domains="[chemistry]"
+                    gloss="water frozen in the solid state; &quot;Americans like ice in their drinks&quot;"
+                    number="10703104" pos="n" words="[ice, water_ice]"/>
+            </concept>
+            <concept id="5" label="Movement">
+                <sense domains="[factotum]"
+                    gloss="the act of changing your location from one place to another; &quot;police controlled the motion of the crowd&quot;; &quot;the movement of people from the farms to the cities&quot;; &quot;his move put him directly in my path&quot;"
+                    number="00180278" pos="n" words="[motion, movement, move]"/>
+            </concept>
+            <concept id="6" label="Atoms">
+                <sense domains="[chemistry, physics]"
+                    gloss="(physics and chemistry) the smallest component of an element having the chemical properties of the element"
+                    number="10471843" pos="n" words="[atom]"/>
+            </concept>
+            <concept id="7" label="Elements">
+                <sense domains="[meteorology]"
+                    gloss="violent or severe weather (viewed as caused by the action of the four elements); &quot;they felt the full fury of the elements&quot;"
+                    number="07848440" pos="n" words="[elements]"/>
+            </concept>
+            <concept id="8" label="Salt">
+                <sense domains="[chemistry]"
+                    gloss="a compound formed by replacing hydrogen in an acid by a metal (or a radical that acts like a metal)"
+                    number="10772760" pos="n" words="[salt]"/>
+            </concept>
+            <concept id="9" label="Melt">
+                <sense domains="[chemistry]"
+                    gloss="reduce from a solid to a liquid state, usually by heating; &quot;melt butter&quot;; &quot;melt down gold&quot;"
+                    number="00310395" pos="v" words="[melt, run, melt_down]"/>
+            </concept>
+            <concept id="10" label="Ground down"/>
+            <concept id="11" label="Individual molecules"/>
+            <concept id="12" label="Molecules spread out"/>
+            <concept id="13" label="Dissolve">
+                <sense domains="[chemistry]"
+                    gloss="cause to go into a solution; &quot;dissolve sugar in water&quot;"
+                    number="00312214" pos="v" words="[dissolve, break_up]"/>
+            </concept>
+            <concept id="14" label="Air">
+                <sense domains="[physics]"
+                    gloss="a mixture of gases (especially oxygen) required for breathing; the stuff that the wind consists of"
+                    number="10646492" pos="n" words="[air]"/>
+            </concept>
+            <concept id="15" label="Smell">
+                <sense domains="[factotum]"
+                    gloss="any property detected by the olfactory system"
+                    number="03891990" pos="n" words="[olfactory_property, smell, aroma, odor, odour, scent]"/>
+            </concept>
+            <concept id="16" label="Water">
+                <sense domains="[chemistry, geography]"
+                    gloss="a clear colorless odorless tasteless liquid; &quot;he asked for a drink of water&quot;"
+                    number="10650211" pos="n" words="[water, H2O]"/>
+            </concept>
+            <concept id="17" label="Volume">
+                <sense domains="[factotum]"
+                    gloss="a relative amount; &quot;mix one volume of the solution with ten volumes of water&quot;"
+                    number="09924164" pos="n" words="[volume]"/>
+            </concept>
+            <concept id="18" label="Evaporate">
+                <sense domains="[physics]"
+                    gloss="lose or cause to lose liquid by vaporization leaving a more concentrated residue;&quot;evaporate milk&quot;"
+                    number="00256707" pos="v" words="[evaporate, vaporize]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="19" label="is made of"/>
+            <linking-phrase id="20" label="have"/>
+            <linking-phrase id="21" label="made of"/>
+            <linking-phrase id="22" label="make up"/>
+            <linking-phrase id="23" label="such as"/>
+            <linking-phrase id="24" label="can"/>
+            <linking-phrase id="25" label="make up"/>
+            <linking-phrase id="26" label="make up"/>
+            <linking-phrase id="27" label="can not be"/>
+            <linking-phrase id="28" label="can"/>
+            <linking-phrase id="29" label="then"/>
+            <linking-phrase id="30" label="into"/>
+            <linking-phrase id="31" label="occupies"/>
+            <linking-phrase id="32" label="may"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="19"/>
+            <connection from-id="19" to-id="2"/>
+            <connection from-id="2" to-id="20"/>
+            <connection from-id="20" to-id="3"/>
+            <connection from-id="2" to-id="21"/>
+            <connection from-id="21" to-id="6"/>
+            <connection from-id="2" to-id="22"/>
+            <connection from-id="22" to-id="4"/>
+            <connection from-id="22" to-id="7"/>
+            <connection from-id="22" to-id="8"/>
+            <connection from-id="3" to-id="23"/>
+            <connection from-id="23" to-id="5"/>
+            <connection from-id="4" to-id="24"/>
+            <connection from-id="24" to-id="9"/>
+            <connection from-id="6" to-id="25"/>
+            <connection from-id="25" to-id="7"/>
+            <connection from-id="6" to-id="26"/>
+            <connection from-id="26" to-id="14"/>
+            <connection from-id="26" to-id="15"/>
+            <connection from-id="26" to-id="16"/>
+            <connection from-id="8" to-id="27"/>
+            <connection from-id="27" to-id="10"/>
+            <connection from-id="8" to-id="28"/>
+            <connection from-id="28" to-id="13"/>
+            <connection from-id="9" to-id="29"/>
+            <connection from-id="29" to-id="12"/>
+            <connection from-id="10" to-id="30"/>
+            <connection from-id="30" to-id="11"/>
+            <connection from-id="14" to-id="31"/>
+            <connection from-id="31" to-id="17"/>
+            <connection from-id="16" to-id="32"/>
+            <connection from-id="32" to-id="18"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="320" y="28"/>
+            <concept-appearance id="2" x="322" y="139"/>
+            <concept-appearance id="3" x="490" y="191"/>
+            <concept-appearance id="4" x="346" y="281"/>
+            <concept-appearance id="5" x="633" y="308"/>
+            <concept-appearance id="6" x="121" y="237"/>
+            <concept-appearance id="7" x="270" y="278"/>
+            <concept-appearance id="8" x="424" y="287"/>
+            <concept-appearance id="9" x="350" y="384"/>
+            <concept-appearance id="10" x="444" y="384"/>
+            <concept-appearance id="11" x="470" y="524"/>
+            <concept-appearance id="12" x="357" y="520"/>
+            <concept-appearance id="13" x="530" y="400"/>
+            <concept-appearance id="14" x="86" y="362"/>
+            <concept-appearance id="15" x="156" y="361"/>
+            <concept-appearance id="16" x="235" y="359"/>
+            <concept-appearance id="17" x="49" y="464"/>
+            <concept-appearance id="18" x="237" y="471"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="19" x="311" y="106"/>
+            <linking-phrase id="20" x="397" y="181"/>
+            <linking-phrase id="21" x="210" y="211"/>
+            <linking-phrase id="22" x="331" y="226"/>
+            <linking-phrase id="23" x="559" y="263"/>
+            <linking-phrase id="24" x="342" y="348"/>
+            <linking-phrase id="25" x="179" y="270"/>
+            <linking-phrase id="26" x="112" y="320"/>
+            <linking-phrase id="27" x="434" y="358"/>
+            <linking-phrase id="28" x="498" y="356"/>
+            <linking-phrase id="29" x="347" y="468"/>
+            <linking-phrase id="30" x="461" y="476"/>
+            <linking-phrase id="31" x="61" y="429"/>
+            <linking-phrase id="32" x="233" y="429"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

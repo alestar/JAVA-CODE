@@ -1,0 +1,615 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rss="http://purl.org/rss/1.0/"
+    xmlns="http://www.learninglab.de/~dolog/fsm/fsm.owl#"
+    xmlns:jms="http://jena.hpl.hp.com/2003/08/jms#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:vcard="http://www.w3.org/2001/vcard-rdf/3.0#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xml:base="http://www.learninglab.de/~dolog/fsm/fsm.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="SynchState">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Pseudostate"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Simple"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Initial"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Final"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Composite"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#State"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Branch">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Split"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Pseudostate"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Junction"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#History"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Join"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Event">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#State"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Action"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#StateMachineElement"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Condition"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#StateMachine"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Guard"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Transition"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Condition">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#StateMachineElement"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Event"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#StateMachine"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Guard"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Transition"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Action"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#State"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="StateMachine">
+    <owl:disjointWith rdf:resource="#Condition"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#StateMachineElement"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Transition"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Event"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Guard"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Action"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#State"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Simple">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#State"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Composite"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Pseudostate"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Initial"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Final"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#SynchState"/>
+  </owl:Class>
+  <owl:Class rdf:ID="History">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Pseudostate"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Junction"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Split"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Branch"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Join"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Join">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Pseudostate"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Junction"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Branch"/>
+    <owl:disjointWith rdf:resource="#History"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Split"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Transition">
+    <owl:disjointWith rdf:resource="#Condition"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Guard"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#StateMachineElement"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#State"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+              <owl:Class>
+                <owl:complementOf>
+                  <owl:Class rdf:about="#Initial"/>
+                </owl:complementOf>
+              </owl:Class>
+              <owl:Class>
+                <owl:complementOf>
+                  <owl:Restriction>
+                    <owl:onProperty>
+                      <owl:DatatypeProperty rdf:about="#isRegion"/>
+                    </owl:onProperty>
+                    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                    >true</owl:hasValue>
+                  </owl:Restriction>
+                </owl:complementOf>
+              </owl:Class>
+              <owl:Class rdf:about="#State"/>
+            </owl:intersectionOf>
+          </owl:Class>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#Target"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#StateMachine"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Action"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom>
+          <owl:Class>
+            <owl:intersectionOf rdf:parseType="Collection">
+              <owl:Class>
+                <owl:complementOf>
+                  <owl:Class rdf:about="#Final"/>
+                </owl:complementOf>
+              </owl:Class>
+              <owl:Class>
+                <owl:complementOf>
+                  <owl:Restriction>
+                    <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+                    >true</owl:hasValue>
+                    <owl:onProperty>
+                      <owl:DatatypeProperty rdf:about="#isRegion"/>
+                    </owl:onProperty>
+                  </owl:Restriction>
+                </owl:complementOf>
+              </owl:Class>
+              <owl:Class rdf:about="#State"/>
+            </owl:intersectionOf>
+          </owl:Class>
+        </owl:allValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#Source"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Event"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Final">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#State"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Pseudostate"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Simple"/>
+    <owl:disjointWith rdf:resource="#SynchState"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Composite"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Initial"/>
+    </owl:disjointWith>
+  </owl:Class>
+  <owl:Class rdf:ID="Region">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean"
+        >true</owl:hasValue>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="#isRegion"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Composite"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Junction">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Split"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Pseudostate"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#History"/>
+    <owl:disjointWith rdf:resource="#Branch"/>
+    <owl:disjointWith rdf:resource="#Join"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Split">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Pseudostate"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Junction"/>
+    <owl:disjointWith rdf:resource="#Branch"/>
+    <owl:disjointWith rdf:resource="#Join"/>
+    <owl:disjointWith rdf:resource="#History"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Guard">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Action"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#StateMachine"/>
+    <owl:disjointWith rdf:resource="#Condition"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#StateMachineElement"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#State"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Event"/>
+    <owl:disjointWith rdf:resource="#Transition"/>
+  </owl:Class>
+  <owl:Class rdf:ID="State">
+    <owl:disjointWith rdf:resource="#Event"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#StateMachineElement"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#StateMachine"/>
+    <owl:disjointWith rdf:resource="#Transition"/>
+    <owl:disjointWith rdf:resource="#Guard"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Action"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Condition"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Initial">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Composite"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="#State"/>
+    <owl:disjointWith rdf:resource="#Final"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Pseudostate"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Simple"/>
+    <owl:disjointWith rdf:resource="#SynchState"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Action">
+    <owl:disjointWith rdf:resource="#Transition"/>
+    <owl:disjointWith rdf:resource="#Guard"/>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#StateMachineElement"/>
+    </rdfs:subClassOf>
+    <owl:disjointWith rdf:resource="#Condition"/>
+    <owl:disjointWith rdf:resource="#StateMachine"/>
+    <owl:disjointWith rdf:resource="#State"/>
+    <owl:disjointWith rdf:resource="#Event"/>
+  </owl:Class>
+  <owl:Class rdf:ID="StateMachineElement">
+    <owl:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Action"/>
+          <owl:Class rdf:about="#Condition"/>
+          <owl:Class rdf:about="#Event"/>
+          <owl:Class rdf:about="#Guard"/>
+          <owl:Class rdf:about="#State"/>
+          <owl:Class rdf:about="#Transition"/>
+        </owl:unionOf>
+      </owl:Class>
+    </owl:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Composite">
+    <owl:disjointWith rdf:resource="#Initial"/>
+    <owl:disjointWith rdf:resource="#Simple"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="#Pseudostate"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#SynchState"/>
+    <rdfs:subClassOf rdf:resource="#State"/>
+    <owl:disjointWith rdf:resource="#Final"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Pseudostate">
+    <rdfs:subClassOf rdf:resource="#State"/>
+    <owl:disjointWith rdf:resource="#Initial"/>
+    <owl:disjointWith rdf:resource="#SynchState"/>
+    <owl:disjointWith rdf:resource="#Composite"/>
+    <owl:disjointWith rdf:resource="#Final"/>
+    <owl:disjointWith rdf:resource="#Simple"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="Entry">
+    <rdfs:range rdf:resource="#Action"/>
+    <rdfs:domain rdf:resource="#State"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="Target">
+    <rdfs:domain rdf:resource="#Transition"/>
+    <rdfs:range rdf:resource="#State"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="GuardAction">
+    <rdfs:domain rdf:resource="#Guard"/>
+    <rdfs:range rdf:resource="#Action"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="Exit">
+    <rdfs:range rdf:resource="#Action"/>
+    <rdfs:domain rdf:resource="#State"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="Source">
+    <rdfs:range rdf:resource="#State"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:domain rdf:resource="#Transition"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="contains">
+    <rdfs:range rdf:resource="#StateMachineElement"/>
+    <rdfs:domain rdf:resource="#StateMachine"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasStateMachineElement">
+    <rdfs:domain rdf:resource="#Composite"/>
+    <rdfs:range rdf:resource="#StateMachineElement"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="GuardCondition">
+    <rdfs:domain rdf:resource="#Guard"/>
+    <rdfs:range rdf:resource="#Condition"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="GuardEvent">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="#Event"/>
+    <rdfs:domain rdf:resource="#Guard"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="isConcurrent">
+    <rdfs:domain rdf:resource="#Composite"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Body">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Event"/>
+          <owl:Class rdf:about="#Action"/>
+          <owl:Class rdf:about="#Condition"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Label">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Event"/>
+          <owl:Class rdf:about="#Condition"/>
+          <owl:Class rdf:about="#Action"/>
+          <owl:Class rdf:about="#Guard"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="isRegion">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    <rdfs:domain rdf:resource="#Composite"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </owl:DatatypeProperty>
+  <owl:FunctionalProperty rdf:ID="Count">
+    <rdfs:domain rdf:resource="#SynchState"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="StateName">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="TransitionGuard">
+    <rdfs:domain rdf:resource="#Transition"/>
+    <rdfs:range rdf:resource="#Guard"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="TransitionName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <Transition rdf:ID="AccountsProducts">
+    <Target>
+      <Composite rdf:ID="Products"/>
+    </Target>
+    <Source>
+      <Composite rdf:ID="Accounts">
+        <isConcurrent>true</isConcurrent>
+        <hasStateMachineElement>
+          <Split rdf:ID="AccountIndexNameAccountDetailSplit"/>
+        </hasStateMachineElement>
+        <hasStateMachineElement>
+          <Composite rdf:ID="AccountsNameIndexRegion">
+            <hasStateMachineElement>
+              <Simple rdf:ID="AccountNameIndex">
+                <Entry>
+                  <Action rdf:ID="AccountNameIndexEntryAction">
+                    <Label>AccountNameIndexEntryAction</Label>
+                    <Body>CurrentAccounts.GetNameIndex(CAccnt))</Body>
+                  </Action>
+                </Entry>
+              </Simple>
+            </hasStateMachineElement>
+            <isConcurrent>false</isConcurrent>
+            <isRegion>true</isRegion>
+          </Composite>
+        </hasStateMachineElement>
+        <hasStateMachineElement>
+          <Composite rdf:ID="AccountsDetailRegion">
+            <hasStateMachineElement>
+              <Simple rdf:ID="AccountDetails">
+                <Entry>
+                  <Action rdf:ID="AccountDetailEntryAction">
+                    <Label>AccountDetailEntryAction</Label>
+                    <Body>CurrentAccounts.GetDetails(CAccnt)</Body>
+                  </Action>
+                </Entry>
+              </Simple>
+            </hasStateMachineElement>
+            <isRegion>true</isRegion>
+            <isConcurrent>false</isConcurrent>
+          </Composite>
+        </hasStateMachineElement>
+        <hasStateMachineElement>
+          <SynchState rdf:ID="AccountSynchRegions">
+            <Count>10000000</Count>
+          </SynchState>
+        </hasStateMachineElement>
+      </Composite>
+    </Source>
+  </Transition>
+  <Action rdf:ID="InitialAccountsProductsDecisionTransitionActionUser">
+    <Body>cUser:=cSession.getUser()</Body>
+  </Action>
+  <Condition rdf:ID="JunctionProductsTransitionGuardConditionRole">
+    <Body>cRole=“ProductMgr“</Body>
+  </Condition>
+  <Action rdf:ID="AccountNameIndexSplitTransitionAction">
+    <Body>CAccnt:=new Account(AccId)</Body>
+  </Action>
+  <Transition rdf:ID="SplitAccountNameIndex">
+    <Source rdf:resource="#AccountIndexNameAccountDetailSplit"/>
+    <Target rdf:resource="#AccountNameIndex"/>
+  </Transition>
+  <Condition rdf:ID="JunctionAccountsTransitionGuardConditionRole">
+    <Body>cRole=“AccMgr“</Body>
+  </Condition>
+  <Initial rdf:ID="InitialState"/>
+  <Final rdf:ID="FinalState"/>
+  <Transition rdf:ID="AccountsFinal">
+    <Target rdf:resource="#FinalState"/>
+    <Source rdf:resource="#Accounts"/>
+  </Transition>
+  <Event rdf:ID="AccountNameIndexTransitionEvent">
+    <Body>Details(AccId)</Body>
+  </Event>
+  <Transition rdf:ID="AccountNameIndexSplit">
+    <Target rdf:resource="#AccountIndexNameAccountDetailSplit"/>
+    <Source rdf:resource="#AccountNameIndex"/>
+    <TransitionGuard>
+      <Guard rdf:ID="AccountNameIndexSplitGuard">
+        <GuardEvent rdf:resource="#AccountNameIndexTransitionEvent"/>
+        <GuardAction rdf:resource="#AccountNameIndexSplitTransitionAction"/>
+      </Guard>
+    </TransitionGuard>
+  </Transition>
+  <Transition rdf:ID="JunctionAccounts">
+    <Target rdf:resource="#Accounts"/>
+    <TransitionGuard>
+      <Guard rdf:ID="JunctionAccountsGuard">
+        <GuardCondition rdf:resource="#JunctionAccountsTransitionGuardConditionRole"/>
+        <GuardAction>
+          <Action rdf:ID="DecisionAccountsTransitionAction">
+            <Body>myAccnt:=new Accounts(cUser, cRole)</Body>
+          </Action>
+        </GuardAction>
+      </Guard>
+    </TransitionGuard>
+    <Source>
+      <Junction rdf:ID="InitialAccountsProductsJunction"/>
+    </Source>
+  </Transition>
+  <Transition rdf:ID="JunctionProducts">
+    <Target rdf:resource="#Products"/>
+    <TransitionGuard>
+      <Guard rdf:ID="JunctionProductsGuard">
+        <GuardAction>
+          <Action rdf:ID="DecisionProductsTransitionAction">
+            <Body>myProd:=new Products(cUser; cRole)</Body>
+          </Action>
+        </GuardAction>
+        <GuardCondition rdf:resource="#JunctionProductsTransitionGuardConditionRole"/>
+      </Guard>
+    </TransitionGuard>
+    <Source rdf:resource="#InitialAccountsProductsJunction"/>
+  </Transition>
+  <Transition rdf:ID="ProductAccounts">
+    <Source rdf:resource="#Products"/>
+    <Target rdf:resource="#Accounts"/>
+  </Transition>
+  <Transition rdf:ID="InitialAccountsProductsDecision">
+    <Source rdf:resource="#InitialState"/>
+    <TransitionGuard>
+      <Guard rdf:ID="InitialJunctionGuard">
+        <GuardAction rdf:resource="#InitialAccountsProductsDecisionTransitionActionUser"/>
+        <GuardAction>
+          <Action rdf:ID="InitialAccountsProductsDecisionTransitionActionSession">
+            <Body>cSession:=new Session()</Body>
+          </Action>
+        </GuardAction>
+        <GuardAction>
+          <Action rdf:ID="InitialAccountsProductsDecisionTransitionActionRole">
+            <Body>cRole:=cUser.getRole()</Body>
+          </Action>
+        </GuardAction>
+      </Guard>
+    </TransitionGuard>
+    <Target rdf:resource="#InitialAccountsProductsJunction"/>
+  </Transition>
+  <Transition rdf:ID="ProductsFinal">
+    <Source rdf:resource="#Products"/>
+    <Target rdf:resource="#FinalState"/>
+  </Transition>
+  <Transition rdf:ID="SynchRegionsAccountDetails">
+    <Source rdf:resource="#AccountSynchRegions"/>
+    <Target rdf:resource="#AccountDetails"/>
+  </Transition>
+  <Transition rdf:ID="SplitAccountSynchRegions">
+    <Source rdf:resource="#AccountIndexNameAccountDetailSplit"/>
+    <Target rdf:resource="#AccountSynchRegions"/>
+  </Transition>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 1.2 beta, Build 139)  http://protege.stanford.edu -->

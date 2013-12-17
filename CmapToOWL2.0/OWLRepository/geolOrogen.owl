@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Realms -->
+  <owl:Class rdf:ID="GeologicFeature"/>
+  <owl:Class rdf:ID="GeologicProvince"/>
+  <owl:Class rdf:ID="ThrustSystem"/>
+  <owl:Class rdf:ID="Terrane"/>
+  <owl:Class rdf:ID="Melange"/>
+  <owl:Class rdf:ID="Suture"/>
+  <owl:Class rdf:ID="Deformation"/>
+  <owl:Class rdf:ID="ForelandBasin"/>
+  <owl:Class rdf:ID="SupraSubductionZoneComplex"/>
+  <owl:Class rdf:ID="Axis"/>
+  <owl:Class rdf:ID="TectonicPhenomena"/>
+  <owl:Class rdf:ID="GeologicProcess"/>
+  <owl:Class rdf:ID="AnorogenicIgneousRock"/>
+  <owl:Class rdf:ID="SuccessorBasin"/>
+  
+  <owl:Class rdf:ID="Arc">
+    <rdfs:subClassOf rdf:resource="#GeologicFeature"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="BackArc">
+    <rdfs:subClassOf rdf:resource="#Arc"/>
+    <rdfs:comment xml:lang="en">Back-arc basins (or retro-arc basins) are geologic features, submarine basins associated with island arcs and subduction zones. They are found at some convergent plate boundaries, presently concentrated in the Western Pacific ocean. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Orogen">
+    <rdfs:subClassOf rdf:resource="#GeologicProvince"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPlanetaryStructure"/>	
+		</owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#ThrustSystem"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhysicalProcess"/>	
+		</owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#Orogeny"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty rdf:resource="#hasPlanetaryStructure"/>
+        <owl:someValuesFrom rdf:resource="#Terrane"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasSubstance"/>	
+		</owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#Melange"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasGeologicalPhenomena"/>	
+		</owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#OrogenicCollapse"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		        <owl:onProperty rdf:resource="#hasPhysicalProcess"/>
+        <owl:someValuesFrom rdf:resource="#Suture"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProcess"/>
+       <owl:someValuesFrom rdf:resource="#Deformation"/>
+       </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPlanetaryStructure"/>
+        <owl:someValuesFrom rdf:resource="#ForelandBasin"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ForeArc">
+    <rdfs:subClassOf rdf:resource="#Arc"/>
+    <rdfs:subClassOf rdf:resource="#SupraSubductionZoneComplex"/>
+    <rdfs:comment xml:lang="en">A forearc is a depression in the sea floor located between a subduction zone and an associated volcanic arc. It is typically filled with sediments from the adjacent landmass and the island arc in addition to trapped oceanic crustal material.  [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MagmaticArc">
+    <rdfs:subClassOf rdf:resource="#Arc"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPlanetaryStructure"/>
+        <owl:someValuesFrom rdf:resource="#ForeArc"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#RearArc"/>
+        <owl:onProperty rdf:resource="#hasPlanetaryStructure"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasAxis"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#ArcAxis"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="RemnantArc">
+    <rdfs:subClassOf rdf:resource="#Arc"/>
+    <rdfs:comment xml:lang="en">The remnant arc is what is left on the rear side of the speading zone as athe basin broadens. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="RearArc">
+    <owl:equivalentClass rdf:resource="#BackArc"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="RetroArc">
+    <owl:equivalentClass rdf:resource="#BackArc"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ArcAxis">
+    <rdfs:subClassOf rdf:resource="#Axis"/>
+    <rdfs:comment xml:lang="en">In a Back-arc basin the arc axis is the line where spreading occurs on the overlying plate of the subduction zone. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+<!-- Phenomena -->
+  <owl:Class rdf:ID="IntraplateProcess">
+    <rdfs:subClassOf rdf:resource="#TectonicPhenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Orogeny">
+    <rdfs:subClassOf rdf:resource="#TectonicPhenomena"/>
+    <rdfs:comment xml:lang="en">Orogeny refers to natural mountain building, and may be studied as (a) a tectonic structural event, (b) as a geographical event, and (c) a chronological event. Orogenic events (a) cause distinctive structural phenomena and related tectonic activity, (b) affect certain regions of rocks and crust, and (c) happen within a specific period of time. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Orogenesis">
+    <rdfs:subClassOf rdf:resource="#GeologicProcess"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="OrogenicCollapse">
+    <rdfs:subClassOf rdf:resource="#TectonicPhenomena"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPlanetaryRealm"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Orogen"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#AnorogenicIgneousRock"/>
+        <owl:onProperty rdf:resource="#hasSubstance"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#SuccessorBasin"/>
+        <owl:onProperty rdf:resource="#hasPlanetaryStructure"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  <rdfs:comment> The process in which mountains begin to collapse under their own weight and spread out laterally.</rdfs:comment>
+  </owl:Class>
+
+</rdf:RDF>

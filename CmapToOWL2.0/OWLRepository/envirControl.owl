@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+             owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Classes -->
+
+<owl:Class rdf:ID="Exposure"/>
+<owl:Class rdf:ID="ControlStrategy"/>
+<owl:Class rdf:ID="Indicator"/>
+<owl:Class rdf:ID="Law"/>
+<owl:Class rdf:ID="Standard"/>
+<owl:Class rdf:ID="StandardsBody"/>
+<owl:Class rdf:ID="EnvironmentalAssessment"/>
+<owl:Class rdf:ID="LandRegion"/>
+<owl:Class rdf:ID="Management"/>
+
+ <owl:Class rdf:ID="AcceptableDailyIntake">
+    <rdfs:subClassOf rdf:resource="#AcceptableLevel"/>
+    <owl:equivalentClass rdf:resource="#ADI"/>
+  </owl:Class>
+ <owl:Class rdf:ID="ADI"/>
+
+ <owl:Class rdf:ID="AcceptableLevel">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalStandard"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="AirQualityStandard">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalStandard"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="AirborneToxicControlMeasure">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+    <owl:equivalentClass rdf:resource="#ATCM"/>
+  </owl:Class>
+ <owl:Class rdf:ID="ATCM"/>
+
+ <owl:Class rdf:ID="AmbientAirQualityStandard">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalStandard"/>
+    <owl:equivalentClass rdf:resource="#AAQS"/>
+  </owl:Class>
+ <owl:Class rdf:ID="AAQS"/>
+
+ <owl:Class rdf:ID="BestAvailablControlTechnology">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+    <owl:equivalentClass rdf:resource="#BACT"/>
+  </owl:Class>
+ <owl:Class rdf:ID="BACT"/>
+
+ <owl:Class rdf:ID="CarbonSequestation">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="ContinousEmissionMonitoringSystem">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+    <owl:equivalentClass rdf:resource="#CEMS"/>
+  </owl:Class>
+ <owl:Class rdf:ID="CEMS"/>
+
+ <owl:Class rdf:ID="CloudSeeding">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Distillation">
+    <rdfs:subClassOf rdf:resource="#WaterTreatmentProcess"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Dosage">
+    <rdfs:subClassOf rdf:resource="Exposure"/>
+    <owl:equivalentClass rdf:resource="#Dose"/>
+  </owl:Class>
+ <owl:Class rdf:ID="Dose"/>
+
+ <owl:Class rdf:ID="EndangeredSpeciesAct">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalLaw"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="EnvironmentalControlObjective">
+    <rdfs:subClassOf rdf:resource="ControlStrategy"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="EnvironmentalControlStrategy">
+    <rdfs:subClassOf rdf:resource="ControlStrategy"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="EnvironmentalImpactStatement">
+    <rdfs:subClassOf rdf:resource="ControlStrategy"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="EnvironmentalIndicator">
+    <rdfs:subClassOf rdf:resource="Indicator"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="EnvironmentalLaw">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+    <rdfs:subClassOf rdf:resource="Law"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="EnvironmentalStandard">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+    <rdfs:subClassOf rdf:resource="Standard"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="EnvironmentalStandardsBody">
+    <rdfs:subClassOf rdf:resource="StandardsBody"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="FederalCleanAirAct">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalLaw"/>
+    <owl:equivalentClass rdf:resource="#FCAA"/>
+  </owl:Class>
+ <owl:Class rdf:ID="FCAA"/>
+
+ <owl:Class rdf:ID="Flocculation">
+    <rdfs:subClassOf rdf:resource="#WaterTreatmentProcess"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="EmissionInventory">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="HealthRiskAssessment">
+    <rdfs:subClassOf rdf:resource="EnvironmentalAssessment"/>
+    <owl:equivalentClass rdf:resource="#HRA"/>
+  </owl:Class>
+ <owl:Class rdf:ID="HRA"/>
+
+ <owl:Class rdf:ID="MaximumAchievableControlTechnology">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+    <owl:equivalentClass rdf:resource="#MACT"/>
+  </owl:Class>
+ <owl:Class rdf:ID="MACT"/>
+
+ <owl:Class rdf:ID="NationalAmbientAirQualityStandard">
+    <rdfs:subClassOf rdf:resource="#AmbientAirQualityStandard"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="NationalEmissionStandardsForHazardousAirPollutant">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalStandard"/>
+    <owl:equivalentClass rdf:resource="#NESHAP"/>
+  </owl:Class>
+ <owl:Class rdf:ID="NESHAP"/>
+
+ <owl:Class rdf:ID="NationalEnvironmentalProtectionAct">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalLaw"/>
+    <owl:equivalentClass rdf:resource="#NEPA"/>
+  </owl:Class>
+ <owl:Class rdf:ID="NEPA"/>
+
+ <owl:Class rdf:ID="NationalForestManagementAct">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalLaw"/>
+    <owl:equivalentClass rdf:resource="#NFMA"/>
+  </owl:Class>
+ <owl:Class rdf:ID="NFMA"/>
+
+ <owl:Class rdf:ID="NationalToxicsInventory">
+    <rdfs:subClassOf rdf:resource="#EmissionInventory"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="NewSourcePerformanceStandard">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalStandard"/>
+    <owl:equivalentClass rdf:resource="#NSPS"/>
+  </owl:Class>
+ <owl:Class rdf:ID="NSPS"/>
+
+ <owl:Class rdf:ID="NewSourceReview">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalStandard"/>
+    <owl:equivalentClass rdf:resource="#NSR"/>
+  </owl:Class>
+ <owl:Class rdf:ID="NSR"/>
+
+ <owl:Class rdf:ID="NonAttainmentArea">
+    <rdfs:subClassOf rdf:resource="LandRegion"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="NoObservedAdverseEffectLevel">
+    <rdfs:subClassOf rdf:resource="#HealthRiskAssessment"/>
+    <owl:equivalentClass rdf:resource="#NOAEL"/>
+  </owl:Class>
+ <owl:Class rdf:ID="NOAEL"/>
+
+ <owl:Class rdf:ID="NoObservedEffectLevel">
+    <rdfs:subClassOf rdf:resource="#HealthRiskAssessment"/>
+    <owl:equivalentClass rdf:resource="#NOEL"/>
+  </owl:Class>
+ <owl:Class rdf:ID="NOEL"/>
+
+ <owl:Class rdf:ID="Offset">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="PollutantStandardsIndex">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalStandard"/>
+    <owl:equivalentClass rdf:resource="#PSI"/>
+  </owl:Class>
+ <owl:Class rdf:ID="PSI"/>
+
+ <owl:Class rdf:ID="Pretreatment">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="PreventionOfSignificantDeteriorization">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalStandard"/>
+    <owl:equivalentClass rdf:resource="#PSD"/>
+  </owl:Class>
+ <owl:Class rdf:ID="PSD"/>
+
+ <owl:Class rdf:ID="PrimaryTreatment">
+    <rdfs:subClassOf rdf:resource="#WaterTreatmentProcess"/>
+    <rdfs:comment xml:lang="en">In wastewater treatment, a combination of step processes, usually physical in nature, that are designed to remove floating and settleable solids. Examples of process steps are screening and sedimentation.</rdfs:comment>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Protection">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalControlObjective"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="ReferenceDose">
+    <rdfs:subClassOf rdf:resource="#Dose"/>
+    <owl:equivalentClass rdf:resource="#RfD"/>
+  </owl:Class>
+ <owl:Class rdf:ID="RfD"/>
+
+ <owl:Class rdf:ID="ReferenceExposureConcentration">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalStandard"/>
+    <owl:equivalentClass rdf:resource="#REC"/>
+  </owl:Class>
+ <owl:Class rdf:ID="REC"/>
+
+ <owl:Class rdf:ID="ReferenceExposureLevel">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalStandard"/>
+    <owl:equivalentClass rdf:resource="#REL"/>
+  </owl:Class>
+ <owl:Class rdf:ID="REL"/>
+
+ <owl:Class rdf:ID="Remediation">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="ResourceConservationAndRecoveryAct">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalLaw"/>
+    <owl:equivalentClass rdf:resource="#RCRA"/>
+  </owl:Class>
+ <owl:Class rdf:ID="RCRA"/>
+
+ <owl:Class rdf:ID="SecondaryTreatment">
+    <rdfs:subClassOf rdf:resource="#WaterTreatmentProcess"/>
+    <rdfs:comment xml:lang="en">In wastewater treatment, a combination of step processes, usually biochemical in nature, that are designed to remove primarily organic material. Examples of process steps are aeration and trickling filters.</rdfs:comment>
+  </owl:Class>
+
+ <owl:Class rdf:ID="StateImplementationPlan">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="TertiaryTreatment">
+    <rdfs:subClassOf rdf:resource="#WaterTreatmentProcess"/>
+    <rdfs:comment xml:lang="en">Post-secondary treatment of wastewater designed to improve the quality of the water to the point where it can be put to a particular beneficial use. Generally, tertiary treatment steps remove nutrients (e.g., nitrogen and phosphorus) which are poorly removed by secondary treatment. Commonly used steps include coagulation and clarification.</rdfs:comment>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Treatment">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="UnitRiskFactor">
+    <rdfs:subClassOf rdf:resource="#HealthRiskAssessment"/>
+    <owl:equivalentClass rdf:resource="#URF"/>
+  </owl:Class>
+ <owl:Class rdf:ID="URF"/>
+
+ <owl:Class rdf:ID="WaterManagement">
+    <rdfs:subClassOf rdf:resource="Management"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="WaterQualityStandard">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalStandard"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="WastewaterTreatment">
+    <rdfs:subClassOf rdf:resource="#Treatment"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="WaterTreatmentProcess">
+    <rdfs:subClassOf rdf:resource="#Treatment"/>
+    <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Afforestation">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Reforestation">
+    <rdfs:subClassOf rdf:resource="#Revegetation"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Restoration">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Revegetation">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Reclamation">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalControlStrategy"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="EPA">
+    <owl:sameAs rdf:resource="#EnvironmentalProtectionAgency" />
+  </owl:Class >
+
+ <owl:Class rdf:ID="NFS">
+    <owl:sameAs rdf:resource="#NationalForestService" />
+  </owl:Class >
+
+ <owl:Class rdf:ID="EnvironmentalProtectionAgency"/>
+ <owl:Class rdf:ID="NationalForestService"/>
+
+</rdf:RDF>

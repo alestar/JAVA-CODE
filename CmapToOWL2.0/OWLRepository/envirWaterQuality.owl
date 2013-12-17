@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Substance -->
+  <owl:Class rdf:ID="DissolvedSubstance"/>
+  <owl:Class rdf:ID="Mixture"/>
+  <owl:Class rdf:ID="H2O"/>
+  <owl:Class rdf:ID="Pollution"/>
+  <owl:Class rdf:ID="Hydrosphere"/>
+  <owl:Class rdf:ID="Nitrogen"/>
+  <owl:Class rdf:ID="Phosphorus"/>
+  <owl:Class rdf:ID="Acid"/>
+  <owl:Class rdf:ID="Ocean"/>
+  <owl:Class rdf:ID="DissolvedSolid"/>
+  <owl:Class rdf:ID="SuspendedSolid"/>
+  
+  <owl:Class rdf:ID="BlackWater">
+    <rdfs:subClassOf rdf:resource="#WaterMixture"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DissolvedOxygen">
+    <rdfs:subClassOf rdf:resource="#DissolvedSubstance"/>
+    <owl:equivalentClass rdf:resource="#DO"/>
+  </owl:Class>
+  <owl:Class rdf:ID="DO"/>
+
+  <owl:Class rdf:ID="DissolvedOrganicCarbons">
+    <rdfs:subClassOf rdf:resource="#DissolvedSubstance"/>
+    <owl:equivalentClass rdf:resource="#DOC"/>
+  </owl:Class>
+  <owl:Class rdf:ID="DOC"/>
+
+  <owl:Class rdf:ID="DrinkingWater">
+    <rdfs:subClassOf rdf:resource="#WaterMixture"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Effluent">
+    <rdfs:subClassOf rdf:resource="#WaterMixture"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="GrayWater">
+    <rdfs:subClassOf rdf:resource="#WaterMixture"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PotableWater">
+    <rdfs:subClassOf rdf:resource="#WaterMixture"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Wastewater">
+    <rdfs:subClassOf rdf:resource="#Effluent"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="WaterMixture">
+    <rdfs:subClassOf rdf:resource="#Mixture"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasChemical_1"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#H2O"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+<!-- Phenomena -->
+  <owl:Class rdf:ID="WaterPollution">
+    <rdfs:subClassOf rdf:resource="#Pollution" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPlanetaryRealm"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Hydrosphere" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="WaterQuality">
+    <rdfs:subClassOf rdf:resource="#WaterPollution" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Eutrophication">
+    <rdfs:subClassOf rdf:resource="#WaterPollution" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasSubstance"/>	
+		</owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#Nitrogen" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+         <owl:onProperty rdf:resource="#hasSubstance" />
+         <owl:someValuesFrom rdf:resource="#Phosphorus" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Hypoxia">
+    <rdfs:subClassOf rdf:resource="#WaterPollution" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Anoxia">
+    <rdfs:subClassOf rdf:resource="#Hypoxia" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Potability">
+    <rdfs:subClassOf rdf:resource="#WaterQuality" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="ThermalPollution">
+    <rdfs:subClassOf rdf:resource="#WaterPollution" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="OceanAcidification">
+    <rdfs:subClassOf rdf:resource="#WaterPollution" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasSubstance" />
+        <owl:someValuesFrom rdf:resource="#Acid" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+         <owl:onProperty rdf:resource="#hasPlanetaryRealm" />
+         <owl:someValuesFrom rdf:resource="#Ocean" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+<!-- Property -->
+  <owl:Class rdf:ID="TotalDissolvedSolids">
+    <rdfs:subClassOf rdf:resource="#DissolvedSolid"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="TotalSuspendedSolids">
+    <rdfs:subClassOf rdf:resource="#SuspendedSolid"/>
+  </owl:Class>
+
+</rdf:RDF>

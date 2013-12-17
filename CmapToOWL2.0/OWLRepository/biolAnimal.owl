@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+             owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Classes -->
+  <owl:Class rdf:ID="AcornWorm">
+      <rdfs:subClassOf rdf:resource="#Invertebrate"/>
+      <rdfs:comment>The Acorn worms or Enteropneusta are a hemichordate class of invertebrates. Acorn worms are classified in the phylum Hemichordata, closely related to the chordates. There are about 70 species of acorn worm in the world, the main species for research being Saccoglossus kowaleski. All species are infaunal benthos that either may be deposit feeders or suspension feeders. Some of these worms may grow to be very long; one particular species may reach a length of 2.5 meters (almost eight feet), although most acorn worms are much, much smaller.</rdfs:comment>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Amphibian">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Anemone">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Animal">
+      <rdfs:subClassOf rdf:resource="#Organism"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Arachnid">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Arthropod">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Bee">
+     <rdfs:subClassOf rdf:resource="#Insect"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Bird">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Centipede">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Coral">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Cow">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Crustacean">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Dairy">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Echinoderm">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="ExoticSpecies">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Fauna">
+     <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Fish">
+      <rdfs:subClassOf rdf:resource="#MarineAnimal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Flatworm">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Human">
+      <rdfs:subClassOf rdf:resource="#Mammal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="IndigenousSpecies">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Invertebrate">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Insect">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Jellyfish">
+      <rdfs:subClassOf rdf:resource="#MarineAnimal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Mammal">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="MarineAnimal">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="MarineBird">
+      <rdfs:subClassOf rdf:resource="#MarineAnimal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="MarineInvertebrate">
+      <rdfs:subClassOf rdf:resource="#MarineAnimal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="MarineMammal">
+      <rdfs:subClassOf rdf:resource="#MarineAnimal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Millipede">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Mollusk">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Poultry">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Reptile">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Roundworm">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="SegmentedWorm">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Silkworm">
+     <rdfs:subClassOf rdf:resource="#Invertebrate"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Sponge">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Vertebrate">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Zooplankton">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Mesozooplankton">
+      <rdfs:subClassOf rdf:resource="#Zooplankton"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Microzooplankton">
+      <rdfs:subClassOf rdf:resource="#Zooplankton"/>
+   </owl:Class>
+
+</rdf:RDF>

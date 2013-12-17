@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+             owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<owl:Class rdf:ID="ExperimentActivity"/>
+<owl:Class rdf:ID="Property"/>
+<owl:Class rdf:ID="Category"/>
+<owl:Class rdf:ID="Research"/>
+
+
+ <owl:Class rdf:ID="Background">
+    <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Excavate">
+    <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Genesis">
+    <rdfs:subClassOf rdf:resource="#History"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="History">
+    <rdfs:subClassOf rdf:resource="#Property"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Past">
+    <rdfs:subClassOf rdf:resource="#History"/>
+    <rdfs:subClassOf rdf:resource="#Category"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Present">
+    <rdfs:subClassOf rdf:resource="#Category"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Reconstruction">
+    <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Sequence">
+    <rdfs:subClassOf rdf:resource="#History"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Record">
+    <rdfs:subClassOf rdf:resource="#Research"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Workflow">
+    <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:ID="hasGenesis">
+    <rdfs:range rdf:resource="#Genesis"/>
+  </owl:ObjectProperty>
+
+</rdf:RDF>

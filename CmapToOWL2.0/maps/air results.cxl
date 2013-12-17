@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>air</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Air">
+                <sense domains="[physics]"
+                    gloss="a mixture of gases (especially oxygen) required for breathing; the stuff that the wind consists of"
+                    number="10646492" pos="n" terms="[air]"/>
+            </concept>
+            <concept id="2" label="Gas">
+                <sense domains="[physics]"
+                    gloss="a fluid in the gaseous state having neither independent shape nor volume and being able to expand indefinitely"
+                    number="10671811" pos="n" terms="[gas]"/>
+            </concept>
+            <concept id="3" label="Animals">
+                <sense domains="[factotum]"
+                    gloss="of the appetites and passions of the body; &quot;animal instincts&quot;; &quot;carnal knowledge&quot;; &quot;fleshly desire&quot;; &quot;a sensual delight in eating&quot;; &quot;music is the only sensual pleasure without vice&quot;"
+                    number="01710829" pos="a" terms="[animal, carnal, fleshly, sensual]"/>
+                <sense domains="[gastronomy]"
+                    gloss="of the nature of or characteristic of or derived from an animal or animals; &quot;the animal kingdom&quot;; &quot;animal instincts&quot;; &quot;animal fats&quot;"
+                    number="00110364" pos="a" terms="[animal]"/>
+                <sense domains="[animals, biology]"
+                    gloss="a living organism characterized by voluntary movement"
+                    number="00008019" pos="n" terms="[animal, animate_being, beast, brute, creature, fauna]"/>
+            </concept>
+            <concept id="4" label="Layers">
+                <sense domains="[factotum]"
+                    gloss="a relatively thin sheetlike expanse or region lying over or under another"
+                    number="06335649" pos="n" terms="[layer]"/>
+            </concept>
+            <concept id="5" label="Molecules">
+                <sense domains="[chemistry, physics]"
+                    gloss="(physics and chemistry) the simplest structural unit of an element or compound"
+                    number="10472898" pos="n" terms="[molecule]"/>
+            </concept>
+            <concept id="6" label="Nitrogen">
+                <sense domains="[chemistry, physics]"
+                    gloss="a common nonmetallic element that is normally a colorless odorless tasteless inert diatomic gas; constitutes 78 percent of the atmosphere by volume; a constituent of all living tissues"
+                    number="10494444" pos="n" terms="[nitrogen, N, atomic_number_7]"/>
+            </concept>
+            <concept id="7" label="Oxygen">
+                <sense domains="[chemistry, geography]"
+                    gloss="a nonmetallic bivalent element that is normally a colorless odorless tasteless nonflammable diatomic gas; constitutes 28 percent of the atmosphere by volume; the most abundant element in the earth's crust"
+                    number="10495237" pos="n" terms="[oxygen, O, atomic_number_8]"/>
+            </concept>
+            <concept id="8" label="Carbon dioxide">
+                <sense domains="[chemistry]"
+                    gloss="a heavy odorless colorless gas formed during respiration and by the decomposition of organic substances; absorbed from the air by plants in photosynthesis"
+                    number="10613550" pos="n" terms="[carbon_dioxide, CO, carbonic_acid_gas]"/>
+            </concept>
+            <concept id="9" label="Energy">
+                <sense domains="[physics]"
+                    gloss="(physics) the capacity of a physical system to do work; the units of energy are joules or ergs; &quot;energy can take a wide variety of forms&quot;"
+                    number="07794689" pos="n" terms="[energy]"/>
+            </concept>
+            <concept id="10" label="Water">
+                <sense domains="[chemistry, geography]"
+                    gloss="a clear colorless odorless tasteless liquid; &quot;he asked for a drink of water&quot;"
+                    number="10650211" pos="n" terms="[water, H2O]"/>
+            </concept>
+            <concept id="11" label="Food">
+                <sense domains="[food]"
+                    gloss="any substance that can be metabolized by an organism to give energy and build tissue"
+                    number="00011575" pos="n" terms="[food, nutrient]"/>
+            </concept>
+            <concept id="12" label="Exosphere">
+                <sense domains="[physics]"
+                    gloss="the outermost atmospheric layer"
+                    number="06778051" pos="n" terms="[exosphere]"/>
+            </concept>
+            <concept id="13" label="Ionosphere">
+                <sense domains="[factotum]"
+                    gloss="the outer region of the Earth's atmosphere; contains a high concentration of free electrons"
+                    number="06333615" pos="n" terms="[ionosphere]"/>
+            </concept>
+            <concept id="14" label="Stratosphere">
+                <sense domains="[physics]"
+                    gloss="the atmospheric layer between the troposphere and the mesosphere"
+                    number="06777344" pos="n" terms="[stratosphere]"/>
+            </concept>
+            <concept id="15" label="Troposphere">
+                <sense domains="[physics]"
+                    gloss="the lowest atmospheric layer; from 4 to 11 miles high (depending on latitude)"
+                    number="06776880" pos="n" terms="[troposphere]"/>
+            </concept>
+            <concept id="16" label="Near Earth"/>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="17" label="is a"/>
+            <linking-phrase id="18" label="is needed by"/>
+            <linking-phrase id="19" label="has"/>
+            <linking-phrase id="20" label="made of"/>
+            <linking-phrase id="21" label="breath in"/>
+            <linking-phrase id="22" label="breath out"/>
+            <linking-phrase id="23" label="get"/>
+            <linking-phrase id="24" label="such as"/>
+            <linking-phrase id="25" label="such as"/>
+            <linking-phrase id="26" label="comes from"/>
+            <linking-phrase id="27" label="is"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="17"/>
+            <connection from-id="17" to-id="2"/>
+            <connection from-id="1" to-id="18"/>
+            <connection from-id="18" to-id="3"/>
+            <connection from-id="1" to-id="19"/>
+            <connection from-id="19" to-id="4"/>
+            <connection from-id="2" to-id="20"/>
+            <connection from-id="20" to-id="5"/>
+            <connection from-id="3" to-id="21"/>
+            <connection from-id="21" to-id="7"/>
+            <connection from-id="3" to-id="22"/>
+            <connection from-id="22" to-id="8"/>
+            <connection from-id="3" to-id="23"/>
+            <connection from-id="23" to-id="9"/>
+            <connection from-id="4" to-id="24"/>
+            <connection from-id="24" to-id="15"/>
+            <connection from-id="24" to-id="14"/>
+            <connection from-id="24" to-id="13"/>
+            <connection from-id="24" to-id="12"/>
+            <connection from-id="5" to-id="25"/>
+            <connection from-id="25" to-id="6"/>
+            <connection from-id="25" to-id="8"/>
+            <connection from-id="25" to-id="7"/>
+            <connection from-id="25" to-id="10"/>
+            <connection from-id="9" to-id="26"/>
+            <connection from-id="26" to-id="11"/>
+            <connection from-id="15" to-id="27"/>
+            <connection from-id="27" to-id="16"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="290" y="13"/>
+            <concept-appearance id="2" x="140" y="127"/>
+            <concept-appearance id="3" x="287" y="139"/>
+            <concept-appearance id="4" x="445" y="102"/>
+            <concept-appearance id="5" x="136" y="244"/>
+            <concept-appearance id="6" x="14" y="315"/>
+            <concept-appearance id="7" x="131" y="372"/>
+            <concept-appearance id="8" x="36" y="390"/>
+            <concept-appearance id="9" x="369" y="239"/>
+            <concept-appearance id="10" x="204" y="317"/>
+            <concept-appearance id="11" x="435" y="364"/>
+            <concept-appearance id="12" x="650" y="142"/>
+            <concept-appearance id="13" x="637" y="212"/>
+            <concept-appearance id="14" x="558" y="252"/>
+            <concept-appearance id="15" x="481" y="280"/>
+            <concept-appearance id="16" x="546" y="389"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="17" x="190" y="84"/>
+            <linking-phrase id="18" x="277" y="105"/>
+            <linking-phrase id="19" x="369" y="70"/>
+            <linking-phrase id="20" x="132" y="201"/>
+            <linking-phrase id="21" x="218" y="394"/>
+            <linking-phrase id="22" x="256" y="449"/>
+            <linking-phrase id="23" x="322" y="205"/>
+            <linking-phrase id="24" x="501" y="190"/>
+            <linking-phrase id="25" x="101" y="328"/>
+            <linking-phrase id="26" x="392" y="320"/>
+            <linking-phrase id="27" x="520" y="356"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

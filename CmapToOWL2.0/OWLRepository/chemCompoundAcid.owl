@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+  
+  <owl:Class rdf:ID="InorganicCompound"/>
+  <owl:Class rdf:ID="Acid"/>
+  <owl:Class rdf:ID="C"/>
+  <owl:Class rdf:ID="H2"/>
+  <owl:Class rdf:ID="O3"/>
+  <owl:Class rdf:ID="S"/>
+  <owl:Class rdf:ID="O4"/>
+  <owl:Class rdf:ID="H"/>
+  <owl:Class rdf:ID="O2"/>
+  <owl:Class rdf:ID="N"/>
+  <owl:Class rdf:ID="O"/>
+  <owl:Class rdf:ID="Cl"/>
+  <owl:Class rdf:ID="Br"/>
+  
+  
+  <owl:Class rdf:ID="InorganicAcid">
+    <rdfs:subClassOf rdf:resource="#InorganicCompound"/>
+    <rdfs:subClassOf rdf:resource="#Acid"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="H2CO3">
+    <rdfs:subClassOf rdf:resource="#InorganicAcid"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasChemical_1"/>	
+		</owl:onProperty>
+		<owl:allValuesFrom rdf:resource="#H2"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	  	<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasChemical_2"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#C"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#O3"/>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasChemical_3"/>	
+		</owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass rdf:resource="#CarbonicAcid"/>
+  </owl:Class>
+  <owl:Class rdf:ID="CarbonicAcid"/>
+
+  <owl:Class rdf:ID="H2SO4">
+    <rdfs:subClassOf rdf:resource="#InorganicAcid"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#H2"/>
+        <owl:onProperty rdf:resource="#hasChemical_1"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#S"/>
+        <owl:onProperty rdf:resource="#hasChemical_2"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#O4"/>
+        <owl:onProperty rdf:resource="#hasChemical_3"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass rdf:resource="#SulfuricAcid"/>
+  </owl:Class>
+  <owl:Class rdf:ID="SulfuricAcid"/>
+
+  <owl:Class rdf:ID="HNO2">
+    <rdfs:subClassOf rdf:resource="#InorganicAcid"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#H"/>
+        <owl:onProperty rdf:resource="#hasChemical_1"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#N"/>
+        <owl:onProperty rdf:resource="#hasChemical_2"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#O2"/>
+        <owl:onProperty rdf:resource="#hasChemical_3"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass rdf:resource="#NitrousAcid"/>
+  </owl:Class>
+  <owl:Class rdf:ID="NitrousAcid"/> 
+
+  <owl:Class rdf:ID="HNO3">
+    <rdfs:subClassOf rdf:resource="#InorganicAcid"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#H"/>
+        <owl:onProperty rdf:resource="#hasChemical_1"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#N"/>
+        <owl:onProperty rdf:resource="#hasChemical_2"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#O3"/>
+        <owl:onProperty rdf:resource="#hasChemical_3"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass rdf:resource="#NitricAcid"/>
+  </owl:Class>
+  <owl:Class rdf:ID="NitricAcid"/>
+
+  <owl:Class rdf:ID="HNO4">
+    <rdfs:subClassOf rdf:resource="#InorganicAcid"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#H"/>
+        <owl:onProperty rdf:resource="#hasChemical_1"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#N"/>
+        <owl:onProperty rdf:resource="#hasChemical_2"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#O4"/>
+        <owl:onProperty rdf:resource="#hasChemical_3"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass rdf:resource="#PeroxynitricAcid"/>
+  </owl:Class>
+  <owl:Class rdf:ID="PeroxynitricAcid"/> 
+
+  <owl:Class rdf:ID="NitricAcidTrihydrate">
+    <rdfs:subClassOf rdf:resource="#InorganicAcid"/>
+    <owl:equivalentClass rdf:resource="#NAT"/>
+  </owl:Class>
+  <owl:Class rdf:ID="NAT"/> 
+
+  <owl:Class rdf:ID="HOCl">
+    <rdfs:subClassOf rdf:resource="#InorganicAcid"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#H"/>
+        <owl:onProperty rdf:resource="#hasChemical_1"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#O"/>
+        <owl:onProperty rdf:resource="#hasChemical_2"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Cl"/>
+        <owl:onProperty rdf:resource="#hasChemical_3"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass rdf:resource="#HydrochlorousAcid"/>
+  </owl:Class>
+  <owl:Class rdf:ID="HydrochlorousAcid"/>
+
+  <owl:Class rdf:ID="HBrO">
+    <rdfs:subClassOf rdf:resource="#InorganicAcid"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#H"/>
+        <owl:onProperty rdf:resource="#hasChemical_1"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Br"/>
+        <owl:onProperty rdf:resource="#hasChemical_2"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#O"/>
+        <owl:onProperty rdf:resource="#hasChemical_3"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass rdf:resource="#HydrobromousAcid"/>
+  </owl:Class>
+  <owl:Class rdf:ID="HydrobromousAcid"/>
+
+  <owl:Class rdf:ID="HClO">
+    <rdfs:subClassOf rdf:resource="#InorganicAcid"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#H"/>
+        <owl:onProperty rdf:resource="#hasChemical_1"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Cl"/>
+        <owl:onProperty rdf:resource="#hasChemical_2"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#O"/>
+        <owl:onProperty rdf:resource="#hasChemical_3"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass rdf:resource="#HypochlorousAcid"/>
+  </owl:Class>
+  <owl:Class rdf:ID="HypochlorousAcid"/>
+
+</rdf:RDF>

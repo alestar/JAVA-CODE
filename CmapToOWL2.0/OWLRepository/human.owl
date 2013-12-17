@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+<!-- Classes -->
+  <owl:Class rdf:ID="CategoricalScale"/>
+  <owl:Class rdf:ID="KnowledgeDomain"/>
+  <owl:Class rdf:ID="Phenomena"/>
+  
+  <owl:Class rdf:ID="Behavior">
+     <rdfs:subClassOf rdf:resource="#PsychologicalParameter"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Census">
+    <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="CivilDisturbance">
+    <rdfs:subClassOf rdf:resource="#SocialActivity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Economics">
+    <rdfs:subClassOf rdf:resource="#BehavioralScience"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="EducationalLevel">
+    <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+    <rdfs:subClassOf rdf:resource="#CategoricalScale"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Engineering">
+    <rdfs:subClassOf rdf:resource="#KnowledgeDomain"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="HumanActivity">
+    <rdfs:subClassOf rdf:resource="#Phenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Name">
+    <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Profession">
+    <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PsychologicalParameter">
+    <rdfs:subClassOf rdf:resource="#SocialActivity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Psychology">
+    <rdfs:subClassOf rdf:resource="#SocialActivity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Recreation">
+    <rdfs:subClassOf rdf:resource="#SocialActivity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Service">
+    <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SocialActivity">
+    <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SocialBehavior">
+    <rdfs:subClassOf rdf:resource="#SocialActivity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Sociology">
+    <rdfs:subClassOf rdf:resource="#BehavioralScience"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Work">
+    <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="BehavioralScience">
+    <rdfs:subClassOf rdf:resource="#KnowledgeDomain"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="HumanDimension">
+    <rdfs:subClassOf rdf:resource="#KnowledgeDomain"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="studyOf"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#HumanActivity"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+   <owl:ObjectProperty rdf:ID="hasActivity"/>
+
+  <owl:Class rdf:ID="Mapping">
+    <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+  </owl:Class>
+
+</rdf:RDF>

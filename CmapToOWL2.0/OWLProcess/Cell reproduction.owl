@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://www.owl-ontologies.com/unnamed.owl#"
+  xml:base="http://www.owl-ontologies.com/unnamed.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="Eukaryote"/>
+  <owl:Class rdf:ID="Meiosis"/>
+  <owl:Class rdf:ID="Cell_cycle"/>
+  <owl:Class rdf:ID="Asexual_reproduction"/>
+  <owl:Class rdf:ID="Binary_fission"/>
+  <owl:Class rdf:ID="Tissue_repair"/>
+  <owl:Class rdf:ID="Diploid"/>
+  <owl:Class rdf:ID="Sexual_reproduction"/>
+  <owl:Class rdf:ID="Prokaryote"/>
+  <owl:Class rdf:ID="Somatic_cells"/>
+  <owl:Class rdf:ID="Chromosome"/>
+  <owl:Class rdf:about="#Organism&apos;s_growth"/>
+  <owl:Class rdf:ID="Cell_reproduction"/>
+  <owl:Class rdf:ID="Mitotic_phase"/>
+  <owl:Class rdf:ID="Mitosis"/>
+  <owl:Class rdf:ID="Autosome"/>
+  <owl:Class rdf:ID="Haploid"/>
+  <owl:Class rdf:ID="Interphase"/>
+  <owl:Class rdf:ID="Gamete"/>
+  <owl:ObjectProperty rdf:ID="in">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Mitosis"/>
+          <owl:Class rdf:about="#Meiosis"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Somatic_cells"/>
+          <owl:Class rdf:about="#Gamete"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:range>
+  </owl:ObjectProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.2, Build 355)  http://protege.stanford.edu -->

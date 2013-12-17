@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+             owl:versionInfo="2.0">
+  </owl:Ontology>
+  
+<!-- Classes -->
+ <owl:Class rdf:ID="Angle">
+    <rdfs:subClassOf rdf:resource="#Direction"/>
+  </owl:Class>
+  
+ <owl:Class rdf:ID="Attitude">
+    <rdfs:subClassOf rdf:resource="#Direction"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Axis">
+    <rdfs:subClassOf rdf:resource="#Direction"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Azimuth">
+    <rdfs:subClassOf rdf:resource="#Direction"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Bearing">
+    <owl:equivalentClass rdf:resource="#Direction"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Component">
+    <owl:equivalentClass rdf:resource="#Direction"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Direction">
+    <rdfs:subClassOf rdf:resource="#Vector_3D"/>
+    <owl:equivalentClass rdf:resource="#AngularDirection"/>
+  </owl:Class>
+ <owl:Class rdf:ID="AngularDirection"/>
+  
+ <owl:Class rdf:ID="Down">
+    <rdfs:subClassOf rdf:resource="#VerticalDirection"/>
+    <owl:equivalentClass rdf:resource="#Downward"/>
+  </owl:Class>
+ <owl:Class rdf:ID="Downward"/>
+
+ <owl:Class rdf:ID="East">
+    <rdfs:subClassOf rdf:resource="#HorizontalDirection"/>
+    <owl:equivalentClass rdf:resource="#Eastward"/>
+  </owl:Class>
+ <owl:Class rdf:ID="Eastward"/>
+
+ <owl:Class rdf:ID="Horizontal">
+    <rdfs:subClassOf rdf:resource="#Direction"/>
+    <owl:equivalentClass rdf:resource="#HorizontalDirection"/>
+  </owl:Class>
+ <owl:Class rdf:ID="HorizontalDirection"/>
+
+ <owl:Class rdf:ID="Inclination">
+    <rdfs:subClassOf rdf:resource="#Angle"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Incoming">
+    <rdfs:subClassOf rdf:resource="#Direction"/>
+    <owl:equivalentClass rdf:resource="#Inward"/>
+  </owl:Class>
+ <owl:Class rdf:ID="Inward"/>
+  
+ <owl:Class rdf:ID="Lateral">
+    <rdfs:subClassOf rdf:resource="#Direction"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Lee">
+    <owl:equivalentClass rdf:resource="#Leeward"/>
+    <rdfs:subClassOf rdf:resource="#Direction"/>
+  </owl:Class>
+ <owl:Class rdf:ID="Leeward"/>
+  
+ <owl:Class rdf:ID="Left">
+    <rdfs:subClassOf rdf:resource="#Direction"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Normal">
+    <owl:equivalentClass rdf:resource="#Perpendicular"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="North">
+    <rdfs:subClassOf rdf:resource="#HorizontalDirection"/>
+    <owl:equivalentClass rdf:resource="#Northward"/>
+  </owl:Class>
+ <owl:Class rdf:ID="Northward"/>
+
+ <owl:Class rdf:ID="Orientation">
+    <rdfs:subClassOf rdf:resource="#Direction"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Outgoing">
+    <rdfs:subClassOf rdf:resource="#Direction"/>
+    <owl:equivalentClass rdf:resource="#Outward"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Incoming"/>
+		<owl:onProperty rdf:resource="#oppositeTo"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+ <owl:Class rdf:ID="Outward"/>
+  
+ <owl:Class rdf:ID="Parallel">
+    <rdfs:subClassOf rdf:resource="#Direction"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Perpendicular">
+    <rdfs:subClassOf rdf:resource="#Direction"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Parallel"/>
+		<owl:onProperty rdf:resource="#orthogonalTo"/>	
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Pole">
+    <rdfs:subClassOf rdf:resource="#Direction"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Radial">
+    <rdfs:subClassOf rdf:resource="#Direction"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Right">
+    <rdfs:subClassOf rdf:resource="#Direction"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Left"/>
+        <owl:onProperty rdf:resource="#oppositeTo"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+ <owl:Class rdf:ID="SolidAngle">
+    <rdfs:subClassOf rdf:resource="#Cone"/>
+  </owl:Class>
+  
+ <owl:Class rdf:ID="South">
+    <rdfs:subClassOf rdf:resource="#HorizontalDirection"/>
+    <owl:equivalentClass rdf:resource="#Southward"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#North"/>
+        <owl:onProperty rdf:resource="#oppositeTo"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+ <owl:Class rdf:ID="Southward"/>
+
+ <owl:Class rdf:ID="Tilt">
+    <rdfs:subClassOf rdf:resource="#Angle" />
+  </owl:Class>
+
+ <owl:Class rdf:ID="Transverse">
+    <owl:equivalentClass rdf:resource="#Perpendicular"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Up">
+    <rdfs:subClassOf rdf:resource="#VerticalDirection"/>
+    <owl:equivalentClass rdf:resource="#Upward"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Down"/>
+        <owl:onProperty rdf:resource="#oppositeTo"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+ <owl:Class rdf:ID="Upward"/>
+
+ <owl:Class rdf:ID="Vertical">
+    <rdfs:subClassOf rdf:resource="#Direction"/>
+    <owl:equivalentClass rdf:resource="#VerticalDirection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Horizontal"/>
+        <owl:onProperty rdf:resource="#orthogonalTo"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+ <owl:Class rdf:ID="VerticalDirection"/>
+
+ <owl:Class rdf:ID="West">
+    <rdfs:subClassOf rdf:resource="#HorizontalDirection"/>
+    <owl:equivalentClass rdf:resource="#Westward"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#East"/>
+        <owl:onProperty rdf:resource="#oppositeTo"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+ <owl:Class rdf:ID="Westward"/>
+
+ <owl:Class rdf:ID="Windward">
+    <rdfs:subClassOf rdf:resource="#Direction"/>
+    <owl:equivalentClass rdf:resource="#Westward"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Leeward"/>
+        <owl:onProperty rdf:resource="#oppositeTo"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  
+ <owl:Class rdf:ID="X">
+    <rdfs:subClassOf rdf:resource="#HorizontalDirection"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Y">
+    <rdfs:subClassOf rdf:resource="#HorizontalDirection"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#X"/>
+        <owl:onProperty rdf:resource="#orthogonalTo"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Z">
+    <rdfs:subClassOf rdf:resource="#VerticalDirection"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="ZenithAngle">
+    <rdfs:subClassOf rdf:resource="#Angle"/>
+  </owl:Class>
+  
+  <owl:ObjectProperty rdf:ID="hasAxis">
+    <rdfs:range rdf:resource="#Axis"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="hasDirection">
+    <rdfs:range rdf:resource="#Direction"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="hasNormal">
+    <rdfs:range rdf:resource="#Direction"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="below">
+    <owl:inverseOf rdf:resource="#above"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="above">
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="east">
+    <owl:inverseOf rdf:resource="#west"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="north">
+    <owl:inverseOf rdf:resource="#south"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="south">
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="west">
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="under">
+    <rdfs:subPropertyOf rdf:resource="#below"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="orthogonalTo">
+    <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+    <rdfs:domain rdf:resource="#Direction"/>
+    <rdfs:range rdf:resource="#Direction"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="oppositeTo">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+    <rdfs:domain rdf:resource="#Direction"/>
+    <rdfs:range rdf:resource="#Direction"/>
+  </owl:ObjectProperty>
+
+</rdf:RDF>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Property -->
+  <owl:Class rdf:ID="FluidPressure"/>
+  <owl:Class rdf:ID="LiquidWater"/>
+  <owl:Class rdf:ID="Water"/>
+  <owl:Class rdf:ID="Frozen"/>
+  <owl:Class rdf:ID="Solid"/>
+  <owl:Class rdf:ID="PlanetaryPhenomena"/>
+  <owl:Class rdf:ID="PlanetaryScience"/>
+  
+  <owl:Class rdf:ID="WaterPressure">
+    <rdfs:subClassOf rdf:resource="#FluidPressure"/>
+  </owl:Class>
+
+<!-- Substances -->
+  <owl:Class rdf:ID="Dew">
+    <rdfs:subClassOf rdf:resource="#LiquidWater"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Frost">
+    <rdfs:subClassOf rdf:resource="#Water"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasStateOfMatter"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Frozen"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Snow">
+    <rdfs:subClassOf rdf:resource="#Water"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Solid"/>
+        <owl:onProperty rdf:resource="#hasStateOfMatter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+<!-- Other -->
+  <owl:Class rdf:ID="HydrospherePhenomena">
+    <rdfs:subClassOf rdf:resource="#PlanetaryPhenomena"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPlanetaryRealm"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Hydrosphere" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="HydrosphereFeature">
+    <rdfs:subClassOf rdf:resource="#Hydrosphere"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Hydrology">
+    <rdfs:subClassOf rdf:resource="#PlanetaryScience"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Limnology">
+    <rdfs:subClassOf rdf:resource="#Hydrology"/>
+  </owl:Class>
+
+</rdf:RDF>

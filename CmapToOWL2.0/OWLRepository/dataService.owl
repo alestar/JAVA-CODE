@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+             owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Classes -->
+ <owl:Class rdf:ID="Service"/>
+ <owl:Class rdf:ID="Dimension"/>
+
+ <owl:Class rdf:ID="Access">
+    <rdfs:subClassOf rdf:resource="#DataService"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Archive">
+    <rdfs:subClassOf rdf:resource="#DataService"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="BinaryMask">
+    <rdfs:subClassOf rdf:resource="#DataService"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Binning">
+    <rdfs:subClassOf rdf:resource="#DataService"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Calibration">
+    <rdfs:subClassOf rdf:resource="#DataService"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="CoordinateTransformation">
+    <rdfs:subClassOf rdf:resource="#DataService"/>
+    <rdfs:comment>A conversion from one system to another, to describe the same space.</rdfs:comment>
+  </owl:Class>
+
+ <owl:Class rdf:ID="DataAssimilation">
+    <rdfs:subClassOf rdf:resource="#DataService"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="DataMining">
+    <rdfs:subClassOf rdf:resource="#Subset" />
+  </owl:Class>
+
+ <owl:Class rdf:ID="DataService">
+    <rdfs:subClassOf rdf:resource="#Service" />
+  </owl:Class>
+
+ <owl:Class rdf:ID="DataSynchronization">
+    <rdfs:subClassOf rdf:resource="#DataService"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Discover">
+    <owl:equivalentClass rdf:resource="#Discovery"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Discovery">
+    <rdfs:subClassOf rdf:resource="#DataService"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="DODS"/>
+
+ <owl:Class rdf:ID="FormatConversion">
+    <rdfs:subClassOf rdf:resource="#DataService"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Georeferencing">
+    <rdfs:subClassOf rdf:resource="#DataService"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Gridding">
+    <rdfs:subClassOf rdf:resource="#DataService"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Image">
+    <rdfs:subClassOf rdf:resource="#DataService"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Input">
+    <rdfs:subClassOf rdf:resource="#Parameter"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="InterfaceProtocol">
+    <rdfs:subClassOf rdf:resource="#DataService"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Interpolation">
+    <rdfs:subClassOf rdf:resource="#DataService"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Map">
+    <rdfs:subClassOf rdf:resource="#DataService"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="NearestNeighbor">
+    <rdfs:subClassOf rdf:resource="#Interpolation"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="NewtonianRelaxation">
+    <rdfs:subClassOf rdf:resource="#DataAssimilation"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Normalization">
+    <rdfs:subClassOf rdf:resource="#DataService"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="OPeNDAP">
+    <rdfs:subClassOf rdf:resource="#InterfaceProtocol"/>
+    <owl:equivalentClass rdf:resource="#DODS"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Output">
+    <rdfs:subClassOf rdf:resource="#Parameter"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Parameter">
+    <rdfs:subClassOf rdf:resource="#Dimension"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="ParameterSubset">
+    <rdfs:subClassOf rdf:resource="#Subset"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minCardinality>
+        <owl:onProperty rdf:resource="#hasParameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+ <owl:Class rdf:ID="PixelScreening">
+    <rdfs:subClassOf rdf:resource="#QualityScreening"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Plot">
+    <rdfs:subClassOf rdf:resource="#Visualization"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="PostProcessing">
+    <rdfs:subClassOf rdf:resource="#DataService"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="PreProcessing">
+    <rdfs:subClassOf rdf:resource="#DataService"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="QualityScreening">
+    <rdfs:subClassOf rdf:resource="#DataService"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Reformat">
+    <rdfs:subClassOf rdf:resource="#DataService"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Regridding">
+    <rdfs:subClassOf rdf:resource="#DataService"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Scaling">
+    <rdfs:subClassOf rdf:resource="#DataService"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Subset">
+    <rdfs:subClassOf rdf:resource="#DataService"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="SpatialSubset">
+    <rdfs:subClassOf rdf:resource="#Subset"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="SynopticMap">
+    <rdfs:subClassOf rdf:resource="#Map"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="TemporalSubset">
+    <rdfs:subClassOf rdf:resource="#Subset"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Validation">
+    <rdfs:subClassOf rdf:resource="#DataService"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Visualization">
+    <rdfs:subClassOf rdf:resource="#DataService"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="WebCoverageServer">
+    <rdfs:subClassOf rdf:resource="#InterfaceProtocol"/>
+    <owl:equivalentClass rdf:resource="#WCS"/>
+  </owl:Class>
+ <owl:Class rdf:ID="WCS" />
+
+ <owl:Class rdf:ID="WebFeatureServer">
+    <owl:equivalentClass rdf:resource="#WFS"/>
+    <rdfs:subClassOf rdf:resource="#InterfaceProtocol"/>
+  </owl:Class>
+ <owl:Class rdf:ID="WFS"/>
+
+<owl:Class rdf:ID="WebMapServer">
+    <owl:equivalentClass rdf:resource="#WMS"/>
+    <rdfs:subClassOf rdf:resource="#InterfaceProtocol"/>
+  </owl:Class>
+ <owl:Class rdf:ID="WMS"/>
+
+  <owl:ObjectProperty rdf:ID="hasParameter" />
+
+</rdf:RDF>

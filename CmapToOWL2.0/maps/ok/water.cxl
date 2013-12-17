@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>water</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Water">
+                <sense domains="[chemistry, geography]"
+                    gloss="a clear colorless odorless tasteless liquid; &quot;he asked for a drink of water&quot;"
+                    number="10650211" pos="n" words="[water, H2O]"/>
+            </concept>
+            <concept id="2" label="Mineral water">
+                <sense domains="[chemistry]"
+                    gloss="water naturally or artificially impregnated with mineral salts or gasses; often effervescent; often used therapeutically"
+                    number="05954337" pos="n" words="[mineral_water]"/>
+            </concept>
+            <concept id="3" label="Oxygen">
+                <sense domains="[chemistry, geography]"
+                    gloss="a nonmetallic bivalent element that is normally a colorless odorless tasteless nonflammable diatomic gas; constitutes 28 percent of the atmosphere by volume; the most abundant element in the earth's crust"
+                    number="10495237" pos="n" words="[oxygen, O, atomic_number_8]"/>
+            </concept>
+            <concept id="4" label="Hydrogen">
+                <sense domains="[chemistry, geography, physics]"
+                    gloss="a nonmetallic univalent element that is normally a colorless and odorless highly flammable diatomic gas; the simplest and lightest and most abundant element in the universe"
+                    number="10488691" pos="n" words="[hydrogen, H, atomic_number_1]"/>
+            </concept>
+            <concept id="5" label="Liquid">
+                <sense domains="[chemistry]"
+                    gloss="a substance that is liquid at room temperature and pressure"
+                    number="10720487" pos="n" words="[liquid]"/>
+            </concept>
+            <concept id="6" label="Air">
+                <sense domains="[physics]"
+                    gloss="a mixture of gases (especially oxygen) required for breathing; the stuff that the wind consists of"
+                    number="10646492" pos="n" words="[air]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="7" label="includes"/>
+            <linking-phrase id="8" label="made of"/>
+            <linking-phrase id="9" label="made of"/>
+            <linking-phrase id="10" label="state"/>
+            <linking-phrase id="11" label="is part of"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="7"/>
+            <connection from-id="7" to-id="2"/>
+            <connection from-id="1" to-id="8"/>
+            <connection from-id="8" to-id="3"/>
+            <connection from-id="1" to-id="9"/>
+            <connection from-id="9" to-id="4"/>
+            <connection from-id="1" to-id="10"/>
+            <connection from-id="10" to-id="5"/>
+            <connection from-id="3" to-id="11"/>
+            <connection from-id="11" to-id="6"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="316" y="84"/>
+            <concept-appearance id="2" x="162" y="212"/>
+            <concept-appearance id="3" x="282" y="222"/>
+            <concept-appearance id="4" x="384" y="216"/>
+            <concept-appearance id="5" x="507" y="212"/>
+            <concept-appearance id="6" x="279" y="373"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="7" x="223" y="164"/>
+            <linking-phrase id="8" x="291" y="162"/>
+            <linking-phrase id="9" x="364" y="167"/>
+            <linking-phrase id="10" x="451" y="165"/>
+            <linking-phrase id="11" x="272" y="316"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

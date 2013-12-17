@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://www.owl-ontologies.com/unnamed.owl#"
+  xml:base="http://www.owl-ontologies.com/unnamed.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="Sexually"/>
+  <owl:Class rdf:ID="Body_temperature"/>
+  <owl:Class rdf:ID="Feathers">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="Insulation"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="offer"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Feet"/>
+  <owl:Class rdf:ID="Beaks"/>
+  <owl:Class rdf:ID="Eggs"/>
+  <owl:Class rdf:ID="High_metabolism"/>
+  <owl:Class rdf:ID="Warm_blooded_animals"/>
+  <owl:Class rdf:ID="Fly">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Birds"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Light_body_weights"/>
+  <owl:Class rdf:ID="Heat"/>
+  <owl:Class rdf:about="#Birds">
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:ID="Endotherms"/>
+          <owl:Class rdf:about="#Fly"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Endotherms"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Endotherms">
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Warm_blooded_animals"/>
+          <owl:Class rdf:about="#Birds"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Warm_blooded_animals"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Hollow_bones"/>
+  <owl:Class rdf:ID="Wings"/>
+  <owl:Class rdf:ID="Rapid_digestive_system"/>
+  <owl:Class rdf:ID="Food"/>
+  <owl:ObjectProperty rdf:ID="have_Feathers">
+    <rdfs:domain rdf:resource="#Birds"/>
+    <rdfs:range rdf:resource="#Feathers"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="have_Hollow_bones">
+    <rdfs:range rdf:resource="#Hollow_bones"/>
+    <rdfs:domain rdf:resource="#Birds"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="have_Feet">
+    <rdfs:domain rdf:resource="#Birds"/>
+    <rdfs:range rdf:resource="#Feet"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="have_Beaks">
+    <rdfs:range rdf:resource="#Beaks"/>
+    <rdfs:domain rdf:resource="#Birds"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="have_Rapid_digestive_system">
+    <rdfs:domain rdf:resource="#Birds"/>
+    <rdfs:range rdf:resource="#Rapid_digestive_system"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="have_Light_body_weights">
+    <rdfs:domain rdf:resource="#Birds"/>
+    <rdfs:range rdf:resource="#Light_body_weights"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="have_Wings">
+    <rdfs:range rdf:resource="#Wings"/>
+    <rdfs:domain rdf:resource="#Birds"/>
+  </owl:ObjectProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.2, Build 355)  http://protege.stanford.edu -->

@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Sense annotation</TITLE>
+<META NAME="description" CONTENT="Sense annotation">
+<META NAME="keywords" CONTENT="userman">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="userman.css">
+
+<LINK REL="next" HREF="node47.html">
+<LINK REL="previous" HREF="node45.html">
+<LINK REL="up" HREF="node34.html">
+<LINK REL="next" HREF="node47.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html693"
+  HREF="node47.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html689"
+  HREF="node34.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html683"
+  HREF="node45.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html691"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html694"
+  HREF="node47.html">Chart Parser</A>
+<B> Up:</B> <A NAME="tex2html690"
+  HREF="node34.html">Extending the library with</A>
+<B> Previous:</B> <A NAME="tex2html684"
+  HREF="node45.html">Relaxation Labelling PoS Tagger</A>
+ &nbsp; <B>  <A NAME="tex2html692"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00550000000000000000"></A>
+<A NAME="senses-file"></A>
+<BR>
+Sense annotation
+</H1>
+  The sense annotation module uses a BerkeleyDB indexed file. This file may also be used by the dependency labeling module  (see section <A HREF="node28.html#file-dep">2.17</A>).
+
+<P>
+It may be created for a new language with the
+  <TT>src/utilities/indexdict</TT> program provided with FreeLing. 
+
+<P>
+The source file must have the sense list for one lemma-PoS at each line.
+<BR>
+<P>
+Each line has format: <TT>W:lemma:PoS synset1 synset2 ...</TT>.  E.g. 
+<BR>  <code>W:cebolla:N 05760066 08734429 08734702</code>
+
+<P>
+The first sense code in the list is assumed to be the most frequent
+  sense for that lemma-PoS by the sense annotation module.
+  This only takes effect when value <TT>msf</TT> is selected for the <TT>SenseAnnotation</TT> option. 
+
+<P>
+The file may also contain the same information indexed by synset (that is, the list of synonyms for a given synset). This is useful if you are using the <code>synon</code> function in your dependency rules (see section <A HREF="node28.html#file-dep">2.17</A>).
+  The lines with this information have the format
+
+<P>
+Each line has format: <TT>S:synset:PoS lemma1 lemma2 ...</TT>.  E.g. 
+<BR>   <code>S:07389783:N chaval chico joven mozo muchacho niño</code>
+
+<P>
+To create a sense file for a new language, just list the sense codes
+  for each lemma-PoS combination in a text file
+  (e.g. <code>sensefile.txt</code>), with lines in the format described above, and
+  then issue:
+<BR>  <code>indexdict sense.db &lt; sensefile.txt</code>
+
+<P>
+This will produce an indexed file <TT>sense.db</TT> which is to be
+   given to the analyzer via the <TT>SenseFile</TT> option in
+   configuration file, or via the <TT>-fsense</TT> option at command line.
+   It can also be referred to in the entry <TT>WNFile</TT> of the <code>&lt;SEMDB&gt;</code> section of a file of dependency labeling rules (section <A HREF="node28.html#file-dep">2.17</A>).
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html693"
+  HREF="node47.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html689"
+  HREF="node34.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html683"
+  HREF="node45.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html691"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html694"
+  HREF="node47.html">Chart Parser</A>
+<B> Up:</B> <A NAME="tex2html690"
+  HREF="node34.html">Extending the library with</A>
+<B> Previous:</B> <A NAME="tex2html684"
+  HREF="node45.html">Relaxation Labelling PoS Tagger</A>
+ &nbsp; <B>  <A NAME="tex2html692"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2008-01-24
+</ADDRESS>
+</BODY>
+</HTML>

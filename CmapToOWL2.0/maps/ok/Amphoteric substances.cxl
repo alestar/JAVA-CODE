@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Amphoteric substances</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Amphoteric substances"/>
+            <concept id="2" label="Acids">
+                <sense domains="[chemistry]"
+                    gloss="any of various water-soluble compounds having a sour taste and capable of turning litmus red and reacting with a base to form a salt"
+                    number="10463819" pos="n" words="[acid]"/>
+            </concept>
+            <concept id="3" label="Bases">
+                <sense domains="[chemistry]"
+                    gloss="any of various water-soluble compounds capable of turning litmus blue and reacting with an acid to form a salt and water; &quot;bases include oxides and hydroxides of metals and ammonia&quot;"
+                    number="10471284" pos="n" words="[base, alkali]"/>
+            </concept>
+            <concept id="4" label="Hydrogen ions"/>
+            <concept id="5" label="Aqueous solution">
+                <sense domains="[chemistry]" gloss="a solution in water"
+                    number="10451792" pos="n" words="[aqueous_solution]"/>
+            </concept>
+            <concept id="6" label="Hydrogen ions>Hydroxide ions"/>
+            <concept id="7" label="Hydrogen ions&lt;Hydroxide ions"/>
+            <concept id="8" label="pH">
+                <sense domains="[chemistry]"
+                    gloss="p(otential of) H(ydrogen); the logarithm  of the reciprocal of hydrogen-ion concentration in gram atoms per liter; used as a measure of the acidity or alkalinity of a solution on a scale of 0-14 (where 7 is neutral)"
+                    number="03934343" pos="n" words="[pH, pH_scale]"/>
+            </concept>
+            <concept id="9" label="pH&lt;7"/>
+            <concept id="10" label="pH>7"/>
+            <concept id="11" label="Acid-base reactions"/>
+            <concept id="12" label="Salt">
+                <sense domains="[chemistry]"
+                    gloss="a compound formed by replacing hydrogen in an acid by a metal (or a radical that acts like a metal)"
+                    number="10772760" pos="n" words="[salt]"/>
+            </concept>
+            <concept id="13" label="Water">
+                <sense domains="[chemistry, geography]"
+                    gloss="a clear colorless odorless tasteless liquid; &quot;he asked for a drink of water&quot;"
+                    number="10650211" pos="n" words="[water, H2O]"/>
+            </concept>
+            <concept id="14" label="Conjugate acid-base pairs"/>
+            <concept id="15" label="Acid">
+                <sense domains="[chemistry]"
+                    gloss="any of various water-soluble compounds having a sour taste and capable of turning litmus red and reacting with a base to form a salt"
+                    number="10463819" pos="n" words="[acid]"/>
+            </concept>
+            <concept id="16" label="Neutral">
+                <sense domains="[chemistry]"
+                    gloss="(chemistry) having only a limited ability to react chemically; not active; &quot;inert matter&quot;; &quot;an indifferent chemical in a reaction&quot;"
+                    number="01861714" pos="a" words="[inert, indifferent, neutral]"/>
+            </concept>
+            <concept id="17" label="Base">
+                <sense domains="[chemistry]"
+                    gloss="any of various water-soluble compounds capable of turning litmus blue and reacting with an acid to form a salt and water; &quot;bases include oxides and hydroxides of metals and ammonia&quot;"
+                    number="10471284" pos="n" words="[base, alkali]"/>
+            </concept>
+            <concept id="18" label="Hydrogen ions=Hydroxide ions"/>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="19" label="can behave as"/>
+            <linking-phrase id="20" label="can give"/>
+            <linking-phrase id="21" label="in"/>
+            <linking-phrase id="22" label="can originate"/>
+            <linking-phrase id="23" label="can receive"/>
+            <linking-phrase id="24" label="in"/>
+            <linking-phrase id="25" label="can originate"/>
+            <linking-phrase id="26" label="characterized by"/>
+            <linking-phrase id="27" label="characterized by"/>
+            <linking-phrase id="28" label="have (T=25C)"/>
+            <linking-phrase id="29" label="originate"/>
+            <linking-phrase id="30" label="originate"/>
+            <linking-phrase id="31" label="can be"/>
+            <linking-phrase id="32" label="can be"/>
+            <linking-phrase id="33" label="establish"/>
+            <linking-phrase id="34" label="can originate"/>
+            <linking-phrase id="35" label="in aqueous solution can be"/>
+            <linking-phrase id="36" label="characterized by"/>
+            <linking-phrase id="37" label="characterized by"/>
+            <linking-phrase id="38" label="characterized by"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="19"/>
+            <connection from-id="19" to-id="2"/>
+            <connection from-id="19" to-id="3"/>
+            <connection from-id="2" to-id="20"/>
+            <connection from-id="20" to-id="4"/>
+            <connection from-id="2" to-id="21"/>
+            <connection from-id="21" to-id="5"/>
+            <connection from-id="2" to-id="22"/>
+            <connection from-id="22" to-id="11"/>
+            <connection from-id="3" to-id="23"/>
+            <connection from-id="23" to-id="4"/>
+            <connection from-id="3" to-id="24"/>
+            <connection from-id="24" to-id="5"/>
+            <connection from-id="3" to-id="25"/>
+            <connection from-id="25" to-id="11"/>
+            <connection from-id="5" to-id="26"/>
+            <connection from-id="26" to-id="6"/>
+            <connection from-id="5" to-id="27"/>
+            <connection from-id="27" to-id="7"/>
+            <connection from-id="5" to-id="28"/>
+            <connection from-id="28" to-id="8"/>
+            <connection from-id="6" to-id="29"/>
+            <connection from-id="29" to-id="9"/>
+            <connection from-id="7" to-id="30"/>
+            <connection from-id="30" to-id="10"/>
+            <connection from-id="8" to-id="31"/>
+            <connection from-id="31" to-id="9"/>
+            <connection from-id="8" to-id="32"/>
+            <connection from-id="32" to-id="10"/>
+            <connection from-id="11" to-id="33"/>
+            <connection from-id="33" to-id="14"/>
+            <connection from-id="11" to-id="34"/>
+            <connection from-id="34" to-id="12"/>
+            <connection from-id="34" to-id="13"/>
+            <connection from-id="12" to-id="35"/>
+            <connection from-id="35" to-id="15"/>
+            <connection from-id="35" to-id="16"/>
+            <connection from-id="35" to-id="17"/>
+            <connection from-id="15" to-id="36"/>
+            <connection from-id="36" to-id="6"/>
+            <connection from-id="16" to-id="37"/>
+            <connection from-id="37" to-id="18"/>
+            <connection from-id="17" to-id="38"/>
+            <connection from-id="38" to-id="7"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="337" y="-276"/>
+            <concept-appearance id="2" x="221" y="-165"/>
+            <concept-appearance id="3" x="527" y="-162"/>
+            <concept-appearance id="4" x="358" y="-143"/>
+            <concept-appearance id="5" x="344" y="-49"/>
+            <concept-appearance id="6" x="181" y="41"/>
+            <concept-appearance id="7" x="443" y="44"/>
+            <concept-appearance id="8" x="372" y="133"/>
+            <concept-appearance id="9" x="231" y="140"/>
+            <concept-appearance id="10" x="527" y="143"/>
+            <concept-appearance id="11" x="339" y="217"/>
+            <concept-appearance id="12" x="156" y="295"/>
+            <concept-appearance id="13" x="264" y="302"/>
+            <concept-appearance id="14" x="537" y="287"/>
+            <concept-appearance id="15" x="58" y="396"/>
+            <concept-appearance id="16" x="156" y="396"/>
+            <concept-appearance id="17" x="264" y="401"/>
+            <concept-appearance id="18" x="92" y="492"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="19" x="352" y="-200"/>
+            <linking-phrase id="20" x="289" y="-139"/>
+            <linking-phrase id="21" x="290" y="-83"/>
+            <linking-phrase id="22" x="63" y="177"/>
+            <linking-phrase id="23" x="442" y="-138"/>
+            <linking-phrase id="24" x="443" y="-81"/>
+            <linking-phrase id="25" x="608" y="199"/>
+            <linking-phrase id="26" x="244" y="4"/>
+            <linking-phrase id="27" x="467" y="11"/>
+            <linking-phrase id="28" x="369" y="51"/>
+            <linking-phrase id="29" x="229" y="110"/>
+            <linking-phrase id="30" x="521" y="111"/>
+            <linking-phrase id="31" x="305" y="151"/>
+            <linking-phrase id="32" x="439" y="151"/>
+            <linking-phrase id="33" x="484" y="253"/>
+            <linking-phrase id="34" x="221" y="264"/>
+            <linking-phrase id="35" x="114" y="366"/>
+            <linking-phrase id="36" x="77" y="248"/>
+            <linking-phrase id="37" x="143" y="465"/>
+            <linking-phrase id="38" x="400" y="319"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+             owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Physical Properties -->
+
+<owl:Class rdf:ID="Pressure"/>
+<owl:Class rdf:ID="PhysicalProcess"/>
+<owl:Class rdf:ID="ChemicalState"/>
+<owl:Class rdf:ID="SubstanceForm"/>
+<owl:Class rdf:ID="Solid"/>
+
+ <owl:Class rdf:ID="BulkModulus">
+    <rdfs:subClassOf rdf:resource="#SolidProperty"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="CoefficientOfExpansion">
+    <rdfs:subClassOf rdf:resource="#SolidProperty"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="DispersionCoeffienct">
+    <rdfs:subClassOf rdf:resource="#SolidProperty"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Dispersivity">
+    <rdfs:subClassOf rdf:resource="#SolidProperty"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Indurated">
+    <rdfs:subClassOf rdf:resource="#SolidState"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Luster">
+    <rdfs:subClassOf rdf:resource="#SolidProperty"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="SolidProperty">
+    <rdfs:subClassOf rdf:resource="#MediumProperty"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Stress">
+    <rdfs:subClassOf rdf:resource="#Pressure"/>
+  </owl:Class>
+
+<!-- Processes -->
+ <owl:Class rdf:ID="Ablation">
+    <rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+   <rdfs:comment>all processes that remove material from an object, such as a glacier</rdfs:comment>
+   <rdfs:label>Ablation</rdfs:label>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Accretion">
+    <rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Coalescence">
+    <owl:equivalentClass rdf:resource="#Accretion"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Erode">
+    <rdfs:subClassOf rdf:resource="#MechanicalProcess"/>
+    <owl:equivalentClass rdf:resource="#Erosion"/>
+  <rdfs:comment>Erosion is displacement of solids (soil, mud, rock and other particles) usually by the agents of currents such as, wind, water, or ice by downward or down-slope movement in response to gravity or by living organisms (in the case of bioerosion).</rdfs:comment>
+  </owl:Class>
+ <owl:Class rdf:ID="Erosion"/>
+
+ <owl:Class rdf:ID="Friction">
+    <rdfs:subClassOf rdf:resource="#MechanicalProcess"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Harden">
+    <rdfs:subClassOf rdf:resource="#MechanicalProcess"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="MechanicalProcess">
+    <rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Solidify">
+    <rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Subside">
+    <rdfs:subClassOf rdf:resource="#MechanicalProcess"/>
+    <owl:equivalentClass rdf:resource="#Subsidence"/>
+  </owl:Class>
+ <owl:Class rdf:ID="Subsidence"/>
+
+ <owl:Class rdf:ID="Wasting">
+    <rdfs:subClassOf rdf:resource="#MechanicalProcess"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="SolidState">
+    <rdfs:subClassOf rdf:resource="#ChemicalState"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Composite">
+    <rdfs:subClassOf rdf:resource="#SolidProperty"/>
+  </owl:Class>
+
+<!-- Substances -->
+ <owl:Class rdf:ID="Crystal">
+    <rdfs:subClassOf rdf:resource="#SubstanceForm"/>
+    <rdfs:subClassOf rdf:resource="#Solid"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Grain">
+    <rdfs:subClassOf rdf:resource="#SubstanceForm"/>
+    <rdfs:subClassOf rdf:resource="#Solid"/>
+  </owl:Class>
+
+</rdf:RDF>

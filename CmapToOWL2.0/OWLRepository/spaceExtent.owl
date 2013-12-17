@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+  
+<!-- Spatial Extent -->
+
+  <owl:Class rdf:ID="SpatialMeasure"/>
+  <owl:Class rdf:ID="meterSquared"/>
+  <owl:Class rdf:ID="Quantity"/>
+  <owl:Class rdf:ID="meter"/>
+  <owl:Class rdf:ID="meterCubed"/>
+  <owl:Class rdf:ID="GeometricalObject_2D"/>
+  <owl:Class rdf:ID="GeometricalObject_3D"/>
+  <owl:Class rdf:ID="SpatialSuperset"/>
+  <owl:Class rdf:ID="IntervalQuantity"/>
+  
+  <owl:Class rdf:ID="Altitude">
+    <rdfs:subClassOf rdf:resource="#Height"/>
+    <rdfs:label>Altitude</rdfs:label>
+    <rdfs:comment>A measure (or condition) of height, especially of great height, as a mountain top or aircraft flight level.</rdfs:comment>
+    <rdfs:comment>The vertical distance above mean sea level of the ground at the meteorological station.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Area">
+    <rdfs:subClassOf rdf:resource="#SpatialMeasure"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasDefaultUnit"/>	
+		</owl:onProperty>
+        <owl:hasValue rdf:resource="#meterSquared"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Ceiling">
+    <rdfs:subClassOf rdf:resource="#VerticalExtent"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Crest">
+    <rdfs:subClassOf rdf:resource="#Height"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Distance">
+    <rdfs:subClassOf rdf:resource="#SpatialExtent"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Freeboard">
+    <rdfs:subClassOf rdf:resource="#Height"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Length">
+    <rdfs:subClassOf rdf:resource="#SpatialExtent"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Level">
+    <rdfs:subClassOf rdf:resource="#Quantity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LinearExtent">
+    <rdfs:subClassOf rdf:resource="#SpatialMeasure"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#meter"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SpatialExtent">
+    <rdfs:subClassOf rdf:resource="#LinearExtent"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Thickness">
+    <rdfs:subClassOf rdf:resource="#SpatialExtent"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Topography">
+    <rdfs:subClassOf rdf:resource="#Height"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DynamicTopography">
+    <rdfs:subClassOf rdf:resource="#Topography"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="TopographicProminence">
+    <rdfs:subClassOf rdf:resource="#Topography"/>
+    <rdfs:comment>In topography, prominence, also known as autonomous height, relative height or shoulder drop (in America) or prime factor (in Europe), is a concept used in the categorization of hills and mountains, also known as peaks. It is a measure of the independent stature of a summit.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="UpperLevel">
+    <rdfs:subClassOf rdf:resource="#Level"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="VerticalExtent">
+    <rdfs:subClassOf rdf:resource="#SpatialExtent"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Volume">
+    <rdfs:subClassOf rdf:resource="#SpatialMeasure"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#meterCubed"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  
+   <owl:ObjectProperty rdf:ID="hasArea">
+    <rdfs:domain rdf:resource="#GeometricalObject_2D"/>
+    <rdfs:range rdf:resource="#Area"/>
+  </owl:ObjectProperty>
+
+   <owl:ObjectProperty rdf:ID="hasHeight">
+    <rdfs:range rdf:resource="#Length"/>
+  </owl:ObjectProperty>
+
+   <owl:ObjectProperty rdf:ID="hasLength">
+    <rdfs:range rdf:resource="#Length"/>
+  </owl:ObjectProperty>
+
+   <owl:ObjectProperty rdf:ID="hasSpatialExtent">
+    <rdfs:range rdf:resource="#SpatialExtent"/>
+  </owl:ObjectProperty>
+
+   <owl:ObjectProperty rdf:ID="hasVolume">
+    <rdfs:domain rdf:resource="#GeometricalObject_3D"/>
+    <rdfs:range rdf:resource="#Volume"/>
+  </owl:ObjectProperty>
+
+   <owl:ObjectProperty rdf:ID="hasWidth">
+    <rdfs:range rdf:resource="#Length"/>
+  </owl:ObjectProperty>
+
+   <owl:ObjectProperty rdf:ID="diameter">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:range rdf:resource="#SpatialExtent"/>
+  </owl:ObjectProperty>
+
+   <owl:ObjectProperty rdf:ID="radius">
+    <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+    <rdfs:range rdf:resource="#SpatialExtent"/>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:ID="BoundingBox">
+   <rdfs:subClassOf rdf:resource="#SpatialSuperset"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Depth">
+    <rdfs:subClassOf rdf:resource="#VerticalExtent"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Height">
+    <rdfs:subClassOf rdf:resource="#VerticalExtent"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Range">
+    <rdfs:subClassOf rdf:resource="#Distance"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Elevation">
+    <rdfs:subClassOf rdf:resource="#Height"/>
+    <owl:equivalentClass rdf:resource="#Altitude"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DistanceRange">
+   <rdfs:subClassOf rdf:resource="#SpatialRange"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="HeightRange">
+   <rdfs:subClassOf rdf:resource="#SpatialRange"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SizeRange">
+   <rdfs:subClassOf rdf:resource="#SpatialRange"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SpatialRange">
+    <rdfs:subClassOf rdf:resource="#SpatialMeasure"/>
+    <rdfs:subClassOf rdf:resource="#IntervalQuantity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DepthRange">
+   <rdfs:subClassOf rdf:resource="#SpatialRange"/>
+  </owl:Class>
+
+
+</rdf:RDF>

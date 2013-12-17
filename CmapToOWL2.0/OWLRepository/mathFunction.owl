@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+<!-- Classes -->
+  <owl:Class rdf:ID="Variable"/>
+  <owl:Class rdf:ID="Operation"/>
+  <owl:Class rdf:ID="Scalar"/>
+  
+  <owl:Class rdf:ID="Affine">
+    <owl:equivalentClass rdf:resource="#Linear"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="AlgebraicFunction">
+    <rdfs:subClassOf rdf:resource="#Function"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="BSpline">
+    <rdfs:subClassOf rdf:resource="#CubicSpline"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Bivariate" >
+    <rdfs:subClassOf rdf:resource="#Function"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ChiSquare">
+    <rdfs:subClassOf rdf:resource="#DistributionFunction"/>
+    <owl:equivalentClass rdf:resource="#ChiSquareDistribution"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ChiSquareDistribution"/>
+
+  <owl:Class rdf:ID="Cosine">
+    <rdfs:subClassOf rdf:resource="#TrigonometricFunction"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Cubic">
+    <rdfs:subClassOf rdf:resource="#Polynomial"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty rdf:resource="#hasDegree"/>
+        <owl:hasValue rdf:datatype="&xsd;integer">3</owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="CubicSpline">
+    <rdfs:subClassOf rdf:resource="#Cubic"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="DependentVariable">
+    <rdfs:subClassOf rdf:resource="#Variable" />
+    <rdfs:comment xml:lang="en">Any variable considered as a function of other variables, the latter being called independent.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DistributionFunction">
+    <rdfs:subClassOf rdf:resource="#NormalizedFunction"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Exponential">
+    <rdfs:subClassOf rdf:resource="#TranscendentalFunction"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Field">
+    <rdfs:subClassOf rdf:resource="#Function"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="FourierTransform">
+    <rdfs:subClassOf rdf:resource="#OperationOnFunction"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Function">
+    <rdfs:subClassOf rdf:resource="#Operation"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasInput"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#IndependentVariable"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasOutput"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#DependentVariable"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+ <owl:Class rdf:ID="IndependentVariable">
+    <rdfs:subClassOf rdf:resource="#Variable" />
+    <rdfs:comment xml:lang="en">Any variable considered as a function of other variables, the latter being called independent.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Isopleth">
+    <rdfs:subClassOf rdf:resource="#Function"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Linear">
+    <rdfs:subClassOf rdf:resource="#Polynomial"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:datatype="&xsd;integer">1</owl:hasValue>
+        <owl:onProperty rdf:resource="#hasDegree"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Logarithm">
+    <rdfs:subClassOf rdf:resource="#TranscendentalFunction"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Nonlinear">
+    <rdfs:subClassOf rdf:resource="#Function"/>
+    <owl:disjointWith rdf:resource="#Linear"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Normal">
+    <rdfs:subClassOf rdf:resource="#DistributionFunction"/>
+    <owl:equivalentClass rdf:resource="#NormalDistribution"/>
+  </owl:Class>
+  <owl:Class rdf:ID="NormalDistribution"/>
+
+  <owl:Class rdf:ID="NormalizedFunction">
+    <rdfs:subClassOf rdf:resource="#Function"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="OperationOnFunction">
+    <rdfs:subClassOf rdf:resource="#Operation"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Function"/>
+        <owl:onProperty rdf:resource="#hasInput"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Polynomial">
+    <rdfs:subClassOf rdf:resource="#AlgebraicFunction"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Quadratic">
+    <rdfs:subClassOf rdf:resource="#Polynomial"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:datatype="&xsd;integer">2</owl:hasValue>
+        <owl:onProperty rdf:resource="#hasDegree"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Quartic">
+    <rdfs:subClassOf rdf:resource="#Polynomial"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:datatype="&xsd;integer">4</owl:hasValue>
+        <owl:onProperty rdf:resource="#hasDegree"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ScalarField">
+    <rdfs:subClassOf rdf:resource="#ScalarFunction"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ScalarFunction">
+    <rdfs:subClassOf rdf:resource="#Function"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Scalar"/>
+        <owl:onProperty rdf:resource="#hasOutput"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Sin">
+    <rdfs:subClassOf rdf:resource="#TrigonometricFunction"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="TranscendentalFunction">
+    <rdfs:subClassOf rdf:resource="#Function"/>
+    <owl:disjointWith rdf:resource="#AlgebraicFunction"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="TrigonometricFunction">
+    <rdfs:subClassOf rdf:resource="#TranscendentalFunction"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="WaveletTransform">
+    <rdfs:subClassOf rdf:resource="#OperationOnFunction"/>
+  </owl:Class>
+
+   <owl:ObjectProperty rdf:ID="hasFunction">
+    <rdfs:range rdf:resource="#Function"/>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:ID="hasBase">
+    <rdfs:domain rdf:resource="#Logarithm"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:ID="hasDegree">
+  </owl:DatatypeProperty>
+
+</rdf:RDF>

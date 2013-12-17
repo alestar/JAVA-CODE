@@ -1,0 +1,251 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Sample program</TITLE>
+<META NAME="description" CONTENT="Sample program">
+<META NAME="keywords" CONTENT="userman">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="userman.css">
+
+<LINK REL="previous" HREF="node30.html">
+<LINK REL="up" HREF="node29.html">
+<LINK REL="next" HREF="node34.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html518"
+  HREF="node34.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html514"
+  HREF="node29.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html510"
+  HREF="node32.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html516"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html519"
+  HREF="node34.html">Extending the library with</A>
+<B> Up:</B> <A NAME="tex2html515"
+  HREF="node29.html">Using the library from</A>
+<B> Previous:</B> <A NAME="tex2html511"
+  HREF="node32.html">Processing modules</A>
+ &nbsp; <B>  <A NAME="tex2html517"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00420000000000000000">
+Sample program</A>
+</H1>
+
+<P>
+A very simple sample program using the library is depicted below. It
+ reads text from stdin, morphologically analyzes it, and processes 
+ the obtained results. Depending on the application, the input text
+ could be obtained from a speech recongnition system, or from a 
+ XML parser, or from any source suiting the application goals.
+
+<P>
+<PRE>
+int main() {
+  string text;
+  list&lt;word&gt; lw;
+  list&lt;sentence&gt; ls;
+  
+  // create analyzers
+  tokenizer tk("myTokenizerFile.dat"); 
+  splitter sp(false,0);
+  
+  // morphological analysis has a lot of options, and for simplicity they are packed up
+  // in a maco_options object. First, create the maco_options object with default values.
+  maco_options opt("es");
+  
+  // set required options  
+  opt.noQuantitiesDetection = true;  // deactivate quantities submodule
+  
+  // Data files for morphological submodules. Note that it is not necessary
+  // to set opt.CurrencyFile, since quantities module was deactivated.
+  opt.LocutionsFile="myMultiwordsFile.dat";       opt.SuffixFile="mySuffixesFile.dat";
+  opt.ProbabilityFile="myProbabilitiesFile.dat";  opt.DictionaryFile="myDictionaryFile.dat";
+  opt.NPdataFile="myNPdatafile.dat";              opt.PunctuationFile="myPunctuationFile.dat"; 
+  
+  // create the analyzer with the given set of maco_options
+  maco morfo(opt);    
+  
+  // create a hmm tagger
+  hmm_tagger tagger("es", "myTaggerFile.dat"); 
+  
+  // get plain text input lines while not EOF.
+  while (getline(cin,text)) {
+    
+    // clear temporary lists;
+    lw.clear(); ls.clear();
+    
+    // tokenize input line into a list of words
+    lw=tk.tokenize(text);
+    
+    // accumulate list of words in splitter buffer, returning a list of sentences.
+    // The resulting list of sentences may be empty if the splitter has still not 
+    // enough evidence to decide that a complete sentence has been found. The list
+    // may contain more than one sentence (since a single input line may consist 
+    // of several complete sentences).
+    ls=sp.split(lw, false);
+    
+    // analyze all words in all sentences of the list, enriching them with lemma and PoS 
+    // information. Some of the words may be glued in one (e.g. dates, multiwords, etc.)
+    morfo.analyze(ls);
+    
+    // disambiguate words in each sentence of given sentence list.
+    tagger.analyze(ls);
+    
+    // Process the enriched/disambiguated objects in the list of sentences
+    ProcessResults(ls);
+  }
+  
+  // No more lines to read. Make sure the splitter doesn't retain anything  
+  ls=sp.split(lw, true);  
+  
+  // morphologically enrich and disambiguate last sentence(s)
+  morfo.analyze(ls);
+  tagger.analyze(ls);
+  
+  // process last sentence(s)   
+  ProcessResults(ls);
+}
+</PRE>
+
+<P>
+The processing performed on the obtained results would obviously
+ depend on the goal of the application (translation, indexation,
+ etc.). In order to illustrate the structure of the linguistic data
+ objects, a simple procedure is presented below, in which the processing
+ consists of merely printing the results to stdout in XML format.
+
+<P>
+<PRE>
+void ProcessResults(const list&lt;sentence&gt; &amp;ls) {
+  
+  list&lt;sentence&gt;::const_iterator s;
+  word::const_iterator a;   //iterator over all analysis of a word
+  sentence::const_iterator w;
+  
+  // for each sentence in list
+  for (s=ls.begin(); s!=ls.end(); s++) {
+    
+    // print sentence XML tag
+    cout&lt;&lt;"&lt;SENT&gt;"&lt;&lt;endl;
+      
+    // for each word in sentence
+    for (w=s-&gt;begin(); w!=s-&gt;end(); w++) {
+      
+      // print word form, with PoS and lemma chosen by the tagger
+      cout&lt;&lt;"  &lt;WORD form=\""&lt;&lt;w-&gt;get_form();
+      cout&lt;&lt;"\" lemma=\""&lt;&lt;w-&gt;get_lemma();
+      cout&lt;&lt;"\" pos=\""&lt;&lt;w-&gt;get_parole();
+      cout&lt;&lt;"\"&gt;"&lt;&lt;endl;
+      
+      // for each possible analysis in word, output lemma, parole and probability
+      for (a=w-&gt;analysis_begin(); a!=w-&gt;analysis_end(); ++a) {
+	
+        // print analysis info
+        cout&lt;&lt;"    &lt;ANALYSIS lemma=\""&lt;&lt;a-&gt;get_lemma();
+        cout&lt;&lt;"\" pos=\""&lt;&lt;a-&gt;get_parole();
+        cout&lt;&lt;"\" prob=\""&lt;&lt;a-&gt;get_prob();
+        cout&lt;&lt;"\"/&gt;"&lt;&lt;endl;
+      }
+      
+      // close word XML tag after list of analysis
+      cout&lt;&lt;"&lt;/WORD&gt;"&lt;&lt;endl;
+    }
+    
+    // close sentence XML tag
+    cout&lt;&lt;"&lt;/SENT&gt;"&lt;&lt;endl;
+  }
+}
+</PRE>
+
+<P>
+The above sample program may be found in  file <I CLASS="slanted">FreeLing-build-dir</I><TT>/src/main/sample.cc</TT>
+
+<P>
+Once you have compiled and installed FreeLing, you can build this
+ sample program (or any other you may want to write) with the command:
+<BR> <TT>g++ -o sample sample.cc -lmorfo -ldb_cxx -lpcre -lomlet -fries</TT>
+
+<P>
+Option <TT>-lmorfo</TT> links with libmorfo library, which is the final result of the
+ FreeLing compilation process.  The oher options refer to above
+ mentioned libraries required by FreeLing.
+  You may have to add some  <TT>-I</TT> and/or  <TT>-L</TT> options to the
+ compilation command depending on where the headers and code of
+ required libraries are located. For instance, if you installed some
+ of the libraries in <TT>/usr/local/mylib</TT> instead of the default 
+place <TT>/usr/local</TT>, you'll have to add the options 
+<BR> <TT>-I/usr/local/mylib/include -L/usr/local/mylib/lib</TT> 
+<BR>
+to the command above.
+
+<P>
+More clues on how to use the freeling library from your own program
+ may be obtained by looking at the source code of the main program
+ provided in the package. The program is quite simple and commented,
+ so it should be easy to understand what it does. The source can be
+ found in file <I CLASS="slanted">FreeLing-build-dir</I><TT>/src/main/analyzer.cc</TT>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html518"
+  HREF="node34.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html514"
+  HREF="node29.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html510"
+  HREF="node32.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html516"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html519"
+  HREF="node34.html">Extending the library with</A>
+<B> Up:</B> <A NAME="tex2html515"
+  HREF="node29.html">Using the library from</A>
+<B> Previous:</B> <A NAME="tex2html511"
+  HREF="node32.html">Processing modules</A>
+ &nbsp; <B>  <A NAME="tex2html517"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2008-01-24
+</ADDRESS>
+</BODY>
+</HTML>

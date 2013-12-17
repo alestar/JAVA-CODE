@@ -1,0 +1,353 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Dependency parser heuristic rules file</TITLE>
+<META NAME="description" CONTENT="Dependency parser heuristic rules file">
+<META NAME="keywords" CONTENT="userman">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="userman.css">
+
+<LINK REL="previous" HREF="node27.html">
+<LINK REL="up" HREF="node9.html">
+<LINK REL="next" HREF="node29.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html456"
+  HREF="node29.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html452"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html448"
+  HREF="node27.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html454"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html457"
+  HREF="node29.html">Using the library from</A>
+<B> Up:</B> <A NAME="tex2html453"
+  HREF="node9.html">Using the sample main</A>
+<B> Previous:</B> <A NAME="tex2html449"
+  HREF="node27.html">Chart parser CFG file</A>
+ &nbsp; <B>  <A NAME="tex2html455"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION003170000000000000000"></A>
+<A NAME="file-dep"></A>
+<BR>
+Dependency parser heuristic rules file
+</H1>
+
+<P>
+This file contains a set of heuristic rules to perform dependency
+  parsing.
+
+<P>
+The file consists of four sections:
+  sections: <code>&lt;GRPAR&gt;</code>, <code>&lt;GRLAB&gt;</code>, <code>&lt;SEMDB&gt;</code>, and <code>&lt;VCLASS&gt;</code>,
+  respectively closed by tags <code>&lt;/GRPAR&gt;</code>, <code>&lt;/GRLAB&gt;</code>, <code>&lt;/SEMDB&gt;</code>, and <code>&lt;/VCLASS&gt;</code>.
+
+<P>
+
+ <UL>
+<LI>Section <code>&lt;GRPAR&gt;</code> contains rules to complete the
+    partial parsing provided by the chart parser. The tree is
+    completed by combining chunk pairs as stated by the rules. Rules
+    are applied from highest priority (lower values) to lowest
+    priority (higher values), and left-to rigth.
+    That is, the pair of adjacent chunks matching the most prioritary
+    rule is found, and the rule is applied, joining both chunks in
+    one. The process is repeated until only one chunk is left.
+    Each line contains a rule, with the format:
+<PRE>
+  ancestor-label descendant-label label operation priority-spec
+</PRE>
+  where:
+  
+<UL>
+<LI><code>ancestor-label</code> and <code>descendant-label</code> are the
+    syntactic labels (either assigned by the chunk parser, or a
+    new <code>label</code> created by some other completion rule) of two
+    consecutive nodes in the tree.
+</LI>
+<LI><code>label</code> has two meanings, depending on the
+    <code>operation</code> field value.
+    For <code>top_left</code> and <code>top_right</code> operations, it states the
+    label with with the root node of the resulting tree must be
+    relabelled (``-'' means no relabelling).
+    For <code>last_left</code> and <code>last_right</code> operations, it states the
+    label that the node to be considered ``last'' must have to get the
+    subtree as a new child. If no node with this label is found, the 
+    subtree is attached as a new child to the root node.
+</LI>
+<LI><code>operation</code> is the way in which <code>ancestor-label</code>
+    and <code>descendant-label</code> nodes are to be combined.
+</LI>
+<LI><code>priority-spec</code> is a specification of possible priority
+     values for this rule, as detailed below. 
+  
+</LI>
+</UL>
+
+<P>
+For instance, the rule:
+<PRE>
+  np pp - top_left  20
+</PRE>
+
+<P>
+states that if two subtrees labelled <code>np</code> and <code>pp</code> are
+  found contiguous in the partial tree, the later is added as a new
+  child of the former.
+
+<P>
+The supported tree-building operations are the following:
+  
+<UL>
+<LI><code>top_left</code>: The right subtree is added as a daughter of the
+   left subtree. The root of the new tree is the root of the left
+   subtree. If a <code>label</code> value other than ``-'' is specified,
+   the root is relabelled with that string.
+</LI>
+<LI><code>last_left</code>: The right subtree is added as a daughter of
+   the last node inside the left subtree matching <code>label</code> value
+   (or to the root if none is found). The root of the new tree is the
+   root of the left subtree.
+</LI>
+<LI><code>top_right</code>: The left subtree is added as a new daughter
+   of the right subtree. The root of the new tree is the root of the
+   right subtree. If a <code>label</code> value other than ``-'' is
+   specified, the root is relabelled with that string.
+</LI>
+<LI><code>last_right</code>:  The left subtree is added as a daughter of the
+   last node inside the right subtree matching <code>label</code> value
+   (or to the root if none is found). The root of the new
+   tree is the root of the right subtree.
+  
+</LI>
+</UL>
+
+<P>
+The <code>priority-spec</code> part of a rule defines the priority that
+   will rank the applicable rules. Rules with low priority values will
+   be applied earlier.  The <code>priority-spec</code> consists of a list of
+   zero or more pairs <code>context-condition value</code>, separated by
+   semicolons.  The last item in the list is a single integer value,
+   and is required (i.e. the simplest possible <code>priority-spec</code> is
+   a single integer value). Each context condition in the list is
+   checked in order, and the priority value for the first matching
+   condition is used for the rule. If no condition in the list
+   matches, the last single value is used.
+
+<P>
+The context conditions are a sequence of labels separated with
+  underscores, each label must match the label of one chunk in the
+  partial tree. The condition must include a label <code>$$</code> which
+  will match the pair of chunks that activated the rule. An <code>*</code> label
+  matches any chunk.
+
+<P>
+For instance, the rule:
+<PRE>
+  np pp - top_left vp_$$_adjp 20; $$_*_vp 10; 5
+</PRE>
+  will be activated when an adjacent pair <code>np pp</code> is found, and
+  will be ranked with priority 20 provided there is a <code>vp</code> chunk
+  to the left of the focus pair, and a <code>adjp</code> chunk to its
+  right. If not, it will get a priority of 10 if there is a <code>vp</code>
+  chunk at the second right position, with any chunk in the first. If
+  none of those patterns are matched, the rule will be assigned a
+  priority of 5.
+
+<P>
+</LI>
+<LI>Section <code>&lt;GRLAB&gt;</code> contains rules to label the
+    dependences extracted from the full parse tree build with the
+    rules in previous section:
+
+<P>
+Each line contains a rule, with the format:
+<PRE>
+  ancestor-label dependence-label condition1 condition2 ...
+</PRE>
+
+<P>
+where:
+  
+<UL>
+<LI><code>ancestor-label</code> is the label of the node which is
+    head of the dependence.
+</LI>
+<LI><code>dependence-label</code> is the label to be assigned to the dependence
+</LI>
+<LI><code>condition</code> is a list of conditions that the dependence
+    has to match to satisfy the rule.
+  
+</LI>
+</UL>
+
+<P>
+Each <code>condition</code> has one of the forms:
+<PRE>
+  node.attribute = value
+  node.attribute != value
+</PRE>
+
+<P>
+Where <TT>node</TT> may be <TT>p</TT> for parent or <TT>d</TT> for descendant), and <TT>attribute</TT>
+   is one of the following:
+  
+<UL>
+<LI><code>label</code>: chunk label (or PoS tag) of the node.
+</LI>
+<LI><code>side</code>: (left or right) position of the specified node with respect to the other.
+</LI>
+<LI><code>lemma</code>: lemma of dathe node head word.
+</LI>
+<LI><code>class</code>: word class (see below) of lemma of the node head word.
+</LI>
+<LI><code>tonto</code>: EWN Top Ontology properties of the node head word.
+</LI>
+<LI><code>semfile</code>: WN semantic file of the node head word.
+</LI>
+<LI><code>synon</code>: Synonym lemmas of the node head word (according to WN).
+</LI>
+<LI><code>asynon</code>: Synonym lemmas of the node head word ancestors (according to WN).
+  
+</LI>
+</UL>
+
+<P>
+Note that since no disambiguation is requiered, the attributes dealing with semantic properties will be satisfied if any of the word senses matches the condition.
+
+<P>
+For instance, the rule:
+<PRE>
+verb-phr    subj    d.label=np*      d.side=left
+</PRE>
+  states that if a <code>verb-phr</code> node has a daughter to its left, with a label
+  starting by <code>np</code>, this dependence is to be labeled as <code>subj</code>.
+
+<P>
+Similarly, the rule:
+<PRE>
+verb-phr    obj    d.label=np*  d.tonto=Edible  p.lemma=eat
+</PRE>
+  states that if a <code>verb-phr</code> node has <TT>eat</TT> as lemma, and a
+  descendant with a label starting by <code>np</code> and with a <TT>    Edible</TT> property in EWN Top ontology, this dependence is to be
+  labeled as <code>obj</code>.
+
+<P>
+</LI>
+<LI>Section <code>&lt;SEMDB&gt;</code> is only necessary if the dependency labeling rules in section <code>&lt;GRLAB&gt;</code> use conditions on semantic values (that is, any of <code>tonto</code>, <code>semfile</code>, <code>synon</code>, or <code>asynon</code>).
+  The section must contain two lines specifying two semantic information files, a <TT>SenseFile</TT> and a <TT>WNFile</TT>. The filenames may be absolute or relative to the location of the dependency rules file.
+<PRE>
+&lt;SEMDB&gt;
+SenseFile ../senses16.db
+WNFile    ../../common/wn16.db
+&lt;/SEMDB&gt;
+</PRE>
+
+<P>
+The <EM>SenseFile</EM> must be a BerkeleyDB indexed file as described in the <A HREF="node46.html#senses-file">4.5</A> section.
+   The <EM>WNFile</EM> must be a BerkeleyDB indexed file, obtained with the same procedure from a source plain text file. This file must contain a sense per line, with the following format:
+<PRE>
+synset:PoS  hypern:hypern:...:hypern  semfile  TopOnto:TopOnto:...:TopOnto
+</PRE>
+
+<P>
+That is: the first field is the synset code plus its PoS, separated by a colon. The second field is a colon-separated list of its hypernym synsets. The third field is the WN semantic file the synset belongs to, and the last field is a colon-separated list of EuroWN TopOntology codes valid for the synset.
+
+<P>
+</LI>
+<LI>Section <code>&lt;CLASS&gt;</code> contains class definitions which may
+   be used as attributes in the dependency labelling rules.
+
+<P>
+Each line contains a class assignation for a lemma, with two possible formats:
+<PRE>
+  class-name  lemma   comments
+  class-name  "filename"   comments
+</PRE>
+
+<P>
+For instance, the following lines assign to the class <code>mov</code>
+   the four listed verbs, and to the class <code>animal</code> all lemmas
+   found in <code>animals.dat</code> file.  In the later case, if the file
+   name is not an absolute path, it is interpreted as a relative path
+   based at the location of the heuristic rules file.
+
+<P>
+Anything to the right of the second field is considered a comment and ignored.
+<PRE>
+mov     go      prep= to,towards
+mov     come    prep= from
+mov     walk    prep= through
+mov     run     prep= to,towards   D.O.
+
+animal "animals.dat"
+</PRE>
+
+<P>
+</LI>
+</UL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html456"
+  HREF="node29.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html452"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html448"
+  HREF="node27.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html454"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html457"
+  HREF="node29.html">Using the library from</A>
+<B> Up:</B> <A NAME="tex2html453"
+  HREF="node9.html">Using the sample main</A>
+<B> Previous:</B> <A NAME="tex2html449"
+  HREF="node27.html">Chart parser CFG file</A>
+ &nbsp; <B>  <A NAME="tex2html455"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2008-01-24
+</ADDRESS>
+</BODY>
+</HTML>

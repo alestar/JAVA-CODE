@@ -1,0 +1,117 @@
+plant
+ocean
+water
+atmosphere
+state
+land
+food
+body part
+animals
+light
+reflection
+refraction
+wave
+energy
+density
+dog
+moon
+organism
+air
+liquid
+ozone
+gas
+pollutant
+stratosphere
+troposphere
+global warming
+chlorophyll
+hydrogen
+oxygen
+carbon dioxide
+photosynthesis
+hydrosphere
+sunlight
+mineral
+heat
+respiration
+chemistry
+physics
+biology
+element
+compound
+planet
+star
+anatomy
+momentum
+speed
+acceleration
+sound
+temperature
+deforestation
+plastic
+galaxy
+particulate
+atom
+molecule
+state of matter
+motion
+mass
+sea water
+salt water
+surface water
+crop production
+salt
+fish
+lungs
+air pressure
+lightning
+community
+population
+ecology
+evolution
+genetics
+wing
+blood
+desert
+potential energy
+kinetic energy
+work
+power
+force
+distance
+velocity
+ice
+volume
+natural selection
+depression
+coastal plain
+plankton
+CO2
+adsorption
+cone
+law
+bird
+environment
+change
+natural
+layer
+sense
+cell
+nitrogen
+acid
+animal
+wind
+thunderstorm
+fungi
+arid climate
+composition
+gravel
+chemical
+height
+gravity
+weight
+b
+e
+a
+c
+d

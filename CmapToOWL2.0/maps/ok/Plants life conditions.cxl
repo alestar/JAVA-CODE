@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Plants life conditions</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Plants">
+                <sense domains="[biology, plants]"
+                    gloss="a living organism lacking the power of locomotion"
+                    number="00008864" pos="n" words="[plant, flora, plant_life]"/>
+            </concept>
+            <concept id="2" label="Sunlight">
+                <sense domains="[factotum]"
+                    gloss="the rays of the sun; &quot;the shingles were weathered by the sun and wind&quot;"
+                    number="07820384" pos="n" words="[sunlight, sunshine, sun]"/>
+            </concept>
+            <concept id="3" label="Photosynthesis">
+                <sense domains="[chemistry]"
+                    gloss="synthesis of compounds with the aid of radiant energy (especially in plants)"
+                    number="09705163" pos="n" words="[photosynthesis]"/>
+            </concept>
+            <concept id="4" label="Water">
+                <sense domains="[geography]"
+                    gloss="the part of the earth's surface covered with water; &quot;they invaded our territorial waters&quot;"
+                    number="06666185" pos="n" words="[body_of_water, water]"/>
+            </concept>
+            <concept id="5" label="Carbon dioxide">
+                <sense domains="[chemistry]"
+                    gloss="a heavy odorless colorless gas formed during respiration and by the decomposition of organic substances; absorbed from the air by plants in photosynthesis"
+                    number="10613550" pos="n" words="[carbon_dioxide, CO, carbonic_acid_gas]"/>
+            </concept>
+            <concept id="6" label="Carbohydrates"/>
+            <concept id="7" label="Expiration">
+                <sense domains="[physiology]"
+                    gloss="the act of inhaling" number="00536039"
+                    pos="n" words="[exhalation, expiration, breathing_out]"/>
+            </concept>
+            <concept id="8" label="Nourishment">
+                <sense domains="[gastronomy]"
+                    gloss="a source of nourishment" number="05625967"
+                    pos="n" words="[nutriment, nourishment, sustenance, aliment, alimentation, victuals]"/>
+            </concept>
+            <concept id="9" label="Energy">
+                <sense domains="[biology, psychological_features]"
+                    gloss="an imaginative lively style (especially style of writing); &quot;his writing conveys great energy&quot;"
+                    number="03654225" pos="n" words="[energy, vigor, vigour, vim]"/>
+            </concept>
+            <concept id="10" label="Soil">
+                <sense domains="[geography]"
+                    gloss="what plants grow in (especially with reference to its quality or use); &quot;the land had never been plowed&quot;; &quot;good agricultural soil&quot;"
+                    number="06668569" pos="n" words="[land, ground, soil]"/>
+            </concept>
+            <concept id="11" label="Oxygen">
+                <sense domains="[chemistry, geography]"
+                    gloss="a nonmetallic bivalent element that is normally a colorless odorless tasteless nonflammable diatomic gas; constitutes 28 percent of the atmosphere by volume; the most abundant element in the earth's crust"
+                    number="10495237" pos="n" words="[oxygen, O, atomic_number_8]"/>
+            </concept>
+            <concept id="12" label="Organisms">
+                <sense domains="[biology]" gloss="any living entity"
+                    number="00002086" pos="n" words="[life_form, organism, being, living_thing]"/>
+            </concept>
+            <concept id="13" label="Air">
+                <sense domains="[physics]"
+                    gloss="a mixture of gases (especially oxygen) required for breathing; the stuff that the wind consists of"
+                    number="10646492" pos="n" words="[air]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="14" label="need"/>
+            <linking-phrase id="15" label="need"/>
+            <linking-phrase id="16" label="need"/>
+            <linking-phrase id="17" label="need"/>
+            <linking-phrase id="18" label="for"/>
+            <linking-phrase id="19" label="produces"/>
+            <linking-phrase id="20" label="produces"/>
+            <linking-phrase id="21" label="is taken from"/>
+            <linking-phrase id="22" label="comes from"/>
+            <linking-phrase id="23" label="is in the"/>
+            <linking-phrase id="24" label="for"/>
+            <linking-phrase id="25" label="gives"/>
+            <linking-phrase id="26" label="gives"/>
+            <linking-phrase id="27" label="of"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="14"/>
+            <connection from-id="14" to-id="4"/>
+            <connection from-id="1" to-id="15"/>
+            <connection from-id="15" to-id="2"/>
+            <connection from-id="1" to-id="16"/>
+            <connection from-id="16" to-id="5"/>
+            <connection from-id="1" to-id="17"/>
+            <connection from-id="17" to-id="6"/>
+            <connection from-id="2" to-id="18"/>
+            <connection from-id="18" to-id="3"/>
+            <connection from-id="3" to-id="19"/>
+            <connection from-id="19" to-id="6"/>
+            <connection from-id="3" to-id="20"/>
+            <connection from-id="20" to-id="11"/>
+            <connection from-id="4" to-id="21"/>
+            <connection from-id="21" to-id="10"/>
+            <connection from-id="5" to-id="22"/>
+            <connection from-id="22" to-id="7"/>
+            <connection from-id="5" to-id="23"/>
+            <connection from-id="23" to-id="13"/>
+            <connection from-id="5" to-id="24"/>
+            <connection from-id="24" to-id="3"/>
+            <connection from-id="6" to-id="25"/>
+            <connection from-id="25" to-id="8"/>
+            <connection from-id="6" to-id="26"/>
+            <connection from-id="26" to-id="9"/>
+            <connection from-id="7" to-id="27"/>
+            <connection from-id="27" to-id="12"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="350" y="25"/>
+            <concept-appearance id="2" x="458" y="164"/>
+            <concept-appearance id="3" x="552" y="264"/>
+            <concept-appearance id="4" x="246" y="140"/>
+            <concept-appearance id="5" x="544" y="101"/>
+            <concept-appearance id="6" x="348" y="247"/>
+            <concept-appearance id="7" x="649" y="211"/>
+            <concept-appearance id="8" x="351" y="347"/>
+            <concept-appearance id="9" x="462" y="350"/>
+            <concept-appearance id="10" x="248" y="274"/>
+            <concept-appearance id="11" x="586" y="365"/>
+            <concept-appearance id="12" x="678" y="311"/>
+            <concept-appearance id="13" x="696" y="106"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="14" x="278" y="103"/>
+            <linking-phrase id="15" x="413" y="122"/>
+            <linking-phrase id="16" x="441" y="79"/>
+            <linking-phrase id="17" x="359" y="168"/>
+            <linking-phrase id="18" x="504" y="231"/>
+            <linking-phrase id="19" x="459" y="270"/>
+            <linking-phrase id="20" x="572" y="330"/>
+            <linking-phrase id="21" x="232" y="232"/>
+            <linking-phrase id="22" x="595" y="178"/>
+            <linking-phrase id="23" x="614" y="119"/>
+            <linking-phrase id="24" x="551" y="198"/>
+            <linking-phrase id="25" x="354" y="319"/>
+            <linking-phrase id="26" x="420" y="317"/>
+            <linking-phrase id="27" x="667" y="284"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>insects</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Insects">
+                <sense domains="[biology, entomology]"
+                    gloss="small air-breathing arthropod"
+                    number="01667395" pos="n" words="[insect]"/>
+            </concept>
+            <concept id="2" label="Shelter">
+                <sense domains="[factotum]"
+                    gloss="a structure that provides privacy and protection from danger"
+                    number="03315837" pos="n" words="[shelter]"/>
+                <sense domains="[factotum]"
+                    gloss="a covering that provides protection from the weather"
+                    number="03316185" pos="n" words="[shelter]"/>
+                <sense domains="[factotum]"
+                    gloss="the condition of being protected; &quot;they were huddled together for protection&quot;; &quot;he enjoyed a sense of peace and protection in his new home&quot;"
+                    number="10426867" pos="n" words="[protection, shelter]"/>
+                <sense domains="[tax]"
+                    gloss="a way of organizing business to reduce the taxes it must pay"
+                    number="09584593" pos="n" words="[tax_shelter, shelter]"/>
+                <sense domains="[factotum]" gloss="provide shelter for"
+                    number="01812809" pos="v" words="[shelter, bield]"/>
+            </concept>
+            <concept id="3" label="Food">
+                <sense domains="[food]"
+                    gloss="any substance that can be metabolized by an organism to give energy and build tissue"
+                    number="00011575" pos="n" words="[food, nutrient]"/>
+            </concept>
+            <concept id="4" label="Drink">
+                <sense domains="[physiology]"
+                    gloss="the act of swallowing; &quot;one swallow of the liquid was enough&quot;; &quot;he took a drink of his beer and smacked his lips&quot;"
+                    number="00538792" pos="n" words="[swallow, drink, deglutition]"/>
+            </concept>
+            <concept id="5" label="Other insects"/>
+            <concept id="6" label="Grass">
+                <sense domains="[food]"
+                    gloss="animal food for browsing or grazing"
+                    number="05835162" pos="n" words="[eatage, forage, pasture, pasturage, grass]"/>
+            </concept>
+            <concept id="7" label="Body parts">
+                <sense domains="[anatomy]"
+                    gloss="any part of an organism such as an organ or extremity"
+                    number="04058532" pos="n" words="[body_part]"/>
+            </concept>
+            <concept id="8" label="Head">
+                <sense domains="[anatomy, animals]"
+                    gloss="the upper or front part of the body in animals; contains the face and brains; &quot;he stuck his head out the window&quot;"
+                    number="04290247" pos="n" words="[head, caput]"/>
+            </concept>
+            <concept id="9" label="Thorax">
+                <sense domains="[anatomy]"
+                    gloss="the part of the human body between the neck and the diaphragm or the corresponding part in other vertebrates"
+                    number="04301367" pos="n" words="[thorax, chest, pectus]"/>
+            </concept>
+            <concept id="10" label="Abdomen">
+                <sense domains="[anatomy]"
+                    gloss="the region of the body of a vertebrate between the thorax and the pelvis"
+                    number="04304826" pos="n" words="[abdomen, venter, stomach, belly]"/>
+            </concept>
+            <concept id="11" label="Antennae"/>
+            <concept id="12" label="Eyes">
+                <sense domains="[factotum]"
+                    gloss="opinion or judgment; &quot;in the eyes of the law&quot; or &quot;I was wrong in her eyes&quot;"
+                    number="04567021" pos="n" words="[eyes]"/>
+            </concept>
+            <concept id="13" label="Mouth">
+                <sense domains="[anatomy]"
+                    gloss="the externally visible part of the oral cavity on the face; &quot;she wiped lipstick from her mouth&quot;"
+                    number="04115147" pos="n" words="[mouth]"/>
+            </concept>
+            <concept id="14" label="Feeling each other"/>
+            <concept id="15" label="Finding each other"/>
+            <concept id="16" label="Legs">
+                <sense domains="[anatomy]"
+                    gloss="a human limb; commonly used to refer to a whole limb but technically only the part between the knee and ankle"
+                    number="04307856" pos="n" words="[leg]"/>
+            </concept>
+            <concept id="17" label="Wings">
+                <sense domains="[factotum]"
+                    gloss="a means of flight or ascent; &quot;necessity lends wings to inspiration&quot;"
+                    number="00117527" pos="n" words="[wings]"/>
+                <sense domains="[sociology]"
+                    gloss="stylized bird wings worn as an insignia by qualified pilots or air crew members"
+                    number="05424632" pos="n" words="[wings]"/>
+            </concept>
+            <concept id="18" label="Breath">
+                <sense domains="[physiology]"
+                    gloss="the process of taking in and expelling air during breathing; &quot;he took a deep breath and dived into the pool&quot;; &quot;he was fighting to his last breath&quot;"
+                    number="00535804" pos="n" words="[breath]"/>
+            </concept>
+            <concept id="19" label="Stingers"/>
+            <concept id="20" label="Stomach">
+                <sense domains="[anatomy]"
+                    gloss="the region of the body of a vertebrate between the thorax and the pelvis"
+                    number="04304826" pos="n" words="[abdomen, venter, stomach, belly]"/>
+            </concept>
+            <concept id="21" label="Everywhere">
+                <sense domains="[factotum]"
+                    gloss="to or in any or all places; &quot;You find fast food stores everywhere&quot;; &quot;people everywhere are becoming aware of the problem&quot;; &quot;he carried a gun everywhere he went&quot;; &quot;looked all over for a suitable gift&quot;; (`everyplace' is used informally for `everywhere')"
+                    number="00024775" pos="r" words="[everywhere, everyplace, all_over]"/>
+            </concept>
+            <concept id="22" label="Small">
+                <sense domains="[anatomy]"
+                    gloss="the slender part of the back"
+                    number="04306328" pos="n" words="[small]"/>
+            </concept>
+            <concept id="23" label="Animals">
+                <sense domains="[animals, biology]"
+                    gloss="a living organism characterized by voluntary movement"
+                    number="00008019" pos="n" words="[animal, animate_being, beast, brute, creature, fauna]"/>
+            </concept>
+            <concept id="24" label="Usefull"/>
+            <concept id="25" label="Bee">
+                <sense domains="[biology, entomology]"
+                    gloss="any of numerous hairy-bodied insects including social and solitary species"
+                    number="01710960" pos="n" words="[bee]"/>
+            </concept>
+            <concept id="26" label="Fly">
+                <sense domains="[biology, entomology]"
+                    gloss="two-winged insects characterized by active flight"
+                    number="01694570" pos="n" words="[fly]"/>
+            </concept>
+            <concept id="27" label="Dragonfly">
+                <sense domains="[biology, entomology]"
+                    gloss="slender-bodied non-stinging insect having iridescent wings that are outspread at rest; adults and nymphs feed on mosquitoes etc."
+                    number="01771587" pos="n" words="[dragonfly, darning_needle, devil's_darning_needle, sewing_needle, snake_feeder, snake_doctor, mosquito_hawk, skeeter_hawk]"/>
+            </concept>
+            <concept id="28" label="Ladybird">
+                <sense domains="[biology, entomology]"
+                    gloss="small round bright-colored and spotted beetle that usually feeds on aphids and other insect pests"
+                    number="01670916" pos="n" words="[ladybug, ladybeetle, lady_beetle, ladybird, ladybird_beetle]"/>
+            </concept>
+            <concept id="29" label="Butterfly">
+                <sense domains="[biology, entomology]"
+                    gloss="diurnal insect typically having a slender body with knobbed antennae and broad colorful wings"
+                    number="01777374" pos="n" words="[butterfly]"/>
+            </concept>
+            <concept id="30" label="Praying mantis">
+                <sense domains="[biology, entomology]"
+                    gloss="the common mantis" number="01739758" pos="n" words="[praying_mantis, praying_mantid, Mantis_religioso]"/>
+            </concept>
+            <concept id="31" label="They eat each other"/>
+            <concept id="32" label="They pollinate flowers"/>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="33" label="need"/>
+            <linking-phrase id="34" label="have"/>
+            <linking-phrase id="35" label="are found"/>
+            <linking-phrase id="36" label="are"/>
+            <linking-phrase id="37" label="such as"/>
+            <linking-phrase id="38" label="are"/>
+            <linking-phrase id="39" label="has"/>
+            <linking-phrase id="40" label="has"/>
+            <linking-phrase id="41" label="has"/>
+            <linking-phrase id="42" label="are used for"/>
+            <linking-phrase id="43" label="such as"/>
+            <linking-phrase id="44" label="because"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="33"/>
+            <connection from-id="33" to-id="2"/>
+            <connection from-id="33" to-id="3"/>
+            <connection from-id="33" to-id="4"/>
+            <connection from-id="1" to-id="34"/>
+            <connection from-id="34" to-id="7"/>
+            <connection from-id="1" to-id="35"/>
+            <connection from-id="35" to-id="21"/>
+            <connection from-id="1" to-id="36"/>
+            <connection from-id="36" to-id="22"/>
+            <connection from-id="36" to-id="23"/>
+            <connection from-id="36" to-id="24"/>
+            <connection from-id="3" to-id="37"/>
+            <connection from-id="37" to-id="5"/>
+            <connection from-id="37" to-id="6"/>
+            <connection from-id="7" to-id="38"/>
+            <connection from-id="38" to-id="8"/>
+            <connection from-id="38" to-id="9"/>
+            <connection from-id="38" to-id="10"/>
+            <connection from-id="8" to-id="39"/>
+            <connection from-id="39" to-id="11"/>
+            <connection from-id="39" to-id="12"/>
+            <connection from-id="39" to-id="13"/>
+            <connection from-id="9" to-id="40"/>
+            <connection from-id="40" to-id="16"/>
+            <connection from-id="40" to-id="17"/>
+            <connection from-id="10" to-id="41"/>
+            <connection from-id="41" to-id="18"/>
+            <connection from-id="41" to-id="19"/>
+            <connection from-id="41" to-id="20"/>
+            <connection from-id="11" to-id="42"/>
+            <connection from-id="42" to-id="14"/>
+            <connection from-id="42" to-id="15"/>
+            <connection from-id="23" to-id="43"/>
+            <connection from-id="43" to-id="25"/>
+            <connection from-id="43" to-id="26"/>
+            <connection from-id="43" to-id="27"/>
+            <connection from-id="43" to-id="28"/>
+            <connection from-id="43" to-id="29"/>
+            <connection from-id="43" to-id="30"/>
+            <connection from-id="24" to-id="44"/>
+            <connection from-id="44" to-id="31"/>
+            <connection from-id="44" to-id="32"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="255" y="-106"/>
+            <concept-appearance id="2" x="-13" y="-78"/>
+            <concept-appearance id="3" x="107" y="44"/>
+            <concept-appearance id="4" x="34" y="-2"/>
+            <concept-appearance id="5" x="35" y="145"/>
+            <concept-appearance id="6" x="166" y="143"/>
+            <concept-appearance id="7" x="254" y="63"/>
+            <concept-appearance id="8" x="185" y="233"/>
+            <concept-appearance id="9" x="260" y="231"/>
+            <concept-appearance id="10" x="333" y="232"/>
+            <concept-appearance id="11" x="-9" y="319"/>
+            <concept-appearance id="12" x="62" y="324"/>
+            <concept-appearance id="13" x="130" y="320"/>
+            <concept-appearance id="14" x="-64" y="440"/>
+            <concept-appearance id="15" x="31" y="441"/>
+            <concept-appearance id="16" x="205" y="335"/>
+            <concept-appearance id="17" x="292" y="333"/>
+            <concept-appearance id="18" x="361" y="337"/>
+            <concept-appearance id="19" x="430" y="339"/>
+            <concept-appearance id="20" x="507" y="343"/>
+            <concept-appearance id="21" x="494" y="-76"/>
+            <concept-appearance id="22" x="357" y="43"/>
+            <concept-appearance id="23" x="447" y="41"/>
+            <concept-appearance id="24" x="521" y="9"/>
+            <concept-appearance id="25" x="367" y="165"/>
+            <concept-appearance id="26" x="433" y="182"/>
+            <concept-appearance id="27" x="498" y="189"/>
+            <concept-appearance id="28" x="557" y="174"/>
+            <concept-appearance id="29" x="615" y="154"/>
+            <concept-appearance id="30" x="675" y="116"/>
+            <concept-appearance id="31" x="648" y="-74"/>
+            <concept-appearance id="32" x="682" y="17"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="33" x="130" y="-51"/>
+            <linking-phrase id="34" x="248" y="-6"/>
+            <linking-phrase id="35" x="365" y="-80"/>
+            <linking-phrase id="36" x="345" y="-16"/>
+            <linking-phrase id="37" x="93" y="121"/>
+            <linking-phrase id="38" x="251" y="163"/>
+            <linking-phrase id="39" x="79" y="274"/>
+            <linking-phrase id="40" x="247" y="303"/>
+            <linking-phrase id="41" x="375" y="301"/>
+            <linking-phrase id="42" x="-43" y="387"/>
+            <linking-phrase id="43" x="447" y="114"/>
+            <linking-phrase id="44" x="596" y="18"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

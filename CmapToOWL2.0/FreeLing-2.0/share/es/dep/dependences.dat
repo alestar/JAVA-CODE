@@ -1,0 +1,155 @@
+<GRPAR>
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sintagma nominal%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+sn		s-adj		-		top_left	10
+sn		sp-de		sn		last_left	2
+sn		grup-sp		sn  		last_left	20
+sn		coor-sp		sn		last_left	20
+sn		Fc		-		top_left	13
+sn		F-no-c		-		top_left	13  %Maria.
+sn		numero		-		top_left	13
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sintagma verbal%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+data		grup-verb	-		top_right	20
+sn		grup-verb	-		top_right	20
+sn		coor-vb		-		top_right	20
+coor-n		grup-verb	-		top_right	20
+coor-n		coor-vb		-		top_right	20
+grup-sp		grup-verb	-		top_right	12
+sadv		grup-verb	-		top_right	20
+grup-verb	sn		-		top_left	conj-subord_$$ 3; 5   % dice que (come pescado)
+grup-verb	coor-n		-		top_left	5
+grup-verb	grup-sp		-		top_left	7
+grup-verb	sadv		-		top_left	12
+grup-verb	grup-verb	sn		last_left	30
+grup-verb	sp-de		sn		last_left	5
+grup-verb	F-no-c		-		top_left	10
+grup-verb	numero		-		top_left	10
+grup-verb	grup-sp-inf	-		top_left	20
+neg		grup-verb	-		top_right	1
+patons		grup-verb	-		top_right	2
+morf-pron	grup-verb	-		top_right	8
+inf		grup-verb	-		top_right	12
+ger		grup-verb	-		top_right	12
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Sintagma Preposicional%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+grup-sp		sp-de		sn		last_left	6
+sp-de		sp-de		sn		last_left	5
+grup-sp		grup-sp		sn		last_left	11
+grup-sp		F-no-c		-		top_left	10
+grup-sp		numero		-		top_left	10
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Coordinacio%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+coord		grup-sp		coor-sp		top_left	4 %(y)<-(en la montaña)
+Fc		coor-sp		coor-sp		top_right	4 % , (en el bosque y en la montaña)
+grup-sp		coor-sp		-		top_right	6 %(en el mar)->(y en la montaña) // (en el mar)->(, en el bosque y en la montaña) 
+coord		sn 		coor-n		top_left        grup-verb_sn_$$_grup-verb 22; grup-verb_coor-n_$$_grup-verb 22; grup-verb_$$_grup-verb 22; 4  %(y) (agua)
+sn		coor-n		-		top_right	grup-verb_$$_grup-verb 22; 4   %(pan) (y agua) // 
+Fc		coor-n		coor-n		top_right	4 %, (pan y agua)
+coord		grup-verb	coor-vb		top_left	8 %(y) (amar)
+Fc		coor-vb		coor-vb		top_right	8 %, (beber y amar)
+grup-verb	coor-vb		-		top_right	9 %(beber) (y amar) //  (comer) (, beber y amar)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Passiva%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+sn		verb-pass	-		top_right	5  %per fer la passiva   
+verb-pass	grup-sp		-		top_left	5  %per fer la passiva
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Subordinada%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+grup-verb	subord		-		top_left	5
+subord		Fc		-		top_left	10
+subord		F-no-c		-		top_left	10
+subord		numero		-		top_left	10
+sn		subord		-		top_left	4   %sn+que -> sn-que
+psubj		prel		sn		last_right	25  %p*+que -> sn-que
+prel		grup-verb	subord		top_left	4   %que vino
+prel-adv	grup-verb	subord		top_left	4   %%que vino
+sn-que		grup-verb	-		top_right	20
+ger		sn		subord-ger	top_left	4
+grup-verb	subord-ger	-		top_left	4
+conj-subord	grup-verb	subord		top_left	4
+grup-sp-inf	sn		-		top_left	6
+</GRPAR>
+<GRLAB>
+coor-vb		subj 	d.label=sn*   	d.side=left
+coor-vb		subj 	d.label=coor-n  d.side=left
+coor-vb		co-v 	d.label=grup-verb
+coor-n		co-n	d.label=sn*
+grup-verb       aux     d.label=vaux
+grup-verb       modneg  d.label=neg
+grup-verb	subj 	d.label=sn*   	d.side=left
+grup-verb	subj 	d.label=coor-n 	d.side=left
+grup-verb	subj 	d.label=inf   	d.side=left
+grup-verb	iobj	d.label=grup-sp	d.side=right	d.lemma=a|al|para   p.class!=mov
+grup-verb	obj	d.label=sn*	d.side=right    p.class!=intr
+grup-verb	obj	d.label=coor-n	d.side=right    p.class!=intr
+grup-verb	cc	d.label=sn*	d.side=right    p.class=intr
+grup-verb	cc	d.label=coor-n	d.side=right    p.class=intr
+verb-pass	aux	d.label=VS*
+verb-pass	obj-agen d.label=grup-sp	d.lemma=por
+verb-pass	subj-pac d.label=sn*   	d.side=left
+verb-pass	subj-pac d.label=coor-n 	d.side=left
+grup-verb	att	d.label=s-adj 	d.side=right 	p.lemma=ser
+grup-verb	cc	d.label=grup-sp			p.class=mov
+grup-verb	cc	d.label=grup-sp	d.lemma=en	p.class!=mov
+grup-verb	cc	d.label=sadv
+grup-verb	iobj	d.label=grup-sp-inf	d.lemma=a|al|para
+grup-sp-inf	head	d.label=grup-verb-inf	
+grup-verb-inf	obj	d.label=sn*	d.side=right
+grup-verb-inf	obj	d.label=coor-n	d.side=right
+grup-verb	manr	d.label=grup-verb-part	d.side=right
+grup-sp	        head    d.label=sn*
+grup-sp	        head    d.label=coor-n*
+sp-de		gen	d.label=sn*
+sp-de		gen	d.label=coor-n*
+sn		espec	d.label=espec*
+sn		quant	d.label=numero*
+sn		qual	d.label=s-a*
+sn		mod	d.label=sp-de
+grup-verb	term	d.label=F-term
+sn		term	d.label=F-term
+coord		term	d.label=F-term
+</GRLAB>
+
+<SEMDB>
+SenseFile ../senses16.db
+WNFile    ../../common/wn16.db
+</SEMDB>
+
+<CLASS>
+
+%% Class defined in an external file.
+%% Relative paths are assumed to be based in the directory
+%% where this file (the one you are reading) is located.
+
+mov     "mov-verbs.class"
+
+
+%% enumerated class, some intransitive verbs. You may prefer to move 
+%% this list to a separate file, just as the one above.
+intr	ir
+intr	venir
+intr	andar
+intr	descender
+intr	caminar
+intr	esquiar
+intr	pedalear
+intr	gatear
+intr	navegar
+intr	nadar
+intr	marchar
+intr	trepar
+intr	embarcar
+intr	desembarcar
+intr	ahondar
+intr	salir
+intr	entrar
+intr	regresar
+intr	llegar
+intr	volver
+intr	partir
+intr	huir
+intr	volar
+intr	viajar
+intr	caer
+</CLASS>

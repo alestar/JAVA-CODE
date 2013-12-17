@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Bacteria</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Bacteria">
+                <sense domains="[biology]"
+                    gloss="single-celled or noncellular spherical or spiral or rod-shaped organisms lacking chlorophyll that reproduce by fission; important as pathogens and for biochemical properties; taxonomy is difficult; often considered plants"
+                    number="00884781" pos="n" words="[bacteria, bacterium]"/>
+            </concept>
+            <concept id="2" label="Single-celld organisms"/>
+            <concept id="3" label="Prokaryotic cell"/>
+            <concept id="4" label="Genetic information"/>
+            <concept id="5" label="Eubacteria">
+                <sense domains="[biology]"
+                    gloss="a large group of bacteria having rigid cell walls; motile types have flagella"
+                    number="00889066" pos="n" words="[eubacteria, eubacterium, true_bacteria]"/>
+            </concept>
+            <concept id="6" label="Archaebacteria">
+                <sense domains="[biology]"
+                    gloss="considered ancient life forms that evolved separately from bacteria and blue-green algae"
+                    number="00883862" pos="n" words="[archaebacteria, archaebacterium, archaeobacteria]"/>
+            </concept>
+            <concept id="7" label="Escherichia coli">
+                <sense domains="[biology]"
+                    gloss="normally present in intestinal tract of humans and other animals; sometimes pathogenic"
+                    number="00899540" pos="n" words="[Escherichia_coli]"/>
+            </concept>
+            <concept id="8" label="Organelle">
+                <sense domains="[anatomy]"
+                    gloss="a specialized part of a cell; analogous to an organ"
+                    number="04224240" pos="n" words="[organelle, cell_organ]"/>
+            </concept>
+            <concept id="9" label="Micrometer">
+                <sense domains="[metrology]"
+                    gloss="a metric unit of length equal to one millionth of a meter"
+                    number="09821645" pos="n" words="[micron, micrometer, micrometre]"/>
+                <sense domains="[metrology]"
+                    gloss="for measuring small distances"
+                    number="02995089" pos="n" words="[micrometer, micrometer_gauge, micrometer_caliper]"/>
+            </concept>
+            <concept id="10" label="Nucleic acids">
+                <sense domains="[chemistry]"
+                    gloss="any of various acids that are vital constituents of all living cells"
+                    number="10736455" pos="n" words="[nucleic_acid]"/>
+            </concept>
+            <concept id="11" label="Membrane">
+                <sense domains="[anatomy]"
+                    gloss="a pliable sheet of tissue that covers or lines or connects organs or cells of animals or plants"
+                    number="04214205" pos="n" words="[membrane, tissue_layer]"/>
+            </concept>
+            <concept id="12" label="Eukaryotic">
+                <sense domains="[biology]"
+                    gloss="having cells with `good' or membrane-bound nuclei"
+                    number="02648831" pos="a" words="[eukaryotic, eucaryotic]"/>
+            </concept>
+            <concept id="13" label="Metabolism">
+                <sense domains="[biology]"
+                    gloss="the organic processes (in a cell or organism) that are necessary for life"
+                    number="09705843" pos="n" words="[metabolism, metabolic_process, metastasis]"/>
+                <sense domains="[animals, biology]"
+                    gloss="the marked and rapid transformation of a larva into an adult that occurs in some animals"
+                    number="09697495" pos="n" words="[metamorphosis, metabolism]"/>
+            </concept>
+            <concept id="14" label="Viruses">
+                <sense domains="[biology]"
+                    gloss="ultramicroscopic infectious agent that replicates itself only within cells of living hosts; many are pathogenic"
+                    number="00871107" pos="n" words="[virus]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="15" label="are"/>
+            <linking-phrase id="16" label="type of"/>
+            <linking-phrase id="17" label="contain"/>
+            <linking-phrase id="18" label="magnitude of 1-2"/>
+            <linking-phrase id="19" label="exempli gratia"/>
+            <linking-phrase id="20" label="wich is carried by"/>
+            <linking-phrase id="21" label="not inclosed by"/>
+            <linking-phrase id="22" label="not inclosed by"/>
+            <linking-phrase id="23" label="are responsible for"/>
+            <linking-phrase id="24" label="unlike"/>
+            <linking-phrase id="25" label="as opposed to"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="15"/>
+            <connection from-id="15" to-id="2"/>
+            <connection from-id="1" to-id="16"/>
+            <connection from-id="16" to-id="3"/>
+            <connection from-id="1" to-id="17"/>
+            <connection from-id="17" to-id="4"/>
+            <connection from-id="17" to-id="8"/>
+            <connection from-id="1" to-id="18"/>
+            <connection from-id="18" to-id="9"/>
+            <connection from-id="2" to-id="19"/>
+            <connection from-id="19" to-id="5"/>
+            <connection from-id="19" to-id="6"/>
+            <connection from-id="19" to-id="7"/>
+            <connection from-id="4" to-id="20"/>
+            <connection from-id="20" to-id="10"/>
+            <connection from-id="4" to-id="21"/>
+            <connection from-id="21" to-id="11"/>
+            <connection from-id="8" to-id="22"/>
+            <connection from-id="22" to-id="11"/>
+            <connection from-id="8" to-id="23"/>
+            <connection from-id="23" to-id="13"/>
+            <connection from-id="11" to-id="24"/>
+            <connection from-id="24" to-id="12"/>
+            <connection from-id="13" to-id="25"/>
+            <connection from-id="25" to-id="14"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="372" y="66"/>
+            <concept-appearance id="2" x="246" y="152"/>
+            <concept-appearance id="3" x="385" y="178"/>
+            <concept-appearance id="4" x="482" y="171"/>
+            <concept-appearance id="5" x="97" y="249"/>
+            <concept-appearance id="6" x="202" y="314"/>
+            <concept-appearance id="7" x="303" y="308"/>
+            <concept-appearance id="8" x="589" y="182"/>
+            <concept-appearance id="9" x="630" y="97"/>
+            <concept-appearance id="10" x="420" y="314"/>
+            <concept-appearance id="11" x="575" y="326"/>
+            <concept-appearance id="12" x="572" y="432"/>
+            <concept-appearance id="13" x="689" y="308"/>
+            <concept-appearance id="14" x="686" y="448"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="15" x="301" y="123"/>
+            <linking-phrase id="16" x="356" y="142"/>
+            <linking-phrase id="17" x="456" y="136"/>
+            <linking-phrase id="18" x="493" y="96"/>
+            <linking-phrase id="19" x="220" y="253"/>
+            <linking-phrase id="20" x="448" y="258"/>
+            <linking-phrase id="21" x="523" y="272"/>
+            <linking-phrase id="22" x="601" y="276"/>
+            <linking-phrase id="23" x="665" y="243"/>
+            <linking-phrase id="24" x="573" y="400"/>
+            <linking-phrase id="25" x="682" y="394"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

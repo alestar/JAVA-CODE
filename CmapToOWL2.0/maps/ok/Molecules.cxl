@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Molecules</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Molecules">
+                <sense domains="[chemistry, physics]"
+                    gloss="(physics and chemistry) the simplest structural unit of an element or compound"
+                    number="10472898" pos="n" words="[molecule]"/>
+            </concept>
+            <concept id="2" label="Everything"/>
+            <concept id="3" label="Water">
+                <sense domains="[chemistry, geography]"
+                    gloss="a clear colorless odorless tasteless liquid; &quot;he asked for a drink of water&quot;"
+                    number="10650211" pos="n" words="[water, H2O]"/>
+            </concept>
+            <concept id="4" label="Air">
+                <sense domains="[physics]"
+                    gloss="a mixture of gases (especially oxygen) required for breathing; the stuff that the wind consists of"
+                    number="10646492" pos="n" words="[air]"/>
+            </concept>
+            <concept id="5" label="Paper">
+                <sense domains="[factotum]"
+                    gloss="medium for written communication; &quot;the notion of an office running without paper is absurd&quot;"
+                    number="04731024" pos="n" words="[paper]"/>
+            </concept>
+            <concept id="6" label="Cloth">
+                <sense domains="[industry]"
+                    gloss="something made by weaving or felting or knitting or crocheting natural or synthetic fibers"
+                    number="02656657" pos="n" words="[fabric, cloth, material, textile]"/>
+            </concept>
+            <concept id="7" label="Energy">
+                <sense domains="[physics]"
+                    gloss="(physics) the capacity of a physical system to do work; the units of energy are joules or ergs; &quot;energy can take a wide variety of forms&quot;"
+                    number="07794689" pos="n" words="[energy]"/>
+            </concept>
+            <concept id="8" label="Moving">
+                <sense domains="[factotum]"
+                    gloss="used of a series of photographs presented so as to create the illusion of motion; &quot;Her ambition was to be in moving pictures or `the movies'&quot;"
+                    number="01509481" pos="a" words="[moving]"/>
+            </concept>
+            <concept id="9" label="Hot">
+                <sense domains="[physics]"
+                    gloss="used of physical heat; having a high or higher than desirable temperature or giving off heat or feeling or causing a sensation of heat or burning; &quot;hot stove&quot;; &quot;hot water&quot;; &quot;a hot August day&quot;; &quot;a hot stuffy room&quot;; &quot;she's hot and tired&quot;; &quot;a hot forehead&quot;"
+                    number="01195771" pos="a" words="[hot]"/>
+            </concept>
+            <concept id="10" label="Cold">
+                <sense domains="[physics]"
+                    gloss="used of physical coldness; having a low or inadequate temperature or feeling a sensation of coldness or having been made cold by e.g. ice or refrigeration; &quot;a cold climate&quot;; &quot;a cold room&quot;; &quot;dinner has gotten cold&quot;; &quot;cold fingers&quot;; &quot;if you are cold, turn up the heat&quot;; &quot;a cold beer&quot;"
+                    number="01199751" pos="a" words="[cold]"/>
+            </concept>
+            <concept id="11" label="Steam">
+                <sense domains="[chemistry]"
+                    gloss="water at boiling temperature diffused in the atmosphere"
+                    number="10802387" pos="n" words="[steam]"/>
+            </concept>
+            <concept id="12" label="Ice">
+                <sense domains="[chemistry]"
+                    gloss="water frozen in the solid state; &quot;Americans like ice in their drinks&quot;"
+                    number="10703104" pos="n" words="[ice, water_ice]"/>
+            </concept>
+            <concept id="13" label="Liquid">
+                <sense domains="[chemistry]"
+                    gloss="a substance that is liquid at room temperature and pressure"
+                    number="10720487" pos="n" words="[liquid]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="14" label="make up"/>
+            <linking-phrase id="15" label="can move through"/>
+            <linking-phrase id="16" label="have"/>
+            <linking-phrase id="17" label="are always"/>
+            <linking-phrase id="18" label="from"/>
+            <linking-phrase id="19" label="faster when"/>
+            <linking-phrase id="20" label="slower when"/>
+            <linking-phrase id="21" label="as in"/>
+            <linking-phrase id="22" label="as in"/>
+            <linking-phrase id="23" label="such as"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="14"/>
+            <connection from-id="14" to-id="2"/>
+            <connection from-id="14" to-id="3"/>
+            <connection from-id="14" to-id="4"/>
+            <connection from-id="1" to-id="15"/>
+            <connection from-id="15" to-id="5"/>
+            <connection from-id="15" to-id="6"/>
+            <connection from-id="1" to-id="16"/>
+            <connection from-id="16" to-id="7"/>
+            <connection from-id="1" to-id="17"/>
+            <connection from-id="17" to-id="8"/>
+            <connection from-id="7" to-id="18"/>
+            <connection from-id="18" to-id="8"/>
+            <connection from-id="8" to-id="19"/>
+            <connection from-id="19" to-id="9"/>
+            <connection from-id="19" to-id="13"/>
+            <connection from-id="8" to-id="20"/>
+            <connection from-id="20" to-id="10"/>
+            <connection from-id="9" to-id="21"/>
+            <connection from-id="21" to-id="11"/>
+            <connection from-id="10" to-id="22"/>
+            <connection from-id="22" to-id="12"/>
+            <connection from-id="13" to-id="23"/>
+            <connection from-id="23" to-id="3"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="342" y="15"/>
+            <concept-appearance id="2" x="223" y="125"/>
+            <concept-appearance id="3" x="285" y="197"/>
+            <concept-appearance id="4" x="369" y="205"/>
+            <concept-appearance id="5" x="445" y="202"/>
+            <concept-appearance id="6" x="522" y="171"/>
+            <concept-appearance id="7" x="498" y="90"/>
+            <concept-appearance id="8" x="639" y="75"/>
+            <concept-appearance id="9" x="606" y="221"/>
+            <concept-appearance id="10" x="690" y="218"/>
+            <concept-appearance id="11" x="604" y="334"/>
+            <concept-appearance id="12" x="690" y="330"/>
+            <concept-appearance id="13" x="515" y="284"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="14" x="323" y="105"/>
+            <linking-phrase id="15" x="387" y="124"/>
+            <linking-phrase id="16" x="420" y="82"/>
+            <linking-phrase id="17" x="511" y="54"/>
+            <linking-phrase id="18" x="561" y="123"/>
+            <linking-phrase id="19" x="590" y="177"/>
+            <linking-phrase id="20" x="673" y="180"/>
+            <linking-phrase id="21" x="601" y="294"/>
+            <linking-phrase id="22" x="684" y="290"/>
+            <linking-phrase id="23" x="367" y="298"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

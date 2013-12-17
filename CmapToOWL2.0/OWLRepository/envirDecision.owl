@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+             owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<owl:Class rdf:ID="SocialBehavior"/>
+<owl:Class rdf:ID="HumanActivity"/>
+<owl:Class rdf:ID="Role"/>
+<owl:Class rdf:ID="OperationOnFunction"/>
+<owl:Class rdf:ID="Function"/>
+<owl:Class rdf:ID="Assessment"/>
+
+   <owl:Class rdf:ID="Attribute">
+    <rdfs:subClassOf rdf:resource="#DecisionActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Choice">
+    <rdfs:subClassOf rdf:resource="#DecisionActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="ControlStrategy">
+    <rdfs:subClassOf rdf:resource="#DecisionActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="ConsumerBehavior">
+    <rdfs:subClassOf rdf:resource="#SocialBehavior"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Criteria">
+    <rdfs:subClassOf rdf:resource="#DecisionActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Decision">
+    <rdfs:subClassOf rdf:resource="#DecisionActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="DecisionActivity">
+    <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="DecisionMaker">
+    <rdfs:subClassOf rdf:resource="#DecisionActivity"/>
+    <rdfs:subClassOf rdf:resource="#Role"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Evaluation">
+    <rdfs:subClassOf rdf:resource="#DecisionActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="GroupConsensus">
+    <rdfs:subClassOf rdf:resource="#DecisionActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="MultipleDecisionMaker">
+    <rdfs:subClassOf rdf:resource="#DecisionActivity"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasDecisionMaker"/>
+        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Multiattribute">
+    <rdfs:subClassOf rdf:resource="#DecisionActivity"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasAttribute"/>
+        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Multiobjective">
+    <rdfs:subClassOf rdf:resource="#DecisionActivity"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasObjective"/>
+        <owl:minCardinality rdf:datatype="&xsd;nonNegativeInteger">2</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Objective">
+    <rdfs:subClassOf rdf:resource="#DecisionActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Optimize">
+    <rdfs:subClassOf rdf:resource="#DecisionActivity"/>
+    <rdfs:subClassOf rdf:resource="#OperationOnFunction"/>
+    <owl:equivalentClass rdf:resource="#Optimization"/>
+  </owl:Class>
+ <owl:Class rdf:ID="Optimization"/>
+
+ <owl:Class rdf:ID="OptimizationFunction">
+    <rdfs:subClassOf rdf:resource="#DecisionActivity"/>
+    <rdfs:subClassOf rdf:resource="#Function"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Preference">
+    <rdfs:subClassOf rdf:resource="#DecisionActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Ranking">
+    <rdfs:subClassOf rdf:resource="#DecisionActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="ResourceAllocation">
+    <rdfs:subClassOf rdf:resource="#DecisionActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Risk">
+    <rdfs:subClassOf rdf:resource="#DecisionActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Scenario">
+    <rdfs:subClassOf rdf:resource="#DecisionActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Screening">
+    <rdfs:subClassOf rdf:resource="#DecisionActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Valuation">
+    <rdfs:subClassOf rdf:resource="#DecisionActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Weighting">
+    <rdfs:subClassOf rdf:resource="#DecisionActivity"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:ID="hasAttribute">
+    <rdfs:range rdf:resource="#Attribute" />
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="hasDecisionMaker">
+    <rdfs:range rdf:resource="#DecisionMaker" />
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="hasObjective">
+    <rdfs:range rdf:resource="#Objective" />
+  </owl:ObjectProperty>
+
+ <owl:Class rdf:ID="EnvironmentalAssessment">
+    <rdfs:subClassOf rdf:resource="#Assessment"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="ImpactAssessment">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalAssessment"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="StatusAssessment">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalAssessment"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="SuitabilityAssessment">
+    <rdfs:subClassOf rdf:resource="#EnvironmentalAssessment"/>
+  </owl:Class>
+
+</rdf:RDF>

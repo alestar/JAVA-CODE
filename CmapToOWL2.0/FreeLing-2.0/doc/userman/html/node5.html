@@ -1,0 +1,202 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Requirements</TITLE>
+<META NAME="description" CONTENT="Requirements">
+<META NAME="keywords" CONTENT="userman">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="userman.css">
+
+<LINK REL="next" HREF="node6.html">
+<LINK REL="previous" HREF="node4.html">
+<LINK REL="up" HREF="node2.html">
+<LINK REL="next" HREF="node6.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html165"
+  HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html161"
+  HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html155"
+  HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html163"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html166"
+  HREF="node6.html">Installation</A>
+<B> Up:</B> <A NAME="tex2html162"
+  HREF="node2.html">FreeLing: Natural language analysis</A>
+<B> Previous:</B> <A NAME="tex2html156"
+  HREF="node4.html">Contributions</A>
+ &nbsp; <B>  <A NAME="tex2html164"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00230000000000000000">
+Requirements</A>
+</H1>
+
+<P>
+To install FreeLing you'll need:
+
+<P>
+
+<UL>
+<LI>A typical Linux box with usual development tools:
+    
+<UL>
+<LI>bash
+</LI>
+<LI>make
+</LI>
+<LI>C++ compiler with basic STL support (e.g. g++ version 3.x)
+    
+</LI>
+</UL>
+
+<P>
+</LI>
+<LI>Enough hard disk space (about 50Mb)
+
+<P>
+</LI>
+<LI>Some external libraries are required to compile FreeLing:
+    <DL COMPACT>
+<DT>pcre</DT>
+<DD>(version 4.3 or higher)
+               Perl C Regular Expressions. Included in most
+               usual Linux distributions. Just make sure
+               you have it installed.
+<BR>
+Also available from <TT>http://www.pcre.org</TT>
+
+<P>
+</DD>
+<DT>db</DT>
+<DD>(version 4.1.25 or higher)
+               Berkeley DB. Included in all usual
+               Linux distributions. You probably 
+               have it already installed. Make sure of it, and that
+               C++ support is also installed (may come in a separate
+               package).  
+<BR>
+Also available from <TT>http://www.sleepycat.com</TT>. Do
+               not install it twice unless you know what you are doing.
+
+<P>
+</DD>
+<DT>libcfg+</DT>
+<DD>(version 0.6.1 or higher)
+               Configuration file and command-line options
+               management. May not be in your linux distribution.
+<BR>
+Available from <TT>http://www.platon.sk/projects/libcfg+/</TT>,
+               follow installation instructions provided in the
+               libcfg+ package.
+
+<P>
+</DD>
+<DT>Omlet &amp; Fries</DT>
+<DD>(omlet v.0.96 or higher, fries v.0.93 or higher)
+               Machine Learning utility libraries, used by Named
+               Entity Classifier. Installation scrips are not very
+               clever, so these libraries are required even if you do
+               not plan to use the NEC ability of FreeLing.
+               Available from <TT>http://www.lsi.upc.edu/~ /nlp/omlet+fries</TT>
+    
+</DD>
+</DL>
+</LI>
+</UL>
+
+<P>
+Note that you'll need both the binary libraries and their source headers
+   (in some distributions the headers come in a separate package
+   tagged <TT>-devel</TT> or <TT>-dev</TT>, e.g.
+   the libpcre library may be distributed in two packages: the first,
+   say <TT>libpcre-4.3.rpm</TT>, contains the binary libraries, and the second,
+   say <TT>libpcre-devel-4.3.rpm</TT>, provides the source headers)
+
+<P>
+Note also that if you (or the library package) install those libraries
+   or headers in non-standard directories (that is, other than <TT>/usr/lib</TT>
+   or <TT>/usr/local/lib</TT> for libraries, or other than <TT>/usr/include</TT> or 
+   <TT>/usr/local/include</TT> for headers) you may need to use the <TT>CPPFLAGS</TT>
+   or <TT>LDFLAGS</TT> variables to properly run <TT>./configure</TT> script.
+
+<P>
+For instance, if you installed BerkeleyDB from a <TT>rpm</TT>
+   package, the <TT>db_cxx.h</TT> header file may be located at <TT>   /usr/include/db4</TT> instead of the default <TT>/usr/include</TT>.  So,
+   if <TT>./configure</TT> complains about not finding the library
+   header, you'll have to specify where to find it:
+<BR>     <TT>./configure CPPFLAGS='-I/usr/include/db4'</TT> 
+
+<P>
+The BerkeleyDB package is probably installed in your system, but 
+   you may need to install C++ support, which (depending on your
+   distribution) may be found in a separate package (such as
+   db4-cxx.rpm, db4-cxx-devel.rpm, or the like).
+
+<P>
+See next section and INSTALL file for further details.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html165"
+  HREF="node6.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html161"
+  HREF="node2.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html155"
+  HREF="node4.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html163"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html166"
+  HREF="node6.html">Installation</A>
+<B> Up:</B> <A NAME="tex2html162"
+  HREF="node2.html">FreeLing: Natural language analysis</A>
+<B> Previous:</B> <A NAME="tex2html156"
+  HREF="node4.html">Contributions</A>
+ &nbsp; <B>  <A NAME="tex2html164"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2008-01-24
+</ADDRESS>
+</BODY>
+</HTML>

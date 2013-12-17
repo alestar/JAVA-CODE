@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+  <owl:Class rdf:ID="SystemPhenomena"/>
+  <owl:Class rdf:ID="SystemState"/>
+  <owl:Class rdf:ID="Equilibrium"/>
+  
+  <owl:Class rdf:ID="Accumulation">
+    <rdfs:subClassOf rdf:resource="#SystemPhenomena" />
+    <rdfs:label>Accumulation</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Anomaly">
+    <rdfs:subClassOf rdf:resource="#Variation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Change">
+    <rdfs:subClassOf rdf:resource="#SystemPhenomena" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Collapse">
+    <rdfs:subClassOf rdf:resource="#SystemStateChange"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Chaotic">
+    <rdfs:subClassOf rdf:resource="#Nonlinear"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Cycle">
+    <rdfs:subClassOf rdf:resource="#SystemPhenomena" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Deficit">
+    <rdfs:subClassOf rdf:resource="#Variation"/>
+    <owl:disjointWith rdf:resource="#Excess"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Deposit">
+    <rdfs:subClassOf rdf:resource="#Accumulation" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Discharge">
+    <rdfs:subClassOf rdf:resource="#SystemStateChange"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Decrease">
+    <rdfs:subClassOf rdf:resource="#SystemStateChange"/>
+    <owl:equivalentClass rdf:resource="#Decreasing"/>
+    <owl:equivalentClass rdf:resource="#Decline"/>
+    <owl:equivalentClass rdf:resource="#Declining"/>
+    <owl:equivalentClass rdf:resource="#Drop"/>
+    <owl:equivalentClass rdf:resource="#Dropping"/>
+    <owl:equivalentClass rdf:resource="#Fall"/>
+    <owl:equivalentClass rdf:resource="#Falling"/>
+    <owl:equivalentClass rdf:resource="#Reduce"/>
+    <owl:equivalentClass rdf:resource="#Reducing"/>
+    <owl:equivalentClass rdf:resource="#Reduction"/>
+  </owl:Class>
+  
+  <owl:Class rdf:ID="Decreasing"/>
+  <owl:Class rdf:ID="Decline"/>
+  <owl:Class rdf:ID="Declining"/>
+  <owl:Class rdf:ID="Drop"/>
+  <owl:Class rdf:ID="Dropping"/>
+  <owl:Class rdf:ID="Fall"/>
+  <owl:Class rdf:ID="Falling"/>
+  <owl:Class rdf:ID="Reduce"/>
+  <owl:Class rdf:ID="Reducing"/>
+  <owl:Class rdf:ID="Reduction"/>
+
+  <owl:Class rdf:ID="Displace">
+    <rdfs:subClassOf rdf:resource="#SystemStateChange"/>
+    <owl:equivalentClass rdf:resource="#Displacement"/>
+    <owl:equivalentClass rdf:resource="#Dislocate"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Displacement"/>
+  <owl:Class rdf:ID="Dislocate"/>
+
+  <owl:Class rdf:ID="Disturbance">
+    <rdfs:subClassOf rdf:resource="#Variation" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Disturbed">
+    <rdfs:subClassOf rdf:resource="#SystemState" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Evolve">
+    <rdfs:subClassOf rdf:resource="#SystemStateChange"/>
+    <owl:equivalentClass rdf:resource="#Evolution"/>
+    <owl:equivalentClass rdf:resource="#Evolving"/>
+    <owl:equivalentClass rdf:resource="#Develop"/>
+    <owl:equivalentClass rdf:resource="#Development"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Evolution"/>
+  <owl:Class rdf:ID="Evolving"/>
+  <owl:Class rdf:ID="Develop"/>
+  <owl:Class rdf:ID="Development"/>
+
+  <owl:Class rdf:ID="Excess">
+    <rdfs:subClassOf rdf:resource="#Variation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Exchange">
+    <rdfs:subClassOf rdf:resource="#SystemStateChange"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Extend">
+    <rdfs:subClassOf rdf:resource="#SystemStateChange"/>
+    <owl:equivalentClass rdf:resource="#Extension"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Extension"/>
+
+  <owl:Class rdf:ID="Fluctuation">
+    <rdfs:subClassOf rdf:resource="#Variation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Homeostasis">
+    <rdfs:subClassOf rdf:resource="#SystemPhenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Increase">
+    <rdfs:subClassOf rdf:resource="#SystemStateChange"/>
+    <owl:disjointWith rdf:resource="#Decrease"/>
+    <owl:equivalentClass rdf:resource="#Increasing"/>
+    <owl:equivalentClass rdf:resource="#Raise"/>
+    <owl:equivalentClass rdf:resource="#Rise"/>
+    <owl:equivalentClass rdf:resource="#Rising"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Increasing"/>
+  <owl:Class rdf:ID="Raise"/>
+  <owl:Class rdf:ID="Rise"/>
+  <owl:Class rdf:ID="Rising"/>
+
+  <owl:Class rdf:ID="Inundation">
+    <rdfs:subClassOf rdf:resource="#SystemStateChange"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Interaction">
+    <rdfs:subClassOf rdf:resource="#SystemStateChange"/>
+    <rdfs:comment>process that multiple substances are in contact and have some consequence</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Pattern">
+    <rdfs:subClassOf rdf:resource="#Trend"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Instability">
+    <rdfs:subClassOf rdf:resource="#SystemState"/>
+    <owl:disjointWith rdf:resource="#Stability"/>
+    <rdfs:comment>property describing unstable conditions, such as in the atmosphere</rdfs:comment>
+    <rdfs:label>Instability</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Intermittent">
+    <rdfs:subClassOf rdf:resource="#SystemState"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="NonEquilibrium">
+    <rdfs:subClassOf rdf:resource="#SystemState"/>
+    <owl:disjointWith rdf:resource="#Equilibrium" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Nonlinear">
+    <rdfs:subClassOf rdf:resource="#SystemState"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Oscillate">
+    <rdfs:subClassOf rdf:resource="#SystemStateChange"/>
+    <owl:equivalentClass rdf:resource="#Oscillation"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Oscillation"/>
+  
+  <owl:Class rdf:ID="Perturb">
+    <rdfs:subClassOf rdf:resource="#Variation" />
+    <owl:equivalentClass rdf:resource="#Perturbation"/>
+    <rdfs:comment xml:lang="en">Any departure introduced into an assumed steady state of a system.   The magnitude is often assumed to be small so that product terms in the dependent variables may be neglected.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Perturbation"/>
+
+  <owl:Class rdf:ID="Removal">
+    <rdfs:subClassOf rdf:resource="#SystemStateChange"/>
+    <rdfs:label>Removal</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Shift">
+    <rdfs:subClassOf rdf:resource="#Variation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Shock">
+    <rdfs:subClassOf rdf:resource="#Variation" />
+    <rdfs:subClassOf rdf:resource="#Nonlinear" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="SystemDynamics">
+    <rdfs:subClassOf rdf:resource="#SystemState"/>
+    <rdfs:comment>System dynamics is an approach to understanding the behaviour of complex systems over time. It deals with internal feedback loops and time delays that affect the behaviour of the entire system. What makes using system dynamics different from other approaches to studying complex systems is the use of feedback loops and stocks and flows. These elements help describe how even seemingly simple systems display baffling nonlinearity </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SystemStateChange">
+    <rdfs:subClassOf rdf:resource="#Change"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Trend">
+    <rdfs:subClassOf rdf:resource="#Variation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Vacillation">
+    <rdfs:subClassOf rdf:resource="#Oscillation" />
+    <rdfs:comment xml:lang="en">Oscillation, usually of a small amplitude, about a reference state.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Variation">
+    <rdfs:subClassOf rdf:resource="#SystemStateChange"/>
+  </owl:Class>
+
+   <owl:ObjectProperty rdf:ID="from">
+    <rdfs:range rdf:resource="#SystemState"/>
+  </owl:ObjectProperty>
+
+   <owl:ObjectProperty rdf:ID="to">
+    <rdfs:range rdf:resource="#SystemState"/>
+  </owl:ObjectProperty>
+
+</rdf:RDF>

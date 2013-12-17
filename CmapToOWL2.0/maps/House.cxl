@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>House</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="House">
+                <sense domains="[buildings, town_planning]"
+                    gloss="a dwelling that serves as living quarters for one or more families; &quot;he has a house on Cape Cod&quot;; &quot;she felt she had to get out of the house&quot;"
+                    number="02837386" pos="n" words="[house]"/>
+            </concept>
+            <concept id="2" label="Structural features"/>
+            <concept id="3" label="Window">
+                <sense domains="[buildings]"
+                    gloss="a framework of wood or metal that contains a glass windowpane and is built into a wall or roof to admit light or air"
+                    number="03619904" pos="n" words="[window]"/>
+            </concept>
+            <concept id="4" label="Door">
+                <sense domains="[buildings]"
+                    gloss="a house that is entered via a door; &quot;the house next door&quot;; &quot;they live just two doors up the street from us&quot;"
+                    number="02589660" pos="n" words="[door]"/>
+            </concept>
+            <concept id="5" label="Garage">
+                <sense domains="[buildings]"
+                    gloss="an outbuilding (or part of a building) for housing automobiles"
+                    number="02738220" pos="n" words="[garage]"/>
+            </concept>
+            <concept id="6" label="Yard">
+                <sense domains="[buildings]"
+                    gloss="the land around a house or other building; &quot;it was a small house with almost no yard at all&quot;"
+                    number="03638970" pos="n" words="[yard, grounds]"/>
+            </concept>
+            <concept id="7" label="Ceiling">
+                <sense domains="[buildings]"
+                    gloss="the overhead inside lining of a room; &quot;he hated painting the ceiling&quot;"
+                    number="02410004" pos="n" words="[ceiling]"/>
+            </concept>
+            <concept id="8" label="Closet">
+                <sense domains="[buildings]"
+                    gloss="a small private room for study or prayer"
+                    number="02455005" pos="n" words="[closet]"/>
+            </concept>
+            <concept id="9" label="Roof">
+                <sense domains="[town_planning, transport]"
+                    gloss="top of motor vehicle" number="03250547"
+                    pos="n" words="[roof]"/>
+            </concept>
+            <concept id="10" label="Pantry">
+                <sense domains="[buildings]"
+                    gloss="a small room for storing foods or wines"
+                    number="03085603" pos="n" words="[pantry, larder, buttery]"/>
+            </concept>
+            <concept id="11" label="Deck">
+                <sense domains="[buildings]"
+                    gloss="a porch that resembles the deck on a ship"
+                    number="02549316" pos="n" words="[deck]"/>
+            </concept>
+            <concept id="12" label="Floor">
+                <sense domains="[buildings]"
+                    gloss="the inside lower horizontal surface (as of a room or hallway); &quot;they needed rugs to cover the bare floors&quot;"
+                    number="02699889" pos="n" words="[floor, flooring]"/>
+            </concept>
+            <concept id="13" label="Porch">
+                <sense domains="[buildings]"
+                    gloss="a structure attached to the exterior of a building often forming a covered entrance"
+                    number="03158198" pos="n" words="[porch]"/>
+            </concept>
+            <concept id="14" label="Pond">
+                <sense domains="[geography]"
+                    gloss="a small lake; &quot;the pond was too small for sailing&quot;"
+                    number="06799128" pos="n" words="[pond, pool]"/>
+            </concept>
+            <concept id="15" label="Patio">
+                <sense domains="[buildings]"
+                    gloss="usually paved outdoor area adjoining a residence"
+                    number="03096419" pos="n" words="[patio, terrace]"/>
+            </concept>
+            <concept id="16" label="Furnishings">
+                <sense domains="[furniture]"
+                    gloss="the furniture and appliances and other movable accessories (including curtains and rugs) that make a home (or other building) livable"
+                    number="02729592" pos="n" words="[furnishings]"/>
+            </concept>
+            <concept id="17" label="Contents">
+                <sense domains="[publishing]"
+                    gloss="a list of divisions (chapters or articles) and the pages on which they start"
+                    number="04871504" pos="n" words="[contents, table_of_contents]"/>
+            </concept>
+            <concept id="18" label="Rug">
+                <sense domains="[furniture]"
+                    gloss="a piece of thick heavy fabric (usually with nap or pile) used to cover a floor"
+                    number="03260882" pos="n" words="[rug, carpet, carpeting]"/>
+            </concept>
+            <concept id="19" label="Bed">
+                <sense domains="[furniture]"
+                    gloss="a piece of furniture that provides a place to sleep; &quot;he sat on the edge of the bed&quot;; &quot;the room had only a bed and chair&quot;"
+                    number="02273239" pos="n" words="[bed]"/>
+            </concept>
+            <concept id="20" label="Desk">
+                <sense domains="[furniture]"
+                    gloss="a piece of furniture with a writing surface and usually drawers or other compartments"
+                    number="02558014" pos="n" words="[desk]"/>
+            </concept>
+            <concept id="21" label="Carpet">
+                <sense domains="[furniture]"
+                    gloss="a piece of thick heavy fabric (usually with nap or pile) used to cover a floor"
+                    number="03260882" pos="n" words="[rug, carpet, carpeting]"/>
+            </concept>
+            <concept id="22" label="Chair">
+                <sense domains="[furniture]"
+                    gloss="a seat for one person, with a support for the back"
+                    number="02418562" pos="n" words="[chair]"/>
+            </concept>
+            <concept id="23" label="Fan">
+                <sense domains="[furniture]"
+                    gloss="a device for creating a current of air by movement of a surface or surfaces"
+                    number="02664926" pos="n" words="[fan]"/>
+            </concept>
+            <concept id="24" label="Curtain">
+                <sense domains="[furniture]"
+                    gloss="hanging cloth used as a blind"
+                    number="02536246" pos="n" words="[curtain, drape, drapery, mantle, pall]"/>
+            </concept>
+            <concept id="25" label="Shelf">
+                <sense domains="[commerce, furniture]"
+                    gloss="a support that consists of a horizontal surface for holding objects"
+                    number="03314483" pos="n" words="[shelf]"/>
+            </concept>
+            <concept id="26" label="Trash can">
+                <sense domains="[furniture, town_planning]"
+                    gloss="a bin that holds rubbish until it is collected"
+                    number="02215885" pos="n" words="[ashcan, trash_can, garbage_can, wastebin, ashbin, dustbin, trash_barrel, trash_bin]"/>
+            </concept>
+            <concept id="27" label="Chest of drawers">
+                <sense domains="[furniture]"
+                    gloss="furniture with drawers for keeping clothes"
+                    number="02428247" pos="n" words="[chest_of_drawers, chest, bureau, dresser]"/>
+            </concept>
+            <concept id="28" label="Mirror">
+                <sense domains="[furniture]"
+                    gloss="a polished surface that forms images by reflecting light"
+                    number="03004534" pos="n" words="[mirror]"/>
+            </concept>
+            <concept id="29" label="Clothing">
+                <sense domains="[fashion]"
+                    gloss="covering designed to be worn on a person's body"
+                    number="02456798" pos="n" words="[clothing, clothes, apparel, vesture, wearing_apparel, wear]"/>
+            </concept>
+            <concept id="30" label="Decorations">
+                <sense domains="[factotum]"
+                    gloss="something used to beautify" number="02550579"
+                    pos="n" words="[decoration, ornament, ornamentation]"/>
+            </concept>
+            <concept id="31" label="Toys">
+                <sense domains="[play]"
+                    gloss="an artifact designed to be played with"
+                    number="03144411" pos="n" words="[plaything, toy]"/>
+            </concept>
+            <concept id="32" label="Dress">
+                <sense domains="[art, fashion]"
+                    gloss="decorate (food), as with parsley or other ornamental foods"
+                    number="01152626" pos="v" words="[trim, garnish, dress]"/>
+            </concept>
+            <concept id="33" label="Shirt">
+                <sense domains="[fashion]"
+                    gloss="a garment worn on the upper part of the body"
+                    number="03320567" pos="n" words="[shirt]"/>
+            </concept>
+            <concept id="34" label="Hat">
+                <sense domains="[fashion]"
+                    gloss="protects from weather; has shaped crown and usually a brim"
+                    number="02802477" pos="n" words="[hat, chapeau, lid]"/>
+            </concept>
+            <concept id="35" label="Hose">
+                <sense domains="[fashion]"
+                    gloss="man's garment of the 16th and 17th centuries; worn with a doublet"
+                    number="02834012" pos="n" words="[hose, tights]"/>
+            </concept>
+            <concept id="36" label="Skirt">
+                <sense domains="[fashion]"
+                    gloss="the part of a garment below the waist"
+                    number="03346806" pos="n" words="[skirt]"/>
+                <sense domains="[fashion]"
+                    gloss="a garment hanging from the waist; worn mainly by girls and women"
+                    number="03346396" pos="n" words="[skirt]"/>
+                <sense domains="[person]"
+                    gloss="informal terms for a (young) woman"
+                    number="07200169" pos="n" words="[dame, doll, wench, skirt, chick, bird]"/>
+                <sense domains="[factotum]"
+                    gloss="avoid or try to avoid, as of duties, questions and issues; &quot;He dodged the issue&quot;"
+                    number="00550404" pos="v" words="[hedge, fudge, evade, put_off, circumvent, parry, elude, skirt, dodge, duck, sidestep]"/>
+                <sense domains="[factotum]"
+                    gloss="pass around or about; move along the border; &quot;The boat skirted the coast&quot;"
+                    number="01402590" pos="v" words="[skirt]"/>
+                <sense domains="[factotum]" gloss="form the edge or"
+                    number="01844566" pos="v" words="[skirt]"/>
+                <sense domains="[factotum]"
+                    gloss="extend on all sides of simultaneously; encircle; &quot;The forest surrounds my property&quot;"
+                    number="01006503" pos="v" words="[surround, skirt, border]"/>
+            </concept>
+            <concept id="37" label="Sox"/>
+            <concept id="38" label="Cap">
+                <sense domains="[architecture]"
+                    gloss="the upper part of a column that supports the entablature"
+                    number="02381917" pos="n" words="[capital, chapiter, cap]"/>
+            </concept>
+            <concept id="39" label="Coat">
+                <sense domains="[fashion]"
+                    gloss="an outer garment that has sleeves and covers the body from shoulder down; worn outdoors"
+                    number="02460986" pos="n" words="[coat]"/>
+            </concept>
+            <concept id="40" label="Pants">
+                <sense domains="[fashion]"
+                    gloss="(usually in the plural) a garment extending from the waist to the knee or ankle, covering each leg separately; &quot;he had a sharp crease in his trousers&quot;"
+                    number="03544321" pos="n" words="[trousers, pants]"/>
+            </concept>
+            <concept id="41" label="Blouse">
+                <sense domains="[fashion]" gloss="a top worn by women"
+                    number="02301305" pos="n" words="[blouse]"/>
+            </concept>
+            <concept id="42" label="Stockings">
+                <sense domains="[fashion]"
+                    gloss="close-fitting hosiery to cover the foot and leg; come in matched pairs (usually used in the plural)"
+                    number="03417756" pos="n" words="[stocking]"/>
+            </concept>
+            <concept id="43" label="Pumps">
+                <sense domains="[fashion]"
+                    gloss="a low-cut shoe without fastenings"
+                    number="03186896" pos="n" words="[pump, pumps]"/>
+            </concept>
+            <concept id="44" label="Shoes">
+                <sense domains="[factotum]"
+                    gloss="a particular situation: &quot;If you were in my place what would you do?&quot;"
+                    number="10034758" pos="n" words="[place, shoes]"/>
+            </concept>
+            <concept id="45" label="Flats">
+                <sense domains="[fashion]"
+                    gloss="shoes or slippers with no heel (or a flat heel)"
+                    number="02697045" pos="n" words="[flats]"/>
+            </concept>
+            <concept id="46" label="High heels"/>
+            <concept id="47" label="Underware"/>
+            <concept id="48" label="Jacket">
+                <sense domains="[fashion]" gloss="a short coat"
+                    number="02870166" pos="n" words="[jacket]"/>
+            </concept>
+            <concept id="49" label="Picture">
+                <sense domains="[art]"
+                    gloss="show in, or as in, a picture; &quot;This scene depicts country life&quot;"
+                    number="01157992" pos="v" words="[picture, depict, show]"/>
+            </concept>
+            <concept id="50" label="Drawing">
+                <sense domains="[art]"
+                    gloss="the creation of artistic drawings; &quot;he learned drawing from his father&quot;"
+                    number="00598605" pos="n" words="[drawing, draftsmanship, drafting]"/>
+            </concept>
+            <concept id="51" label="Knick knack"/>
+            <concept id="52" label="Photo">
+                <sense domains="[photography]"
+                    gloss="a picture of a person or scene in the form of a print or transparent slide; recorded by a camera on light-sensitive material"
+                    number="03113185" pos="n" words="[photograph, photo, exposure]"/>
+            </concept>
+            <concept id="53" label="Momentos"/>
+            <concept id="54" label="Sculpture">
+                <sense domains="[art]"
+                    gloss="making figures or designs in three dimensions"
+                    number="00599509" pos="n" words="[sculpture, carving]"/>
+            </concept>
+            <concept id="55" label="Games">
+                <sense domains="[play]"
+                    gloss="a contest with rules to determine a winner; &quot;you need four people to play this game&quot;"
+                    number="00289269" pos="n" words="[game]"/>
+            </concept>
+            <concept id="56" label="Doll">
+                <sense domains="[play]"
+                    gloss="a small replica of a person; used as a toy"
+                    number="02586827" pos="n" words="[doll, dolly]"/>
+            </concept>
+            <concept id="57" label="Pool">
+                <sense domains="[play]"
+                    gloss="any of various games played on a pool table having 6 pockets"
+                    number="00321361" pos="n" words="[pool, pocket_billiards]"/>
+            </concept>
+            <concept id="58" label="Swing">
+                <sense domains="[buildings, mechanics, play]"
+                    gloss="supports someone swinging back and forth"
+                    number="03455563" pos="n" words="[swing]"/>
+            </concept>
+            <concept id="59" label="Trampoline">
+                <sense domains="[athletics]"
+                    gloss="strong canvas attached with springs to a metal frame and used for tumbling"
+                    number="03529439" pos="n" words="[trampoline]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="60" label="has"/>
+            <linking-phrase id="61" label="such as"/>
+            <linking-phrase id="62" label="such as"/>
+            <linking-phrase id="63" label="such as"/>
+            <linking-phrase id="64" label="such as"/>
+            <linking-phrase id="65" label="such as"/>
+            <linking-phrase id="66" label="inside"/>
+            <linking-phrase id="67" label="outside"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="60"/>
+            <connection from-id="60" to-id="2"/>
+            <connection from-id="60" to-id="16"/>
+            <connection from-id="60" to-id="17"/>
+            <connection from-id="2" to-id="61"/>
+            <connection from-id="61" to-id="3"/>
+            <connection from-id="61" to-id="4"/>
+            <connection from-id="61" to-id="5"/>
+            <connection from-id="61" to-id="6"/>
+            <connection from-id="61" to-id="7"/>
+            <connection from-id="61" to-id="8"/>
+            <connection from-id="61" to-id="9"/>
+            <connection from-id="61" to-id="10"/>
+            <connection from-id="61" to-id="11"/>
+            <connection from-id="61" to-id="12"/>
+            <connection from-id="61" to-id="13"/>
+            <connection from-id="61" to-id="14"/>
+            <connection from-id="61" to-id="15"/>
+            <connection from-id="16" to-id="62"/>
+            <connection from-id="62" to-id="18"/>
+            <connection from-id="62" to-id="19"/>
+            <connection from-id="62" to-id="20"/>
+            <connection from-id="62" to-id="21"/>
+            <connection from-id="62" to-id="22"/>
+            <connection from-id="62" to-id="23"/>
+            <connection from-id="62" to-id="24"/>
+            <connection from-id="62" to-id="25"/>
+            <connection from-id="62" to-id="26"/>
+            <connection from-id="62" to-id="27"/>
+            <connection from-id="62" to-id="28"/>
+            <connection from-id="17" to-id="63"/>
+            <connection from-id="63" to-id="29"/>
+            <connection from-id="63" to-id="30"/>
+            <connection from-id="63" to-id="31"/>
+            <connection from-id="29" to-id="64"/>
+            <connection from-id="64" to-id="32"/>
+            <connection from-id="64" to-id="33"/>
+            <connection from-id="64" to-id="34"/>
+            <connection from-id="64" to-id="35"/>
+            <connection from-id="64" to-id="36"/>
+            <connection from-id="64" to-id="37"/>
+            <connection from-id="64" to-id="38"/>
+            <connection from-id="64" to-id="39"/>
+            <connection from-id="64" to-id="40"/>
+            <connection from-id="64" to-id="41"/>
+            <connection from-id="64" to-id="42"/>
+            <connection from-id="64" to-id="43"/>
+            <connection from-id="64" to-id="44"/>
+            <connection from-id="64" to-id="45"/>
+            <connection from-id="64" to-id="46"/>
+            <connection from-id="64" to-id="47"/>
+            <connection from-id="64" to-id="48"/>
+            <connection from-id="30" to-id="65"/>
+            <connection from-id="65" to-id="49"/>
+            <connection from-id="65" to-id="50"/>
+            <connection from-id="65" to-id="51"/>
+            <connection from-id="65" to-id="52"/>
+            <connection from-id="65" to-id="53"/>
+            <connection from-id="65" to-id="54"/>
+            <connection from-id="31" to-id="66"/>
+            <connection from-id="66" to-id="55"/>
+            <connection from-id="66" to-id="56"/>
+            <connection from-id="31" to-id="67"/>
+            <connection from-id="67" to-id="57"/>
+            <connection from-id="67" to-id="58"/>
+            <connection from-id="67" to-id="59"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="387" y="24"/>
+            <concept-appearance id="2" x="186" y="140"/>
+            <concept-appearance id="3" x="-130" y="115"/>
+            <concept-appearance id="4" x="-68" y="67"/>
+            <concept-appearance id="5" x="76" y="214"/>
+            <concept-appearance id="6" x="-36" y="264"/>
+            <concept-appearance id="7" x="-111" y="184"/>
+            <concept-appearance id="8" x="48" y="59"/>
+            <concept-appearance id="9" x="-10" y="98"/>
+            <concept-appearance id="10" x="82" y="292"/>
+            <concept-appearance id="11" x="-79" y="311"/>
+            <concept-appearance id="12" x="-133" y="248"/>
+            <concept-appearance id="13" x="53" y="123"/>
+            <concept-appearance id="14" x="18" y="313"/>
+            <concept-appearance id="15" x="125" y="110"/>
+            <concept-appearance id="16" x="286" y="249"/>
+            <concept-appearance id="17" x="514" y="118"/>
+            <concept-appearance id="18" x="93" y="385"/>
+            <concept-appearance id="19" x="130" y="497"/>
+            <concept-appearance id="20" x="163" y="404"/>
+            <concept-appearance id="21" x="278" y="447"/>
+            <concept-appearance id="22" x="222" y="367"/>
+            <concept-appearance id="23" x="210" y="544"/>
+            <concept-appearance id="24" x="152" y="574"/>
+            <concept-appearance id="25" x="96" y="565"/>
+            <concept-appearance id="26" x="262" y="594"/>
+            <concept-appearance id="27" x="71" y="449"/>
+            <concept-appearance id="28" x="285" y="524"/>
+            <concept-appearance id="29" x="599" y="288"/>
+            <concept-appearance id="30" x="741" y="285"/>
+            <concept-appearance id="31" x="756" y="127"/>
+            <concept-appearance id="32" x="433" y="445"/>
+            <concept-appearance id="33" x="488" y="430"/>
+            <concept-appearance id="34" x="544" y="473"/>
+            <concept-appearance id="35" x="624" y="445"/>
+            <concept-appearance id="36" x="411" y="515"/>
+            <concept-appearance id="37" x="490" y="535"/>
+            <concept-appearance id="38" x="705" y="523"/>
+            <concept-appearance id="39" x="623" y="517"/>
+            <concept-appearance id="40" x="411" y="588"/>
+            <concept-appearance id="41" x="463" y="617"/>
+            <concept-appearance id="42" x="615" y="630"/>
+            <concept-appearance id="43" x="672" y="590"/>
+            <concept-appearance id="44" x="431" y="702"/>
+            <concept-appearance id="45" x="491" y="702"/>
+            <concept-appearance id="46" x="545" y="711"/>
+            <concept-appearance id="47" x="708" y="656"/>
+            <concept-appearance id="48" x="616" y="706"/>
+            <concept-appearance id="49" x="788" y="379"/>
+            <concept-appearance id="50" x="967" y="374"/>
+            <concept-appearance id="51" x="904" y="304"/>
+            <concept-appearance id="52" x="880" y="477"/>
+            <concept-appearance id="53" x="809" y="455"/>
+            <concept-appearance id="54" x="950" y="454"/>
+            <concept-appearance id="55" x="807" y="16"/>
+            <concept-appearance id="56" x="720" y="15"/>
+            <concept-appearance id="57" x="950" y="58"/>
+            <concept-appearance id="58" x="939" y="132"/>
+            <concept-appearance id="59" x="888" y="18"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="60" x="371" y="121"/>
+            <linking-phrase id="61" x="-31" y="206"/>
+            <linking-phrase id="62" x="209" y="501"/>
+            <linking-phrase id="63" x="615" y="168"/>
+            <linking-phrase id="64" x="544" y="596"/>
+            <linking-phrase id="65" x="867" y="396"/>
+            <linking-phrase id="66" x="757" y="95"/>
+            <linking-phrase id="67" x="849" y="104"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Water in the Earth</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Water in the Earth"/>
+            <concept id="2" label="Sea water"/>
+            <concept id="3" label="Continental water"/>
+            <concept id="4" label="Salt water"/>
+            <concept id="5" label="Fresh water">
+                <sense domains="[chemistry]"
+                    gloss="water that is not salty" number="10771465"
+                    pos="n" terms="[fresh_water]"/>
+            </concept>
+            <concept id="6" label="Surface water"/>
+            <concept id="7" label="Underground water"/>
+            <concept id="8" label="Glaciers"/>
+            <concept id="9" label="Rivers">
+                <sense domains="[geography, tourism]"
+                    gloss="a large natural stream of water (larger than a creek); &quot;the river was navigable for 50 miles&quot;"
+                    number="06789983" pos="n" terms="[river]"/>
+            </concept>
+            <concept id="10" label="Lakes">
+                <sense domains="[geography]"
+                    gloss="a body of (usually fresh) water surrounded by land"
+                    number="06787575" pos="n" terms="[lake]"/>
+                <sense domains="[color]"
+                    gloss="a purplish red pigment prepared from lac or cochineal"
+                    number="10758043" pos="n" terms="[lake]"/>
+                <sense domains="[color]"
+                    gloss="any of numerous bright translucent organic pigments"
+                    number="10757941" pos="n" terms="[lake]"/>
+            </concept>
+            <concept id="11" label="Atmosphere">
+                <sense domains="[factotum]"
+                    gloss="a particular environment or surrounding influence; &quot;there was an atmosphere of excitement&quot;"
+                    number="10417677" pos="n" terms="[atmosphere, ambiance, ambience]"/>
+                <sense domains="[metrology]"
+                    gloss="a unit of pressure: the pressure that will support a column of mercury 760 mm high at sea level and 0 degrees centigrade"
+                    number="09868453" pos="n" terms="[atmosphere, atm]"/>
+                <sense domains="[astronomy]"
+                    gloss="the mass of air surrounding the Earth; &quot;there was great heat as the comet entered the atmosphere&quot;"
+                    number="06270068" pos="n" terms="[atmosphere]"/>
+                <sense domains="[meteorology]"
+                    gloss="the weather or climate at some place; &quot;the atmosphere was thick with fog&quot;"
+                    number="10414112" pos="n" terms="[atmosphere, atmospheric_state]"/>
+                <sense domains="[physics]"
+                    gloss="the envelope of gases surrounding any celestial body"
+                    number="06748803" pos="n" terms="[atmosphere]"/>
+                <sense domains="[factotum]"
+                    gloss="a distinctive but intangible quality surrounding a person or thing: &quot;an atmosphere of defeat pervaded the candidate's headquarters&quot;; &quot;the place had an aura of romance&quot;"
+                    number="03716758" pos="n" terms="[air, aura, atmosphere]"/>
+            </concept>
+            <concept id="12" label="Humidity of the ground"/>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="13" label="divided into"/>
+            <linking-phrase id="14" label="is"/>
+            <linking-phrase id="15" label="is"/>
+            <linking-phrase id="16" label="can be"/>
+            <linking-phrase id="17" label="distributed in"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="13"/>
+            <connection from-id="13" to-id="2"/>
+            <connection from-id="13" to-id="3"/>
+            <connection from-id="2" to-id="14"/>
+            <connection from-id="14" to-id="4"/>
+            <connection from-id="3" to-id="15"/>
+            <connection from-id="15" to-id="5"/>
+            <connection from-id="3" to-id="16"/>
+            <connection from-id="16" to-id="7"/>
+            <connection from-id="16" to-id="6"/>
+            <connection from-id="16" to-id="8"/>
+            <connection from-id="6" to-id="17"/>
+            <connection from-id="17" to-id="10"/>
+            <connection from-id="17" to-id="12"/>
+            <connection from-id="17" to-id="11"/>
+            <connection from-id="17" to-id="9"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="342" y="21"/>
+            <concept-appearance id="2" x="239" y="122"/>
+            <concept-appearance id="3" x="431" y="125"/>
+            <concept-appearance id="4" x="116" y="214"/>
+            <concept-appearance id="5" x="574" y="193"/>
+            <concept-appearance id="6" x="325" y="288"/>
+            <concept-appearance id="7" x="411" y="331"/>
+            <concept-appearance id="8" x="550" y="311"/>
+            <concept-appearance id="9" x="307" y="430"/>
+            <concept-appearance id="10" x="103" y="307"/>
+            <concept-appearance id="11" x="171" y="444"/>
+            <concept-appearance id="12" x="95" y="417"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="13" x="337" y="118"/>
+            <linking-phrase id="14" x="170" y="189"/>
+            <linking-phrase id="15" x="500" y="175"/>
+            <linking-phrase id="16" x="423" y="243"/>
+            <linking-phrase id="17" x="227" y="346"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

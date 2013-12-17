@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Classes -->
+  <owl:Class rdf:ID="Mixture"/>
+  <owl:Class rdf:ID="Land"/>
+  <owl:Class rdf:ID="SuspendedSubstance"/>
+  <owl:Class rdf:ID="Ocean"/>
+  <owl:Class rdf:ID="Sand"/>
+  <owl:Class rdf:ID="Atmosphere"/>
+  <owl:Class rdf:ID="AtmosphereLayer"/>
+  <owl:Class rdf:ID="max1micron"/>
+  <owl:Class rdf:ID="max2dot5micron"/>
+  <owl:Class rdf:ID="max10micron"/>
+  
+  <owl:Class rdf:ID="Aerosol">
+	<rdfs:subClassOf rdf:resource="#Mixture"/>
+	<rdfs:subClassOf>
+	<owl:Class>
+		<owl:unionOf rdf:parseType="Collection">
+			   <owl:Class rdf:about="#Particulate"/>
+			   <owl:Class rdf:about="#Gas"/>
+		</owl:unionOf>
+	</owl:Class>
+	</rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Air">
+    <rdfs:subClassOf rdf:resource="#Mixture"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="AirMass">
+    <rdfs:subClassOf rdf:resource="#Air" />
+    <rdfs:label>Air Mass</rdfs:label>
+    <rdfs:comment>A widespread body of air, the properties of which can be identified as 1) having been established while that air was situated over a particular region of the earth's surface (airmass source region), and 2) undergoing specific modifications while in transit away from the source region.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="AirParticle">
+    <owl:equivalentClass rdf:resource="#Aerosol" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="AirQuality">
+    <rdfs:subClassOf rdf:resource="#AirPollution"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Ash">
+    <rdfs:subClassOf rdf:resource="#Particulate"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ContinentalAerosol">
+    <rdfs:subClassOf rdf:resource="#Aerosol" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPlanetaryRealm"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Land" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Aerosol having its origin over the continents with industrial, urban, agricultural, forest, and desert sources, with potential for high concentrations of hygroscopic aerosol.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Dust">
+    <rdfs:subClassOf rdf:resource="#Particulate"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Haze">
+    <rdfs:subClassOf rdf:resource="#Mixture"/>
+    <rdfs:comment xml:lang="en">Particles suspended, reducing visibility by scattering light; often a mixture of aerosols and photochemical smog.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="IndoorAirQuality">
+    <rdfs:subClassOf rdf:resource="#AirQuality"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Particulate">
+    <rdfs:subClassOf rdf:resource="#SuspendedSubstance"/>
+    <rdfs:comment xml:lang="en">The term for solid or liquid particles found in a gas.   Some particles are large or dark enough to be seen as soot or smoke.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Pollen">
+    <rdfs:subClassOf rdf:resource="#Particulate"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Powder">
+    <rdfs:subClassOf rdf:resource="#Particulate"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SaltHaze">
+    <rdfs:subClassOf rdf:resource="#Haze" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPlanetaryRealm" />
+        <owl:someValuesFrom rdf:resource="#Ocean" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A haze created by the presence of finely divided particles of sea salt in the air, usually derived from the evaporation of sea spray.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SandHaze">
+    <rdfs:subClassOf rdf:resource="#Haze" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasSubstance"/>	
+		</owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#Sand" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Reduced visibility in the atmospheric boundary layer caused by suspended particles of soil, mixed into the air during strong winds.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Spray">
+    <rdfs:subClassOf rdf:resource="#Aerosol"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Smoke">
+    <rdfs:subClassOf rdf:resource="#SuspendedSubstance"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="AirPollution">
+    <rdfs:subClassOf rdf:resource="#Pollution" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPlanetaryRealm" />
+        <owl:allValuesFrom rdf:resource="#Atmosphere" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment>The presence of substances in the atmosphere, particularly those that do not occur naturally</rdfs:comment>
+    <rdfs:label>Air Pollution</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:ID="BrownCloud">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasMeteorologicalPhenomena"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Smog" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#AirPollution" />
+    <rdfs:comment xml:lang="en">Phenomenon particularly associated with smog episodes in cities such as Denver, Colorado.
+    </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="CarbonaceousAerosol">
+    <rdfs:subClassOf rdf:resource="#Aerosol"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="JungeAerosolLayer">
+    <rdfs:subClassOf rdf:resource="#AtmosphereLayer"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasSubstance" />
+        <owl:allValuesFrom rdf:resource="#Aerosol" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A maximum in large-particle concentrations observed in the lower stratosphere between 15 and 25 km.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PhotochemicalAirPollution">
+    <rdfs:subClassOf rdf:resource="#AirPollution" />
+    <rdfs:comment xml:lang="en">Type of air pollution, such as Los Angeles smog, associated with the buildup of oxidation products formed from the degradation of hydrocarbons, etc.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PM1">
+    <rdfs:subClassOf rdf:resource="#Particulate"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="diameter"/>	
+		</owl:onProperty>
+        <owl:hasValue rdf:resource="#max1micron"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+ 
+  <owl:Class rdf:ID="PM2dot5">
+    <rdfs:subClassOf rdf:resource="#Particulate"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#max2dot5micron"/>
+        <owl:onProperty rdf:resource="#diameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  
+  <owl:Class rdf:ID="PM10">
+    <rdfs:subClassOf rdf:resource="#Particulate"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#max10micron"/>
+        <owl:onProperty rdf:resource="#diameter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+
+  <owl:Class rdf:ID="Smog">
+    <rdfs:subClassOf rdf:resource="#AirPollution" />
+    <rdfs:comment xml:lang="en">A natural fog contaminated by industrial pollutants, a mixture of smoke and fog.
+    </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Soot">
+    <rdfs:subClassOf rdf:resource="#Particulate"/>
+    <owl:equivalentClass rdf:resource="#BlackCarbon" />
+  </owl:Class>
+  <owl:Class rdf:ID="BlackCarbon"/>
+
+</rdf:RDF>

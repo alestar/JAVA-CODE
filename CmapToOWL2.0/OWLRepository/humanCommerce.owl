@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Classes -->
+  <owl:Class rdf:ID="HumanActivity"/>
+  <owl:Class rdf:ID="Classification"/>
+  
+  <owl:Class rdf:ID="Grading">
+    <rdfs:subClassOf rdf:resource="#Processing"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Industrialization">
+    <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LandTenure">
+    <rdfs:subClassOf rdf:resource="#Management"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LandUse">
+    <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Logging">
+    <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Management">
+    <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ManagementSystem">
+    <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasActivity"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Management"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Processing">
+    <rdfs:subClassOf rdf:resource="#Production"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Product">
+    <rdfs:subClassOf rdf:resource="#MaterialThing"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MaterialThing">
+    <rdfs:subClassOf rdf:resource="#Matter"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Production">
+    <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Packaging">
+    <rdfs:subClassOf rdf:resource="#Production"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="EngineeringActivity">
+    <rdfs:subClassOf rdf:resource="#Production"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ForestProduct">
+    <rdfs:subClassOf rdf:resource="#Product"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Productivity">
+    <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="StandarIndustrialClassification">
+    <rdfs:subClassOf rdf:resource="#Classification"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Supply">
+    <rdfs:subClassOf rdf:resource="#Product"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Yield">
+    <rdfs:subClassOf rdf:resource="#Product"/>
+  </owl:Class>
+
+</rdf:RDF>

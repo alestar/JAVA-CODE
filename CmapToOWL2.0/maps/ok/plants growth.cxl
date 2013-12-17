@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>plants growth</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Plants">
+                <sense domains="[factotum]"
+                    gloss="set up or lay the groundwork for; &quot;establish a new department&quot;"
+                    number="01131591" pos="v" words="[establish, found, plant, constitute, institute]"/>
+            </concept>
+            <concept id="2" label="Almost everywhere"/>
+            <concept id="3" label="Sunlight">
+                <sense domains="[factotum]"
+                    gloss="the rays of the sun; &quot;the shingles were weathered by the sun and wind&quot;"
+                    number="07820384" pos="n" words="[sunlight, sunshine, sun]"/>
+            </concept>
+            <concept id="4" label="Not grren plants"/>
+            <concept id="5" label="Usually green"/>
+            <concept id="6" label="Food energy"/>
+            <concept id="7" label="Green leaves"/>
+            <concept id="8" label="Mushrooms">
+                <sense domains="[biology, plants]"
+                    gloss="common name for an edible agaric (contrasting with the inedible toadstool)"
+                    number="09296404" pos="n" words="[mushroom]"/>
+                <sense domains="[biology, plants]"
+                    gloss="any of various fleshy fungi of the subdivision Basidiomycota consisting of a cap at the end of a stem arising from an underground mycelium"
+                    number="09293451" pos="n" words="[mushroom]"/>
+                <sense domains="[atomic_physic]"
+                    gloss="a large cloud of rubble and dust shaped like a mushroom and rising into the sky after an explosion (especially of a nuclear bomb)"
+                    number="07787417" pos="n" words="[mushroom, mushroom_cloud, mushroom-shaped_cloud]"/>
+                <sense domains="[gastronomy]"
+                    gloss="fleshy body of any of numerous edible fungi"
+                    number="05771359" pos="n" words="[mushroom]"/>
+                <sense domains="[free_time]"
+                    gloss="pick or gather mushrooms; &quot;We went musrooming in the Fall&quot;"
+                    number="00947743" pos="v" words="[mushroom]"/>
+                <sense domains="[factotum]"
+                    gloss="grow and spread fast; &quot;The problem mushroomed&quot;"
+                    number="00158605" pos="v" words="[mushroom]"/>
+            </concept>
+            <concept id="9" label="Make food"/>
+            <concept id="10" label="Stems">
+                <sense domains="[plants]"
+                    gloss="a slender or elongated structure that supports a plant or fungus or a plant part or plant organ"
+                    number="09418962" pos="n" words="[stalk, stem]"/>
+            </concept>
+            <concept id="11" label="Roots">
+                <sense domains="[plants]"
+                    gloss="the usually underground organ that lacks buds or leaves or nodes; absorbs water and mineral salts; usually it anchors the plant to the ground"
+                    number="09415516" pos="n" words="[root]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="12" label="use"/>
+            <linking-phrase id="13" label="are"/>
+            <linking-phrase id="14" label="some are"/>
+            <linking-phrase id="15" label="most have"/>
+            <linking-phrase id="16" label="to make"/>
+            <linking-phrase id="17" label="captured by"/>
+            <linking-phrase id="18" label="such as"/>
+            <linking-phrase id="19" label="cannot"/>
+            <linking-phrase id="20" label="make"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="12"/>
+            <connection from-id="12" to-id="3"/>
+            <connection from-id="1" to-id="13"/>
+            <connection from-id="13" to-id="2"/>
+            <connection from-id="13" to-id="5"/>
+            <connection from-id="1" to-id="14"/>
+            <connection from-id="14" to-id="4"/>
+            <connection from-id="1" to-id="15"/>
+            <connection from-id="15" to-id="7"/>
+            <connection from-id="15" to-id="10"/>
+            <connection from-id="15" to-id="11"/>
+            <connection from-id="3" to-id="16"/>
+            <connection from-id="16" to-id="6"/>
+            <connection from-id="3" to-id="17"/>
+            <connection from-id="17" to-id="7"/>
+            <connection from-id="4" to-id="18"/>
+            <connection from-id="18" to-id="8"/>
+            <connection from-id="4" to-id="19"/>
+            <connection from-id="19" to-id="9"/>
+            <connection from-id="7" to-id="20"/>
+            <connection from-id="20" to-id="6"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="381" y="73"/>
+            <concept-appearance id="2" x="175" y="92"/>
+            <concept-appearance id="3" x="333" y="205"/>
+            <concept-appearance id="4" x="531" y="107"/>
+            <concept-appearance id="5" x="225" y="194"/>
+            <concept-appearance id="6" x="289" y="312"/>
+            <concept-appearance id="7" x="415" y="325"/>
+            <concept-appearance id="8" x="603" y="253"/>
+            <concept-appearance id="9" x="666" y="162"/>
+            <concept-appearance id="10" x="488" y="319"/>
+            <concept-appearance id="11" x="515" y="237"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="12" x="351" y="155"/>
+            <linking-phrase id="13" x="282" y="101"/>
+            <linking-phrase id="14" x="457" y="114"/>
+            <linking-phrase id="15" x="416" y="211"/>
+            <linking-phrase id="16" x="305" y="274"/>
+            <linking-phrase id="17" x="369" y="279"/>
+            <linking-phrase id="18" x="571" y="217"/>
+            <linking-phrase id="19" x="598" y="161"/>
+            <linking-phrase id="20" x="343" y="362"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

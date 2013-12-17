@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Cell reproduction</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Cell reproduction"/>
+            <concept id="2" label="Prokaryote">
+                <sense domains="[biology]"
+                    gloss="a unicellular organism having cells lacking membrane-bound nuclei; bacteria are the prime example but also included are blue-green algae and actinomycetes and mycoplasma"
+                    number="00942781" pos="n" terms="[prokaryote, procaryote]"/>
+            </concept>
+            <concept id="3" label="Eukaryote">
+                <sense domains="[biology]"
+                    gloss="an organism with cells characteristic of all life forms except primitive microorganisms such as bacteria; i.e. an organism with `good' or membrane-bound nuclei in its cells"
+                    number="00942523" pos="n" terms="[eukaryote, eucaryote]"/>
+            </concept>
+            <concept id="4" label="Binary fission"/>
+            <concept id="5" label="Mitosis">
+                <sense domains="[biology]"
+                    gloss="cell division in which the nucleus divides into nuclei containing the same number of chromosomes"
+                    number="09696686" pos="n" terms="[mitosis]"/>
+            </concept>
+            <concept id="6" label="Meiosis">
+                <sense domains="[biology]"
+                    gloss="cell division that produces reproductive cells in sexually reproducing organisms; the nucleus divides into four nuclei each containing half the chromosome number (leading to gametes in animals and spores in plants)"
+                    number="09694131" pos="n" terms="[meiosis, reduction_division]"/>
+            </concept>
+            <concept id="7" label="Diploid">
+                <sense domains="[biology]"
+                    gloss="an organism or cell having two sets of chromosomes or twice the haploid number"
+                    number="00864678" pos="n" terms="[diploid]"/>
+            </concept>
+            <concept id="8" label="Gamete">
+                <sense domains="[biology]"
+                    gloss="a mature sexual reproductive cell having a single set of unpaired chromosomes"
+                    number="04232798" pos="n" terms="[gamete]"/>
+            </concept>
+            <concept id="9" label="Tissue repair"/>
+            <concept id="10" label="Organism's growth"/>
+            <concept id="11" label="Asexual reproduction">
+                <sense domains="[biology]"
+                    gloss="reproduction without the fusion of gametes"
+                    number="09702035" pos="n" terms="[asexual_reproduction, agamogenesis]"/>
+            </concept>
+            <concept id="12" label="Sexual reproduction">
+                <sense domains="[biology]"
+                    gloss="reproduction involving the union or fusion of a male and a female gamete"
+                    number="09699074" pos="n" terms="[sexual_reproduction, amphimixis]"/>
+            </concept>
+            <concept id="13" label="Cell cycle"/>
+            <concept id="14" label="Somatic cells"/>
+            <concept id="15" label="Haploid">
+                <sense domains="[biology]"
+                    gloss="an organism or cell having only one complete set of chromosomes"
+                    number="00864561" pos="n" terms="[haploid]"/>
+            </concept>
+            <concept id="16" label="Chromosome">
+                <sense domains="[biology]"
+                    gloss="a threadlike body in the cell nucleus that carries the genes in a linear order"
+                    number="04221675" pos="n" terms="[chromosome]"/>
+            </concept>
+            <concept id="17" label="Autosome">
+                <sense domains="[biology]"
+                    gloss="any chromosome that is not a sex chromosome; appear in pairs in body cells but as single chromosomes in spermatozoa"
+                    number="04222480" pos="n" terms="[autosome, somatic_chromosome]"/>
+            </concept>
+            <concept id="18" label="Interphase"/>
+            <concept id="19" label="Mitotic phase"/>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="20" label="in both"/>
+            <linking-phrase id="21" label="cells divide by"/>
+            <linking-phrase id="22" label="cells divide by either"/>
+            <linking-phrase id="23" label="which is a type of"/>
+            <linking-phrase id="24" label="good for"/>
+            <linking-phrase id="25" label="part of a"/>
+            <linking-phrase id="26" label="in"/>
+            <linking-phrase id="27" label="good for"/>
+            <linking-phrase id="28" label="part of a"/>
+            <linking-phrase id="29" label="in"/>
+            <linking-phrase id="30" label="which are"/>
+            <linking-phrase id="31" label="which has"/>
+            <linking-phrase id="32" label="which are"/>
+            <linking-phrase id="33" label="and carry"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="20"/>
+            <connection from-id="20" to-id="2"/>
+            <connection from-id="20" to-id="3"/>
+            <connection from-id="2" to-id="21"/>
+            <connection from-id="21" to-id="4"/>
+            <connection from-id="3" to-id="22"/>
+            <connection from-id="22" to-id="5"/>
+            <connection from-id="22" to-id="6"/>
+            <connection from-id="4" to-id="23"/>
+            <connection from-id="23" to-id="11"/>
+            <connection from-id="5" to-id="24"/>
+            <connection from-id="24" to-id="9"/>
+            <connection from-id="24" to-id="10"/>
+            <connection from-id="24" to-id="11"/>
+            <connection from-id="5" to-id="25"/>
+            <connection from-id="25" to-id="13"/>
+            <connection from-id="5" to-id="26"/>
+            <connection from-id="26" to-id="14"/>
+            <connection from-id="6" to-id="27"/>
+            <connection from-id="27" to-id="12"/>
+            <connection from-id="6" to-id="28"/>
+            <connection from-id="28" to-id="13"/>
+            <connection from-id="6" to-id="29"/>
+            <connection from-id="29" to-id="8"/>
+            <connection from-id="8" to-id="30"/>
+            <connection from-id="30" to-id="15"/>
+            <connection from-id="13" to-id="31"/>
+            <connection from-id="31" to-id="18"/>
+            <connection from-id="31" to-id="19"/>
+            <connection from-id="14" to-id="32"/>
+            <connection from-id="32" to-id="7"/>
+            <connection from-id="15" to-id="33"/>
+            <connection from-id="33" to-id="16"/>
+            <connection from-id="33" to-id="17"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="304" y="-84"/>
+            <concept-appearance id="2" x="185" y="24"/>
+            <concept-appearance id="3" x="414" y="29"/>
+            <concept-appearance id="4" x="18" y="118"/>
+            <concept-appearance id="5" x="345" y="139"/>
+            <concept-appearance id="6" x="491" y="139"/>
+            <concept-appearance id="7" x="339" y="389"/>
+            <concept-appearance id="8" x="509" y="255"/>
+            <concept-appearance id="9" x="194" y="123"/>
+            <concept-appearance id="10" x="191" y="189"/>
+            <concept-appearance id="11" x="191" y="266"/>
+            <concept-appearance id="12" x="609" y="138"/>
+            <concept-appearance id="13" x="426" y="245"/>
+            <concept-appearance id="14" x="341" y="269"/>
+            <concept-appearance id="15" x="523" y="379"/>
+            <concept-appearance id="16" x="657" y="370"/>
+            <concept-appearance id="17" x="667" y="446"/>
+            <concept-appearance id="18" x="368" y="464"/>
+            <concept-appearance id="19" x="467" y="463"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="20" x="305" y="4"/>
+            <linking-phrase id="21" x="83" y="88"/>
+            <linking-phrase id="22" x="375" y="99"/>
+            <linking-phrase id="23" x="74" y="193"/>
+            <linking-phrase id="24" x="293" y="156"/>
+            <linking-phrase id="25" x="379" y="208"/>
+            <linking-phrase id="26" x="337" y="236"/>
+            <linking-phrase id="27" x="549" y="152"/>
+            <linking-phrase id="28" x="467" y="212"/>
+            <linking-phrase id="29" x="533" y="220"/>
+            <linking-phrase id="30" x="510" y="333"/>
+            <linking-phrase id="31" x="420" y="372"/>
+            <linking-phrase id="32" x="334" y="356"/>
+            <linking-phrase id="33" x="591" y="426"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

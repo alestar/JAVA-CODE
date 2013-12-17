@@ -1,0 +1,99 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Sense dictionary file</TITLE>
+<META NAME="description" CONTENT="Sense dictionary file">
+<META NAME="keywords" CONTENT="userman">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="userman.css">
+
+<LINK REL="next" HREF="node24.html">
+<LINK REL="previous" HREF="node22.html">
+<LINK REL="up" HREF="node9.html">
+<LINK REL="next" HREF="node24.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html398"
+  HREF="node24.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html394"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html388"
+  HREF="node22.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html396"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html399"
+  HREF="node24.html">Punctuation symbol file</A>
+<B> Up:</B> <A NAME="tex2html395"
+  HREF="node9.html">Using the sample main</A>
+<B> Previous:</B> <A NAME="tex2html389"
+  HREF="node22.html">Named entity classification data</A>
+ &nbsp; <B>  <A NAME="tex2html397"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION003120000000000000000"></A>
+<A NAME="file-sense"></A>
+<BR>
+Sense dictionary file
+</H1>
+
+<P>
+Berkeley DB indexed file.
+
+<P>
+It may be created with the
+  <TT>src/utilities/indexdict</TT> program provided with FreeLing. The source
+  file must have the sense list for one lemma-PoS per line.
+<BR>
+<P>
+Each line has format: <TT>lemma:PoS synset1 synset2 ...</TT>.  E.g. 
+<BR>  <code>cebolla:N 05760066 08734429 08734702</code>
+
+<P>
+The first sense code in the list is assumed to be the most frequent
+  sense for that lemma-PoS by the sense annotation module.
+  This only takes effect when value <TT>msf</TT> is selected for the <TT>SenseAnnotation</TT> option. 
+
+<P>
+Sense codes can be anything (assuming your later processes know what
+  to do with them). The provided files contain WordNet 1.6 synset
+  codes.
+
+<P>
+Currently, only the PoS tag selected by the tagger is annotated, though
+  the library is designed to support sense annotation for all possible
+  tags of each word.
+
+<P>
+<BR><HR>
+<ADDRESS>
+
+2008-01-24
+</ADDRESS>
+</BODY>
+</HTML>

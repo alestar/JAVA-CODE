@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF 
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+xmlns:owl="http://www.w3.org/2002/07/owl#" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#" 
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" >
+<owl:Ontology rdf:about="">
+<!--
+<dc:title>
+Process</dc:title>
+<dc:date>
+1/27/2004 3:14:31 PM</dc:date>
+<dc:creator>
+SWEET project</dc:creator>
+<dc:description>
+</dc:description>
+<dc:subject>
+</dc:subject>
+-->
+<owl:versionInfo>
+1.0</owl:versionInfo>
+</owl:Ontology>
+<owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+<owl:Class rdf:ID="Process"/>
+<owl:Class rdf:ID="PhysicalProcess">
+<rdfs:subClassOf rdf:resource="#Process"/>
+</owl:Class>
+<owl:Class rdf:ID="AcousticWave">
+<rdfs:subClassOf rdf:resource="#Wave"/>
+</owl:Class>
+<owl:Class rdf:ID="Wave">
+<rdfs:subClassOf rdf:resource="#Oscillation"/>
+</owl:Class>
+<owl:Class rdf:ID="Fixation">
+<rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Oxidation">
+<rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Reduction">
+<rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="ChemicalProcess">
+<rdfs:subClassOf rdf:resource="#Process"/>
+</owl:Class>
+<owl:Class rdf:ID="MaterialDisintegration">
+<rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Corrosion">
+<rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Flaring">
+<rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="GeochemicalProcess">
+<rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+<rdfs:subClassOf rdf:resource="#GeologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="GeothermalProcess">
+<rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Subsidence">
+<rdfs:subClassOf rdf:resource="#MechanicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Magnetism">
+<rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Deformation">
+<rdfs:subClassOf rdf:resource="#MechanicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Compaction">
+<rdfs:subClassOf rdf:resource="#MechanicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="MechanicalProcess">
+<rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="BiologicalProcess">
+<rdfs:subClassOf rdf:resource="#Process"/>
+</owl:Class>
+<owl:Class rdf:ID="Feeding">
+<rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Hydration">
+<rdfs:subClassOf rdf:resource="#SubstanceConcentrationChangeProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Rotation">
+<rdfs:subClassOf rdf:resource="#Motion"/>
+</owl:Class>
+<owl:Class rdf:ID="Motion">
+<rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Extinction">
+<owl:equivalentClass rdf:resource="#Attenuation"/>
+</owl:Class>
+<owl:Class rdf:ID="Advection">
+<rdfs:subClassOf rdf:resource="#Transport"/>
+</owl:Class>
+<owl:Class rdf:ID="Transport">
+<rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Deposition">
+<rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Bioluminescence">
+<rdfs:subClassOf rdf:resource="#Luminescence"/>
+</owl:Class>
+<owl:Class rdf:ID="Luminescence">
+<rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Strain">
+<rdfs:subClassOf rdf:resource="#MechanicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Convection">
+<rdfs:subClassOf rdf:resource="#Transport"/>
+</owl:Class>
+<owl:Class rdf:ID="Conduction">
+<rdfs:subClassOf rdf:resource="#Transport"/>
+</owl:Class>
+<owl:Class rdf:ID="Aeration">
+<rdfs:subClassOf rdf:resource="#Transport"/>
+</owl:Class>
+<owl:Class rdf:ID="Fluorescence">
+<rdfs:subClassOf rdf:resource="#Luminescence"/>
+</owl:Class>
+<owl:Class rdf:ID="Absorption">
+<rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Adsorption">
+<rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="WaveAbsorption">
+<rdfs:subClassOf rdf:resource="#Medium-WaveInteractionProcess"/>
+<rdfs:subClassOf rdf:resource="#Absorption"/>
+</owl:Class>
+<owl:Class rdf:ID="Medium-WaveInteractionProcess">
+<rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Burn">
+<rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Runoff">
+<rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="GravitationalProcess">
+<rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="ThermalProcess">
+<rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="GravityWave">
+<rdfs:subClassOf rdf:resource="#Wave"/>
+<rdfs:subClassOf rdf:resource="#GravitationalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Emission">
+<rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Oscillation">
+<rdfs:subClassOf rdf:resource="#Variation"/>
+</owl:Class>
+<owl:Class rdf:ID="SeismicBodyWave">
+<rdfs:subClassOf rdf:resource="#SeismicWave"/>
+</owl:Class>
+<owl:Class rdf:ID="SeismicWave">
+<rdfs:subClassOf rdf:resource="#Wave"/>
+</owl:Class>
+<owl:Class rdf:ID="Condensation">
+<rdfs:subClassOf rdf:resource="#StateOfMatterChangeEvent"/>
+</owl:Class>
+<owl:Class rdf:ID="Sublimation">
+<rdfs:subClassOf rdf:resource="#StateOfMatterChangeEvent"/>
+</owl:Class>
+<owl:Class rdf:ID="StateOfMatterChangeEvent">
+<rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Reflection">
+<rdfs:subClassOf rdf:resource="#Medium-WaveInteractionProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Heating">
+<rdfs:subClassOf rdf:resource="#ThermalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Flow">
+<rdfs:subClassOf rdf:resource="#Motion"/>
+</owl:Class>
+<owl:Class rdf:ID="Fold">
+<rdfs:subClassOf rdf:resource="#Strain"/>
+</owl:Class>
+<owl:Class rdf:ID="Entrainment">
+<rdfs:subClassOf rdf:resource="#Transport"/>
+</owl:Class>
+<owl:Class rdf:ID="Transmission">
+<rdfs:subClassOf rdf:resource="#Medium-WaveInteractionProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Attenuation">
+<rdfs:subClassOf rdf:resource="#Medium-WaveInteractionProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="InternalWave">
+<rdfs:subClassOf rdf:resource="#Wave"/>
+</owl:Class>
+<owl:Class rdf:ID="Melt">
+<rdfs:subClassOf rdf:resource="#StateOfMatterChangeEvent"/>
+</owl:Class>
+<owl:Class rdf:ID="Cycle">
+<rdfs:subClassOf rdf:resource="#Variation"/>
+</owl:Class>
+<owl:Class rdf:ID="Fault">
+<rdfs:subClassOf rdf:resource="#Strain"/>
+</owl:Class>
+<owl:Class rdf:ID="Dispersion">
+<rdfs:subClassOf rdf:resource="#Medium-WaveInteractionProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Sedimentation">
+<rdfs:subClassOf rdf:resource="#GeologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="GeologicalProcess">
+<rdfs:subClassOf rdf:resource="#Process"/>
+</owl:Class>
+<owl:Class rdf:ID="CoastalProcess">
+<rdfs:subClassOf rdf:resource="#GeologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="EolianProcess">
+<rdfs:subClassOf rdf:resource="#GeologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="FluvialProcess">
+<rdfs:subClassOf rdf:resource="#GeologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="GlacialProcess">
+<rdfs:subClassOf rdf:resource="#GeologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="KarstProcess">
+<rdfs:subClassOf rdf:resource="#GeologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="TectonicProcess">
+<rdfs:subClassOf rdf:resource="#GeologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Evapotranspiration">
+	<owl:subClassOf>
+	<owl:Class>
+		<owl:unionOf rdf:parseType="Collection">
+			<owl:Class rdf:about="#Evaporation"/>
+			<owl:Class rdf:about="#Transpiration"/>
+		</owl:unionOf>
+	</owl:Class>
+</owl:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Evaporation">
+<rdfs:subClassOf rdf:resource="#StateOfMatterChangeEvent"/>
+</owl:Class>
+<owl:Class rdf:ID="Transpiration">
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="#hasAssociatedPhenomena"/>
+<owl:allValuesFrom rdf:resource="#Evaporation"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="Exchange">
+<rdfs:subClassOf rdf:resource="#Transport"/>
+</owl:Class>
+<owl:Class rdf:ID="Decline">
+<rdfs:subClassOf rdf:resource="#Variation"/>
+</owl:Class>
+<owl:Class rdf:ID="Diffusion">
+<rdfs:subClassOf rdf:resource="#Motion"/>
+</owl:Class>
+<owl:Class rdf:ID="Fracture">
+<rdfs:subClassOf rdf:resource="#Strain"/>
+</owl:Class>
+<owl:Class rdf:ID="Freezing">
+<rdfs:subClassOf rdf:resource="#StateOfMatterChangeEvent"/>
+</owl:Class>
+<owl:Class rdf:ID="Backscatter">
+<rdfs:subClassOf rdf:resource="#Scattering"/>
+</owl:Class>
+<owl:Class rdf:ID="Scattering">
+<rdfs:subClassOf rdf:resource="#Medium-WaveInteractionProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Denitrification">
+<rdfs:subClassOf rdf:resource="#SubstanceConcentrationChangeProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="SubstanceConcentrationChangeProcess">
+<rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Chill">
+<rdfs:subClassOf rdf:resource="#ThermalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Consumption">
+<rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Decomposition">
+<rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Respiration">
+<rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Photosynthesis">
+<rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Chemosynthesis">
+<rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Excretion">
+<rdfs:subClassOf rdf:resource="#BiologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="EcologicalProcess"/>
+<owl:Class rdf:ID="Parasitism">
+<rdfs:subClassOf rdf:resource="#EcologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Selection">
+<rdfs:subClassOf rdf:resource="#EcologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Migration">
+<rdfs:subClassOf rdf:resource="#EcologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Mutation">
+<rdfs:subClassOf rdf:resource="#EcologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Predation">
+<rdfs:subClassOf rdf:resource="#EcologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="SpeciesExtinction">
+<rdfs:subClassOf rdf:resource="#EcologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="NutrientCycling">
+<rdfs:subClassOf rdf:resource="#EcologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="PrimaryProduction">
+<rdfs:subClassOf rdf:resource="#EcologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="SpeciesRecruitment">
+<rdfs:subClassOf rdf:resource="#EcologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Post-breeding">
+<rdfs:subClassOf rdf:resource="#EcologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Scavenging">
+<rdfs:subClassOf rdf:resource="#EcologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Bioaccumulation">
+<rdfs:subClassOf rdf:resource="#EcologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="FeedingHabitat">
+<rdfs:subClassOf rdf:resource="#EcologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Survival">
+<rdfs:subClassOf rdf:resource="#EcologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="RangeChanges">
+<rdfs:subClassOf rdf:resource="#EcologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Dominance">
+<rdfs:subClassOf rdf:resource="#EcologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Adaptation">
+<rdfs:subClassOf rdf:resource="#EcologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="SecondaryProduction">
+<rdfs:subClassOf rdf:resource="#EcologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Succession">
+<rdfs:subClassOf rdf:resource="#EcologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Herbivory">
+<rdfs:subClassOf rdf:resource="#EcologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Competition">
+<rdfs:subClassOf rdf:resource="#EcologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="DiurnalMovement">
+<rdfs:subClassOf rdf:resource="#EcologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Mutualism">
+<rdfs:subClassOf rdf:resource="#EcologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="BiogeochemicalCycle">
+<rdfs:subClassOf rdf:resource="#EcologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Biogeochemistry">
+<rdfs:subClassOf rdf:resource="#EcologicalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Development">
+<rdfs:subClassOf rdf:resource="#Variation"/>
+</owl:Class>
+<owl:Class rdf:ID="Shift">
+<rdfs:subClassOf rdf:resource="#Variation"/>
+</owl:Class>
+<owl:Class rdf:ID="Fluctuation">
+<rdfs:subClassOf rdf:resource="#Variation"/>
+</owl:Class>
+<owl:Class rdf:ID="Variation">
+<rdfs:subClassOf rdf:resource="#SystemStateChangePattern"/>
+</owl:Class>
+<owl:Class rdf:ID="Trend">
+<rdfs:subClassOf rdf:resource="#Variation"/>
+</owl:Class>
+<owl:Class rdf:ID="SystemStateChangePattern">
+<rdfs:subClassOf rdf:resource="#SystemCharacteristic"/>
+</owl:Class>
+<owl:Class rdf:ID="Stability">
+<rdfs:subClassOf rdf:resource="#SystemStateChangePattern"/>
+</owl:Class>
+<owl:Class rdf:ID="SystemCharacteristic"/>
+<owl:Class rdf:ID="Condition">
+<rdfs:subClassOf rdf:resource="#SystemCharacteristic"/>
+</owl:Class>
+<owl:Class rdf:ID="Freeze">
+<owl:equivalentClass rdf:resource="#Freezing"/>
+</owl:Class>
+<owl:Class rdf:ID="Heat">
+<owl:equivalentClass rdf:resource="#Heating"/>
+</owl:Class>
+<owl:Class rdf:ID="Melting">
+<owl:equivalentClass rdf:resource="#Melt"/>
+</owl:Class>
+<owl:Class rdf:ID="Condense">
+<owl:equivalentClass rdf:resource="#Condensation"/>
+</owl:Class>
+<owl:Class rdf:ID="Scatter">
+<owl:equivalentClass rdf:resource="#Scattering"/>
+</owl:Class>
+<owl:Class rdf:ID="Attenuate">
+<owl:equivalentClass rdf:resource="#Attenuation"/>
+</owl:Class>
+<owl:Class rdf:ID="Reflect">
+<owl:equivalentClass rdf:resource="#Reflection"/>
+</owl:Class>
+<owl:Class rdf:ID="Conduct">
+<owl:equivalentClass rdf:resource="#Conduction"/>
+</owl:Class>
+<owl:Class rdf:ID="Transmit">
+<owl:equivalentClass rdf:resource="#Transmission"/>
+</owl:Class>
+<owl:Class rdf:ID="Evaporate">
+<owl:equivalentClass rdf:resource="#Evaporation"/>
+</owl:Class>
+<owl:Class rdf:ID="Vaporize">
+<owl:equivalentClass rdf:resource="#Evaporation"/>
+</owl:Class>
+<owl:Class rdf:ID="Gravity">
+<owl:equivalentClass rdf:resource="#GravitationalProcess"/>
+</owl:Class>
+<owl:Class rdf:ID="Burning">
+<owl:equivalentClass rdf:resource="#Burn"/>
+</owl:Class>
+<owl:ObjectProperty rdf:ID="hasAssociatedPhenomena">
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="hasAssociatedProcess">
+<rdfs:range rdf:resource="#Process"/>
+</owl:ObjectProperty>
+</rdf:RDF>
+

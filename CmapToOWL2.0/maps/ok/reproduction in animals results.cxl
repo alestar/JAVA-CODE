@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>reproduction in animals</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Reproduction in animals"/>
+            <concept id="2" label="Sexual">
+                <sense domains="[anatomy, physiology, sexuality]"
+                    gloss="of or relating to or characterized by sexuality; &quot;sexual orientation&quot;; &quot;sexual distinctions&quot;"
+                    number="02669771" pos="a" terms="[sexual]"/>
+                <sense domains="[physiology, sexuality]"
+                    gloss="having or involving sex; &quot;sexual reproduction&quot;; &quot;sexual spores&quot;"
+                    number="02060044" pos="a" terms="[sexual]"/>
+                <sense domains="[factotum]"
+                    gloss="involved in a sexual relationship; &quot;the intimate (or sexual) relations between husband and wife&quot;; &quot;she had been intimate with many men&quot;"
+                    number="02057869" pos="a" terms="[intimate, sexual]"/>
+            </concept>
+            <concept id="3" label="Asexual">
+                <sense domains="[physiology, sexuality]"
+                    gloss="not having or involving sex; &quot;an asexual spore&quot;; &quot;asexual reproduction&quot;"
+                    number="02060550" pos="a" terms="[asexual, nonsexual]"/>
+            </concept>
+            <concept id="4" label="Budding">
+                <sense domains="[biology]"
+                    gloss="reproduction of some unicellular organisms by growth and specialization followed by the separation by constriction of a part of the parent"
+                    number="09703808" pos="n" terms="[budding]"/>
+            </concept>
+            <concept id="5" label="Fission">
+                <sense domains="[biology]"
+                    gloss="reproduction of some unicellular organisms by division of the cell into two more or less equal parts"
+                    number="09703403" pos="n" terms="[fission]"/>
+            </concept>
+            <concept id="6" label="Female">
+                <sense domains="[animals, biology]"
+                    gloss="an animal that produces gametes (ova) that can be fertilized by male gametes (spermatozoa)"
+                    number="00865075" pos="n" terms="[female]"/>
+            </concept>
+            <concept id="7" label="Male">
+                <sense domains="[animals, biology]"
+                    gloss="an animal that produces gametes (spermatozoa) that can fertilize female gametes (ova)"
+                    number="00865379" pos="n" terms="[male]"/>
+            </concept>
+            <concept id="8" label="Gametes"/>
+            <concept id="9" label="Egg">
+                <sense domains="[biology]"
+                    gloss="animal reproductive body consisting of an ovum or embryo together with nutritive and protective envelopes; esp. the thin-shelled reproductive body laid by e.g. female birds"
+                    number="00986478" pos="n" terms="[egg]"/>
+            </concept>
+            <concept id="10" label="Sperm">
+                <sense domains="[anatomy]"
+                    gloss="the male reproductive cell; the male gamete"
+                    number="04233304" pos="n" terms="[sperm, sperm_cell, spermatozoon]"/>
+            </concept>
+            <concept id="11" label="Haploid">
+                <sense domains="[biology]"
+                    gloss="an organism or cell having only one complete set of chromosomes"
+                    number="00864561" pos="n" terms="[haploid]"/>
+            </concept>
+            <concept id="12" label="Sex">
+                <sense domains="[sexuality]"
+                    gloss="either of the two categories (male or female) into which most organisms are divided; &quot;the war between the sexes&quot;"
+                    number="05991993" pos="n" terms="[sex]"/>
+            </concept>
+            <concept id="13" label="Mitochondrial DNA"/>
+            <concept id="14" label="Chromosomal DNA"/>
+            <concept id="15" label="Zygote">
+                <sense domains="[biology]"
+                    gloss="the cell resulting from the union of an ovum and a spermatozoon (including the organism that develops from that cell)"
+                    number="04218426" pos="n" terms="[zygote, fertilized_cell]"/>
+            </concept>
+            <concept id="16" label="Cleavage">
+                <sense domains="[biology]"
+                    gloss="(embryology) the repeated division of a fertilised ovum"
+                    number="09714417" pos="n" terms="[cleavage, segmentation]"/>
+            </concept>
+            <concept id="17" label="Diploid">
+                <sense domains="[biology]"
+                    gloss="an organism or cell having two sets of chromosomes or twice the haploid number"
+                    number="00864678" pos="n" terms="[diploid]"/>
+            </concept>
+            <concept id="18" label="Differentiation">
+                <sense domains="[biology]"
+                    gloss="the structural adaptation of some body part for a particular function"
+                    number="09743392" pos="n" terms="[specialization, specialisation, differentiation]"/>
+            </concept>
+            <concept id="19" label="Stages">
+                <sense domains="[biology, time_period]"
+                    gloss="any distinct time period in a sequence of events; &quot;we are in a transitional stage in which many former ideas must be revised or rejected&quot;"
+                    number="10983365" pos="n" terms="[phase, stage]"/>
+            </concept>
+            <concept id="20" label="Meiosis">
+                <sense domains="[biology]"
+                    gloss="cell division that produces reproductive cells in sexually reproducing organisms; the nucleus divides into four nuclei each containing half the chromosome number (leading to gametes in animals and spores in plants)"
+                    number="09694131" pos="n" terms="[meiosis, reduction_division]"/>
+            </concept>
+            <concept id="21" label="Hormones">
+                <sense domains="[anatomy]"
+                    gloss="an endocrine secretion that is transmitted by the blood to the tissue on which it has a specific effect"
+                    number="04201946" pos="n" terms="[hormone, internal_secretion]"/>
+            </concept>
+            <concept id="22" label="Blastula">
+                <sense domains="[animals, biology]"
+                    gloss="early stage of an embryo produced by cleavage of an ovum; a hollow sphere whose wall is composed of a single layer of cells"
+                    number="00987661" pos="n" terms="[blastula, blastosphere, blastodermic_vesicle]"/>
+            </concept>
+            <concept id="23" label="Gastrula">
+                <sense domains="[animals, biology]"
+                    gloss="double-walled stage of the embryo succeeding the blastula"
+                    number="00987896" pos="n" terms="[gastrula]"/>
+            </concept>
+            <concept id="24" label="Organogenesis"/>
+            <concept id="25" label="New organism"/>
+            <concept id="26" label="Cytoplasmatic determinants"/>
+            <concept id="27" label="Inductive signals"/>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="28" label="can be"/>
+            <linking-phrase id="29" label="requires"/>
+            <linking-phrase id="30" label="such as"/>
+            <linking-phrase id="31" label="produces"/>
+            <linking-phrase id="32" label="produces"/>
+            <linking-phrase id="33" label="produce"/>
+            <linking-phrase id="34" label="influenced by"/>
+            <linking-phrase id="35" label="formed by"/>
+            <linking-phrase id="36" label="are"/>
+            <linking-phrase id="37" label="contributes"/>
+            <linking-phrase id="38" label="fuse to form"/>
+            <linking-phrase id="39" label="are"/>
+            <linking-phrase id="40" label="determines"/>
+            <linking-phrase id="41" label="contributes"/>
+            <linking-phrase id="42" label="fuse to form"/>
+            <linking-phrase id="43" label="contains"/>
+            <linking-phrase id="44" label="is"/>
+            <linking-phrase id="45" label="undergoes"/>
+            <linking-phrase id="46" label="leads to"/>
+            <linking-phrase id="47" label="proceeds through"/>
+            <linking-phrase id="48" label="results in"/>
+            <linking-phrase id="49" label="including"/>
+            <linking-phrase id="50" label="results in"/>
+            <linking-phrase id="51" label="produces the"/>
+            <linking-phrase id="52" label="depends on"/>
+            <linking-phrase id="53" label="driven by"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="28"/>
+            <connection from-id="28" to-id="2"/>
+            <connection from-id="28" to-id="3"/>
+            <connection from-id="2" to-id="29"/>
+            <connection from-id="29" to-id="6"/>
+            <connection from-id="29" to-id="7"/>
+            <connection from-id="3" to-id="30"/>
+            <connection from-id="30" to-id="4"/>
+            <connection from-id="30" to-id="5"/>
+            <connection from-id="6" to-id="31"/>
+            <connection from-id="31" to-id="8"/>
+            <connection from-id="7" to-id="32"/>
+            <connection from-id="32" to-id="8"/>
+            <connection from-id="8" to-id="33"/>
+            <connection from-id="33" to-id="9"/>
+            <connection from-id="33" to-id="10"/>
+            <connection from-id="8" to-id="34"/>
+            <connection from-id="34" to-id="21"/>
+            <connection from-id="8" to-id="35"/>
+            <connection from-id="35" to-id="20"/>
+            <connection from-id="9" to-id="36"/>
+            <connection from-id="36" to-id="11"/>
+            <connection from-id="9" to-id="37"/>
+            <connection from-id="37" to-id="13"/>
+            <connection from-id="37" to-id="14"/>
+            <connection from-id="9" to-id="38"/>
+            <connection from-id="38" to-id="15"/>
+            <connection from-id="10" to-id="39"/>
+            <connection from-id="39" to-id="11"/>
+            <connection from-id="10" to-id="40"/>
+            <connection from-id="40" to-id="12"/>
+            <connection from-id="10" to-id="41"/>
+            <connection from-id="41" to-id="14"/>
+            <connection from-id="10" to-id="42"/>
+            <connection from-id="42" to-id="15"/>
+            <connection from-id="15" to-id="43"/>
+            <connection from-id="43" to-id="14"/>
+            <connection from-id="15" to-id="44"/>
+            <connection from-id="44" to-id="17"/>
+            <connection from-id="15" to-id="45"/>
+            <connection from-id="45" to-id="16"/>
+            <connection from-id="45" to-id="18"/>
+            <connection from-id="16" to-id="46"/>
+            <connection from-id="46" to-id="18"/>
+            <connection from-id="18" to-id="47"/>
+            <connection from-id="47" to-id="19"/>
+            <connection from-id="18" to-id="48"/>
+            <connection from-id="48" to-id="25"/>
+            <connection from-id="19" to-id="49"/>
+            <connection from-id="49" to-id="22"/>
+            <connection from-id="49" to-id="23"/>
+            <connection from-id="19" to-id="50"/>
+            <connection from-id="50" to-id="24"/>
+            <connection from-id="24" to-id="51"/>
+            <connection from-id="51" to-id="25"/>
+            <connection from-id="24" to-id="52"/>
+            <connection from-id="52" to-id="26"/>
+            <connection from-id="24" to-id="53"/>
+            <connection from-id="53" to-id="27"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="304" y="25"/>
+            <concept-appearance id="2" x="232" y="121"/>
+            <concept-appearance id="3" x="395" y="122"/>
+            <concept-appearance id="4" x="389" y="223"/>
+            <concept-appearance id="5" x="533" y="223"/>
+            <concept-appearance id="6" x="157" y="227"/>
+            <concept-appearance id="7" x="297" y="226"/>
+            <concept-appearance id="8" x="234" y="330"/>
+            <concept-appearance id="9" x="121" y="399"/>
+            <concept-appearance id="10" x="343" y="402"/>
+            <concept-appearance id="11" x="235" y="438"/>
+            <concept-appearance id="12" x="489" y="409"/>
+            <concept-appearance id="13" x="31" y="525"/>
+            <concept-appearance id="14" x="355" y="542"/>
+            <concept-appearance id="15" x="223" y="610"/>
+            <concept-appearance id="16" x="299" y="716"/>
+            <concept-appearance id="17" x="67" y="638"/>
+            <concept-appearance id="18" x="120" y="717"/>
+            <concept-appearance id="19" x="67" y="822"/>
+            <concept-appearance id="20" x="40" y="311"/>
+            <concept-appearance id="21" x="17" y="397"/>
+            <concept-appearance id="22" x="22" y="938"/>
+            <concept-appearance id="23" x="160" y="939"/>
+            <concept-appearance id="24" x="253" y="892"/>
+            <concept-appearance id="25" x="424" y="851"/>
+            <concept-appearance id="26" x="223" y="1009"/>
+            <concept-appearance id="27" x="372" y="1005"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="28" x="311" y="113"/>
+            <linking-phrase id="29" x="218" y="198"/>
+            <linking-phrase id="30" x="445" y="200"/>
+            <linking-phrase id="31" x="189" y="294"/>
+            <linking-phrase id="32" x="259" y="294"/>
+            <linking-phrase id="33" x="224" y="401"/>
+            <linking-phrase id="34" x="108" y="380"/>
+            <linking-phrase id="35" x="131" y="336"/>
+            <linking-phrase id="36" x="179" y="439"/>
+            <linking-phrase id="37" x="113" y="484"/>
+            <linking-phrase id="38" x="190" y="549"/>
+            <linking-phrase id="39" x="294" y="437"/>
+            <linking-phrase id="40" x="410" y="420"/>
+            <linking-phrase id="41" x="346" y="495"/>
+            <linking-phrase id="42" x="228" y="572"/>
+            <linking-phrase id="43" x="287" y="590"/>
+            <linking-phrase id="44" x="145" y="639"/>
+            <linking-phrase id="45" x="211" y="686"/>
+            <linking-phrase id="46" x="219" y="736"/>
+            <linking-phrase id="47" x="56" y="787"/>
+            <linking-phrase id="48" x="271" y="798"/>
+            <linking-phrase id="49" x="77" y="905"/>
+            <linking-phrase id="50" x="172" y="876"/>
+            <linking-phrase id="51" x="351" y="890"/>
+            <linking-phrase id="52" x="247" y="972"/>
+            <linking-phrase id="53" x="340" y="974"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

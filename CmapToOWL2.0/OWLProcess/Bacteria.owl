@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://www.owl-ontologies.com/unnamed.owl#"
+  xml:base="http://www.owl-ontologies.com/unnamed.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="Eubacteria"/>
+  <owl:Class rdf:ID="Genetic_information"/>
+  <owl:Class rdf:ID="Micrometer"/>
+  <owl:Class rdf:ID="Prokaryotic_cell"/>
+  <owl:Class rdf:ID="Archaebacteria"/>
+  <owl:Class rdf:ID="Single-celld_organisms"/>
+  <owl:Class rdf:ID="Metabolism"/>
+  <owl:Class rdf:ID="Nucleic_acids"/>
+  <owl:Class rdf:ID="Membrane"/>
+  <owl:Class rdf:ID="Escherichia_coli"/>
+  <owl:Class rdf:ID="Eukaryotic"/>
+  <owl:Class rdf:ID="Viruses"/>
+  <owl:Class rdf:ID="Bacteria">
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Single-celld_organisms"/>
+          <owl:Class rdf:about="#Prokaryotic_cell"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Prokaryotic_cell"/>
+    <rdfs:subClassOf rdf:resource="#Single-celld_organisms"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Organelle"/>
+  <owl:ObjectProperty rdf:ID="contain_Genetic_information">
+    <rdfs:range rdf:resource="#Genetic_information"/>
+    <rdfs:domain rdf:resource="#Bacteria"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="contain_Organelle">
+    <rdfs:range rdf:resource="#Organelle"/>
+    <rdfs:domain rdf:resource="#Bacteria"/>
+  </owl:ObjectProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.2, Build 355)  http://protege.stanford.edu -->

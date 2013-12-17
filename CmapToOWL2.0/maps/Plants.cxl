@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Plants</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Plants">
+                <sense domains="[plants]"
+                    gloss="put or set (seeds or seedlings) into the ground; &quot;Let's plant flowers in the garden&quot;"
+                    number="01079342" pos="v" words="[plant, set]"/>
+            </concept>
+            <concept id="2" label="Parts">
+                <sense domains="[factotum]"
+                    gloss="the local environment; &quot;he hasn't been seen around these parts in years&quot;"
+                    number="06348260" pos="n" words="[parts]"/>
+            </concept>
+            <concept id="3" label="Water">
+                <sense domains="[biology]"
+                    gloss="secrete or form water, as tears or saliva: &quot;My mouth watered at the prospect of a good dinner&quot;; &quot;His eyes watered&quot;"
+                    number="00048541" pos="v" words="[water]"/>
+            </concept>
+            <concept id="4" label="Air">
+                <sense domains="[factotum]"
+                    gloss="make public; &quot;She aired her opinions on welfare&quot;"
+                    number="00646076" pos="v" words="[publicize, publicise, air, bare]"/>
+            </concept>
+            <concept id="5" label="Sunlight">
+                <sense domains="[factotum]"
+                    gloss="the rays of the sun; &quot;the shingles were weathered by the sun and wind&quot;"
+                    number="07820384" pos="n" words="[sunlight, sunshine, sun]"/>
+            </concept>
+            <concept id="6" label="Minerals">
+                <sense domains="[geology]"
+                    gloss="solid homogeneous inorganic substances occurring in nature having a definite chemical composition"
+                    number="10508351" pos="n" words="[mineral]"/>
+            </concept>
+            <concept id="7" label="Reproduce">
+                <sense domains="[biology]"
+                    gloss="have offspring or young" number="00038872"
+                    pos="v" words="[reproduce, procreate, multiply]"/>
+            </concept>
+            <concept id="8" label="Stems">
+                <sense domains="[plants]"
+                    gloss="a slender or elongated structure that supports a plant or fungus or a plant part or plant organ"
+                    number="09418962" pos="n" words="[stalk, stem]"/>
+            </concept>
+            <concept id="9" label="Fruits">
+                <sense domains="[food, plants]"
+                    gloss="the ripened reproductive body of a seed plant"
+                    number="09423815" pos="n" words="[fruit]"/>
+            </concept>
+            <concept id="10" label="Roots">
+                <sense domains="[plants]"
+                    gloss="the usually underground organ that lacks buds or leaves or nodes; absorbs water and mineral salts; usually it anchors the plant to the ground"
+                    number="09415516" pos="n" words="[root]"/>
+            </concept>
+            <concept id="11" label="Leaves">
+                <sense domains="[factotum]"
+                    gloss=" put into the care or protection of someone; &quot;He left the decision to his deputy&quot;"
+                    number="01609671" pos="v" words="[entrust, leave]"/>
+            </concept>
+            <concept id="12" label="Flowers">
+                <sense domains="[plants]"
+                    gloss="reproductive organ of angiosperm plants especially one having showy or colorful parts"
+                    number="07986022" pos="n" words="[flower, bloom, blossom]"/>
+            </concept>
+            <concept id="13" label="Stomata"/>
+            <concept id="14" label="Holes">
+                <sense domains="[anatomy]"
+                    gloss="informal terms for the mouth"
+                    number="04115406" pos="n" words="[trap, hole, maw, yap]"/>
+            </concept>
+            <concept id="15" label="Carbon dioxide">
+                <sense domains="[chemistry]"
+                    gloss="a heavy odorless colorless gas formed during respiration and by the decomposition of organic substances; absorbed from the air by plants in photosynthesis"
+                    number="10613550" pos="n" words="[carbon_dioxide, CO, carbonic_acid_gas]"/>
+            </concept>
+            <concept id="16" label="Light">
+                <sense domains="[biology, psychological_features]"
+                    gloss="brightness and animation of countenance; &quot;he had a sparkle in his eye&quot;"
+                    number="03873827" pos="n" words="[sparkle, spark, light]"/>
+            </concept>
+            <concept id="17" label="Heat">
+                <sense domains="[factotum]"
+                    gloss="provide with heat; &quot;heat the house&quot;"
+                    number="01593291" pos="v" words="[heat]"/>
+            </concept>
+            <concept id="18" label="Photosynthesis">
+                <sense domains="[chemistry]"
+                    gloss="synthesis of compounds with the aid of radiant energy (especially in plants)"
+                    number="09705163" pos="n" words="[photosynthesis]"/>
+            </concept>
+            <concept id="19" label="Oxygen">
+                <sense domains="[chemistry, geography]"
+                    gloss="a nonmetallic bivalent element that is normally a colorless odorless tasteless nonflammable diatomic gas; constitutes 28 percent of the atmosphere by volume; the most abundant element in the earth's crust"
+                    number="10495237" pos="n" words="[oxygen, O, atomic_number_8]"/>
+            </concept>
+            <concept id="20" label="Sugar">
+                <sense domains="[chemistry]"
+                    gloss="an essential structural component of living cells and source of energy for animals; includes simple sugars with small molecules as well as macromolecular substances; are classified according to the number of monosaccharide groups they contain"
+                    number="10609937" pos="n" words="[carbohydrate, saccharide, sugar]"/>
+            </concept>
+            <concept id="21" label="Food">
+                <sense domains="[food]"
+                    gloss="any substance that can be metabolized by an organism to give energy and build tissue"
+                    number="00011575" pos="n" words="[food, nutrient]"/>
+            </concept>
+            <concept id="22" label="Soil">
+                <sense domains="[geography]"
+                    gloss="what plants grow in (especially with reference to its quality or use); &quot;the land had never been plowed&quot;; &quot;good agricultural soil&quot;"
+                    number="06668569" pos="n" words="[land, ground, soil]"/>
+            </concept>
+            <concept id="23" label="Energy">
+                <sense domains="[biology, psychological_features]"
+                    gloss="an imaginative lively style (especially style of writing); &quot;his writing conveys great energy&quot;"
+                    number="03654225" pos="n" words="[energy, vigor, vigour, vim]"/>
+            </concept>
+            <concept id="24" label="Starch">
+                <sense domains="[chemistry]"
+                    gloss="a complex carbohydrate found chiefly in seeds, fruits, tubers, roots and stem pith of plants, notably in corn, potatoes, wheat, and rice; an important foodstuff and used otherwise especially in adhesives and as fillers and stiffeners for paper and textiles"
+                    number="10801135" pos="n" words="[starch, amylum]"/>
+            </concept>
+            <concept id="25" label="Seeds">
+                <sense domains="[agriculture]"
+                    gloss="place (seeds) in the ground for future growth; &quot;She sowed sunflower seeds&quot;"
+                    number="01030643" pos="v" words="[sow, sough, seed]"/>
+            </concept>
+            <concept id="26" label="Spores">
+                <sense domains="[plants]"
+                    gloss="small usually single-celled reproductive body produced especially by certain bacteria and algae and fungi and nonflowering plants"
+                    number="07867623" pos="n" words="[spore]"/>
+            </concept>
+            <concept id="27" label="Ferns"/>
+            <concept id="28" label="Fungi">
+                <sense domains="[biology, plants]"
+                    gloss="the taxonomic kingdom of lower plants"
+                    number="09288350" pos="n" words="[Fungi, kingdom_Fungi, fungus_kingdom]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="29" label="have"/>
+            <linking-phrase id="30" label="need"/>
+            <linking-phrase id="31" label="do"/>
+            <linking-phrase id="32" label="store"/>
+            <linking-phrase id="33" label="some are"/>
+            <linking-phrase id="34" label="contains"/>
+            <linking-phrase id="35" label="is"/>
+            <linking-phrase id="36" label="from"/>
+            <linking-phrase id="37" label="most via"/>
+            <linking-phrase id="38" label="some via"/>
+            <linking-phrase id="39" label="have"/>
+            <linking-phrase id="40" label="absorb"/>
+            <linking-phrase id="41" label="are"/>
+            <linking-phrase id="42" label="for"/>
+            <linking-phrase id="43" label="for"/>
+            <linking-phrase id="44" label="gives"/>
+            <linking-phrase id="45" label="gives"/>
+            <linking-phrase id="46" label="occurs in"/>
+            <linking-phrase id="47" label="produces"/>
+            <linking-phrase id="48" label="is"/>
+            <linking-phrase id="49" label="is converted to"/>
+            <linking-phrase id="50" label="gives"/>
+            <linking-phrase id="51" label="example"/>
+            <linking-phrase id="52" label="as do some"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="29"/>
+            <connection from-id="29" to-id="2"/>
+            <connection from-id="1" to-id="30"/>
+            <connection from-id="30" to-id="3"/>
+            <connection from-id="30" to-id="4"/>
+            <connection from-id="30" to-id="5"/>
+            <connection from-id="30" to-id="6"/>
+            <connection from-id="1" to-id="31"/>
+            <connection from-id="31" to-id="7"/>
+            <connection from-id="1" to-id="32"/>
+            <connection from-id="32" to-id="24"/>
+            <connection from-id="2" to-id="33"/>
+            <connection from-id="33" to-id="8"/>
+            <connection from-id="33" to-id="9"/>
+            <connection from-id="33" to-id="10"/>
+            <connection from-id="33" to-id="11"/>
+            <connection from-id="33" to-id="12"/>
+            <connection from-id="4" to-id="34"/>
+            <connection from-id="34" to-id="15"/>
+            <connection from-id="5" to-id="35"/>
+            <connection from-id="35" to-id="16"/>
+            <connection from-id="35" to-id="17"/>
+            <connection from-id="6" to-id="36"/>
+            <connection from-id="36" to-id="22"/>
+            <connection from-id="7" to-id="37"/>
+            <connection from-id="37" to-id="25"/>
+            <connection from-id="7" to-id="38"/>
+            <connection from-id="38" to-id="26"/>
+            <connection from-id="11" to-id="39"/>
+            <connection from-id="39" to-id="13"/>
+            <connection from-id="13" to-id="40"/>
+            <connection from-id="40" to-id="4"/>
+            <connection from-id="13" to-id="41"/>
+            <connection from-id="41" to-id="14"/>
+            <connection from-id="15" to-id="42"/>
+            <connection from-id="42" to-id="18"/>
+            <connection from-id="16" to-id="43"/>
+            <connection from-id="43" to-id="18"/>
+            <connection from-id="16" to-id="44"/>
+            <connection from-id="44" to-id="23"/>
+            <connection from-id="17" to-id="45"/>
+            <connection from-id="45" to-id="23"/>
+            <connection from-id="18" to-id="46"/>
+            <connection from-id="46" to-id="11"/>
+            <connection from-id="18" to-id="47"/>
+            <connection from-id="47" to-id="19"/>
+            <connection from-id="47" to-id="20"/>
+            <connection from-id="20" to-id="48"/>
+            <connection from-id="48" to-id="21"/>
+            <connection from-id="20" to-id="49"/>
+            <connection from-id="49" to-id="24"/>
+            <connection from-id="21" to-id="50"/>
+            <connection from-id="50" to-id="23"/>
+            <connection from-id="26" to-id="51"/>
+            <connection from-id="51" to-id="27"/>
+            <connection from-id="26" to-id="52"/>
+            <connection from-id="52" to-id="28"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="403" y="24"/>
+            <concept-appearance id="2" x="245" y="83"/>
+            <concept-appearance id="3" x="321" y="156"/>
+            <concept-appearance id="4" x="382" y="160"/>
+            <concept-appearance id="5" x="448" y="163"/>
+            <concept-appearance id="6" x="505" y="166"/>
+            <concept-appearance id="7" x="627" y="86"/>
+            <concept-appearance id="8" x="65" y="142"/>
+            <concept-appearance id="9" x="71" y="219"/>
+            <concept-appearance id="10" x="88" y="297"/>
+            <concept-appearance id="11" x="226" y="304"/>
+            <concept-appearance id="12" x="163" y="327"/>
+            <concept-appearance id="13" x="278" y="414"/>
+            <concept-appearance id="14" x="318" y="525"/>
+            <concept-appearance id="15" x="371" y="292"/>
+            <concept-appearance id="16" x="451" y="298"/>
+            <concept-appearance id="17" x="528" y="296"/>
+            <concept-appearance id="18" x="401" y="431"/>
+            <concept-appearance id="19" x="389" y="547"/>
+            <concept-appearance id="20" x="499" y="547"/>
+            <concept-appearance id="21" x="520" y="426"/>
+            <concept-appearance id="22" x="603" y="267"/>
+            <concept-appearance id="23" x="631" y="375"/>
+            <concept-appearance id="24" x="682" y="303"/>
+            <concept-appearance id="25" x="744" y="265"/>
+            <concept-appearance id="26" x="839" y="262"/>
+            <concept-appearance id="27" x="813" y="390"/>
+            <concept-appearance id="28" x="875" y="396"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="29" x="314" y="69"/>
+            <linking-phrase id="30" x="406" y="115"/>
+            <linking-phrase id="31" x="511" y="71"/>
+            <linking-phrase id="32" x="589" y="168"/>
+            <linking-phrase id="33" x="159" y="173"/>
+            <linking-phrase id="34" x="381" y="251"/>
+            <linking-phrase id="35" x="448" y="249"/>
+            <linking-phrase id="36" x="555" y="234"/>
+            <linking-phrase id="37" x="692" y="190"/>
+            <linking-phrase id="38" x="766" y="180"/>
+            <linking-phrase id="39" x="246" y="375"/>
+            <linking-phrase id="40" x="296" y="273"/>
+            <linking-phrase id="41" x="275" y="492"/>
+            <linking-phrase id="42" x="360" y="381"/>
+            <linking-phrase id="43" x="445" y="384"/>
+            <linking-phrase id="44" x="516" y="371"/>
+            <linking-phrase id="45" x="582" y="359"/>
+            <linking-phrase id="46" x="324" y="397"/>
+            <linking-phrase id="47" x="424" y="514"/>
+            <linking-phrase id="48" x="504" y="513"/>
+            <linking-phrase id="49" x="641" y="504"/>
+            <linking-phrase id="50" x="565" y="427"/>
+            <linking-phrase id="51" x="807" y="347"/>
+            <linking-phrase id="52" x="879" y="348"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

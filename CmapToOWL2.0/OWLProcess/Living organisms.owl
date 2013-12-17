@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://www.owl-ontologies.com/unnamed.owl#"
+  xml:base="http://www.owl-ontologies.com/unnamed.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="Plants">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Multicellular"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Living_organisms">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Unicellular"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Multicellular"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Multicellular">
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Plants"/>
+          <owl:Class rdf:ID="Animals"/>
+          <owl:Class rdf:about="#Living_organisms"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom>
+          <owl:Class rdf:ID="Cell"/>
+        </owl:someValuesFrom>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="consists_of"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Animals">
+    <rdfs:subClassOf rdf:resource="#Multicellular"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Nucleus"/>
+  <owl:Class rdf:ID="Mitochondria"/>
+  <owl:Class rdf:about="#Unicellular">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Cell"/>
+        <owl:onProperty rdf:resource="#consists_of"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="has_Nucleus">
+    <rdfs:range rdf:resource="#Nucleus"/>
+    <rdfs:domain rdf:resource="#Cell"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="has_Mitochondria">
+    <rdfs:domain rdf:resource="#Cell"/>
+    <rdfs:range rdf:resource="#Mitochondria"/>
+  </owl:ObjectProperty>
+  <Animals rdf:ID="Dog"/>
+  <Unicellular rdf:ID="Bacteria"/>
+  <Plants rdf:ID="Mango"/>
+  <Unicellular rdf:ID="Algae"/>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.2, Build 355)  http://protege.stanford.edu -->

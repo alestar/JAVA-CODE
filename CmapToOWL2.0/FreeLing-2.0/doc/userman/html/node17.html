@@ -1,0 +1,189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Quantity recognition data file</TITLE>
+<META NAME="description" CONTENT="Quantity recognition data file">
+<META NAME="keywords" CONTENT="userman">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="userman.css">
+
+<LINK REL="next" HREF="node18.html">
+<LINK REL="previous" HREF="node16.html">
+<LINK REL="up" HREF="node9.html">
+<LINK REL="next" HREF="node18.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html326"
+  HREF="node18.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html322"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html316"
+  HREF="node16.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html324"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html327"
+  HREF="node18.html">Suffixation rules file</A>
+<B> Up:</B> <A NAME="tex2html323"
+  HREF="node9.html">Using the sample main</A>
+<B> Previous:</B> <A NAME="tex2html317"
+  HREF="node16.html">Multiword definition file</A>
+ &nbsp; <B>  <A NAME="tex2html325"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION00360000000000000000"></A>
+<A NAME="file-quant"></A>
+<BR>
+Quantity recognition data file
+</H1>
+
+<P>
+This file contains the data necessary to perform currency amount and
+physical magnitude recognition.  
+It consists of three sections:  <code>&lt;Currency&gt;</code>, <code>&lt;Measure&gt;</code>,
+and <code>&lt;/MeasureNames&gt;</code>.
+
+<P>
+Section <code>&lt;Currency&gt;</code> contains a single line indicating which is
+the code, among those used in section <code>&lt;Measure&gt;</code>, that stands for
+ 'currency amount'.
+
+<P>
+E.g.:
+<PRE>
+&lt;Currency&gt;
+CUR
+&lt;/Currency&gt;
+</PRE>
+
+<P>
+Section <code>&lt;Measure&gt;</code> indicates the type of measure corresponding
+to each possible unit. Each line contains two fields: the measure code
+and the unit code. The codes may be anything, at user's choice, and
+will be used to build the lemma of the recognized quantity multiword.
+
+<P>
+E.g., the following section states that <TT>USD</TT> and <TT>FRF</TT> are of
+type <TT>CUR</TT> (currency), <TT>mm</TT> is of type <TT>LN</TT> (length), and 
+<TT>ft/s</TT> is of type <TT>SP</TT> (speed):
+<PRE>
+&lt;Measure&gt;
+CUR USD
+CUR FRF
+LN mm
+SP ft/s
+&lt;/Measure&gt;
+</PRE>
+
+<P>
+Finally, section <code>&lt;MeasureNames&gt;</code> describes which multiwords have
+to be interpreted as a measure, and which unit they represent. The
+unit must appear in section <code>&lt;Measure&gt;</code> with its associated code.
+Each line has the format:
+<PRE>
+multiword_description code tag
+</PRE>
+where <TT>multiword_description</TT> is a multiword pattern as in
+multiwords file described in section&nbsp;<A HREF="node16.html#file-mw">2.5</A>, <TT>code</TT> is the
+type of magnitude the unit describes (currency, speed, etc.), and <TT>tag</TT> is a constraint on the lemmatized components of the multiword,
+following the same conventions than in multiwords file
+(section&nbsp;<A HREF="node16.html#file-mw">2.5</A>).
+
+<P>
+E.g., 
+<PRE>
+&lt;MeasureNames&gt;
+french_&lt;franc&gt; FRF $2:N
+&lt;franc&gt; FRF $1:N
+&lt;dollar&gt; USD $1:N
+american_&lt;dollar&gt; USD $2:N
+us_&lt;dollar&gt; USD $2:N
+&lt;milimeter&gt; mm $1:N
+&lt;foot&gt;_per_second ft/s $1:N
+&lt;foot&gt;_Fh_second ft/s $1:N
+&lt;foot&gt;_Fh_s ft/s $1:N
+&lt;foot&gt;_second ft/s $1:N
+&lt;/MeasureNames&gt;
+</PRE>
+
+<P>
+This section will recognize strings such as the following:
+<PRE>
+ 234_french_francs CUR_FRF:234 Zm
+ one_dollar CUR_USD:1 Zm
+ two_hundred_fifty_feet_per_second SP_ft/s:250 Zu
+</PRE>
+
+<P>
+Quantity multiwords will be recognized only when following a number,
+ that is, in the sentence <EM>There were many french francs</EM>, the
+ multiword won't be recognized since it is not assigning units to a
+ determined quantity.
+
+<P>
+It is important to note that the lemmatized multiword expressions
+ (the ones that containt angle brackets) will only be recognized if
+ the lemma is present in the dictionary with its corresponding
+ inflected forms.
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html326"
+  HREF="node18.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html322"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html316"
+  HREF="node16.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html324"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html327"
+  HREF="node18.html">Suffixation rules file</A>
+<B> Up:</B> <A NAME="tex2html323"
+  HREF="node9.html">Using the sample main</A>
+<B> Previous:</B> <A NAME="tex2html317"
+  HREF="node16.html">Multiword definition file</A>
+ &nbsp; <B>  <A NAME="tex2html325"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2008-01-24
+</ADDRESS>
+</BODY>
+</HTML>

@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Light</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Light">
+                <sense domains="[physics]"
+                    gloss="(physics) electromagnetic radiation that can produce a visual sensation; &quot;the light was filtered through a soft glass window&quot;"
+                    number="07811448" pos="n" words="[light, visible_light, visible_radiation]"/>
+            </concept>
+            <concept id="2" label="Polarisation">
+                <sense domains="[optics]"
+                    gloss="the phenomenon in which waves of light or other radiation are restricted in direction of vibration"
+                    number="07824381" pos="n" words="[polarization, polarisation]"/>
+            </concept>
+            <concept id="3" label="Reflection">
+                <sense domains="[physics]"
+                    gloss="the phenomenon of a propagating wave (light or sound) being thrown back from a surface"
+                    number="07831313" pos="n" words="[reflection, reflexion]"/>
+            </concept>
+            <concept id="4" label="Refraction">
+                <sense domains="[physics]"
+                    gloss="the change in direction of a propagating wave (light or sound) when passing from one medium to another"
+                    number="07831504" pos="n" words="[refraction]"/>
+            </concept>
+            <concept id="5" label="Dispersion">
+                <sense domains="[factotum]"
+                    gloss="driving off or spreading widely"
+                    number="05463669" pos="n" words="[dispersion, scattering]"/>
+            </concept>
+            <concept id="6" label="Interference">
+                <sense domains="[acoustics, electricity]"
+                    gloss="electrical or acoustic activity that can disturb communication"
+                    number="05527546" pos="n" words="[noise, interference, disturbance]"/>
+            </concept>
+            <concept id="7" label="Images">
+                <sense domains="[factotum]"
+                    gloss="a visual representation of an object or scene or person produced on a surface; &quot;they showed us the pictures of their wedding&quot;; &quot;a movie is a series of images projected so rapidly that the eye integrates them&quot;"
+                    number="03118233" pos="n" words="[picture, image, icon, ikon]"/>
+            </concept>
+            <concept id="8" label="Real">
+                <sense domains="[quality]"
+                    gloss="not to be taken lightly; &quot;statistics demonstrate that poverty and unemployment are very real problems&quot;; &quot;to the man sleeping regularly in doorways homelessness is real&quot;"
+                    number="02044571" pos="a" words="[real]"/>
+            </concept>
+            <concept id="9" label="Virtual">
+                <sense domains="[quality]"
+                    gloss="being such in essence or effect though not in actual fact; &quot;a virtual dependence on charity&quot;; &quot;a virtual revolution&quot;; &quot;virtual reality&quot;"
+                    number="00857447" pos="a" words="[virtual(a)]"/>
+            </concept>
+            <concept id="10" label="Screen">
+                <sense
+                    domains="[computer_science, electronics, electrotechnology, tv]"
+                    gloss="the surface of the large end of a cathode-ray tube on which an electronically created image is formed"
+                    number="03286767" pos="n" words="[screen, CRT_screen]"/>
+            </concept>
+            <concept id="11" label="Smooth surfaces"/>
+            <concept id="12" label="Mirrors">
+                <sense domains="[furniture]"
+                    gloss="a polished surface that forms images by reflecting light"
+                    number="03004534" pos="n" words="[mirror]"/>
+            </concept>
+            <concept id="13" label="Plane">
+                <sense domains="[quality]"
+                    gloss="having a horizontal surface in which no part is higher or lower than another; &quot;a flat desk&quot;; &quot;acres of level farmland&quot;; &quot;a plane surface&quot;"
+                    number="00864501" pos="a" words="[flat, level, plane]"/>
+            </concept>
+            <concept id="14" label="Spherical">
+                <sense domains="[quality]"
+                    gloss="of or relating to spheres or resembling a sphere; &quot;spherical geometry&quot;"
+                    number="02605216" pos="a" words="[spherical]"/>
+            </concept>
+            <concept id="15" label="Convex">
+                <sense domains="[factotum]"
+                    gloss="curving or bulging outward" number="00502070"
+                    pos="a" words="[convex, bulging]"/>
+            </concept>
+            <concept id="16" label="Concave">
+                <sense domains="[factotum]" gloss="curving inward"
+                    number="00500716" pos="a" words="[concave]"/>
+            </concept>
+            <concept id="17" label="1/u+1/v=1/f"/>
+            <concept id="18" label="Density">
+                <sense domains="[chemistry]"
+                    gloss="the amount per unit size" number="03865563"
+                    pos="n" words="[density, denseness]"/>
+            </concept>
+            <concept id="19" label="n=sin i/sin r"/>
+            <concept id="20" label="White light"/>
+            <concept id="21" label="Constituent colors"/>
+            <concept id="22" label="Diffraction grating">
+                <sense domains="[optics]"
+                    gloss="a surface with many parallel grooves in it; disperses a beam of light (or other electromagnetic radiation) into its wavelengths to produce its spectrum"
+                    number="02568933" pos="n" words="[diffraction_grating, grating]"/>
+            </concept>
+            <concept id="23" label="Prism">
+                <sense domains="[optics]"
+                    gloss="triangular shape and made of glass or quartz; used to deviate a beam or invert an image"
+                    number="03174157" pos="n" words="[prism, optical_prism]"/>
+            </concept>
+            <concept id="24" label="Wavelength">
+                <sense domains="[factotum]"
+                    gloss="a shared orientation leading to mutual understanding; &quot;they are on the same wavelength&quot;"
+                    number="04706007" pos="n" words="[wavelength]"/>
+            </concept>
+            <concept id="25" label="m">
+                <sense domains="[chemistry]"
+                    gloss="concentration measured by the number of moles of solute per liter of solvent"
+                    number="03934923" pos="n" words="[molarity, molar_concentration, M]"/>
+            </concept>
+            <concept id="26" label="Constructive">
+                <sense domains="[quality]"
+                    gloss="emphasizing what is laudable or hopeful or to the good; &quot;constructive criticism&quot;"
+                    number="01747562" pos="a" words="[constructive]"/>
+            </concept>
+            <concept id="27" label="Destructive">
+                <sense domains="[factotum]"
+                    gloss="causing destruction or much damage; &quot;a policy that is destructive to the economy&quot;; &quot;destructive criticism&quot;"
+                    number="00552895" pos="a" words="[destructive]"/>
+            </concept>
+            <concept id="28" label="Larger amplitude"/>
+            <concept id="29" label="Smaller amplitude"/>
+            <concept id="30" label="Artificial">
+                <sense domains="[quality]"
+                    gloss="artificially formal; &quot;that artificial humility that her husband hated&quot;; &quot;contrived coyness&quot;; &quot;a stilted letter of acknowledgment&quot;; &quot;when people try to correct their speech they develop a stilted pronunciation&quot;"
+                    number="00075798" pos="a" words="[artificial, contrived, stilted]"/>
+            </concept>
+            <concept id="31" label="Natural">
+                <sense domains="[quality]"
+                    gloss="free of artificiality; sincere and genuine; &quot;an unaffected grace&quot;"
+                    number="00076652" pos="a" words="[unaffected, natural]"/>
+            </concept>
+            <concept id="32" label="Light bulb">
+                <sense domains="[factotum]"
+                    gloss="a glass bulb containing a wire filament (usually tungsten) that emits light when heated"
+                    number="02923710" pos="n" words="[light_bulb, lightbulb, bulb, incandescent_lamp, electric_light, electric-light_bulb]"/>
+            </concept>
+            <concept id="33" label="Sun">
+                <sense domains="[factotum]"
+                    gloss="the rays of the sun; &quot;the shingles were weathered by the sun and wind&quot;"
+                    number="07820384" pos="n" words="[sunlight, sunshine, sun]"/>
+            </concept>
+            <concept id="34" label="Energy">
+                <sense domains="[physics]"
+                    gloss="(physics) the capacity of a physical system to do work; the units of energy are joules or ergs; &quot;energy can take a wide variety of forms&quot;"
+                    number="07794689" pos="n" words="[energy]"/>
+            </concept>
+            <concept id="35" label="Mediums">
+                <sense domains="[quality]"
+                    gloss="around the middle of a scale of evaluation of physical measures; &quot;an orange of average size&quot;; &quot;intermediate capacity&quot;; &quot;a plane with intermediate range&quot;; &quot;medium bombers&quot;"
+                    number="01468318" pos="a" words="[average, intermediate, medium]"/>
+            </concept>
+            <concept id="36" label="Sound waves">
+                <sense domains="[acoustics]"
+                    gloss="(acoustics) a wave that transmits sound"
+                    number="05474140" pos="n" words="[sound_wave]"/>
+            </concept>
+            <concept id="37" label="Water">
+                <sense domains="[chemistry, geography]"
+                    gloss="a clear colorless odorless tasteless liquid; &quot;he asked for a drink of water&quot;"
+                    number="10650211" pos="n" words="[water, H2O]"/>
+            </concept>
+            <concept id="38" label="Glass">
+                <sense domains="[furniture]"
+                    gloss="a mirror; usually a ladies' dressing mirror"
+                    number="02941072" pos="n" words="[looking_glass, glass]"/>
+            </concept>
+            <concept id="39" label="Perspex">
+                <sense domains="[chemistry]"
+                    gloss="(trademark) a transparent thermoplastic acrylic resin"
+                    number="10455499" pos="n" words="[Lucite, Perspex]"/>
+            </concept>
+            <concept id="40" label="Straight lines">
+                <sense domains="[geometry]"
+                    gloss="a line traced by a point traveling in a constant direction; a line of zero curvature; &quot;the shortest distance between two points is a straight line&quot;"
+                    number="09992545" pos="n" words="[straight_line]"/>
+            </concept>
+            <concept id="41" label="Photons"/>
+            <concept id="42" label="3x10^8 ms^-1"/>
+            <concept id="43" label="Waves">
+                <sense domains="[physics]"
+                    gloss="(physics) a progressive disturbance propagated without displacement of the medium itself"
+                    number="05473259" pos="n" words="[wave, undulation]"/>
+            </concept>
+            <concept id="44" label="Transverse">
+                <sense domains="[factotum]"
+                    gloss="extending or lying across; in a crosswise direction; &quot;cross members should be all steel&quot;; &quot;from the transverse hall the stairway ascends gracefully&quot;; &quot;transversal vibrations&quot;"
+                    number="01387449" pos="a" words="[cross(a), crossing(a), transverse, transversal, thwartwise]"/>
+            </concept>
+            <concept id="45" label="Longitudinal">
+                <sense domains="[astronomy, geography]"
+                    gloss="of or relating to lines of longitude; &quot;longitudinal reckoning by the navigator&quot;"
+                    number="02625179" pos="a" words="[longitudinal]"/>
+                <sense domains="[factotum]"
+                    gloss="running lengthwise; &quot;a thin longitudinal strip&quot;; &quot;longitudinal measurements of the hull&quot;"
+                    number="01387072" pos="a" words="[longitudinal]"/>
+                <sense domains="[time_period]"
+                    gloss="over an extended time; &quot;a longitudinal study of twins&quot;"
+                    number="01382927" pos="a" words="[longitudinal]"/>
+            </concept>
+            <concept id="46" label="Standing">
+                <sense domains="[factotum]"
+                    gloss="the act of assuming or maintaining an erect upright position"
+                    number="00224022" pos="n" words="[standing]"/>
+            </concept>
+            <concept id="47" label="Water waves"/>
+            <concept id="48" label="Measurable quantities"/>
+            <concept id="49" label="Velocity">
+                <sense domains="[metrology, physics, transport]"
+                    gloss="distance travelled per unit time"
+                    number="10978183" pos="n" words="[speed, velocity]"/>
+            </concept>
+            <concept id="50" label="Frequency">
+                <sense domains="[metrology, physics]"
+                    gloss="the number of occurrences within a given time period (usually 1 second); &quot;the frequency of modulation was 40 cycles per second&quot;"
+                    number="10975635" pos="n" words="[frequency, frequence, oftenness]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="51" label="represents"/>
+            <linking-phrase id="52" label="sources"/>
+            <linking-phrase id="53" label="its a form of"/>
+            <linking-phrase id="54" label="can travel through"/>
+            <linking-phrase id="55" label="travels in"/>
+            <linking-phrase id="56" label="shows characteristics of"/>
+            <linking-phrase id="57" label="forms"/>
+            <linking-phrase id="58" label="from"/>
+            <linking-phrase id="59" label="occurs when light travels to a medium of different"/>
+            <linking-phrase id="60" label="law"/>
+            <linking-phrase id="61" label="splitting of"/>
+            <linking-phrase id="62" label="can be"/>
+            <linking-phrase id="63" label="can be"/>
+            <linking-phrase id="64" label="projected onto a"/>
+            <linking-phrase id="65" label="cannot be projected onto a"/>
+            <linking-phrase id="66" label="including"/>
+            <linking-phrase id="67" label="can be"/>
+            <linking-phrase id="68" label="can be"/>
+            <linking-phrase id="69" label="mirror formula"/>
+            <linking-phrase id="70" label="mirror formula"/>
+            <linking-phrase id="71" label="into its"/>
+            <linking-phrase id="72" label="using a"/>
+            <linking-phrase id="73" label="of different"/>
+            <linking-phrase id="74" label="unit"/>
+            <linking-phrase id="75" label="occurs when two waves combine to form a wave of"/>
+            <linking-phrase id="76" label="occurs when two waves combine to form a wave of"/>
+            <linking-phrase id="77" label="measured in"/>
+            <linking-phrase id="78" label="measured in"/>
+            <linking-phrase id="79" label="such as"/>
+            <linking-phrase id="80" label="such as"/>
+            <linking-phrase id="81" label="give us"/>
+            <linking-phrase id="82" label="include"/>
+            <linking-phrase id="83" label="in packets"/>
+            <linking-phrase id="84" label="with speed"/>
+            <linking-phrase id="85" label="include"/>
+            <linking-phrase id="86" label="have"/>
+            <linking-phrase id="87" label="are like"/>
+            <linking-phrase id="88" label="wich are"/>
+            <linking-phrase id="89" label="include"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="51"/>
+            <connection from-id="51" to-id="2"/>
+            <connection from-id="51" to-id="3"/>
+            <connection from-id="51" to-id="4"/>
+            <connection from-id="51" to-id="5"/>
+            <connection from-id="51" to-id="6"/>
+            <connection from-id="1" to-id="52"/>
+            <connection from-id="52" to-id="30"/>
+            <connection from-id="52" to-id="31"/>
+            <connection from-id="1" to-id="53"/>
+            <connection from-id="53" to-id="34"/>
+            <connection from-id="1" to-id="54"/>
+            <connection from-id="54" to-id="35"/>
+            <connection from-id="1" to-id="55"/>
+            <connection from-id="55" to-id="40"/>
+            <connection from-id="1" to-id="56"/>
+            <connection from-id="56" to-id="43"/>
+            <connection from-id="3" to-id="57"/>
+            <connection from-id="57" to-id="7"/>
+            <connection from-id="3" to-id="58"/>
+            <connection from-id="58" to-id="11"/>
+            <connection from-id="4" to-id="59"/>
+            <connection from-id="59" to-id="18"/>
+            <connection from-id="4" to-id="60"/>
+            <connection from-id="60" to-id="19"/>
+            <connection from-id="5" to-id="61"/>
+            <connection from-id="61" to-id="20"/>
+            <connection from-id="6" to-id="62"/>
+            <connection from-id="62" to-id="26"/>
+            <connection from-id="62" to-id="27"/>
+            <connection from-id="7" to-id="63"/>
+            <connection from-id="63" to-id="8"/>
+            <connection from-id="63" to-id="9"/>
+            <connection from-id="8" to-id="64"/>
+            <connection from-id="64" to-id="10"/>
+            <connection from-id="9" to-id="65"/>
+            <connection from-id="65" to-id="10"/>
+            <connection from-id="11" to-id="66"/>
+            <connection from-id="66" to-id="12"/>
+            <connection from-id="12" to-id="67"/>
+            <connection from-id="67" to-id="13"/>
+            <connection from-id="67" to-id="14"/>
+            <connection from-id="14" to-id="68"/>
+            <connection from-id="68" to-id="15"/>
+            <connection from-id="68" to-id="16"/>
+            <connection from-id="15" to-id="69"/>
+            <connection from-id="69" to-id="17"/>
+            <connection from-id="16" to-id="70"/>
+            <connection from-id="70" to-id="17"/>
+            <connection from-id="20" to-id="71"/>
+            <connection from-id="71" to-id="21"/>
+            <connection from-id="20" to-id="72"/>
+            <connection from-id="72" to-id="22"/>
+            <connection from-id="72" to-id="23"/>
+            <connection from-id="21" to-id="73"/>
+            <connection from-id="73" to-id="24"/>
+            <connection from-id="24" to-id="74"/>
+            <connection from-id="74" to-id="25"/>
+            <connection from-id="26" to-id="75"/>
+            <connection from-id="75" to-id="28"/>
+            <connection from-id="27" to-id="76"/>
+            <connection from-id="76" to-id="29"/>
+            <connection from-id="28" to-id="77"/>
+            <connection from-id="77" to-id="25"/>
+            <connection from-id="29" to-id="78"/>
+            <connection from-id="78" to-id="25"/>
+            <connection from-id="30" to-id="79"/>
+            <connection from-id="79" to-id="32"/>
+            <connection from-id="31" to-id="80"/>
+            <connection from-id="80" to-id="33"/>
+            <connection from-id="33" to-id="81"/>
+            <connection from-id="81" to-id="34"/>
+            <connection from-id="35" to-id="82"/>
+            <connection from-id="82" to-id="37"/>
+            <connection from-id="82" to-id="38"/>
+            <connection from-id="82" to-id="39"/>
+            <connection from-id="40" to-id="83"/>
+            <connection from-id="83" to-id="41"/>
+            <connection from-id="40" to-id="84"/>
+            <connection from-id="84" to-id="42"/>
+            <connection from-id="43" to-id="85"/>
+            <connection from-id="85" to-id="44"/>
+            <connection from-id="85" to-id="45"/>
+            <connection from-id="85" to-id="46"/>
+            <connection from-id="43" to-id="86"/>
+            <connection from-id="86" to-id="48"/>
+            <connection from-id="44" to-id="87"/>
+            <connection from-id="87" to-id="47"/>
+            <connection from-id="45" to-id="88"/>
+            <connection from-id="88" to-id="36"/>
+            <connection from-id="48" to-id="89"/>
+            <connection from-id="89" to-id="49"/>
+            <connection from-id="89" to-id="50"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="-18" y="20"/>
+            <concept-appearance id="2" x="-618" y="50"/>
+            <concept-appearance id="3" x="-570" y="145"/>
+            <concept-appearance id="4" x="-398" y="199"/>
+            <concept-appearance id="5" x="-287" y="199"/>
+            <concept-appearance id="6" x="-167" y="194"/>
+            <concept-appearance id="7" x="-632" y="257"/>
+            <concept-appearance id="8" x="-661" y="365"/>
+            <concept-appearance id="9" x="-584" y="365"/>
+            <concept-appearance id="10" x="-628" y="494"/>
+            <concept-appearance id="11" x="-533" y="254"/>
+            <concept-appearance id="12" x="-509" y="364"/>
+            <concept-appearance id="13" x="-524" y="474"/>
+            <concept-appearance id="14" x="-455" y="472"/>
+            <concept-appearance id="15" x="-543" y="564"/>
+            <concept-appearance id="16" x="-447" y="563"/>
+            <concept-appearance id="17" x="-505" y="673"/>
+            <concept-appearance id="18" x="-432" y="348"/>
+            <concept-appearance id="19" x="-367" y="347"/>
+            <concept-appearance id="20" x="-286" y="350"/>
+            <concept-appearance id="21" x="-369" y="453"/>
+            <concept-appearance id="22" x="-284" y="453"/>
+            <concept-appearance id="23" x="-211" y="456"/>
+            <concept-appearance id="24" x="-371" y="566"/>
+            <concept-appearance id="25" x="-357" y="666"/>
+            <concept-appearance id="26" x="-147" y="349"/>
+            <concept-appearance id="27" x="-55" y="349"/>
+            <concept-appearance id="28" x="-142" y="476"/>
+            <concept-appearance id="29" x="-40" y="481"/>
+            <concept-appearance id="30" x="-72" y="146"/>
+            <concept-appearance id="31" x="15" y="144"/>
+            <concept-appearance id="32" x="-70" y="248"/>
+            <concept-appearance id="33" x="18" y="246"/>
+            <concept-appearance id="34" x="101" y="158"/>
+            <concept-appearance id="35" x="162" y="162"/>
+            <concept-appearance id="36" x="500" y="317"/>
+            <concept-appearance id="37" x="94" y="295"/>
+            <concept-appearance id="38" x="162" y="295"/>
+            <concept-appearance id="39" x="221" y="294"/>
+            <concept-appearance id="40" x="299" y="114"/>
+            <concept-appearance id="41" x="285" y="261"/>
+            <concept-appearance id="42" x="360" y="261"/>
+            <concept-appearance id="43" x="443" y="97"/>
+            <concept-appearance id="44" x="418" y="204"/>
+            <concept-appearance id="45" x="492" y="209"/>
+            <concept-appearance id="46" x="563" y="206"/>
+            <concept-appearance id="47" x="426" y="316"/>
+            <concept-appearance id="48" x="628" y="158"/>
+            <concept-appearance id="49" x="608" y="308"/>
+            <concept-appearance id="50" x="675" y="308"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="51" x="-247" y="116"/>
+            <linking-phrase id="52" x="-25" y="111"/>
+            <linking-phrase id="53" x="55" y="121"/>
+            <linking-phrase id="54" x="66" y="81"/>
+            <linking-phrase id="55" x="188" y="80"/>
+            <linking-phrase id="56" x="279" y="49"/>
+            <linking-phrase id="57" x="-594" y="215"/>
+            <linking-phrase id="58" x="-544" y="213"/>
+            <linking-phrase id="59" x="-440" y="266"/>
+            <linking-phrase id="60" x="-375" y="299"/>
+            <linking-phrase id="61" x="-280" y="287"/>
+            <linking-phrase id="62" x="-145" y="293"/>
+            <linking-phrase id="63" x="-638" y="332"/>
+            <linking-phrase id="64" x="-664" y="441"/>
+            <linking-phrase id="65" x="-590" y="440"/>
+            <linking-phrase id="66" x="-524" y="339"/>
+            <linking-phrase id="67" x="-504" y="441"/>
+            <linking-phrase id="68" x="-495" y="536"/>
+            <linking-phrase id="69" x="-555" y="638"/>
+            <linking-phrase id="70" x="-453" y="640"/>
+            <linking-phrase id="71" x="-324" y="416"/>
+            <linking-phrase id="72" x="-266" y="417"/>
+            <linking-phrase id="73" x="-360" y="539"/>
+            <linking-phrase id="74" x="-364" y="632"/>
+            <linking-phrase id="75" x="-160" y="418"/>
+            <linking-phrase id="76" x="-63" y="418"/>
+            <linking-phrase id="77" x="-253" y="570"/>
+            <linking-phrase id="78" x="-183" y="594"/>
+            <linking-phrase id="79" x="-79" y="221"/>
+            <linking-phrase id="80" x="12" y="219"/>
+            <linking-phrase id="81" x="70" y="236"/>
+            <linking-phrase id="82" x="149" y="246"/>
+            <linking-phrase id="83" x="277" y="218"/>
+            <linking-phrase id="84" x="345" y="221"/>
+            <linking-phrase id="85" x="426" y="166"/>
+            <linking-phrase id="86" x="528" y="142"/>
+            <linking-phrase id="87" x="418" y="275"/>
+            <linking-phrase id="88" x="492" y="277"/>
+            <linking-phrase id="89" x="644" y="253"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

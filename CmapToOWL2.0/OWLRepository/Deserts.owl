@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns="http://www.owl-ontologies.com/unnamed.owl#"
+  xml:base="http://www.owl-ontologies.com/unnamed.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="Silt"/>
+  <owl:Class rdf:ID="Dunes"/>
+  <owl:Class rdf:ID="Desert"/>
+  <owl:Class rdf:ID="Desert_varnish_tones"/>
+  <owl:Class rdf:ID="Sand">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Composition"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Gravel">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Composition"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Aeolian_landform"/>
+  <owl:Class rdf:about="#Composition">
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Gravel"/>
+          <owl:Class rdf:about="#Sand"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Arid_climates"/>
+  <owl:ObjectProperty rdf:ID="have_Composition">
+    <rdfs:range rdf:resource="#Composition"/>
+    <rdfs:domain rdf:resource="#Desert"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="have_Desert_varnish_tones">
+    <rdfs:range rdf:resource="#Desert_varnish_tones"/>
+    <rdfs:domain rdf:resource="#Desert"/>
+  </owl:ObjectProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.2, Build 355)  http://protege.stanford.edu -->

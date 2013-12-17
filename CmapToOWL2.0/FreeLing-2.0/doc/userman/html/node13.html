@@ -1,0 +1,282 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Sample Configuration File</TITLE>
+<META NAME="description" CONTENT="Sample Configuration File">
+<META NAME="keywords" CONTENT="userman">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="userman.css">
+
+<LINK REL="previous" HREF="node12.html">
+<LINK REL="up" HREF="node11.html">
+<LINK REL="next" HREF="node14.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html278"
+  HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html274"
+  HREF="node11.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html270"
+  HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html276"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html279"
+  HREF="node14.html">Tokenizer rules file</A>
+<B> Up:</B> <A NAME="tex2html275"
+  HREF="node11.html">Configuration File and Command</A>
+<B> Previous:</B> <A NAME="tex2html271"
+  HREF="node12.html">Valid options</A>
+ &nbsp; <B>  <A NAME="tex2html277"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H2><A NAME="SECTION00322000000000000000"></A>
+<A NAME="ss-config"></A>
+<BR>
+Sample Configuration File
+</H2>
+
+<P>
+A sample configuration file follows.  This is only a sample, and
+  probably won't work if you use it as is.  You can start using
+  freeling with the default configuration files which -after
+  installation- are located in <TT>/usr/local/share/FreeLing/config</TT>
+  (note than prefix <TT>/usr/local</TT> may differ if you specified an
+  alternative location when installing FreeLing).
+  You also can use those files as a starting point to customize 
+  one config file to suit your needs.
+
+<P>
+
+<DIV ALIGN="CENTER"><TABLE CELLPADDING=3>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT>
+#### default configuration file for spanish analyzer</TT></SMALL></TD>
+</TR>
+<TR><TD></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+####-------- Trace options. Only effective if we have compiled with -DVERBOSE. </TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+####-------- For development purposes only.</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+TraceLevel=0</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+TraceModule=0x0000</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+####-------- General options </TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+Lang=es</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+# Input/output formats. (plain, token, splitted, morfo, tagged, sense, parsed, dep) </TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+InputFormat=plain</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+OutputFormat=morfo</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+# consider each newline as a sentence end</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+AlwaysFlush=no</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+####-------- Tokenizer options</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+TokenizerFile="/usr/local/share/FreeLing/es/tokenizer.dat"</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+####-------- Splitter options</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+SplitterFile="/usr/local/share/FreeLing/es/splitter.dat"
+####-------- Morfo options</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+SuffixAnalysis=yes</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+MultiwordsDetection=yes</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+NumbersDetection=yes</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+PunctuationDetection=yes</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+DatesDetection=yes</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+QuantitiesDetection=yes</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+DictionarySearch=yes</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+ProbabilityAssignment=yes</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+NERecognition=yes</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+DecimalPoint=","</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+ThousandPoint="."</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+LocutionsFile=/usr/local/share/FreeLing/es/locucions.dat </TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+QuantitiesFile=/usr/local/share/FreeLing/es/quantities.dat</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+SuffixFile=/usr/local/share/FreeLing/es/sufixos.dat</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+ProbabilityFile=/usr/local/share/FreeLing/es/probabilitats.dat</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+DictionaryFile=/usr/local/share/FreeLing/es/maco.db</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+NPDataFile=/usr/local/share/FreeLing/es/np.dat</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+PunctuationFile=/usr/local/share/FreeLing/common/punct.dat</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+ProbabilityThreshold=0.001</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+TitleLength=0</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+####--------Tagger options</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+Tagger=hmm</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+TaggerHMMFile=/usr/local/share/FreeLing/es/tagger.dat</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+TaggerRelaxFile=/usr/local/share/FreeLing/es/constr_gram.dat</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+TaggerRelaxMaxIter=500</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+TaggerRelaxScaleFactor=670.0</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+TaggerRelaxEpsilon=0.001</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+####--------- NEC options</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+NEClassification=no</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+NECFilePrefix=/usr/local/share/FreeLing/es/nec</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+####--------- Sense annotation options</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+SenseAnnotation=none</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+SenseFile=/usr/local/share/FreeLing/es/senses16.db</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+WNFile=/usr/local/share/FreeLing/common/wn16.db</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+DuplicateAnalysis=no</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+####--------- Parser options</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+GrammarFile=/usr/local/share/FreeLing/es/grammar-dep.dat</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+####--------- Dependency Parser options</TT></SMALL></TD>
+</TR>
+<TR><TD ALIGN="LEFT" VALIGN="TOP" WIDTH=794><SMALL CLASS="SMALL"><TT> 
+HeuristicsFile=/usr/local/share/FreeLing/es/dependences.dat</TT></SMALL></TD>
+</TR>
+</TABLE></DIV>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html278"
+  HREF="node14.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html274"
+  HREF="node11.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html270"
+  HREF="node12.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html276"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html279"
+  HREF="node14.html">Tokenizer rules file</A>
+<B> Up:</B> <A NAME="tex2html275"
+  HREF="node11.html">Configuration File and Command</A>
+<B> Previous:</B> <A NAME="tex2html271"
+  HREF="node12.html">Valid options</A>
+ &nbsp; <B>  <A NAME="tex2html277"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2008-01-24
+</ADDRESS>
+</BODY>
+</HTML>

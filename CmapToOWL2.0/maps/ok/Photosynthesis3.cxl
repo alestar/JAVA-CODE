@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Photosynthesis3</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Photosynthesis">
+                <sense domains="[chemistry]"
+                    gloss="synthesis of compounds with the aid of radiant energy (especially in plants)"
+                    number="09705163" pos="n" words="[photosynthesis]"/>
+            </concept>
+            <concept id="2" label="Light energy"/>
+            <concept id="3" label="Water">
+                <sense domains="[philosophy]"
+                    gloss="(archaic) once thought to be one of four elements composing the universe"
+                    number="10651368" pos="n" words="[water]"/>
+            </concept>
+            <concept id="4" label="Carbon dioxide molecules"/>
+            <concept id="5" label="Chloroplasts"/>
+            <concept id="6" label="Artificial light"/>
+            <concept id="7" label="Sun">
+                <sense domains="[astronomy]"
+                    gloss="a typical star that is the source of light and heat for the planets in the solar system; &quot;the sun contains 99.85% of the mass in the solar system&quot;"
+                    number="06765647" pos="n" words="[sun]"/>
+                <sense domains="[factotum]"
+                    gloss="the rays of the sun; &quot;the shingles were weathered by the sun and wind&quot;"
+                    number="07820384" pos="n" words="[sunlight, sunshine, sun]"/>
+                <sense domains="[person]"
+                    gloss="a person considered as a source of warmth or energy or glory etc"
+                    number="07621466" pos="n" words="[sun]"/>
+                <sense domains="[astronomy]"
+                    gloss="any star around which a planetary system evolves"
+                    number="06765862" pos="n" words="[sun]"/>
+                <sense domains="[time_period]"
+                    gloss="first day of the week; observed as a day of rest and worship by most Christians"
+                    number="10883776" pos="n" words="[Sunday, Lord's_Day, Sun]"/>
+                <sense domains="[factotum]"
+                    gloss="expose one's body to the sun"
+                    number="00070703" pos="v" words="[sun, sunbathe]"/>
+                <sense domains="[factotum]"
+                    gloss="expose to as if to sun rays"
+                    number="01446194" pos="v" words="[sun]"/>
+            </concept>
+            <concept id="8" label="Molecules are split"/>
+            <concept id="9" label="Environment">
+                <sense domains="[geography]"
+                    gloss="the area in which something exists or lives: &quot;the country--the flat agricultural surround&quot;"
+                    number="06315687" pos="n" words="[environment, environs, surroundings, surround]"/>
+            </concept>
+            <concept id="10" label="Air">
+                <sense domains="[philosophy]"
+                    gloss="(archaic) once thought to be one of four elements composing the universe"
+                    number="10647377" pos="n" words="[air]"/>
+            </concept>
+            <concept id="11" label="Green leaf"/>
+            <concept id="12" label="Oxygen ions"/>
+            <concept id="13" label="Hydrogen ions"/>
+            <concept id="14" label=".03 carbon dioxide"/>
+            <concept id="15" label="Oxygen molecules"/>
+            <concept id="16" label="Glucose molecules"/>
+            <concept id="17" label="Stem cells"/>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="18" label="uses"/>
+            <linking-phrase id="19" label="is absorbed by"/>
+            <linking-phrase id="20" label="is from"/>
+            <linking-phrase id="21" label="to affect"/>
+            <linking-phrase id="22" label="comes from the"/>
+            <linking-phrase id="23" label="where"/>
+            <linking-phrase id="24" label="comes from the"/>
+            <linking-phrase id="25" label="combine to form"/>
+            <linking-phrase id="26" label="are in"/>
+            <linking-phrase id="27" label="into"/>
+            <linking-phrase id="28" label="is"/>
+            <linking-phrase id="29" label="produce"/>
+            <linking-phrase id="30" label="form"/>
+            <linking-phrase id="31" label="combine to form"/>
+            <linking-phrase id="32" label="are released to the"/>
+            <linking-phrase id="33" label="produce"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="18"/>
+            <connection from-id="18" to-id="2"/>
+            <connection from-id="18" to-id="3"/>
+            <connection from-id="18" to-id="4"/>
+            <connection from-id="2" to-id="19"/>
+            <connection from-id="19" to-id="5"/>
+            <connection from-id="2" to-id="20"/>
+            <connection from-id="20" to-id="6"/>
+            <connection from-id="20" to-id="7"/>
+            <connection from-id="2" to-id="21"/>
+            <connection from-id="21" to-id="8"/>
+            <connection from-id="3" to-id="22"/>
+            <connection from-id="22" to-id="9"/>
+            <connection from-id="3" to-id="23"/>
+            <connection from-id="23" to-id="8"/>
+            <connection from-id="4" to-id="24"/>
+            <connection from-id="24" to-id="10"/>
+            <connection from-id="4" to-id="25"/>
+            <connection from-id="25" to-id="16"/>
+            <connection from-id="5" to-id="26"/>
+            <connection from-id="26" to-id="11"/>
+            <connection from-id="26" to-id="17"/>
+            <connection from-id="8" to-id="27"/>
+            <connection from-id="27" to-id="12"/>
+            <connection from-id="27" to-id="13"/>
+            <connection from-id="10" to-id="28"/>
+            <connection from-id="28" to-id="14"/>
+            <connection from-id="11" to-id="29"/>
+            <connection from-id="29" to-id="15"/>
+            <connection from-id="12" to-id="30"/>
+            <connection from-id="30" to-id="15"/>
+            <connection from-id="13" to-id="31"/>
+            <connection from-id="31" to-id="16"/>
+            <connection from-id="15" to-id="32"/>
+            <connection from-id="32" to-id="10"/>
+            <connection from-id="17" to-id="33"/>
+            <connection from-id="33" to-id="15"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="340" y="6"/>
+            <concept-appearance id="2" x="204" y="95"/>
+            <concept-appearance id="3" x="351" y="106"/>
+            <concept-appearance id="4" x="496" y="99"/>
+            <concept-appearance id="5" x="47" y="205"/>
+            <concept-appearance id="6" x="167" y="213"/>
+            <concept-appearance id="7" x="274" y="221"/>
+            <concept-appearance id="8" x="359" y="228"/>
+            <concept-appearance id="9" x="475" y="216"/>
+            <concept-appearance id="10" x="593" y="226"/>
+            <concept-appearance id="11" x="35" y="350"/>
+            <concept-appearance id="12" x="300" y="356"/>
+            <concept-appearance id="13" x="430" y="353"/>
+            <concept-appearance id="14" x="647" y="345"/>
+            <concept-appearance id="15" x="222" y="471"/>
+            <concept-appearance id="16" x="523" y="353"/>
+            <concept-appearance id="17" x="136" y="349"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="18" x="349" y="73"/>
+            <linking-phrase id="19" x="116" y="157"/>
+            <linking-phrase id="20" x="209" y="188"/>
+            <linking-phrase id="21" x="275" y="177"/>
+            <linking-phrase id="22" x="409" y="175"/>
+            <linking-phrase id="23" x="349" y="183"/>
+            <linking-phrase id="24" x="552" y="179"/>
+            <linking-phrase id="25" x="524" y="303"/>
+            <linking-phrase id="26" x="61" y="287"/>
+            <linking-phrase id="27" x="358" y="322"/>
+            <linking-phrase id="28" x="631" y="309"/>
+            <linking-phrase id="29" x="93" y="448"/>
+            <linking-phrase id="30" x="255" y="429"/>
+            <linking-phrase id="31" x="458" y="303"/>
+            <linking-phrase id="32" x="555" y="485"/>
+            <linking-phrase id="33" x="157" y="426"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Realms -->
+  <owl:Class rdf:ID="Turbidity"/>
+  <owl:Class rdf:ID="Salinity"/>
+  <owl:Class rdf:ID="PlanetaryRealm"/>
+  <owl:Class rdf:ID="PlanetaryLayer"/>
+  <owl:Class rdf:ID="Ocean"/>
+  <owl:Class rdf:ID="PlanetaryBoundary"/>
+  <owl:Class rdf:ID="PlanetaryPhenomena"/>
+  <owl:Class rdf:ID="Photosynthesis"/>
+  <owl:Class rdf:ID="Temperature"/>
+  <owl:Class rdf:ID="Index"/>
+  <owl:Class rdf:ID="State"/>
+  <owl:Class rdf:ID="Height"/>
+  <owl:Class rdf:ID="Ice"/>
+  <owl:Class rdf:ID="PlanetaryScience"/>
+  
+  <owl:Class rdf:ID="Abyssal">
+    <rdfs:subClassOf rdf:resource="#WaterBodyLayer" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="AbyssopelagicZone">
+    <rdfs:subClassOf rdf:resource="#WaterBodyLayer" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="AphoticZone">
+    <rdfs:subClassOf rdf:resource="#WaterBodyLayer"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="below"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#PhoticZone" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhysicalProperty"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Turbidity" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The aphotic zone is the portion of a lake or ocean where there is little or no sunlight. It is formally defined as the depths beyond which less than 1% of sunlight penetrates. Consequently, bioluminescence is essentially the only light found in this zone. Most food comes from dead organisms sinking to the bottom of the lake or ocean from other zones. The depth of the aphotic zone can be greatly affected by such things as turbidity and the season of the year. The aphotic zone underlies the photic zone, which is that portion of the ocean directly affected by sunlight.</rdfs:comment>
+  </owl:Class>
+
+   <owl:Class rdf:ID="BarrierLayer">
+    <rdfs:subClassOf rdf:resource="#WaterBodyLayer" />
+    <rdfs:comment xml:lang="en">The depth range, where it exists, between the bottom of the oceanic surface mixed layer and the thermocline, usually at a depth between 30 and 80 m.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Bathyal">
+    <rdfs:subClassOf rdf:resource="#WaterBodyLayer" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="BathypelagicZone">
+    <rdfs:subClassOf rdf:resource="#WaterBodyLayer" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="BenthicZone">
+    <rdfs:subClassOf rdf:resource="#WaterBodyLayer"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#below" />
+        <owl:allValuesFrom rdf:resource="#DemersalZone" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Benthic means anything associated with or happening on the bottom of a body of water. The Benthic Zone of the ocean is the bottom ocean zone ranging from the deepest parts of the ocean to the tidal affected areas. The most productive region of the benthic zone is the area over the continental margin, which is unaffected by the tides.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="CarbonateCompensationLevel">
+    <owl:equivalentClass rdf:resource="#WaterBodyBoundary"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DemersalZone">
+    <rdfs:subClassOf rdf:resource="#WaterBodyLayer"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="above"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#BenthicZone" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPlanetaryRealm"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#ProfundalZone" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The demersal zone is the part of the sea or ocean (or deep lake) comprising the water column that is near to (and is significantly affected by) the seabed and the benthos. The demersal zone is just above the benthic zone and forms a layer of the larger profundal zone.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="EuphoticZone">
+    <owl:equivalentClass rdf:resource="#PhoticZone"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Hadal">
+    <rdfs:subClassOf rdf:resource="#WaterBodyLayer" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Halocline">
+    <rdfs:subClassOf rdf:resource="#WaterBodyLayer" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProperty" />
+        <owl:allValuesFrom rdf:resource="#Salinity" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">In oceanography, a Halocline is a strong, vertical salinity gradient. Because salinity (in concert with temperature) affects the density of seawater, it can play a role in its vertical stratification.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LimneticZone">
+    <rdfs:subClassOf rdf:resource="#WaterBodyLayer"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="surroundedBy"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#LittoralZone" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#above" />
+        <owl:allValuesFrom rdf:resource="#ProfundalZone" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The limnetic zone is the well-lit, open surface waters farther from shore in a lake. It is surrounded by the littoral zone and above the profundal zone</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LittoralZone">
+    <rdfs:subClassOf rdf:resource="#OceanRegion"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MesopelagicZone">
+    <rdfs:subClassOf rdf:resource="#WaterBodyLayer" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="MixedLayer">
+    <rdfs:subClassOf rdf:resource="#WaterBodyLayer"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Neritic">
+    <rdfs:subClassOf rdf:resource="#WaterBodyLayer" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="OceanRegion">
+    <rdfs:subClassOf rdf:resource="#PlanetaryRealm" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPlanetaryRealm" />
+        <owl:allValuesFrom rdf:resource="#Ocean"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="WaterBodyLayer">
+    <rdfs:subClassOf rdf:resource="#PlanetaryLayer" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPlanetaryRealm" />
+        <owl:allValuesFrom rdf:resource="#Ocean"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="WaterBodyBoundary">
+    <rdfs:subClassOf rdf:resource="#PlanetaryBoundary" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPlanetaryRealm" />
+        <owl:allValuesFrom rdf:resource="#Ocean"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="OceanPhenomena">
+    <rdfs:subClassOf rdf:resource="#PlanetaryPhenomena"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Ocean"/>
+        <owl:onProperty rdf:resource="#hasPlanetaryRealm"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PelagicSubZone">
+    <rdfs:subClassOf rdf:resource="#OceanRegion"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPlanetaryRealm" />
+        <owl:allValuesFrom rdf:resource="#PelagicZone" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PelagicZone">
+    <rdfs:subClassOf rdf:resource="#OceanRegion"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPart"/>	
+		</owl:onProperty>
+          <owl:allValuesFrom rdf:resource="#PelagicSubZone"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment>The pelagic zone is the part of the open sea or ocean that is not near the coast.
+    </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Polynya">
+    <rdfs:subClassOf rdf:resource="#OceanRegion"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#surroundedBy" />
+        <owl:allValuesFrom rdf:resource="#SeaIce" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment>A polynya is any non-linear area of open water surrounded by sea ice. It is now used as geographical term for areas of sea in Arctic or Antarctic regions which remain unfrozen for much of the year.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ProfundalZone">
+    <rdfs:subClassOf rdf:resource="#WaterBodyLayer"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPlanetaryRealm" />
+        <owl:allValuesFrom rdf:resource="#AphoticZone" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The profundal zone is a deep zone of a body of water, such as an ocean or a lake, located below the range of effective light penetration. This is typically below the thermocline, the vertical zone in the water through which temperature drops rapidly. The lack of light in the profundal zone determines the type of biological community that can live in this region, which is distinctly different from the community in the overlying waters. The profundal zone is part of the aphotic zone.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PhoticZone">
+    <rdfs:subClassOf rdf:resource="#WaterBodyLayer"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProperty" />
+        <owl:allValuesFrom rdf:resource="#Turbidity" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhysicalProcess"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Photosynthesis" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#above" />
+        <owl:allValuesFrom rdf:resource="#AphoticZone" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The photic zone or euphotic zone is the depth of the water whether in a lake or an ocean, that is exposed to sufficient sunlight for photosynthesis to occur. The depth of the euphotic zone can be greatly affected by seasonal turbidity.</rdfs:comment>
+  </owl:Class>
+  
+  <owl:Class rdf:ID="Pycnocline">
+    <rdfs:subClassOf rdf:resource="#WaterBodyLayer" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProperty" />
+        <owl:allValuesFrom rdf:resource="#Salinity" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A pycnocline is a layer across which there is a rapid change in water density with depth. In freshwater environments such as lakes this density change is primarily caused by water temperature, while in seawater environments such as oceans the density change may be caused by changes in water temperature and/or salinity</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SeaSurface">
+    <rdfs:subClassOf rdf:resource="#WaterBodyBoundary"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Thermocline">
+    <rdfs:subClassOf rdf:resource="#WaterBodyLayer"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProperty" />
+        <owl:allValuesFrom rdf:resource="#Temperature" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The thermocline (sometimes metalimnion) is a layer within a body of water or air where the temperature changes rapidly with depth.</rdfs:comment>
+  </owl:Class>
+
+<!-- Properties -->
+  <owl:Class rdf:ID="KaplanSSTIndex">
+    <rdfs:subClassOf rdf:resource="#Index"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="measureOf"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#SeaSurfaceTemperature" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SeaSurfaceTemperature">
+    <rdfs:subClassOf rdf:resource="#Temperature" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPlanetaryRealm" />
+        <owl:allValuesFrom rdf:resource="#SeaSurface" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The temperature of the ocean surface.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SeaState">
+    <rdfs:subClassOf rdf:resource="#State"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SignificantHeight">
+    <rdfs:subClassOf rdf:resource="#Height"/>
+  </owl:Class>
+
+<!-- Sea Ice  -->
+  <owl:Class rdf:ID="CongelationIce">
+    <rdfs:subClassOf rdf:resource="#SeaIce" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="FastIce">
+    <rdfs:subClassOf rdf:resource="#SeaIce" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Floe">
+    <rdfs:subClassOf rdf:resource="#SeaIce"/>
+    <owl:equivalentClass rdf:resource="#IceFloe"/>
+  </owl:Class>
+  <owl:Class rdf:ID="IceFloe"/>
+
+  <owl:Class rdf:ID="FrazilIce">
+    <rdfs:subClassOf rdf:resource="#SeaIce" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Iceberg">
+    <rdfs:subClassOf rdf:resource="#SeaIce" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="PackIce">
+    <rdfs:subClassOf rdf:resource="#SeaIce" />
+  </owl:Class>
+  
+  <owl:Class rdf:ID="SeaIce">
+    <rdfs:subClassOf rdf:resource="#Ice" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPlanetaryRealm"/>
+        <owl:someValuesFrom rdf:resource="#Ocean"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Specifically, ice formed by the freezing of seawater; as opposed, principally, to land ice.  Generally, any ice floating in the sea.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Oceanography">
+    <rdfs:subClassOf rdf:resource="#PlanetaryScience"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Oceanology">
+    <rdfs:subClassOf rdf:resource="#Oceanography"/>
+  </owl:Class>
+
+</rdf:RDF>

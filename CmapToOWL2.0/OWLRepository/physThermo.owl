@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Physical Properties -->
+  <owl:Class rdf:ID="joule_perKilogram_perKelvin"/>
+  <owl:Class rdf:ID="kelvin"/>
+  <owl:Class rdf:ID="Energy"/>
+  <owl:Class rdf:ID="Capacity"/>
+  <owl:Class rdf:ID="PhysicalProperty"/>
+  <owl:Class rdf:ID="Conductivity"/>
+  <owl:Class rdf:ID="watt_perMeter_perKelvin"/>
+  <owl:Class rdf:ID="PhysicalProcess"/>
+  <owl:Class rdf:ID="Physics"/>
+  
+  <owl:Class rdf:ID="BoilingPoint">
+    <rdfs:subClassOf rdf:resource="#ThermodynamicProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MeltingPoint">
+    <rdfs:subClassOf rdf:resource="#ThermodynamicProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="TriplePoint">
+    <rdfs:subClassOf rdf:resource="#ThermodynamicProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SpecificHeat">
+    <rdfs:subClassOf rdf:resource="#ThermodynamicProperty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasDefaultUnit"/>	
+		</owl:onProperty>
+        <owl:hasValue rdf:resource="#joule_perKilogram_perKelvin"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Temperature">
+    <rdfs:subClassOf rdf:resource="#ThermodynamicProperty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#kelvin"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The quantity measured by a thermometer.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ThermalExpansion">
+    <rdfs:subClassOf rdf:resource="#ThermodynamicProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Entropy">
+    <rdfs:subClassOf rdf:resource="#ThermodynamicProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Enthalpy">
+    <rdfs:subClassOf rdf:resource="#Energy"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Heat">
+    <rdfs:subClassOf rdf:resource="#Energy"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="HeatCapacity">
+    <rdfs:subClassOf rdf:resource="#Capacity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="HeatEnergy">
+    <owl:equivalentClass rdf:resource="#Heat"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LatentHeat">
+    <rdfs:subClassOf rdf:resource="#Heat"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ThermodynamicProperty">
+    <rdfs:subClassOf rdf:resource="#PhysicalProperty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhysicalPhenomena"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Heat"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ThermalConductivity">
+    <rdfs:subClassOf rdf:resource="#ThermodynamicProperty"/>
+    <rdfs:subClassOf rdf:resource="#Conductivity"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#watt_perMeter_perKelvin"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SensibleHeat">
+    <rdfs:subClassOf rdf:resource="#Heat"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="StaticTemperature">
+    <rdfs:subClassOf rdf:resource="#Temperature"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="TotalTemperature">
+    <rdfs:subClassOf rdf:resource="#Temperature"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="VirtualTemperature">
+    <rdfs:subClassOf rdf:resource="#Temperature"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="AntennaTemperature">
+    <rdfs:subClassOf rdf:resource="#Temperature"/>
+    <rdfs:comment xml:lang="en">Antenna temperature is a way of expressing the brightness of a radiation source - it is proportional to the power per unit area emitted by the source. In most cases where it is used it corresponds to the thermodynamic or physical temperature of the source being observed. It thus relates the power emitted by the source to an interesting physical property of that source. </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="BrightnessTemperature">
+    <rdfs:subClassOf rdf:resource="#Temperature"/>
+    <rdfs:comment xml:lang="en">A descriptive measure of radiation in terms of the temperature of a hypothetical blackbody emitting an identical amount of radiation at the same wavelength.</rdfs:comment>
+  </owl:Class>
+
+<!-- Processes -->
+  <owl:Class rdf:ID="Heating">
+    <rdfs:subClassOf rdf:resource="#ThermalProcess"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ThermalProcess">
+    <rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Cooling">
+    <rdfs:subClassOf rdf:resource="#ThermalProcess"/>
+    <owl:disjointWith rdf:resource="#Heating"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Adiabatic">
+    <rdfs:subClassOf rdf:resource="#ThermalProcess"/>
+    <rdfs:comment>A process in which a system does not interact with its surroundings by virtue of a temperature difference between them.</rdfs:comment>
+    <rdfs:label>Adiabatic Process</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Diabatic">
+    <rdfs:subClassOf rdf:resource="#ThermalProcess"/>
+    <owl:disjointWith rdf:resource="#Adiabatic"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Thermosteric">
+    <rdfs:subClassOf rdf:resource="#ThermalProcess"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Thermodynamics">
+    <rdfs:subClassOf rdf:resource="#Physics" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="studyOf"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Heat" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+</rdf:RDF>

@@ -1,0 +1,169 @@
+@will be able to be@Subclasificacion
+@has part to@Subclasificacion
+@is@Subclasificacion
+@includes@Subclasificacion
+@can convert to@Subclasificacion
+@help distinguish@Subclasificacion
+@groups@Subclasificacion
+@in some animals may include@Subclasificacion
+@in which@Subclasificacion
+@belonging to the group of@Subclasificacion
+@group@Subclasificacion
+@understands@Subclasificacion
+@can be@Subclasificacion
+@has for subclase@Subclasificacion
+@is one@Subclasificacion
+@is a@Subclasificacion
+@to have for subclase@Subclasificacion
+@is classified in@Subclasificacion
+@is classified as@Subclasificacion
+@classified as@Subclasificacion
+@classified in@Subclasificacion
+@type of@Subclasificacion
+@a type of@Subclasificacion
+@subclase of@Subclasificacion
+@has dependence@Subclasificacion
+@can be classified in@Subclasificacion
+@is included@Subclasificacion
+@one of their classifications@Subclasificacion
+@explains inherited@Subclasificacion
+@contains@Subclasificacion
+@such as@Subclasificacion
+@are@Subclasificacion
+@as it is@Subclasificacion
+@can be covered by@Subclasificacion
+@as in@Subclasificacion
+@that are@Subclasificacion
+@means@Subclasificacion
+@to make specific@Subclasificacion
+@embraces the@Subclasificacion
+@happens in the@Subclasificacion
+@starting from@Subclasificacion
+@can be find in@Subclasificacion
+@constituted by@Subclasificacion
+@is denominated as@Subclasificacion
+@determine@Subclasificacion
+@as@Subclasificacion
+@as are@Subclasificacion
+@include@Subclasificacion
+@elements@Subclasificacion
+@cause@Propiedad
+@include to@Subclasificacion
+@one of its classifications@Subclasificacion
+@structure includes@Subclasificacion
+@known as@Subclasificacion
+@against specific@Subclasificacion
+@e.g.@Subclasificacion
+@Instance like@Instancia
+@has example to@Instancia
+@how@Instancia
+@example@Instancia
+@example of@Instancia
+@has for instance@Instancia
+@to have for instance@Instancia
+@instance to@Instancia
+@instance of@Instancia
+@takes for value@Instancia
+@takes value@Instancia
+@for example@Instancia
+@has example@Instancia
+@composed for@Valor de Propiedad
+@characterized for@Valor de Propiedad
+@have@Propiedad
+@possess@Propiedad
+@is composed of@Propiedad
+@is characterized for@Propiedad
+@has property@Propiedad
+@has@Propiedad
+@possesses@Propiedad
+@composed of@Propiedad
+@compound of@Propiedad
+@it contains@Valor de Propiedad
+@constitute of@Propiedad
+@contain@Propiedad
+@formed for@Valor de Propiedad
+@formed of@Valor de Propiedad
+@formed by@Valor de Propiedad
+@has localization@Valor de Propiedad
+@has member@Valor de Propiedad
+@has part@Valor de Propiedad
+@has portion@Valor de Propiedad
+@type@Valor de Propiedad
+@state@Valor de Propiedad
+@made of@Valor de Propiedad
+@consists of@Valor de Propiedad
+@ability to do@Propiedad
+@relies on@Valor de Propiedad
+@measured in@Valor de Propiedad
+@over time measures@Propiedad
+@measured using@Valor de Propiedad
+@one per second is a@Valor de Propiedad
+@made of many@Valor de Propiedad
+@undergo@Propiedad
+@have characteristic@Valor de Propiedad
+@vary in@Propiedad
+@need@Propiedad
+@classified into@Propiedad
+@from@Propiedad
+@enable response to@Propiedad
+@in@Propiedad
+@stages include@Valor de Propiedad
+@inside@Propiedad
+@outside@Propiedad
+@through@Propiedad
+@then@Propiedad
+@digest@Valor de Propiedad
+@on the surface of the@Propiedad
+@location@Valor de Propiedad
+@are found@Valor de Propiedad
+@because they eat@Propiedad
+@because they pollinate@Propiedad
+@are used to@Propiedad
+@can move@Propiedad
+@do not have@Valor de Propiedad
+@give us@Propiedad
+@above@Subclasificacion
+@like@Subclasificacion
+@units are@Subclasificacion
+@is converted to@Subclasificacion
+@as do some@Subclasificacion
+@explain@Subclasificacion
+@is part of@Valor de Propiedad
+@into@Valor de Propiedad
+@formed@Valor de Propiedad
+@combine to form@Valor de Propiedad
+@make up@Valor de Propiedad
+@composed@Valor de Propiedad
+@more specific is@Valor de Propiedad
+@has prototype@Subclasificacion
+@volcano@Valor de Propiedad
+@diffusion@Valor de Propiedad
+@nitrification@Valor de Propiedad
+@influences@Valor de Propiedad
+@use@Valor de Propiedad
+@studies@Valor de Propiedad
+@offer@Valor de Propiedad
+@transports@Valor de Propiedad
+@wall@Valor de Propiedad
+@sources@Valor de Propiedad
+@forms@Valor de Propiedad
+@law@Valor de Propiedad
+@unit@Valor de Propiedad
+@damage@Valor de Propiedad
+@traps@Valor de Propiedad
+@form@Valor de Propiedad
+@gives@Subclasificacion
+@store@Valor de Propiedad
+@originate@Subclasificacion
+@occurs@Subclasificacion
+@transport@Valor de Propiedad
+@evolve@Subclasificacion
+@examples@Instancia
+@examples of@Instancia
+@may come from@Subclasificacion
+@are made of@Valor de Propiedad
+@most have@Propiedad
+@comes from@Subclasificacion
+@applies to@Subclasificacion
+@usually occurs in@Subclasificacion
+@es un@Subclasificacion

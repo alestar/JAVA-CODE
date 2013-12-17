@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://www.owl-ontologies.com/unnamed.owl#"
+  xml:base="http://www.owl-ontologies.com/unnamed.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="Northern_lights"/>
+  <owl:Class rdf:ID="Dust_particles_from_Sun"/>
+  <owl:Class rdf:ID="High_point"/>
+  <owl:Class rdf:ID="Rain"/>
+  <owl:Class rdf:ID="Hydrogen">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Gases"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Oxygen">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Atmosphere"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Gases"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Wind"/>
+  <owl:Class rdf:ID="Sun_light"/>
+  <owl:Class rdf:ID="Thunderstorms"/>
+  <owl:Class rdf:about="#Gases">
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Oxygen"/>
+          <owl:Class rdf:ID="Carbon_dioxide"/>
+          <owl:Class rdf:about="#Hydrogen"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Peat"/>
+  <owl:Class rdf:ID="Rainbow"/>
+  <owl:Class rdf:ID="Life_on_Earth"/>
+  <owl:Class rdf:ID="Colors"/>
+  <owl:Class rdf:ID="Air_pressure"/>
+  <owl:Class rdf:ID="Small_space"/>
+  <owl:Class rdf:about="#Carbon_dioxide">
+    <rdfs:subClassOf rdf:resource="#Gases"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Water_drop"/>
+  <owl:Class rdf:about="#Atmosphere">
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Oxygen"/>
+          <owl:Class rdf:about="#Wind"/>
+          <owl:Class rdf:about="#Air_pressure"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Clouds"/>
+  <owl:Class rdf:ID="Ultraviolet_radiation"/>
+  <owl:Class rdf:ID="Traffic"/>
+  <owl:Class rdf:ID="Sun_shine"/>
+  <owl:Class rdf:ID="Oil"/>
+  <owl:Class rdf:ID="Sky"/>
+  <owl:Class rdf:ID="Fire"/>
+  <owl:Class rdf:ID="Cool_air"/>
+  <owl:Class rdf:ID="Hot_day"/>
+  <owl:Class rdf:ID="Factories"/>
+  <owl:Class rdf:ID="Warm_air"/>
+  <owl:Class rdf:ID="Lightning"/>
+  <owl:ObjectProperty rdf:ID="has_Thunderstorms">
+    <rdfs:range rdf:resource="#Thunderstorms"/>
+    <rdfs:domain rdf:resource="#Atmosphere"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="has_Gases">
+    <rdfs:domain rdf:resource="#Atmosphere"/>
+    <rdfs:range rdf:resource="#Gases"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="has_Rainbow">
+    <rdfs:range rdf:resource="#Rainbow"/>
+    <rdfs:domain rdf:resource="#Atmosphere"/>
+  </owl:ObjectProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.2, Build 355)  http://protege.stanford.edu -->

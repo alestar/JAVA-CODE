@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+  <owl:Class rdf:ID="Water"/>
+  <owl:Class rdf:ID="percent"/>
+  <owl:Class rdf:ID="Density"/>
+  <owl:Class rdf:ID="ChemicalProcess"/>
+  <owl:Class rdf:ID="ChemicalState"/>
+  <owl:Class rdf:ID="Gas"/>
+  <owl:Class rdf:ID="Solid"/>
+  <owl:Class rdf:ID="Liquid"/>
+  <owl:Class rdf:ID="MassConcentration"/>
+  <owl:Class rdf:ID="Salt"/>
+  <owl:Class rdf:ID="ppt"/>
+  
+  
+  <owl:Class rdf:ID="Humidity">
+    <rdfs:subClassOf rdf:resource="#WaterConcentration"/>
+    <rdfs:comment xml:lang="en">1. Generally, some measure of the water vapor content of air. The multiplicity of humidity measures is partly due to different methods of measurement and partly because the conservative measures (mixing ratio, specific humidity) cover an extremely wide dynamic range, as a result of the rapid variation of saturation vapor pressure with temperature. 2. Popularly, same as relative humidity.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LiquidWaterEquivalent">
+    <rdfs:subClassOf rdf:resource="#WaterConcentration"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasSubstance"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Water"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Moisture">
+    <rdfs:subClassOf rdf:resource="#WaterConcentration"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PrecipitableWater">
+    <rdfs:subClassOf rdf:resource="#WaterConcentration"/>
+    <rdfs:comment xml:lang="en">The total atmospheric water vapor contained in a vertical column of unit cross-sectional area extending between any two specified levels.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="RelativeHumidity">
+    <rdfs:subClassOf rdf:resource="#Humidity"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	  	<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasDefaultUnit"/>	
+		</owl:onProperty>
+        <owl:hasValue rdf:resource="#percent"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SpecificHumidity">
+    <rdfs:subClassOf rdf:resource="#Humidity"/>
+    <rdfs:comment xml:lang="en">In a system of moist air, the (dimensionless) ratio of the mass of water vapor to the total mass of the system.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="WaterConcentration">
+    <rdfs:subClassOf rdf:resource="#WaterContent"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="WaterContent">
+    <rdfs:subClassOf rdf:resource="#Density" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasSubstance" />
+        <owl:allValuesFrom rdf:resource="#Water" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The liquid water present within a sample, usually expressed in percent by weight.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Dehydration">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    <owl:disjointWith rdf:resource="#Hydration" />
+    <owl:equivalentClass rdf:resource="#Dehydrate"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Dehydrate"/>
+
+  <owl:Class rdf:ID="Hydration">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Hydrolysis">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    <rdfs:comment xml:lang="en">Hydrolysis is a chemical reaction during which molecules of water (H2O) are split into hydrogen (H) and hydroxide anions (OH−) in the process of a chemical mechanism.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Dry">
+    <rdfs:subClassOf rdf:resource="#ChemicalState"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Humid">
+    <rdfs:subClassOf rdf:resource="#ChemicalState"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Hydrolyzable">
+    <rdfs:subClassOf rdf:resource="#ChemicalState"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Hygroscopic">
+    <rdfs:subClassOf rdf:resource="#ChemicalState"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Moist">
+    <rdfs:subClassOf rdf:resource="#ChemicalState"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="WaterVapor">
+    <rdfs:subClassOf rdf:resource="#Water"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Gas"/>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasStateOfMatter"/>	
+		</owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Ice">
+    <rdfs:subClassOf rdf:resource="#Water"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Solid"/>
+        <owl:onProperty rdf:resource="#hasStateOfMatter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LiquidWater">
+    <rdfs:subClassOf rdf:resource="#Water"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Liquid"/>
+        <owl:onProperty rdf:resource="#hasStateOfMatter"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Salinity">
+    <rdfs:subClassOf rdf:resource="#MassConcentration"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Salt"/>
+        <owl:onProperty rdf:resource="#hasSubstance"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#ppt"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SalineWater">
+    <rdfs:subClassOf rdf:resource="#SaltWater"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SaltWater">
+    <rdfs:subClassOf rdf:resource="#Water"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasChemical_2"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Salt"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SeaWater">
+    <rdfs:subClassOf rdf:resource="#SaltWater"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="FreshWater">
+    <rdfs:subClassOf rdf:resource="#Water"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="BrackishWater">
+    <owl:equivalentClass rdf:resource="#BrackWater"/>
+    <owl:disjointWith rdf:resource="#FreshWater"/>
+    <rdfs:subClassOf rdf:resource="#SaltWater"/>
+    <rdfs:comment xml:lang="en">Brackish water (less commonly brack water) is water that has more salinity than fresh water, but not as much as seawater. It may result from mixing of seawater with fresh water, as in estuaries, or it may occur in brackish fossil aquifers.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="BrackWater"/>
+
+</rdf:RDF>
+

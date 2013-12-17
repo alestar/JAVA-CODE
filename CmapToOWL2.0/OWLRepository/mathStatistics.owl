@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Classes -->
+  <owl:Class rdf:ID="ChiSquare"/>
+  <owl:Class rdf:ID="DistributionFunction"/>
+  <owl:Class rdf:ID="Operation"/>
+  <owl:Class rdf:ID="Seq"/>
+  <owl:Class rdf:ID="NumericalEntity"/>
+  <owl:Class rdf:ID="Normal"/>
+  
+  <owl:Class rdf:ID="Average">
+    <owl:equivalentClass rdf:resource="#Mean"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="BivariateStatisticalSummary">
+    <rdfs:subClassOf rdf:resource="#StatisticalSummary"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="BrownianMotion">
+    <rdfs:subClassOf rdf:resource="#StochasticProcess" />
+    <rdfs:comment xml:lang="en">A stochastic process that describes (among other things) the rapid and chaotic motion of particles suspended in a fluid at rest as a consequence of fluctuations in the rate at which fluid molecules collide with the particles.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ChiSquareTest">
+    <rdfs:subClassOf rdf:resource="#HypothesisTest"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#ChiSquare"/>
+        <owl:onProperty rdf:resource="#hasStatisticalDistribution"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Coherence">
+    <rdfs:subClassOf rdf:resource="#BivariateStatisticalSummary"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Correlation">
+    <rdfs:subClassOf rdf:resource="#BivariateStatisticalSummary"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Covariance">
+    <rdfs:subClassOf rdf:resource="#BivariateStatisticalSummary"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="CrossCorrelation">
+    <rdfs:subClassOf rdf:resource="#Correlation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Estimate">
+    <rdfs:subClassOf rdf:resource="#Prediction"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="GoodnessOfFit">
+    <rdfs:subClassOf rdf:resource="#Statistics"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="HypothesisTest">
+    <rdfs:subClassOf rdf:resource="#StatisticalInference"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Maximum">
+    <rdfs:subClassOf rdf:resource="#Operation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Mean">
+    <rdfs:subClassOf rdf:resource="#StatisticalMoment"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Median">
+    <rdfs:subClassOf rdf:resource="#StatisticalSummary"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MidRange">
+    <rdfs:subClassOf rdf:resource="#StatisticalSummary"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Minimum">
+    <rdfs:subClassOf rdf:resource="#Operation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="StatisticalMoment">
+    <rdfs:subClassOf rdf:resource="#StatisticalSummary"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Mode">
+    <rdfs:subClassOf rdf:resource="#StatisticalSummary"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Peak">
+    <rdfs:subClassOf rdf:resource="#Maximum"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="NumberOfSamples">
+    <rdfs:subClassOf rdf:resource="#Statistics"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Percentile">
+    <rdfs:subClassOf rdf:resource="#StatisticalOperation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ProbabilityDensityFunction">
+    <rdfs:subClassOf rdf:resource="#StatisticalSummary"/>
+    <owl:equivalentClass rdf:resource="#pdf"/>
+    <rdfs:subClassOf rdf:resource="#NormalizedFunction"/>
+  </owl:Class>
+  <owl:Class rdf:ID="pdf"/>
+
+  <owl:Class rdf:ID="ProbabilityDistributionFunction">
+    <rdfs:subClassOf rdf:resource="#StatisticalSummary"/>
+    <owl:equivalentClass rdf:resource="#cdf"/>
+  </owl:Class>
+  <owl:Class rdf:ID="cdf"/>
+
+  <owl:Class rdf:ID="pValue">
+    <rdfs:subClassOf rdf:resource="#StatisticalScore"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ReducedChiSquare">
+    <rdfs:subClassOf rdf:resource="#ChiSquare"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Sampling">
+    <rdfs:subClassOf rdf:resource="#StatisticalOperation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Skewness">
+    <rdfs:subClassOf rdf:resource="#StatisticalMoment"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="StandardDeviation">
+    <rdfs:subClassOf rdf:resource="#StatisticalSummary"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="StandardError">
+    <rdfs:subClassOf rdf:resource="#Estimate"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#StandardDeviation"/>
+        <owl:onProperty rdf:resource="#estimateOf"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="StatisticalDistribution">
+    <owl:equivalentClass rdf:resource="#DistributionFunction"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="StatisticalInference">
+    <rdfs:subClassOf rdf:resource="#Estimate"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="StatisticalOperation">
+    <rdfs:subClassOf rdf:resource="#Operation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="StatisticalScore">
+    <rdfs:subClassOf rdf:resource="#StatisticalSummary"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="StatisticalSummary">
+    <rdfs:subClassOf rdf:resource="#StatisticalOperation"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasOutput"/>	
+		</owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#Seq"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasInput"/>	
+		</owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#Seq"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Statistics">
+    <rdfs:subClassOf rdf:resource="#NumericalEntity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="StochasticProcess">
+    <rdfs:subClassOf rdf:resource="#StatisticalOperation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="tScore">
+    <rdfs:subClassOf rdf:resource="#StatisticalScore"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#tTest"/>
+        <owl:onProperty rdf:resource="#hasTest"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="tTest">
+    <rdfs:subClassOf rdf:resource="#HypothesisTest"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Uncertainty">
+    <rdfs:subClassOf rdf:resource="#StatisticalSummary"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Variance">
+    <rdfs:subClassOf rdf:resource="#StatisticalMoment"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ZScore">
+    <rdfs:subClassOf rdf:resource="#StatisticalScore"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#ZTest"/>
+        <owl:onProperty rdf:resource="#hasTest"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ZTest">
+    <rdfs:subClassOf rdf:resource="#HypothesisTest"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Normal"/>
+        <owl:onProperty rdf:resource="#hasStatisticalDistribution"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+   <owl:ObjectProperty rdf:ID="estimateOf">
+  </owl:ObjectProperty>
+
+   <owl:ObjectProperty rdf:ID="hasStatisticalDistribution">
+    <rdfs:range rdf:resource="#StatisticalDistribution"/>
+  </owl:ObjectProperty>
+
+   <owl:ObjectProperty rdf:ID="hasTest">
+    <rdfs:range rdf:resource="#HypothesisTest"/>
+  </owl:ObjectProperty>
+
+   <owl:ObjectProperty rdf:ID="hasMaximum">
+    <rdfs:domain rdf:resource="#Seq"/>
+    <rdfs:range rdf:resource="#Maximum"/>
+  </owl:ObjectProperty>
+
+   <owl:ObjectProperty rdf:ID="hasMinimum">
+    <rdfs:domain rdf:resource="#Seq"/>
+    <rdfs:range rdf:resource="#Minimum"/>
+  </owl:ObjectProperty>
+</rdf:RDF>

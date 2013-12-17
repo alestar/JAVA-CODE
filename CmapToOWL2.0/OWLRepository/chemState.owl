@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- States -->
+
+  <owl:Class rdf:ID="SubstanceForm"/>
+  <owl:Class rdf:ID="State"/>
+  <owl:Class rdf:ID="NeutralSubstance"/>
+  <owl:Class rdf:ID="Substance"/>
+  <owl:Class rdf:ID="TraceSubstance"/>
+  <owl:Class rdf:ID="ChemicalProcess"/>
+  <owl:Class rdf:ID="Change"/>
+  
+  
+  <owl:Class rdf:ID="Condensed">
+    <rdfs:subClassOf rdf:resource="#Solid"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Dissolved">
+    <rdfs:subClassOf rdf:resource="#SubstanceForm"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Droplet">
+    <rdfs:subClassOf rdf:resource="#SubstanceForm"/>
+    <rdfs:comment xml:lang="en">A small spherical particle of any liquid; in meteorology, particularly a water droplet.
+    </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Fixed">
+    <rdfs:subClassOf rdf:resource="#ChemicalState"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Fluid">
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Gas"/>
+          <owl:Class rdf:about="#Liquid"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Floating">
+    <rdfs:subClassOf rdf:resource="#ChemicalState"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Frozen">
+    <rdfs:subClassOf rdf:resource="#Solid"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Gas">
+    <rdfs:subClassOf rdf:resource="#StateOfMatter"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Liquid">
+    <rdfs:subClassOf rdf:resource="#StateOfMatter"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Particle">
+    <rdfs:subClassOf rdf:resource="#SubstanceForm"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Plasma">
+    <rdfs:subClassOf rdf:resource="#StateOfMatter"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Solid">
+    <rdfs:subClassOf rdf:resource="#StateOfMatter"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ChemicalState">
+    <rdfs:subClassOf rdf:resource="#State"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="StateOfMatter">
+    <rdfs:subClassOf rdf:resource="#ChemicalState"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Suspended">
+    <rdfs:subClassOf rdf:resource="#SubstanceForm"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Vapor">
+    <rdfs:subClassOf rdf:resource="#Gas" />
+    <rdfs:comment xml:lang="en">Any substance existing in the gaseous state at a temperature lower than that of its critical point; that is, a gas cool enough to be liquefied if sufficient pressure were applied to it.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Volatile">
+    <rdfs:subClassOf rdf:resource="#ChemicalState"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DissolvedSubstance">
+    <rdfs:subClassOf rdf:resource="#Substance"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DissolvedGas">
+    <rdfs:subClassOf rdf:resource="#Dissolved"/>
+    <rdfs:subClassOf rdf:resource="#Gas"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DissolvedSolid">
+    <rdfs:subClassOf rdf:resource="#Dissolved"/>
+    <rdfs:subClassOf rdf:resource="#Solid"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="NeutralGas">
+    <rdfs:subClassOf rdf:resource="#NeutralSubstance"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Radioactive">
+    <rdfs:subClassOf rdf:resource="#ChemicalState"/>
+    <rdfs:subClassOf rdf:resource="#Substance"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SuspendedGas">
+    <rdfs:subClassOf rdf:resource="#Gas"/>
+    <rdfs:subClassOf rdf:resource="#SuspendedSubstance"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SuspendedSolid">
+    <rdfs:subClassOf rdf:resource="#Solid"/>
+    <rdfs:subClassOf rdf:resource="#SuspendedSubstance"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="TraceGas">
+    <rdfs:subClassOf rdf:resource="#Gas"/>
+    <rdfs:subClassOf rdf:resource="#TraceSubstance"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SuspendedSubstance">
+    <rdfs:subClassOf rdf:resource="#Substance"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Bubble">
+    <rdfs:subClassOf rdf:resource="#SubstanceForm"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasStateOfMatter" />
+        <owl:allValuesFrom rdf:resource="#Fluid" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+   <owl:ObjectProperty rdf:ID="hasChemicalState">
+    <rdfs:range rdf:resource="#ChemicalState"/>
+  </owl:ObjectProperty>
+
+   <owl:ObjectProperty rdf:ID="hasStateOfMatter">
+    <rdfs:range rdf:resource="#StateOfMatter"/>
+  </owl:ObjectProperty>
+
+<!-- State of Matter Changes-->
+  <owl:Class rdf:ID="Boil">
+    <rdfs:subClassOf rdf:resource="#Vaporization"/>
+    <owl:equivalentClass rdf:resource="#Boiling"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Boiling"/>
+
+  <owl:Class rdf:ID="Condense">
+    <owl:equivalentClass rdf:resource="#Condensation"/>
+    <rdfs:subClassOf rdf:resource="#StateChange"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="from"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Gas" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="to"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Liquid" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Condensation"/>
+
+  <owl:Class rdf:ID="Deposition">
+    <rdfs:subClassOf rdf:resource="#StateChange"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#from"/>
+        <owl:allValuesFrom rdf:resource="#Gas" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#to"/>
+        <owl:allValuesFrom rdf:resource="#Solid" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Evaporate">
+    <rdfs:subClassOf rdf:resource="#Vaporize"/>
+    <owl:equivalentClass rdf:resource="#Evaporation"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Evaporation"/>
+
+  <owl:Class rdf:ID="Freeze">
+    <owl:equivalentClass rdf:resource="#Freezing"/>
+    <rdfs:subClassOf rdf:resource="#StateChange"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#from"/>
+        <owl:allValuesFrom rdf:resource="#Liquid" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#to"/>
+        <owl:allValuesFrom rdf:resource="#Solid" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The phase transition of a substance passing from the liquid to the solid state; solidification; the opposite of fusion.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Freezing"/>
+
+  <owl:Class rdf:ID="Melt">
+    <rdfs:subClassOf rdf:resource="#StateChange"/>
+    <owl:equivalentClass rdf:resource="#Melting"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#from"/>
+        <owl:allValuesFrom rdf:resource="#Solid" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#to"/>
+        <owl:allValuesFrom rdf:resource="#Solid" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Melting"/>
+
+  <owl:Class rdf:ID="StateChange">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    <rdfs:subClassOf rdf:resource="#Change"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#from"/>
+        <owl:allValuesFrom rdf:resource="#StateOfMatter" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#to"/>
+        <owl:allValuesFrom rdf:resource="#StateOfMatter" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment>change of state by state variable change</rdfs:comment>
+    <rdfs:label>State Change</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Sublimation">
+    <rdfs:subClassOf rdf:resource="#StateChange"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#from"/>
+        <owl:allValuesFrom rdf:resource="#Solid" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#to"/>
+        <owl:allValuesFrom rdf:resource="#Gas" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Thaw">
+    <owl:equivalentClass rdf:resource="#Thawing"/>
+    <rdfs:subClassOf rdf:resource="#Melt"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Thawing"/>
+
+  <owl:Class rdf:ID="Vaporize">
+    <rdfs:subClassOf rdf:resource="#StateChange"/>
+    <owl:equivalentClass rdf:resource="#Vaporization"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#from"/>
+        <owl:allValuesFrom rdf:resource="#Liquid" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#to"/>
+        <owl:allValuesFrom rdf:resource="#Gas" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The physical process by which a liquid is transformed to the gaseous state; the opposite of condensation.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Vaporization" />
+
+	<owl:ObjectProperty rdf:ID="hasChemicalProcess"/>	
+
+   <owl:ObjectProperty rdf:ID="hasStateChange">
+    <rdfs:subPropertyOf rdf:resource="#hasChemicalProcess"/>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:ID="Burn">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    <owl:equivalentClass rdf:resource="#Burning"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Burning"/>
+
+  <owl:Class rdf:ID="Nucleation">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    <rdfs:comment xml:lang="en">Nucleation is the extremely localized budding of a distinct thermodynamic phase. Some examples of phases that may form via nucleation in liquids are gaseous bubbles, crystals, or glassy regions.</rdfs:comment>
+  </owl:Class>
+
+</rdf:RDF>

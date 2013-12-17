@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Cell invasion process</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Cell invasion process"/>
+            <concept id="2" label="Phases">
+                <sense domains="[biology, time_period]"
+                    gloss="any distinct time period in a sequence of events; &quot;we are in a transitional stage in which many former ideas must be revised or rejected&quot;"
+                    number="10983365" pos="n" terms="[phase, stage]"/>
+            </concept>
+            <concept id="3" label="Eclpse period"/>
+            <concept id="4" label="Production period"/>
+            <concept id="5" label="Events">
+                <sense domains="[physics]"
+                    gloss="(relativity theory) a phenomenon located at a single point in space-time; the fundamental observational entity in relativity theory"
+                    number="07796465" pos="n" terms="[event]"/>
+            </concept>
+            <concept id="6" label="Virus DNA"/>
+            <concept id="7" label="Cell's replication machinery"/>
+            <concept id="8" label="Virus delivers DNA"/>
+            <concept id="9" label="Attachment">
+                <sense domains="[psychological_features]"
+                    gloss="a feeling of affection for a person or an institution"
+                    number="05608793" pos="n" terms="[attachment, fond_regard]"/>
+                <sense domains="[factotum]"
+                    gloss="a supplementary part or accessory"
+                    number="02222181" pos="n" terms="[attachment]"/>
+                <sense domains="[factotum]"
+                    gloss="a connection that fastens things together"
+                    number="02222271" pos="n" terms="[attachment, bond]"/>
+                <sense domains="[politics]"
+                    gloss="faithful support for a religion or cause or political party"
+                    number="00786502" pos="n" terms="[attachment, adherence]"/>
+                <sense domains="[factotum]"
+                    gloss="the act of attaching something"
+                    number="00244199" pos="n" terms="[attachment]"/>
+                <sense domains="[factotum]"
+                    gloss="the act of fastening things together"
+                    number="00095872" pos="n" terms="[fastening, attachment]"/>
+            </concept>
+            <concept id="10" label="Penetration">
+                <sense domains="[physiology, sexuality]"
+                    gloss="the act (by a man) of inserting his penis into the vagina of a woman"
+                    number="00543689" pos="n" terms="[penetration]"/>
+            </concept>
+            <concept id="11" label="Uncoating"/>
+            <concept id="12" label="Virus">
+                <sense domains="[biology]"
+                    gloss="ultramicroscopic infectious agent that replicates itself only within cells of living hosts; many are pathogenic"
+                    number="00871107" pos="n" terms="[virus]"/>
+            </concept>
+            <concept id="13" label="Cell">
+                <sense domains="[biology]"
+                    gloss="the basic structural and functional unit of all organisms; cells may exist as independent units of life (as in monads) or may form colonies or tissues as in higher plants and animals"
+                    number="00003095" pos="n" terms="[cell]"/>
+            </concept>
+            <concept id="14" label="Endocytocis process"/>
+            <concept id="15" label="Vesicle">
+                <sense domains="[anatomy]"
+                    gloss="a small anatomically normal sac or bladderlike structure (especially one containing fluid)"
+                    number="04274122" pos="n" terms="[vesicle, cyst]"/>
+            </concept>
+            <concept id="16" label="Virus protecting coat"/>
+            <concept id="17" label="Virus penetrating the cell wall"/>
+            <concept id="18" label="Acid">
+                <sense domains="[quality]"
+                    gloss="harsh or corrosive in tone; &quot;an acerbic tone piercing otherwise flowery prose&quot;; &quot;a barrage of acid comments&quot;; &quot;her acrid remarks make her many enemies&quot;; &quot;bitter words&quot;; &quot;blistering criticism&quot;; &quot;caustic jokes about political assassination, talk-show hosts and medical ethics&quot;; &quot;a sulfurous denunciation&quot;"
+                    number="01730738" pos="a" terms="[acerb, acerbic, acid, acrid, bitter, blistering, caustic, sulfurous, sulphurous, venomous, virulent, vitriolic]"/>
+                <sense domains="[chemistry]"
+                    gloss="(chemistry) containing acid; &quot;an acid taste&quot;"
+                    number="00026658" pos="a" terms="[acid]"/>
+                <sense domains="[chemistry]"
+                    gloss="any of various water-soluble compounds having a sour taste and capable of turning litmus red and reacting with a base to form a salt"
+                    number="10463819" pos="n" terms="[acid]"/>
+                <sense domains="[pharmacy]"
+                    gloss="a powerful hallucinogenic drug"
+                    number="02949224" pos="n" terms="[lysergic_acid_diethylamide, LSD, acid]"/>
+            </concept>
+            <concept id="19" label="Lysosome"/>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="20" label="is divided into"/>
+            <linking-phrase id="21" label="include"/>
+            <linking-phrase id="22" label="consists of"/>
+            <linking-phrase id="23" label="during which"/>
+            <linking-phrase id="24" label="involves"/>
+            <linking-phrase id="25" label="takes place at"/>
+            <linking-phrase id="26" label="include"/>
+            <linking-phrase id="27" label="to"/>
+            <linking-phrase id="28" label="follows"/>
+            <linking-phrase id="29" label="involves"/>
+            <linking-phrase id="30" label="follows"/>
+            <linking-phrase id="31" label="is done by"/>
+            <linking-phrase id="32" label="involves degrading a"/>
+            <linking-phrase id="33" label="attaches to"/>
+            <linking-phrase id="34" label="creates a"/>
+            <linking-phrase id="35" label="transfers virus to"/>
+            <linking-phrase id="36" label="fuses with"/>
+            <linking-phrase id="37" label="contains"/>
+            <linking-phrase id="38" label="releases into cell"/>
+            <linking-phrase id="39" label="done by"/>
+            <linking-phrase id="40" label="done by"/>
+            <linking-phrase id="41" label="in"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="20"/>
+            <connection from-id="20" to-id="2"/>
+            <connection from-id="2" to-id="21"/>
+            <connection from-id="21" to-id="3"/>
+            <connection from-id="21" to-id="4"/>
+            <connection from-id="3" to-id="22"/>
+            <connection from-id="22" to-id="5"/>
+            <connection from-id="3" to-id="23"/>
+            <connection from-id="23" to-id="8"/>
+            <connection from-id="4" to-id="24"/>
+            <connection from-id="24" to-id="6"/>
+            <connection from-id="4" to-id="25"/>
+            <connection from-id="25" to-id="7"/>
+            <connection from-id="5" to-id="26"/>
+            <connection from-id="26" to-id="9"/>
+            <connection from-id="26" to-id="10"/>
+            <connection from-id="26" to-id="11"/>
+            <connection from-id="8" to-id="27"/>
+            <connection from-id="27" to-id="7"/>
+            <connection from-id="9" to-id="28"/>
+            <connection from-id="28" to-id="10"/>
+            <connection from-id="9" to-id="29"/>
+            <connection from-id="29" to-id="12"/>
+            <connection from-id="29" to-id="13"/>
+            <connection from-id="10" to-id="30"/>
+            <connection from-id="30" to-id="11"/>
+            <connection from-id="10" to-id="31"/>
+            <connection from-id="31" to-id="14"/>
+            <connection from-id="11" to-id="32"/>
+            <connection from-id="32" to-id="16"/>
+            <connection from-id="12" to-id="33"/>
+            <connection from-id="33" to-id="13"/>
+            <connection from-id="14" to-id="34"/>
+            <connection from-id="34" to-id="15"/>
+            <connection from-id="14" to-id="35"/>
+            <connection from-id="35" to-id="7"/>
+            <connection from-id="15" to-id="36"/>
+            <connection from-id="36" to-id="19"/>
+            <connection from-id="15" to-id="37"/>
+            <connection from-id="37" to-id="12"/>
+            <connection from-id="16" to-id="38"/>
+            <connection from-id="38" to-id="6"/>
+            <connection from-id="16" to-id="39"/>
+            <connection from-id="39" to-id="18"/>
+            <connection from-id="17" to-id="40"/>
+            <connection from-id="40" to-id="14"/>
+            <connection from-id="18" to-id="41"/>
+            <connection from-id="41" to-id="19"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="378" y="-229"/>
+            <concept-appearance id="2" x="415" y="-131"/>
+            <concept-appearance id="3" x="328" y="-41"/>
+            <concept-appearance id="4" x="504" y="-38"/>
+            <concept-appearance id="5" x="329" y="78"/>
+            <concept-appearance id="6" x="513" y="71"/>
+            <concept-appearance id="7" x="639" y="44"/>
+            <concept-appearance id="8" x="406" y="76"/>
+            <concept-appearance id="9" x="219" y="192"/>
+            <concept-appearance id="10" x="328" y="195"/>
+            <concept-appearance id="11" x="443" y="191"/>
+            <concept-appearance id="12" x="148" y="320"/>
+            <concept-appearance id="13" x="272" y="324"/>
+            <concept-appearance id="14" x="406" y="317"/>
+            <concept-appearance id="15" x="441" y="426"/>
+            <concept-appearance id="16" x="614" y="269"/>
+            <concept-appearance id="17" x="312" y="410"/>
+            <concept-appearance id="18" x="526" y="382"/>
+            <concept-appearance id="19" x="526" y="493"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="20" x="399" y="-162"/>
+            <linking-phrase id="21" x="408" y="-55"/>
+            <linking-phrase id="22" x="322" y="47"/>
+            <linking-phrase id="23" x="390" y="49"/>
+            <linking-phrase id="24" x="518" y="38"/>
+            <linking-phrase id="25" x="591" y="14"/>
+            <linking-phrase id="26" x="324" y="156"/>
+            <linking-phrase id="27" x="499" y="147"/>
+            <linking-phrase id="28" x="269" y="269"/>
+            <linking-phrase id="29" x="202" y="286"/>
+            <linking-phrase id="30" x="392" y="263"/>
+            <linking-phrase id="31" x="353" y="285"/>
+            <linking-phrase id="32" x="533" y="242"/>
+            <linking-phrase id="33" x="204" y="338"/>
+            <linking-phrase id="34" x="428" y="394"/>
+            <linking-phrase id="35" x="467" y="267"/>
+            <linking-phrase id="36" x="453" y="514"/>
+            <linking-phrase id="37" x="294" y="510"/>
+            <linking-phrase id="38" x="570" y="183"/>
+            <linking-phrase id="39" x="565" y="346"/>
+            <linking-phrase id="40" x="340" y="377"/>
+            <linking-phrase id="41" x="520" y="453"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

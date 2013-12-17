@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>viruses</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Viruses">
+                <sense domains="[biology]"
+                    gloss="ultramicroscopic infectious agent that replicates itself only within cells of living hosts; many are pathogenic"
+                    number="00871107" pos="n" terms="[virus]"/>
+            </concept>
+            <concept id="2" label="Cells">
+                <sense domains="[biology]"
+                    gloss="the basic structural and functional unit of all organisms; cells may exist as independent units of life (as in monads) or may form colonies or tissues as in higher plants and animals"
+                    number="00003095" pos="n" terms="[cell]"/>
+            </concept>
+            <concept id="3" label="Lytic cycle"/>
+            <concept id="4" label="Nucleic acids"/>
+            <concept id="5" label="Lysogenic cycle"/>
+            <concept id="6" label="Proteins">
+                <sense domains="[chemistry]"
+                    gloss="any of a large group of nitrogenous organic compounds that are essential constituents of living cells; consist of long strings of amino acids"
+                    number="10560829" pos="n" terms="[protein]"/>
+            </concept>
+            <concept id="7" label="Sheath">
+                <sense domains="[factotum]"
+                    gloss="a protective case for a knife or sword"
+                    number="03311748" pos="n" terms="[sheath]"/>
+                <sense domains="[plants]"
+                    gloss="an enveloping structure or covering enclosing an animal or plant organ or part"
+                    number="04068007" pos="n" terms="[sheath, case]"/>
+                <sense domains="[fashion]"
+                    gloss="suitable for formal occasions"
+                    number="02465132" pos="n" terms="[cocktail_dress, sheath]"/>
+            </concept>
+            <concept id="8" label="Enzymes"/>
+            <concept id="9" label="DNA">
+                <sense domains="[chemistry]"
+                    gloss="a nucleic acid consisting of large molecules shaped like a double helix; associated with the transmission of genetic information"
+                    number="10639854" pos="n" terms="[deoxyribonucleic_acid, desoxyribonucleic_acid, DNA]"/>
+            </concept>
+            <concept id="10" label="RNA">
+                <sense domains="[chemistry]"
+                    gloss="a nucleic acid that transmits genetic information from DNA to the cytoplasm; controls certain chemical processes in the cell"
+                    number="10640325" pos="n" terms="[ribonucleic_acid, RNA]"/>
+            </concept>
+            <concept id="11" label="Nucleotides"/>
+            <concept id="12" label="Adenine">
+                <sense domains="[chemistry]"
+                    gloss="purine base found in DNA and RNA; pairs with thymine in DNA and with uracil in RNA"
+                    number="10543116" pos="n" terms="[adenine]"/>
+            </concept>
+            <concept id="13" label="Guanine">
+                <sense domains="[chemistry]"
+                    gloss="a purine base found in DNA and RNA; pairs with cytosine"
+                    number="10683291" pos="n" terms="[guanine]"/>
+            </concept>
+            <concept id="14" label="Cytosine">
+                <sense domains="[chemistry]"
+                    gloss="a base found in DNA and RNA and derived from pyrimidine; pairs with guanine"
+                    number="10638988" pos="n" terms="[cytosine]"/>
+            </concept>
+            <concept id="15" label="Thymine">
+                <sense domains="[chemistry]"
+                    gloss="a base found in DNA (but not in RNA) and derived from pyrimidine; pairs with adenine"
+                    number="10813167" pos="n" terms="[thymine]"/>
+            </concept>
+            <concept id="16" label="Uricil"/>
+            <concept id="17" label="retro-viruses"/>
+            <concept id="18" label="AIDS">
+                <sense domains="[medicine]"
+                    gloss="a serious (often fatal) disease of the immune system transmitted through blood products especially by sexual contact or contaminated needles"
+                    number="10163158" pos="n" terms="[AIDS, acquired_immune_deficiency_syndrome]"/>
+            </concept>
+            <concept id="19" label="Ebola"/>
+            <concept id="20" label="Feline Lukemia"/>
+            <concept id="21" label="Alive">
+                <sense domains="[physiology]"
+                    gloss="possessing life; &quot;the happiest person alive&quot;; &quot;the nerve is alive&quot;; &quot;doctors are working hard to keep him alive&quot;; &quot;burned alive&quot;"
+                    number="00097799" pos="a" terms="[alive]"/>
+            </concept>
+            <concept id="22" label="Bacteriophages"/>
+            <concept id="23" label="T4"/>
+            <concept id="24" label="E.coli"/>
+            <concept id="25" label="Prokaryotic">
+                <sense domains="[biology]"
+                    gloss="having cells that lack membrane-bound nuclei"
+                    number="02649004" pos="a" terms="[prokaryotic, procaryotic]"/>
+            </concept>
+            <concept id="26" label="Eukaryotic">
+                <sense domains="[biology]"
+                    gloss="having cells with `good' or membrane-bound nuclei"
+                    number="02648831" pos="a" terms="[eukaryotic, eucaryotic]"/>
+            </concept>
+            <concept id="27" label="Plants">
+                <sense domains="[biology, plants]"
+                    gloss="a living organism lacking the power of locomotion"
+                    number="00008864" pos="n" terms="[plant, flora, plant_life]"/>
+            </concept>
+            <concept id="28" label="Protists"/>
+            <concept id="29" label="Animals">
+                <sense domains="[animals, biology]"
+                    gloss="a living organism characterized by voluntary movement"
+                    number="00008019" pos="n" terms="[animal, animate_being, beast, brute, creature, fauna]"/>
+            </concept>
+            <concept id="30" label="Fungi">
+                <sense domains="[biology, plants]"
+                    gloss="the taxonomic kingdom of lower plants"
+                    number="09288350" pos="n" terms="[Fungi, kingdom_Fungi, fungus_kingdom]"/>
+            </concept>
+            <concept id="31" label="Viral DNA reproduces as cellular DNA reproduces"/>
+            <concept id="32" label="DNA is incorporated into host cell"/>
+            <concept id="33" label="Reproductive cycles of cell"/>
+            <concept id="34" label="Viral DNA is replicated along with host DNA"/>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="35" label="require to reproduce"/>
+            <linking-phrase id="36" label="destroy when in"/>
+            <linking-phrase id="37" label="are made of"/>
+            <linking-phrase id="38" label="hide in"/>
+            <linking-phrase id="39" label="are not considered"/>
+            <linking-phrase id="40" label="some are considered"/>
+            <linking-phrase id="41" label="are considered"/>
+            <linking-phrase id="42" label="with no nucleus"/>
+            <linking-phrase id="43" label="with nucleus"/>
+            <linking-phrase id="44" label="kills"/>
+            <linking-phrase id="45" label="contain"/>
+            <linking-phrase id="46" label="contain"/>
+            <linking-phrase id="47" label="ends in the"/>
+            <linking-phrase id="48" label="continues"/>
+            <linking-phrase id="49" label="involves"/>
+            <linking-phrase id="50" label="found in"/>
+            <linking-phrase id="51" label="found inside"/>
+            <linking-phrase id="52" label="to process"/>
+            <linking-phrase id="53" label="can cut host DNA"/>
+            <linking-phrase id="54" label="contains"/>
+            <linking-phrase id="55" label="contains"/>
+            <linking-phrase id="56" label="viruses of this type are called"/>
+            <linking-phrase id="57" label="including"/>
+            <linking-phrase id="58" label="RNA only"/>
+            <linking-phrase id="59" label="DNA only"/>
+            <linking-phrase id="60" label="examples"/>
+            <linking-phrase id="61" label="example is"/>
+            <linking-phrase id="62" label="attack"/>
+            <linking-phrase id="63" label="attacks"/>
+            <linking-phrase id="64" label="is a"/>
+            <linking-phrase id="65" label="include"/>
+            <linking-phrase id="66" label="include"/>
+            <linking-phrase id="67" label="include"/>
+            <linking-phrase id="68" label="include"/>
+            <linking-phrase id="69" label="virus spreads in cell"/>
+            <linking-phrase id="70" label="during replication"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="35"/>
+            <connection from-id="35" to-id="2"/>
+            <connection from-id="1" to-id="36"/>
+            <connection from-id="36" to-id="3"/>
+            <connection from-id="1" to-id="37"/>
+            <connection from-id="37" to-id="4"/>
+            <connection from-id="37" to-id="6"/>
+            <connection from-id="1" to-id="38"/>
+            <connection from-id="38" to-id="5"/>
+            <connection from-id="1" to-id="39"/>
+            <connection from-id="39" to-id="21"/>
+            <connection from-id="1" to-id="40"/>
+            <connection from-id="40" to-id="22"/>
+            <connection from-id="2" to-id="41"/>
+            <connection from-id="41" to-id="21"/>
+            <connection from-id="2" to-id="42"/>
+            <connection from-id="42" to-id="25"/>
+            <connection from-id="2" to-id="43"/>
+            <connection from-id="43" to-id="26"/>
+            <connection from-id="3" to-id="44"/>
+            <connection from-id="44" to-id="2"/>
+            <connection from-id="4" to-id="45"/>
+            <connection from-id="45" to-id="10"/>
+            <connection from-id="4" to-id="46"/>
+            <connection from-id="46" to-id="9"/>
+            <connection from-id="5" to-id="47"/>
+            <connection from-id="47" to-id="3"/>
+            <connection from-id="5" to-id="48"/>
+            <connection from-id="48" to-id="31"/>
+            <connection from-id="5" to-id="49"/>
+            <connection from-id="49" to-id="32"/>
+            <connection from-id="6" to-id="50"/>
+            <connection from-id="50" to-id="7"/>
+            <connection from-id="6" to-id="51"/>
+            <connection from-id="51" to-id="8"/>
+            <connection from-id="8" to-id="52"/>
+            <connection from-id="52" to-id="9"/>
+            <connection from-id="52" to-id="10"/>
+            <connection from-id="8" to-id="53"/>
+            <connection from-id="53" to-id="32"/>
+            <connection from-id="9" to-id="54"/>
+            <connection from-id="54" to-id="11"/>
+            <connection from-id="10" to-id="55"/>
+            <connection from-id="55" to-id="11"/>
+            <connection from-id="10" to-id="56"/>
+            <connection from-id="56" to-id="17"/>
+            <connection from-id="11" to-id="57"/>
+            <connection from-id="57" to-id="12"/>
+            <connection from-id="57" to-id="13"/>
+            <connection from-id="57" to-id="14"/>
+            <connection from-id="11" to-id="58"/>
+            <connection from-id="58" to-id="16"/>
+            <connection from-id="11" to-id="59"/>
+            <connection from-id="59" to-id="15"/>
+            <connection from-id="17" to-id="60"/>
+            <connection from-id="60" to-id="19"/>
+            <connection from-id="60" to-id="18"/>
+            <connection from-id="60" to-id="20"/>
+            <connection from-id="22" to-id="61"/>
+            <connection from-id="61" to-id="23"/>
+            <connection from-id="22" to-id="62"/>
+            <connection from-id="62" to-id="25"/>
+            <connection from-id="23" to-id="63"/>
+            <connection from-id="63" to-id="24"/>
+            <connection from-id="24" to-id="64"/>
+            <connection from-id="64" to-id="25"/>
+            <connection from-id="26" to-id="65"/>
+            <connection from-id="65" to-id="27"/>
+            <connection from-id="26" to-id="66"/>
+            <connection from-id="66" to-id="28"/>
+            <connection from-id="26" to-id="67"/>
+            <connection from-id="67" to-id="29"/>
+            <connection from-id="26" to-id="68"/>
+            <connection from-id="68" to-id="30"/>
+            <connection from-id="32" to-id="69"/>
+            <connection from-id="69" to-id="33"/>
+            <connection from-id="33" to-id="70"/>
+            <connection from-id="70" to-id="34"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="171" y="-30"/>
+            <concept-appearance id="2" x="337" y="-147"/>
+            <concept-appearance id="3" x="377" y="17"/>
+            <concept-appearance id="4" x="199" y="100"/>
+            <concept-appearance id="5" x="328" y="112"/>
+            <concept-appearance id="6" x="116" y="95"/>
+            <concept-appearance id="7" x="49" y="194"/>
+            <concept-appearance id="8" x="171" y="194"/>
+            <concept-appearance id="9" x="194" y="307"/>
+            <concept-appearance id="10" x="317" y="297"/>
+            <concept-appearance id="11" x="96" y="432"/>
+            <concept-appearance id="12" x="20" y="536"/>
+            <concept-appearance id="13" x="110" y="555"/>
+            <concept-appearance id="14" x="195" y="549"/>
+            <concept-appearance id="15" x="276" y="523"/>
+            <concept-appearance id="16" x="279" y="425"/>
+            <concept-appearance id="17" x="397" y="388"/>
+            <concept-appearance id="18" x="360" y="482"/>
+            <concept-appearance id="19" x="452" y="495"/>
+            <concept-appearance id="20" x="558" y="469"/>
+            <concept-appearance id="21" x="52" y="-178"/>
+            <concept-appearance id="22" x="350" y="-249"/>
+            <concept-appearance id="23" x="533" y="-288"/>
+            <concept-appearance id="24" x="670" y="-284"/>
+            <concept-appearance id="25" x="522" y="-188"/>
+            <concept-appearance id="26" x="521" y="-100"/>
+            <concept-appearance id="27" x="656" y="-192"/>
+            <concept-appearance id="28" x="665" y="-122"/>
+            <concept-appearance id="29" x="667" y="-48"/>
+            <concept-appearance id="30" x="646" y="22"/>
+            <concept-appearance id="31" x="496" y="130"/>
+            <concept-appearance id="32" x="427" y="227"/>
+            <concept-appearance id="33" x="580" y="306"/>
+            <concept-appearance id="34" x="631" y="426"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="35" x="248" y="-73"/>
+            <linking-phrase id="36" x="268" y="9"/>
+            <linking-phrase id="37" x="165" y="52"/>
+            <linking-phrase id="38" x="259" y="68"/>
+            <linking-phrase id="39" x="105" y="-88"/>
+            <linking-phrase id="40" x="265" y="-178"/>
+            <linking-phrase id="41" x="188" y="-147"/>
+            <linking-phrase id="42" x="425" y="-153"/>
+            <linking-phrase id="43" x="415" y="-101"/>
+            <linking-phrase id="44" x="351" y="-49"/>
+            <linking-phrase id="45" x="292" y="234"/>
+            <linking-phrase id="46" x="237" y="211"/>
+            <linking-phrase id="47" x="432" y="97"/>
+            <linking-phrase id="48" x="416" y="135"/>
+            <linking-phrase id="49" x="383" y="198"/>
+            <linking-phrase id="50" x="76" y="160"/>
+            <linking-phrase id="51" x="137" y="160"/>
+            <linking-phrase id="52" x="167" y="270"/>
+            <linking-phrase id="53" x="351" y="263"/>
+            <linking-phrase id="54" x="143" y="383"/>
+            <linking-phrase id="55" x="205" y="378"/>
+            <linking-phrase id="56" x="390" y="323"/>
+            <linking-phrase id="57" x="96" y="507"/>
+            <linking-phrase id="58" x="186" y="442"/>
+            <linking-phrase id="59" x="184" y="491"/>
+            <linking-phrase id="60" x="433" y="464"/>
+            <linking-phrase id="61" x="444" y="-255"/>
+            <linking-phrase id="62" x="439" y="-195"/>
+            <linking-phrase id="63" x="595" y="-270"/>
+            <linking-phrase id="64" x="588" y="-210"/>
+            <linking-phrase id="65" x="586" y="-132"/>
+            <linking-phrase id="66" x="591" y="-97"/>
+            <linking-phrase id="67" x="592" y="-60"/>
+            <linking-phrase id="68" x="581" y="-25"/>
+            <linking-phrase id="69" x="508" y="281"/>
+            <linking-phrase id="70" x="626" y="380"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

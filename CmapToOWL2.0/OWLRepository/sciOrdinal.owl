@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+  <owl:Class rdf:ID="Frequency"/>
+  <owl:Class rdf:ID="Impact"/>
+  <owl:Class rdf:ID="Category"/>
+  <owl:Class rdf:ID="MeasurementScale"/>
+  <owl:Class rdf:ID="Role"/>
+  <owl:Class rdf:ID="Space"/>
+  <owl:Class rdf:ID="Property"/>
+  
+  <owl:Class rdf:ID="Almost">
+    <rdfs:subClassOf rdf:resource="#QualifierCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Big">
+    <rdfs:subClassOf rdf:resource="#SizeCategory"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="greaterThan"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Small"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Bottom">
+    <rdfs:subClassOf rdf:resource="#SizeCategory"/>
+  </owl:Class>
+  
+  <owl:Class rdf:ID="Coarse">
+    <rdfs:subClassOf rdf:resource="#SizeCategory"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Fine"/>
+        <owl:onProperty rdf:resource="#greaterThan"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Common">
+    <rdfs:subClassOf rdf:resource="#FrequencyCategory"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Rare"/>
+        <owl:onProperty rdf:resource="#greaterThan"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Considerable">
+    <rdfs:subClassOf rdf:resource="#ImpactCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Deep">
+    <rdfs:subClassOf rdf:resource="#SpatialCategory"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Shallow"/>
+        <owl:onProperty rdf:resource="#greaterThan"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  
+  <owl:Class rdf:ID="Devastating">
+    <rdfs:subClassOf rdf:resource="#ImpactCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Dominant">
+    <rdfs:subClassOf rdf:resource="#RoleCategory"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Subordinate"/>
+        <owl:onProperty rdf:resource="#greaterThan"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Exotic">
+    <rdfs:subClassOf rdf:resource="#RoleCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Extremely">
+    <rdfs:subClassOf rdf:resource="#QualifierCategory"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Very"/>
+        <owl:onProperty rdf:resource="#greaterThan"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Fine">
+    <rdfs:subClassOf rdf:resource="#SizeCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="FrequencyCategory">
+    <rdfs:subClassOf rdf:resource="#OrderCategory"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Frequency"/>
+        <owl:onProperty rdf:resource="#measureOf"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  
+  <owl:Class rdf:ID="Gentle">
+    <rdfs:subClassOf rdf:resource="#ImpactCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="High">
+    <rdfs:subClassOf rdf:resource="#SizeCategory"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Low"/>
+        <owl:onProperty rdf:resource="#greaterThan"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ImpactCategory">
+    <rdfs:subClassOf rdf:resource="#OrderCategory"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="measureOf"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Impact"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Incipient">
+    <rdfs:subClassOf rdf:resource="#QualifierCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Light">
+    <rdfs:subClassOf rdf:resource="#ImpactCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Low">
+    <rdfs:subClassOf rdf:resource="#SizeCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Lower">
+    <rdfs:subClassOf rdf:resource="#SpatialCategory"/>
+  </owl:Class>
+  
+  <owl:Class rdf:ID="Macro">
+    <rdfs:subClassOf rdf:resource="#SizeCategory"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Micro"/>
+        <owl:onProperty rdf:resource="#greaterThan"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Major">
+    <rdfs:subClassOf rdf:resource="#RoleCategory"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Minor"/>
+        <owl:onProperty rdf:resource="#greaterThan"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Micro">
+    <rdfs:subClassOf rdf:resource="#SizeCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Middle">
+    <rdfs:subClassOf rdf:resource="#Category"/>
+  </owl:Class>
+  
+  <owl:Class rdf:ID="Minor">
+    <rdfs:subClassOf rdf:resource="#RoleCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Moderate">
+    <rdfs:subClassOf rdf:resource="#ImpactCategory"/>
+    <rdfs:subClassOf rdf:resource="#QualifierCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="OrderCategory">
+    <rdfs:subClassOf rdf:resource="#Category"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="OrdinalScale">
+    <rdfs:subClassOf rdf:resource="#MeasurementScale"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Primary">
+    <rdfs:subClassOf rdf:resource="#RoleCategory"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Secondary"/>
+        <owl:onProperty rdf:resource="#greaterThan"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="QualifierCategory">
+    <rdfs:subClassOf rdf:resource="#OrderCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Secondary">
+    <rdfs:subClassOf rdf:resource="#RoleCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Rare">
+    <rdfs:subClassOf rdf:resource="#FrequencyCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="RoleCategory">
+    <rdfs:subClassOf rdf:resource="#OrderCategory"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Role"/>
+        <owl:onProperty rdf:resource="#measureOf"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Semi">
+    <rdfs:subClassOf rdf:resource="#QualifierCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Severe">
+    <rdfs:subClassOf rdf:resource="#ImpactCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Shallow">
+    <rdfs:subClassOf rdf:resource="#SpatialCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SizeCategory">
+    <rdfs:subClassOf rdf:resource="#OrderCategory"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Size"/>
+        <owl:onProperty rdf:resource="#measureOf"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Slight">
+    <rdfs:subClassOf rdf:resource="#QualifierCategory"/>
+    <owl:equivalentClass rdf:resource="#Slightly"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Slightly"/>
+
+  <owl:Class rdf:ID="Small">
+    <rdfs:subClassOf rdf:resource="#SizeCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SpatialCategory">
+    <rdfs:subClassOf rdf:resource="#OrderCategory"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Space"/>
+        <owl:onProperty rdf:resource="#measureOf"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Strong">
+    <rdfs:subClassOf rdf:resource="#ImpactCategory"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Weak"/>
+        <owl:onProperty rdf:resource="#greaterThan"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Subordinate">
+    <rdfs:subClassOf rdf:resource="#RoleCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Top">
+    <rdfs:subClassOf rdf:resource="#SizeCategory"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Bottom"/>
+        <owl:onProperty rdf:resource="#greaterThan"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  
+  <owl:Class rdf:ID="Total">
+    <rdfs:subClassOf rdf:resource="#ImpactCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Trace">
+    <rdfs:subClassOf rdf:resource="#RoleCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Transitional">
+    <rdfs:subClassOf rdf:resource="#Category"/>
+  </owl:Class>
+  
+  <owl:Class rdf:ID="Ultra">
+    <rdfs:subClassOf rdf:resource="#QualifierCategory"/>
+  </owl:Class>
+  
+  <owl:Class rdf:ID="Upper">
+    <rdfs:subClassOf rdf:resource="#SpatialCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Very">
+    <rdfs:subClassOf rdf:resource="#QualifierCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Violent">
+    <rdfs:subClassOf rdf:resource="#ImpactCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Weak">
+    <rdfs:subClassOf rdf:resource="#ImpactCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Well">
+    <rdfs:subClassOf rdf:resource="#QualifierCategory"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Size">
+    <rdfs:subClassOf rdf:resource="#Property"/>
+  </owl:Class>
+
+</rdf:RDF>

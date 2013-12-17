@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Living organisms</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Living organisms"/>
+            <concept id="2" label="Unicellular">
+                <sense domains="[biology]"
+                    gloss="having or consisting of a single cell"
+                    number="02617584" pos="a" words="[unicellular]"/>
+            </concept>
+            <concept id="3" label="Multicellular">
+                <sense domains="[factotum]"
+                    gloss="consisting of many cells; &quot;multicellular organisms&quot;"
+                    number="00319611" pos="a" words="[multicellular]"/>
+            </concept>
+            <concept id="4" label="Bacteria">
+                <sense domains="[biology]"
+                    gloss="single-celled or noncellular spherical or spiral or rod-shaped organisms lacking chlorophyll that reproduce by fission; important as pathogens and for biochemical properties; taxonomy is difficult; often considered plants"
+                    number="00884781" pos="n" words="[bacteria, bacterium]"/>
+            </concept>
+            <concept id="5" label="Algae">
+                <sense domains="[biology, plants]"
+                    gloss="primitive chlorophyll-containing mainly aquatic eukaryotic organisms lacking true stems and roots and leaves"
+                    number="00924225" pos="n" words="[alga, algae]"/>
+            </concept>
+            <concept id="6" label="Cell">
+                <sense domains="[biology]"
+                    gloss="the basic structural and functional unit of all organisms; cells may exist as independent units of life (as in monads) or may form colonies or tissues as in higher plants and animals"
+                    number="00003095" pos="n" words="[cell]"/>
+            </concept>
+            <concept id="7" label="Animals">
+                <sense domains="[animals, biology]"
+                    gloss="a living organism characterized by voluntary movement"
+                    number="00008019" pos="n" words="[animal, animate_being, beast, brute, creature, fauna]"/>
+            </concept>
+            <concept id="8" label="Plants">
+                <sense domains="[biology, plants]"
+                    gloss="a living organism lacking the power of locomotion"
+                    number="00008864" pos="n" words="[plant, flora, plant_life]"/>
+            </concept>
+            <concept id="9" label="Nucleus">
+                <sense domains="[biology]"
+                    gloss="a part of the cell containing DNA and RNA and responsible for growth and reproduction"
+                    number="04219720" pos="n" words="[nucleus, cell_nucleus]"/>
+            </concept>
+            <concept id="10" label="Mitochondria"/>
+            <concept id="11" label="Dog">
+                <sense domains="[animals, biology]"
+                    gloss="a member of the genus Canis (probably descended from the common wolf) that has been domesticated by man since prehistoric times; occurs in many breeds; &quot;the dog barked all night&quot;"
+                    number="01595188" pos="n" words="[dog, domestic_dog, Canis_familiaris]"/>
+            </concept>
+            <concept id="12" label="Mango">
+                <sense domains="[biology, plants]"
+                    gloss="large evergreen tropical tree cultivated for its large oval smooth-skinned fruit"
+                    number="09060362" pos="n" words="[mango, mango_tree, Mangifera_indica]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="13" label="are"/>
+            <linking-phrase id="14" label="example"/>
+            <linking-phrase id="15" label="consists of"/>
+            <linking-phrase id="16" label="includes"/>
+            <linking-phrase id="17" label="consists of"/>
+            <linking-phrase id="18" label="has"/>
+            <linking-phrase id="19" label="example"/>
+            <linking-phrase id="20" label="example"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="13"/>
+            <connection from-id="13" to-id="2"/>
+            <connection from-id="13" to-id="3"/>
+            <connection from-id="2" to-id="14"/>
+            <connection from-id="14" to-id="4"/>
+            <connection from-id="14" to-id="5"/>
+            <connection from-id="2" to-id="15"/>
+            <connection from-id="15" to-id="6"/>
+            <connection from-id="3" to-id="16"/>
+            <connection from-id="16" to-id="7"/>
+            <connection from-id="16" to-id="8"/>
+            <connection from-id="3" to-id="17"/>
+            <connection from-id="17" to-id="6"/>
+            <connection from-id="6" to-id="18"/>
+            <connection from-id="18" to-id="9"/>
+            <connection from-id="18" to-id="10"/>
+            <connection from-id="7" to-id="19"/>
+            <connection from-id="19" to-id="11"/>
+            <connection from-id="8" to-id="20"/>
+            <connection from-id="20" to-id="12"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="371" y="28"/>
+            <concept-appearance id="2" x="243" y="153"/>
+            <concept-appearance id="3" x="471" y="152"/>
+            <concept-appearance id="4" x="177" y="281"/>
+            <concept-appearance id="5" x="287" y="281"/>
+            <concept-appearance id="6" x="366" y="277"/>
+            <concept-appearance id="7" x="462" y="276"/>
+            <concept-appearance id="8" x="528" y="278"/>
+            <concept-appearance id="9" x="314" y="395"/>
+            <concept-appearance id="10" x="393" y="393"/>
+            <concept-appearance id="11" x="467" y="390"/>
+            <concept-appearance id="12" x="532" y="394"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="13" x="366" y="125"/>
+            <linking-phrase id="14" x="242" y="242"/>
+            <linking-phrase id="15" x="305" y="230"/>
+            <linking-phrase id="16" x="474" y="230"/>
+            <linking-phrase id="17" x="408" y="231"/>
+            <linking-phrase id="18" x="360" y="354"/>
+            <linking-phrase id="19" x="460" y="354"/>
+            <linking-phrase id="20" x="527" y="355"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

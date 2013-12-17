@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Physical Properties -->
+  <owl:Class rdf:ID="meter_perSecondSquared"/>
+  <owl:Class rdf:ID="Energy"/>
+  <owl:Class rdf:ID="Force"/>
+  <owl:Class rdf:ID="PhysicalProperty"/>
+  <owl:Class rdf:ID="kilogram_meter_perSecond"/>
+  <owl:Class rdf:ID="Pressure"/>
+  <owl:Class rdf:ID="meter_perSecond"/>
+  <owl:Class rdf:ID="Vector"/>
+  <owl:Class rdf:ID="PhysicalProcess"/>
+  <owl:Class rdf:ID="PhysicalConstant"/>
+  <owl:Class rdf:ID="perSecond"/>
+  <owl:Class rdf:ID="Physics"/>
+  <owl:Class rdf:ID="Model"/>
+  
+  <owl:Class rdf:ID="Acceleration">
+    <rdfs:subClassOf rdf:resource="#MotionProperty" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasDefaultUnit"/>	
+		</owl:onProperty>
+        <owl:hasValue rdf:resource="#meter_perSecondSquared"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment>The rate of change with time of the velocity vector of a particle.</rdfs:comment>
+    <rdfs:label>Acceleration</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:ID="AngularMomentum">
+    <rdfs:subClassOf rdf:resource="#Momentum"/>
+    <rdfs:comment xml:lang="en">In physics, the angular momentum of an object rotating about some reference point is the measure of the extent to which the object will continue to rotate about that point unless acted upon by an external torque. In particular, if a point mass rotates about an axis, then the angular momentum with respect to a point on the axis is related to the mass of the object, the velocity and the distance of the mass to the axis. While the motion associated with linear momentum has no absolute frame of reference, the rotation associated with angular momentum is sometimes spoken of as being measured relative to the fixed stars.</rdfs:comment> 
+  </owl:Class>
+
+  <owl:Class rdf:ID="KineticEnergy">
+    <rdfs:subClassOf rdf:resource="#Energy"/>
+    <rdfs:subClassOf rdf:resource="#MotionProperty" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Inertia">
+    <rdfs:subClassOf rdf:resource="#MotionProperty" />
+    <rdfs:label>Inertia</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:ID="CentrifugalForce">
+    <rdfs:subClassOf rdf:resource="#Force" />
+    <rdfs:subClassOf rdf:resource="#MotionProperty" />
+    <rdfs:label>CentrifugalForce</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Shear">
+    <rdfs:subClassOf rdf:resource="#MotionProperty" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="MotionProperty">
+    <rdfs:subClassOf rdf:resource="#PhysicalProperty" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Momentum">
+    <rdfs:subClassOf rdf:resource="#MotionProperty" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#kilogram_meter_perSecond"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MomentumFlux">
+    <rdfs:subClassOf rdf:resource="#Pressure"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Speed">
+    <rdfs:subClassOf rdf:resource="#MotionProperty" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#meter_perSecond"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="TangentialAcceleration">
+    <rdfs:subClassOf rdf:resource="#Acceleration" />
+    <rdfs:comment xml:lang="en">The component of the acceleration directed along the velocity vector (streamline), with magnitude equal to the rate of change of speed of the parcel dV/dt, where V is the speed.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="TerminalVelocity">
+    <rdfs:subClassOf rdf:resource="#Velocity" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Velocity">
+    <rdfs:subClassOf rdf:resource="#MotionProperty" />
+    <rdfs:subClassOf rdf:resource="#Vector" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#meter_perSecond"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The time rate of change of a position vector; that is, a change of position expressed in terms of speed and direction.</rdfs:comment>
+  </owl:Class>
+
+<!-- Physical Processes -->
+  <owl:Class rdf:ID="Collision">
+    <rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Motion">
+    <rdfs:subClassOf rdf:resource="#PhysicalProcess" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Rotation">
+    <rdfs:subClassOf rdf:resource="#Motion"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Mixing">
+    <rdfs:subClassOf rdf:resource="#PhysicalProcess" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="CoriolisEffect">
+    <rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Rarefaction">
+    <rdfs:subClassOf rdf:resource="#PhysicalProcess"/>
+  </owl:Class>
+
+<!-- Other -->
+  <owl:Class rdf:ID="CoriolisParameter">
+    <rdfs:subClassOf rdf:resource="#PhysicalConstant"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#perSecond"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Dynamics">
+    <rdfs:subClassOf rdf:resource="#Physics"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Eulerian">
+    <rdfs:subClassOf rdf:resource="#Model" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Lagrangian">
+    <rdfs:subClassOf rdf:resource="#Model" />
+    <owl:disjointWith rdf:resource="#Eulerian"/>
+  </owl:Class>
+
+</rdf:RDF>

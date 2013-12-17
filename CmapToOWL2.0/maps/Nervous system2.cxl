@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Nervous system2</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Nervous system">
+                <sense domains="[anatomy]"
+                    gloss="the sensory and control apparatus consisting of a network of nerve cells"
+                    number="04236109" pos="n" terms="[nervous_system]"/>
+            </concept>
+            <concept id="2" label="Spinal cord">
+                <sense domains="[anatomy]"
+                    gloss="a major part of the central nervous system which conducts sensory and motor nerve impulses to and from the brain; a long tube-like structure extending from the base of the brain through the vertebral canal to the upper lumbar region"
+                    number="04264160" pos="n" terms="[spinal_cord, medulla_spinalis]"/>
+            </concept>
+            <concept id="3" label="Brain">
+                <sense domains="[anatomy]"
+                    gloss="that part of the central nervous system that includes all the higher nervous centers; enclosed within the skull; continuous with the spinal cord"
+                    number="04249425" pos="n" terms="[brain, encephalon]"/>
+            </concept>
+            <concept id="4" label="Appendage nerves"/>
+            <concept id="5" label="Spinal nerves"/>
+            <concept id="6" label="Medulla oblongata">
+                <sense domains="[anatomy]"
+                    gloss="lower or hindmost part of the brain; continuous with spinal cord; (`bulb' is an old term for medulla oblongata); &quot;the medulla oblongata is the most vital part of the brain because it contains centers controlling breathing and heart funtioning&quot;"
+                    number="04259503" pos="n" terms="[medulla_oblongata, medulla, bulb]"/>
+            </concept>
+            <concept id="7" label="Cerebrum">
+                <sense domains="[anatomy]"
+                    gloss="anterior portion of the brain consisting of two hemispheres; dominant part of the brain in humans"
+                    number="04257372" pos="n" terms="[cerebrum]"/>
+            </concept>
+            <concept id="8" label="Optic lobes"/>
+            <concept id="9" label="Olfactory lobes"/>
+            <concept id="10" label="Cerebelum"/>
+            <concept id="11" label="Signals from brain to spinal cord"/>
+            <concept id="12" label="Vital functions"/>
+            <concept id="13" label="Respiratory system">
+                <sense domains="[anatomy]"
+                    gloss="the system for taking in oxygen and giving off carbon dioxide; in terrestrial animals this is accomplished by breathing"
+                    number="04281108" pos="n" terms="[respiratory_system, respiratory_tract]"/>
+            </concept>
+            <concept id="14" label="Circulatory system">
+                <sense domains="[anatomy]"
+                    gloss="the organs and tissues involved in circulating blood and lymph through the body"
+                    number="04269291" pos="n" terms="[circulatory_system, cardiovascular_system]"/>
+            </concept>
+            <concept id="15" label="Left lobe"/>
+            <concept id="16" label="Right lobe"/>
+            <concept id="17" label="Sensory information"/>
+            <concept id="18" label="Response to stimili"/>
+            <concept id="19" label="Analytical reasoning"/>
+            <concept id="20" label="Creativity">
+                <sense domains="[art]" gloss="the ability to create"
+                    number="04355888" pos="n" terms="[creativity, creativeness]"/>
+            </concept>
+            <concept id="21" label="Speech">
+                <sense domains="[factotum]"
+                    gloss="a formal spoken communication delivered to an audience; &quot;he listened to an address on minor Roman poets&quot;"
+                    number="05404801" pos="n" terms="[address, speech]"/>
+                <sense domains="[factotum]"
+                    gloss="communication by word of mouth; &quot;his speech was slurred&quot;; &quot;he uttered harsh language&quot;; &quot;he recorded the language of the streets&quot;"
+                    number="05319899" pos="n" terms="[speech, spoken_language, language, oral_communication]"/>
+                <sense domains="[linguistics]"
+                    gloss="something spoken; &quot;he could hear them uttering merry speeches&quot;"
+                    number="05334587" pos="n" terms="[speech]"/>
+                <sense domains="[factotum]"
+                    gloss="the exchange of spoken words; &quot;they were perfectly comfortable together without speech&quot;"
+                    number="05320939" pos="n" terms="[speech]"/>
+                <sense domains="[art, linguistics]"
+                    gloss="your characteristic style or manner of expressing yourself orally; &quot;his manner of speaking was quite abrupt&quot;; &quot;her speech was barren of southernisms&quot;; &quot;I detected a slight accent in his speech&quot;"
+                    number="05296602" pos="n" terms="[manner_of_speaking, speech, delivery]"/>
+                <sense domains="[factotum]"
+                    gloss="a lengthy rebuke; &quot;a good lecture was my father's idea of discipline&quot;; &quot;the teacher gave him a talking to&quot;"
+                    number="05035599" pos="n" terms="[lecture, speech, talking_to]"/>
+                <sense domains="[linguistics, literature, theatre]"
+                    gloss="words making up the dialogue of a play; &quot;the actor forgot his lines&quot;"
+                    number="05259571" pos="n" terms="[actor's_line, speech, words]"/>
+                <sense domains="[factotum]"
+                    gloss="the mental faculty or power of vocal communication; &quot;language sets homo sapiens apart from all other animals&quot;"
+                    number="04370255" pos="n" terms="[language, speech]"/>
+            </concept>
+            <concept id="22" label="Matematical reasoning"/>
+            <concept id="23" label="Non-verbal responses"/>
+            <concept id="24" label="Eyes">
+                <sense domains="[factotum]"
+                    gloss="opinion or judgment; &quot;in the eyes of the law&quot; or &quot;I was wrong in her eyes&quot;"
+                    number="04567021" pos="n" terms="[eyes]"/>
+            </concept>
+            <concept id="25" label="Nose">
+                <sense domains="[anatomy]"
+                    gloss="the organ of smell and entrance to the respiratory tract; the prominent part of the face of man or other mammals; &quot;he has a cold in the nose&quot;"
+                    number="04338406" pos="n" terms="[nose, olfactory_organ]"/>
+            </concept>
+            <concept id="26" label="Muscle movement"/>
+            <concept id="27" label="Involuntary actions"/>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="28" label="is divided into"/>
+            <linking-phrase id="29" label="contains"/>
+            <linking-phrase id="30" label="divided into paired lobes"/>
+            <linking-phrase id="31" label="non-paired lobe"/>
+            <linking-phrase id="32" label="send signals down and get signals from"/>
+            <linking-phrase id="33" label="coordinates"/>
+            <linking-phrase id="34" label="diferentiated into"/>
+            <linking-phrase id="35" label="integrates and coordinates"/>
+            <linking-phrase id="36" label="receive signals from"/>
+            <linking-phrase id="37" label="receive signals from"/>
+            <linking-phrase id="38" label="refines"/>
+            <linking-phrase id="39" label="such as"/>
+            <linking-phrase id="40" label="handles"/>
+            <linking-phrase id="41" label="handles"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="28"/>
+            <connection from-id="28" to-id="2"/>
+            <connection from-id="28" to-id="3"/>
+            <connection from-id="2" to-id="29"/>
+            <connection from-id="29" to-id="4"/>
+            <connection from-id="29" to-id="5"/>
+            <connection from-id="3" to-id="30"/>
+            <connection from-id="30" to-id="6"/>
+            <connection from-id="30" to-id="7"/>
+            <connection from-id="30" to-id="8"/>
+            <connection from-id="30" to-id="9"/>
+            <connection from-id="3" to-id="31"/>
+            <connection from-id="31" to-id="10"/>
+            <connection from-id="6" to-id="32"/>
+            <connection from-id="32" to-id="2"/>
+            <connection from-id="6" to-id="33"/>
+            <connection from-id="33" to-id="11"/>
+            <connection from-id="33" to-id="12"/>
+            <connection from-id="7" to-id="34"/>
+            <connection from-id="34" to-id="15"/>
+            <connection from-id="34" to-id="16"/>
+            <connection from-id="7" to-id="35"/>
+            <connection from-id="35" to-id="17"/>
+            <connection from-id="35" to-id="18"/>
+            <connection from-id="8" to-id="36"/>
+            <connection from-id="36" to-id="24"/>
+            <connection from-id="9" to-id="37"/>
+            <connection from-id="37" to-id="25"/>
+            <connection from-id="10" to-id="38"/>
+            <connection from-id="38" to-id="26"/>
+            <connection from-id="38" to-id="27"/>
+            <connection from-id="12" to-id="39"/>
+            <connection from-id="39" to-id="13"/>
+            <connection from-id="39" to-id="14"/>
+            <connection from-id="15" to-id="40"/>
+            <connection from-id="40" to-id="21"/>
+            <connection from-id="40" to-id="22"/>
+            <connection from-id="40" to-id="19"/>
+            <connection from-id="16" to-id="41"/>
+            <connection from-id="41" to-id="20"/>
+            <connection from-id="41" to-id="23"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="174" y="13"/>
+            <concept-appearance id="2" x="-101" y="156"/>
+            <concept-appearance id="3" x="431" y="156"/>
+            <concept-appearance id="4" x="-223" y="312"/>
+            <concept-appearance id="5" x="-28" y="315"/>
+            <concept-appearance id="6" x="137" y="312"/>
+            <concept-appearance id="7" x="266" y="315"/>
+            <concept-appearance id="8" x="474" y="328"/>
+            <concept-appearance id="9" x="561" y="326"/>
+            <concept-appearance id="10" x="622" y="322"/>
+            <concept-appearance id="11" x="40" y="442"/>
+            <concept-appearance id="12" x="123" y="447"/>
+            <concept-appearance id="13" x="27" y="578"/>
+            <concept-appearance id="14" x="126" y="578"/>
+            <concept-appearance id="15" x="199" y="451"/>
+            <concept-appearance id="16" x="276" y="449"/>
+            <concept-appearance id="17" x="345" y="449"/>
+            <concept-appearance id="18" x="414" y="450"/>
+            <concept-appearance id="19" x="312" y="586"/>
+            <concept-appearance id="20" x="373" y="587"/>
+            <concept-appearance id="21" x="187" y="584"/>
+            <concept-appearance id="22" x="241" y="586"/>
+            <concept-appearance id="23" x="433" y="590"/>
+            <concept-appearance id="24" x="480" y="453"/>
+            <concept-appearance id="25" x="561" y="455"/>
+            <concept-appearance id="26" x="629" y="453"/>
+            <concept-appearance id="27" x="694" y="455"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="28" x="161" y="105"/>
+            <linking-phrase id="29" x="-108" y="248"/>
+            <linking-phrase id="30" x="290" y="251"/>
+            <linking-phrase id="31" x="552" y="249"/>
+            <linking-phrase id="32" x="24" y="251"/>
+            <linking-phrase id="33" x="84" y="408"/>
+            <linking-phrase id="34" x="238" y="397"/>
+            <linking-phrase id="35" x="323" y="395"/>
+            <linking-phrase id="36" x="477" y="412"/>
+            <linking-phrase id="37" x="555" y="406"/>
+            <linking-phrase id="38" x="623" y="403"/>
+            <linking-phrase id="39" x="112" y="538"/>
+            <linking-phrase id="40" x="187" y="533"/>
+            <linking-phrase id="41" x="318" y="534"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

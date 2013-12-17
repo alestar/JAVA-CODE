@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+  <owl:Class rdf:ID="StaticStability"/>
+  <owl:Class rdf:ID="KelvinHelmholtzInstability"/>
+  <owl:Class rdf:ID="Wave"/>
+  <owl:Class rdf:ID="Gravity"/>
+  <owl:Class rdf:ID="Fluid"/>
+  <owl:Class rdf:ID="CoriolisEffect"/>
+  <owl:Class rdf:ID="Motion"/>
+  <owl:Class rdf:ID="Inertia"/>
+  <owl:Class rdf:ID="Frequency"/>
+  <owl:Class rdf:ID="Stability"/>
+  <owl:Class rdf:ID="Oscillation"/>
+  <owl:Class rdf:ID="SurfaceWave"/>
+  <owl:Class rdf:ID="StandingWave"/>
+  
+  
+  <owl:Class rdf:ID="ShallowWaterWave">
+    <rdfs:subClassOf rdf:resource="#GravityWave" />
+    <rdfs:comment xml:lang="en">An ocean wave with its length sufficiently large compared to the water depth (i.e., 25 or more times the depth)</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="InternalGravityWave">
+    <rdfs:subClassOf rdf:resource="#GravityWave" />
+    <rdfs:subClassOf rdf:resource="#InternalWave" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhysicalProperty"/>	
+		</owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#StaticStability" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A wave that propagates in density-stratified fluid under the influence of buoyancy forces.
+    </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="InternalWave">
+    <rdfs:subClassOf rdf:resource="#GravityWave" />
+    <rdfs:comment xml:lang="en">A wave in fluid motion having its maximum amplitude within the fluid or at an internal boundary (interface). The concepts of internal and external waves originated in the study of gravity waves in homogeneous incompressible fluids, and it makes no difference in the dynamics of the wave whether the static stability of the fluid is concentrated in a free surface or in an interface. However, internal waves in a fluid with continually varying density have maximum amplitudes and nodal surfaces within the fluid itself, so that these are properly distinguished from external waves. Compare surface wave.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="HelmholtzWave">
+    <rdfs:subClassOf rdf:resource="#GravityWave" />
+    <rdfs:comment xml:lang="en">An unstable wave in a system of two homogeneous fluids with a velocity discontinuity at the interface.</rdfs:comment>
+  </owl:Class>  
+
+ <owl:Class rdf:ID="KelvinHelmholtzWave">
+    <rdfs:subClassOf rdf:resource="#GravityWave" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProperty" />
+        <owl:allValuesFrom rdf:resource="#KelvinHelmholtzInstability" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A waveform disturbance that arises from Kelvin?Helmholtz instability.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="KelvinWave">
+    <rdfs:subClassOf rdf:resource="#GravityWave" />
+    <rdfs:comment xml:lang="en">A type of low-frequency gravity wave trapped to a vertical boundary, or the equator, which propagates anticlockwise (in the Northerm Hemisphere) around a basin.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="GravityWave">
+    <rdfs:subClassOf rdf:resource="#Wave" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhysicalProcess"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Gravity" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasStateOfMatter"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Fluid" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:label>Gravity Wave</rdfs:label>
+    <rdfs:comment xml:lang="en">A wave disturbance in which buoyancy (or reduced gravity) acts as the restoring force on parcels displaced from hydrostatic equilibrium.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PlanetaryWave">
+    <owl:equivalentClass rdf:resource="#RossbyWave"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="RossbyWave">
+    <rdfs:subClassOf rdf:resource="#InertialWave"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProcess" />
+        <owl:allValuesFrom rdf:resource="#CoriolisEffect" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Rossby (or planetary) waves are large-scale motions in the ocean or atmosphere whose restoring force is the variation in Coriolis effect with latitude. The waves were first identified in the atmosphere in 1939 by Carl-Gustaf Arvid Rossby who went on to explain their motion. Rossby waves are a subset of inertial waves</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="OrbitalMotion">
+    <rdfs:subClassOf rdf:resource="#Motion" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProcess" />
+        <owl:allValuesFrom rdf:resource="#GravityWave" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">In hydrodynamics, the motion of a fluid particle induced by the passage of a progressive gravity wave.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="CapillaryWave">
+    <rdfs:subClassOf rdf:resource="#Wave"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="FluidWave">
+    <rdfs:subClassOf rdf:resource="#GravityWave" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="GravitationalWave">
+    <owl:equivalentClass rdf:resource="#GravityWave" />
+    <rdfs:label>Gravitational Wave</rdfs:label>
+    <rdfs:comment>Same as gravity wave</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="InertialWave">
+    <owl:equivalentClass rdf:resource="#InertiaWave"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="InertiaWave">
+    <rdfs:subClassOf rdf:resource="#GravityWave" />
+    <owl:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProcess" />
+        <owl:allValuesFrom rdf:resource="#Inertia" />
+      </owl:Restriction>
+    </owl:subClassOf>
+    <rdfs:comment xml:lang="en">1. Any wave motion in which no form of energy other than kinetic energy is present. In this general sense, Helmholtz waves, barotropic disturbances, Rossby waves, etc., are inertia waves. 2. More restrictedly, a wave motion in which the source of kinetic energy of the disturbance is the rotation of the fluid about some given axis. In the atmosphere a westerly wind system is such a source, the inertia waves here being, in general, stable. A similar analysis has been applied to smaller vortices, such as the hurricane. See inertial instability</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="TopographicWave">
+    <rdfs:subClassOf rdf:resource="#GravityWave"/>
+    <rdfs:comment>Waves with a restoring force arising from variations in depth. The stretching or compression of displaced columns of water generates anomalous vorticity tending to drive them back to their original position.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="BruntVaisalaFrequency">
+    <rdfs:subClassOf rdf:resource="#Frequency" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="measureOf"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Stability" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasStateOfMatter" />
+        <owl:allValuesFrom rdf:resource="#Fluid" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProcess" />
+        <owl:someValuesFrom rdf:resource="#Oscillation" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The frequency at which a displaced parcel will oscillate when displaced vertically within a statically stable environment.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LongCrestedWave">
+    <rdfs:subClassOf rdf:resource="#SurfaceWave" />
+    <rdfs:comment xml:lang="en">Ocean surface waves that are nearly two-dimensional, in that the crests appear very long in comparison with the wavelength, and the energy propagation is concentrated in a narrow band around the mean wave direction.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Seiche">
+    <rdfs:subClassOf rdf:resource="#StandingWave"/>
+    <rdfs:comment xml:lang="en">A seiche is a standing wave in an enclosed or partially enclosed body of water. Seiches and seiche-related phenomena have been observed on lakes, reservoirs, bays and seas. The key requirement for formation of a seiche is that the body of water be at least partially bounded, allowing natural phenomena to form a standing wave.</rdfs:comment>
+  </owl:Class>
+
+</rdf:RDF>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>nervous system</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="The nervous system"/>
+            <concept id="2" label="Cells">
+                <sense domains="[biology]"
+                    gloss="the basic structural and functional unit of all organisms; cells may exist as independent units of life (as in monads) or may form colonies or tissues as in higher plants and animals"
+                    number="00003095" pos="n" terms="[cell]"/>
+            </concept>
+            <concept id="3" label="Neurons"/>
+            <concept id="4" label="Supporting cells"/>
+            <concept id="5" label="Signals">
+                <sense domains="[factotum]"
+                    gloss="any communication that encodes a message; &quot;signals from the boat sudddenly stopped&quot;"
+                    number="05085885" pos="n" terms="[signal, signaling, sign]"/>
+            </concept>
+            <concept id="6" label="Sensory neurons"/>
+            <concept id="7" label="Interneurons"/>
+            <concept id="8" label="Motor neurons"/>
+            <concept id="9" label="External environment"/>
+            <concept id="10" label="Internal environment"/>
+            <concept id="11" label="Central nervous system">
+                <sense domains="[anatomy]"
+                    gloss="the portion of the vertebrate nervous system consisting of the brain and spinal cord"
+                    number="04249171" pos="n" terms="[central_nervous_system, CNS]"/>
+            </concept>
+            <concept id="12" label="Sensory input"/>
+            <concept id="13" label="Motor output"/>
+            <concept id="14" label="Other neurons"/>
+            <concept id="15" label="Effector cells"/>
+            <concept id="16" label="Muscles">
+                <sense domains="[anatomy]"
+                    gloss="animal tissue consisting predominantly of contractile cells"
+                    number="04105203" pos="n" terms="[muscle, muscular_tissue]"/>
+            </concept>
+            <concept id="17" label="Glands"/>
+            <concept id="18" label="Glia">
+                <sense domains="[anatomy]"
+                    gloss="sustentactular tissue that surrounds and supports neurons in the central nervous system; glial and neural cells together compose the tissue of the central nervous system"
+                    number="04239372" pos="n" terms="[neuroglia, glia]"/>
+            </concept>
+            <concept id="19" label="Assistance">
+                <sense domains="[factotum]"
+                    gloss="the activity of contributing to the fulfillment of a need or furtherance of an effort or purpose: &quot;he gave me an assist with the housework&quot;; &quot;could not walk without assistance&quot;; &quot;rescue party went to their aid&quot;; &quot;offered his help in unloading&quot;"
+                    number="00782440" pos="n" terms="[aid, assist, assistance, help, helping]"/>
+                <sense domains="[factotum]"
+                    gloss="a resource: &quot;visual aids in teaching&quot;; &quot;economic assistance to depressed areas&quot;"
+                    number="04015637" pos="n" terms="[aid, assistance, help]"/>
+            </concept>
+            <concept id="20" label="Structure">
+                <sense domains="[anatomy]"
+                    gloss="a particular complex anatomical structure; &quot;he has good bone structure&quot;"
+                    number="04062157" pos="n" terms="[structure, anatomical_structure, complex_body_part, bodily_structure, body_structure]"/>
+            </concept>
+            <concept id="21" label="Protection">
+                <sense domains="[factotum]"
+                    gloss="the activity of protecting someone or something; &quot;the witnesses demanded police protection&quot;; &quot;he hated to spend so much time guarding his new car&quot;"
+                    number="00522858" pos="n" terms="[protection, protecting, guarding]"/>
+            </concept>
+            <concept id="22" label="Insulation">
+                <sense domains="[factotum]"
+                    gloss="the act of insulating for the purposes of protecting something"
+                    number="00529661" pos="n" terms="[insulation]"/>
+            </concept>
+            <concept id="23" label="Myelin sheath">
+                <sense domains="[anatomy, plants]"
+                    gloss="a layer of myelin encasing (and insulating) medullated nerve fibers"
+                    number="04238036" pos="n" terms="[medullary_sheath, myelin_sheath]"/>
+            </concept>
+            <concept id="24" label="Schwann"/>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="25" label="composed of"/>
+            <linking-phrase id="26" label="called"/>
+            <linking-phrase id="27" label="transmit"/>
+            <linking-phrase id="28" label="types include"/>
+            <linking-phrase id="29" label="most numerous are"/>
+            <linking-phrase id="30" label="receive input from"/>
+            <linking-phrase id="31" label="send output to"/>
+            <linking-phrase id="32" label="are in the"/>
+            <linking-phrase id="33" label="integrate"/>
+            <linking-phrase id="34" label="only communicate with"/>
+            <linking-phrase id="35" label="communicate with"/>
+            <linking-phrase id="36" label="receive input from"/>
+            <linking-phrase id="37" label="in"/>
+            <linking-phrase id="38" label="provide"/>
+            <linking-phrase id="39" label="such as"/>
+            <linking-phrase id="40" label="provided by and informed by"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="25"/>
+            <connection from-id="25" to-id="2"/>
+            <connection from-id="2" to-id="26"/>
+            <connection from-id="26" to-id="3"/>
+            <connection from-id="26" to-id="4"/>
+            <connection from-id="3" to-id="27"/>
+            <connection from-id="27" to-id="5"/>
+            <connection from-id="3" to-id="28"/>
+            <connection from-id="28" to-id="6"/>
+            <connection from-id="28" to-id="7"/>
+            <connection from-id="28" to-id="8"/>
+            <connection from-id="4" to-id="29"/>
+            <connection from-id="29" to-id="18"/>
+            <connection from-id="6" to-id="30"/>
+            <connection from-id="30" to-id="9"/>
+            <connection from-id="30" to-id="10"/>
+            <connection from-id="6" to-id="31"/>
+            <connection from-id="31" to-id="11"/>
+            <connection from-id="7" to-id="32"/>
+            <connection from-id="32" to-id="11"/>
+            <connection from-id="7" to-id="33"/>
+            <connection from-id="33" to-id="12"/>
+            <connection from-id="33" to-id="13"/>
+            <connection from-id="7" to-id="34"/>
+            <connection from-id="34" to-id="14"/>
+            <connection from-id="8" to-id="35"/>
+            <connection from-id="35" to-id="15"/>
+            <connection from-id="11" to-id="36"/>
+            <connection from-id="36" to-id="8"/>
+            <connection from-id="15" to-id="37"/>
+            <connection from-id="37" to-id="16"/>
+            <connection from-id="37" to-id="17"/>
+            <connection from-id="18" to-id="38"/>
+            <connection from-id="38" to-id="20"/>
+            <connection from-id="38" to-id="19"/>
+            <connection from-id="38" to-id="21"/>
+            <connection from-id="38" to-id="22"/>
+            <connection from-id="18" to-id="39"/>
+            <connection from-id="39" to-id="24"/>
+            <connection from-id="39" to-id="23"/>
+            <connection from-id="22" to-id="40"/>
+            <connection from-id="40" to-id="23"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="184" y="-16"/>
+            <concept-appearance id="2" x="199" y="93"/>
+            <concept-appearance id="3" x="114" y="182"/>
+            <concept-appearance id="4" x="274" y="177"/>
+            <concept-appearance id="5" x="-61" y="295"/>
+            <concept-appearance id="6" x="32" y="311"/>
+            <concept-appearance id="7" x="114" y="320"/>
+            <concept-appearance id="8" x="212" y="274"/>
+            <concept-appearance id="9" x="-79" y="452"/>
+            <concept-appearance id="10" x="61" y="461"/>
+            <concept-appearance id="11" x="156" y="437"/>
+            <concept-appearance id="12" x="221" y="459"/>
+            <concept-appearance id="13" x="300" y="463"/>
+            <concept-appearance id="14" x="364" y="460"/>
+            <concept-appearance id="15" x="357" y="313"/>
+            <concept-appearance id="16" x="435" y="443"/>
+            <concept-appearance id="17" x="496" y="443"/>
+            <concept-appearance id="18" x="458" y="221"/>
+            <concept-appearance id="19" x="487" y="326"/>
+            <concept-appearance id="20" x="552" y="332"/>
+            <concept-appearance id="21" x="609" y="321"/>
+            <concept-appearance id="22" x="596" y="242"/>
+            <concept-appearance id="23" x="604" y="145"/>
+            <concept-appearance id="24" x="560" y="74"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="25" x="183" y="64"/>
+            <linking-phrase id="26" x="189" y="171"/>
+            <linking-phrase id="27" x="20" y="254"/>
+            <linking-phrase id="28" x="99" y="260"/>
+            <linking-phrase id="29" x="364" y="214"/>
+            <linking-phrase id="30" x="-5" y="412"/>
+            <linking-phrase id="31" x="65" y="404"/>
+            <linking-phrase id="32" x="132" y="394"/>
+            <linking-phrase id="33" x="248" y="432"/>
+            <linking-phrase id="34" x="289" y="415"/>
+            <linking-phrase id="35" x="277" y="306"/>
+            <linking-phrase id="36" x="245" y="358"/>
+            <linking-phrase id="37" x="414" y="391"/>
+            <linking-phrase id="38" x="499" y="292"/>
+            <linking-phrase id="39" x="497" y="197"/>
+            <linking-phrase id="40" x="667" y="217"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

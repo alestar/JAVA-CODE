@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Phenomena -->
+
+  <owl:Class rdf:ID="Cycle"/>
+  <owl:Class rdf:ID="Phenomena"/>
+  <owl:Class rdf:ID="Count"/>
+  <owl:Class rdf:ID="Biology"/>
+  <owl:Class rdf:ID="Organism"/>
+   
+  
+  <owl:Class rdf:ID="Adaptation">
+    <rdfs:subClassOf rdf:resource="#EcologicalDynamics"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="BiogeochemicalCycle">
+    <rdfs:subClassOf rdf:resource="#Cycle"/>
+     <rdfs:subClassOf>
+       <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhenomena"/>	
+		</owl:onProperty>
+         <owl:allValuesFrom rdf:resource="#EcologicalPhenomena"/>
+       </owl:Restriction>
+     </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="CommunityStructure">
+    <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Competition">
+    <rdfs:subClassOf rdf:resource="#EcologicalDynamics"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DiurnalMovement">
+    <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Dominance">
+    <rdfs:subClassOf rdf:resource="#EcologicalDynamics"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="EcologicalDynamics">
+    <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="EcologicalPhenomena">
+    <rdfs:subClassOf rdf:resource="#Phenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Evolution">
+    <rdfs:subClassOf rdf:resource="#EcologicalDynamics"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Extinct">
+    <rdfs:subClassOf rdf:resource="#EcologicalDynamics"/>
+    <owl:equivalentClass rdf:resource="#Extinction"/>
+    <owl:equivalentClass rdf:resource="#SpeciesExtinction"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Extinction"/>
+  <owl:Class rdf:ID="SpeciesExtinction"/>
+
+  <owl:Class rdf:ID="FeedingHabitat">
+    <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="FoodWebDynamics">
+    <rdfs:subClassOf rdf:resource="#EcologicalDynamics"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Herbivory">
+    <rdfs:subClassOf rdf:resource="#Predation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="InvasiveSpecies">
+    <rdfs:subClassOf rdf:resource="#EcologicalDynamics"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Migration">
+    <rdfs:subClassOf rdf:resource="#EcologicalDynamics"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Mutation">
+    <rdfs:subClassOf rdf:resource="#EcologicalDynamics"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Mutualism">
+    <rdfs:subClassOf rdf:resource="#EcologicalDynamics"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="NaturalSelection">
+    <rdfs:subClassOf rdf:resource="#EcologicalDynamics"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="NutrientCycling">
+    <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Parasitism">
+    <rdfs:subClassOf rdf:resource="#EcologicalDynamics"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Population">
+    <rdfs:subClassOf rdf:resource="#Count"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PopulationDynamics">
+    <rdfs:subClassOf rdf:resource="#EcologicalDynamics"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Postbreeding">
+    <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Predation">
+    <rdfs:subClassOf rdf:resource="#EcologicalDynamics"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PrimaryProduction">
+    <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="RangeChange">
+    <rdfs:subClassOf rdf:resource="#EcologicalDynamics"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Scavenging">
+    <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SecondaryProduction">
+    <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Selection">
+    <rdfs:subClassOf rdf:resource="#EcologicalDynamics"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Speciation">
+    <rdfs:subClassOf rdf:resource="#EcologicalDynamics"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SpeciesRecruitment">
+    <rdfs:subClassOf rdf:resource="#EcologicalDynamics"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Succession">
+    <rdfs:subClassOf rdf:resource="#EcologicalDynamics"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Symbiosis">
+    <rdfs:subClassOf rdf:resource="#EcologicalDynamics"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Toxicity">
+    <rdfs:subClassOf rdf:resource="#EcologicalPhenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="TrophicDynamics">
+    <rdfs:subClassOf rdf:resource="#EcologicalDynamics"/>
+  </owl:Class>
+
+   <owl:Class rdf:ID="SpeciesInteraction">
+    <rdfs:subClassOf rdf:resource="#EcologicalDynamics"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="Ecology">
+    <rdfs:subClassOf rdf:resource="#Biology"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LandscapeEcology">
+    <rdfs:subClassOf rdf:resource="#Ecology"/>
+  </owl:Class>
+
+<!-- Object Properties -->
+
+   <owl:ObjectProperty rdf:ID="hasOrganism">
+    <rdfs:range rdf:resource="#Organism"/>
+   </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:ID="kills">
+    <rdfs:range rdf:resource="#Organism"/>
+   </owl:ObjectProperty>
+
+</rdf:RDF>

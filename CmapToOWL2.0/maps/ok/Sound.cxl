@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Sound</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Sound">
+                <sense domains="[acoustics]"
+                    gloss="mechanical vibrations transmitted by an elastic medium; &quot;falling trees make a sound in the forest even when no one is there to hear them&quot;"
+                    number="07817228" pos="n" words="[sound]"/>
+            </concept>
+            <concept id="2" label="Speed">
+                <sense domains="[metrology, physics, transport]"
+                    gloss="distance travelled per unit time"
+                    number="10978183" pos="n" words="[speed, velocity]"/>
+            </concept>
+            <concept id="3" label="Vacuum">
+                <sense domains="[factotum]"
+                    gloss="the absence of matter" number="10371631"
+                    pos="n" words="[vacuum, vacuity]"/>
+                <sense domains="[factotum]"
+                    gloss="a region empty of matter" number="06373343"
+                    pos="n" words="[vacuum, vacuity]"/>
+                <sense domains="[home]"
+                    gloss="an electrical home appliance that cleans by suction"
+                    number="03565176" pos="n" words="[vacuum, vacuum_cleaner]"/>
+                <sense domains="[factotum]"
+                    gloss="clean with a vacuum cleaner"
+                    number="00848868" pos="v" words="[vacuum, vacuum-clean, hoover]"/>
+            </concept>
+            <concept id="4" label="Sound source"/>
+            <concept id="5" label="Reflection">
+                <sense domains="[physics]"
+                    gloss="the ability to reflect beams or rays"
+                    number="03914040" pos="n" words="[reflection, reflexion, reflectivity]"/>
+            </concept>
+            <concept id="6" label="Refraction">
+                <sense domains="[physics]"
+                    gloss="the change in direction of a propagating wave (light or sound) when passing from one medium to another"
+                    number="07831504" pos="n" words="[refraction]"/>
+            </concept>
+            <concept id="7" label="Diffraction">
+                <sense domains="[optics]"
+                    gloss="when light passes sharp edges or goes through narrow slits the rays are deflected and produce fringes of light and dark bands"
+                    number="07790706" pos="n" words="[diffraction]"/>
+            </concept>
+            <concept id="8" label="Ressonance"/>
+            <concept id="9" label="Vibration">
+                <sense domains="[physics]"
+                    gloss="(physics) a regular variation in value about a mean"
+                    number="05472915" pos="n" words="[oscillation, vibration]"/>
+            </concept>
+            <concept id="10" label="Noise">
+                <sense domains="[factotum]"
+                    gloss="sound of any kind (especially unintelligible or dissonant sound); &quot;he enjoyed the street noises&quot;; &quot;they heard indistinct noises of people talking&quot;"
+                    number="05499597" pos="n" words="[noise]"/>
+            </concept>
+            <concept id="11" label="Pleasant sound"/>
+            <concept id="12" label="Waves">
+                <sense domains="[physics]"
+                    gloss="(physics) a progressive disturbance propagated without displacement of the medium itself"
+                    number="05473259" pos="n" words="[wave, undulation]"/>
+            </concept>
+            <concept id="13" label="Energy">
+                <sense domains="[physics]"
+                    gloss="(physics) the capacity of a physical system to do work; the units of energy are joules or ergs; &quot;energy can take a wide variety of forms&quot;"
+                    number="07794689" pos="n" words="[energy]"/>
+            </concept>
+            <concept id="14" label="Ear">
+                <sense domains="[physiology]"
+                    gloss="good hearing; &quot;he had a keen ear&quot;; &quot;a good ear for pitch&quot;"
+                    number="04374489" pos="n" words="[ear]"/>
+            </concept>
+            <concept id="15" label="Hearing">
+                <sense domains="[physiology]"
+                    gloss="the ability to hear; the auditory faculty; &quot;his hearing was impaired&quot;"
+                    number="04374245" pos="n" words="[hearing, audition, auditory_sense, sense_of_hearing, auditory_modality]"/>
+            </concept>
+            <concept id="16" label="Musical instruments">
+                <sense domains="[music]"
+                    gloss="an instrument used to produce music"
+                    number="03025339" pos="n" words="[musical_instrument]"/>
+            </concept>
+            <concept id="17" label="String instruments"/>
+            <concept id="18" label="Wind instruments">
+                <sense domains="[music]"
+                    gloss="a musical instrument in which the sound is produced by an enclosed column of air that is moved by the breath"
+                    number="03619185" pos="n" words="[wind_instrument, wind]"/>
+            </concept>
+            <concept id="19" label="Percussion instruments">
+                <sense domains="[music]"
+                    gloss="a musical instrument in which the sound is produced by one object striking another"
+                    number="03107254" pos="n" words="[percussion_instrument, percussive_instrument]"/>
+            </concept>
+            <concept id="20" label="Echo">
+                <sense domains="[acoustics]"
+                    gloss="the persistence of a sound after its source has stopped"
+                    number="03914178" pos="n" words="[echo, reverberation, sound_reflection]"/>
+            </concept>
+            <concept id="21" label="Reverberation">
+                <sense domains="[acoustics]"
+                    gloss="the persistence of a sound after its source has stopped"
+                    number="03914178" pos="n" words="[echo, reverberation, sound_reflection]"/>
+            </concept>
+            <concept id="22" label="Concert rooms"/>
+            <concept id="23" label="Sonar">
+                <sense domains="[metrology, nautical]"
+                    gloss="an instrument that sends out an acoustic pulse in water and measures distances in terms of the time for the echo of the pulse to return (sonar is SOund NAvigation Ranging; asdic is Anti-Submarine Detection Investigation Committee)"
+                    number="03369110" pos="n" words="[sonar, echo_sounder, asdic]"/>
+            </concept>
+            <concept id="24" label="Physical environment"/>
+            <concept id="25" label="Temperature">
+                <sense domains="[physics]"
+                    gloss="the degree of hotness or coldness of a body or environment (corresponding to its molecular activity)"
+                    number="03914851" pos="n" words="[temperature]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="26" label="has"/>
+            <linking-phrase id="27" label="doesn't propagate in"/>
+            <linking-phrase id="28" label="produced by"/>
+            <linking-phrase id="29" label="present phenomena"/>
+            <linking-phrase id="30" label="depending on"/>
+            <linking-phrase id="31" label="create"/>
+            <linking-phrase id="32" label="explain"/>
+            <linking-phrase id="33" label="originate"/>
+            <linking-phrase id="34" label="detected by"/>
+            <linking-phrase id="35" label="played by"/>
+            <linking-phrase id="36" label="transport"/>
+            <linking-phrase id="37" label="occurs"/>
+            <linking-phrase id="38" label="classified in"/>
+            <linking-phrase id="39" label="occurs in"/>
+            <linking-phrase id="40" label="useful"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="26"/>
+            <connection from-id="26" to-id="2"/>
+            <connection from-id="1" to-id="27"/>
+            <connection from-id="27" to-id="3"/>
+            <connection from-id="1" to-id="28"/>
+            <connection from-id="28" to-id="4"/>
+            <connection from-id="1" to-id="29"/>
+            <connection from-id="29" to-id="5"/>
+            <connection from-id="29" to-id="6"/>
+            <connection from-id="29" to-id="7"/>
+            <connection from-id="29" to-id="8"/>
+            <connection from-id="2" to-id="30"/>
+            <connection from-id="30" to-id="24"/>
+            <connection from-id="30" to-id="25"/>
+            <connection from-id="4" to-id="31"/>
+            <connection from-id="31" to-id="9"/>
+            <connection from-id="31" to-id="10"/>
+            <connection from-id="31" to-id="11"/>
+            <connection from-id="5" to-id="32"/>
+            <connection from-id="32" to-id="20"/>
+            <connection from-id="32" to-id="21"/>
+            <connection from-id="9" to-id="33"/>
+            <connection from-id="33" to-id="12"/>
+            <connection from-id="10" to-id="34"/>
+            <connection from-id="34" to-id="14"/>
+            <connection from-id="11" to-id="35"/>
+            <connection from-id="35" to-id="16"/>
+            <connection from-id="12" to-id="36"/>
+            <connection from-id="36" to-id="13"/>
+            <connection from-id="14" to-id="37"/>
+            <connection from-id="37" to-id="15"/>
+            <connection from-id="16" to-id="38"/>
+            <connection from-id="38" to-id="17"/>
+            <connection from-id="38" to-id="18"/>
+            <connection from-id="38" to-id="19"/>
+            <connection from-id="20" to-id="39"/>
+            <connection from-id="39" to-id="22"/>
+            <connection from-id="21" to-id="40"/>
+            <connection from-id="40" to-id="23"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="326" y="63"/>
+            <concept-appearance id="2" x="140" y="153"/>
+            <concept-appearance id="3" x="216" y="208"/>
+            <concept-appearance id="4" x="333" y="210"/>
+            <concept-appearance id="5" x="440" y="215"/>
+            <concept-appearance id="6" x="524" y="220"/>
+            <concept-appearance id="7" x="593" y="193"/>
+            <concept-appearance id="8" x="666" y="160"/>
+            <concept-appearance id="9" x="249" y="323"/>
+            <concept-appearance id="10" x="330" y="328"/>
+            <concept-appearance id="11" x="412" y="329"/>
+            <concept-appearance id="12" x="251" y="401"/>
+            <concept-appearance id="13" x="250" y="477"/>
+            <concept-appearance id="14" x="333" y="425"/>
+            <concept-appearance id="15" x="334" y="527"/>
+            <concept-appearance id="16" x="441" y="440"/>
+            <concept-appearance id="17" x="556" y="547"/>
+            <concept-appearance id="18" x="483" y="552"/>
+            <concept-appearance id="19" x="399" y="550"/>
+            <concept-appearance id="20" x="528" y="341"/>
+            <concept-appearance id="21" x="631" y="342"/>
+            <concept-appearance id="22" x="591" y="441"/>
+            <concept-appearance id="23" x="687" y="435"/>
+            <concept-appearance id="24" x="41" y="286"/>
+            <concept-appearance id="25" x="138" y="302"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="26" x="227" y="124"/>
+            <linking-phrase id="27" x="259" y="153"/>
+            <linking-phrase id="28" x="334" y="164"/>
+            <linking-phrase id="29" x="421" y="156"/>
+            <linking-phrase id="30" x="88" y="233"/>
+            <linking-phrase id="31" x="327" y="296"/>
+            <linking-phrase id="32" x="478" y="294"/>
+            <linking-phrase id="33" x="180" y="383"/>
+            <linking-phrase id="34" x="325" y="399"/>
+            <linking-phrase id="35" x="432" y="397"/>
+            <linking-phrase id="36" x="170" y="458"/>
+            <linking-phrase id="37" x="331" y="499"/>
+            <linking-phrase id="38" x="464" y="519"/>
+            <linking-phrase id="39" x="553" y="407"/>
+            <linking-phrase id="40" x="659" y="402"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

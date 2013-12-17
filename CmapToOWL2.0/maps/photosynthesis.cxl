@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>photosynthesis</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Photosynthesis">
+                <sense domains="[chemistry]"
+                    gloss="synthesis of compounds with the aid of radiant energy (especially in plants)"
+                    number="09705163" pos="n" words="[photosynthesis]"/>
+            </concept>
+            <concept id="2" label="Chemical energy">
+                <sense domains="[chemistry, physics]"
+                    gloss="that part of the energy in a substance that can be released by a chemical reaction"
+                    number="07785201" pos="n" words="[chemical_energy]"/>
+            </concept>
+            <concept id="3" label="Solar energy">
+                <sense domains="[physics]"
+                    gloss="energy from the sun that is converted into thermal or electrical energy"
+                    number="07836720" pos="n" words="[solar_energy, solar_power]"/>
+            </concept>
+            <concept id="4" label="Chloroplasts"/>
+            <concept id="5" label="Green plants"/>
+            <concept id="6" label="Chlorophyll">
+                <sense domains="[color]"
+                    gloss="any of a group of green pigments found in photosynthetic organisms"
+                    number="00925109" pos="n" words="[chlorophyll, chlorophyl]"/>
+            </concept>
+            <concept id="7" label="Different enzyme systems"/>
+            <concept id="8" label="Light dependant stage"/>
+            <concept id="9" label="Light independant stage"/>
+            <concept id="10" label="Light">
+                <sense domains="[chemistry, physics]"
+                    gloss="(physics, chemistry) not having atomic weight greater than average; &quot;light water is ordinary water&quot;"
+                    number="01142009" pos="a" words="[light]"/>
+            </concept>
+            <concept id="11" label="Water">
+                <sense domains="[chemistry, geography]"
+                    gloss="a clear colorless odorless tasteless liquid; &quot;he asked for a drink of water&quot;"
+                    number="10650211" pos="n" words="[water, H2O]"/>
+            </concept>
+            <concept id="12" label="Hydrogen">
+                <sense domains="[chemistry, geography, physics]"
+                    gloss="a nonmetallic univalent element that is normally a colorless and odorless highly flammable diatomic gas; the simplest and lightest and most abundant element in the universe"
+                    number="10488691" pos="n" words="[hydrogen, H, atomic_number_1]"/>
+            </concept>
+            <concept id="13" label="Oxygen">
+                <sense domains="[chemistry, geography]"
+                    gloss="a nonmetallic bivalent element that is normally a colorless odorless tasteless nonflammable diatomic gas; constitutes 28 percent of the atmosphere by volume; the most abundant element in the earth's crust"
+                    number="10495237" pos="n" words="[oxygen, O, atomic_number_8]"/>
+            </concept>
+            <concept id="14" label="By-product">
+                <sense domains="[factotum]"
+                    gloss="a secondary and sometimes unexpected consequence"
+                    number="07767197" pos="n" words="[by-product]"/>
+                <sense domains="[economy, industry]"
+                    gloss="made during the manufacture of something else"
+                    number="02361643" pos="n" words="[by-product, spin-off]"/>
+            </concept>
+            <concept id="15" label="Carbon dioxide">
+                <sense domains="[chemistry]"
+                    gloss="a heavy odorless colorless gas formed during respiration and by the decomposition of organic substances; absorbed from the air by plants in photosynthesis"
+                    number="10613550" pos="n" words="[carbon_dioxide, CO, carbonic_acid_gas]"/>
+            </concept>
+            <concept id="16" label="Carbohydrates"/>
+            <concept id="17" label="Darkness">
+                <sense domains="[factotum]"
+                    gloss="absence of light or illumination"
+                    number="10073287" pos="n" words="[dark, darkness]"/>
+                <sense domains="[factotum]"
+                    gloss="an unilluminated area; &quot;he moved off into the darkness&quot;"
+                    number="06367601" pos="n" words="[darkness, dark, shadow]"/>
+                <sense domains="[religion]"
+                    gloss="absence of moral or spiritual values; &quot;the powers of darkness&quot;"
+                    number="10442294" pos="n" words="[iniquity, wickedness, darkness, dark]"/>
+                <sense domains="[factotum]"
+                    gloss="an unenlightened state; &quot;he was in the dark concerning their intentions&quot;; &quot;his lectures dispelled the darkness&quot;"
+                    number="04591692" pos="n" words="[dark, darkness]"/>
+                <sense domains="[factotum]"
+                    gloss="having a dark or somber color"
+                    number="03891888" pos="n" words="[darkness]"/>
+                <sense domains="[color]" gloss="a swarthy complexion"
+                    number="03890512" pos="n" words="[darkness, duskiness, swarthiness]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="18" label="converts"/>
+            <linking-phrase id="19" label="takes place in"/>
+            <linking-phrase id="20" label="is divided into"/>
+            <linking-phrase id="21" label="into"/>
+            <linking-phrase id="22" label="of"/>
+            <linking-phrase id="23" label="contains"/>
+            <linking-phrase id="24" label="traps"/>
+            <linking-phrase id="25" label="requires"/>
+            <linking-phrase id="26" label="combines"/>
+            <linking-phrase id="27" label="takes place in"/>
+            <linking-phrase id="28" label="splits"/>
+            <linking-phrase id="29" label="into"/>
+            <linking-phrase id="30" label="released as"/>
+            <linking-phrase id="31" label="and"/>
+            <linking-phrase id="32" label="released as"/>
+            <linking-phrase id="33" label="to form"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="18"/>
+            <connection from-id="18" to-id="3"/>
+            <connection from-id="1" to-id="19"/>
+            <connection from-id="19" to-id="4"/>
+            <connection from-id="1" to-id="20"/>
+            <connection from-id="20" to-id="8"/>
+            <connection from-id="20" to-id="9"/>
+            <connection from-id="3" to-id="21"/>
+            <connection from-id="21" to-id="2"/>
+            <connection from-id="4" to-id="22"/>
+            <connection from-id="22" to-id="5"/>
+            <connection from-id="4" to-id="23"/>
+            <connection from-id="23" to-id="6"/>
+            <connection from-id="23" to-id="7"/>
+            <connection from-id="6" to-id="24"/>
+            <connection from-id="24" to-id="10"/>
+            <connection from-id="8" to-id="25"/>
+            <connection from-id="25" to-id="6"/>
+            <connection from-id="25" to-id="10"/>
+            <connection from-id="25" to-id="11"/>
+            <connection from-id="9" to-id="26"/>
+            <connection from-id="26" to-id="12"/>
+            <connection from-id="26" to-id="15"/>
+            <connection from-id="9" to-id="27"/>
+            <connection from-id="27" to-id="10"/>
+            <connection from-id="27" to-id="17"/>
+            <connection from-id="10" to-id="28"/>
+            <connection from-id="28" to-id="11"/>
+            <connection from-id="11" to-id="29"/>
+            <connection from-id="29" to-id="12"/>
+            <connection from-id="29" to-id="13"/>
+            <connection from-id="11" to-id="30"/>
+            <connection from-id="30" to-id="14"/>
+            <connection from-id="12" to-id="31"/>
+            <connection from-id="31" to-id="15"/>
+            <connection from-id="13" to-id="32"/>
+            <connection from-id="32" to-id="14"/>
+            <connection from-id="15" to-id="33"/>
+            <connection from-id="33" to-id="11"/>
+            <connection from-id="33" to-id="16"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="379" y="73"/>
+            <concept-appearance id="2" x="371" y="-129"/>
+            <concept-appearance id="3" x="377" y="-36"/>
+            <concept-appearance id="4" x="206" y="105"/>
+            <concept-appearance id="5" x="82" y="-17"/>
+            <concept-appearance id="6" x="45" y="227"/>
+            <concept-appearance id="7" x="40" y="97"/>
+            <concept-appearance id="8" x="192" y="208"/>
+            <concept-appearance id="9" x="545" y="212"/>
+            <concept-appearance id="10" x="161" y="328"/>
+            <concept-appearance id="11" x="276" y="335"/>
+            <concept-appearance id="12" x="464" y="307"/>
+            <concept-appearance id="13" x="466" y="403"/>
+            <concept-appearance id="14" x="396" y="529"/>
+            <concept-appearance id="15" x="640" y="308"/>
+            <concept-appearance id="16" x="672" y="428"/>
+            <concept-appearance id="17" x="310" y="234"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="18" x="439" y="58"/>
+            <linking-phrase id="19" x="289" y="107"/>
+            <linking-phrase id="20" x="378" y="175"/>
+            <linking-phrase id="21" x="430" y="-47"/>
+            <linking-phrase id="22" x="140" y="67"/>
+            <linking-phrase id="23" x="109" y="163"/>
+            <linking-phrase id="24" x="86" y="330"/>
+            <linking-phrase id="25" x="174" y="293"/>
+            <linking-phrase id="26" x="561" y="302"/>
+            <linking-phrase id="27" x="417" y="260"/>
+            <linking-phrase id="28" x="210" y="392"/>
+            <linking-phrase id="29" x="344" y="353"/>
+            <linking-phrase id="30" x="341" y="489"/>
+            <linking-phrase id="31" x="556" y="351"/>
+            <linking-phrase id="32" x="456" y="500"/>
+            <linking-phrase id="33" x="585" y="400"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

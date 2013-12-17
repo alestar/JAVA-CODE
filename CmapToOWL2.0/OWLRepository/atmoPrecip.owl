@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Phenomena -->
+
+	<owl:Class rdf:ID="Convection"/>
+	<owl:Class rdf:ID="Ice"/>
+	<owl:Class rdf:ID="Cyclone"/>
+	<owl:Class rdf:ID="PlanetaryLayer"/>
+	<owl:Class rdf:ID="Melting"/>
+	<owl:Class rdf:ID="MeteorologicalPhenomena"/>
+	<owl:Class rdf:ID="LiquidWater"/>
+	<owl:Class rdf:ID="Grain"/>
+	<owl:Class rdf:ID="Snow"/>
+	<owl:Class rdf:ID="Elevation"/>
+	<owl:Class rdf:ID="Mountain"/>
+	<owl:Class rdf:ID="PhysicalLaw"/>
+	<owl:Class rdf:ID="Index"/>
+	<owl:Class rdf:ID="Level"/>
+	<owl:Class rdf:ID="Cloud"/>
+	
+
+  <owl:Class rdf:ID="Blizzard">
+    <rdfs:subClassOf rdf:resource="#Snowfall"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="CloudBurst">
+    <rdfs:subClassOf rdf:resource="#HeavyRainfall" />
+    <rdfs:comment xml:lang="en">In popular terminology, any sudden and heavy fall of rain, almost always of the shower type.
+    </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ConvectiveStorm">
+    <rdfs:subClassOf rdf:resource="#Storm" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhysicalProcess"/>	
+		</owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#Convection" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Drizzle">
+    <rdfs:subClassOf rdf:resource="#Precipitation"/>
+    <rdfs:comment xml:lang="en">Very small, numerous, and uniformly distributed water drops that may appear to float while following air currents.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Ecnephias">
+    <rdfs:subClassOf rdf:resource="#Thunderstorm" />
+    <rdfs:comment xml:lang="en">A squall or thunderstorm in the Mediterranean.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="EffectivePrecipitation">
+    <rdfs:subClassOf rdf:resource="#Precipitation"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="FamilyOfTornadoes">
+    <rdfs:subClassOf rdf:resource="#Tornado" />
+    <rdfs:comment xml:lang="en">A sequence of long-lived tornadoes produced by a cyclic supercell storm. Tornadoes touch down at quasi-regular intervals (typically 45 min). Usually a new tornado develops in a new mesocyclone just after an old tornado has decayed in an old, occluded neighboring mesocyclone. Sometimes, two successive tornadoes may overlap in time for a few minutes. The two mesocyclones may rotate partially around each other. If the damage tracks of the tornadoes appear to form a wavy broken line, the family is classified as a series mode. In the more common parallel-mode family, the damage tracks are parallel arcs with each new tornado forming on the right side of its predecessor. The parallel mode is subcategorized into left turn and right turn, according to the direction in which the paths curve.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="FreezingRain">
+    <rdfs:subClassOf rdf:resource="#Precipitation" />
+    <rdfs:comment>Rain that falls in liquid form but freezes upon impact to form a coating of glaze upon the ground and on exposed objects.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="GoslingBlast">
+    <rdfs:subClassOf rdf:resource="#Precipitation" />
+    <rdfs:comment>A sudden squall of rain or sleet in England.</rdfs:comment>
+    <rdfs:label>Gosling blast</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:ID="GowkStorm">
+    <rdfs:subClassOf rdf:resource="#Storm" />
+    <rdfs:comment xml:lang="en">Any disturbed state of the atmosphere, especially as affecting the earth's surface, implying inclement and possibly destructive weather.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="GreenThunderstorm">
+    <rdfs:subClassOf rdf:resource="#Thunderstorm" />
+    <rdfs:comment xml:lang="en">Any thunderstorm that is perceived by observers to be green. The perceptually dominant wavelength of light from green thunderstorms ranges from blue- green to yellow-green. The purity of the color is generally low and the physical mechanism that causes the green appearance is not understood. Although green clouds often occur in conjunction with severe weather, there is no evidence to support anecdotal attributions of the cause of this green to specific characteristics of severe storms, such as hail or tornadoes.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Graupel">
+    <rdfs:subClassOf rdf:resource="#Ice"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="HeavyRainfall">
+    <rdfs:subClassOf rdf:resource="#Rainfall" />
+    <rdfs:comment xml:lang="en">Rain with a rate of accumulation exceeding a specific value that is geographically dependent.
+    </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="HeavySnowfall">
+    <rdfs:subClassOf rdf:resource="#Snowfall" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Kaavie">
+    <rdfs:subClassOf rdf:resource="#HeavySnowfall" />
+    <rdfs:comment xml:lang="en">In Scotland, a heavy fall of snow.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Kelsher">
+    <rdfs:subClassOf rdf:resource="#HeavyRainfall" />
+    <rdfs:comment xml:lang="en">In England, a heavy fall of rain.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LakeEffect">
+    <rdfs:subClassOf rdf:resource="#MeteorologicalPhenomena" />
+    <rdfs:comment xml:lang="en">Generally, the effect of any lake in modifying the weather about its shore and for some distance downwind. In the United States, this term is applied specifically to the region about the Great Lakes or the Great Salt Lake. More specifically, lake effect often refers to the generation of sometimes spectacular snowfall amounts to the lee of the Great Lakes as cold air passes over the lake surface, extracting heat and moisture, resulting in cloud formation and snowfall downwind of the lake shore.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LakeEffectSnow">
+    <rdfs:subClassOf rdf:resource="#LakeEffect" />
+    <rdfs:subClassOf rdf:resource="#Snowfall" />
+    <rdfs:comment xml:lang="en">Localized, convective snow bands that occur in the lee of lakes when relatively cold airflows over warm water. In the United States this phenomenon is most noted along the south and east shores of the Great Lakes during arctic cold-air outbreaks.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LakeEffectSnowstorm">
+    <owl:equivalentClass rdf:resource="#LakeEffectSnow" />
+    <rdfs:comment xml:lang="en">Snowstorm occurring near or downwind from the shore of a lake resulting from the warming (destabilization) and moistening of relatively cold air during passage over a warm body of water.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LambingStorm">
+    <rdfs:subClassOf rdf:resource="#Snowfall" />
+    <rdfs:comment xml:lang="en">(Also called lamb-blasts, lamb-showers, lamb storm.) A slight fall of snow in the spring in England.</rdfs:comment>
+  </owl:Class>
+
+<owl:Class rdf:ID="LandLash">
+    <rdfs:subClassOf rdf:resource="#Rainfall" />
+    <rdfs:comment xml:lang="en">In England, a heavy fall of rain, accompanied by a high wind.</rdfs:comment>
+  </owl:Class>
+
+<owl:Class rdf:ID="Monsoon">
+    <rdfs:subClassOf rdf:resource="#Storm" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="HailStorm">
+    <rdfs:subClassOf rdf:resource="#Storm" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasMeteorologicalPhenomena"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Hail" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Any storm that produces hailstones that fall to the ground; usually used when the amount or size of the hail is considered significant.</rdfs:comment>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Hail">
+    <rdfs:subClassOf rdf:resource="#Precipitation"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Ice"/>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasSubstance"/>	
+		</owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Precipitation in the form of balls or irregular lumps of ice, always produced by convective clouds, nearly always cumulonimbus. An individual unit of hail is called a hailstone. By convention, hail has a diameter of 5 mm or more, while smaller particles of similar origin, formerly called small hail, may be classed as either ice pellets or snow pellets. Thunderstorms that are characterized by strong updrafts, large liquid water contents, large cloud-drop sizes, and great vertical height are favorable to hail formation. The destructive effects of hailstorms upon plant and animal life, buildings and property, and aircraft in flight render them a prime object of weather modification studies. In aviation weather observations, hail is encoded A.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="HeatThunderstorm">
+    <rdfs:subClassOf rdf:resource="#Thunderstorm" />
+    <rdfs:comment xml:lang="en">In popular terminology, a thunderstorm of the air mass type that develops near the end of a hot, humid summer day; this term has no precise technical meaning.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="HighLevelThunderstorm">
+    <rdfs:subClassOf rdf:resource="#Thunderstorm" />
+    <rdfs:comment xml:lang="en">Generally, a thunderstorm based at a comparatively high altitude in the atmosphere, roughly 2400 m or higher. These storms form most strikingly over arid regions, and frequently their precipitation is evaporated before reaching the earth's surface.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Hurricane">
+    <rdfs:subClassOf rdf:resource="#Cyclone"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="HurricaneBand">
+    <rdfs:subClassOf rdf:resource="#Hurricane"/>
+    <rdfs:comment xml:lang="en">A hurricane radar band of circular or spiral shape associated with a tropical cyclone (hurricane or typhoon). Made evident by radar observations, hurricane bands typically curve cyclonically inward toward the center of the storm. The bands may be classified as primary if they merge into the eyewall encircling the eye of the storm, or secondary if they are disconnected from the eyewall. Hurricane bands generally move slowly around the center of the storm in the direction of the hurricane circulation. See banded structure.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="IcePellet"/>
+
+  <owl:Class rdf:ID="IceStorm">
+    <rdfs:subClassOf rdf:resource="#Storm" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasSubstance" />
+        <owl:allValuesFrom rdf:resource="#Ice" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A storm characterized by a fall of freezing liquid precipitation. The attendant formation of glaze on terrestrial objects creates many hazards.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Landspout">
+    <rdfs:subClassOf rdf:resource="#Tornado" />
+    <rdfs:comment xml:lang="en">(Rare.) A tornado. 2. Colloquial expression describing tornadoes occurring with a parent cloud in its growth stage and with its vorticity originating in the boundary layer.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LocalStorm">
+    <rdfs:subClassOf rdf:resource="#Storm" />
+    <rdfs:comment xml:lang="en">A storm of mesometeorological scale; thus, thunderstorms, squalls, and tornadoes are often put in this category.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MeltingLayer">
+    <rdfs:subClassOf rdf:resource="#PlanetaryLayer" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasStateChange"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Melting" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The altitude interval throughout which ice-phase precipitation melts as it descends. The top of the melting layer is the melting level. The melting layer may be several hundred meters deep, reflecting the time it takes for all the hydrometeors to undergo the transition from solid to liquid phase. The temperature of the melting layer is typically 0?C or slightly warmer. See bright band.</rdfs:comment>
+  </owl:Class>
+
+ <owl:Class rdf:ID="MesocycloneSignature">
+    <rdfs:subClassOf rdf:resource="#MeteorologicalPhenomena" />
+    <rdfs:comment xml:lang="en">The Doppler velocity pattern of a mesocyclone within a severe thunderstorm. In a storm-relative reference frame, the idealized signature is symmetric about the radar viewing direction with marked azimuthal shear across the core region between peak Doppler velocity values of opposite sign. Typical signatures consist of Doppler velocity differences of 25? 75 m s-1 across core diameters of 2?8 km, with resulting azimuthal shear values of 5 ? 10-3 s-1 to 2 ? 10-2 s-1.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MulticellConvectiveStorm">
+    <rdfs:subClassOf rdf:resource="#SplittingConvectiveStorm" />
+    <rdfs:comment xml:lang="en">A convective storm system usually composed of a cluster of ordinary convective cells at various stages of their life cycle. New cells within the convective system are generated primarily by either low-level convergence along a preexisting boundary, or by lifting at the leading edge of the system-scale cold pool that was produced by the previous cells. A multicell storm may have a lifetime of several hours, and may also have supercells incorporated as a part of the system as well. See also cell, ordinary cell, supercell, thunderstorm.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="NonSupercellTornado">
+    <rdfs:subClassOf rdf:resource="#Tornado" />
+    <rdfs:comment xml:lang="en">A tornado that occurs with a parent cloud in its growth stage and with its vorticity originating in the boundary layer. The parent cloud does not contain a preexisting midlevel mesocyclone. Landspouts and gustnadoes are examples of the nonsupercell tornado.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="NortheastStorm">
+    <rdfs:subClassOf rdf:resource="#Storm" />
+    <rdfs:comment xml:lang="en">A cyclonic storm off the east coast of North America, so called because the winds over the coastal area are from the northeast.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PopUpThunderstorm">
+    <rdfs:subClassOf rdf:resource="#Thunderstorm" />
+    <rdfs:comment xml:lang="en">An airmass thunderstorm that forms rapidly in an otherwise rain-free environment.   This most often occurs on warm, humid days, in unstable meteorological conditions.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Precipitation">
+    <rdfs:subClassOf rdf:resource="#MeteorologicalPhenomena"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Cloud"/>
+        <owl:onProperty rdf:resource="#hasMeteorologicalPhenomena"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PrefrontalSquallLine">
+    <rdfs:subClassOf rdf:resource="#SquallLine" />
+    <rdfs:comment xml:lang="en">A squall line less than about 100 km ahead of a cold front, in the warm sector, having an orientation more or less parallel to the cold front.</rdfs:comment>
+  </owl:Class>
+
+   <owl:Class rdf:ID="Rain">
+    <rdfs:subClassOf rdf:resource="#Precipitation"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#LiquidWater"/>
+        <owl:onProperty rdf:resource="#hasSubstance"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Rainband">
+    <rdfs:subClassOf rdf:resource="#Rainfall" />
+    <rdfs:comment xml:lang="en">The complete cloud and precipitation structure associated with an area of rainfall sufficiently elongated that an orientation can be assigned.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Rainfall">
+    <owl:equivalentClass rdf:resource="#Rain"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Shower">
+    <rdfs:subClassOf rdf:resource="#Rainfall"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Sleet">
+    <rdfs:subClassOf rdf:resource="#Precipitation"/>
+    <rdfs:subClassOf rdf:resource="#Grain"/>
+    <rdfs:subClassOf rdf:resource="#Ice"/>
+    <owl:equivalentClass rdf:resource="#IcePellet"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Snowfall">
+    <rdfs:subClassOf rdf:resource="#Precipitation" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Snow"/>
+        <owl:onProperty rdf:resource="#hasSubstance"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SplittingConvectiveStorm">
+    <rdfs:subClassOf rdf:resource="#Storm" />
+    <rdfs:comment xml:lang="en">The process by which a single convective cell splits into two supercells, one dominated by cyclonic rotation and the other by anticyclonic rotation, their paths then deviating substantially from each other and other nearby convective cells.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SquallLine">
+    <rdfs:subClassOf rdf:resource="#Thunderstorm" />
+    <rdfs:comment xml:lang="en">A line of active thunderstorms, either continuous or with breaks, including contiguous precipitation areas resulting from the existence of the thunderstorms.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Storm">
+    <rdfs:subClassOf rdf:resource="#Precipitation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SupercellConvectiveStorm">
+    <rdfs:subClassOf rdf:resource="#ConvectiveStorm" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Thunderstorm">
+    <rdfs:subClassOf rdf:resource="#Storm"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Tornado">
+    <rdfs:subClassOf rdf:resource="#Storm"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Typhoon">
+    <rdfs:subClassOf rdf:resource="#Cyclone"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="WaterSpout">
+    <rdfs:subClassOf rdf:resource="#Tornado" />
+    <rdfs:comment xml:lang="en">1. In general, any tornado over a body of water. 2. In its most common form, a nonsupercell tornado over water.</rdfs:comment>
+  </owl:Class>
+
+<!-- Property -->
+  <owl:Class rdf:ID="ZoneOfMaximumPrecipitation">
+    <rdfs:subClassOf rdf:resource="#Elevation" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasMeteorologicalPhenomena" />
+        <owl:someValuesFrom rdf:resource="#Precipitation" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Mountain"/>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPlanetaryRealm"/>	
+		</owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The elevation band on a mountain or orographic barrier that receives the greatest precipitation for a seasonal or annual average.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Z_RRelation">
+    <rdfs:subClassOf rdf:resource="#PhysicalLaw" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasMeteorologicalPhenomena" />
+        <owl:allValuesFrom rdf:resource="#Precipitation" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A relationship between radar reflectivity factor Z (mm6 m-3) and rain rate R (mm h-1).</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PrecipitationIndex">
+    <rdfs:subClassOf rdf:resource="#Index" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="measureOf"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Precipitation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="FreezingLevel">
+    <rdfs:subClassOf rdf:resource="#Level" />
+    <rdfs:subClassOf rdf:resource="#MeteorologicalPhenomena" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="MeltingLevel">
+    <rdfs:subClassOf rdf:resource="#Level" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasStateChange" />
+        <owl:allValuesFrom rdf:resource="#Melting" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The altitude at which ice crystals and snowflakes begin to melt as they descend through the atmosphere. In cloud physics and in radar meteorology, this is the accepted term for the 0?C constant-temperature surface (see bright band). It is physically more apt than the corresponding operational term, freezing level, for melting of pure ice must begin very near 0?C, but freezing of liquid water can occur over a broad range of temperatures (between 0? and -40?C; see supercooling). See also freezing point, ice point, melting point.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SnowGeneratingLevel">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasMeteorologicalPhenomena" />
+        <owl:allValuesFrom rdf:resource="#Precipitation" />
+       </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Level" />
+    <rdfs:comment xml:lang="en">A layer in the middle or upper troposphere in widespread precipitation in which ice crystals form in small convective cells and fall to lower altitudes.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="StandardizedPrecipitationIndex">
+    <rdfs:subClassOf rdf:resource="#PrecipitationIndex"/>
+  </owl:Class>
+
+   <owl:ObjectProperty rdf:ID="hasStorm">
+    <rdfs:range rdf:resource="#Storm"/>
+  </owl:ObjectProperty>
+
+</rdf:RDF>

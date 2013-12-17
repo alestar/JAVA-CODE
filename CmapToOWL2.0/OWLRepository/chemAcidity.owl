@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+  <owl:Class rdf:ID="Substance"/>
+  <owl:Class rdf:ID="ChemicalProperty"/>
+  <owl:Class rdf:ID="ChemicalProcess"/>
+  <owl:Class rdf:ID="MolarConcentration"/>
+  <owl:Class rdf:ID="Hplus"/>
+  
+  <owl:Class rdf:ID="Acid">
+    <rdfs:subClassOf rdf:resource="#Substance"/>
+    <rdfs:comment xml:lang="en">An acid as a compound which donates a hydrogen ion (H+) to another compound (called a base). [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Acidity">
+    <rdfs:subClassOf rdf:resource="#ChemicalProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Acidify">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    <owl:equivalentClass rdf:resource="#Acidification"/>
+    <rdfs:comment xml:lang="en">Any process that decreases the pH value of a subtance.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Acidification"/>
+
+  <owl:Class rdf:ID="Alkalinity">
+    <rdfs:subClassOf rdf:resource="#ChemicalProperty"/>
+    <owl:equivalentClass rdf:resource="#Basicity"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Basicity"/>
+
+  <owl:Class rdf:ID="Base">
+    <rdfs:subClassOf rdf:resource="#Substance"/>
+    <owl:disjointWith rdf:resource="#Acid"/>
+     <rdfs:comment xml:lang="en">A base is most commonly thought of as an aqueous substance that can accept hydrogen ions. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="CarbonateAlkalinity">
+    <rdfs:subClassOf rdf:resource="#Alkalinity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="HplusConcentration">
+    <rdfs:subClassOf rdf:resource="#MolarConcentration"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	  	<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasSubstance"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Hplus" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Neutralize">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    <owl:equivalentClass rdf:resource="#Neutralization"/>
+    <rdfs:comment xml:lang="en">In chemistry, neutralization is a chemical reaction (also called a water forming reaction since a water molecule is formed during the process) in which an acid and a base or alkali (soluble base) react to produce salt and water (H2O). During the process, hydrogen ions H+ (a bare proton) from the acid (proton donor) or a hydronium ion H3O+ and hydroxide ions OH_ or oxide ions O2_ from the base (proton acceptor) react together to form a water molecule H2O. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Neutralization"/>
+
+  <owl:Class rdf:ID="pH">
+    <rdfs:subClassOf rdf:resource="#ChemicalProperty"/>
+    <rdfs:comment xml:lang="en">pH is a measure of the acidity or basicity of a solution. It is defined as the cologarithm of the activity of dissolved hydrogen ions (H+). Hydrogen ion activity coefficients cannot be measured experimentally, so they are based on theoretical calculations. The pH scale is not an absolute scale; it is relative to a set of standard solutions whose pH is established by international agreement. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="TotalAlkalinity">
+    <rdfs:subClassOf rdf:resource="#Alkalinity"/>
+  </owl:Class>
+
+</rdf:RDF>

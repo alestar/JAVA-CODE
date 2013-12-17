@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Phenomena -->
+  <owl:Class rdf:ID="Mixing"/>
+  <owl:Class rdf:ID="Sediment"/>
+  <owl:Class rdf:ID="OceanPhenomena"/>
+  <owl:Class rdf:ID="Eddy"/>
+  <owl:Class rdf:ID="Mesoscale"/>
+  <owl:Class rdf:ID="Circulation"/>
+  <owl:Class rdf:ID="Tide"/>
+  <owl:Class rdf:ID="GravityWave"/>
+  <owl:Class rdf:ID="SeismicWave"/>
+  
+  <owl:Class rdf:ID="Bioturbation">
+    <rdfs:subClassOf rdf:resource="#Mixing" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasSubstance"/>	
+		</owl:onProperty>
+         <owl:allValuesFrom rdf:resource="#Sediment" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">In oceanography and limnology, bioturbation is the displacement and mixing of sediment particles by benthic fauna (animals) or flora (plants). The mediators of bioturbation are typically annelid worms (e.g. polychaetes, oligochaetes), bivalves (e.g. mussels, clams), gastropods, holothurians, or any other infaunal or epifaunal organisms. Faunal activities, such as burrowing, ingestion and defecation of sediment grains, construction and maintenance of galleries, and infilling of abandoned dwellings, displace sediment grains and mix the sediment matrix. In soil science, bioturbation is the physical rearrangement of the soil profile by soil life. </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Downwelling">
+    <rdfs:subClassOf rdf:resource="#OceanCirculation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Gyre">
+    <rdfs:subClassOf rdf:resource="#OceanCurrent"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="HighTide">
+    <rdfs:subClassOf rdf:resource="#OceanTide"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="KamchatkaCurrent">
+    <rdfs:subClassOf rdf:resource="#OceanCurrent" />
+    <rdfs:comment xml:lang="en">The western part of the subpolar gyre in the deep (western) part of the Bering Sea.
+    </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LangmuirCirculation">
+    <rdfs:subClassOf rdf:resource="#OceanCirculation" />
+    <rdfs:comment xml:lang="en">Roll circulations approximately aligned with the surface stress vector that frequently occur in the upper boundary layer of oceans or lakes. Although similar in form to atmospheric longitudinal roll vortices, Langmuir circulations are thought to be driven by nonlinear interactions between the surface gravity wave field and the larger-scale turbulent motions within the mixed layer. They are sometimes called windrows because they form lines of surface debris or bubbles in their surface convergence zones. Their spatial scale is related to the depth of the mixed layer and their characteristic velocity is on the order of 8u*, where u* is the friction velocity in water. As a result of this scaling, Langmuir circulations generally require surface winds of at least 8 m s-1 in order to form. See coherent structures, longitudinal rolls.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LittoralDrift">
+    <owl:equivalentClass rdf:resource="#LongshoreDrift"/>
+    <rdfs:subClassOf rdf:resource="#OceanPhenomena"/>
+  </owl:Class>
+  <owl:Class rdf:ID="LongshoreDrift"/>
+
+  <owl:Class rdf:ID="LongshoreCurrent">
+    <rdfs:subClassOf rdf:resource="#OceanCurrent"/>
+    <rdfs:comment xml:lang="en">(Also called littoral current.) The resultant current produced by waves being deflected at an angle by the shore. In this case the current runs roughly parallel to the shoreline. The longshore current is capable of carrying a certain amount of material as long as its velocity remains fairly constant; however, any obstruction, such as a submarine rock ridge or a land point cutting across the path of the current, will cause loss of velocity and consequent loss of carrying power.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LoopCurrent">
+    <rdfs:subClassOf rdf:resource="#OceanCurrent"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LowTide">
+    <rdfs:subClassOf rdf:resource="#OceanTide"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MesoscaleEddy">
+    <rdfs:subClassOf rdf:resource="#Eddy" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasSpatialScale"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Mesoscale" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass rdf:resource="#ModeEddy"/>
+    <rdfs:comment xml:lang="en">In oceanography, densely packed, irregularly oval- shaped high and low pressure centers roughly 400 km (240 miles) in diameter in which current intensities are typically tenfold greater than the local means.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="ModeEddy"/>
+
+  <owl:Class rdf:ID="OceanCirculation">
+    <rdfs:subClassOf rdf:resource="#Circulation"/>
+    <rdfs:subClassOf rdf:resource="#OceanPhenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="OceanConveyorBelt">
+    <rdfs:subClassOf rdf:resource="#OceanCirculation"/>
+    <rdfs:comment xml:lang="en">The global recirculation of water masses that determines today's climate.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="OceanCurrent">
+    <rdfs:subClassOf rdf:resource="#OceanCirculation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="OceanMixing">
+    <rdfs:subClassOf rdf:resource="#OceanPhenomena"/>
+    <rdfs:subClassOf rdf:resource="#Mixing" />
+    <rdfs:comment xml:lang="en">Any process or series of processes by which parcels of ocean water with different properties are brought into intimate small-scale contact, so that molecular diffusion erases the differences between them.
+    </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="OceanTide">
+    <rdfs:subClassOf rdf:resource="#Tide"/>
+    <rdfs:subClassOf rdf:resource="#OceanPhenomena"/>
+    <rdfs:comment>The periodic rising and falling of the earth's oceans and atmosphere.
+    It results from the tide-producing forces of the moon and sun acting upon the rotating earth. This disturbance actually propagates as a wave through the atmosphere and along the surface of the waters of the earth. Atmospheric tides are always so designated, whereas the term “tide“ alone commonly implies the oceanic variety. Sometimes, the consequent horizontal movement of water along the coastlines is also called “tide,” but it is preferable to designate the latter as tidal current, reserving the name tide for the vertical wavelike movement.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SurfBeat">
+    <rdfs:subClassOf rdf:resource="#OceanPhenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="StormSurge">
+    <rdfs:subClassOf rdf:resource="#OceanPhenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Swell">
+    <rdfs:subClassOf rdf:resource="#OceanPhenomena"/>
+    <rdfs:subClassOf rdf:resource="#GravityWave" />
+    <rdfs:comment xml:lang="en">Surface gravity waves on the ocean that are not growing or being sustained any longer by the wind.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ThermohalineCirculation">
+    <rdfs:subClassOf rdf:resource="#OceanCirculation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="TidalCurrent">
+    <rdfs:subClassOf rdf:resource="#OceanCurrent"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhysicalPhenomena"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#OceanTide"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Tsunami">
+    <rdfs:subClassOf rdf:resource="#SeismicWave" />
+    <rdfs:subClassOf rdf:resource="#OceanPhenomena"/>
+    <owl:equivalentClass rdf:resource="#TidalWave"/>
+    <rdfs:comment xml:lang="en">Waves generated by seismic activity.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="TidalWave"/>
+
+  <owl:Class rdf:ID="Upwelling">
+    <rdfs:subClassOf rdf:resource="#OceanCirculation"/>
+    <rdfs:comment xml:lang="en">An ascending motion of subsurface water by which water from deeper layers is brought into the surface layer and is removed from the area of upwelling by divergent horizontal flow.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="WindDrivenCirculation">
+    <rdfs:subClassOf rdf:resource="#OceanCirculation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="YellowSeaWarmCurrent">
+    <rdfs:subClassOf rdf:resource="#OceanCurrent" />
+    <rdfs:comment xml:lang="en">A surface current flowing northward along the central axis of the Yellow Sea.</rdfs:comment>
+  </owl:Class>
+
+</rdf:RDF>

@@ -1,0 +1,68 @@
+Nombre Mapa: Living organisms
+
+Relevancia Semantica del Repositorio de Ontologías para este mapa: 0.0
+Conceptos: 12
+
+Proposiciones: 12
+
+Proposiciones codificadas: 12
+
+Proposiciones encontradas por semantica: 0
+
+Proposiciones codificadas por semantica: 0
+
+Proposiciones codificadas por f.e: 12
+
+Relaciones encontradas en las Bases de Conocimiento :
+
+<WordNet>
+
+Hype_Hypo_Relations: 0
+Mero_Holo_Relations: 0
+Mero_Holo_Type_Relations: 0
+
+<OpenCyc>
+
+OpenCyc_Hierarchy_Relations: 0
+OpenCyc_Instance_Relations 0
+
+<OWLRepository>
+
+OWL_ClassSubClass_Relations : 0
+OWL_Instance_Relations : 0
+OWL_ObjectProperty_Relations : 0
+OWL_RestricProperty_Relations : 0
+
+Inferencias obtenidas por las Bases de Conocimiento:
+
+<WordNet>
+
+Hype_Hypo_Infered: 0
+Mero_Holo_Ifered: 0
+Mero_Holo_Type_Infered: 0
+
+<OpenCyc>
+
+OpenCyc_Hierarchy_Infered : 0
+OpenCyc_Instance_Infered : 0
+
+<OWLRepository>
+
+OWL_ClassSubClass_Infered : 0
+OWL_Instance_Infered : 0
+OWL_ObjectProperty_Infered : 0
+OWL_RestricProperty_Infered : 0
+
+Cantidad de ejecuciones de cada regla: 
+
+R1: 4
+R2: 0
+R3: 1
+R4: 0
+R5: 0
+R6: 4
+R7: 2
+R8: 2
+R9: 0
+R10: 0
+R11: 0

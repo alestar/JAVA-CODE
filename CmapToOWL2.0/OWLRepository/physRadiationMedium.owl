@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+  <owl:Class rdf:ID="Reflectance"/>
+  <owl:Class rdf:ID="dimensionlessUnit"/>
+  <owl:Class rdf:ID="Area"/>
+  <owl:Class rdf:ID="perMeter"/>
+  <owl:Class rdf:ID="IntensiveProperty"/>
+  <owl:Class rdf:ID="Attenuation"/>
+  <owl:Class rdf:ID="PhysicalLaw"/>
+  
+  <owl:Class rdf:ID="Albedo">
+    <rdfs:subClassOf rdf:resource="#RadiationMediumInteractionProperty"/>
+    <rdfs:subClassOf rdf:resource="#Reflectance"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasDefaultUnit"/>	
+		</owl:onProperty>
+        <owl:hasValue rdf:resource="#dimensionlessUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+     <rdfs:comment>The ratio of reflected flux density to incident flux density, referenced to some surface.</rdfs:comment>
+     <rdfs:label>Albedo</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:ID="AerosolOpticalDepth">
+    <rdfs:subClassOf rdf:resource="#OpticalDepth" />
+    <rdfs:comment>The optical depth due to extinction by the aerosol component of the atmosphere.</rdfs:comment>
+    <rdfs:label>Aerosol Optical Depth</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:ID="AngstromExponent">
+    <rdfs:subClassOf rdf:resource="#RadiationMediumInteractionProperty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#dimensionlessUnit"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="CrossSection">
+    <rdfs:subClassOf rdf:resource="#Area"/>
+    <rdfs:subClassOf rdf:resource="#RadiationMediumInteractionProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ExtinctionCoefficient">
+    <rdfs:subClassOf rdf:resource="#RadiationMediumInteractionProperty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#perMeter"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass rdf:resource="#LightAttenuationCoefficient" />
+    <rdfs:comment>The extinction coefficient for a particular substance is a measure of how well it scatters and absorbs electromagnetic radiation (EM waves). If the EM wave can pass through very easily, the material has a low extinction coefficient. Conversely, if the radiation hardly penetrates the material, but rather quickly becomes extinct within it, the extinction coefficient is high.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="LightAttenuationCoefficient"/>
+
+  <owl:Class rdf:ID="OpticalDepth">
+    <owl:equivalentClass rdf:resource="#OpticalThickness"/>
+    <rdfs:comment xml:lang="en">The optical thickness measured vertically above some given altitude.  Optical depth is dimensionless and may be used to specify many different radiative characteristics of the atmosphere.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="OpticalMass">
+    <rdfs:subClassOf rdf:resource="#RadiationMediumInteractionProperty"/>
+    <rdfs:comment xml:lang="en">The vertical integral of the density of absorbers between two altitudes; used mainly in determining the transmission through an absorbing gas.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="OpticalThickness">
+    <rdfs:subClassOf rdf:resource="#RadiationMediumInteractionProperty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#dimensionlessUnit"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="RadarCrossSection">
+    <rdfs:subClassOf rdf:resource="#RadiationMediumInteractionProperty"/>
+    <rdfs:subClassOf rdf:resource="#Reflectance"/>
+    <rdfs:comment xml:lang="en">Radar cross section (RCS) describes the extent to which an object reflects an incident electromagnetic wave. It is a measure of the strength of the radar signal backscattered from a target object for a given incident wave power..</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="RadiationMediumInteractionProperty">
+    <rdfs:subClassOf rdf:resource="#IntensiveProperty"/>
+    <owl:equivalentClass rdf:resource="#RadiationMediumQuantity" />
+  </owl:Class>
+  <owl:Class rdf:ID="RadiationMediumQuantity"/>
+
+  <owl:Class rdf:ID="SecchiDepth">
+    <rdfs:subClassOf rdf:resource="#OpticalDepth"/>
+    <rdfs:comment xml:lang="en">The Secchi disk is a device used to measure water transparency in open waters of lakes, bays, and the ocean. A pattern is drawn or painted onto a card or acrylic, mounted on a pole or line, and lowered slowly in the water. The depth at which the pattern on the disk is no longer visible is taken as a measure of the transparency of the water. This measure is known as the Secchi depth and is related to water turbidity.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Transparency">
+    <rdfs:subClassOf rdf:resource="#RadiationMediumInteractionProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Turbidity">
+    <rdfs:subClassOf rdf:resource="#RadiationMediumInteractionProperty"/>
+    <rdfs:comment xml:lang="en">The effect of (primarily) aerosols, through their total optical depth, in reducing the transmission of direct solar radiation to the surface below that through a purely molecular atmosphere.
+    Turbidity is the cloudiness or haziness of a fluid, or of air, caused by individual particles (suspended solids) that are generally invisible to the naked eye, similar to smoke in air.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Visibility">
+    <rdfs:subClassOf rdf:resource="#RadiationMediumInteractionProperty"/>
+    <rdfs:comment xml:lang="en">The greatest distance in a given direction at which it is just possible to see and identify with the unaided eye</rdfs:comment>
+  </owl:Class>
+
+<!-- Laws -->
+  <owl:Class rdf:ID="BouguerLaw">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhysicalProcess"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Attenuation" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#PhysicalLaw" />
+    <rdfs:comment>Attenuation of a beam of light by an optically homogeneous (transparent) medium.
+    </rdfs:comment>
+  </owl:Class>
+
+</rdf:RDF>

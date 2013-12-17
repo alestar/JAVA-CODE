@@ -1,0 +1,974 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF 
+xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+xmlns:owl="http://www.w3.org/2002/07/owl#" 
+xmlns:xsd="http://www.w3.org/2001/XMLSchema#" 
+xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+>
+<owl:Ontology rdf:about="">
+<!--
+<dc:title>
+Substance</dc:title>
+<dc:date>
+1/27/2004 3:00:46 PM</dc:date>
+<dc:creator>
+SWEET project</dc:creator>
+<dc:description>
+</dc:description>
+<dc:subject>
+Substance ontology</dc:subject>
+-->
+<owl:versionInfo>
+1.0</owl:versionInfo>
+</owl:Ontology>
+<owl:Class rdf:about="http://www.w3.org/2002/07/owl#Thing"/>
+<owl:Class rdf:ID="Fluorocarbon">
+<rdfs:subClassOf rdf:resource="#CarbonCompaund"/>
+</owl:Class>
+<owl:Class rdf:ID="CarbonCompaund">
+<rdfs:subClassOf rdf:resource="#ChemicalCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="Oxygen">
+<rdfs:subClassOf rdf:resource="#ChemicalElement"/>
+</owl:Class>
+<owl:Class rdf:ID="OxygenCompound">
+<rdfs:subClassOf rdf:resource="#ChemicalCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="Pollen">
+<rdfs:subClassOf rdf:resource="#Particulate"/>
+</owl:Class>
+<owl:Class rdf:ID="Particulate">
+<rdfs:subClassOf rdf:resource="#FormOfSubstanceOrganization"/>
+</owl:Class>
+<owl:Class rdf:ID="NaturalGas">
+<rdfs:subClassOf rdf:resource="#FossilFuel"/>
+</owl:Class>
+<owl:Class rdf:ID="NaturalResource">
+<rdfs:subClassOf rdf:resource="#ChemicalSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="Sulfur">
+<rdfs:subClassOf rdf:resource="#ChemicalElement"/>
+</owl:Class>
+<owl:Class rdf:ID="Ammonia">
+<rdfs:subClassOf rdf:resource="#ChemicalElement"/>
+</owl:Class>
+<owl:Class rdf:ID="ChemicalElement">
+<rdfs:subClassOf rdf:resource="#ChemicalSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="MetamorphicRock">
+<rdfs:subClassOf rdf:resource="#Rock"/>
+</owl:Class>
+<owl:Class rdf:ID="Rock">
+<rdfs:subClassOf rdf:resource="#MixedChemicalSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="InfraredRadiation">
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="#hasWavelengthRange"/>
+<owl:hasValue rdf:resource="#InfraredRange"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf rdf:resource="#ElectromagneticWave"/>
+</owl:Class>
+<owl:Class rdf:ID="ElectromagneticWave"/>
+<owl:Class rdf:ID="ElectromagneticRadiation">
+<owl:equivalentClass rdf:resource="#ElectromagneticWave"/>
+</owl:Class>
+<owl:Class rdf:ID="Radiation">
+<owl:equivalentClass rdf:resource="#ElectromagneticWave"/>
+</owl:Class>
+<owl:Class rdf:ID="Nitrate">
+<rdfs:subClassOf rdf:resource="#NitrogenCompound"/>
+<rdfs:subClassOf rdf:resource="#OxygenCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="NitrogenCompound">
+<rdfs:subClassOf rdf:resource="#ChemicalCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="Nitrite">
+<rdfs:subClassOf rdf:resource="#NitrogenCompound"/>
+<rdfs:subClassOf rdf:resource="#OxygenCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="Acid">
+<rdfs:subClassOf rdf:resource="#HydrogenCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="ChemicalCompound">
+<rdfs:subClassOf rdf:resource="#ChemicalSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="Coal">
+<rdfs:subClassOf rdf:resource="#FossilFuel"/>
+</owl:Class>
+<owl:Class rdf:ID="Dust">
+<rdfs:subClassOf rdf:resource="#Particulate"/>
+<rdfs:subClassOf rdf:resource="#MixedChemicalSubstance"/>
+<rdfs:subClassOf rdf:resource="#Contaminant"/>
+</owl:Class>
+<owl:Class rdf:ID="Aerosol">
+<rdfs:subClassOf rdf:resource="#Particulate"/>
+</owl:Class>
+<owl:Class rdf:ID="Feed">
+<rdfs:subClassOf rdf:resource="#Nutrient"/>
+</owl:Class>
+<owl:Class rdf:ID="Nutrient">
+<rdfs:subClassOf rdf:resource="#ChemicalSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="Chlorophyll">
+<rdfs:subClassOf rdf:resource="#ChemicalSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="Food">
+<rdfs:subClassOf rdf:resource="#Nutrient"/>
+</owl:Class>
+<owl:Class rdf:ID="HCFC">
+<owl:equivalentClass rdf:resource="#Hydrochlorofluorocarbon"/>
+</owl:Class>
+<owl:Class rdf:ID="NOX">
+<owl:equivalentClass rdf:resource="#NitrogenOxide"/>
+</owl:Class>
+<owl:Class rdf:ID="Hydrochlorofluorocarbon">
+<rdfs:subClassOf rdf:resource="#Fluorocarbon"/>
+<rdfs:subClassOf rdf:resource="#Hydrocarbon"/>
+</owl:Class>
+<owl:Class rdf:ID="HNO3">
+<owl:equivalentClass rdf:resource="#NitricAcid"/>
+<rdfs:subClassOf rdf:resource="#NitricAcid"/>
+</owl:Class>
+<owl:Class rdf:ID="NitricAcid">
+<rdfs:subClassOf rdf:resource="#NitrogenCompound"/>
+<rdfs:subClassOf rdf:resource="#HydrogenCompound"/>
+<rdfs:subClassOf rdf:resource="#OxygenCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="Lava">
+<rdfs:subClassOf rdf:resource="#Magma"/>
+</owl:Class>
+<owl:Class rdf:ID="Magma">
+<rdfs:subClassOf rdf:resource="#MixedChemicalSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="Pyroclastics">
+<rdfs:subClassOf rdf:resource="#Rock"/>
+</owl:Class>
+<owl:Class rdf:ID="Salt">
+<rdfs:subClassOf rdf:resource="#ChlorineCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="ChlorineCompound">
+<rdfs:subClassOf rdf:resource="#ChemicalCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="PhosphorusCompound">
+<rdfs:subClassOf rdf:resource="#ChemicalCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="Magnesium">
+<rdfs:subClassOf rdf:resource="#ChemicalElement"/>
+</owl:Class>
+<owl:Class rdf:ID="ChemicalSubstance"/>
+<owl:Class rdf:ID="Isotope">
+<rdfs:subClassOf rdf:resource="#ChemicalElement"/>
+</owl:Class>
+<owl:Class rdf:ID="Hydroxyl">
+<rdfs:subClassOf rdf:resource="#HydrogenCompound"/>
+<rdfs:subClassOf rdf:resource="#OxygenCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="HydrogenCompound">
+<rdfs:subClassOf rdf:resource="#ChemicalCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="Potassium">
+<rdfs:subClassOf rdf:resource="#ChemicalElement"/>
+</owl:Class>
+<owl:Class rdf:ID="Chlorophyl">
+<rdfs:subClassOf rdf:resource="#OrganicSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="OrganicCarbon">
+<rdfs:subClassOf rdf:resource="#OrganicSubstance"/>
+<rdfs:subClassOf rdf:resource="#Carbon"/>
+</owl:Class>
+<owl:Class rdf:ID="InorganicCarbon">
+<rdfs:subClassOf rdf:resource="#InorganicSubstance"/>
+<rdfs:subClassOf rdf:resource="#Carbon"/>
+</owl:Class>
+<owl:Class rdf:ID="OrganicCompound">
+<rdfs:subClassOf rdf:resource="#ChemicalCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="ElementaryParticle">
+<rdfs:subClassOf rdf:resource="#FormOfSubstanceOrganization"/>
+</owl:Class>
+<owl:Class rdf:ID="Petroleum">
+<rdfs:subClassOf rdf:resource="#FossilFuel"/>
+</owl:Class>
+<owl:Class rdf:ID="Sulfide">
+<rdfs:subClassOf rdf:resource="#SulfurCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="SulfurCompound">
+<rdfs:subClassOf rdf:resource="#ChemicalCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="Hydrocarbon">
+<rdfs:subClassOf rdf:resource="#HydrogenCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="Carbonyl">
+<rdfs:subClassOf rdf:resource="#CarbonCompaund"/>
+</owl:Class>
+<owl:Class rdf:ID="Dimethyl">
+<rdfs:subClassOf rdf:resource="#MethaneCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="MethaneCompound">
+<rdfs:subClassOf rdf:resource="#ChemicalCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="Chlorofluorocarbon">
+<rdfs:subClassOf rdf:resource="#Fluorocarbon"/>
+</owl:Class>
+<owl:Class rdf:ID="VisibleLight">
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="#hasWavelengthRange"/>
+<owl:hasValue rdf:resource="#VisibleInterval"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf rdf:resource="#ElectromagneticWave"/>
+</owl:Class>
+<owl:Class rdf:ID="Microfossil">
+<rdfs:subClassOf rdf:resource="#Fossil"/>
+</owl:Class>
+<owl:Class rdf:ID="Fossil">
+<rdfs:subClassOf rdf:resource="#FormOfSubstanceOrganization"/>
+</owl:Class>
+<owl:Class rdf:ID="Silicate">
+<rdfs:subClassOf rdf:resource="#SiliconCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="SiliconCompound">
+<rdfs:subClassOf rdf:resource="#ChemicalCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="Defoilant">
+<rdfs:subClassOf rdf:resource="#AgriculturalChemical"/>
+</owl:Class>
+<owl:Class rdf:ID="AgriculturalChemical">
+<rdfs:subClassOf rdf:resource="#ChemicalSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="FormOfSubstanceOrganization"/>
+<owl:Class rdf:ID="WaterVapor">
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="#hasState"/>
+<owl:allValuesFrom rdf:resource="#Gas"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf rdf:resource="#Water"/>
+</owl:Class>
+<owl:Class rdf:ID="Water">
+<rdfs:subClassOf rdf:resource="#OxygenCompound"/>
+<rdfs:subClassOf rdf:resource="#HydrogenCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="Nitrogen">
+<rdfs:subClassOf rdf:resource="#ChemicalElement"/>
+</owl:Class>
+<owl:Class rdf:ID="RadioWave">
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="#hasWavelengthRange"/>
+<owl:hasValue rdf:resource="#RadioRange"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf rdf:resource="#ElectromagneticWave"/>
+</owl:Class>
+<owl:Class rdf:ID="Meteorite_substance">
+<rdfs:subClassOf rdf:resource="#ExtraterrestrialSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="AlphaParticle">
+<rdfs:subClassOf rdf:resource="#ElementaryParticle"/>
+</owl:Class>
+<owl:Class rdf:ID="Phosphate">
+<rdfs:subClassOf rdf:resource="#PhosphorusCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="HydrogenousSediment">
+<rdfs:subClassOf rdf:resource="#Sediment"/>
+</owl:Class>
+<owl:Class rdf:ID="Sediment">
+<rdfs:subClassOf rdf:resource="#Deposit"/>
+</owl:Class>
+<owl:Class rdf:ID="CarbonMonoxide">
+<rdfs:subClassOf rdf:resource="#CarbonCompaund"/>
+<rdfs:subClassOf rdf:resource="#Monoxide"/>
+</owl:Class>
+<owl:Class rdf:ID="ThermalInfraredRadiation">
+<rdfs:subClassOf rdf:resource="#ElectromagneticWave"/>
+</owl:Class>
+<owl:Class rdf:ID="SulfurDioxide">
+<rdfs:subClassOf rdf:resource="#Sulfur"/>
+<rdfs:subClassOf rdf:resource="#Dioxide"/>
+</owl:Class>
+<owl:Class rdf:ID="Dioxide">
+<rdfs:subClassOf rdf:resource="#OxygenCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="Deposit">
+<rdfs:subClassOf rdf:resource="#FormOfSubstanceOrganization"/>
+</owl:Class>
+<owl:Class rdf:ID="NitrousOxide">
+<rdfs:subClassOf rdf:resource="#Monoxide"/>
+<rdfs:subClassOf rdf:resource="#NitrogenCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="Electron">
+<rdfs:subClassOf rdf:resource="#ElementaryParticle"/>
+</owl:Class>
+<owl:Class rdf:ID="NitricOxide">
+<rdfs:subClassOf rdf:resource="#NitrogenCompound"/>
+<rdfs:subClassOf rdf:resource="#Monoxide"/>
+</owl:Class>
+<owl:Class rdf:ID="CosmicRay">
+<rdfs:subClassOf rdf:resource="#ElementaryParticle"/>
+</owl:Class>
+<owl:Class rdf:ID="CarbonDioxide">
+<rdfs:subClassOf rdf:resource="#Dioxide"/>
+<rdfs:subClassOf rdf:resource="#CarbonCompaund"/>
+</owl:Class>
+<owl:Class rdf:ID="Manganese">
+<rdfs:subClassOf rdf:resource="#ChemicalElement"/>
+</owl:Class>
+<owl:Class rdf:ID="Loess">
+<rdfs:subClassOf rdf:resource="#Sediment"/>
+</owl:Class>
+<owl:Class rdf:ID="Metal">
+<rdfs:subClassOf rdf:resource="#NaturalResource"/>
+</owl:Class>
+<owl:Class rdf:ID="Ozone">
+<rdfs:subClassOf rdf:resource="#OxygenCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="X-ray">
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="#hasWavelengthRange"/>
+<owl:hasValue rdf:resource="#X-rayRange"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf rdf:resource="#ElectromagneticWave"/>
+</owl:Class>
+<owl:Class rdf:ID="Contaminant">
+<rdfs:subClassOf rdf:resource="#ChemicalSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="Proton">
+<rdfs:subClassOf rdf:resource="#ElementaryParticle"/>
+</owl:Class>
+<owl:Class rdf:ID="Lead">
+<rdfs:subClassOf rdf:resource="#ChemicalSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="Ash">
+<rdfs:subClassOf rdf:resource="#MixedChemicalSubstance"/>
+<rdfs:subClassOf rdf:resource="#Contaminant"/>
+</owl:Class>
+<owl:Class rdf:ID="CFC">
+<owl:equivalentClass rdf:resource="#Chlorofluorocarbon"/>
+</owl:Class>
+<owl:Class rdf:ID="CH4">
+<owl:equivalentClass rdf:resource="#Methane"/>
+</owl:Class>
+<owl:Class rdf:ID="Methane">
+<rdfs:subClassOf rdf:resource="#CarbonCompaund"/>
+<rdfs:subClassOf rdf:resource="#HydrogenCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="CO2">
+<owl:equivalentClass rdf:resource="#CarbonDioxide"/>
+</owl:Class>
+<owl:Class rdf:ID="DMS">
+<owl:equivalentClass rdf:resource="#DimethylSulfide"/>
+</owl:Class>
+<owl:Class rdf:ID="DimethylSulfide">
+<rdfs:subClassOf rdf:resource="#Sulfide"/>
+</owl:Class>
+<owl:Class rdf:ID="HFC">
+<owl:equivalentClass rdf:resource="#Hydrofluorocarbon"/>
+</owl:Class>
+<owl:Class rdf:ID="Hydrofluorocarbon">
+<rdfs:subClassOf rdf:resource="#Hydrocarbon"/>
+<rdfs:subClassOf rdf:resource="#Fluorocarbon"/>
+</owl:Class>
+<owl:Class rdf:ID="Ice">
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="#hasState"/>
+<owl:allValuesFrom rdf:resource="#SolidSubstance"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf rdf:resource="#Water"/>
+</owl:Class>
+<owl:Class rdf:ID="Ion">
+<rdfs:subClassOf rdf:resource="#Atom"/>
+</owl:Class>
+<owl:Class rdf:ID="N20">
+<rdfs:subClassOf rdf:resource="#NitrousOxide"/>
+</owl:Class>
+<owl:Class rdf:ID="NO2">
+<owl:equivalentClass rdf:resource="#Nitrite"/>
+</owl:Class>
+<owl:Class rdf:ID="NO3">
+<owl:equivalentClass rdf:resource="#Nitrate"/>
+</owl:Class>
+<owl:Class rdf:ID="OCS">
+<owl:equivalentClass rdf:resource="#CarbonylSulfide"/>
+</owl:Class>
+<owl:Class rdf:ID="CarbonylSulfide">
+<rdfs:subClassOf rdf:resource="#Sulfide"/>
+</owl:Class>
+<owl:Class rdf:ID="PCB">
+<rdfs:subClassOf rdf:resource="#Pesticide"/>
+</owl:Class>
+<owl:Class rdf:ID="Pesticide">
+<rdfs:subClassOf rdf:resource="#AgriculturalChemical"/>
+</owl:Class>
+<owl:Class rdf:ID="SO2">
+<owl:equivalentClass rdf:resource="#SulfurDioxide"/>
+</owl:Class>
+<owl:Class rdf:ID="VOC"/>
+<owl:Class rdf:ID="Phosphorus">
+<rdfs:subClassOf rdf:resource="#ChemicalElement"/>
+</owl:Class>
+<owl:Class rdf:ID="S">
+<owl:equivalentClass rdf:resource="#Sulfur"/>
+</owl:Class>
+<owl:Class rdf:ID="Chlorine">
+<rdfs:subClassOf rdf:resource="#ChemicalElement"/>
+</owl:Class>
+<owl:Class rdf:ID="TerrigenousSediment">
+<rdfs:subClassOf rdf:resource="#Sediment"/>
+</owl:Class>
+<owl:Class rdf:ID="Macrofossil">
+<rdfs:subClassOf rdf:resource="#Fossil"/>
+</owl:Class>
+<owl:Class rdf:ID="CO">
+<owl:equivalentClass rdf:resource="#CarbonMonoxide"/>
+</owl:Class>
+<owl:Class rdf:ID="Ca">
+<owl:equivalentClass rdf:resource="#Calcium"/>
+</owl:Class>
+<owl:Class rdf:ID="Calcium">
+<rdfs:subClassOf rdf:resource="#ChemicalElement"/>
+</owl:Class>
+<owl:Class rdf:ID="Mg">
+<owl:equivalentClass rdf:resource="#Manganese"/>
+</owl:Class>
+<owl:Class rdf:ID="NO">
+<owl:equivalentClass rdf:resource="#NitricOxide"/>
+<rdfs:subClassOf rdf:resource="#NitricOxide"/>
+</owl:Class>
+<owl:Class rdf:ID="O2">
+<owl:equivalentClass rdf:resource="#Oxygen"/>
+</owl:Class>
+<owl:Class rdf:ID="O3">
+<owl:equivalentClass rdf:resource="#Ozone"/>
+</owl:Class>
+<owl:Class rdf:ID="Fertilizer">
+<rdfs:subClassOf rdf:resource="#AgriculturalChemical"/>
+</owl:Class>
+<owl:Class rdf:ID="MicrowaveRadiation">
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="#hasWavelengthRange"/>
+<owl:hasValue rdf:resource="#MicrowaveRange"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf rdf:resource="#ElectromagneticWave"/>
+</owl:Class>
+<owl:Class rdf:ID="NonmethaneHydrocarbon">
+<rdfs:subClassOf rdf:resource="#CarbonCompaund"/>
+</owl:Class>
+<owl:Class rdf:ID="GasHydrate">
+<rdfs:subClassOf rdf:resource="#NaturalResource"/>
+</owl:Class>
+<owl:Class rdf:ID="CloudCondensationNuclei">
+<rdfs:subClassOf rdf:resource="#Aerosol"/>
+</owl:Class>
+<owl:Class rdf:ID="CarbonaceousAerosol">
+<rdfs:subClassOf rdf:resource="#Aerosol"/>
+</owl:Class>
+<owl:Class rdf:ID="CondensedWater">
+<rdfs:subClassOf>
+<owl:Class>
+<owl:unionOf rdf:parseType="Collection">
+<owl:Class rdf:about="#LiquidWater"/>
+<owl:Class rdf:about="#Ice"/>
+</owl:unionOf>
+</owl:Class>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:ID="LiquidWater">
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="#hasState"/>
+<owl:allValuesFrom rdf:resource="#LiquidSubstance"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf rdf:resource="#Water"/>
+</owl:Class>
+<owl:Class rdf:ID="VolcanicDeposit">
+<rdfs:subClassOf rdf:resource="#Deposit"/>
+</owl:Class>
+<owl:Class rdf:ID="Halocarbon">
+<rdfs:subClassOf rdf:resource="#CarbonCompaund"/>
+</owl:Class>
+<owl:Class rdf:ID="Micronutrient">
+<rdfs:subClassOf rdf:resource="#Nutrient"/>
+</owl:Class>
+<owl:Class rdf:ID="LongwaveRadiation">
+<rdfs:subClassOf rdf:resource="#ElectromagneticWave"/>
+</owl:Class>
+<owl:Class rdf:ID="Crystal">
+<rdfs:subClassOf rdf:resource="#FormOfSubstanceOrganization"/>
+</owl:Class>
+<owl:Class rdf:ID="Mineral">
+<rdfs:subClassOf rdf:resource="#NaturalResource"/>
+</owl:Class>
+<owl:Class rdf:ID="NonmetallicMineral">
+<rdfs:subClassOf rdf:resource="#Mineral"/>
+</owl:Class>
+<owl:Class rdf:ID="HoarCristal">
+<rdfs:subClassOf rdf:resource="#Crystal"/>
+</owl:Class>
+<owl:Class rdf:ID="ShortwaveRadiation">
+<rdfs:subClassOf rdf:resource="#ElectromagneticWave"/>
+</owl:Class>
+<owl:Class rdf:ID="EnergeticParticle">
+<rdfs:subClassOf rdf:resource="#ElementaryParticle"/>
+</owl:Class>
+<owl:Class rdf:ID="Bubble">
+<rdfs:subClassOf rdf:resource="#FormOfSubstanceOrganization"/>
+</owl:Class>
+<owl:Class rdf:ID="AirBubble">
+<rdfs:subClassOf rdf:resource="#Air"/>
+<rdfs:subClassOf rdf:resource="#Bubble"/>
+</owl:Class>
+<owl:Class rdf:ID="Carbon">
+<rdfs:subClassOf rdf:resource="#ChemicalElement"/>
+</owl:Class>
+<owl:Class rdf:ID="Carcinogen">
+<rdfs:subClassOf rdf:resource="#HazardousSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="Mineraloid">
+<rdfs:subClassOf rdf:resource="#Mineral"/>
+</owl:Class>
+<owl:Class rdf:ID="IgneousRock">
+<rdfs:subClassOf rdf:resource="#Rock"/>
+</owl:Class>
+<owl:Class rdf:about="#Interval"/>
+<owl:Class rdf:ID="Red">
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="#hasWavelengthRange"/>
+<owl:hasValue rdf:resource="#RedRange"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf rdf:resource="#VisibleLight"/>
+</owl:Class>
+<owl:Class rdf:about="http://sweet.jpl.nasa.gov/ontology/property.owl#Wavelength">
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="#hasUnit"/>
+<owl:allValuesFrom rdf:resource="http://sweet.jpl.nasa.gov/ontology/units.owl#Unit"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+</owl:Class>
+<owl:Class rdf:about="http://sweet.jpl.nasa.gov/ontology/units.owl#Unit"/>
+<owl:Class rdf:ID="Orange">
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="#hasWavelengthRange"/>
+<owl:hasValue rdf:resource="#OrangeRange"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf rdf:resource="#VisibleLight"/>
+</owl:Class>
+<owl:Class rdf:ID="Green">
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="#hasWavelengthRange"/>
+<owl:hasValue rdf:resource="#GreenRange"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf rdf:resource="#VisibleLight"/>
+</owl:Class>
+<owl:Class rdf:ID="Blue">
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="#hasWavelengthRange"/>
+<owl:hasValue rdf:resource="#BlueRange"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf rdf:resource="#VisibleLight"/>
+</owl:Class>
+<owl:Class rdf:ID="Violet">
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="#hasWavelengthRange"/>
+<owl:hasValue rdf:resource="#VioletRange"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf rdf:resource="#VisibleLight"/>
+</owl:Class>
+<owl:Class rdf:ID="Yellow">
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="#hasWavelengthRange"/>
+<owl:hasValue rdf:resource="#YellowRange"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf rdf:resource="#VisibleLight"/>
+</owl:Class>
+<owl:Class rdf:ID="Interval"/>
+<owl:Class rdf:ID="UltravioletRadiation">
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="#hasWavelengthRange"/>
+<owl:hasValue rdf:resource="#UltravioletRange"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf rdf:resource="#ElectromagneticWave"/>
+</owl:Class>
+<owl:Class rdf:ID="Gamma-ray">
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="#hasWavelengthRange"/>
+<owl:hasValue rdf:resource="#Gamma-rayRange"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf rdf:resource="#ElectromagneticWave"/>
+</owl:Class>
+<owl:Class rdf:ID="HazardousSubstance">
+<rdfs:subClassOf rdf:resource="#ChemicalSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="MixedChemicalSubstance">
+<rdfs:subClassOf rdf:resource="#ChemicalSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="Air">
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="#contains"/>
+<owl:allValuesFrom rdf:resource="#Oxygen"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="#contains"/>
+<owl:allValuesFrom rdf:resource="#Nitrogen"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf rdf:resource="#MixedChemicalSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="ExtraterrestrialSubstance">
+<rdfs:subClassOf rdf:resource="#ChemicalSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="Bedrock">
+<rdfs:subClassOf rdf:resource="#Rock"/>
+</owl:Class>
+<owl:Class rdf:ID="OrganicSubstance">
+<rdfs:subClassOf rdf:resource="#ChemicalSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="BiochemicalSubstance">
+<rdfs:subClassOf rdf:resource="#OrganicSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="BiogenicSediment">
+<rdfs:subClassOf rdf:resource="#Sediment"/>
+</owl:Class>
+<owl:Class rdf:ID="Biomass">
+<rdfs:subClassOf rdf:resource="#OrganicSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="BiomedicalChemical">
+<rdfs:subClassOf rdf:resource="#ChemicalSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="Bromine">
+<rdfs:subClassOf rdf:resource="#ChemicalElement"/>
+</owl:Class>
+<owl:Class rdf:ID="Monoxide">
+<rdfs:subClassOf rdf:resource="#OxygenCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="OxygenIsotope">
+<rdfs:subClassOf rdf:resource="#OxygenCompound"/>
+<rdfs:subClassOf rdf:resource="#Isotope"/>
+</owl:Class>
+<owl:Class rdf:ID="BromineMonoxide">
+<rdfs:subClassOf rdf:resource="#Monoxide"/>
+</owl:Class>
+<owl:Class rdf:ID="Gelbstoff">
+<rdfs:subClassOf rdf:resource="#OrganicSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="Carbonate">
+<rdfs:subClassOf rdf:resource="#CarbonCompaund"/>
+</owl:Class>
+<owl:Class rdf:ID="Cation">
+<rdfs:subClassOf rdf:resource="#Ion"/>
+</owl:Class>
+<owl:Class rdf:ID="ChlorinatedHydrocarbon">
+<rdfs:subClassOf rdf:resource="#ChlorineCompound"/>
+<rdfs:subClassOf rdf:resource="#CarbonCompaund"/>
+<rdfs:subClassOf rdf:resource="#HydrogenCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="ClorineDioxide">
+<rdfs:subClassOf rdf:resource="#ChlorineCompound"/>
+<rdfs:subClassOf rdf:resource="#Dioxide"/>
+</owl:Class>
+<owl:Class rdf:ID="ChlorineMonoxide">
+<rdfs:subClassOf rdf:resource="#ChlorineCompound"/>
+<rdfs:subClassOf rdf:resource="#Monoxide"/>
+</owl:Class>
+<owl:Class rdf:ID="ClorineNitrate">
+<rdfs:subClassOf rdf:resource="#ChlorineCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="CoralDeposit">
+<rdfs:subClassOf rdf:resource="#Deposit"/>
+</owl:Class>
+<owl:Class rdf:ID="DinitrogenPentoxide">
+<rdfs:subClassOf rdf:resource="#NitrogenCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="Gas">
+<rdfs:subClassOf rdf:resource="#StateOfMatter"/>
+</owl:Class>
+<owl:Class rdf:ID="SolidSubstance">
+<rdfs:subClassOf rdf:resource="#StateOfMatter"/>
+</owl:Class>
+<owl:Class rdf:ID="Droplet">
+<rdfs:subClassOf rdf:resource="#FormOfSubstanceOrganization"/>
+</owl:Class>
+<owl:Class rdf:ID="FoodAditive">
+<rdfs:subClassOf rdf:resource="#Food"/>
+</owl:Class>
+<owl:Class rdf:ID="Soil">
+<rdfs:subClassOf rdf:resource="#MixedChemicalSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="Paleosol">
+<rdfs:subClassOf rdf:resource="#Soil"/>
+</owl:Class>
+<owl:Class rdf:ID="Paleovegetation">
+<rdfs:subClassOf rdf:resource="#MixedChemicalSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="PhotosyntheticallyActiveRadiation">
+<rdfs:subClassOf rdf:resource="#ElectromagneticWave"/>
+</owl:Class>
+<owl:Class rdf:ID="Pigment">
+<rdfs:subClassOf rdf:resource="#OrganicSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="RadioactiveSubstance">
+<rdfs:subClassOf rdf:resource="#HazardousSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="Radiocarbon">
+<rdfs:subClassOf rdf:resource="#RadioactiveSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="Radionuclide">
+<rdfs:subClassOf rdf:resource="#RadioactiveSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="SeaWater">
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="#contains"/>
+<owl:allValuesFrom rdf:resource="#Salt"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf rdf:resource="#Solution"/>
+</owl:Class>
+<owl:Class rdf:ID="SedimentaryRock">
+<rdfs:subClassOf rdf:resource="#Rock"/>
+</owl:Class>
+<owl:Class rdf:ID="Sewage">
+<rdfs:subClassOf rdf:resource="#HazardousSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="Silk">
+<rdfs:subClassOf rdf:resource="#OrganicSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="Snow">
+<rdfs:subClassOf rdf:resource="#Ice"/>
+</owl:Class>
+<owl:Class rdf:ID="SnowFacies">
+<rdfs:subClassOf rdf:resource="#Crystal"/>
+</owl:Class>
+<owl:Class rdf:ID="Sulfate">
+<rdfs:subClassOf rdf:resource="#SulfurCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="Formaldegyde">
+<rdfs:subClassOf rdf:resource="#HydrogenCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="FossilFuel">
+<rdfs:subClassOf rdf:resource="#NaturalResource"/>
+</owl:Class>
+<owl:Class rdf:ID="FreshWater">
+<rdfs:subClassOf>
+<owl:Restriction>
+<owl:onProperty rdf:resource="#contains"/>
+<owl:allValuesFrom rdf:resource="#LiquidWater"/>
+</owl:Restriction>
+</rdfs:subClassOf>
+<rdfs:subClassOf rdf:resource="#Solution"/>
+</owl:Class>
+<owl:Class rdf:ID="Solution">
+<rdfs:subClassOf rdf:resource="#MixedChemicalSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="DissolvedSubstance">
+<rdfs:subClassOf rdf:resource="#FormOfSubstanceOrganization"/>
+</owl:Class>
+<owl:Class rdf:ID="DissolvedGas">
+<rdfs:subClassOf rdf:resource="#DissolvedSubstance"/>
+<rdfs:subClassOf rdf:resource="#Gas"/>
+</owl:Class>
+<owl:Class rdf:ID="DissolvedSolid">
+<rdfs:subClassOf rdf:resource="#DissolvedSubstance"/>
+<rdfs:subClassOf rdf:resource="#SolidSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="SuspendedGas">
+<rdfs:subClassOf rdf:resource="#SuspendedSubstance"/>
+<rdfs:subClassOf rdf:resource="#Gas"/>
+</owl:Class>
+<owl:Class rdf:ID="SuspendedSolid">
+<rdfs:subClassOf rdf:resource="#SuspendedSubstance"/>
+<rdfs:subClassOf rdf:resource="#SolidSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="Ground">
+<rdfs:subClassOf rdf:resource="#MixedChemicalSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="HeavyIon">
+<rdfs:subClassOf rdf:resource="#Ion"/>
+</owl:Class>
+<owl:Class rdf:ID="HeavyMetal">
+<rdfs:subClassOf rdf:resource="#Metal"/>
+</owl:Class>
+<owl:Class rdf:ID="Honey">
+<rdfs:subClassOf rdf:resource="#Food"/>
+</owl:Class>
+<owl:Class rdf:ID="HydrogenCyanide">
+<rdfs:subClassOf rdf:resource="#HydrogenCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="HydrogenChloride">
+<rdfs:subClassOf rdf:resource="#HydrogenCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="HydrogenFluoride">
+<rdfs:subClassOf rdf:resource="#HydrogenCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="Hydroperoxy">
+<rdfs:subClassOf rdf:resource="#HydrogenCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="HydrochlorousMonoxide">
+<rdfs:subClassOf rdf:resource="#HydrogenCompound"/>
+<rdfs:subClassOf rdf:resource="#Monoxide"/>
+</owl:Class>
+<owl:Class rdf:ID="HydrochlorousAcid">
+<rdfs:subClassOf rdf:resource="#Acid"/>
+</owl:Class>
+<owl:Class rdf:ID="InorganicSubstance">
+<rdfs:subClassOf rdf:resource="#ChemicalSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="Litter">
+<rdfs:subClassOf rdf:resource="#MixedChemicalSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="Manure">
+<rdfs:subClassOf rdf:resource="#MixedChemicalSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="MarineSediment">
+<rdfs:subClassOf rdf:resource="#Sediment"/>
+</owl:Class>
+<owl:Class rdf:ID="SuspendedSubstance">
+<rdfs:subClassOf rdf:resource="#Particulate"/>
+</owl:Class>
+<owl:Class rdf:ID="TraceSubstance">
+<rdfs:subClassOf rdf:resource="#FormOfSubstanceOrganization"/>
+</owl:Class>
+<owl:Class rdf:ID="TraceMetal">
+<rdfs:subClassOf rdf:resource="#TraceSubstance"/>
+<rdfs:subClassOf rdf:resource="#Metal"/>
+</owl:Class>
+<owl:Class rdf:ID="TraceGas">
+<rdfs:subClassOf rdf:resource="#TraceSubstance"/>
+<rdfs:subClassOf rdf:resource="#Gas"/>
+</owl:Class>
+<owl:Class rdf:ID="Powder">
+<rdfs:subClassOf rdf:resource="#Particulate"/>
+</owl:Class>
+<owl:Class rdf:ID="Soot">
+<rdfs:subClassOf rdf:resource="#MixedChemicalSubstance"/>
+<rdfs:subClassOf rdf:resource="#Contaminant"/>
+</owl:Class>
+<owl:Class rdf:ID="StableIsotope">
+<rdfs:subClassOf rdf:resource="#Isotope"/>
+</owl:Class>
+<owl:Class rdf:ID="SulfurOxide">
+<rdfs:subClassOf rdf:resource="#Monoxide"/>
+<rdfs:subClassOf rdf:resource="#SulfurCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="Toxin">
+<rdfs:subClassOf rdf:resource="#HazardousSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="Varve">
+<rdfs:subClassOf rdf:resource="#Sediment"/>
+</owl:Class>
+<owl:Class rdf:ID="NitrogenDioxide">
+<rdfs:subClassOf rdf:resource="#NitrogenCompound"/>
+<rdfs:subClassOf rdf:resource="#Dioxide"/>
+</owl:Class>
+<owl:Class rdf:ID="NitrogenOxide">
+<rdfs:subClassOf rdf:resource="#NitrogenCompound"/>
+<rdfs:subClassOf rdf:resource="#OxygenCompound"/>
+</owl:Class>
+<owl:Class rdf:ID="Non-MethaneHydrocarbons">
+<rdfs:subClassOf rdf:resource="#Hydrocarbon"/>
+</owl:Class>
+<owl:Class rdf:ID="NuclearRadiation">
+<rdfs:subClassOf rdf:resource="#ElementaryParticle"/>
+</owl:Class>
+<owl:Class rdf:ID="StateOfMatter"/>
+<owl:Class rdf:ID="LiquidSubstance">
+<rdfs:subClassOf rdf:resource="#StateOfMatter"/>
+</owl:Class>
+<owl:Class rdf:ID="Oil">
+<rdfs:subClassOf rdf:resource="#FossilFuel"/>
+</owl:Class>
+<owl:Class rdf:ID="GreenhouseGas">
+<rdfs:subClassOf rdf:resource="#ChemicalSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="Send">
+<rdfs:subClassOf rdf:resource="#MixedChemicalSubstance"/>
+<rdfs:subClassOf rdf:resource="#Grain"/>
+</owl:Class>
+<owl:Class rdf:ID="Atom">
+<rdfs:subClassOf rdf:resource="#FormOfSubstanceOrganization"/>
+</owl:Class>
+<owl:Class rdf:ID="Smoke">
+<rdfs:subClassOf rdf:resource="#SuspendedSubstance"/>
+</owl:Class>
+<owl:Class rdf:ID="IceCrystal">
+<rdfs:subClassOf rdf:resource="#Crystal"/>
+<rdfs:subClassOf rdf:resource="#Ice"/>
+</owl:Class>
+<owl:Class rdf:ID="IcePellet">
+<rdfs:subClassOf rdf:resource="#Grain"/>
+<rdfs:subClassOf rdf:resource="#Ice"/>
+</owl:Class>
+<owl:Class rdf:ID="Grain">
+<rdfs:subClassOf rdf:resource="#Particulate"/>
+</owl:Class>
+<owl:Class rdf:ID="ElectricField">
+<rdfs:subClassOf rdf:resource="#Field"/>
+</owl:Class>
+<owl:Class rdf:ID="MagneticField">
+<rdfs:subClassOf rdf:resource="#Field"/>
+</owl:Class>
+<owl:Class rdf:ID="GravityField">
+<rdfs:subClassOf rdf:resource="#Field"/>
+</owl:Class>
+<owl:Class rdf:ID="SnowGrain">
+<rdfs:subClassOf rdf:resource="#Grain"/>
+<rdfs:subClassOf rdf:resource="#Snow"/>
+</owl:Class>
+<owl:Class rdf:ID="Spray">
+<rdfs:subClassOf rdf:resource="#Aerosol"/>
+</owl:Class>
+<owl:DatatypeProperty rdf:about="#hasValue">
+<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+</owl:DatatypeProperty>
+<owl:ObjectProperty rdf:ID="hasAssociatedSubstance"/>
+<owl:ObjectProperty rdf:ID="hasAssociatedPhenomena"/>
+<owl:ObjectProperty rdf:ID="hasWavelengthRange">
+<rdfs:domain rdf:resource="#ElectromagneticWave"/>
+<rdfs:range rdf:resource="#Interval"/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="hasUpperLimit"/>
+<owl:ObjectProperty rdf:ID="hasLowerLimit"/>
+<owl:ObjectProperty rdf:ID="hasUnit"/>
+<owl:ObjectProperty rdf:ID="hasState">
+<rdfs:domain rdf:resource="#ChemicalSubstance"/>
+<rdfs:range rdf:resource="#StateOfMatter"/>
+</owl:ObjectProperty>
+<owl:ObjectProperty rdf:ID="contains">
+<rdfs:domain rdf:resource="#ChemicalSubstance"/>
+<rdfs:range rdf:resource="#ChemicalSubstance"/>
+</owl:ObjectProperty>
+
+</rdf:RDF>
+
+

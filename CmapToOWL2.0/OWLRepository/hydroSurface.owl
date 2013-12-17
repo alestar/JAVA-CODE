@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Realms -->
+  <owl:Class rdf:ID="HydrosphereFeature"/>
+  <owl:Class rdf:ID="Removal"/>
+  <owl:Class rdf:ID="SystemState"/>
+  <owl:Class rdf:ID="Transport"/>
+  <owl:Class rdf:ID="HumanActivity"/>
+  <owl:Class rdf:ID="HydrospherePhenomena"/>
+  <owl:Class rdf:ID="Inundation"/>
+  <owl:Class rdf:ID="Flow"/>
+  <owl:Class rdf:ID="Water"/>
+  <owl:Class rdf:ID="Capacity"/>
+  <owl:Class rdf:ID="WaterConcentration"/>
+  <owl:Class rdf:ID="dimensionlessUnit"/>
+  <owl:Class rdf:ID="PhysicalProperty"/>
+  <owl:Class rdf:ID="Hydrosphere"/>
+  <owl:Class rdf:ID="TimeInterval"/>
+  <owl:Class rdf:ID="Index"/>
+  <owl:Class rdf:ID="Height"/>
+  
+  
+  <owl:Class rdf:ID="Spring">
+    <rdfs:subClassOf rdf:resource="#HydrosphereFeature"/>
+     <rdfs:comment xml:lang="en">A spring is a point where groundwater flows out of the ground, and is thus where the aquifer surface meets the ground surface. Dependent upon the constancy of the water source (rainfall or snowmelt that infiltrates the earth), a spring may be ephemeral (intermittent) or perennial (continuous).</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="FloodPlaine">
+    <rdfs:subClassOf rdf:resource="#HydrosphereFeature"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Geyser">
+    <rdfs:subClassOf rdf:resource="#Spring"/>
+  </owl:Class>
+
+<!-- Phenomena -->
+  <owl:Class rdf:ID="Drainage">
+    <rdfs:subClassOf rdf:resource="#Removal" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Overflow">
+    <rdfs:subClassOf rdf:resource="#SystemState"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="BedLoad">
+    <rdfs:subClassOf rdf:resource="#Transport"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ConsumptiveUse">
+    <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="BaseFlow">
+    <rdfs:subClassOf rdf:resource="#Streamflow"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Flood">
+    <rdfs:subClassOf rdf:resource="#HydrospherePhenomena"/>
+    <rdfs:subClassOf rdf:resource="#Inundation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Drain">
+    <rdfs:subClassOf rdf:resource="#WaterFlow" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="OpenChannelFlow">
+    <rdfs:subClassOf rdf:resource="#WaterFlow" />
+    <rdfs:comment xml:lang="en">Flow of a fluid with its surface exposed to the atmosphere.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Outflow">
+    <rdfs:subClassOf rdf:resource="#WaterFlow"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="OverlandFlow">
+    <rdfs:subClassOf rdf:resource="#Runoff" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Runoff">
+    <rdfs:subClassOf rdf:resource="#WaterFlow"/>
+    <rdfs:comment>Runoff is a term used to describe the flow of water, from rain, snowmelt, or other sources, over the land surface, and is a major component of the water cycle. Runoff that occurs on surfaces before reaching a channel is also called a nonpoint source. If a nonpoint source contains man-made contaminants, the runoff is called nonpoint source pollution. A land area which produces runoff draining to a common point is called a watershed. When runoff flows along the ground, it can pick up soil contaminants such as petroleum, pesticides (in particular herbicides and insecticides), or fertilizers that become discharge or nonpoint source pollution.</rdfs:comment>  
+  </owl:Class>
+
+  <owl:Class rdf:ID="Streamflow">
+    <rdfs:subClassOf rdf:resource="#WaterFlow"/>
+    <rdfs:comment>Streamflow, or channel runoff, is the flow of water in streams, rivers, and other channels, and is a major element of the water cycle. It is one component of the runoff of water from the land to waterbodies, the other component being surface runoff. Water flowing in channels comes from surface runoff from adjacent hillslopes, from groundwater flow out of the ground, and from water discharged from pipes. The discharge of water flowing in a channel is measured using stream gauges or can be estimated by the Manning equation. The record of flow over time is called a hydrograph. Flooding occurs when the volume of water exceeds the capacity of the channel.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="StreamDischarge">
+    <rdfs:subClassOf rdf:resource="#WaterFlow"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="WaterFlow">
+    <rdfs:subClassOf rdf:resource="#Flow"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasSubstance"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Water" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+<!-- Property -->
+  <owl:Class rdf:ID="FieldCapacity">
+    <rdfs:subClassOf rdf:resource="#Capacity"/>
+    <rdfs:subClassOf rdf:resource="#WaterConcentration"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasDefaultUnit"/>	
+		</owl:onProperty>
+        <owl:hasValue rdf:resource="#dimensionlessUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Hydropattern">
+    <rdfs:subClassOf rdf:resource="#PhysicalProperty" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPlanetaryRealm"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Hydrosphere"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment>The full range of hydrologic parameters, which include the depth of water, duration of inundation, and the timing and distribution of freshwater flow.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Hydroperiod">
+    <rdfs:subClassOf rdf:resource="#TimeInterval"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SurfaceMoistureIndex">
+    <rdfs:subClassOf rdf:resource="#Index"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SuspensionLoad">
+    <rdfs:subClassOf rdf:resource="#Transport"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="WaterCirculationCoefficient">
+    <rdfs:subClassOf rdf:resource="#PhysicalProperty" />
+    <rdfs:comment xml:lang="en">The ratio of a region's total precipitation to its external precipitation originating as evaporation from the oceans as opposed to evapotranspiration from the land. </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LakeGaugeHeight">
+    <rdfs:subClassOf rdf:resource="#Height"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LakeStage">
+    <rdfs:subClassOf rdf:resource="#StageHeight"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="StageHeight">
+    <rdfs:subClassOf rdf:resource="#Height"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="StreamStage">
+    <rdfs:subClassOf rdf:resource="#StageHeight"/>
+  </owl:Class>
+
+</rdf:RDF>

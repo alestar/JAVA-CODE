@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+  <owl:Class rdf:ID="Conductivity"/>
+  <owl:Class rdf:ID="meter_perSecond"/>
+  <owl:Class rdf:ID="dimensionlessUnit"/>
+  <owl:Class rdf:ID="SolidState"/>
+  <owl:Class rdf:ID="SolidProperty"/>
+  <owl:Class rdf:ID="Separation"/>
+  <owl:Class rdf:ID="Crystallize"/>
+  <owl:Class rdf:ID="MechanicalProcess"/>
+  <owl:Class rdf:ID="Component"/>
+  
+  <owl:Class rdf:ID="HydraulicConductivity">
+    <rdfs:subClassOf rdf:resource="#Conductivity"/>
+    <rdfs:subClassOf rdf:resource="#ConsistenceProperty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasDefaultUnit"/>	
+		</owl:onProperty>
+        <owl:hasValue rdf:resource="#meter_perSecond"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="AvailableWaterCapacity">
+    <rdfs:subClassOf rdf:resource="#ConsistenceProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DifferentialWaterCapacity">
+    <rdfs:subClassOf rdf:resource="#ConsistenceProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="WaterHoldingCapacity">
+    <rdfs:subClassOf rdf:resource="#ConsistenceProperty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#dimensionlessUnit"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Permeable">
+    <rdfs:subClassOf rdf:resource="#SolidState"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Permeability">
+    <rdfs:subClassOf rdf:resource="#ConsistenceProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="AirSpaceRatio">
+    <rdfs:subClassOf rdf:resource="#ConsistenceProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Consistence">
+    <rdfs:subClassOf rdf:resource="#SolidProperty"/>
+    <owl:equivalentClass rdf:resource="#Consistency"/>
+    <owl:equivalentClass rdf:resource="#ConsistenceProperty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#dimensionlessUnit"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Consistency"/>
+  <owl:Class rdf:ID="ConsistenceProperty"/>
+
+  <owl:Class rdf:ID="Consolidated">
+    <rdfs:subClassOf rdf:resource="#SolidState"/>
+    <rdfs:subClassOf rdf:resource="#Consolidation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="FineStructure">
+    <rdfs:subClassOf rdf:resource="#Structure"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Hard">
+    <rdfs:subClassOf rdf:resource="#SolidState"/>
+    <owl:equivalentClass rdf:resource="#Hardened"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Hardened"/>
+
+  <owl:Class rdf:ID="GrainSize">
+    <rdfs:subClassOf rdf:resource="#ConsistenceProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="GrainSizeSorting">
+    <rdfs:subClassOf rdf:resource="#ConsistenceProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Hardness">
+    <rdfs:subClassOf rdf:resource="#ConsistenceProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Microstructure">
+    <rdfs:subClassOf rdf:resource="#Structure"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="EffectivePorosity">
+    <rdfs:subClassOf rdf:resource="#Porosity"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Pore">
+    <rdfs:subClassOf rdf:resource="#Separation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PoreSpace">
+    <owl:equivalentClass rdf:resource="#Pore"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Porosity">
+    <rdfs:subClassOf rdf:resource="#ConsistenceProperty"/>
+    <owl:equivalentClass rdf:resource="#Porousness"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="measureOf"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#PoreSpace" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#dimensionlessUnit"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Porousness"/>
+
+  <owl:Class rdf:ID="Porous">
+    <rdfs:subClassOf rdf:resource="#SolidState"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Roughness">
+    <rdfs:subClassOf rdf:resource="#ConsistenceProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Soft">
+    <rdfs:subClassOf rdf:resource="#SolidState"/>
+    <owl:equivalentClass rdf:resource="#Softened"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Softened"/>
+
+  <owl:Class rdf:ID="Softness">
+    <rdfs:subClassOf rdf:resource="#ConsistenceProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Solidity">
+    <rdfs:subClassOf rdf:resource="#ConsistenceProperty"/>
+    <owl:equivalentClass rdf:resource="#Solidness"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Solidness"/>
+
+  <owl:Class rdf:ID="Structure">
+    <rdfs:subClassOf rdf:resource="#ConsistenceProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Texture">
+    <rdfs:subClassOf rdf:resource="#ConsistenceProperty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#dimensionlessUnit"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Unconsolidated">
+    <rdfs:subClassOf rdf:resource="#SolidState"/>
+    <owl:disjointWith rdf:resource="#Consolidated"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Diagenesis">
+    <rdfs:subClassOf rdf:resource="#Consolidation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Metamorphism">
+    <rdfs:subClassOf rdf:resource="#Consolidation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Recrystallize">
+    <rdfs:subClassOf rdf:resource="#Crystallize"/>
+    <rdfs:subClassOf rdf:resource="#Metamorphism"/>
+    <owl:equivalentClass rdf:resource="#Recrystallization"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Recrystallization"/>
+
+  <owl:Class rdf:ID="Cementation">
+    <rdfs:subClassOf rdf:resource="#Consolidation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Consolidation">
+    <rdfs:subClassOf rdf:resource="#MechanicalProcess"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Constituent">
+    <rdfs:subClassOf rdf:resource="#ConsistenceProperty"/>
+    <rdfs:subClassOf rdf:resource="#Component"/>
+  </owl:Class>
+
+</rdf:RDF>

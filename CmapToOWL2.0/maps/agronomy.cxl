@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>agronomy</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Agronomy">
+                <sense domains="[agriculture]"
+                    gloss="the application of soil and plant sciences to land management and crop production"
+                    number="04633689" pos="n" terms="[agronomy, scientific_agriculture]"/>
+            </concept>
+            <concept id="2" label="Thallosphere"/>
+            <concept id="3" label="Rhizosphere"/>
+            <concept id="4" label="Crop production"/>
+            <concept id="5" label="Atmosphere">
+                <sense domains="[factotum]"
+                    gloss="a particular environment or surrounding influence; &quot;there was an atmosphere of excitement&quot;"
+                    number="10417677" pos="n" terms="[atmosphere, ambiance, ambience]"/>
+                <sense domains="[metrology]"
+                    gloss="a unit of pressure: the pressure that will support a column of mercury 760 mm high at sea level and 0 degrees centigrade"
+                    number="09868453" pos="n" terms="[atmosphere, atm]"/>
+                <sense domains="[astronomy]"
+                    gloss="the mass of air surrounding the Earth; &quot;there was great heat as the comet entered the atmosphere&quot;"
+                    number="06270068" pos="n" terms="[atmosphere]"/>
+                <sense domains="[meteorology]"
+                    gloss="the weather or climate at some place; &quot;the atmosphere was thick with fog&quot;"
+                    number="10414112" pos="n" terms="[atmosphere, atmospheric_state]"/>
+                <sense domains="[physics]"
+                    gloss="the envelope of gases surrounding any celestial body"
+                    number="06748803" pos="n" terms="[atmosphere]"/>
+                <sense domains="[factotum]"
+                    gloss="a distinctive but intangible quality surrounding a person or thing: &quot;an atmosphere of defeat pervaded the candidate's headquarters&quot;; &quot;the place had an aura of romance&quot;"
+                    number="03716758" pos="n" terms="[air, aura, atmosphere]"/>
+            </concept>
+            <concept id="6" label="Biology">
+                <sense domains="[biology]"
+                    gloss="the science that studies living organisms"
+                    number="04622530" pos="n" terms="[biology, biological_science]"/>
+                <sense domains="[biology]"
+                    gloss="characteristic life processes and phenomena of living organisms: &quot;the biology of viruses&quot;"
+                    number="07811054" pos="n" terms="[biology]"/>
+                <sense domains="[biology]"
+                    gloss="all the plant and animal life of a particular region"
+                    number="05987709" pos="n" terms="[biota, biology]"/>
+            </concept>
+            <concept id="7" label="Structure">
+                <sense domains="[factotum]"
+                    gloss="the manner of construction of something and the disposition of its parts; &quot;artists must study the structure of the human body&quot;; &quot;the architecture of a computer's system software&quot;"
+                    number="03858780" pos="n" terms="[structure, architecture]"/>
+            </concept>
+            <concept id="8" label="Chemistry">
+                <sense domains="[chemistry]"
+                    gloss="the branch of the natural sciences dealing with the composition of substances and their properties and reactions"
+                    number="04640400" pos="n" terms="[chemistry, chemical_science]"/>
+            </concept>
+            <concept id="9" label="Rhizobotany"/>
+            <concept id="10" label="Root system"/>
+            <concept id="11" label="Root genetics"/>
+            <concept id="12" label="Genotype">
+                <sense domains="[biology]"
+                    gloss="the particular alleles at specified loci present in an organism"
+                    number="03860557" pos="n" terms="[genotype, genetic_constitution]"/>
+            </concept>
+            <concept id="13" label="Phenotype">
+                <sense domains="[biology]"
+                    gloss="the constitution of an organism as determined by the interaction of its genetic constitution and the environment"
+                    number="03860389" pos="n" terms="[phenotype]"/>
+            </concept>
+            <concept id="14" label="Plastic">
+                <sense domains="[factotum]"
+                    gloss="used of the imagination; &quot;material...transformed by the plastic power of the imagination&quot; (Coleridge)"
+                    number="01278827" pos="a" terms="[plastic]"/>
+                <sense domains="[physics]"
+                    gloss="capable of being molded or modeled (especially of earth or clay or other soft material); &quot;plastic substances such as wax or clay&quot;"
+                    number="00804728" pos="a" terms="[fictile, moldable, plastic]"/>
+                <sense domains="[factotum]"
+                    gloss="capable of being influenced or formed; &quot;the plastic minds of children&quot;; &quot;a pliant nature&quot;"
+                    number="02252779" pos="a" terms="[plastic, pliant]"/>
+                <sense domains="[chemistry]"
+                    gloss="generic name for certain synthetic or semisynthetic materials that can be molded or extruded into objects or films or filaments or used for making e.g. coatings and adhesives"
+                    number="10454185" pos="n" terms="[plastic]"/>
+            </concept>
+            <concept id="15" label="Rigid">
+                <sense domains="[aviation]"
+                    gloss="(aeronautics) designating an airship or dirigible having a form maintained by a stiff unyielding frame or structure"
+                    number="00974331" pos="a" terms="[rigid]"/>
+            </concept>
+            <concept id="16" label="Yield">
+                <sense domains="[metrology]"
+                    gloss="an amount of a product" number="03640400"
+                    pos="n" terms="[yield, fruit]"/>
+            </concept>
+            <concept id="17" label="Shoot growth"/>
+            <concept id="18" label="CO2, O2, H2O, Temp, Light"/>
+            <concept id="19" label="Microorganisms, insects, weeds wind"/>
+            <concept id="20" label="Root growth"/>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="21" label="improves"/>
+            <linking-phrase id="22" label="has"/>
+            <linking-phrase id="23" label="has"/>
+            <linking-phrase id="24" label="studied in"/>
+            <linking-phrase id="25" label="includes"/>
+            <linking-phrase id="26" label="includes"/>
+            <linking-phrase id="27" label="main objective is"/>
+            <linking-phrase id="28" label="has"/>
+            <linking-phrase id="29" label="has"/>
+            <linking-phrase id="30" label="focuses on"/>
+            <linking-phrase id="31" label="determined by"/>
+            <linking-phrase id="32" label="regulates"/>
+            <linking-phrase id="33" label="includes"/>
+            <linking-phrase id="34" label="includes"/>
+            <linking-phrase id="35" label="interact with environment to show"/>
+            <linking-phrase id="36" label="may be"/>
+            <linking-phrase id="37" label="may determine"/>
+            <linking-phrase id="38" label="may determine"/>
+            <linking-phrase id="39" label="influences"/>
+            <linking-phrase id="40" label="determine"/>
+            <linking-phrase id="41" label="affect"/>
+            <linking-phrase id="42" label="affect"/>
+            <linking-phrase id="43" label="determine"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="21"/>
+            <connection from-id="21" to-id="4"/>
+            <connection from-id="2" to-id="22"/>
+            <connection from-id="22" to-id="5"/>
+            <connection from-id="22" to-id="6"/>
+            <connection from-id="3" to-id="23"/>
+            <connection from-id="23" to-id="7"/>
+            <connection from-id="23" to-id="8"/>
+            <connection from-id="23" to-id="5"/>
+            <connection from-id="23" to-id="6"/>
+            <connection from-id="3" to-id="24"/>
+            <connection from-id="24" to-id="9"/>
+            <connection from-id="4" to-id="25"/>
+            <connection from-id="25" to-id="2"/>
+            <connection from-id="4" to-id="26"/>
+            <connection from-id="26" to-id="3"/>
+            <connection from-id="4" to-id="27"/>
+            <connection from-id="27" to-id="16"/>
+            <connection from-id="5" to-id="28"/>
+            <connection from-id="28" to-id="18"/>
+            <connection from-id="28" to-id="19"/>
+            <connection from-id="6" to-id="29"/>
+            <connection from-id="29" to-id="19"/>
+            <connection from-id="29" to-id="18"/>
+            <connection from-id="9" to-id="30"/>
+            <connection from-id="30" to-id="10"/>
+            <connection from-id="10" to-id="31"/>
+            <connection from-id="31" to-id="11"/>
+            <connection from-id="10" to-id="32"/>
+            <connection from-id="32" to-id="17"/>
+            <connection from-id="11" to-id="33"/>
+            <connection from-id="33" to-id="12"/>
+            <connection from-id="11" to-id="34"/>
+            <connection from-id="34" to-id="13"/>
+            <connection from-id="12" to-id="35"/>
+            <connection from-id="35" to-id="13"/>
+            <connection from-id="13" to-id="36"/>
+            <connection from-id="36" to-id="15"/>
+            <connection from-id="36" to-id="14"/>
+            <connection from-id="14" to-id="37"/>
+            <connection from-id="37" to-id="16"/>
+            <connection from-id="15" to-id="38"/>
+            <connection from-id="38" to-id="16"/>
+            <connection from-id="17" to-id="39"/>
+            <connection from-id="39" to-id="20"/>
+            <connection from-id="17" to-id="40"/>
+            <connection from-id="40" to-id="16"/>
+            <connection from-id="18" to-id="41"/>
+            <connection from-id="41" to-id="17"/>
+            <connection from-id="19" to-id="42"/>
+            <connection from-id="42" to-id="17"/>
+            <connection from-id="20" to-id="43"/>
+            <connection from-id="43" to-id="16"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="398" y="-193"/>
+            <concept-appearance id="2" x="249" y="-5"/>
+            <concept-appearance id="3" x="543" y="-5"/>
+            <concept-appearance id="4" x="396" y="-77"/>
+            <concept-appearance id="5" x="318" y="104"/>
+            <concept-appearance id="6" x="189" y="104"/>
+            <concept-appearance id="7" x="429" y="102"/>
+            <concept-appearance id="8" x="502" y="105"/>
+            <concept-appearance id="9" x="596" y="107"/>
+            <concept-appearance id="10" x="601" y="201"/>
+            <concept-appearance id="11" x="600" y="292"/>
+            <concept-appearance id="12" x="532" y="373"/>
+            <concept-appearance id="13" x="665" y="377"/>
+            <concept-appearance id="14" x="654" y="488"/>
+            <concept-appearance id="15" x="567" y="450"/>
+            <concept-appearance id="16" x="390" y="444"/>
+            <concept-appearance id="17" x="252" y="345"/>
+            <concept-appearance id="18" x="123" y="228"/>
+            <concept-appearance id="19" x="265" y="233"/>
+            <concept-appearance id="20" x="264" y="471"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="21" x="392" y="-112"/>
+            <linking-phrase id="22" x="243" y="69"/>
+            <linking-phrase id="23" x="445" y="64"/>
+            <linking-phrase id="24" x="571" y="71"/>
+            <linking-phrase id="25" x="317" y="-28"/>
+            <linking-phrase id="26" x="471" y="-25"/>
+            <linking-phrase id="27" x="383" y="275"/>
+            <linking-phrase id="28" x="320" y="177"/>
+            <linking-phrase id="29" x="181" y="183"/>
+            <linking-phrase id="30" x="603" y="174"/>
+            <linking-phrase id="31" x="600" y="265"/>
+            <linking-phrase id="32" x="462" y="302"/>
+            <linking-phrase id="33" x="566" y="346"/>
+            <linking-phrase id="34" x="655" y="353"/>
+            <linking-phrase id="35" x="594" y="390"/>
+            <linking-phrase id="36" x="619" y="450"/>
+            <linking-phrase id="37" x="498" y="516"/>
+            <linking-phrase id="38" x="473" y="457"/>
+            <linking-phrase id="39" x="256" y="437"/>
+            <linking-phrase id="40" x="315" y="410"/>
+            <linking-phrase id="41" x="187" y="318"/>
+            <linking-phrase id="42" x="294" y="317"/>
+            <linking-phrase id="43" x="321" y="473"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

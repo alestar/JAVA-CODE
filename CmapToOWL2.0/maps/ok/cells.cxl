@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Cells</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Cells">
+                <sense domains="[biology]"
+                    gloss="the basic structural and functional unit of all organisms; cells may exist as independent units of life (as in monads) or may form colonies or tissues as in higher plants and animals"
+                    number="00003095" pos="n" words="[cell]"/>
+            </concept>
+            <concept id="2" label="Animal cells"/>
+            <concept id="3" label="Plant cells"/>
+            <concept id="4" label="Nucleus">
+                <sense domains="[biology]"
+                    gloss="a part of the cell containing DNA and RNA and responsible for growth and reproduction"
+                    number="04219720" pos="n" words="[nucleus, cell_nucleus]"/>
+            </concept>
+            <concept id="5" label="Chromosomes">
+                <sense domains="[biology]"
+                    gloss="a threadlike body in the cell nucleus that carries the genes in a linear order"
+                    number="04221675" pos="n" words="[chromosome]"/>
+            </concept>
+            <concept id="6" label="Control cells' activities"/>
+            <concept id="7" label="Reaction medium"/>
+            <concept id="8" label="Respiration">
+                <sense domains="[physiology]"
+                    gloss="the process of taking in oxygen from the air and releasing carbon dioxide"
+                    number="00532749" pos="n" words="[breathing, respiration]"/>
+            </concept>
+            <concept id="9" label="Cytoplasm">
+                <sense domains="[biology]"
+                    gloss="the protoplasm of a cell excluding the nucleus"
+                    number="04218792" pos="n" words="[cytoplasm]"/>
+            </concept>
+            <concept id="10" label="Organelles"/>
+            <concept id="11" label="Mitochondrion">
+                <sense domains="[anatomy]"
+                    gloss="an organelle containing enzymes responsible for producing energy"
+                    number="04223979" pos="n" words="[mitochondrion, chondriosome]"/>
+            </concept>
+            <concept id="12" label="Chloroplast">
+                <sense domains="[biology]"
+                    gloss="plastid containing chlorophyll and other pigments; in plants that carry out photosynthesis"
+                    number="09259278" pos="n" words="[chloroplast]"/>
+            </concept>
+            <concept id="13" label="Photosynthesis">
+                <sense domains="[chemistry]"
+                    gloss="synthesis of compounds with the aid of radiant energy (especially in plants)"
+                    number="09705163" pos="n" words="[photosynthesis]"/>
+            </concept>
+            <concept id="14" label="Non-living granules"/>
+            <concept id="15" label="Food and materials storage"/>
+            <concept id="16" label="Vacuole">
+                <sense domains="[anatomy]"
+                    gloss="a tiny cavity filled with fluid in the cytoplasm of a cell"
+                    number="04225315" pos="n" words="[vacuole]"/>
+            </concept>
+            <concept id="17" label="Cell membrane">
+                <sense domains="[anatomy]"
+                    gloss="a thin membrane around the cytoplasm of a cell; controls passage of substances in and out of the cell"
+                    number="04225446" pos="n" words="[cell_wall, cell_membrane, plasma_membrane]"/>
+            </concept>
+            <concept id="18" label="Cell wall">
+                <sense domains="[anatomy]"
+                    gloss="a thin membrane around the cytoplasm of a cell; controls passage of substances in and out of the cell"
+                    number="04225446" pos="n" words="[cell_wall, cell_membrane, plasma_membrane]"/>
+            </concept>
+            <concept id="19" label="Cell sap"/>
+            <concept id="20" label="Proteins and lipids"/>
+            <concept id="21" label="Cellulose">
+                <sense domains="[chemistry]"
+                    gloss="a polysaccharide that is the chief constituent of all plant tissues and fibers"
+                    number="10611050" pos="n" words="[cellulose]"/>
+            </concept>
+            <concept id="22" label="Storage of materials"/>
+            <concept id="23" label="Control of materials in and out of cell"/>
+            <concept id="24" label="Support and giving cells' shape"/>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="25" label="consists of"/>
+            <linking-phrase id="26" label="consists of"/>
+            <linking-phrase id="27" label="contains"/>
+            <linking-phrase id="28" label="contains"/>
+            <linking-phrase id="29" label="contains"/>
+            <linking-phrase id="30" label="contains"/>
+            <linking-phrase id="31" label="contains"/>
+            <linking-phrase id="32" label="contains"/>
+            <linking-phrase id="33" label="contains"/>
+            <linking-phrase id="34" label="contains"/>
+            <linking-phrase id="35" label="composed"/>
+            <linking-phrase id="36" label="is used for"/>
+            <linking-phrase id="37" label="contains"/>
+            <linking-phrase id="38" label="serves for"/>
+            <linking-phrase id="39" label="contains"/>
+            <linking-phrase id="40" label="in plant and animal cells have"/>
+            <linking-phrase id="41" label="in plant cells has"/>
+            <linking-phrase id="42" label="in plant and animal cells have"/>
+            <linking-phrase id="43" label="is used for"/>
+            <linking-phrase id="44" label="is used for"/>
+            <linking-phrase id="45" label="is used for"/>
+            <linking-phrase id="46" label="contains"/>
+            <linking-phrase id="47" label="encloses"/>
+            <linking-phrase id="48" label="encloses"/>
+            <linking-phrase id="49" label="is made up of"/>
+            <linking-phrase id="50" label="encloses"/>
+            <linking-phrase id="51" label="is made up of"/>
+            <linking-phrase id="52" label="is used for"/>
+            <linking-phrase id="53" label="is used for"/>
+            <linking-phrase id="54" label="is used for"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="25"/>
+            <connection from-id="25" to-id="2"/>
+            <connection from-id="1" to-id="26"/>
+            <connection from-id="26" to-id="3"/>
+            <connection from-id="2" to-id="27"/>
+            <connection from-id="27" to-id="4"/>
+            <connection from-id="2" to-id="28"/>
+            <connection from-id="28" to-id="9"/>
+            <connection from-id="2" to-id="29"/>
+            <connection from-id="29" to-id="17"/>
+            <connection from-id="3" to-id="30"/>
+            <connection from-id="30" to-id="9"/>
+            <connection from-id="3" to-id="31"/>
+            <connection from-id="31" to-id="4"/>
+            <connection from-id="3" to-id="32"/>
+            <connection from-id="32" to-id="16"/>
+            <connection from-id="3" to-id="33"/>
+            <connection from-id="33" to-id="17"/>
+            <connection from-id="3" to-id="34"/>
+            <connection from-id="34" to-id="18"/>
+            <connection from-id="4" to-id="35"/>
+            <connection from-id="35" to-id="5"/>
+            <connection from-id="5" to-id="36"/>
+            <connection from-id="36" to-id="6"/>
+            <connection from-id="9" to-id="37"/>
+            <connection from-id="37" to-id="10"/>
+            <connection from-id="9" to-id="38"/>
+            <connection from-id="38" to-id="7"/>
+            <connection from-id="9" to-id="39"/>
+            <connection from-id="39" to-id="4"/>
+            <connection from-id="10" to-id="40"/>
+            <connection from-id="40" to-id="11"/>
+            <connection from-id="10" to-id="41"/>
+            <connection from-id="41" to-id="12"/>
+            <connection from-id="10" to-id="42"/>
+            <connection from-id="42" to-id="14"/>
+            <connection from-id="11" to-id="43"/>
+            <connection from-id="43" to-id="8"/>
+            <connection from-id="12" to-id="44"/>
+            <connection from-id="44" to-id="13"/>
+            <connection from-id="14" to-id="45"/>
+            <connection from-id="45" to-id="15"/>
+            <connection from-id="16" to-id="46"/>
+            <connection from-id="46" to-id="19"/>
+            <connection from-id="17" to-id="47"/>
+            <connection from-id="47" to-id="16"/>
+            <connection from-id="17" to-id="48"/>
+            <connection from-id="48" to-id="9"/>
+            <connection from-id="17" to-id="49"/>
+            <connection from-id="49" to-id="20"/>
+            <connection from-id="18" to-id="50"/>
+            <connection from-id="50" to-id="17"/>
+            <connection from-id="18" to-id="51"/>
+            <connection from-id="51" to-id="21"/>
+            <connection from-id="19" to-id="52"/>
+            <connection from-id="52" to-id="22"/>
+            <connection from-id="20" to-id="53"/>
+            <connection from-id="53" to-id="23"/>
+            <connection from-id="21" to-id="54"/>
+            <connection from-id="54" to-id="24"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="374" y="33"/>
+            <concept-appearance id="2" x="237" y="137"/>
+            <concept-appearance id="3" x="495" y="138"/>
+            <concept-appearance id="4" x="83" y="211"/>
+            <concept-appearance id="5" x="69" y="344"/>
+            <concept-appearance id="6" x="80" y="453"/>
+            <concept-appearance id="7" x="195" y="315"/>
+            <concept-appearance id="8" x="240" y="586"/>
+            <concept-appearance id="9" x="371" y="233"/>
+            <concept-appearance id="10" x="365" y="344"/>
+            <concept-appearance id="11" x="241" y="462"/>
+            <concept-appearance id="12" x="494" y="463"/>
+            <concept-appearance id="13" x="492" y="579"/>
+            <concept-appearance id="14" x="375" y="457"/>
+            <concept-appearance id="15" x="370" y="577"/>
+            <concept-appearance id="16" x="529" y="247"/>
+            <concept-appearance id="17" x="635" y="241"/>
+            <concept-appearance id="18" x="735" y="239"/>
+            <concept-appearance id="19" x="595" y="419"/>
+            <concept-appearance id="20" x="695" y="420"/>
+            <concept-appearance id="21" x="791" y="415"/>
+            <concept-appearance id="22" x="608" y="554"/>
+            <concept-appearance id="23" x="691" y="552"/>
+            <concept-appearance id="24" x="800" y="550"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="25" x="287" y="104"/>
+            <linking-phrase id="26" x="441" y="103"/>
+            <linking-phrase id="27" x="154" y="190"/>
+            <linking-phrase id="28" x="298" y="199"/>
+            <linking-phrase id="29" x="358" y="171"/>
+            <linking-phrase id="30" x="412" y="211"/>
+            <linking-phrase id="31" x="269" y="231"/>
+            <linking-phrase id="32" x="524" y="207"/>
+            <linking-phrase id="33" x="591" y="201"/>
+            <linking-phrase id="34" x="676" y="192"/>
+            <linking-phrase id="35" x="79" y="297"/>
+            <linking-phrase id="36" x="75" y="412"/>
+            <linking-phrase id="37" x="366" y="304"/>
+            <linking-phrase id="38" x="277" y="290"/>
+            <linking-phrase id="39" x="217" y="262"/>
+            <linking-phrase id="40" x="242" y="420"/>
+            <linking-phrase id="41" x="468" y="410"/>
+            <linking-phrase id="42" x="350" y="416"/>
+            <linking-phrase id="43" x="241" y="546"/>
+            <linking-phrase id="44" x="495" y="542"/>
+            <linking-phrase id="45" x="373" y="545"/>
+            <linking-phrase id="46" x="564" y="351"/>
+            <linking-phrase id="47" x="595" y="326"/>
+            <linking-phrase id="48" x="480" y="340"/>
+            <linking-phrase id="49" x="661" y="353"/>
+            <linking-phrase id="50" x="697" y="324"/>
+            <linking-phrase id="51" x="758" y="348"/>
+            <linking-phrase id="52" x="602" y="507"/>
+            <linking-phrase id="53" x="698" y="510"/>
+            <linking-phrase id="54" x="798" y="509"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

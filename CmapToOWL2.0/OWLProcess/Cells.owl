@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://www.owl-ontologies.com/unnamed.owl#"
+  xml:base="http://www.owl-ontologies.com/unnamed.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="Mitochondrion"/>
+  <owl:Class rdf:ID="Storage_of_materials"/>
+  <owl:Class rdf:ID="Cytoplasm">
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:ID="Organelles"/>
+          <owl:Class rdf:ID="Nucleus"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Organelles"/>
+          <owl:Class rdf:ID="Animal_cells"/>
+          <owl:Class rdf:ID="Plant_cells"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Plant_cells"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Animal_cells"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Reaction_medium"/>
+  <owl:Class rdf:ID="Chromosomes"/>
+  <owl:Class rdf:about="#Organelles">
+    <rdfs:subClassOf rdf:resource="#Cytoplasm"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Support_and_giving_cells&apos;_shape"/>
+  <owl:Class rdf:ID="Non-living_granules"/>
+  <owl:Class rdf:about="#Control_cells&apos;_activities"/>
+  <owl:Class rdf:ID="Cell_membrane">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Plant_cells"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Animal_cells"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Chloroplast"/>
+  <owl:Class rdf:about="#Plant_cells">
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Cytoplasm"/>
+          <owl:Class rdf:about="#Nucleus"/>
+          <owl:Class rdf:ID="Vacuole"/>
+          <owl:Class rdf:about="#Cell_membrane"/>
+          <owl:Class rdf:ID="Cell_wall"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Respiration"/>
+  <owl:Class rdf:about="#Vacuole">
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:ID="Cell_sap"/>
+          <owl:Class rdf:about="#Plant_cells"/>
+        </owl:intersectionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Plant_cells"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Photosynthesis"/>
+  <owl:Class rdf:about="#Animal_cells">
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Nucleus"/>
+          <owl:Class rdf:about="#Cytoplasm"/>
+          <owl:Class rdf:about="#Cell_membrane"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Food_and_materials_storage"/>
+  <owl:Class rdf:ID="Control_of_materials_in_and_out_of_cell"/>
+  <owl:Class rdf:ID="Cells">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Plant_cells"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="consists_of"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#consists_of"/>
+        <owl:someValuesFrom rdf:resource="#Animal_cells"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Proteins_and_lipids"/>
+  <owl:Class rdf:about="#Nucleus">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Chromosomes"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="composed"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Cytoplasm"/>
+    <rdfs:subClassOf rdf:resource="#Plant_cells"/>
+    <rdfs:subClassOf rdf:resource="#Animal_cells"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Cell_wall">
+    <rdfs:subClassOf rdf:resource="#Plant_cells"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Cell_sap">
+    <rdfs:subClassOf rdf:resource="#Vacuole"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Cellulose"/>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.2, Build 355)  http://protege.stanford.edu -->

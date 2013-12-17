@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Adolescence</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Adolescence">
+                <sense domains="[time_period]"
+                    gloss="the time of life between puberty and adulthood"
+                    number="10871270" pos="n" words="[adolescence]"/>
+                <sense domains="[factotum]"
+                    gloss="in the state between puberty and adulthood"
+                    number="10350940" pos="n" words="[adolescence]"/>
+            </concept>
+            <concept id="2" label="Stage of development"/>
+            <concept id="3" label="Adult">
+                <sense domains="[person]"
+                    gloss="a fully developed person from maturity onward"
+                    number="06938480" pos="n" words="[adult, grownup]"/>
+            </concept>
+            <concept id="4" label="Growing up">
+                <sense domains="[biology]" gloss="become an adult"
+                    number="01732007" pos="v" words="[grow_up]"/>
+            </concept>
+            <concept id="5" label="Latin">
+                <sense domains="[administration, geography]"
+                    gloss="of or relating to the ancient region of Latium; &quot;Latin towns&quot;"
+                    number="02825249" pos="a" words="[Latin]"/>
+            </concept>
+            <concept id="6" label="Environment">
+                <sense domains="[geography]"
+                    gloss="the area in which something exists or lives: &quot;the country--the flat agricultural surround&quot;"
+                    number="06315687" pos="n" words="[environment, environs, surroundings, surround]"/>
+            </concept>
+            <concept id="7" label="Child">
+                <sense domains="[person]"
+                    gloss="an immature childish person; &quot;he remained a child in practical matters as long as he lived&quot;; &quot;stop being a baby!&quot;"
+                    number="07154665" pos="n" words="[child, baby]"/>
+            </concept>
+            <concept id="8" label="Mind">
+                <sense domains="[factotum]"
+                    gloss="pay close attention to; give heed to; &quot;Heed the advice of the old men&quot;"
+                    number="01753616" pos="v" words="[heed, mind, listen]"/>
+            </concept>
+            <concept id="9" label="Social life"/>
+            <concept id="10" label="Intelectual maturity"/>
+            <concept id="11" label="Sexuality">
+                <sense domains="[physiology, sexuality]"
+                    gloss="the properties that distinguish organisms on the basis of their reproductive roles; &quot;she didn't want to know the sex of the foetus&quot;"
+                    number="03910916" pos="n" words="[sex, gender, sexuality]"/>
+            </concept>
+            <concept id="12" label="Biological changes"/>
+            <concept id="13" label="Weight gain"/>
+            <concept id="14" label="Size increase"/>
+            <concept id="15" label="Hormonal secretions"/>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="16" label="is a"/>
+            <linking-phrase id="17" label="is a stage of transition to become an"/>
+            <linking-phrase id="18" label="means"/>
+            <linking-phrase id="19" label="is a word derived from"/>
+            <linking-phrase id="20" label="is influenced by"/>
+            <linking-phrase id="21" label="is the stage that follows after being a"/>
+            <linking-phrase id="22" label="carries changes in"/>
+            <linking-phrase id="23" label="involves"/>
+            <linking-phrase id="24" label="can influence"/>
+            <linking-phrase id="25" label="include"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="16"/>
+            <connection from-id="16" to-id="2"/>
+            <connection from-id="1" to-id="17"/>
+            <connection from-id="17" to-id="3"/>
+            <connection from-id="1" to-id="18"/>
+            <connection from-id="18" to-id="4"/>
+            <connection from-id="1" to-id="19"/>
+            <connection from-id="19" to-id="5"/>
+            <connection from-id="1" to-id="20"/>
+            <connection from-id="20" to-id="6"/>
+            <connection from-id="1" to-id="21"/>
+            <connection from-id="21" to-id="7"/>
+            <connection from-id="1" to-id="22"/>
+            <connection from-id="22" to-id="8"/>
+            <connection from-id="22" to-id="9"/>
+            <connection from-id="22" to-id="10"/>
+            <connection from-id="22" to-id="11"/>
+            <connection from-id="1" to-id="23"/>
+            <connection from-id="23" to-id="12"/>
+            <connection from-id="6" to-id="24"/>
+            <connection from-id="24" to-id="2"/>
+            <connection from-id="12" to-id="25"/>
+            <connection from-id="25" to-id="13"/>
+            <connection from-id="25" to-id="14"/>
+            <connection from-id="25" to-id="15"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="236" y="63"/>
+            <concept-appearance id="2" x="19" y="113"/>
+            <concept-appearance id="3" x="10" y="205"/>
+            <concept-appearance id="4" x="172" y="254"/>
+            <concept-appearance id="5" x="467" y="182"/>
+            <concept-appearance id="6" x="573" y="131"/>
+            <concept-appearance id="7" x="70" y="267"/>
+            <concept-appearance id="8" x="152" y="359"/>
+            <concept-appearance id="9" x="225" y="364"/>
+            <concept-appearance id="10" x="298" y="372"/>
+            <concept-appearance id="11" x="377" y="370"/>
+            <concept-appearance id="12" x="380" y="219"/>
+            <concept-appearance id="13" x="588" y="371"/>
+            <concept-appearance id="14" x="449" y="369"/>
+            <concept-appearance id="15" x="518" y="371"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="16" x="114" y="110"/>
+            <linking-phrase id="17" x="99" y="138"/>
+            <linking-phrase id="18" x="195" y="180"/>
+            <linking-phrase id="19" x="361" y="145"/>
+            <linking-phrase id="20" x="427" y="121"/>
+            <linking-phrase id="21" x="105" y="197"/>
+            <linking-phrase id="22" x="247" y="235"/>
+            <linking-phrase id="23" x="303" y="181"/>
+            <linking-phrase id="24" x="239" y="15"/>
+            <linking-phrase id="25" x="456" y="299"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

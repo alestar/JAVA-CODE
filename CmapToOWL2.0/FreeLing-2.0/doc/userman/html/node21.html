@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>Named entity recognition data file</TITLE>
+<META NAME="description" CONTENT="Named entity recognition data file">
+<META NAME="keywords" CONTENT="userman">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="userman.css">
+
+<LINK REL="next" HREF="node22.html">
+<LINK REL="previous" HREF="node20.html">
+<LINK REL="up" HREF="node9.html">
+<LINK REL="next" HREF="node22.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html374"
+  HREF="node22.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html370"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html364"
+  HREF="node20.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html372"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html375"
+  HREF="node22.html">Named entity classification data</A>
+<B> Up:</B> <A NAME="tex2html371"
+  HREF="node9.html">Using the sample main</A>
+<B> Previous:</B> <A NAME="tex2html365"
+  HREF="node20.html">Word form dictionary file</A>
+ &nbsp; <B>  <A NAME="tex2html373"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION003100000000000000000"></A>
+<A NAME="file-ner"></A>
+<BR>
+Named entity recognition data file
+</H1>
+
+<P>
+This file controls the behaviour of the simple NE recognizer. It
+  consists of the following sections:
+
+<P>
+
+<UL>
+<LI>Section <code>&lt;FunctionWords&gt;</code> lists the function words that can be
+  embeeded inside a proper noun (e.g. preposisions and articles such
+  as those in ``Banco de España'' or ``Foundation for the Eradication
+  of Poverty''). For instance:
+<PRE>
+&lt;FunctionWords&gt;
+el
+la
+los
+las
+de
+del
+para
+&lt;/FunctionWords&gt;
+</PRE>
+
+<P>
+</LI>
+<LI>Section <code>&lt;SpecialPunct&gt;</code> lists the PoS tags (according to
+  punctuation tags definition file, section <A HREF="node24.html#file-punt">2.13</A>) after
+  which a capitalized word <I CLASS="slanted">may</I> be indicating just a sentence or clause
+  beggining and not necessarily a named entity. Typical cases are
+  colon, open parenthesis, dot, hyphen..
+<PRE>
+&lt;SpecialPunct&gt;
+Fpa
+Fp
+Fd
+Fg
+&lt;/SpecialPunct&gt;
+</PRE>
+
+<P>
+</LI>
+<LI>Section <code>&lt;NE_Tag&gt;</code> contains only one line with the PoS tag that
+  will be assigned to the recognized entities. If the NE classifier is
+  going to be used later, it will have to be informed of this tag at
+  creation time.
+<PRE>
+&lt;NE_Tag&gt;
+NP00000
+&lt;/NE_Tag&gt;
+</PRE>
+
+<P>
+</LI>
+<LI>Section <code>&lt;Ignore&gt;</code> contains a list of lemmas that are no considered to be a named entity even when they appear capitalized in the middle of a sentence.  For instance, the word <EM>Spanish</EM> in the sentence <EM>He started studying Spanish two years ago</EM> is not a named entity. If the words in the list appear with other capitalized words, they are considered to form a named entity (e.g. <EM>An announcement of the Spanish Bank of Commerce was issued yesterday</EM>). The same distinction applies to the word <EM>I</EM> in the sentences <EM>whatever you say, I don't believe</EM>, and <EM>That was the death of Henry I</EM>.
+<PRE>
+&lt;Ignore&gt;
+i
+english
+dutch
+spanish
+&lt;/Ignore&gt;
+</PRE>
+
+<P>
+</LI>
+<LI>Sections <code>&lt;RE_NounAdj&gt;</code> <code>&lt;RE_Closed&gt;</code> and <code>&lt;RE_DateNumPunct&gt;</code> allow to modify the default regular expressions for PAROLE Part-of-Speech tags. For instance, if Penn-Treebank-like tags are used for English, we should define:
+<PRE>
+&lt;RE_NounAdj&gt;
+^(NN$|NNS|JJ)
+&lt;/RE_NounAdj&gt;
+&lt;RE_Closed&gt;
+^(D|IN|C)
+&lt;/RE_Closed&gt;
+</PRE>
+
+<P>
+</LI>
+<LI>Section <code>&lt;TitleLimit&gt;</code> contains only one line with an integer
+  value stating the length beyond which a sentence written <I CLASS="slanted">  entirely</I> in uppercase will be considered a title and not a proper
+  noun. Example:
+<PRE>
+&lt;TitleLimit&gt;
+3
+&lt;/TitleLimit&gt;
+</PRE>
+
+<P>
+If <code>TitleLimit=0</code> (the default) title detection is
+  deactivated (i.e, all-uppercase sentences are always marked as
+  named entities).
+
+<P>
+The idea of this heuristic is that newspaper titles are usually
+  written in uppercase, and tend to have at least two or three
+  words, while named entities written in this way tend to be acronyms
+  (e.g. IBM, DARPA, ...) and usually have at most one or two words.
+
+<P>
+For instance, if <code>TitleLimit=3</code> the sentence 
+  <TT>FREELING ENTERS NASDAC UNDER CLOSE INTEREST OF MARKET ANALISTS</TT>
+  will not be recognized as a named entity, and will have its words analyzed
+  independently. On the other hand, the sentence <TT>IBM INC.</TT>, having less than
+  3 words, will be considered a proper noun.
+
+<P>
+Obviously this heuristic is not 100% accurate, but in some cases
+  (e.g. if you are analyzing newspapers) it may be preferrable to the
+  default behaviour (which is not 100% accurate, either).
+</LI>
+</UL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html374"
+  HREF="node22.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html370"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html364"
+  HREF="node20.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html372"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html375"
+  HREF="node22.html">Named entity classification data</A>
+<B> Up:</B> <A NAME="tex2html371"
+  HREF="node9.html">Using the sample main</A>
+<B> Previous:</B> <A NAME="tex2html365"
+  HREF="node20.html">Word form dictionary file</A>
+ &nbsp; <B>  <A NAME="tex2html373"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2008-01-24
+</ADDRESS>
+</BODY>
+</HTML>

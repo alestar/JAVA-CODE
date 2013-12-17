@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+             owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Classes -->
+ <owl:Class rdf:ID="ActiveRegion">
+    <rdfs:subClassOf rdf:resource="#SunRealm"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Chromosphere">
+    <rdfs:subClassOf rdf:resource="#SunRealm"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Corona">
+    <rdfs:subClassOf rdf:resource="#SunRealm"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="CoronaHole">
+    <rdfs:subClassOf rdf:resource="#SunRealm"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Filament">
+    <rdfs:subClassOf rdf:resource="#SunRealm"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Photosphere">
+    <rdfs:subClassOf rdf:resource="#SunRealm"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Prominence">
+    <rdfs:subClassOf rdf:resource="#SunRealm"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="StellarInterior">
+    <rdfs:subClassOf rdf:resource="#SunRealm"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="SunRealm"/>
+ <owl:Class rdf:ID="Sunspot">
+    <rdfs:subClassOf rdf:resource="#SunRealm"/>
+  </owl:Class>
+
+<!-- Annotation Properties -->
+  <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+
+<!-- Object Properties -->
+  <owl:ObjectProperty rdf:ID="owlEquivalentClass"/>
+</rdf:RDF>
+

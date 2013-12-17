@@ -1,0 +1,44 @@
+@crop production@SubClass
+@air@SubClass
+@layer@SuperClass
+@carbon dioxide@SuperClass
+@energy@SuperClass
+@water@SuperClass
+@food@SuperClass
+@animals@Dominio
+@troposphere@ValorProiedad
+@stratosphere@ValorProiedad
+@salt@SubClass
+@fish@SuperClass
+@lungs@SubClass
+@atmosphere@SubClass
+@wind@SuperClass
+@oxygen@SuperClass
+@hydrogen@SuperClass
+@air pressure@SubClass
+@lightning@SuperClass
+@community@SubClass
+@organism@SuperClass
+@ecology@SubClass
+@evolution@SubClass
+@genetics@SubClass
+@wing@SuperClass
+@blood@SubClass
+@fungi@SuperClass
+@desert@SubClass
+@composition@SubClass
+@potential energy@SuperClass
+@kinetic energy@SuperClass
+@height@SuperClass
+@gravity@SuperClass
+@weight@SuperClass
+@velocity@SuperClass
+@work@SubClass
+@power@SubClass
+@force@SuperClass
+@distance@SuperClass
+@b@SubClass
+@a@SubClass
+@c@SubClass
+@e@SubClass
+@d@SuperClass

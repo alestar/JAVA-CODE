@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Realms -->
+	<owl:Class rdf:ID="PlanetaryLayer"/>
+	<owl:Class rdf:ID="Atmosphere"/>
+	<owl:Class rdf:ID="NegativeSlope"/>
+	<owl:Class rdf:ID="PlanetaryBoundary"/>
+	<owl:Class rdf:ID="PositiveSlope"/>
+	<owl:Class rdf:ID="Forecast"/>
+	<owl:Class rdf:ID="PlanetSurface"/>
+	<owl:Class rdf:ID="PlanetaryPhenomena"/>
+	<owl:Class rdf:ID="PlanetaryScience"/>
+  
+  <owl:Class rdf:ID="AtmosphereLayer">
+    <rdfs:subClassOf rdf:resource="#PlanetaryLayer" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>
+		<owl:ObjectProperty rdf:ID="hasPlanetaryRealm"/>   
+		</owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#Atmosphere"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Exosphere">
+    <rdfs:subClassOf rdf:resource="#AtmosphereLayer"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Ionosphere">
+    <rdfs:subClassOf rdf:resource="#AtmosphereLayer"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LowerAtmosphere">
+    <rdfs:subClassOf rdf:resource="#AtmosphereLayer"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Magnetosphere">
+    <rdfs:subClassOf rdf:resource="#AtmosphereLayer"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Mesosphere">
+    <rdfs:subClassOf rdf:resource="#AtmosphereLayer"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	  	<owl:onProperty>
+		<owl:ObjectProperty rdf:ID="dTdh"/>   
+		</owl:onProperty>
+        <owl:hasValue rdf:resource="#NegativeSlope"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	  	<owl:onProperty>
+		<owl:ObjectProperty rdf:ID="hasLowerBoundary"/>   
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Stratopause"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	   	<owl:onProperty>
+		<owl:ObjectProperty rdf:ID="hasUpperBoundary"/>   
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Mesopause"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Mesopause">
+    <rdfs:subClassOf rdf:resource="#PlanetaryBoundary"/>
+    <rdfs:comment xml:lang="en">The top of the mesosphere and the base of the thermosphere. The mesopause is usually located at heights of 85?95 km, and is the site of the coldest temperatures in the atmosphere. Temperatures as low as 100 K (- 173?C) have been measured at the mesopause by rockets. See atmospheric shell.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MiddleAtmosphere">
+    <rdfs:subClassOf rdf:resource="#AtmosphereLayer"/>
+    <owl:equivalentClass rdf:resource="#OzoneLayer" />
+  </owl:Class>
+  <owl:Class rdf:ID="OzoneLayer"/>
+
+  <owl:Class rdf:ID="Stratopause">
+    <rdfs:subClassOf rdf:resource="#PlanetaryBoundary"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Stratosphere">
+    <rdfs:subClassOf rdf:resource="#AtmosphereLayer"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#dTdh"/>
+        <owl:hasValue rdf:resource="#PositiveSlope"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	    <owl:onProperty rdf:resource="#hasLowerBoundary"/>
+        <owl:allValuesFrom rdf:resource="#Tropopause"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasUpperBoundary"/>
+        <owl:allValuesFrom rdf:resource="#Stratopause"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Troposphere">
+    <rdfs:subClassOf rdf:resource="#AtmosphereLayer"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#dTdh"/>
+        <owl:hasValue rdf:resource="#NegativeSlope"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasLowerBoundary"/>
+        <owl:allValuesFrom rdf:resource="#PlanetSurface"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasUpperBoundary"/>
+        <owl:allValuesFrom rdf:resource="#Tropopause"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Thermosphere">
+    <rdfs:subClassOf rdf:resource="#AtmosphereLayer"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#dTdh"/>
+        <owl:hasValue rdf:resource="#PositiveSlope"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasLowerBoundary"/>
+        <owl:allValuesFrom rdf:resource="#Mesopause"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Tropopause">
+    <rdfs:subClassOf rdf:resource="#PlanetaryBoundary"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="UpperAtmosphere">
+    <rdfs:subClassOf rdf:resource="#AtmosphereLayer"/>
+  </owl:Class>
+
+
+<!-- Phenomena -->
+  <owl:Class rdf:ID="AtmosphericPhenomena">
+    <rdfs:subClassOf rdf:resource="#MeteorologicalPhenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Weather">
+    <owl:equivalentClass rdf:resource="#MeteorologicalPhenomena" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="WeatherForecast">
+    <rdfs:subClassOf rdf:resource="#Forecast"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasMeteorologicalPhenomena"/>
+        <owl:allValuesFrom rdf:resource="#Weather"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ExtendedForecast">
+    <rdfs:subClassOf rdf:resource="#WeatherForecast"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MeteorologicalPhenomena">
+    <rdfs:subClassOf rdf:resource="#PlanetaryPhenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="AtmosphericScience">
+    <rdfs:subClassOf rdf:resource="#PlanetaryScience"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Meteorology">
+    <rdfs:subClassOf rdf:resource="#AtmosphericScience"/>
+  </owl:Class>
+
+   <owl:ObjectProperty rdf:ID="hasMeteorologicalPhenomena">
+    <rdfs:range rdf:resource="#MeteorologicalPhenomena"/>
+  </owl:ObjectProperty>
+
+</rdf:RDF>

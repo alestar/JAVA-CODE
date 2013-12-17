@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+  <owl:Class rdf:ID="Fog"/>
+  <owl:Class rdf:ID="Acid"/>
+  <owl:Class rdf:ID="Convection"/>
+  <owl:Class rdf:ID="Removal"/>
+  <owl:Class rdf:ID="MixedLayer"/>
+  <owl:Class rdf:ID="Pollutant"/>
+  <owl:Class rdf:ID="SuspendedSubstance"/>
+  <owl:Class rdf:ID="Fluid"/>
+  <owl:Class rdf:ID="Transport"/>
+  <owl:Class rdf:ID="Precipitation"/>
+  <owl:Class rdf:ID="AtmosphereLandExchange"/>
+  
+  <owl:Class rdf:ID="AcidFog">
+    <rdfs:subClassOf rdf:resource="#Fog" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasSubstance"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Acid" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass rdf:resource="#AcidHaze" />
+    <rdfs:comment>Occurrence of fog or haze in which considerable amounts of acidic material have been taken up from the gas phase, resulting in pH values less than approximately 3 in the liquid phase.</rdfs:comment>
+    <rdfs:label>Acid Fog</rdfs:label>
+  </owl:Class>
+  <owl:Class rdf:ID="AcidHaze"/>
+
+  <owl:Class rdf:ID="AcidRain">
+    <rdfs:subClassOf rdf:resource="#WetDeposition"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Acid"/>
+        <owl:onProperty rdf:resource="#hasSubstance"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A popular expression for the deposition by rainfall of various airborne pollutants (especially SO2 and NO2) that have harmful effects on vegetation, soils, buildings and other external structures.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Coning">
+    <rdfs:subClassOf rdf:resource="#Plume" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="ConvectivePlume">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhysicalProcess"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Convection" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Plume" />
+    <rdfs:comment xml:lang="en">A buoyant jet stream in which the buoyancy is supplied steadily from a point source; the buoyant region is continuous.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Fanning">
+    <rdfs:subClassOf rdf:resource="#Plume" />
+    <rdfs:comment xml:lang="en">A pattern of smokestack plume dispersion in a statically stable atmosphere, in which the plume spreads out in the horizontal like an oriental fan and meanders about at a fixed height with little vertical spread.
+    </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Lofting">
+    <rdfs:subClassOf rdf:resource="#Convection" />
+    <rdfs:comment xml:lang="en">The phenomenon where the upper part of a smoke plume diffuses more rapidly upward than the bottom part diffuses downward. This generally occurs when the boundary layer near the ground is more stable than it is aloft. Compare coning, fanning, looping.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MixedLayerVenting">
+    <rdfs:subClassOf rdf:resource="#Removal" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasMeteorologicalPhenomena"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#MixedLayer" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasSubstance" />
+        <owl:allValuesFrom rdf:resource="#Pollutant" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Removal of pollutants out of the top of the atmospheric boundary layer through the mixed-layer capping inversion. Normally pollutants cannot escape through the capping inversion. However, penetrating cumulus clouds, thunderstorms, mountain circulations, and frontal circulations can force polluted air through the inversion to vent pollutants into the free atmosphere.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Plume">
+    <rdfs:subClassOf rdf:resource="#SuspendedSubstance"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasStateOfMatter"/>	
+		</owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#Fluid" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Buoyant jet in which the buoyancy is supplied from a point source; the buoyant region is continuous. 2. A mostly horizontal (sometimes initially vertical) stream of pollutant that is being blown downwind from a smokestack.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Puff">
+    <rdfs:subClassOf rdf:resource="#Plume" />
+  </owl:Class>
+
+ <owl:Class rdf:ID="Rainout">
+    <rdfs:subClassOf rdf:resource="#ScavengingByPrecipitation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="StackEffect">
+    <rdfs:subClassOf rdf:resource="#Convection" />
+    <rdfs:comment xml:lang="en">An effect due to heat sources within a local exhaust enclosure (stack) producing convective air currents with vertical velocities proportional to the rate of heat transferred to the surrounding air and to the height of rise of the heated air.</rdfs:comment>
+  </owl:Class>
+
+ <owl:Class rdf:ID="ScavengingByPrecipitation">
+    <rdfs:subClassOf rdf:resource="#WetDeposition"/>
+    <rdfs:comment xml:lang="en">Removal of pollutants from the air by either rain or snow.  Rainout (or snowout), which is the in-cloud capture of particulates as condensation nuclei, is one form of scavenging.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="WestEastTransport">
+    <rdfs:subClassOf rdf:resource="#Transport" />
+    <rdfs:comment xml:lang="en">The eastward flux of mass, momentum, heat, moisture or any other property of a fluid by mean motion or by correlation with the eastward component of motion, that is, eddy flux.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="WetDeposition">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasMeteorologicalPhenomena" />
+        <owl:allValuesFrom rdf:resource="#Precipitation" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#AtmosphereLandExchange" />
+    <rdfs:comment xml:lang="en">The removal of atmospheric gases or particles through their incorporation into hydrometeors, which are then lost by precipitation.</rdfs:comment>
+  </owl:Class>
+
+</rdf:RDF>

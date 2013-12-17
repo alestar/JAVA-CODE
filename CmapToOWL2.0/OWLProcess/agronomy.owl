@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://www.owl-ontologies.com/unnamed.owl#"
+  xml:base="http://www.owl-ontologies.com/unnamed.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="Plastic"/>
+  <owl:Class rdf:ID="Atmosphere"/>
+  <owl:Class rdf:ID="Thallosphere">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Crop_production"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Biology"/>
+  <owl:Class rdf:ID="Rhizobotany"/>
+  <owl:Class rdf:about="#CO2,_O2,_H2O,_Temp,_Light"/>
+  <owl:Class rdf:ID="Root_genetics">
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:ID="Genotype"/>
+          <owl:Class rdf:ID="Phenotype"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Phenotype">
+    <rdfs:subClassOf rdf:resource="#Root_genetics"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Yield">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Root_growth"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Shoot_growth"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Agronomy"/>
+  <owl:Class rdf:ID="Rhizosphere">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Crop_production"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Structure"/>
+  <owl:Class rdf:about="#Shoot_growth">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="influences"/>
+        </owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#Root_growth"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Genotype">
+    <rdfs:subClassOf rdf:resource="#Root_genetics"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Crop_production">
+    <rdfs:subClassOf>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Thallosphere"/>
+          <owl:Class rdf:about="#Rhizosphere"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Chemistry"/>
+  <owl:Class rdf:ID="Rigid"/>
+  <owl:Class rdf:ID="Root_system"/>
+  <owl:Class rdf:about="#Microorganisms,_insects,_weeds_wind"/>
+  <owl:ObjectProperty rdf:ID="has_Structure">
+    <rdfs:range rdf:resource="#Structure"/>
+    <rdfs:domain rdf:resource="#Rhizosphere"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#has_CO2,_O2,_H2O,_Temp,_Light">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Atmosphere"/>
+          <owl:Class rdf:about="#Biology"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="#CO2,_O2,_H2O,_Temp,_Light"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="has_Chemistry">
+    <rdfs:range rdf:resource="#Chemistry"/>
+    <rdfs:domain rdf:resource="#Rhizosphere"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#has_Microorganisms,_insects,_weeds_wind">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Atmosphere"/>
+          <owl:Class rdf:about="#Biology"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="#Microorganisms,_insects,_weeds_wind"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="has_Biology">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Thallosphere"/>
+          <owl:Class rdf:about="#Rhizosphere"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="#Biology"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="has_Atmosphere">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#Thallosphere"/>
+          <owl:Class rdf:about="#Rhizosphere"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="#Atmosphere"/>
+  </owl:ObjectProperty>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.2, Build 355)  http://protege.stanford.edu -->

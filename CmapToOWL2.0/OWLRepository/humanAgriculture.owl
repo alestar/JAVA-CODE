@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Processes -->
+  <owl:Class rdf:ID="ProductionFacility"/>
+  <owl:Class rdf:ID="Product"/>
+  <owl:Class rdf:ID="Production"/>
+  <owl:Class rdf:ID="Waste"/>
+  <owl:Class rdf:ID="MarineAnimal"/>
+  <owl:Class rdf:ID="Bee"/>
+  <owl:Class rdf:ID="Plant"/>
+  <owl:Class rdf:ID="HealthIndex"/>
+  <owl:Class rdf:ID="Nutrient"/>
+  <owl:Class rdf:ID="Water"/>
+  <owl:Class rdf:ID="Frost"/>
+  <owl:Class rdf:ID="Animal"/>
+  <owl:Class rdf:ID="Silkworm"/>
+  <owl:Class rdf:ID="Mixture"/>
+  <owl:Class rdf:ID="Pest"/>
+  
+  <owl:Class rdf:ID="AgriculturalProductionFacility">
+    <rdfs:subClassOf rdf:resource="#ProductionFacility"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="AgriculturalProduct">
+    <rdfs:subClassOf rdf:resource="#Product"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Agriculture">
+    <rdfs:subClassOf rdf:resource="#Production"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="AnimalProduction">
+    <rdfs:subClassOf rdf:resource="#Agriculture"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="AnimalWaste">
+    <rdfs:subClassOf rdf:resource="#Waste"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Apiculture">
+    <rdfs:subClassOf rdf:resource="#AnimalProduction"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Aquaculture">
+    <rdfs:subClassOf rdf:resource="#Agriculture"/>
+   <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasOrganism"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#MarineAnimal"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Beekeeping">
+    <owl:equivalentClass rdf:resource="#Apiculture" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasOrganism"/>
+        <owl:allValuesFrom rdf:resource="#Bee"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Breeding">
+    <rdfs:subClassOf rdf:resource="#AnimalProduction"/>
+  </owl:Class>
+
+   <owl:Class rdf:ID="Crop">
+      <rdfs:subClassOf rdf:resource="#Plant"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="CropMoistureIndex">
+      <rdfs:subClassOf rdf:resource="#HealthIndex"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="CropProduct">
+    <rdfs:subClassOf rdf:resource="#AgriculturalProduct"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="CropProduction">
+    <rdfs:subClassOf rdf:resource="#PlantProduction"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Cultivation"> 
+    <rdfs:subClassOf rdf:resource="#Agriculture"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DairyProduct">
+    <rdfs:subClassOf rdf:resource="#AgriculturalProduct"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Defoilant">
+    <rdfs:subClassOf rdf:resource="#AgriculturalChemical"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DripIrrigation">
+    <rdfs:subClassOf rdf:resource="#AgriculturalProduct"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Farm">
+    <rdfs:subClassOf rdf:resource="#AgriculturalProductionFacility"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Feed">
+    <rdfs:subClassOf rdf:resource="#Nutrient"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Fertilizer">
+    <rdfs:subClassOf rdf:resource="#AgriculturalChemical"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Fishery">
+    <rdfs:subClassOf rdf:resource="#AgriculturalProductionFacility"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="FishProduction">
+    <rdfs:subClassOf rdf:resource="#AnimalProduction"/>
+    <rdfs:subClassOf rdf:resource="#Aquaculture"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Fishing">
+    <rdfs:subClassOf rdf:resource="#Production"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="FruitProduct">
+    <rdfs:subClassOf rdf:resource="#HorticulturalProduct"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Harvesting">
+    <rdfs:subClassOf rdf:resource="#PlantProduction"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="HorticulturalActivity">
+    <rdfs:subClassOf rdf:resource="#Agriculture"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Horticulture">
+    <rdfs:subClassOf rdf:resource="#Agriculture"/>
+    <rdfs:comment xml:lang="en">Horticulture is the art and science of the cultivation of plants</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="HorticulturalProduct">
+    <rdfs:subClassOf rdf:resource="#AgriculturalProduct"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Irrigation">
+    <rdfs:subClassOf rdf:resource="#SoilCultivation"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasSubstance"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Water"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="KillingFreeze">
+    <rdfs:subClassOf rdf:resource="#Frost" />
+    <rdfs:comment xml:lang="en">The occurrence of air temperature below 0 C (32F) that kills annual vegetation without formation of frost crystals on surfaces. See freeze, dry freeze, hard freeze, light freeze.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LightFreeze">
+    <rdfs:subClassOf rdf:resource="#Frost" />
+    <rdfs:comment xml:lang="en">The occurrence of air temperature below 0 C (32F) that kills some, but not all, annual vegetation. This often occurs in the 0 to -1 C (32 30 F) range. </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LightFrost">
+    <rdfs:subClassOf rdf:resource="#Frost" />
+    <rdfs:comment xml:lang="en">A thin and more or less patchy deposit of hoarfrost on surface objects and vegetation.
+    </rdfs:comment>
+  </owl:Class>
+
+   <owl:Class rdf:ID="Livestock">
+      <rdfs:subClassOf rdf:resource="#Animal"/>
+      <rdfs:subClassOf rdf:resource="#AgriculturalProduct"/>
+      <owl:equivalentClass rdf:resource="#LivestockProduct" />
+   </owl:Class>
+  <owl:Class rdf:ID="LivestockProduct"/>
+
+   <owl:Class rdf:ID="Plantation">
+      <rdfs:subClassOf rdf:resource="#Plant"/>
+   </owl:Class>
+
+  <owl:Class rdf:ID="PlantProduction">
+    <rdfs:subClassOf rdf:resource="#Agriculture"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PoultryProduct">
+    <rdfs:subClassOf rdf:resource="#AgriculturalProduct"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Sericulture">
+    <rdfs:subClassOf rdf:resource="#AnimalProduction"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasOrganism"/>
+        <owl:allValuesFrom rdf:resource="#Silkworm"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ShellfishProduction">
+    <rdfs:subClassOf rdf:resource="#AnimalProduction"/>
+    <rdfs:subClassOf rdf:resource="#Aquaculture"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SoilCultivation">
+    <rdfs:subClassOf rdf:resource="#Agriculture"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="VegetableProduct">
+    <rdfs:subClassOf rdf:resource="#AgriculturalProduct"/>
+  </owl:Class>
+
+<!-- Substances -->
+  <owl:Class rdf:ID="AgriculturalChemical">
+    <rdfs:subClassOf rdf:resource="#Mixture"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="BiomedicalChemical">
+    <rdfs:subClassOf rdf:resource="#Mixture"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Manure">
+    <rdfs:subClassOf rdf:resource="#AgriculturalProduct"/>
+    <rdfs:subClassOf rdf:resource="#Mixture"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Aldrin">
+    <rdfs:subClassOf rdf:resource="#Pesticide"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Insecticide">
+    <rdfs:subClassOf rdf:resource="#Pesticide"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Pesticide">
+    <rdfs:subClassOf rdf:resource="#AgriculturalChemical"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="kills"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Pest"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PCB">
+    <rdfs:subClassOf rdf:resource="#Pesticide"/>
+  </owl:Class>
+
+</rdf:RDF>

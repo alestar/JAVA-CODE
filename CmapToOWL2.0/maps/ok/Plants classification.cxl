@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Plants classification</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Plants">
+                <sense domains="[biology, plants]"
+                    gloss="a living organism lacking the power of locomotion"
+                    number="00008864" pos="n" terms="[plant, flora, plant_life]"/>
+            </concept>
+            <concept id="2" label="Gymnosperms"/>
+            <concept id="3" label="Bryophyta">
+                <sense domains="[biology, plants]"
+                    gloss="a division of nonflowering plants characterized by rhizoids rather than true roots and having little or no organized vascular tissue and showing alternation of generations between gamete-bearing forms and spore-bearing forms; comprises true mosses (Bryopsida) and liverworts (Hepaticopsida) and hornworts (Anthoceropsida)"
+                    number="07856755" pos="n" terms="[Bryophyta, division_Bryophyta]"/>
+            </concept>
+            <concept id="4" label="Pteridophyta">
+                <sense domains="[biology, plants]"
+                    gloss="containing all the vascular plants that do not bear seeds: ferns, horsetails, club mosses, and whisk ferns; in some classifications considered a subdivision of Tracheophyta"
+                    number="07864690" pos="n" terms="[Pteridophyta, division_Pteridophyta]"/>
+            </concept>
+            <concept id="5" label="Cones">
+                <sense domains="[plants]"
+                    gloss="cone-shaped mass of ovule- or spore-bearing scales or bracts"
+                    number="07997301" pos="n" terms="[cone, strobilus, strobile]"/>
+            </concept>
+            <concept id="6" label="Polen"/>
+            <concept id="7" label="Eggs">
+                <sense domains="[gastronomy]"
+                    gloss="oval reproductive body of a fowl (especially a hen) used as food"
+                    number="05872618" pos="n" terms="[egg, eggs]"/>
+            </concept>
+            <concept id="8" label="Herterospory"/>
+            <concept id="9" label="Xylem and phloem"/>
+            <concept id="10" label="Sori"/>
+            <concept id="11" label="Microspores"/>
+            <concept id="12" label="Megaspores"/>
+            <concept id="13" label="Spores">
+                <sense domains="[plants]"
+                    gloss="small usually single-celled reproductive body produced especially by certain bacteria and algae and fungi and nonflowering plants"
+                    number="07867623" pos="n" terms="[spore]"/>
+            </concept>
+            <concept id="14" label="Gametophyte prothallus"/>
+            <concept id="15" label="Mosses"/>
+            <concept id="16" label="Angiosperms"/>
+            <concept id="17" label="dominant gametophyte"/>
+            <concept id="18" label="Antheridium">
+                <sense domains="[plants]"
+                    gloss="the male sex organ of spore-producing plants; produces antherozoids; equivalent to the anther in flowers"
+                    number="09384556" pos="n" terms="[antheridium]"/>
+            </concept>
+            <concept id="19" label="Archegonium">
+                <sense domains="[plants]"
+                    gloss="a female sex organ occurring in mosses, ferns, and most gymnosperms"
+                    number="08001329" pos="n" terms="[archegonium]"/>
+            </concept>
+            <concept id="20" label="Liverworts"/>
+            <concept id="21" label="Hornworts"/>
+            <concept id="22" label="Flowers">
+                <sense domains="[plants]"
+                    gloss="reproductive organ of angiosperm plants especially one having showy or colorful parts"
+                    number="07986022" pos="n" terms="[flower, bloom, blossom]"/>
+            </concept>
+            <concept id="23" label="Pollen lands on stigma"/>
+            <concept id="24" label="Carpel">
+                <sense domains="[plants]"
+                    gloss="a simple pistil or one element of a compound pistil"
+                    number="07993277" pos="n" terms="[carpel]"/>
+            </concept>
+            <concept id="25" label="Stamen">
+                <sense domains="[plants]"
+                    gloss="the male reproductive organ of a flower"
+                    number="07991514" pos="n" terms="[stamen]"/>
+            </concept>
+            <concept id="26" label="Petals"/>
+            <concept id="27" label="Sepals"/>
+            <concept id="28" label="Ovary">
+                <sense domains="[plants]"
+                    gloss="the organ that bears the ovules of a flower"
+                    number="07993700" pos="n" terms="[ovary]"/>
+            </concept>
+            <concept id="29" label="Ovules"/>
+            <concept id="30" label="Pollinators"/>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="31" label="include the phyla"/>
+            <linking-phrase id="32" label="have"/>
+            <linking-phrase id="33" label="are"/>
+            <linking-phrase id="34" label="have"/>
+            <linking-phrase id="35" label="have"/>
+            <linking-phrase id="36" label="with"/>
+            <linking-phrase id="37" label="involves"/>
+            <linking-phrase id="38" label="produce"/>
+            <linking-phrase id="39" label="produce"/>
+            <linking-phrase id="40" label="have"/>
+            <linking-phrase id="41" label="fertilization occurs when"/>
+            <linking-phrase id="42" label="contain"/>
+            <linking-phrase id="43" label="have"/>
+            <linking-phrase id="44" label="attract"/>
+            <linking-phrase id="45" label="protects"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="31"/>
+            <connection from-id="31" to-id="4"/>
+            <connection from-id="31" to-id="3"/>
+            <connection from-id="31" to-id="2"/>
+            <connection from-id="31" to-id="16"/>
+            <connection from-id="2" to-id="32"/>
+            <connection from-id="32" to-id="5"/>
+            <connection from-id="3" to-id="33"/>
+            <connection from-id="33" to-id="15"/>
+            <connection from-id="33" to-id="20"/>
+            <connection from-id="33" to-id="21"/>
+            <connection from-id="3" to-id="34"/>
+            <connection from-id="34" to-id="18"/>
+            <connection from-id="34" to-id="17"/>
+            <connection from-id="34" to-id="19"/>
+            <connection from-id="4" to-id="35"/>
+            <connection from-id="35" to-id="9"/>
+            <connection from-id="35" to-id="8"/>
+            <connection from-id="35" to-id="10"/>
+            <connection from-id="5" to-id="36"/>
+            <connection from-id="36" to-id="6"/>
+            <connection from-id="36" to-id="7"/>
+            <connection from-id="8" to-id="37"/>
+            <connection from-id="37" to-id="12"/>
+            <connection from-id="37" to-id="11"/>
+            <connection from-id="10" to-id="38"/>
+            <connection from-id="38" to-id="13"/>
+            <connection from-id="13" to-id="39"/>
+            <connection from-id="39" to-id="14"/>
+            <connection from-id="16" to-id="40"/>
+            <connection from-id="40" to-id="22"/>
+            <connection from-id="16" to-id="41"/>
+            <connection from-id="41" to-id="23"/>
+            <connection from-id="22" to-id="42"/>
+            <connection from-id="42" to-id="28"/>
+            <connection from-id="22" to-id="43"/>
+            <connection from-id="43" to-id="25"/>
+            <connection from-id="43" to-id="24"/>
+            <connection from-id="43" to-id="26"/>
+            <connection from-id="43" to-id="27"/>
+            <connection from-id="22" to-id="44"/>
+            <connection from-id="44" to-id="30"/>
+            <connection from-id="28" to-id="45"/>
+            <connection from-id="45" to-id="29"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="324" y="84"/>
+            <concept-appearance id="2" x="465" y="67"/>
+            <concept-appearance id="3" x="197" y="248"/>
+            <concept-appearance id="4" x="151" y="179"/>
+            <concept-appearance id="5" x="589" y="156"/>
+            <concept-appearance id="6" x="576" y="255"/>
+            <concept-appearance id="7" x="696" y="257"/>
+            <concept-appearance id="8" x="29" y="116"/>
+            <concept-appearance id="9" x="-77" y="192"/>
+            <concept-appearance id="10" x="19" y="242"/>
+            <concept-appearance id="11" x="-99" y="10"/>
+            <concept-appearance id="12" x="131" y="10"/>
+            <concept-appearance id="13" x="4" y="351"/>
+            <concept-appearance id="14" x="-88" y="457"/>
+            <concept-appearance id="15" x="84" y="242"/>
+            <concept-appearance id="16" x="394" y="220"/>
+            <concept-appearance id="17" x="217" y="381"/>
+            <concept-appearance id="18" x="276" y="380"/>
+            <concept-appearance id="19" x="342" y="307"/>
+            <concept-appearance id="20" x="72" y="331"/>
+            <concept-appearance id="21" x="141" y="376"/>
+            <concept-appearance id="22" x="410" y="344"/>
+            <concept-appearance id="23" x="559" y="346"/>
+            <concept-appearance id="24" x="324" y="502"/>
+            <concept-appearance id="25" x="406" y="515"/>
+            <concept-appearance id="26" x="496" y="499"/>
+            <concept-appearance id="27" x="570" y="480"/>
+            <concept-appearance id="28" x="236" y="504"/>
+            <concept-appearance id="29" x="129" y="565"/>
+            <concept-appearance id="30" x="636" y="459"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="31" x="316" y="174"/>
+            <linking-phrase id="32" x="528" y="133"/>
+            <linking-phrase id="33" x="138" y="294"/>
+            <linking-phrase id="34" x="259" y="326"/>
+            <linking-phrase id="35" x="49" y="199"/>
+            <linking-phrase id="36" x="622" y="226"/>
+            <linking-phrase id="37" x="19" y="65"/>
+            <linking-phrase id="38" x="5" y="312"/>
+            <linking-phrase id="39" x="-41" y="418"/>
+            <linking-phrase id="40" x="402" y="297"/>
+            <linking-phrase id="41" x="474" y="297"/>
+            <linking-phrase id="42" x="330" y="437"/>
+            <linking-phrase id="43" x="402" y="445"/>
+            <linking-phrase id="44" x="497" y="437"/>
+            <linking-phrase id="45" x="185" y="550"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Fluvial landforms</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Fluvial landforms"/>
+            <concept id="2" label="Landform"/>
+            <concept id="3" label="Major distributaries"/>
+            <concept id="4" label="Minor distributaries and drainage"/>
+            <concept id="5" label="Coastal flats and oceans"/>
+            <concept id="6" label="Continental flats and rivers"/>
+            <concept id="7" label="Bays">
+                <sense domains="[geography]"
+                    gloss="an indentation of a shoreline larger than a cove but smaller than an gulf"
+                    number="06795196" pos="n" terms="[bay]"/>
+            </concept>
+            <concept id="8" label="Lakes">
+                <sense domains="[geography]"
+                    gloss="a body of (usually fresh) water surrounded by land"
+                    number="06787575" pos="n" terms="[lake]"/>
+            </concept>
+            <concept id="9" label="Deltas">
+                <sense domains="[geology]"
+                    gloss="a low triangular area where a river divides before entering a larger body of water"
+                    number="06728279" pos="n" terms="[delta]"/>
+            </concept>
+            <concept id="10" label="Carolina bays"/>
+            <concept id="11" label="Estuaries"/>
+            <concept id="12" label="Arcuate">
+                <sense domains="[architecture]"
+                    gloss="(architecture) forming or resembling an arch; &quot;an arched ceiling&quot;"
+                    number="02204101" pos="a" terms="[arced, arched, arching, arciform, arcuate, bowed]"/>
+            </concept>
+            <concept id="13" label="Estuarine">
+                <sense domains="[geography, geology]"
+                    gloss="of or relating to or found in estuaries"
+                    number="02564061" pos="a" terms="[estuarine, estuarial]"/>
+            </concept>
+            <concept id="14" label="Birdsfoot"/>
+            <concept id="15" label="Depressions">
+                <sense domains="[geography, geology]"
+                    gloss="a sunken or depressed geological formation"
+                    number="06692686" pos="n" terms="[natural_depression, depression]"/>
+            </concept>
+            <concept id="16" label="Swamps">
+                <sense domains="[geography]"
+                    gloss="low land that is seasonally flooded; has more woody plants than a marsh and better drainage than a bog"
+                    number="06786994" pos="n" terms="[swamp]"/>
+            </concept>
+            <concept id="17" label="Stream systems"/>
+            <concept id="18" label="Ponds">
+                <sense domains="[geography]"
+                    gloss="a small lake; &quot;the pond was too small for sailing&quot;"
+                    number="06799128" pos="n" terms="[pond, pool]"/>
+            </concept>
+            <concept id="19" label="Bog">
+                <sense domains="[geography]"
+                    gloss="wet spongy ground of decomposing vegetation; has poorer drainage than a swamp; soil is unfit for cultivation but can be cut and dried and used for fuel"
+                    number="06786505" pos="n" terms="[bog, peat_bog]"/>
+            </concept>
+            <concept id="20" label="Marsh">
+                <sense domains="[geography]"
+                    gloss="low-lying wet land with grassy vegetation; usually is a transition zone between land and water"
+                    number="06786830" pos="n" terms="[marsh, marshland, fen]"/>
+            </concept>
+            <concept id="21" label="Tidal flats"/>
+            <concept id="22" label="Coastal plains"/>
+            <concept id="23" label="Mud flats"/>
+            <concept id="24" label="Continental plains"/>
+            <concept id="25" label="Floodplains"/>
+            <concept id="26" label="Terraces">
+                <sense domains="[geography, geology]"
+                    gloss="a shelf of rock with steep slopes above and below"
+                    number="06726901" pos="n" terms="[terrace, bench]"/>
+            </concept>
+            <concept id="27" label="Valley fills"/>
+            <concept id="28" label="Beaches">
+                <sense domains="[geology]"
+                    gloss="an area of sand sloping down to the water of a sea or lake"
+                    number="06739108" pos="n" terms="[beach]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="29" label="is a type of"/>
+            <linking-phrase id="30" label="are asociated with"/>
+            <linking-phrase id="31" label="include"/>
+            <linking-phrase id="32" label="include"/>
+            <linking-phrase id="33" label="include"/>
+            <linking-phrase id="34" label="include"/>
+            <linking-phrase id="35" label="include"/>
+            <linking-phrase id="36" label="of type"/>
+            <linking-phrase id="37" label="include"/>
+            <linking-phrase id="38" label="includes"/>
+            <linking-phrase id="39" label="includes"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="29"/>
+            <connection from-id="29" to-id="2"/>
+            <connection from-id="1" to-id="30"/>
+            <connection from-id="30" to-id="4"/>
+            <connection from-id="30" to-id="5"/>
+            <connection from-id="30" to-id="6"/>
+            <connection from-id="30" to-id="3"/>
+            <connection from-id="3" to-id="31"/>
+            <connection from-id="31" to-id="7"/>
+            <connection from-id="31" to-id="8"/>
+            <connection from-id="31" to-id="9"/>
+            <connection from-id="31" to-id="11"/>
+            <connection from-id="4" to-id="32"/>
+            <connection from-id="32" to-id="16"/>
+            <connection from-id="32" to-id="15"/>
+            <connection from-id="32" to-id="17"/>
+            <connection from-id="5" to-id="33"/>
+            <connection from-id="33" to-id="21"/>
+            <connection from-id="33" to-id="22"/>
+            <connection from-id="6" to-id="34"/>
+            <connection from-id="34" to-id="25"/>
+            <connection from-id="34" to-id="24"/>
+            <connection from-id="34" to-id="26"/>
+            <connection from-id="34" to-id="27"/>
+            <connection from-id="34" to-id="28"/>
+            <connection from-id="7" to-id="35"/>
+            <connection from-id="35" to-id="10"/>
+            <connection from-id="9" to-id="36"/>
+            <connection from-id="36" to-id="13"/>
+            <connection from-id="36" to-id="12"/>
+            <connection from-id="36" to-id="14"/>
+            <connection from-id="15" to-id="37"/>
+            <connection from-id="37" to-id="18"/>
+            <connection from-id="37" to-id="19"/>
+            <connection from-id="37" to-id="20"/>
+            <connection from-id="21" to-id="38"/>
+            <connection from-id="38" to-id="23"/>
+            <connection from-id="22" to-id="39"/>
+            <connection from-id="39" to-id="23"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="205" y="8"/>
+            <concept-appearance id="2" x="7" y="56"/>
+            <concept-appearance id="3" x="-120" y="145"/>
+            <concept-appearance id="4" x="118" y="148"/>
+            <concept-appearance id="5" x="306" y="148"/>
+            <concept-appearance id="6" x="490" y="148"/>
+            <concept-appearance id="7" x="-192" y="270"/>
+            <concept-appearance id="8" x="-136" y="270"/>
+            <concept-appearance id="9" x="-16" y="272"/>
+            <concept-appearance id="10" x="-186" y="377"/>
+            <concept-appearance id="11" x="-78" y="271"/>
+            <concept-appearance id="12" x="-112" y="392"/>
+            <concept-appearance id="13" x="-51" y="390"/>
+            <concept-appearance id="14" x="21" y="392"/>
+            <concept-appearance id="15" x="79" y="269"/>
+            <concept-appearance id="16" x="157" y="269"/>
+            <concept-appearance id="17" x="214" y="271"/>
+            <concept-appearance id="18" x="96" y="393"/>
+            <concept-appearance id="19" x="151" y="396"/>
+            <concept-appearance id="20" x="208" y="395"/>
+            <concept-appearance id="21" x="302" y="270"/>
+            <concept-appearance id="22" x="358" y="270"/>
+            <concept-appearance id="23" x="333" y="395"/>
+            <concept-appearance id="24" x="448" y="272"/>
+            <concept-appearance id="25" x="512" y="276"/>
+            <concept-appearance id="26" x="577" y="277"/>
+            <concept-appearance id="27" x="635" y="281"/>
+            <concept-appearance id="28" x="696" y="284"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="29" x="97" y="52"/>
+            <linking-phrase id="30" x="196" y="102"/>
+            <linking-phrase id="31" x="-118" y="223"/>
+            <linking-phrase id="32" x="142" y="235"/>
+            <linking-phrase id="33" x="319" y="232"/>
+            <linking-phrase id="34" x="551" y="230"/>
+            <linking-phrase id="35" x="-195" y="346"/>
+            <linking-phrase id="36" x="-35" y="357"/>
+            <linking-phrase id="37" x="127" y="355"/>
+            <linking-phrase id="38" x="287" y="357"/>
+            <linking-phrase id="39" x="357" y="357"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

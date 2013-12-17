@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Substances -->
+  <owl:Class rdf:ID="Mixing"/>
+  <owl:Class rdf:ID="Freezing"/>
+  <owl:Class rdf:ID="Depth"/>
+  <owl:Class rdf:ID="Mixture"/>
+  <owl:Class rdf:ID="Solid"/>
+  <owl:Class rdf:ID="Classification"/>
+  <owl:Class rdf:ID="Frozen"/>
+  <owl:Class rdf:ID="PlanetaryLayer"/>
+  
+  <owl:Class rdf:ID="Alfisol">
+    <rdfs:subClassOf rdf:resource="#SoilOrder"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Andisol">
+    <rdfs:subClassOf rdf:resource="#SoilOrder"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Aridisol">
+    <rdfs:subClassOf rdf:resource="#SoilOrder"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Cryosol">
+    <owl:equivalentClass rdf:resource="#Gelisol"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Cryoturbation">
+    <rdfs:subClassOf rdf:resource="#Mixing" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasStateChange"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Freezing" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Cryoturbation (frost churning) refers to the mixing of materials from various horizons of the soil right down to the parent rock due to freezing and thawing. Cryoturbation occurs to varying degrees in most Gelisols (permafrost soils). The cause of crytoturbation lies in the way in which the repeated freezing of the soil during autumn causes the formation of ice wedges at the most easily erodible parts of the parent rock. If the parent rock is hard, this can cause quite deep erosion of the rock over many years. As this process continues, during the summer when an active layer forms in the soil this eroded material can easily move both from the soil surface downward and from the permafrost table upward. As this process occurs, the upper soil material gradually dries out (because the soil moisture moves from the warm surface layer to the colder layer at the top of the permafrost) so that it forms a granular structure with many very distinctive crystalline shapes (such as ice lenses). Separation of coarse from fine soil materials produces distinctive patterned ground with different types of soil.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DampingDepth">
+    <rdfs:subClassOf rdf:resource="#Depth"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Entisol">
+    <rdfs:subClassOf rdf:resource="#SoilOrder"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Gelisol">
+    <rdfs:subClassOf rdf:resource="#SoilOrder"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhysicalProcess"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Cryoturbation" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Gelisols are soils of very cold climates which are defined as containing permafrost within two metres of the soil surface. The word Gelisol comes from the Latin gelare meaning to freeze, a reference to the process of cryoturbation that occurs from the alternating thawing and freezing characteristic of Gelisols. </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Ground">
+    <rdfs:subClassOf rdf:resource="#Mixture"/>
+    <rdfs:subClassOf rdf:resource="#Solid"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Histisol">
+    <rdfs:subClassOf rdf:resource="#SoilOrder"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Inceptisol">
+    <rdfs:subClassOf rdf:resource="#SoilOrder"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Mollisol">
+    <rdfs:subClassOf rdf:resource="#SoilOrder"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Oxisol">
+    <rdfs:subClassOf rdf:resource="#SoilOrder"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Paleosol">
+    <rdfs:subClassOf rdf:resource="#SoilOrder"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Soil">
+    <rdfs:subClassOf rdf:resource="#Mixture"/>
+    <rdfs:subClassOf rdf:resource="#Solid"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SoilOrder">
+    <rdfs:subClassOf rdf:resource="#Classification"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Spodosol">
+    <rdfs:subClassOf rdf:resource="#SoilOrder"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Ultisol">
+    <rdfs:subClassOf rdf:resource="#SoilOrder"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Vertisol">
+    <rdfs:subClassOf rdf:resource="#SoilOrder"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ActiveLayer">    
+  <rdfs:subClassOf rdf:resource="#SoilLayer"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="partOf"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Permafrost" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">In environments containing permafrost, the active layer is the top 
+layer of soil that thaws during the summer and freezes again during the autumn. </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Permafrost">
+    <rdfs:subClassOf rdf:resource="#SoilLayer"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasStateOfMatter"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Frozen" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Regolith">
+    <rdfs:subClassOf rdf:resource="#SoilLayer"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SoilLayer">
+    <rdfs:subClassOf rdf:resource="#PlanetaryLayer"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SoilHorizon">
+    <rdfs:subClassOf rdf:resource="#SoilLayer"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Subsoil">
+    <rdfs:subClassOf rdf:resource="#SoilLayer"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Substrata">
+    <rdfs:subClassOf rdf:resource="#SoilLayer"/>
+    <owl:equivalentClass rdf:resource="#Substratum"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Substratum"/>
+
+  <owl:Class rdf:ID="Talik">
+    <rdfs:subClassOf rdf:resource="#SoilLayer"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Permafrost"/>
+        <owl:onProperty rdf:resource="#partOf"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Topsoil">
+    <rdfs:subClassOf rdf:resource="#SoilLayer"/>
+  </owl:Class>
+
+</rdf:RDF>

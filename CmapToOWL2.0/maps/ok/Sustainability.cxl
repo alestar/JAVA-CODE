@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Sustainability</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Environmental problems"/>
+            <concept id="2" label="Waste disposal"/>
+            <concept id="3" label="Pollution">
+                <sense domains="[town_planning]"
+                    gloss="the state of being contaminated with harmful substances"
+                    number="10412503" pos="n" terms="[pollution]"/>
+            </concept>
+            <concept id="4" label="Deforestation">
+                <sense domains="[factotum]"
+                    gloss="the state of being clear of trees"
+                    number="10413622" pos="n" terms="[deforestation]"/>
+            </concept>
+            <concept id="5" label="Depletion of natural resources"/>
+            <concept id="6" label="Energy conservation"/>
+            <concept id="7" label="Biodegradable materials"/>
+            <concept id="8" label="Landfills">
+                <sense domains="[geology]"
+                    gloss="a low area that has been filled in"
+                    number="06728520" pos="n" terms="[landfill]"/>
+            </concept>
+            <concept id="9" label="Incineration">
+                <sense domains="[factotum]"
+                    gloss="the act of burning something completely; reducing it to ashes"
+                    number="00243737" pos="n" terms="[incineration]"/>
+            </concept>
+            <concept id="10" label="Plastics">
+                <sense domains="[chemistry]"
+                    gloss="generic name for certain synthetic or semisynthetic materials that can be molded or extruded into objects or films or filaments or used for making e.g. coatings and adhesives"
+                    number="10454185" pos="n" terms="[plastic]"/>
+            </concept>
+            <concept id="11" label="Polymers">
+                <sense domains="[chemistry]"
+                    gloss="naturally occurring or synthetic; consisting of large molecules made up of a linked series of repeated simple monomers"
+                    number="10760958" pos="n" terms="[polymer]"/>
+            </concept>
+            <concept id="12" label="Bacteria">
+                <sense domains="[biology]"
+                    gloss="single-celled or noncellular spherical or spiral or rod-shaped organisms lacking chlorophyll that reproduce by fission; important as pathogens and for biochemical properties; taxonomy is difficult; often considered plants"
+                    number="00884781" pos="n" terms="[bacteria, bacterium]"/>
+            </concept>
+            <concept id="13" label="Combustion of fossil fuels"/>
+            <concept id="14" label="Renewable energy sources"/>
+            <concept id="15" label="Hydropower"/>
+            <concept id="16" label="Geothermal energy"/>
+            <concept id="17" label="Wind power">
+                <sense domains="[physics]"
+                    gloss="power derived from the wind (as by windmills)"
+                    number="07849549" pos="n" terms="[wind_generation, wind_power]"/>
+            </concept>
+            <concept id="18" label="Solar power">
+                <sense domains="[physics]"
+                    gloss="energy from the sun that is converted into thermal or electrical energy"
+                    number="07836720" pos="n" terms="[solar_energy, solar_power]"/>
+            </concept>
+            <concept id="19" label="Biomass">
+                <sense domains="[chemistry]"
+                    gloss="plant materials and animal waste used as fuel"
+                    number="10526454" pos="n" terms="[biomass]"/>
+            </concept>
+            <concept id="20" label="Bioethanol"/>
+            <concept id="21" label="Biodiesel"/>
+            <concept id="22" label="Carbohydrates"/>
+            <concept id="23" label="Vegetable oil">
+                <sense domains="[chemistry]"
+                    gloss="any of a group of oils that are obtained from plants"
+                    number="05716352" pos="n" terms="[vegetable_oil]"/>
+            </concept>
+            <concept id="24" label="Fermentation">
+                <sense domains="[chemistry]"
+                    gloss="a process in which an agent causes an organic substance to break down into simpler substances; especially, the anaerobic breakdown of sugar into alcohol"
+                    number="09690047" pos="n" terms="[zymosis, zymolysis, fermentation, fermenting, ferment]"/>
+            </concept>
+            <concept id="25" label="Biodiversity"/>
+            <concept id="26" label="Photosynthesis">
+                <sense domains="[chemistry]"
+                    gloss="synthesis of compounds with the aid of radiant energy (especially in plants)"
+                    number="09705163" pos="n" terms="[photosynthesis]"/>
+            </concept>
+            <concept id="27" label="Carbon dioxide">
+                <sense domains="[chemistry]"
+                    gloss="a heavy odorless colorless gas formed during respiration and by the decomposition of organic substances; absorbed from the air by plants in photosynthesis"
+                    number="10613550" pos="n" terms="[carbon_dioxide, CO, carbonic_acid_gas]"/>
+            </concept>
+            <concept id="28" label="Greenhouse gas"/>
+            <concept id="29" label="Global warming"/>
+            <concept id="30" label="Extreme climatic change"/>
+            <concept id="31" label="Melting of polar ice caps"/>
+            <concept id="32" label="Rising sea levels"/>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="33" label="consist of"/>
+            <linking-phrase id="34" label="consist of"/>
+            <linking-phrase id="35" label="consist of"/>
+            <linking-phrase id="36" label="consist of"/>
+            <linking-phrase id="37" label="can be reduced by"/>
+            <linking-phrase id="38" label="amount reduced by using"/>
+            <linking-phrase id="39" label="by"/>
+            <linking-phrase id="40" label="by"/>
+            <linking-phrase id="41" label="due to"/>
+            <linking-phrase id="42" label="causing reduction of"/>
+            <linking-phrase id="43" label="causing reduction of"/>
+            <linking-phrase id="44" label="overcome by using"/>
+            <linking-phrase id="45" label="such as"/>
+            <linking-phrase id="46" label="resulting in the increase of"/>
+            <linking-phrase id="47" label="wich are"/>
+            <linking-phrase id="48" label="wich are degradable by"/>
+            <linking-phrase id="49" label="wich are synthetized by"/>
+            <linking-phrase id="50" label="resulting in the increase of"/>
+            <linking-phrase id="51" label="such as"/>
+            <linking-phrase id="52" label="such as"/>
+            <linking-phrase id="53" label="such as"/>
+            <linking-phrase id="54" label="such as"/>
+            <linking-phrase id="55" label="such as"/>
+            <linking-phrase id="56" label="like"/>
+            <linking-phrase id="57" label="like"/>
+            <linking-phrase id="58" label="from"/>
+            <linking-phrase id="59" label="from"/>
+            <linking-phrase id="60" label="produced by"/>
+            <linking-phrase id="61" label="resulting in the increase of"/>
+            <linking-phrase id="62" label="which is a"/>
+            <linking-phrase id="63" label="resulting in"/>
+            <linking-phrase id="64" label="causing"/>
+            <linking-phrase id="65" label="causing"/>
+            <linking-phrase id="66" label="thus"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="33"/>
+            <connection from-id="33" to-id="2"/>
+            <connection from-id="1" to-id="34"/>
+            <connection from-id="34" to-id="3"/>
+            <connection from-id="1" to-id="35"/>
+            <connection from-id="35" to-id="4"/>
+            <connection from-id="1" to-id="36"/>
+            <connection from-id="36" to-id="5"/>
+            <connection from-id="1" to-id="37"/>
+            <connection from-id="37" to-id="6"/>
+            <connection from-id="2" to-id="38"/>
+            <connection from-id="38" to-id="7"/>
+            <connection from-id="2" to-id="39"/>
+            <connection from-id="39" to-id="8"/>
+            <connection from-id="2" to-id="40"/>
+            <connection from-id="40" to-id="9"/>
+            <connection from-id="3" to-id="41"/>
+            <connection from-id="41" to-id="13"/>
+            <connection from-id="4" to-id="42"/>
+            <connection from-id="42" to-id="25"/>
+            <connection from-id="4" to-id="43"/>
+            <connection from-id="43" to-id="26"/>
+            <connection from-id="5" to-id="44"/>
+            <connection from-id="44" to-id="14"/>
+            <connection from-id="7" to-id="45"/>
+            <connection from-id="45" to-id="10"/>
+            <connection from-id="9" to-id="46"/>
+            <connection from-id="46" to-id="27"/>
+            <connection from-id="10" to-id="47"/>
+            <connection from-id="47" to-id="11"/>
+            <connection from-id="10" to-id="48"/>
+            <connection from-id="48" to-id="12"/>
+            <connection from-id="11" to-id="49"/>
+            <connection from-id="49" to-id="12"/>
+            <connection from-id="13" to-id="50"/>
+            <connection from-id="50" to-id="27"/>
+            <connection from-id="14" to-id="51"/>
+            <connection from-id="51" to-id="15"/>
+            <connection from-id="14" to-id="52"/>
+            <connection from-id="52" to-id="16"/>
+            <connection from-id="14" to-id="53"/>
+            <connection from-id="53" to-id="17"/>
+            <connection from-id="14" to-id="54"/>
+            <connection from-id="54" to-id="18"/>
+            <connection from-id="14" to-id="55"/>
+            <connection from-id="55" to-id="19"/>
+            <connection from-id="19" to-id="56"/>
+            <connection from-id="56" to-id="21"/>
+            <connection from-id="19" to-id="57"/>
+            <connection from-id="57" to-id="20"/>
+            <connection from-id="20" to-id="58"/>
+            <connection from-id="58" to-id="22"/>
+            <connection from-id="21" to-id="59"/>
+            <connection from-id="59" to-id="23"/>
+            <connection from-id="22" to-id="60"/>
+            <connection from-id="60" to-id="24"/>
+            <connection from-id="26" to-id="61"/>
+            <connection from-id="61" to-id="27"/>
+            <connection from-id="27" to-id="62"/>
+            <connection from-id="62" to-id="28"/>
+            <connection from-id="28" to-id="63"/>
+            <connection from-id="63" to-id="29"/>
+            <connection from-id="29" to-id="64"/>
+            <connection from-id="64" to-id="31"/>
+            <connection from-id="29" to-id="65"/>
+            <connection from-id="65" to-id="30"/>
+            <connection from-id="31" to-id="66"/>
+            <connection from-id="66" to-id="32"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="435" y="-9"/>
+            <concept-appearance id="2" x="168" y="43"/>
+            <concept-appearance id="3" x="284" y="115"/>
+            <concept-appearance id="4" x="407" y="161"/>
+            <concept-appearance id="5" x="554" y="141"/>
+            <concept-appearance id="6" x="693" y="42"/>
+            <concept-appearance id="7" x="13" y="147"/>
+            <concept-appearance id="8" x="107" y="167"/>
+            <concept-appearance id="9" x="178" y="178"/>
+            <concept-appearance id="10" x="26" y="263"/>
+            <concept-appearance id="11" x="29" y="364"/>
+            <concept-appearance id="12" x="30" y="481"/>
+            <concept-appearance id="13" x="305" y="226"/>
+            <concept-appearance id="14" x="669" y="241"/>
+            <concept-appearance id="15" x="643" y="405"/>
+            <concept-appearance id="16" x="716" y="406"/>
+            <concept-appearance id="17" x="783" y="404"/>
+            <concept-appearance id="18" x="843" y="403"/>
+            <concept-appearance id="19" x="904" y="401"/>
+            <concept-appearance id="20" x="850" y="513"/>
+            <concept-appearance id="21" x="960" y="518"/>
+            <concept-appearance id="22" x="836" y="611"/>
+            <concept-appearance id="23" x="967" y="612"/>
+            <concept-appearance id="24" x="843" y="717"/>
+            <concept-appearance id="25" x="538" y="283"/>
+            <concept-appearance id="26" x="395" y="283"/>
+            <concept-appearance id="27" x="252" y="403"/>
+            <concept-appearance id="28" x="259" y="526"/>
+            <concept-appearance id="29" x="266" y="629"/>
+            <concept-appearance id="30" x="466" y="625"/>
+            <concept-appearance id="31" x="121" y="628"/>
+            <concept-appearance id="32" x="224" y="738"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="33" x="300" y="31"/>
+            <linking-phrase id="34" x="348" y="78"/>
+            <linking-phrase id="35" x="423" y="88"/>
+            <linking-phrase id="36" x="493" y="80"/>
+            <linking-phrase id="37" x="569" y="26"/>
+            <linking-phrase id="38" x="71" y="76"/>
+            <linking-phrase id="39" x="103" y="132"/>
+            <linking-phrase id="40" x="182" y="135"/>
+            <linking-phrase id="41" x="301" y="190"/>
+            <linking-phrase id="42" x="473" y="235"/>
+            <linking-phrase id="43" x="405" y="235"/>
+            <linking-phrase id="44" x="625" y="198"/>
+            <linking-phrase id="45" x="19" y="230"/>
+            <linking-phrase id="46" x="185" y="310"/>
+            <linking-phrase id="47" x="21" y="329"/>
+            <linking-phrase id="48" x="110" y="433"/>
+            <linking-phrase id="49" x="19" y="435"/>
+            <linking-phrase id="50" x="272" y="319"/>
+            <linking-phrase id="51" x="671" y="338"/>
+            <linking-phrase id="52" x="716" y="355"/>
+            <linking-phrase id="53" x="761" y="339"/>
+            <linking-phrase id="54" x="818" y="352"/>
+            <linking-phrase id="55" x="866" y="340"/>
+            <linking-phrase id="56" x="966" y="480"/>
+            <linking-phrase id="57" x="868" y="480"/>
+            <linking-phrase id="58" x="852" y="582"/>
+            <linking-phrase id="59" x="957" y="581"/>
+            <linking-phrase id="60" x="843" y="684"/>
+            <linking-phrase id="61" x="377" y="366"/>
+            <linking-phrase id="62" x="268" y="485"/>
+            <linking-phrase id="63" x="278" y="589"/>
+            <linking-phrase id="64" x="192" y="649"/>
+            <linking-phrase id="65" x="381" y="644"/>
+            <linking-phrase id="66" x="175" y="697"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

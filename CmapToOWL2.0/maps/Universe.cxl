@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Universe</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Universe">
+                <sense domains="[astronomy, physics]"
+                    gloss="everything that exists anywhere; &quot;they study the evolution of the universe&quot;; &quot;the biggest tree in existence&quot;"
+                    number="06691078" pos="n" words="[universe, existence, nature, creation, world, cosmos, macrocosm]"/>
+            </concept>
+            <concept id="2" label="Big Bang"/>
+            <concept id="3" label="Galaxies">
+                <sense domains="[astronomy]"
+                    gloss="(astronomy) a collection of star systems; any of the billions of systems each having many stars and nebulae and dust; &quot;`extragalactic nebula' is a former name for `galaxy'&quot;"
+                    number="06141261" pos="n" words="[galaxy, extragalactic_nebula]"/>
+            </concept>
+            <concept id="4" label="Expansion">
+                <sense domains="[factotum]"
+                    gloss="the act of increasing in size or volume or quantity or scope"
+                    number="00235235" pos="n" words="[expansion, enlargement]"/>
+                <sense domains="[factotum]"
+                    gloss="an interpretation that provides additional information"
+                    number="05362177" pos="n" words="[expansion, enlargement]"/>
+                <sense domains="[factotum]"
+                    gloss="adding information or detail"
+                    number="00238469" pos="n" words="[expansion, expanding_upon]"/>
+            </concept>
+            <concept id="5" label="Finite">
+                <sense domains="[factotum]"
+                    gloss="bounded or limited in magnitude or spatial or temporal extent"
+                    number="00954730" pos="a" words="[finite]"/>
+                <sense domains="[grammar]"
+                    gloss="(grammar) of verbs; relating to forms of the verb that are limited in time by a tense and (usually) show agreement with number and person"
+                    number="00956405" pos="a" words="[finite]"/>
+            </concept>
+            <concept id="6" label="Homogeneous">
+                <sense domains="[factotum]"
+                    gloss="of the same or similar kind or nature; &quot;a tight-knit homogeneous society&quot;"
+                    number="01150078" pos="a" words="[homogeneous]"/>
+            </concept>
+            <concept id="7" label="Unlimited">
+                <sense domains="[factotum]"
+                    gloss="having no limits in range or scope; &quot;to start with a theory of unlimited freedom is to end up with unlimited despotism&quot;- Philip Rahv; &quot;the limitless reaches of outer space&quot;"
+                    number="01358862" pos="a" words="[unlimited, limitless]"/>
+                <sense domains="[factotum]"
+                    gloss="without reservation or exception"
+                    number="01844500" pos="a" words="[outright, straight-out, unlimited]"/>
+                <sense domains="[factotum]"
+                    gloss="that cannot be entirely consumed or used up; &quot;an inexhaustible supply of coal&quot;"
+                    number="00956255" pos="a" words="[inexhaustible, unlimited]"/>
+            </concept>
+            <concept id="8" label="Stars">
+                <sense domains="[astronomy]"
+                    gloss="(astronomy) a celestial body of hot gases that radiates energy derived from thermonuclear reactions in the interior"
+                    number="06762045" pos="n" words="[star]"/>
+            </concept>
+            <concept id="9" label="Cumulus">
+                <sense domains="[meteorology]" gloss="a globular cloud"
+                    number="06750319" pos="n" words="[cumulus, cumulus_cloud]"/>
+            </concept>
+            <concept id="10" label="Red Giants"/>
+            <concept id="11" label="White Dwarfs">
+                <sense domains="[astronomy]"
+                    gloss="a faint star of enormous density"
+                    number="06764012" pos="n" words="[white_dwarf, white_dwarf_star]"/>
+            </concept>
+            <concept id="12" label="Neutron Star">
+                <sense domains="[astronomy]"
+                    gloss="a star that has collapsed under its own gravity; it is composed of neutrons"
+                    number="06764432" pos="n" words="[neutron_star]"/>
+            </concept>
+            <concept id="13" label="Black holes">
+                <sense domains="[factotum]"
+                    gloss="a region of space resulting from the collapse of a star; extremely high gravitational field"
+                    number="06771236" pos="n" words="[black_hole]"/>
+            </concept>
+            <concept id="14" label="Cosmic dust">
+                <sense domains="[astronomy]"
+                    gloss="clouds of particles or gases occurring throughout interstellar space"
+                    number="07787189" pos="n" words="[cosmic_dust]"/>
+            </concept>
+            <concept id="15" label="Planets">
+                <sense domains="[astronomy]"
+                    gloss="any of the celestial bodies (other than comets or satellites) that revolve around the sun in the solar system"
+                    number="06760411" pos="n" words="[planet]"/>
+            </concept>
+            <concept id="16" label="Solar system">
+                <sense domains="[astronomy]"
+                    gloss="the sun with the celestial bodies that revolve around it in its gravitational field"
+                    number="06751922" pos="n" words="[solar_system]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="17" label="originated"/>
+            <linking-phrase id="18" label="formed"/>
+            <linking-phrase id="19" label="is"/>
+            <linking-phrase id="20" label="originated"/>
+            <linking-phrase id="21" label="in"/>
+            <linking-phrase id="22" label="formed"/>
+            <linking-phrase id="23" label="formed"/>
+            <linking-phrase id="24" label="evolve"/>
+            <linking-phrase id="25" label="some have"/>
+            <linking-phrase id="26" label="evolve"/>
+            <linking-phrase id="27" label="as"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="17"/>
+            <connection from-id="17" to-id="2"/>
+            <connection from-id="1" to-id="18"/>
+            <connection from-id="18" to-id="3"/>
+            <connection from-id="1" to-id="19"/>
+            <connection from-id="19" to-id="5"/>
+            <connection from-id="19" to-id="6"/>
+            <connection from-id="19" to-id="7"/>
+            <connection from-id="2" to-id="20"/>
+            <connection from-id="20" to-id="3"/>
+            <connection from-id="3" to-id="21"/>
+            <connection from-id="21" to-id="4"/>
+            <connection from-id="3" to-id="22"/>
+            <connection from-id="22" to-id="8"/>
+            <connection from-id="22" to-id="14"/>
+            <connection from-id="8" to-id="23"/>
+            <connection from-id="23" to-id="9"/>
+            <connection from-id="8" to-id="24"/>
+            <connection from-id="24" to-id="10"/>
+            <connection from-id="24" to-id="11"/>
+            <connection from-id="24" to-id="12"/>
+            <connection from-id="8" to-id="25"/>
+            <connection from-id="25" to-id="15"/>
+            <connection from-id="12" to-id="26"/>
+            <connection from-id="26" to-id="13"/>
+            <connection from-id="15" to-id="27"/>
+            <connection from-id="27" to-id="16"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="369" y="-57"/>
+            <concept-appearance id="2" x="176" y="33"/>
+            <concept-appearance id="3" x="370" y="69"/>
+            <concept-appearance id="4" x="181" y="157"/>
+            <concept-appearance id="5" x="641" y="-39"/>
+            <concept-appearance id="6" x="648" y="67"/>
+            <concept-appearance id="7" x="651" y="166"/>
+            <concept-appearance id="8" x="344" y="210"/>
+            <concept-appearance id="9" x="168" y="262"/>
+            <concept-appearance id="10" x="247" y="341"/>
+            <concept-appearance id="11" x="335" y="351"/>
+            <concept-appearance id="12" x="413" y="346"/>
+            <concept-appearance id="13" x="411" y="471"/>
+            <concept-appearance id="14" x="523" y="158"/>
+            <concept-appearance id="15" x="535" y="281"/>
+            <concept-appearance id="16" x="555" y="395"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="17" x="251" y="-5"/>
+            <linking-phrase id="18" x="364" y="31"/>
+            <linking-phrase id="19" x="501" y="29"/>
+            <linking-phrase id="20" x="267" y="67"/>
+            <linking-phrase id="21" x="268" y="127"/>
+            <linking-phrase id="22" x="397" y="156"/>
+            <linking-phrase id="23" x="250" y="252"/>
+            <linking-phrase id="24" x="339" y="299"/>
+            <linking-phrase id="25" x="438" y="267"/>
+            <linking-phrase id="26" x="404" y="434"/>
+            <linking-phrase id="27" x="541" y="357"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

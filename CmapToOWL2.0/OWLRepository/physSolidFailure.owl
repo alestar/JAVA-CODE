@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+             owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<owl:Class rdf:ID="MechanicalProcess"/> 
+<owl:Class rdf:ID="Separation"/> 
+<owl:Class rdf:ID="SolidState"/> 
+
+  
+  
+ <owl:Class rdf:ID="Comminution">
+    <rdfs:subClassOf rdf:resource="#MechanicalProcess"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Crack">
+    <rdfs:subClassOf rdf:resource="#Separation"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Fracture">
+    <rdfs:subClassOf rdf:resource="#Failure"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Microfracture">
+    <rdfs:subClassOf rdf:resource="#Fracture"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Fault">
+    <rdfs:subClassOf rdf:resource="#Fracture"/>
+    <rdfs:comment xml:lang="en">In geology, a fault or fault line is a planar rock fracture, which shows evidence of relative movement. Large faults within the Earth's crust are the result of shear motion and active fault zones are the causal locations of most earthquakes. Earthquakes are caused by energy release during rapid slippage along faults. The largest examples are at tectonic plate boundaries but many faults occur far from active plate boundaries. Since faults do not usually consist of a single, clean fracture, the term fault zone is used when referring to the zone of complex deformation that is associated with the fault plane.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Fissure">
+    <rdfs:subClassOf rdf:resource="#Crack"/>
+  </owl:Class>
+  
+ <owl:Class rdf:ID="Shattered">
+    <rdfs:subClassOf rdf:resource="#SolidState"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Disintegrate">
+    <rdfs:subClassOf rdf:resource="#Failure"/>
+    <owl:equivalentClass rdf:resource="#Disintegration"/>
+  </owl:Class>
+ <owl:Class rdf:ID="Disintegration"/>
+
+ <owl:Class rdf:ID="Failure">
+    <rdfs:subClassOf rdf:resource="#MechanicalProcess"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Shatter">
+    <rdfs:subClassOf rdf:resource="#Failure"/>
+  </owl:Class>
+
+</rdf:RDF>

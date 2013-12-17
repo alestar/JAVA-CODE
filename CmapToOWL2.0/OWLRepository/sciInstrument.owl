@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+<!-- Classes -->
+  <owl:Class rdf:ID="ResearchExploration"/>
+  <owl:Class rdf:ID="Equipment"/>
+  <owl:Class rdf:ID="Facility"/>
+  <owl:Class rdf:ID="Temperature"/>
+  
+  <owl:Class rdf:ID="Active">
+    <rdfs:subClassOf rdf:resource="#RetrievalApproach"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="AerialPhotography">
+    <rdfs:subClassOf rdf:resource="#Photography"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Buoy">
+    <rdfs:subClassOf rdf:resource="#Instrument"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DopplerRadar">
+    <rdfs:subClassOf rdf:resource="#Radar"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Imaging">
+    <rdfs:subClassOf rdf:resource="#ResearchExploration"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="InSitu">
+    <rdfs:subClassOf rdf:resource="#RetrievalApproach"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Instrument">
+    <rdfs:subClassOf rdf:resource="#Equipment"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LIDAR">
+    <rdfs:subClassOf rdf:resource="#Instrument"/>
+    <rdfs:comment>LIDAR (Light Detection and Ranging) is an optical remote sensing technology that measures properties of scattered light to find range and/or other information of a distant target. The prevalent method to determine distance to an object or surface is to use laser pulses. Like the similar radar technology, which uses radio waves instead of light, the range to an object is determined by measuring the time delay between transmission of a pulse and detection of the reflected signal. LIDAR technology has application in archaeology, geography, geology, geomorphology, seismology, remote sensing and atmospheric physics.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Magnetogram">
+    <rdfs:subClassOf rdf:resource="#Imaging"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MeteorologicalFacility">
+    <rdfs:subClassOf rdf:resource="#Facility"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Meteostation">
+    <rdfs:subClassOf rdf:resource="#MeteorologicalFacility"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Monitoring">
+    <rdfs:subClassOf rdf:resource="#ResearchExploration"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Optics">
+    <rdfs:subClassOf rdf:resource="#ResearchExploration"/>
+    <rdfs:comment>Optics is a branch of physics that describes the behavior and properties of light and the interaction of light with matter. Optics explains optical phenomena</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Passive">
+    <rdfs:subClassOf rdf:resource="#RetrievalApproach"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Photography">
+    <rdfs:subClassOf rdf:resource="#ResearchExploration"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Radar">
+    <rdfs:subClassOf rdf:resource="#Instrument"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="RetrievalApproach">
+    <rdfs:subClassOf rdf:resource="#ResearchExploration"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="RemoteSensing">
+    <rdfs:subClassOf rdf:resource="#ResearchExploration"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Sensor">
+    <rdfs:subClassOf rdf:resource="#Instrument"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Telethermometer">
+    <rdfs:subClassOf rdf:resource="#Instrument" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhysicalProperty"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Temperature" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A temperature-measuring system in which the thermally sensitive element is located at a distance from the indicating element.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Tomography">
+    <rdfs:subClassOf rdf:resource="#ResearchExploration"/>
+  </owl:Class>
+
+</rdf:RDF>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Classes -->
+  <owl:Class rdf:ID="SpatialMeasure"/>
+  <owl:Class rdf:ID="DistributionFunction"/>
+  
+  <owl:Class rdf:ID="AngularDistribution">
+    <rdfs:subClassOf rdf:resource="#SpatialDistribution"/>
+  </owl:Class>
+  
+  <owl:Class rdf:ID="Anisotropic">
+    <rdfs:subClassOf rdf:resource="#AngularDistribution"/>
+    <owl:disjointWith rdf:resource="#Isotropic" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Anisotropy">
+    <rdfs:subClassOf rdf:resource="#AngularDistribution"/>
+    <owl:disjointWith rdf:resource="#Isotropy" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Asymmetry">
+    <rdfs:subClassOf rdf:resource="#SpatialDistribution"/>
+    <owl:disjointWith rdf:resource="#Symmetry" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Cluster">
+    <rdfs:subClassOf rdf:resource="#SpatialDistribution"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Configuration">
+    <rdfs:subClassOf rdf:resource="#SpatialDistribution"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Confined">
+    <rdfs:subClassOf rdf:resource="#SpatialDistribution"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Contained">
+    <rdfs:subClassOf rdf:resource="#SpatialDistribution"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Containment">
+    <rdfs:subClassOf rdf:resource="#SpatialDistribution"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Expand">
+    <rdfs:subClassOf rdf:resource="#SpatialDistribution"/>
+    <owl:equivalentClass rdf:resource="#Expanding"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Expanding"/>
+
+  <owl:Class rdf:ID="Isotropic">
+    <rdfs:subClassOf rdf:resource="#AngularDistribution"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Isotropy">
+    <rdfs:subClassOf rdf:resource="#AngularDistribution"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Patch">
+    <rdfs:subClassOf rdf:resource="#SpatialDistribution"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="AspectRatio">
+   <rdfs:subClassOf rdf:resource="#Shape"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Shape">
+    <rdfs:subClassOf rdf:resource="#SpatialMeasure"/>
+    <rdfs:comment xml:lang="en">Description of the form of an object</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Round">
+   <rdfs:subClassOf rdf:resource="#Shape"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Rounded">
+   <rdfs:subClassOf rdf:resource="#Shape"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="approximates"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Round" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Bladed">
+   <rdfs:subClassOf rdf:resource="#Shape"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Compact">
+   <rdfs:subClassOf rdf:resource="#Shape"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Flat">
+   <rdfs:subClassOf rdf:resource="#Shape"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Flattend">
+   <rdfs:subClassOf rdf:resource="#Shape"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#approximates" />
+        <owl:allValuesFrom rdf:resource="#Flat" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Short">
+   <rdfs:subClassOf rdf:resource="#Shape"/>
+    <owl:disjointWith rdf:resource="#Long" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Long">
+   <rdfs:subClassOf rdf:resource="#Shape"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Elongated">
+   <rdfs:subClassOf rdf:resource="#Shape"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#approximates" />
+        <owl:allValuesFrom rdf:resource="#Long" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Wide">
+   <rdfs:subClassOf rdf:resource="#Shape"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Narrow">
+   <rdfs:subClassOf rdf:resource="#Shape"/>
+    <owl:disjointWith rdf:resource="#Wide" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Braided">
+   <rdfs:subClassOf rdf:resource="#Shape"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Concealed">
+   <rdfs:subClassOf rdf:resource="#Shape"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Cutoff">
+   <rdfs:subClassOf rdf:resource="#Shape"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Sharp">
+   <rdfs:subClassOf rdf:resource="#Shape"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Prolate">
+   <rdfs:subClassOf rdf:resource="#Shape"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Oblate">
+   <rdfs:subClassOf rdf:resource="#Shape"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Extant">
+   <rdfs:subClassOf rdf:resource="#Shape"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Sheet">
+   <rdfs:subClassOf rdf:resource="#Shape"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Sparse">
+    <rdfs:subClassOf rdf:resource="#SpatialDistribution"/>
+  </owl:Class>
+  
+  <owl:Class rdf:ID="SpatialDistribution">
+    <rdfs:subClassOf rdf:resource="#DistributionFunction"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Spread">
+    <rdfs:subClassOf rdf:resource="#SpatialDistribution"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Symmetry">
+    <rdfs:subClassOf rdf:resource="#SpatialDistribution"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Unconfined">
+    <rdfs:subClassOf rdf:resource="#SpatialDistribution"/>
+    <owl:disjointWith rdf:resource="#Confined" />
+  </owl:Class>
+
+</rdf:RDF>

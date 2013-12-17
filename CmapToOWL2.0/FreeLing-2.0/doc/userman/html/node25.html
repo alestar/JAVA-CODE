@@ -1,0 +1,218 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<!--Converted with LaTeX2HTML 2002-2-1 (1.71)
+original version by:  Nikos Drakos, CBLU, University of Leeds
+* revised and updated by:  Marcus Hennecke, Ross Moore, Herb Swan
+* with significant contributions from:
+  Jens Lippmann, Marek Rouchal, Martin Wilck and others -->
+<HTML>
+<HEAD>
+<TITLE>HMM tagger parameter file</TITLE>
+<META NAME="description" CONTENT="HMM tagger parameter file">
+<META NAME="keywords" CONTENT="userman">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+
+<META NAME="Generator" CONTENT="LaTeX2HTML v2002-2-1">
+<META HTTP-EQUIV="Content-Style-Type" CONTENT="text/css">
+
+<LINK REL="STYLESHEET" HREF="userman.css">
+
+<LINK REL="next" HREF="node26.html">
+<LINK REL="previous" HREF="node24.html">
+<LINK REL="up" HREF="node9.html">
+<LINK REL="next" HREF="node26.html">
+</HEAD>
+
+<BODY >
+
+<DIV CLASS="navigation"><!--Navigation Panel-->
+<A NAME="tex2html422"
+  HREF="node26.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html418"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html412"
+  HREF="node24.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html420"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html423"
+  HREF="node26.html">Relaxation Labelling constraint grammar</A>
+<B> Up:</B> <A NAME="tex2html419"
+  HREF="node9.html">Using the sample main</A>
+<B> Previous:</B> <A NAME="tex2html413"
+  HREF="node24.html">Punctuation symbol file</A>
+ &nbsp; <B>  <A NAME="tex2html421"
+  HREF="node1.html">Contents</A></B> 
+<BR>
+<BR></DIV>
+<!--End of Navigation Panel-->
+
+<H1><A NAME="SECTION003140000000000000000"></A>
+<A NAME="file-hmm"></A>
+<BR>
+HMM tagger parameter file
+</H1>
+
+<P>
+Initial probabilities, transition
+  probabilities, lexical probabilities, etc.  The file has six
+  sections: <code>&lt;Tag&gt;</code>, <code>&lt;Bigram&gt;</code>, <code>&lt;Trigram&gt;</code>, <code>&lt;Initial&gt;</code>,
+  <code>&lt;Word&gt;</code>, and <code>&lt;Smoothing&gt;</code>. Each section is closed by it
+  corresponding tag <code>&lt;/Tag&gt;</code>, <code>&lt;/Bigram&gt;</code>, <code>&lt;/Trigram&gt;</code>, etc.
+
+<P>
+The tag (unigram), bigram, and trigram probabilities are used in
+  Linear Interpolation smoothing by the tagger.
+  The package includes a perl script that may be used to generate an 
+  appropriate config file from a tagged corpus. See the file 
+   <TT>src/utilities/hmm_smooth.perl</TT> for details.
+
+<P>
+
+<UL>
+<LI>Section <code>&lt;Tag&gt;</code>. List of unigram tag probabilities
+  (estimated via your preferred method). 
+  Each line is a tag probability <TT>P(t)</TT> with format 
+<BR>  <TT>Tag Probability</TT>
+
+<P>
+Lines for zero tag (for initial states) and
+  for <TT>x</TT> (unobserved tags) must be included.
+
+<P>
+E.g.
+<BR>    <TT>0  0.03747</TT>
+<BR>    <TT>AQ 0.00227</TT>
+<BR>    <TT>NC 0.18894</TT>
+<BR>    <TT>x  1.07312e-06</TT>
+
+<P>
+</LI>
+<LI>Section <code>&lt;Bigram&gt;</code>. List of bigram
+  transition probabilities (estimated via your preferred method), 
+   Each line is a transition probability, with the format:
+<BR> <TT>Tag1.Tag2 Probability</TT>
+
+<P>
+Tag zero indicates sentence-beggining.
+
+<P>
+E.g. the following line indicates the transition probability between a
+    sentence start and the tag of the first word being <TT>AQ</TT>.
+<BR>    <TT>0.AQ 0.01403</TT>
+
+<P>
+E.g. the following line indicates the transition probability between two
+    consecutive tags.
+<BR>    <TT>AQ.NC 0.16963</TT>
+
+<P>
+</LI>
+<LI>Section <code>&lt;Trigram&gt;</code>. List of trigram
+  transition probabilities (estimated via your preferred method), 
+
+<P>
+Each line is a transition probability, with the format:
+<BR> <TT>Tag1.Tag2.Tag3 Probability</TT>.
+   Tag zero indicates sentence-beggining.
+
+<P>
+E.g. the following line indicates the transition probability that
+    after a <TT>0.AQ</TT> sequence, the next word has <TT>NC</TT> tag.
+<BR>    <TT>0.AQ.NC 0.204081</TT>
+
+<P>
+E.g. the following line indicates the probability of a tag <TT>    SP</TT> appearing after two words tagged <TT>DA</TT> and <TT>NC</TT>.
+<BR>    <TT>DA.NC.SP 0.33312</TT>
+
+<P>
+</LI>
+<LI>Section <code>&lt;Initial&gt;</code>. List of initial state probabilities
+  (estimated via your preferred method), i.e. the ``pi'' parameters of
+  the HMM. 
+
+<P>
+Each line is an initial probability, with the format <TT>   InitialState LogProbability</TT>.
+
+<P>
+Each state is a PoS-bigram code with the
+   form <TT>0.tag</TT>. Probabilities are given in logarithmic form to avoid
+   underflows.
+
+<P>
+E.g. the following line indicates the probability that the
+    sequence starts with a determiner.
+<BR>    <TT>0.DA -1.744857</TT>
+
+<P>
+E.g. the following line indicates the probability that the
+    sequence starts with an unknown tag.
+<BR>    <TT>0.x -10.462703</TT>
+
+<P>
+</LI>
+<LI>Section <code>&lt;Word&gt;</code>. Contains a list of word probabilities
+  <TT>P(w)</TT>
+  (estimated via your preferred method). It is used to compute
+  observation probability toghether with the tag probabilities above.
+
+<P>
+Each line is a word probability <TT>P(w)</TT> with format <TT>word
+  LogProbability</TT>. A special line for <code>&lt;UNOBSERVED\_WORD&gt;</code> must be
+  included.
+
+<P>
+E.g.
+   <PRE>
+    afortunado -13.69500
+    sutil -13.57721
+    &lt;UNOBSERVED_WORD&gt; -13.82853
+</PRE>
+</LI>
+</UL>
+
+<P>
+
+<DIV CLASS="navigation"><HR>
+<!--Navigation Panel-->
+<A NAME="tex2html422"
+  HREF="node26.html">
+<IMG WIDTH="37" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="next"
+ SRC="/usr/share/latex2html/icons/next.png"></A> 
+<A NAME="tex2html418"
+  HREF="node9.html">
+<IMG WIDTH="26" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="up"
+ SRC="/usr/share/latex2html/icons/up.png"></A> 
+<A NAME="tex2html412"
+  HREF="node24.html">
+<IMG WIDTH="63" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="previous"
+ SRC="/usr/share/latex2html/icons/prev.png"></A> 
+<A NAME="tex2html420"
+  HREF="node1.html">
+<IMG WIDTH="65" HEIGHT="24" ALIGN="BOTTOM" BORDER="0" ALT="contents"
+ SRC="/usr/share/latex2html/icons/contents.png"></A>  
+<BR>
+<B> Next:</B> <A NAME="tex2html423"
+  HREF="node26.html">Relaxation Labelling constraint grammar</A>
+<B> Up:</B> <A NAME="tex2html419"
+  HREF="node9.html">Using the sample main</A>
+<B> Previous:</B> <A NAME="tex2html413"
+  HREF="node24.html">Punctuation symbol file</A>
+ &nbsp; <B>  <A NAME="tex2html421"
+  HREF="node1.html">Contents</A></B> </DIV>
+<!--End of Navigation Panel-->
+<ADDRESS>
+
+2008-01-24
+</ADDRESS>
+</BODY>
+</HTML>

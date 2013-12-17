@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+             owl:versionInfo="2.0">
+  </owl:Ontology>
+<!-- Experiment -->
+
+ <owl:Class rdf:ID="Adjusted">
+    <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Analysis">
+    <rdfs:subClassOf rdf:resource="#Research"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Anomaly">
+    <rdfs:subClassOf rdf:resource="#Realization"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Assessment">
+    <rdfs:subClassOf rdf:resource="#Investigation"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Baseline">
+    <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Bias">
+    <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Campaign">
+    <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Count">
+    <rdfs:subClassOf rdf:resource="#Measurement"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Correction">
+    <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Defining">
+    <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Difference">
+    <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Dimension">
+    <rdfs:subClassOf rdf:resource="#Measurement"/>
+    <rdfs:comment>In common usage, a dimension is a parameter or measurement used to describe some relevant characteristic of an object. The most commonly used dimensions are the parameters describing the size of an object: length, width, and height, but dimensions can also be other physical parameters such as the mass and electric charge of an object, or even, in a context where cost is relevant, an economic parameter such as its price.</rdfs:comment>
+  </owl:Class>
+
+ <owl:Class rdf:ID="EmpiricalLaw">
+    <rdfs:subClassOf rdf:resource="#Representation"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="EnsembleForecast">
+    <rdfs:subClassOf rdf:resource="#Forecast" />
+    <rdfs:comment xml:lang="en">A set of different forecasts all valid at the same forecast time(s).</rdfs:comment>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Experiment">
+    <rdfs:subClassOf rdf:resource="#Investigation"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="ExperimentActivity">
+    <rdfs:subClassOf rdf:resource="#Experiment"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="ExtendedForecast">
+    <rdfs:subClassOf rdf:resource="#Forecast" />
+    <rdfs:comment xml:lang="en">A forecast of weather conditions for a period extending beyond three or more days from the day of issuance.</rdfs:comment>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Forecast">
+    <rdfs:subClassOf rdf:resource="#Prediction"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Hypothesis">
+    <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="HypothesisTest">
+    <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Impact">
+    <rdfs:subClassOf rdf:resource="#Assessment"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Index">
+    <rdfs:subClassOf rdf:resource="#Property"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Indicator">
+    <rdfs:subClassOf rdf:resource="#Research"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Instance">
+    <rdfs:subClassOf rdf:resource="#Research"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Iteration">
+    <rdfs:subClassOf rdf:resource="#Research"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Investigation">
+    <rdfs:subClassOf rdf:resource="#Research"/>
+    <owl:equivalentClass rdf:resource="#Investigate"/>
+  </owl:Class>
+ <owl:Class rdf:ID="Investigate"/>
+
+ <owl:Class rdf:ID="Measurement">
+    <rdfs:subClassOf rdf:resource="#Research"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="MeasurementScale">
+    <owl:equivalentClass rdf:resource="#Scale"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Model">
+    <rdfs:subClassOf rdf:resource="#Representation"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Observation">
+    <rdfs:subClassOf rdf:resource="#Investigation"/>
+    <owl:equivalentClass rdf:resource="#Observe"/>
+  </owl:Class>
+ <owl:Class rdf:ID="Observe"/>
+
+ <owl:Class rdf:ID="Outlier">
+    <rdfs:subClassOf rdf:resource="#Anomaly"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="PhysicalApproximation">
+    <rdfs:subClassOf rdf:resource="#Representation"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Predict">
+    <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+    <owl:equivalentClass rdf:resource="#Prediction"/>
+  </owl:Class>
+ <owl:Class rdf:ID="Prediction"/>
+
+ <owl:Class rdf:ID="Project">
+    <rdfs:subClassOf rdf:resource="#Research"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Proof">
+    <rdfs:subClassOf rdf:resource="#Validation"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Publication">
+    <rdfs:subClassOf rdf:resource="#Research"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Quantitative">
+    <rdfs:subClassOf rdf:resource="#MeasurementScale"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Realization">
+    <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Reference">
+    <rdfs:subClassOf rdf:resource="#Research"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Representation">
+    <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Research">
+    <rdfs:subClassOf rdf:resource="#HumanActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="ResearchExploration">
+    <rdfs:subClassOf rdf:resource="#Research"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Residual">
+    <rdfs:subClassOf rdf:resource="#Research"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Sample">
+    <rdfs:subClassOf rdf:resource="#Measurement"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Scale">
+    <rdfs:subClassOf rdf:resource="#Research"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Simulate">
+    <rdfs:subClassOf rdf:resource="#Investigation"/>
+    <owl:equivalentClass rdf:resource="#Simulation"/>
+  </owl:Class>
+ <owl:Class rdf:ID="Simulation"/>
+
+ <owl:Class rdf:ID="Superimpose">
+    <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+  </owl:Class>
+  
+ <owl:Class rdf:ID="Theory">
+    <rdfs:subClassOf rdf:resource="#ExperimentActivity"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Validation">
+    <rdfs:subClassOf rdf:resource="#Research"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Variable">
+    <rdfs:subClassOf rdf:resource="#Representation"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Science">
+    <rdfs:subClassOf rdf:resource="#KnowledgeDomain"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="WeightOfEvidence">
+    <rdfs:subClassOf rdf:resource="#Assessment"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="KnowledgeDomain">
+    <rdfs:subClassOf rdf:resource="#Research"/>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:ID="representationOf">
+    <rdfs:range rdf:resource="#Representation"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:ID="measureOf"/>
+
+  <owl:ObjectProperty rdf:ID="hasCause"/>
+  <owl:ObjectProperty rdf:ID="hasEffect"/>
+
+  <owl:ObjectProperty rdf:ID="studyOf">
+    <rdfs:domain rdf:resource="#KnowledgeDomain"/>
+  </owl:ObjectProperty>
+
+ <owl:Class rdf:ID="Unknown">
+    <rdfs:subClassOf rdf:resource="#Category"/>
+    <owl:disjointWith rdf:resource="#Known" />
+  </owl:Class>
+
+ <owl:Class rdf:ID="Known">
+    <rdfs:subClassOf rdf:resource="#Category"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Actual">
+    <rdfs:subClassOf rdf:resource="#Category"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Condition">
+    <rdfs:subClassOf rdf:resource="#Characteristics"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Category">
+    <rdfs:subClassOf rdf:resource="#Property"/>
+    <owl:equivalentClass rdf:resource="#Classification"/>
+  </owl:Class>
+ <owl:Class rdf:ID="Classification"/>
+
+ <owl:Class rdf:ID="CategoricalScale">
+    <rdfs:subClassOf rdf:resource="#MeasurementScale"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Characteristics">
+    <rdfs:subClassOf rdf:resource="#Property"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Description">
+    <owl:equivalentClass rdf:resource="#Characteristics"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Gradation">
+    <rdfs:subClassOf rdf:resource="#Property"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Group">
+    <rdfs:subClassOf rdf:resource="#Category"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Quality">
+    <rdfs:subClassOf rdf:resource="#Property"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Qualitative">
+    <rdfs:subClassOf rdf:resource="#Property"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Type">
+    <rdfs:subClassOf rdf:resource="#Characteristics"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Typical">
+    <rdfs:subClassOf rdf:resource="#Category"/>
+  </owl:Class>
+
+</rdf:RDF>

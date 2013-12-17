@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+             owl:versionInfo="2.0">
+  </owl:Ontology>
+
+ <owl:Class rdf:ID="Adsorption">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    <rdfs:comment xml:lang="en">Adsorption is the accumulation of atoms or molecules on the surface of a material. This process creates a film of the adsorbate (the molecules or atoms being accumulated) on the adsorbent's surface. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Aeration">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    <rdfs:comment xml:lang="en">Aeration (also called aerification) is the process by which air is circulated through, mixed with or dissolved in a liquid or substance. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Calcification">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    <rdfs:comment xml:lang="en">Any process that increases the calcium concentration of a subtance.</rdfs:comment>
+  </owl:Class>
+
+ <owl:Class rdf:ID="ChemicalProcess">
+    <rdfs:subClassOf rdf:resource="#Process"/>
+    <rdfs:comment xml:lang="en">A chemical process is a method or means of somehow changing one or more chemicals or chemical compounds.  [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Corrode">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    <owl:equivalentClass rdf:resource="#Corrosion"/>
+  </owl:Class>
+ <owl:Class rdf:ID="Corrosion"/>
+
+ <owl:Class rdf:ID="Crystallize">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    <owl:equivalentClass rdf:resource="#Crystallization"/>
+    <rdfs:comment xml:lang="en">Crystallization is the (natural or artificial) process of formation of solid crystals precipitating from a solution, melt or more rarely deposited directly from a gas. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+ <owl:Class rdf:ID="Crystallization"/>
+
+ <owl:Class rdf:ID="Desalinization">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Dilute">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    <owl:equivalentClass rdf:resource="#Dilution"/>
+  </owl:Class>
+ <owl:Class rdf:ID="Dilution"/>
+
+ <owl:Class rdf:ID="Dissolve">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    <owl:equivalentClass rdf:resource="#Dissolution"/>
+    <owl:equivalentClass rdf:resource="#Solvation"/>
+    <rdfs:comment xml:lang="en">Dissolution or solvation is the process of dissolving a solid substance into a solvent to yield a solution. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+ <owl:Class rdf:ID="Dissolution"/>
+ <owl:Class rdf:ID="Solvation"/>
+
+ <owl:Class rdf:ID="Electrolysis">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    <rdfs:comment xml:lang="en">Electrolysis is a method of using an electric current to drive an otherwise non-spontaneous chemical reaction.</rdfs:comment>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Fixation">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Flare">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    <owl:equivalentClass rdf:resource="#Flaring"/>
+  </owl:Class>
+ <owl:Class rdf:ID="Flaring"/>
+
+ <owl:Class rdf:ID="Leach">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    <rdfs:comment xml:lang="en">In general, leaching is the extraction of certain materials from a carrier into a liquid (usually, but not always a solvent).</rdfs:comment>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Mix">
+    <owl:equivalentClass rdf:resource="#Mixing"/>
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+  </owl:Class>
+ <owl:Class rdf:ID="Mixing"/>
+
+ <owl:Class rdf:ID="Oxidize">
+    <rdfs:subClassOf rdf:resource="#Reaction" />
+    <owl:equivalentClass rdf:resource="#Oxidation"/>
+    <rdfs:comment xml:lang="en">Reaction of a substance with oxygen or incorporation of oxygen into a molecule.
+    </rdfs:comment>
+  </owl:Class>
+ <owl:Class rdf:ID="Oxidation"/>
+
+ <owl:Class rdf:ID="Photolysis">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    <owl:equivalentClass rdf:resource="#Photodissociation"/>
+    <owl:equivalentClass rdf:resource="#Photodecomposition"/>
+    <rdfs:comment xml:lang="en">Photodissociation, photolysis, or photodecomposition is a chemical reaction in which a chemical compound is broken down by photons. It is defined as the interaction of one or more photons with one target molecule. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+ <owl:Class rdf:ID="Photodissociation"/>
+ <owl:Class rdf:ID="Photodecomposition"/>
+
+ <owl:Class rdf:ID="RadioactiveDecay">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Radioactivity">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Reaction">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Reduce">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    <owl:equivalentClass rdf:resource="#Reduction"/>
+    <owl:disjointWith rdf:resource="#Oxidation" />
+  </owl:Class>
+ <owl:Class rdf:ID="Reduction"/>
+
+ <owl:Class rdf:ID="Solidify">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+  </owl:Class>
+
+ <owl:Class rdf:ID="Titration">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    <rdfs:comment xml:lang="en">Titration is a common laboratory method of quantitative chemical analysis that is used to determine the unknown concentration of a known reactant.</rdfs:comment>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:ID="hasChemicalProcess">
+    <owl:equivalentProperty rdf:resource="#hasProcess"/>
+  </owl:ObjectProperty>
+
+</rdf:RDF>

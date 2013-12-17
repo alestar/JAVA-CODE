@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Fluid Properties -->
+  <owl:Class rdf:ID="Streamfunction"/>
+  <owl:Class rdf:ID="Barotropic"/>
+  <owl:Class rdf:ID="Index"/>
+  <owl:Class rdf:ID="FluidProperty"/>
+  <owl:Class rdf:ID="dimensionlessUnit"/>
+  <owl:Class rdf:ID="PhysicalProperty"/>
+  <owl:Class rdf:ID="Vorticity"/>
+  <owl:Class rdf:ID="perKilogram_meterSquared_perSecond_kelvin"/>
+  <owl:Class rdf:ID="Ratio"/>
+  <owl:Class rdf:ID="Baroclinic"/>
+  <owl:Class rdf:ID="Motion"/>
+  <owl:Class rdf:ID="Pressure"/>
+  <owl:Class rdf:ID="PlanetaryPhenomena"/>
+  <owl:Class rdf:ID="Fluid"/>
+  <owl:Class rdf:ID="Convergence"/>
+  <owl:Class rdf:ID="Divergence"/>
+  <owl:Class rdf:ID="Region"/>
+  <owl:Class rdf:ID="Density"/>
+  <owl:Class rdf:ID="PhysicalApproximation"/>
+  <owl:Class rdf:ID="PhysicalLaw"/>
+  <owl:Class rdf:ID="Energy"/>
+  <owl:Class rdf:ID="FluidState"/>
+  
+  <owl:Class rdf:ID="BarotropicStreamfunction">
+    <rdfs:subClassOf rdf:resource="#Streamfunction"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasComponent"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Barotropic" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="CirculationIndex">
+    <rdfs:subClassOf rdf:resource="#Index"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DragCoefficient">
+    <rdfs:subClassOf rdf:resource="#FluidProperty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasDefaultUnit"/>	
+		</owl:onProperty>
+        <owl:hasValue rdf:resource="#dimensionlessUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Enstrophy">
+    <rdfs:subClassOf rdf:resource="#PhysicalProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PotentialVorticity"/>
+
+  <owl:Class rdf:ID="AbsoluteVorticity">
+    <rdfs:subClassOf rdf:resource="#Vorticity"/>
+    <rdfs:label>Absolute Vorticity</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ErtelPotentialVorticity">
+    <rdfs:subClassOf rdf:resource="#PotentialVorticity"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#perKilogram_meterSquared_perSecond_kelvin"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MeridionalOvertuningStreamfunction">
+    <rdfs:subClassOf rdf:resource="#Streamfunction"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="RossbyNumber">
+    <rdfs:subClassOf rdf:resource="#Ratio" />
+    <rdfs:comment xml:lang="en">A dimensionless number relating the ratio of inertial to Coriolis forces for a given flow of a rotating fluid.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="RelativeVorticity">
+    <rdfs:subClassOf rdf:resource="#Vorticity"/>
+    <rdfs:comment xml:lang="en">The vorticity as measured in a system of coordinates fixed on the earth's surface.  Usually, only the vertical component of the vorticity is meant.</rdfs:comment>
+  </owl:Class>
+
+<!-- Phenomena -->
+  <owl:Class rdf:ID="Overturning">
+    <rdfs:subClassOf rdf:resource="#Circulation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="BaroclinicCirculation">
+    <rdfs:subClassOf rdf:resource="#Circulation"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasComponent" />
+        <owl:allValuesFrom rdf:resource="#Baroclinic" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="BarotropicCirculation">
+    <rdfs:subClassOf rdf:resource="#Circulation"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasComponent" />
+        <owl:allValuesFrom rdf:resource="#Barotropic" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Recirculation">
+    <rdfs:subClassOf rdf:resource="#Circulation"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Circulation">
+    <rdfs:subClassOf rdf:resource="#Flow"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Flow">
+    <rdfs:subClassOf rdf:resource="#Motion"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasStateOfMatter"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Fluid" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Jet">
+    <rdfs:subClassOf rdf:resource="#Flow"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhysicalProcess"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Pressure"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Eddy">
+    <rdfs:subClassOf rdf:resource="#PlanetaryPhenomena"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasStateOfMatter" />
+        <owl:allValuesFrom rdf:resource="#Fluid" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  <rdfs:comment>In fluid dynamics, an eddy is the swirling of a fluid and the reverse current created when the fluid flows past an obstacle. The moving fluid creates a space devoid of downstream-flowing water on the downstream side of the object. Fluid behind the obstacle flows into the void creating a swirl of fluid on each edge of the obstacle, followed by a short reverse flow of fluid behind the obstacle flowing upstream, toward the back of the obstacle. This phenomenon is most visible behind large emergent rocks in swift-flowing rivers.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LaminarFlow">
+    <rdfs:subClassOf rdf:resource="#Flow"/>
+    <rdfs:comment xml:lang="en">(Also called sheet flow, streamline flow.) A flow regime in which fluid motion is smooth and orderly, and in which adjacent layers or laminas slip past each other with little mixing between them. Exchange of material across laminar layers occurs by molecular diffusion, a process about 106 times less effective than turbulence. Laminar flow can be easily predicted as velocity increases at a steady rate from a boundary. This contrasts with the chaotic and random nature of turbulent flow. Laminar flow is not a common occurrence in the statically neutral and unstable atmosphere and is confined to a very thin layer (1 mm) adjacent to very smooth surfaces such as snow and ice. However, in strongly statically stable regions such as the the nocturnal boundary layer, the Richardson number can be large enough that turbulence is suppressed, and the flow is laminar over a layer many tens of meters thick.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Confluence">
+    <rdfs:subClassOf rdf:resource="#FluidProperty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhysicalProperty"/>	
+		</owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#Convergence" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The rate at which adjacent flow is converging along an axis oriented normal to the flow at the point in question.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Diffluence">
+    <rdfs:subClassOf rdf:resource="#FluidProperty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProperty" />
+        <owl:someValuesFrom rdf:resource="#Divergence" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The rate at which adjacent flow diverges along an axis oriented normal to the flow at the point in question; the opposite of confluence.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ViscousFlow">
+    <rdfs:subClassOf rdf:resource="#Flow"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="StationaryEddy">
+    <rdfs:subClassOf rdf:resource="#Eddy" />
+    <rdfs:comment xml:lang="en">In studies of the general circulation, the eddies are the departures of a field from the zonal mean of that field; the stationary eddies are the time-averaged, or time-invariant, component of the eddy field.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Vortex">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProperty" />
+        <owl:allValuesFrom rdf:resource="#Vorticity" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Flow" />
+    <rdfs:comment xml:lang="en">More often the term refers to a flow with closed streamlines or to the idealized case in which all vorticity is concentrated in a vortex filament.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PointVortex">
+    <rdfs:subClassOf rdf:resource="#Vortex" />
+    <rdfs:comment xml:lang="en">A straight line vortex, the flow of which can be modeled in two dimensions, with a point concentration of vorticity surrounded by irrotational flow.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LaminarBoundaryLayer">
+    <rdfs:subClassOf rdf:resource="#Region" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProcess" />
+        <owl:allValuesFrom rdf:resource="#LaminarFlow" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">An interfacial region in which flow is smooth and nonturbulent. Above a surface, a laminar layer will develop and fluid velocity will increase with distance from the surface, but not indefinitely. At some point, flow will become turbulent, with the laminar sublayer separating the turbulent layer from the surface. In the real world, most laminar boundary layers are extremely thin (order of 1 mm), but can be of biological importance, for example, next to plant leaves or as invertebrate refuges in streams.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LaminarSublayer">
+    <rdfs:subClassOf rdf:resource="#LaminarBoundaryLayer" />
+    <rdfs:comment xml:lang="en">A layer in which the fluid undergoes smooth, nonturbulent flow. It is found between any surface and a turbulent layer above. See laminar boundary layer, laminar flow.</rdfs:comment>
+  </owl:Class>
+
+<!-- Laws and Assumptions -->
+  <owl:Class rdf:ID="BoussinesqApproximation">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProcess" />
+        <owl:allValuesFrom rdf:resource="#Motion" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProperty" />
+        <owl:allValuesFrom rdf:resource="#Density" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#PhysicalApproximation" />
+    <rdfs:comment xml:lang="en">An approximation to the dynamical equations of motion whereby density is assumed to be constant except in the buoyancy term of the vertical velocity equation.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="RigidLidApproximation">
+    <rdfs:subClassOf rdf:resource="#PhysicalApproximation" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="StokesLaw">
+    <rdfs:subClassOf rdf:resource="#PhysicalApproximation" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="BernoulliTheorem">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProcess" />
+        <owl:allValuesFrom rdf:resource="#Motion" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#PhysicalLaw" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProperty" />
+        <owl:allValuesFrom rdf:resource="#Energy" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">As originally formulated, a statement of the conservation of energy (per unit mass) for an inviscid fluid in steady motion.
+    </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="FroudeNumber">
+    <rdfs:subClassOf rdf:resource="#Ratio" />
+  </owl:Class>
+
+<!-- Processes (or Phenomena) -->
+  <owl:Class rdf:ID="Ageostrophic">
+    <rdfs:subClassOf rdf:resource="#FluidState" />
+    <owl:disjointWith rdf:resource="#Geostrophic"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Geostrophic">
+    <rdfs:subClassOf rdf:resource="#FluidState" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="QuasiGeostrophic">
+    <rdfs:subClassOf rdf:resource="#FluidState" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="approximates"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Geostrophic" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPhysicalProperty" />
+        <owl:someValuesFrom rdf:resource="#RossbyNumber" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">A system or flow that evolves slowly in time compared to the rotation period of the earth, has a length scale of the deformation radius or larger, and undergoes only limited vertical excursions.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Ekman">
+    <rdfs:subClassOf rdf:resource="#FluidState" />
+    <rdfs:comment xml:lang="en">Motions describing an equlibrium between pressure gradient force, Coriolis force and the turbulent dragi force.</rdfs:comment>
+  </owl:Class>
+
+</rdf:RDF>

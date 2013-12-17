@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Carbohydrates</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Carbohydrate">
+                <sense domains="[chemistry]"
+                    gloss="an essential structural component of living cells and source of energy for animals; includes simple sugars with small molecules as well as macromolecular substances; are classified according to the number of monosaccharide groups they contain"
+                    number="10609937" pos="n" terms="[carbohydrate, saccharide, sugar]"/>
+            </concept>
+            <concept id="2" label="Monosaccharide">
+                <sense domains="[chemistry]"
+                    gloss="a simple sugar (like sucrose or fructose) that does not hydrolyse to give other sugars; the simplest group of carbohydrates"
+                    number="10729839" pos="n" terms="[monosaccharide, monosaccharose]"/>
+            </concept>
+            <concept id="3" label="Disaccharide">
+                <sense domains="[chemistry]"
+                    gloss="any of a variety of carbohydrates that yield two monosaccharide molecules on complete hydrolysis"
+                    number="10643329" pos="n" terms="[disaccharide]"/>
+            </concept>
+            <concept id="4" label="Polysaccharide">
+                <sense domains="[chemistry]"
+                    gloss="any of a class of carbohydrates whose molecules contain chains of monosaccharide molecules"
+                    number="10760671" pos="n" terms="[polysaccharide, polyose]"/>
+            </concept>
+            <concept id="5" label="Plant structure"/>
+            <concept id="6" label="Energy">
+                <sense domains="[physics]"
+                    gloss="(physics) the capacity of a physical system to do work; the units of energy are joules or ergs; &quot;energy can take a wide variety of forms&quot;"
+                    number="07794689" pos="n" terms="[energy]"/>
+                <sense domains="[factotum]"
+                    gloss="an exertion of force; &quot;he plays tennis with great energy&quot;"
+                    number="03932475" pos="n" terms="[energy, vigor, vigour]"/>
+                <sense domains="[psychological_features]"
+                    gloss="enterprising or ambitious drive; &quot;Europeans often laugh at American energy&quot;"
+                    number="03791327" pos="n" terms="[energy, push, get-up-and-go]"/>
+                <sense domains="[biology, psychological_features]"
+                    gloss="an imaginative lively style (especially style of writing); &quot;his writing conveys great energy&quot;"
+                    number="03654225" pos="n" terms="[energy, vigor, vigour, vim]"/>
+                <sense domains="[health, physiology]"
+                    gloss="a healthy capacity for vigorous activity; &quot;jogging works off my excess energy&quot;; &quot;he seemed full of vim and vigor&quot;"
+                    number="10119788" pos="n" terms="[energy, vim, vitality]"/>
+                <sense domains="[administration, politics]"
+                    gloss="the federal department responsible for maintaining a national energy policy; created in 1977"
+                    number="06059369" pos="n" terms="[Department_of_Energy, Energy_Department, Energy]"/>
+            </concept>
+            <concept id="7" label="CH2O"/>
+            <concept id="8" label="Starch">
+                <sense domains="[chemistry]"
+                    gloss="a complex carbohydrate found chiefly in seeds, fruits, tubers, roots and stem pith of plants, notably in corn, potatoes, wheat, and rice; an important foodstuff and used otherwise especially in adhesives and as fillers and stiffeners for paper and textiles"
+                    number="10801135" pos="n" terms="[starch, amylum]"/>
+            </concept>
+            <concept id="9" label="Cellulose">
+                <sense domains="[chemistry]"
+                    gloss="a polysaccharide that is the chief constituent of all plant tissues and fibers"
+                    number="10611050" pos="n" terms="[cellulose]"/>
+            </concept>
+            <concept id="10" label="Sugar storage"/>
+            <concept id="11" label="Cell wall structure"/>
+            <concept id="12" label="Isomer">
+                <sense domains="[chemistry]"
+                    gloss="a compound that exists in forms having different arrangements of atoms but the same molecular weight"
+                    number="10709244" pos="n" terms="[isomer]"/>
+            </concept>
+            <concept id="13" label="Preferred cellular fuel"/>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="14" label="structure includes"/>
+            <linking-phrase id="15" label="function as"/>
+            <linking-phrase id="16" label="through dehydration synthesis form"/>
+            <linking-phrase id="17" label="have the general formula"/>
+            <linking-phrase id="18" label="are found as"/>
+            <linking-phrase id="19" label="function as"/>
+            <linking-phrase id="20" label="e.g."/>
+            <linking-phrase id="21" label="e.g."/>
+            <linking-phrase id="22" label="e.g."/>
+            <linking-phrase id="23" label="function in"/>
+            <linking-phrase id="24" label="function in"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="14"/>
+            <connection from-id="14" to-id="2"/>
+            <connection from-id="14" to-id="3"/>
+            <connection from-id="14" to-id="4"/>
+            <connection from-id="1" to-id="15"/>
+            <connection from-id="15" to-id="5"/>
+            <connection from-id="15" to-id="6"/>
+            <connection from-id="2" to-id="16"/>
+            <connection from-id="16" to-id="3"/>
+            <connection from-id="16" to-id="4"/>
+            <connection from-id="2" to-id="17"/>
+            <connection from-id="17" to-id="7"/>
+            <connection from-id="2" to-id="18"/>
+            <connection from-id="18" to-id="12"/>
+            <connection from-id="2" to-id="19"/>
+            <connection from-id="19" to-id="13"/>
+            <connection from-id="4" to-id="20"/>
+            <connection from-id="20" to-id="8"/>
+            <connection from-id="20" to-id="9"/>
+            <connection from-id="5" to-id="21"/>
+            <connection from-id="21" to-id="11"/>
+            <connection from-id="6" to-id="22"/>
+            <connection from-id="22" to-id="10"/>
+            <connection from-id="22" to-id="13"/>
+            <connection from-id="8" to-id="23"/>
+            <connection from-id="23" to-id="10"/>
+            <connection from-id="9" to-id="24"/>
+            <connection from-id="24" to-id="11"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="349" y="33"/>
+            <concept-appearance id="2" x="85" y="134"/>
+            <concept-appearance id="3" x="228" y="133"/>
+            <concept-appearance id="4" x="348" y="132"/>
+            <concept-appearance id="5" x="489" y="137"/>
+            <concept-appearance id="6" x="620" y="139"/>
+            <concept-appearance id="7" x="36" y="278"/>
+            <concept-appearance id="8" x="312" y="246"/>
+            <concept-appearance id="9" x="416" y="248"/>
+            <concept-appearance id="10" x="310" y="361"/>
+            <concept-appearance id="11" x="417" y="364"/>
+            <concept-appearance id="12" x="89" y="281"/>
+            <concept-appearance id="13" x="157" y="276"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="14" x="247" y="94"/>
+            <linking-phrase id="15" x="475" y="96"/>
+            <linking-phrase id="16" x="181" y="210"/>
+            <linking-phrase id="17" x="33" y="214"/>
+            <linking-phrase id="18" x="80" y="229"/>
+            <linking-phrase id="19" x="146" y="242"/>
+            <linking-phrase id="20" x="362" y="207"/>
+            <linking-phrase id="21" x="493" y="277"/>
+            <linking-phrase id="22" x="372" y="510"/>
+            <linking-phrase id="23" x="301" y="332"/>
+            <linking-phrase id="24" x="410" y="322"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+  <owl:Class rdf:ID="ExchangeCapacity"/>
+  <owl:Class rdf:ID="Substance"/>
+  <owl:Class rdf:ID="Chemical"/>
+  <owl:Class rdf:ID="ChemicalState"/>
+  <owl:Class rdf:ID="ChemicalProcess"/>
+  <owl:Class rdf:ID="H"/>
+  <owl:Class rdf:ID="H4"/>
+  <owl:Class rdf:ID="O"/>
+  <owl:Class rdf:ID="O2"/>
+  <owl:Class rdf:ID="O3"/>
+  
+  
+  
+  <owl:Class rdf:ID="Anion">
+    <rdfs:subClassOf rdf:resource="#Ion"/>
+    <rdfs:comment xml:lang="en">An anion is an ion that has more electrons than protons such that the atom or molecule is negatively charged. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Cation">
+    <rdfs:subClassOf rdf:resource="#Ion"/>
+    <rdfs:comment xml:lang="en">An cation is an ion that has more protons than electrons such that the atom or molecule is positively charged. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="CationExchangeCapacity">
+    <rdfs:subClassOf rdf:resource="#ExchangeCapacity"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>  
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasSubstance"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Cation" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="HeavyIon">
+    <rdfs:subClassOf rdf:resource="#Ion"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Ion">
+    <rdfs:subClassOf rdf:resource="#Substance"/>
+    <rdfs:comment xml:lang="en">An ion is an atom or molecule where the total number of electrons is not equal to the total number of protons, giving it a net positive or negative electrical charge. [Wikipedia]</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="IonizedSubstance">
+    <rdfs:subClassOf rdf:resource="#Substance"/>
+    <owl:disjointWith rdf:resource="#NeutralSubstance"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="NeutralSubstance">
+    <rdfs:subClassOf rdf:resource="#Substance"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:datatype="&xsd;double">0</owl:hasValue>
+        <owl:onProperty rdf:resource="#hasCharge"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:ObjectProperty rdf:ID="hasCharge">
+    <rdfs:domain rdf:resource="#Chemical"/>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:ID="Charge">
+    <rdfs:subClassOf rdf:resource="#ChemicalState"/>
+  </owl:Class>
+ 
+  <owl:Class rdf:ID="Ionized">
+    <rdfs:subClassOf rdf:resource="#ChemicalState"/>
+  </owl:Class>
+
+<!-- Processes -->
+  <owl:Class rdf:ID="Deionize">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    <owl:equivalentClass rdf:resource="#Deionization"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>  
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="from"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#IonizedSubstance" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="to"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#NeutralSubstance" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Deionization" />
+
+  <owl:Class rdf:ID="Ionize">
+    <rdfs:subClassOf rdf:resource="#ChemicalProcess"/>
+    <owl:equivalentClass rdf:resource="#Ionization"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#to"/>
+        <owl:allValuesFrom rdf:resource="#IonizedSubstance" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Ionization is the physical process of converting an atom or molecule into an ion by changing the difference between the number of protons and electrons. This process works slightly differently depending on whether an ion with a positive or a negative electric charge is being produced. A positive electric charge is produced when an electron bond to an atom or molecule absorbs enough energy from an external source to escape from the electric potential barrier that originally confined it, where the amount of energy required is called the Ionization potential. A negative electric charge is produced when a free electron collides with an atom and is subsequently caught inside the electric potential barrier, releasing any excess energy.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Ionization" />
+
+<!-- Substances -->
+  <owl:Class rdf:ID="Hplus">
+    <rdfs:subClassOf rdf:resource="#Ion"/>
+    <rdfs:subClassOf rdf:resource="#H"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:datatype="&xsd;double">1</owl:hasValue>
+        <owl:onProperty rdf:resource="#hasCharge"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="H4plus">
+    <rdfs:subClassOf rdf:resource="#Ion"/>
+    <rdfs:subClassOf rdf:resource="#H4"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:datatype="&xsd;double">1</owl:hasValue>
+        <owl:onProperty rdf:resource="#hasCharge"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Ominus">
+    <rdfs:subClassOf rdf:resource="#Ion"/>
+    <rdfs:subClassOf rdf:resource="#O"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:datatype="&xsd;double">-1</owl:hasValue>
+        <owl:onProperty rdf:resource="#hasCharge"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="O2minus">
+    <rdfs:subClassOf rdf:resource="#Ion"/>
+    <rdfs:subClassOf rdf:resource="#O2"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:datatype="&xsd;double">-1</owl:hasValue>
+        <owl:onProperty rdf:resource="#hasCharge"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="O3minus">
+    <rdfs:subClassOf rdf:resource="#Ion"/>
+    <rdfs:subClassOf rdf:resource="#O3"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:datatype="&xsd;double">-1</owl:hasValue>
+        <owl:onProperty rdf:resource="#hasCharge"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Oplus">
+    <rdfs:subClassOf rdf:resource="#Ion"/>
+    <rdfs:subClassOf rdf:resource="#O"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:datatype="&xsd;double">1</owl:hasValue>
+        <owl:onProperty rdf:resource="#hasCharge"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="O3minusminus">
+    <rdfs:subClassOf rdf:resource="#Ion"/>
+    <rdfs:subClassOf rdf:resource="#O3"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:datatype="&xsd;double">-2</owl:hasValue>
+        <owl:onProperty rdf:resource="#hasCharge"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+</rdf:RDF>

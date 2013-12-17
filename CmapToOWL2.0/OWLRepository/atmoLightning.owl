@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+  
+	<owl:Class rdf:ID="Thunderstorm"/>
+	<owl:Class rdf:ID="ElectricPotential"/>
+	<owl:Class rdf:ID="Sound"/>
+ 
+  <owl:Class rdf:ID="BallLightning">
+    <rdfs:subClassOf rdf:resource="#Lightning" />
+    <rdfs:comment xml:lang="en">A rare and randomly occurring bright ball of light observed floating or moving through the atmosphere close to the ground.
+    </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="BeadedLightning">
+    <rdfs:subClassOf rdf:resource="#Lightning" />
+    <rdfs:comment xml:lang="en">A particular aspect of a normal lightning flash occasionally seen when the observer happens to view end-on a number of segments of the irregular channel (zigzag lightning) and hence receives an impression of higher luminosity at a series of locations along the channel.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="BlueJet">
+    <rdfs:subClassOf rdf:resource="#Lightning" />
+    <rdfs:comment xml:lang="en">Weakly luminous upward propagating discharges, blue in color, emanating from the tops of thunderstorms.
+    </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="JunctionStreamer">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasMeteorologicalPhenomena"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Thunderstorm" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasMeteorologicalPhenomena" />
+        <owl:allValuesFrom rdf:resource="#Lightning" />
+     </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Lightning" />
+    <rdfs:comment xml:lang="en">The process by which negative charge centers at successively more distant locations in a thundercloud are tapped for discharge by successive strokes of cloud-to-ground lightning.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Lightning">
+    <rdfs:subClassOf rdf:resource="#MeteorologicalPhenomena"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhysicalProcess"/>	
+		</owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#ElectricPotential" />
+     </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasMeteorologicalPhenomena" />
+        <owl:allValuesFrom rdf:resource="#Thunder" />
+       </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Lightning is a transient, high-current electric discharge with pathlengths measured in kilometers. The most common source of lightning is the electric charge separated in ordinary thunderstorm clouds.   
+    </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ReturnStroke">
+    <rdfs:subClassOf rdf:resource="#Lightning" />
+    <rdfs:comment xml:lang="en">The intense luminosity that propagates upward from earth to cloud base in the last phase of each lightning stroke of a cloud-to-ground discharge.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Thunder">
+    <rdfs:subClassOf rdf:resource="#MeteorologicalPhenomena" />
+    <rdfs:subClassOf rdf:resource="#Sound" />
+    <rdfs:comment xml:lang="en">The sound emitted by rapidly expanding gases along the channel of a lightning discharge.
+    </rdfs:comment>
+  </owl:Class>
+
+</rdf:RDF>

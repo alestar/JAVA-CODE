@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Immune system</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Immune system">
+                <sense domains="[anatomy]"
+                    gloss="a system (including the thymus and bone marrow and lymphoid tissues) that protects the body from foreign substances and pathogenic organisms by producing the immune response"
+                    number="04343506" pos="n" terms="[immune_system]"/>
+            </concept>
+            <concept id="2" label="Non-specific immunity"/>
+            <concept id="3" label="Specific immunity"/>
+            <concept id="4" label="Barrier">
+                <sense domains="[biology]"
+                    gloss="anything serving to maintain separation by obstructing vision or access"
+                    number="06757282" pos="n" terms="[barrier]"/>
+            </concept>
+            <concept id="5" label="Fever">
+                <sense domains="[medicine]"
+                    gloss="a rise in the temperature of the body; frequently a symptom of infection"
+                    number="10306292" pos="n" terms="[fever, febricity, pyrexia, feverishness]"/>
+            </concept>
+            <concept id="6" label="Acidity">
+                <sense domains="[gastronomy]"
+                    gloss="the sharp taste of something acidic (as vinegar or lemon juice)"
+                    number="03901461" pos="n" terms="[sourness, sour, acidity]"/>
+                <sense domains="[food]"
+                    gloss="the taste experience when something acidic is taken into the mouth"
+                    number="04416957" pos="n" terms="[acidity, acidulousness]"/>
+                <sense domains="[chemistry]" gloss="pH values below 7"
+                    number="03934672" pos="n" terms="[acidity]"/>
+            </concept>
+            <concept id="7" label="Mucous">
+                <sense domains="[anatomy]"
+                    gloss="of or secreting or resembling  mucus; &quot;mucous tissue&quot;"
+                    number="02682906" pos="a" terms="[mucous]"/>
+            </concept>
+            <concept id="8" label="Skin">
+                <sense domains="[anatomy]"
+                    gloss="a natural protective covering of the body; site of the sense of touch; &quot;your skin is the largest organ of your body&quot;"
+                    number="04068217" pos="n" terms="[skin, tegument, cutis]"/>
+            </concept>
+            <concept id="9" label="Bark">
+                <sense domains="[factotum]"
+                    gloss="make barking sounds; &quot;The dogs barked at the stranger&quot;"
+                    number="00709901" pos="v" terms="[bark]"/>
+            </concept>
+            <concept id="10" label="Waxy coating"/>
+            <concept id="11" label="Pathogens"/>
+            <concept id="12" label="General protection"/>
+            <concept id="13" label="Organisms">
+                <sense domains="[biology]" gloss="any living entity"
+                    number="00002086" pos="n" terms="[life_form, organism, being, living_thing]"/>
+            </concept>
+            <concept id="14" label="Disease">
+                <sense domains="[medicine]"
+                    gloss="an impairment of health or a condition of abnormal functioning"
+                    number="10129713" pos="n" terms="[disease]"/>
+            </concept>
+            <concept id="15" label="Inhalation">
+                <sense domains="[physiology]"
+                    gloss="the act of inhaling" number="00536863"
+                    pos="n" terms="[inhalation, inspiration, breathing_in]"/>
+            </concept>
+            <concept id="16" label="Adsorption">
+                <sense domains="[chemistry]"
+                    gloss="molecules of a gas form a thin film on the surface of a solid"
+                    number="09735957" pos="n" terms="[adsorption, surface_assimilation]"/>
+            </concept>
+            <concept id="17" label="Ingestion">
+                <sense domains="[physiology]"
+                    gloss="the process of taking food into the body through the mouth (as by eating)"
+                    number="00537659" pos="n" terms="[consumption, ingestion, intake, uptake]"/>
+            </concept>
+            <concept id="18" label="Eating">
+                <sense domains="[physiology]"
+                    gloss="the act of consuming food" number="00537892"
+                    pos="n" terms="[eating, feeding]"/>
+            </concept>
+            <concept id="19" label="Bacteria">
+                <sense domains="[biology]"
+                    gloss="single-celled or noncellular spherical or spiral or rod-shaped organisms lacking chlorophyll that reproduce by fission; important as pathogens and for biochemical properties; taxonomy is difficult; often considered plants"
+                    number="00884781" pos="n" terms="[bacteria, bacterium]"/>
+            </concept>
+            <concept id="20" label="Viruses">
+                <sense domains="[biology]"
+                    gloss="ultramicroscopic infectious agent that replicates itself only within cells of living hosts; many are pathogenic"
+                    number="00871107" pos="n" terms="[virus]"/>
+            </concept>
+            <concept id="21" label="Rhinovirus"/>
+            <concept id="22" label="Common cold">
+                <sense domains="[medicine]"
+                    gloss="a mild viral infection involving the nose and respiratory passages (but not the lungs); &quot;will they never find a cure for the common cold?&quot;"
+                    number="10174608" pos="n" terms="[cold, common_cold]"/>
+            </concept>
+            <concept id="23" label="Beneficial">
+                <sense domains="[factotum]"
+                    gloss="promoting or enhancing well-being; &quot;an arms limitation agreement beneficial to all countries&quot;; &quot;the beneficial effects of a temperate climate&quot;; &quot;the experience was good for her&quot;"
+                    number="00067152" pos="a" terms="[beneficial, good]"/>
+                <sense domains="[factotum]"
+                    gloss="tending to promote physical well-being; beneficial to health; &quot;beneficial effects of a balanced diet&quot;; &quot;a good night's sleep&quot;; &quot;the salutary influence of pure air&quot;"
+                    number="01119178" pos="a" terms="[beneficial, good, salutary]"/>
+            </concept>
+            <concept id="24" label="Specific protection"/>
+            <concept id="25" label="Antigen">
+                <sense domains="[pharmacy]"
+                    gloss="any substance (as a toxin or enzyme) that stimulates the production of antibodies"
+                    number="10788762" pos="n" terms="[antigen]"/>
+            </concept>
+            <concept id="26" label="Antibody">
+                <sense domains="[chemistry]"
+                    gloss="any of a large variety of immunoglobulins normally present in the body or produced in response to an antigen which it neutralizes, thus producing an immune response"
+                    number="10785027" pos="n" terms="[antibody]"/>
+            </concept>
+            <concept id="27" label="White blood cells"/>
+            <concept id="28" label="Display bits"/>
+            <concept id="29" label="Cell">
+                <sense domains="[biology]"
+                    gloss="the basic structural and functional unit of all organisms; cells may exist as independent units of life (as in monads) or may form colonies or tissues as in higher plants and animals"
+                    number="00003095" pos="n" terms="[cell]"/>
+            </concept>
+            <concept id="30" label="T cells"/>
+            <concept id="31" label="An invader is present"/>
+            <concept id="32" label="B cells"/>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="33" label="classified as"/>
+            <linking-phrase id="34" label="such as"/>
+            <linking-phrase id="35" label="gives"/>
+            <linking-phrase id="36" label="gives"/>
+            <linking-phrase id="37" label="such as"/>
+            <linking-phrase id="38" label="such as"/>
+            <linking-phrase id="39" label="are any"/>
+            <linking-phrase id="40" label="can get in by"/>
+            <linking-phrase id="41" label="such as"/>
+            <linking-phrase id="42" label="against any"/>
+            <linking-phrase id="43" label="that causes"/>
+            <linking-phrase id="44" label="blocked by"/>
+            <linking-phrase id="45" label="blocked by"/>
+            <linking-phrase id="46" label="blocked by"/>
+            <linking-phrase id="47" label="through"/>
+            <linking-phrase id="48" label="can be"/>
+            <linking-phrase id="49" label="such as"/>
+            <linking-phrase id="50" label="known as"/>
+            <linking-phrase id="51" label="against specific"/>
+            <linking-phrase id="52" label="how"/>
+            <linking-phrase id="53" label="then"/>
+            <linking-phrase id="54" label="how"/>
+            <linking-phrase id="55" label="then"/>
+            <linking-phrase id="56" label="digest"/>
+            <linking-phrase id="57" label="on the surface of the"/>
+            <linking-phrase id="58" label="of"/>
+            <linking-phrase id="59" label="tells"/>
+            <linking-phrase id="60" label="that"/>
+            <linking-phrase id="61" label="are"/>
+            <linking-phrase id="62" label="tells"/>
+            <linking-phrase id="63" label="to make specific"/>
+            <linking-phrase id="64" label="are"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="33"/>
+            <connection from-id="33" to-id="2"/>
+            <connection from-id="33" to-id="3"/>
+            <connection from-id="2" to-id="34"/>
+            <connection from-id="34" to-id="4"/>
+            <connection from-id="34" to-id="5"/>
+            <connection from-id="34" to-id="6"/>
+            <connection from-id="2" to-id="35"/>
+            <connection from-id="35" to-id="12"/>
+            <connection from-id="3" to-id="36"/>
+            <connection from-id="36" to-id="24"/>
+            <connection from-id="3" to-id="37"/>
+            <connection from-id="37" to-id="25"/>
+            <connection from-id="37" to-id="26"/>
+            <connection from-id="4" to-id="38"/>
+            <connection from-id="38" to-id="7"/>
+            <connection from-id="38" to-id="8"/>
+            <connection from-id="38" to-id="9"/>
+            <connection from-id="38" to-id="10"/>
+            <connection from-id="11" to-id="39"/>
+            <connection from-id="39" to-id="13"/>
+            <connection from-id="11" to-id="40"/>
+            <connection from-id="40" to-id="17"/>
+            <connection from-id="40" to-id="16"/>
+            <connection from-id="40" to-id="15"/>
+            <connection from-id="11" to-id="41"/>
+            <connection from-id="41" to-id="19"/>
+            <connection from-id="41" to-id="20"/>
+            <connection from-id="12" to-id="42"/>
+            <connection from-id="42" to-id="11"/>
+            <connection from-id="13" to-id="43"/>
+            <connection from-id="43" to-id="14"/>
+            <connection from-id="15" to-id="44"/>
+            <connection from-id="44" to-id="7"/>
+            <connection from-id="16" to-id="45"/>
+            <connection from-id="45" to-id="8"/>
+            <connection from-id="17" to-id="46"/>
+            <connection from-id="46" to-id="6"/>
+            <connection from-id="17" to-id="47"/>
+            <connection from-id="47" to-id="18"/>
+            <connection from-id="19" to-id="48"/>
+            <connection from-id="48" to-id="23"/>
+            <connection from-id="20" to-id="49"/>
+            <connection from-id="49" to-id="21"/>
+            <connection from-id="21" to-id="50"/>
+            <connection from-id="50" to-id="22"/>
+            <connection from-id="24" to-id="51"/>
+            <connection from-id="51" to-id="11"/>
+            <connection from-id="25" to-id="52"/>
+            <connection from-id="52" to-id="27"/>
+            <connection from-id="25" to-id="53"/>
+            <connection from-id="53" to-id="28"/>
+            <connection from-id="26" to-id="54"/>
+            <connection from-id="54" to-id="27"/>
+            <connection from-id="26" to-id="55"/>
+            <connection from-id="55" to-id="28"/>
+            <connection from-id="27" to-id="56"/>
+            <connection from-id="56" to-id="11"/>
+            <connection from-id="28" to-id="57"/>
+            <connection from-id="57" to-id="29"/>
+            <connection from-id="28" to-id="58"/>
+            <connection from-id="58" to-id="11"/>
+            <connection from-id="28" to-id="59"/>
+            <connection from-id="59" to-id="30"/>
+            <connection from-id="30" to-id="60"/>
+            <connection from-id="60" to-id="31"/>
+            <connection from-id="30" to-id="61"/>
+            <connection from-id="61" to-id="27"/>
+            <connection from-id="31" to-id="62"/>
+            <connection from-id="62" to-id="32"/>
+            <connection from-id="32" to-id="63"/>
+            <connection from-id="63" to-id="26"/>
+            <connection from-id="32" to-id="64"/>
+            <connection from-id="64" to-id="27"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="291" y="-252"/>
+            <concept-appearance id="2" x="118" y="-119"/>
+            <concept-appearance id="3" x="444" y="-126"/>
+            <concept-appearance id="4" x="17" y="13"/>
+            <concept-appearance id="5" x="86" y="16"/>
+            <concept-appearance id="6" x="147" y="18"/>
+            <concept-appearance id="7" x="11" y="131"/>
+            <concept-appearance id="8" x="70" y="133"/>
+            <concept-appearance id="9" x="128" y="133"/>
+            <concept-appearance id="10" x="190" y="133"/>
+            <concept-appearance id="11" x="298" y="137"/>
+            <concept-appearance id="12" x="234" y="13"/>
+            <concept-appearance id="13" x="323" y="235"/>
+            <concept-appearance id="14" x="339" y="335"/>
+            <concept-appearance id="15" x="48" y="243"/>
+            <concept-appearance id="16" x="117" y="246"/>
+            <concept-appearance id="17" x="184" y="247"/>
+            <concept-appearance id="18" x="201" y="356"/>
+            <concept-appearance id="19" x="430" y="264"/>
+            <concept-appearance id="20" x="514" y="266"/>
+            <concept-appearance id="21" x="552" y="373"/>
+            <concept-appearance id="22" x="558" y="484"/>
+            <concept-appearance id="23" x="437" y="377"/>
+            <concept-appearance id="24" x="388" y="9"/>
+            <concept-appearance id="25" x="462" y="12"/>
+            <concept-appearance id="26" x="526" y="12"/>
+            <concept-appearance id="27" x="483" y="127"/>
+            <concept-appearance id="28" x="610" y="124"/>
+            <concept-appearance id="29" x="617" y="239"/>
+            <concept-appearance id="30" x="705" y="208"/>
+            <concept-appearance id="31" x="702" y="327"/>
+            <concept-appearance id="32" x="809" y="322"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="33" x="299" y="-165"/>
+            <linking-phrase id="34" x="87" y="-31"/>
+            <linking-phrase id="35" x="196" y="-37"/>
+            <linking-phrase id="36" x="420" y="-43"/>
+            <linking-phrase id="37" x="486" y="-43"/>
+            <linking-phrase id="38" x="73" y="97"/>
+            <linking-phrase id="39" x="316" y="206"/>
+            <linking-phrase id="40" x="234" y="203"/>
+            <linking-phrase id="41" x="404" y="213"/>
+            <linking-phrase id="42" x="255" y="108"/>
+            <linking-phrase id="43" x="327" y="303"/>
+            <linking-phrase id="44" x="20" y="215"/>
+            <linking-phrase id="45" x="91" y="218"/>
+            <linking-phrase id="46" x="165" y="221"/>
+            <linking-phrase id="47" x="185" y="323"/>
+            <linking-phrase id="48" x="427" y="336"/>
+            <linking-phrase id="49" x="535" y="342"/>
+            <linking-phrase id="50" x="555" y="451"/>
+            <linking-phrase id="51" x="353" y="102"/>
+            <linking-phrase id="52" x="458" y="88"/>
+            <linking-phrase id="53" x="580" y="93"/>
+            <linking-phrase id="54" x="532" y="88"/>
+            <linking-phrase id="55" x="608" y="74"/>
+            <linking-phrase id="56" x="398" y="145"/>
+            <linking-phrase id="57" x="587" y="213"/>
+            <linking-phrase id="58" x="480" y="201"/>
+            <linking-phrase id="59" x="651" y="182"/>
+            <linking-phrase id="60" x="697" y="283"/>
+            <linking-phrase id="61" x="600" y="345"/>
+            <linking-phrase id="62" x="763" y="342"/>
+            <linking-phrase id="63" x="642" y="51"/>
+            <linking-phrase id="64" x="721" y="427"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Realms -->
+  <owl:Class rdf:ID="PlanetaryRealm"/>
+  <owl:Class rdf:ID="Ice"/>
+  <owl:Class rdf:ID="PlanetaryBoundary"/>
+  <owl:Class rdf:ID="Sample"/>
+  <owl:Class rdf:ID="Land"/>
+  <owl:Class rdf:ID="MeteorologicalPhenomena"/>
+  <owl:Class rdf:ID="Collapse"/>
+  <owl:Class rdf:ID="Snow"/>
+  <owl:Class rdf:ID="ClimatePhenomena"/>
+  <owl:Class rdf:ID="Frozen"/>
+  <owl:Class rdf:ID="Stress"/>
+  <owl:Class rdf:ID="Depth"/>
+  <owl:Class rdf:ID="Crystal"/>
+  <owl:Class rdf:ID="Grain"/>
+  
+  
+
+  <owl:Class rdf:ID="AlpineTundra">
+    <rdfs:subClassOf rdf:resource="#Tundra"/>
+    <rdfs:comment xml:lang="en">Alpine tundra is an ecozone that does not contain trees because it has high altitude. Alpine tundra occurs at high enough altitude at any latitude on Earth. Alpine tundra also lacks trees, but the lower part does not have permafrost, and alpine soils are generally better drained than permafrost soils. Alpine tundra transitions to subalpine forests below the tree line; stunted forests occurring at the forest-tundra ecotone are known as Krummholz. Alpine tundra occurs in an alpine zone</rdfs:comment>
+  </owl:Class>
+
+   <owl:Class rdf:ID="AntarcticTundra">
+    <rdfs:subClassOf rdf:resource="#Tundra"/>
+    <rdfs:comment xml:lang="en">Antarctic tundra occurs on Antarctica and on several Antarctic and subantarctic islands, including South Georgia and the South Sandwich Islands and the Kerguelen Islands. Antarctica is mostly too cold and dry to support vegetation, and most of the continent is covered by ice fields. However, some portions of the continent, particularly the Antarctic Peninsula, have areas of rocky soil that support plant life. The flora presently consists of around 300-400 lichens, 100 mosses, 25 liverworts, and around 700 terrestrial and aquatic algae species, which live on the areas of exposed rock and soil around the shore of the continent. Antarctica's two flowering plant species, the Antarctic hair grass (Deschampsia Antarctica) and Antarctic pearlwort (Colobanthus quitensis), are found on the northern and western parts of the Antarctic Peninsula. In contrast with the Arctic tundra, the Antarctic tundra lacks a large mammal fauna, mostly due to its physical isolation from the other continents. Sea mammals and sea birds, including seals and penguins, inhabit areas near the shore, and some small mammals, like rabbits and cats, have been introduced by humans to some of the subantarctic islands.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="ArcticTundra">
+    <rdfs:subClassOf rdf:resource="#Tundra"/>
+    <rdfs:comment xml:lang="en">Arctic tundra occurs in the far Northern Hemisphere, north of the taiga belt. The word tundra usually refers only to the areas where the subsoil is permafrost, or permanently frozen soil. (It may also refer to the treeless plain in general, so that northern Sápmi would be included.) Permafrost tundra includes vast areas of northern Russia and Canada.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="GlacialRegion">
+    <rdfs:subClassOf rdf:resource="#PlanetaryRealm" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPlanetaryRealm"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Glacier"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Glacier">
+    <rdfs:subClassOf rdf:resource="#Ice" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasSubstance"/>	
+		</owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#Ice"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="IceSnowInterface">
+    <rdfs:subClassOf rdf:resource="#PlanetaryBoundary" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="IceBase">
+    <rdfs:subClassOf rdf:resource="#PlanetaryBoundary" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="IceStream">
+    <rdfs:subClassOf rdf:resource="#Ice" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="IceSurface">
+    <rdfs:subClassOf rdf:resource="#PlanetaryBoundary" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="IceCore">
+    <rdfs:subClassOf rdf:resource="#Sample" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	  	<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="inside"/>	
+		</owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#Ice"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  
+  <owl:Class rdf:ID="IceShelf">
+    <rdfs:subClassOf rdf:resource="#Ice" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="IceSheet">
+    <rdfs:subClassOf rdf:resource="#Glacier" />
+    <rdfs:comment>An ice sheet is a mass of glacier ice that covers surrounding terrain and is greater than 50,000 square km (19,305 square mile).</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="LandIce">
+    <rdfs:subClassOf rdf:resource="#Ice" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPlanetaryRealm"/>
+        <owl:someValuesFrom rdf:resource="#Land"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Thermokarsta">
+    <rdfs:subClassOf rdf:resource="#Land"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Tundra">
+    <rdfs:subClassOf rdf:resource="#Land"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#FrozenGround"/>
+        <owl:onProperty rdf:resource="#hasSubstance"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">In physical geography, tundra is an area where the tree growth is hindered by low temperatures and short growing seasons. There are two types of tundra: Arctic tundra (which also occurs in Antarctica), and alpine tundra. In tundra, the vegetation is composed of dwarf shrubs, sedges and grasses, mosses, and lichens. Scattered trees grow in some tundra. The ecotone (or ecological boundary region) between the tundra and the forest is known as the tree line or timberline.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Proglacial">
+    <rdfs:subClassOf rdf:resource="#GlacialRegion"/>
+    <rdfs:comment xml:lang="en">Of streams, deposits, and other features, being immediately in front of or just beyond the outer limits of a glacier or ice sheet, and formed by or derived from glacier ice.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Englacial">
+    <rdfs:subClassOf rdf:resource="#GlacialRegion"/>
+    <rdfs:comment xml:lang="en">Embedded in, carried by, or running through a glacier</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Subglacial">
+    <rdfs:subClassOf rdf:resource="#GlacialRegion"/>
+    <rdfs:comment xml:lang="en">Pertaining to the area in or at the bottom of, or immediately beneath, a glacier.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Supraglacial">
+    <rdfs:subClassOf rdf:resource="#GlacialRegion"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="GlacialOutwashPlain">
+    <rdfs:subClassOf rdf:resource="#GlacialRegion"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="GlacialTerminus">
+    <rdfs:subClassOf rdf:resource="#GlacialRegion"/>
+  </owl:Class>
+
+<!-- Phenomena -->
+  <owl:Class rdf:ID="Avalanche">
+    <rdfs:subClassOf rdf:resource="#MeteorologicalPhenomena"/>
+    <rdfs:subClassOf rdf:resource="#Collapse"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:allValuesFrom rdf:resource="#Snow"/>
+        <owl:onProperty rdf:resource="#hasSubstance"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment> A mass of snow (perhaps containing ice and rocks) moving rapidly down a steep mountain slope. Avalanches may be characterized as loose and turbulent, or slab; either type may be dry or wet according to the nature of the snow forming it, although dry snow usually forms loose avalanches and wet snow forms slabs. A large avalanche sweeps a current of air along with and in front of it as an avalanche wind, which supplements its already tremendous destructive force. </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="FrozenGround">
+    <rdfs:subClassOf rdf:resource="#ClimatePhenomena"/>
+    <rdfs:subClassOf rdf:resource="#Land"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasStateOfMatter"/>	
+		</owl:onProperty>
+        <owl:someValuesFrom rdf:resource="#Frozen" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Soil within which the moisture has predominantly changed to ice, the unfrozen portion being in vapor phase. Ice within the soil bonds (adfreezes) adjacent soil particles and renders frozen ground very hard. Permanently frozen ground is called permafrost. Dry frozen ground is relatively loose and crumbly because of the lack of bonding ice. Frozen ground is sometimes inadvisedly called frost or ground frost. </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Glaciation">
+    <rdfs:subClassOf rdf:resource="#ClimatePhenomena"/>
+    <owl:equivalentClass rdf:resource="#Glacial" />
+  </owl:Class>
+  <owl:Class rdf:ID="Glacial"/>
+
+  <owl:Class rdf:ID="GlacierRetreat">
+    <rdfs:subClassOf rdf:resource="#ClimatePhenomena"/>
+    <owl:disjointWith rdf:resource="#Glaciation" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Icing">
+    <rdfs:subClassOf rdf:resource="#MeteorologicalPhenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Snowslide">
+    <owl:equivalentClass rdf:resource="#Avalanche" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Periglaciation">
+    <rdfs:subClassOf rdf:resource="#Glaciation"/>
+  </owl:Class>
+
+<!-- Property -->
+  <owl:Class rdf:ID="BasalStress">
+    <rdfs:subClassOf rdf:resource="#Stress"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SnowCover">
+    <rdfs:subClassOf rdf:resource="#Depth" />
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasSubstance" />
+        <owl:allValuesFrom rdf:resource="#Snow" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The depth of snow that has fallen.</rdfs:comment>
+  </owl:Class>
+
+<!-- Substance -->
+  <owl:Class rdf:ID="DepthHoar">
+    <rdfs:subClassOf rdf:resource="#Crystal"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>     
+        <owl:onProperty rdf:resource="#hasSubstance"/>
+        <owl:someValuesFrom rdf:resource="#Snow"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Depth hoares are large crystals occurring at the base of a snowpack that form due to the fact that a snow crystal can grow over time as moisture freezes onto the crystal from vapor that is rising in the snowpack.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Firn">
+    <rdfs:subClassOf rdf:resource="#Snow"/>
+    <rdfs:subClassOf rdf:resource="#Ice"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasPlanetaryRealm" />
+        <owl:allValuesFrom rdf:resource="#Glacier" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Firn is partially-compacted névé, a type of snow that has been left over from past seasons and has been recrystallized into a substance denser than névé. It is ice that is at an intermediate stage between snow and glacial ice. Firn has the appearance of wet sugar, but has a hardness that makes it extremely resistant to shovelling. It generally has a density greater than 550 kg/m³ and is often found underneath the snow that accumulates at the head of a glacier.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="GranularIce">
+    <rdfs:subClassOf rdf:resource="#Ice"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="HoarCrystal">
+    <rdfs:subClassOf rdf:resource="#Crystal"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="IceCrystal">
+    <rdfs:subClassOf rdf:resource="#Crystal"/>
+    <rdfs:subClassOf rdf:resource="#Ice"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="IceParticle">
+    <owl:equivalentClass rdf:resource="#IceCrystal" />
+  </owl:Class>
+
+  <owl:Class rdf:ID="Rime">
+    <rdfs:subClassOf rdf:resource="#Ice" />
+    <rdfs:comment xml:lang="en">A white or milky and opaque granular deposit of ice formed by the rapid freezing of supercooled water drops as they impinge upon an exposed object.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SnowFacies">
+    <rdfs:subClassOf rdf:resource="#Crystal"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SnowGrain">
+    <rdfs:subClassOf rdf:resource="#Grain"/>
+    <rdfs:subClassOf rdf:resource="#Snow"/>
+  </owl:Class>
+
+</rdf:RDF>

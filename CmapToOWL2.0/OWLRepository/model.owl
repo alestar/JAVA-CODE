@@ -1,0 +1,952 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model#"
+    xmlns:daml="http://www.daml.org/2001/03/daml+oil#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xml:base="http://loki.cae.drexel.edu/~wbs/ontology/2004/08/model">
+  <owl:Ontology rdf:about="">
+    <rdfs:comment xml:lang="en">An Ontology of numerical models for surface water flow and water quality simulation. The apllication domain of these models can be lake , ocean, estuary, channel networks, river, reservoir or, coastal area. These models are classified based on thier availability, application domain, dimensions , partial differential equation solver, and characteristics types. This ontlogy was developed by - Akm Saiful Islam and Michael Piasecki. Publisher of the ontology is Drexel University on the date - 07/12/04 using language-english  </rdfs:comment>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >version 1.1</owl:versionInfo>
+  </owl:Ontology>
+  <owl:Class rdf:ID="Country">
+    <rdfs:comment xml:lang="en">the territory occupied by a nation</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Instittue">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Organization"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">An association organized to promote art or science or education</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Developer">
+    <rdfs:comment xml:lang="en">Someone or a group of people who develop something</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Mathematical">
+    <rdfs:comment xml:lang="en">The general characterization of a process, object, or concept, in terms of mathematics, which enables the relatively simple manipulation of variables to be accomplished in order to determine how the process, object, or concept would behave in different situations. </rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Models"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="FEM2D">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <Integration_Method rdf:ID="Finite_Element"/>
+        </owl:hasValue>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasIntegrationMethod"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">Two Dimensional finite element model for hydrodynamic simulation in river and tributaries
+</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Model"/>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasModelDimension"/>
+        </owl:onProperty>
+        <owl:hasValue>
+          <Model_Dimension rdf:ID="Two_Dimensional">
+            <rdfs:comment xml:lang="en">Special case of three dimensional model when modeling quantities are expressed in horizontal and transeverse direction, z=0</rdfs:comment>
+            <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >Two dimensional depth average model (2DH)</rdfs:comment>
+          </Model_Dimension>
+        </owl:hasValue>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue>
+          <Availability rdf:ID="Restrictricted">
+            <rdfs:comment xml:lang="en">To keep or confine within limits</rdfs:comment>
+          </Availability>
+        </owl:hasValue>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasAvailability"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:about="#hasDeveloper"/>
+        </owl:onProperty>
+        <owl:allValuesFrom>
+          <owl:Class rdf:about="#Individual"/>
+        </owl:allValuesFrom>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Model_Dimension">
+    <rdfs:comment xml:lang="en">the magnitude of something in a particular direction (especially length or width or height)</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Integration_Method">
+    <rdfs:comment xml:lang="en">used to solve partial differential equations </rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Numerical">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Numerical models are mathematical models that use some sort of numerical time-stepping procedure to obtain the models behavior over time. The mathematical solution is represented by a generated table and/or graph. </rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Mathematical"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Availability">
+    <rdfs:comment xml:lang="en">the quality of being at hand when needed</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Company">
+    <rdfs:comment xml:lang="en">an institution created to conduct business</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Organization"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="University">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Organization"/>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The body of faculty and students at a university. A large and diverse institution of higher learning created to educate for life and for a profession and to grant degrees</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Model">
+    <rdfs:subClassOf rdf:resource="#Numerical"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="#infoPage"/>
+        </owl:onProperty>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="en">The general characterization of a process, object, or concept, in terms of mathematics, which enables the relatively simple manipulation of variables to be accomplished in order to determine how the process, object, or concept would behave in different situations. </rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Domain">
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >a particular environment or walk of life</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Individual">
+    <rdfs:comment xml:lang="en">a human being</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Developer"/>
+  </owl:Class>
+  <owl:Class rdf:ID="ModelingSystems">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty>
+          <owl:DatatypeProperty rdf:about="#infoPage"/>
+        </owl:onProperty>
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+        >1</owl:minCardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Numerical"/>
+    <rdfs:comment xml:lang="en">Modeling framework that combines a number of  most appropriate related models for a specific purposes</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Integration_Scheme"/>
+  <owl:Class rdf:ID="Government">
+    <rdfs:comment xml:lang="en">the system or form by which a community or other political unit is governed</rdfs:comment>
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Organization"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Models">
+    <rdfs:comment xml:lang="en">A simplified description of a complex entity or process</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Organization">
+    <rdfs:comment xml:lang="en">A group of people who work together. The persons (or committees or departments etc.) who make up a body for the purpose of administering something</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="#Developer"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="hasDeveloper">
+    <rdfs:domain rdf:resource="#Model"/>
+    <rdfs:range rdf:resource="#Developer"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasIntegrationMethod">
+    <rdfs:range rdf:resource="#Integration_Method"/>
+    <rdfs:domain rdf:resource="#Model"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasIntegrationScheme">
+    <rdfs:domain rdf:resource="#Model"/>
+    <rdfs:range rdf:resource="#Integration_Scheme"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasModelDimension">
+    <rdfs:domain rdf:resource="#Model"/>
+    <rdfs:range rdf:resource="#Model_Dimension"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasModel">
+    <rdfs:domain rdf:resource="#ModelingSystems"/>
+    <rdfs:range rdf:resource="#Model"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasAvailability">
+    <rdfs:range rdf:resource="#Availability"/>
+    <rdfs:domain rdf:resource="#Model"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasDomain">
+    <rdfs:domain rdf:resource="#Model"/>
+    <rdfs:range rdf:resource="#Domain"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasCountry">
+    <rdfs:range rdf:resource="#Country"/>
+    <rdfs:domain rdf:resource="#Developer"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="infoPage">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+  </owl:DatatypeProperty>
+  <Company rdf:ID="ATS">
+    <rdfs:comment xml:lang="en">Advance Technology System</rdfs:comment>
+    <hasCountry>
+      <Country rdf:ID="USA">
+        <rdfs:comment xml:lang="en">United States of America</rdfs:comment>
+      </Country>
+    </hasCountry>
+  </Company>
+  <Model rdf:ID="CORMIX3">
+    <hasDeveloper>
+      <Individual rdf:ID="RL_Doneker">
+        <hasCountry rdf:resource="#USA"/>
+      </Individual>
+    </hasDeveloper>
+    <hasModelDimension>
+      <Model_Dimension rdf:ID="Three_Dimensional">
+        <rdfs:comment xml:lang="en">Modeling quanitites are expressed in horizontal , vertical and transverse direction</rdfs:comment>
+      </Model_Dimension>
+    </hasModelDimension>
+    <hasAvailability>
+      <Availability rdf:ID="Commercial">
+        <rdfs:comment xml:lang="en">Having profit as a chief aim</rdfs:comment>
+      </Availability>
+    </hasAvailability>
+    <rdfs:comment xml:lang="en">CORMIX is consists of a series of software systems for the analysis, prediction, and design of discharges into watercourses or the atmosphere, with emphasis on steady -state values for the geometry and dilution characteristics of the mixing zone.
+</rdfs:comment>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.cormix.info/CORMIX3.php</infoPage>
+  </Model>
+  <Model rdf:ID="GEMSS">
+    <rdfs:comment xml:lang="en">GEMSS, a Generalized Environmental Modeling System for Surfacewaters is an integrated system of 3-D hydrodynamic and transport models embedded in a geographic information and environmental data system (GIS), grid generator and editor, control file generator, 2-D and 3-D post processing viewers and additional tools that include meteorological data processor, and a USGS flow data processor to support 3-D modeling. </rdfs:comment>
+    <hasAvailability rdf:resource="#Commercial"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.jeeai.com/download/WebHelp/GEMSSHelp.htm</infoPage>
+    <hasModelDimension rdf:resource="#Three_Dimensional"/>
+    <hasDeveloper>
+      <Company rdf:ID="JE_Edinger_Associates">
+        <hasCountry rdf:resource="#USA"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >J. E. Edinger Associates Inc</rdfs:comment>
+      </Company>
+    </hasDeveloper>
+  </Model>
+  <Model_Dimension rdf:ID="Dimension_Not_Applicable">
+    <rdfs:comment xml:lang="en">Dimension has not provided or has no applicable dimension </rdfs:comment>
+  </Model_Dimension>
+  <Model rdf:ID="HEC-2">
+    <rdfs:comment xml:lang="en">System designed for computing water surface profiles for steady, gradually varied flow in both natural and man-made channels.</rdfs:comment>
+    <hasModelDimension>
+      <Model_Dimension rdf:ID="One_Dimensional">
+        <rdfs:comment xml:lang="en">Special case of two dimensional model when modeling quantities are expressed in only horizontal direction (z=0 and y=0)</rdfs:comment>
+      </Model_Dimension>
+    </hasModelDimension>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.bossintl.com/products/download/item/HEC-2.html</infoPage>
+    <hasDeveloper>
+      <Government rdf:ID="USACE">
+        <rdfs:comment xml:lang="en">US Army_Corps of Engineering</rdfs:comment>
+        <hasCountry rdf:resource="#USA"/>
+      </Government>
+    </hasDeveloper>
+    <hasAvailability>
+      <Availability rdf:ID="Public">
+        <rdfs:comment xml:lang="en">Open for all</rdfs:comment>
+      </Availability>
+    </hasAvailability>
+  </Model>
+  <Instittue rdf:ID="ARPA">
+    <hasCountry rdf:resource="#USA"/>
+    <rdfs:comment xml:lang="en">Aeronautical Research Associates of Princeton</rdfs:comment>
+  </Instittue>
+  <Model rdf:ID="POM">
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.aos.princeton.edu/WWWPUBLIC/htdocs.pom/TOMS.htm </infoPage>
+  </Model>
+  <Model rdf:ID="ADCIRC">
+    <hasDeveloper>
+      <Individual rdf:ID="R_Luettich">
+        <hasCountry rdf:resource="#USA"/>
+      </Individual>
+    </hasDeveloper>
+    <hasIntegrationMethod>
+      <Integration_Method rdf:ID="Finite_Difference"/>
+    </hasIntegrationMethod>
+    <hasModelDimension rdf:resource="#Three_Dimensional"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.marine.unc.edu/C_CATS/adcirc/adcirc.htm</infoPage>
+    <hasIntegrationMethod rdf:resource="#Finite_Element"/>
+    <hasDeveloper>
+      <Individual rdf:ID="J_Westerink">
+        <hasCountry rdf:resource="#USA"/>
+      </Individual>
+    </hasDeveloper>
+    <hasAvailability rdf:resource="#Public"/>
+    <rdfs:comment xml:lang="en">ADCIRC is a system of computer programs for solving time dependent, free surface circulation and transport problems in two and three dimensions</rdfs:comment>
+  </Model>
+  <Country rdf:ID="Italy">
+    <rdfs:comment xml:lang="en">Italy</rdfs:comment>
+  </Country>
+  <Government rdf:ID="EPA">
+    <rdfs:comment xml:lang="en">US Environemental Protection Agency</rdfs:comment>
+    <hasCountry rdf:resource="#USA"/>
+  </Government>
+  <Model rdf:ID="CE-QUAL-ICM">
+    <hasDomain>
+      <Domain rdf:ID="CoastalArea">
+        <rdfs:comment xml:lang="en">the shore of a sea or ocean</rdfs:comment>
+      </Domain>
+    </hasDomain>
+    <hasDomain>
+      <Domain rdf:ID="Lake">
+        <rdfs:comment xml:lang="en">a body of (usually fresh) water surrounded by land)
+</rdfs:comment>
+      </Domain>
+    </hasDomain>
+    <hasDomain>
+      <Domain rdf:ID="Estuary">
+        <rdfs:comment xml:lang="en">the wide part of a river where it nears the sea; fresh and salt water mix</rdfs:comment>
+      </Domain>
+    </hasDomain>
+    <hasModelDimension rdf:resource="#Three_Dimensional"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=cequalicm</infoPage>
+    <hasAvailability rdf:resource="#Public"/>
+    <rdfs:comment xml:lang="en">CE-QUAL-ICM is a finite volume eutrophication model that can be used to calculate 1-, 2-, 3-dimensional water quality variables</rdfs:comment>
+    <hasDomain>
+      <Domain rdf:ID="River">
+        <rdfs:comment xml:lang="en">a large natural stream of water (larger than a creek); "the river was navigable for 50 miles</rdfs:comment>
+      </Domain>
+    </hasDomain>
+    <hasDeveloper rdf:resource="#USACE"/>
+    <hasIntegrationMethod>
+      <Integration_Method rdf:ID="Finite_Volume"/>
+    </hasIntegrationMethod>
+    <hasDomain>
+      <Domain rdf:ID="Reservoir">
+        <rdfs:comment xml:lang="en">lake used to store water for community use</rdfs:comment>
+      </Domain>
+    </hasDomain>
+  </Model>
+  <Model rdf:ID="DR3M">
+    <hasDomain>
+      <Domain rdf:ID="Watershed">
+        <rdfs:comment xml:lang="en">a ridge of land that separates two adjacent river systems</rdfs:comment>
+      </Domain>
+    </hasDomain>
+    <hasDomain>
+      <Domain rdf:ID="ChannelNetworks">
+        <rdfs:comment xml:lang="en">a deep and relatively narrow body of water (as in a river or a harbor or a strait linking two larger bodies) that allows the best passage for vessels; "the ship went aground in the channel")
+    </rdfs:comment>
+      </Domain>
+    </hasDomain>
+    <hasDeveloper rdf:resource="#EPA"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=dr3m</infoPage>
+    <rdfs:comment xml:lang="en">DR3M (Distributed Routing Rainfall-Runoff Model) is a watershed model for routing storm runoff through a branched system of pipes and (or) natural channels using rainfall as input.</rdfs:comment>
+    <hasModelDimension rdf:resource="#Dimension_Not_Applicable"/>
+    <hasAvailability rdf:resource="#Public"/>
+  </Model>
+  <Model rdf:ID="BFHYDRO">
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.appsci.com </infoPage>
+  </Model>
+  <Model_Dimension rdf:ID="Three_Dimensional_Baroclinic">
+    <rdfs:comment xml:lang="en">The variation with depth of motions associated with variation of density with depth. </rdfs:comment>
+  </Model_Dimension>
+  <Instittue rdf:ID="DELFT_Hydraulics">
+    <rdfs:comment xml:lang="en">DELFT Hydraulics</rdfs:comment>
+    <hasCountry>
+      <Country rdf:ID="Netherlands">
+        <rdfs:comment xml:lang="en">The Netherlands</rdfs:comment>
+      </Country>
+    </hasCountry>
+  </Instittue>
+  <Model rdf:ID="MIKE-3">
+    <hasModelDimension rdf:resource="#Three_Dimensional"/>
+    <hasDomain rdf:resource="#CoastalArea"/>
+    <hasIntegrationMethod rdf:resource="#Finite_Difference"/>
+    <hasAvailability rdf:resource="#Commercial"/>
+    <hasDeveloper>
+      <Instittue rdf:ID="DHI">
+        <hasCountry>
+          <Country rdf:ID="Denmark">
+            <rdfs:comment xml:lang="en">Denmark</rdfs:comment>
+          </Country>
+        </hasCountry>
+        <rdfs:comment xml:lang="en">Denish Hydraulic Institute  Water &amp; Environment</rdfs:comment>
+      </Instittue>
+    </hasDeveloper>
+    <hasDomain rdf:resource="#Reservoir"/>
+    <hasDomain rdf:resource="#Lake"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.dhisoftware.com/mike3/</infoPage>
+    <rdfs:comment xml:lang="en">MIKE 3 is a 3D modelling system for free surface flows, including advection-dispersion, water quality, heat exchange with the atmosphere, heavy metals, eutrophication, flooding and drying of intertidal areas, and sediment processes</rdfs:comment>
+    <hasDomain rdf:resource="#River"/>
+    <hasDomain rdf:resource="#Estuary"/>
+  </Model>
+  <Model rdf:ID="HEC-HMS">
+    <hasDeveloper rdf:resource="#USACE"/>
+    <hasAvailability rdf:resource="#Public"/>
+    <hasDomain rdf:resource="#ChannelNetworks"/>
+    <rdfs:comment xml:lang="en">The HEC-HMS (Hydrologic Engineering Center-Hydrologic Modeling System) program supercedes HEC-1 and provides a similar variety of options for simulating precipitation-runoff processes</rdfs:comment>
+    <hasModelDimension rdf:resource="#Dimension_Not_Applicable"/>
+    <hasDomain rdf:resource="#Watershed"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=hechms</infoPage>
+  </Model>
+  <Model rdf:ID="UNET">
+    <hasDomain rdf:resource="#ChannelNetworks"/>
+    <hasModelDimension rdf:resource="#One_Dimensional"/>
+    <hasAvailability rdf:resource="#Public"/>
+    <hasDomain rdf:resource="#River"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=unet</infoPage>
+    <rdfs:comment xml:lang="en">UNET simulates one-dimensional Unsteady flow through a full NETwork of open channels</rdfs:comment>
+  </Model>
+  <Model rdf:ID="RAM2">
+    <hasModelDimension rdf:resource="#Two_Dimensional"/>
+    <hasDeveloper rdf:resource="#USACE"/>
+    <rdfs:comment xml:lang="en">RMA2 is a dynamic two-dimensional depth-averaged finite element hydrodynamic model for computing water surface elevations and horizontal velocity components for subcritical, free-surface flow.</rdfs:comment>
+    <hasIntegrationMethod rdf:resource="#Finite_Element"/>
+    <hasDomain rdf:resource="#Reservoir"/>
+    <hasDomain rdf:resource="#CoastalArea"/>
+    <hasDomain rdf:resource="#Lake"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=rma2</infoPage>
+    <hasDomain rdf:resource="#Estuary"/>
+    <hasDomain rdf:resource="#River"/>
+    <hasAvailability rdf:resource="#Public"/>
+  </Model>
+  <Individual rdf:ID="J_Hamrick"/>
+  <ModelingSystems rdf:ID="SMS">
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.ems-i.com/SMS/SMS_Overview/sms_overview.html</infoPage>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=sms</infoPage>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.bossintl.com/html/sms_overview.html</infoPage>
+    <rdfs:comment xml:lang="en">Comprehensive graphical user environment for modeling two-dimensional hydrodynamic flow, contaminant transport, sediment transport, and bridge scour</rdfs:comment>
+  </ModelingSystems>
+  <Model rdf:ID="FEQ">
+    <hasAvailability rdf:resource="#Public"/>
+    <hasDeveloper>
+      <Government rdf:ID="USGS">
+        <rdfs:comment xml:lang="en">US Geological Survey </rdfs:comment>
+        <hasCountry rdf:resource="#USA"/>
+      </Government>
+    </hasDeveloper>
+    <hasDomain rdf:resource="#ChannelNetworks"/>
+    <hasDomain rdf:resource="#River"/>
+    <rdfs:comment xml:lang="en">FEQ (Full Equations Model) is a dynamic, 1-dimensional model to simulate flow in streams and rivers that can be assumed to be well-mixed. </rdfs:comment>
+    <hasModelDimension rdf:resource="#One_Dimensional"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=feq</infoPage>
+  </Model>
+  <Model rdf:ID="DYNHYD5">
+    <hasModelDimension rdf:resource="#One_Dimensional"/>
+    <hasAvailability rdf:resource="#Public"/>
+    <rdfs:comment xml:lang="en">DYNHYD5 solves the one-dimensional shallow-water equations of continuity and momentum for a branching or channel-junction (link-node) computational network.</rdfs:comment>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=dynhyd</infoPage>
+    <hasDomain rdf:resource="#Estuary"/>
+    <hasDomain rdf:resource="#River"/>
+    <hasDeveloper rdf:resource="#EPA"/>
+  </Model>
+  <Model rdf:ID="C3PO">
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://ccmp.chesapeake.org/CCMP/MODELS/C3PO/C3POdescription.html </infoPage>
+  </Model>
+  <Model rdf:ID="OTIS">
+    <hasDomain rdf:resource="#River"/>
+    <hasAvailability rdf:resource="#Public"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=otis</infoPage>
+    <rdfs:comment xml:lang="en">OTIS (One-dimensional Transport with Inflow and Storage) is a 1-dimensional model used to characterize the fate and transport of water quality constituents in streams and rivers that can be assumed to be well-mixed.</rdfs:comment>
+    <hasDeveloper rdf:resource="#USGS"/>
+    <hasModelDimension rdf:resource="#One_Dimensional"/>
+  </Model>
+  <Model rdf:ID="MIKE-SHE">
+    <hasAvailability rdf:resource="#Commercial"/>
+    <hasDomain rdf:resource="#ChannelNetworks"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.dhisoftware.com/mikeshe/</infoPage>
+    <hasModelDimension rdf:resource="#Dimension_Not_Applicable"/>
+    <rdfs:comment xml:lang="en">MIKE SHE is a distributed, physically based hydrologic modelling system for the simulation of all major processes occurring in the land phase of the hydrologic cycle, inlcuding interception, evapotranspiration, overland and channel flow, snow melt, unsaturated and saturated zone flow, and surface water/groundwater interactions. 
+</rdfs:comment>
+    <hasDeveloper rdf:resource="#DHI"/>
+    <hasDomain rdf:resource="#Watershed"/>
+  </Model>
+  <Instittue rdf:ID="EDF-DRD">
+    <rdfs:comment xml:lang="en">Laboratoire National d'Hydraulique, a department of Electricité de France's Research</rdfs:comment>
+    <hasCountry>
+      <Country rdf:ID="France">
+        <rdfs:comment xml:lang="en">France</rdfs:comment>
+      </Country>
+    </hasCountry>
+  </Instittue>
+  <Model rdf:ID="OTEQ">
+    <hasDeveloper rdf:resource="#USGS"/>
+    <hasModelDimension rdf:resource="#One_Dimensional"/>
+    <hasAvailability rdf:resource="#Public"/>
+    <rdfs:comment xml:lang="en">OTEQ is a 1-dimensional model used to characterize the fate and transport of trace metals in streams and rivers.</rdfs:comment>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://webserver.cr.usgs.gov/oteq/</infoPage>
+    <hasDomain rdf:resource="#River"/>
+  </Model>
+  <Model rdf:ID="HEC-RAS">
+    <rdfs:comment xml:lang="en">HEC-RAS (Hydrologic Engineering Center-River Analysis System) is an integrated system of software intended for calculating water surface profiles for steady gradually varied flow</rdfs:comment>
+    <hasModelDimension rdf:resource="#One_Dimensional"/>
+    <hasDomain rdf:resource="#River"/>
+    <hasDeveloper rdf:resource="#USACE"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=hecras</infoPage>
+    <hasDomain rdf:resource="#ChannelNetworks"/>
+    <hasAvailability rdf:resource="#Public"/>
+  </Model>
+  <Company rdf:ID="SSG">
+    <rdfs:comment xml:lang="en">Scientific Software Group</rdfs:comment>
+    <hasCountry rdf:resource="#USA"/>
+  </Company>
+  <Individual rdf:ID="V_Casulli">
+    <hasCountry rdf:resource="#Italy"/>
+  </Individual>
+  <Integration_Scheme rdf:ID="Semi_Implicite_Schem"/>
+  <Integration_Scheme rdf:ID="Implicite_Schem"/>
+  <Model rdf:ID="RMA4">
+    <hasDomain rdf:resource="#Reservoir"/>
+    <hasDomain rdf:resource="#Lake"/>
+    <hasAvailability rdf:resource="#Public"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=rma4</infoPage>
+    <hasIntegrationMethod rdf:resource="#Finite_Element"/>
+    <hasDomain rdf:resource="#River"/>
+    <hasDomain rdf:resource="#CoastalArea"/>
+    <hasModelDimension rdf:resource="#Two_Dimensional"/>
+    <hasDeveloper rdf:resource="#USACE"/>
+    <hasDomain rdf:resource="#Estuary"/>
+    <rdfs:comment xml:lang="en">RMA4 is a 2-dimensional finite element water quality transport numerical model in which the depth concentration distribution is assumed uniform.</rdfs:comment>
+  </Model>
+  <Model rdf:ID="QUODDY">
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    > http://www-nml.dartmouth.edu/circmods/gom.html </infoPage>
+  </Model>
+  <University rdf:ID="Drexel_University">
+    <hasCountry rdf:resource="#USA"/>
+  </University>
+  <Integration_Scheme rdf:ID="Explicit_Schem"/>
+  <Model rdf:ID="HEC-6">
+    <rdfs:comment xml:lang="en">One-dimensional sediment transport model designed to calculate water surface and sediment bed surface profiles</rdfs:comment>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.hec.usace.army.mil/software/legacysoftware/hec6/hec6-download.htm</infoPage>
+    <hasDeveloper rdf:resource="#USACE"/>
+    <hasModelDimension rdf:resource="#One_Dimensional"/>
+    <hasAvailability rdf:resource="#Public"/>
+  </Model>
+  <Model rdf:ID="UnTRIM">
+    <hasAvailability rdf:resource="#Restrictricted"/>
+    <hasModelDimension rdf:resource="#Three_Dimensional"/>
+    <hasDeveloper rdf:resource="#V_Casulli"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.baw.de/vip/abteilungen/wbk/Publikationen/pkb/untrim/untrim-de.html</infoPage>
+  </Model>
+  <Model rdf:ID="CH3D">
+    <hasAvailability rdf:resource="#Public"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.coastal.ufl.edu/~pete/CH3D/ch3d.html</infoPage>
+    <hasDeveloper rdf:resource="#ARPA"/>
+    <hasModelDimension rdf:resource="#Three_Dimensional"/>
+    <rdfs:comment xml:lang="en">is a Curvilinear-grid Hydrodynamics 3D model developed originally by Dr. Y. Peter Sheng at the Aeronautical Research Associates of Princeton, Inc. (ARAP, now part of Titan Corporation) during 1983-1986. (Sheng 1986, ARAP Tech Report; Sheng 1987, in "Three-Dimensional Models of Marine and Estuarine Hydrodynamics", Elsevier). </rdfs:comment>
+  </Model>
+  <Model rdf:ID="SSTEMP">
+    <hasDomain rdf:resource="#River"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=sstemp</infoPage>
+    <rdfs:comment xml:lang="en">SSTEMP (Stream Segment TEMPerature model) is a much-scaled down version of the Stream Network Temperature Model (SNTEMP). </rdfs:comment>
+    <hasModelDimension rdf:resource="#One_Dimensional"/>
+    <hasDomain rdf:resource="#ChannelNetworks"/>
+    <hasAvailability rdf:resource="#Public"/>
+    <hasDeveloper rdf:resource="#USGS"/>
+  </Model>
+  <ModelingSystems rdf:ID="CH3D-IMS">
+    <rdfs:comment xml:lang="en">an integrated modeling system based on the curvilinear grid system of CH3D, includes circulation (CH3D), wave, sediment transport (CH3D-SED3D), water quality (CH3D-WQ3D), light attenuation (CH3D-LA), and seagrass models (CH3D-SAV).</rdfs:comment>
+    <hasModel rdf:resource="#CH3D"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.coastal.ufl.edu/~pete/CH3D/ch3d.html</infoPage>
+  </ModelingSystems>
+  <Model rdf:ID="BRANCH">
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=branch</infoPage>
+    <rdfs:comment xml:lang="en">BRANCH is a dynamic, 1-dimensional model to simulate flow in streams and rivers that can be assumed to be well-mixed. Branched networks can be modeled. </rdfs:comment>
+    <hasDeveloper rdf:resource="#USGS"/>
+    <hasDomain rdf:resource="#River"/>
+    <hasDomain rdf:resource="#ChannelNetworks"/>
+    <hasAvailability rdf:resource="#Public"/>
+    <hasModelDimension rdf:resource="#One_Dimensional"/>
+    <hasDomain rdf:resource="#Estuary"/>
+  </Model>
+  <Model rdf:ID="RAM11">
+    <hasDeveloper rdf:resource="#USACE"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://environ.nosc.mil/randd/model/rma-11.htm</infoPage>
+    <hasAvailability rdf:resource="#Public"/>
+    <hasModelDimension rdf:resource="#Three_Dimensional"/>
+    <rdfs:comment xml:lang="en">  RMA11 is a finite element water quality model for simulation of 3-D estuaries, bays, lakes and rivers. It is also capable of simulating 1 and 2-D approximations to systems either separately or in combined form</rdfs:comment>
+  </Model>
+  <Model rdf:ID="QUAL2E">
+    <hasDeveloper rdf:resource="#EPA"/>
+    <hasAvailability rdf:resource="#Public"/>
+    <hasDomain rdf:resource="#ChannelNetworks"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.epa.gov/OST/QUAL2E_WINDOWS/</infoPage>
+    <hasModelDimension rdf:resource="#One_Dimensional"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=qual2e</infoPage>
+    <hasDomain rdf:resource="#River"/>
+    <rdfs:comment xml:lang="en">Enhanced Stream Water Quality Model with Uncertainty Analysis </rdfs:comment>
+  </Model>
+  <Model_Dimension rdf:ID="Two_Dimensional_Vertical_Flow">
+    <rdfs:comment xml:lang="en">Two dimensional vertical flow model (2DV)</rdfs:comment>
+  </Model_Dimension>
+  <Model rdf:ID="RAM10">
+    <hasDomain rdf:resource="#CoastalArea"/>
+    <rdfs:comment xml:lang="en">RMA10 is a multi-dimensional finite element numerical model. It is capable of steady or unsteady simulation of 3-D hydrodynamics, salinity, and sediment transport.</rdfs:comment>
+    <hasDomain rdf:resource="#Reservoir"/>
+    <hasModelDimension rdf:resource="#Three_Dimensional"/>
+    <hasDomain rdf:resource="#Lake"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=rma10</infoPage>
+    <hasAvailability rdf:resource="#Public"/>
+    <hasDomain rdf:resource="#Estuary"/>
+    <hasDeveloper rdf:resource="#USACE"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.bossintl.com/html/rma10-features.html </infoPage>
+    <hasDomain rdf:resource="#River"/>
+  </Model>
+  <Model rdf:ID="SWMM">
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://ccee.oregonstate.edu/swmm/</infoPage>
+    <hasModelDimension rdf:resource="#One_Dimensional"/>
+    <hasDeveloper rdf:resource="#EPA"/>
+    <hasAvailability rdf:resource="#Public"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.epa.gov/ednnrmrl/swmm/</infoPage>
+    <rdfs:comment xml:lang="en">SWMM is a dynamic rainfall-runoff simulation model, primarily but not exclusively for urban areas, for single-event or long-term (continuous) simulation</rdfs:comment>
+  </Model>
+  <ModelingSystems rdf:ID="WMS">
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.ems-i.com/WMS/WMS_Overview/wms_overview.html</infoPage>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.bossintl.com/html/wms_overview.html</infoPage>
+  </ModelingSystems>
+  <Model rdf:ID="TOMS">
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.aos.princeton.edu/WWWPUBLIC/htdocs.pom/TOMS.htm </infoPage>
+  </Model>
+  <Model rdf:ID="POMS">
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://marine.rutgers.edu/po/index.php?model=roms&amp;page= </infoPage>
+  </Model>
+  <Model rdf:ID="WASP5">
+    <hasModelDimension rdf:resource="#Three_Dimensional"/>
+    <rdfs:comment xml:lang="en">Water Quality Analysis Simulation Program (WASP) is a generalized framework for modeling contaminant fate and transport in surface waters</rdfs:comment>
+    <hasDomain rdf:resource="#River"/>
+    <hasAvailability rdf:resource="#Public"/>
+    <hasDomain rdf:resource="#CoastalArea"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.scisoftware.com/products/wasp_overview/wasp_overview.html</infoPage>
+    <hasDomain rdf:resource="#Estuary"/>
+    <hasDomain rdf:resource="#Lake"/>
+    <hasDeveloper rdf:resource="#EPA"/>
+    <hasDomain rdf:resource="#Reservoir"/>
+  </Model>
+  <Model rdf:ID="TELEMAC">
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.telemacsystem.com/ </infoPage>
+  </Model>
+  <Model rdf:ID="TOPMODEL">
+    <hasAvailability rdf:resource="#Public"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=topmodel</infoPage>
+    <rdfs:comment xml:lang="en">TOPMODEL is a physically based watershed model that simulates hydrologic fluxes of water (infiltration-excess overland flow, saturation overland flow, infiltration, exfiltration, subsurface flow, evapotranspiration, and channel routing) through a watershed</rdfs:comment>
+    <hasModelDimension rdf:resource="#One_Dimensional"/>
+    <hasDomain rdf:resource="#ChannelNetworks"/>
+    <hasDomain rdf:resource="#Watershed"/>
+    <hasDeveloper>
+      <University rdf:ID="Lancaster_University">
+        <hasCountry>
+          <Country rdf:ID="UK">
+            <rdfs:comment xml:lang="en">United Kingdom</rdfs:comment>
+          </Country>
+        </hasCountry>
+      </University>
+    </hasDeveloper>
+  </Model>
+  <Model rdf:ID="TRIM-2D">
+    <rdfs:comment xml:lang="en">TRIM2D is a 2-dimensional, depth-averaged, finite-difference hydrodynamic model for simulating inland water flows governed by tidal, wind and riverine inputs</rdfs:comment>
+    <hasDeveloper rdf:resource="#V_Casulli"/>
+    <hasAvailability rdf:resource="#Restrictricted"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://environ.spawar.navy.mil/randd/model/trim2d.htm</infoPage>
+    <hasDeveloper rdf:resource="#USGS"/>
+    <hasModelDimension rdf:resource="#Two_Dimensional"/>
+  </Model>
+  <Model rdf:ID="TRIM-3D">
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.baw.de/vip/abteilungen/wbk/Methoden/hnm/trim3d/trim3-de.html</infoPage>
+  </Model>
+  <Model rdf:ID="DAFLOW">
+    <rdfs:comment xml:lang="en">DAFLOW is a 1-dimensional model to simulate unsteady flow in well-mixed streams and rivers. Branched networks can be modeled</rdfs:comment>
+    <hasDomain rdf:resource="#ChannelNetworks"/>
+    <hasDeveloper rdf:resource="#USGS"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://water.usgs.gov/software/daflow.html</infoPage>
+    <hasDomain rdf:resource="#River"/>
+    <hasAvailability rdf:resource="#Public"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=daflow</infoPage>
+    <hasModelDimension rdf:resource="#One_Dimensional"/>
+  </Model>
+  <Model rdf:ID="FESWMS">
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=feswms</infoPage>
+    <hasDomain rdf:resource="#River"/>
+    <hasDomain rdf:resource="#Reservoir"/>
+    <hasModelDimension rdf:resource="#Two_Dimensional"/>
+    <hasDomain rdf:resource="#Estuary"/>
+    <hasAvailability rdf:resource="#Public"/>
+    <hasDeveloper rdf:resource="#USGS"/>
+    <hasDomain rdf:resource="#CoastalArea"/>
+    <hasIntegrationMethod rdf:resource="#Finite_Element"/>
+    <hasDomain rdf:resource="#Lake"/>
+    <rdfs:comment xml:lang="en">FESWMS (Finite Element Surface Water Modeling System) is a hydrdynamic modeling code that simulates two-dimensional, depth-integrated, steady or unsteady surface-water flows.</rdfs:comment>
+  </Model>
+  <Model rdf:ID="CE-QUAL-W2">
+    <hasIntegrationMethod rdf:resource="#Finite_Difference"/>
+    <hasDeveloper rdf:resource="#ATS"/>
+    <hasDomain rdf:resource="#Reservoir"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=cequalw2</infoPage>
+    <hasModelDimension rdf:resource="#Two_Dimensional"/>
+    <rdfs:comment xml:lang="en">CE-QUAL-W2 is a two-dimensional, laterally averaged, finite difference hydrodynamic and water quality model. Because the model assumes lateral homogeneity, it is best suited for relatively long and narrow waterbodies exhibiting longitudinal and vertical water quality gradients.</rdfs:comment>
+    <hasDeveloper rdf:resource="#USACE"/>
+    <hasDeveloper rdf:resource="#JE_Edinger_Associates"/>
+    <hasAvailability rdf:resource="#Public"/>
+    <hasDomain rdf:resource="#Estuary"/>
+    <hasDomain rdf:resource="#River"/>
+  </Model>
+  <Model rdf:ID="ELCIRC">
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.ccalmr.ogi.edu/CORIE/modeling/elcirc/ </infoPage>
+  </Model>
+  <Model rdf:ID="SED2D">
+    <hasModelDimension rdf:resource="#Two_Dimensional"/>
+    <hasDeveloper rdf:resource="#USACE"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.scisoft-gms.com/sms_details/sms_sed2d/sms_sed2d.html</infoPage>
+    <hasAvailability rdf:resource="#Public"/>
+    <hasIntegrationMethod rdf:resource="#Finite_Element"/>
+    <hasDomain rdf:resource="#River"/>
+    <rdfs:comment xml:lang="en">SED2D is a dynamic, 2-dimensional finite element model for vertically-averaged sediment transport</rdfs:comment>
+    <hasDomain rdf:resource="#CoastalArea"/>
+    <hasDomain rdf:resource="#Lake"/>
+    <hasDomain rdf:resource="#Reservoir"/>
+    <hasDomain rdf:resource="#Estuary"/>
+  </Model>
+  <Model rdf:ID="MIKE-11">
+    <hasModelDimension rdf:resource="#One_Dimensional"/>
+    <rdfs:comment xml:lang="en">MIKE 11 is a system for the 1-dimensional, dynamic modelling of rivers, channels and irrigation systems, including rainfall-runoff, advection-dispersion, morphological, and water quality</rdfs:comment>
+    <hasDomain rdf:resource="#Estuary"/>
+    <hasDomain rdf:resource="#ChannelNetworks"/>
+    <hasDomain rdf:resource="#River"/>
+    <hasDeveloper rdf:resource="#DHI"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.dhisoftware.com/mike11/</infoPage>
+    <hasAvailability rdf:resource="#Commercial"/>
+  </Model>
+  <ModelingSystems rdf:ID="MMS">
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=mms</infoPage>
+    <rdfs:comment xml:lang="en">MMS (Modular Modeling System) is a modeling framework that enables a user to selectively couple the most appropriate process algorithms from applicable models to create an "optimal" model for the desired application</rdfs:comment>
+  </ModelingSystems>
+  <ModelingSystems rdf:ID="BASINS">
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.epa.gov/docs/ostwater/BASINS/</infoPage>
+    <rdfs:comment xml:lang="en">Better Assessment Science Integrating Point and Nonpoint Sources (BASINS) is a customized ArcView GIS application designed to be used by regional, state, and local agencies in performing watershed- and water-quality-based studies</rdfs:comment>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=basins</infoPage>
+  </ModelingSystems>
+  <ModelingSystems rdf:ID="RMS">
+    <hasModel rdf:resource="#HEC-2"/>
+    <rdfs:comment xml:lang="en">Advanced computing of water surface profiles for modeling bridges, culverts, floodplains, and channel improvements using HEC-2 and HEC-RAS within AutoCAD</rdfs:comment>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.bossintl.com/html/rms_overview.html</infoPage>
+    <hasModel rdf:resource="#HEC-RAS"/>
+  </ModelingSystems>
+  <Model rdf:ID="MIKE-21">
+    <hasAvailability rdf:resource="#Commercial"/>
+    <hasDeveloper rdf:resource="#DHI"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.dhisoftware.com/mike21/</infoPage>
+    <hasModelDimension rdf:resource="#Two_Dimensional"/>
+    <rdfs:comment xml:lang="en">MIKE 21 is a modeling system for 2D free-surface flows that can be applied in lakes, estuaries, bays, coastal areas, and seas where stratification can be neglected</rdfs:comment>
+    <hasDomain rdf:resource="#CoastalArea"/>
+    <hasDomain rdf:resource="#Estuary"/>
+  </Model>
+  <Model rdf:ID="SHORECIRC">
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://chinacat.coastal.udel.edu/~kirby/programs/shorecirc/shorecirc.html </infoPage>
+  </Model>
+  <Model rdf:ID="ECOM">
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.hydroqual.com/ehst_flow.html </infoPage>
+  </Model>
+  <Model rdf:ID="CE-QUAL-R1">
+    <hasAvailability rdf:resource="#Public"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=cequalr1</infoPage>
+    <hasDomain rdf:resource="#Lake"/>
+    <hasDeveloper rdf:resource="#USACE"/>
+    <rdfs:comment xml:lang="en">CE-QUAL-R1 is a dynamic, 1-dimensional (areally averaged) model to simulate vertical profiles of water quality in lakes and reservoirs. </rdfs:comment>
+    <hasDomain rdf:resource="#Reservoir"/>
+    <hasModelDimension rdf:resource="#One_Dimensional"/>
+  </Model>
+  <Model rdf:ID="PRMS">
+    <hasDomain rdf:resource="#ChannelNetworks"/>
+    <hasModelDimension rdf:resource="#Dimension_Not_Applicable"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=prms</infoPage>
+    <hasDomain rdf:resource="#Watershed"/>
+    <hasAvailability rdf:resource="#Public"/>
+    <rdfs:comment xml:lang="en">PRMS (Precipitation-Runoff Modeling System) is a distributed watershed model that simulates precipitation- and snowmelt-driven movement of water through the basin via overland flow, interflow, and baseflow</rdfs:comment>
+    <hasDeveloper rdf:resource="#USGS"/>
+  </Model>
+  <ModelingSystems rdf:ID="GenScn">
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://water.usgs.gov/software/genscn.html</infoPage>
+    <rdfs:comment xml:lang="en">GenScn (GENeration and analysis of model simualtion SCeNarios) is an interactive hydrologic modeling system that supports model setup and data management, model calibration, and analysis of alternatives.</rdfs:comment>
+  </ModelingSystems>
+  <Individual rdf:ID="ND_Katopodes">
+    <hasCountry rdf:resource="#USA"/>
+  </Individual>
+  <Model_Dimension rdf:ID="Three_Dimensional_Barotropic">
+    <rdfs:comment xml:lang="en">Any of a number of model atmospheres in which some of the following conditions exist throughout the motion: coincidence of pressure and temperature surfaces; absence of vertical wind shear; absence of vertical motions; absence of horizontal velocity divergence; and conservation of the vertical component of absolute vorticity. </rdfs:comment>
+  </Model_Dimension>
+  <Model rdf:ID="ROMS">
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://quercus.igpp.ucla.edu/research/projects/roms/</infoPage>
+  </Model>
+  <Model_Dimension rdf:ID="Two_Dimensional_Depth_Average">
+    <rdfs:comment xml:lang="en">Two dimensional depth average model (2DH)</rdfs:comment>
+  </Model_Dimension>
+  <Model rdf:ID="CH3D-WES">
+    <hasDomain rdf:resource="#Reservoir"/>
+    <hasAvailability rdf:resource="#Public"/>
+    <hasDomain rdf:resource="#CoastalArea"/>
+    <hasDomain rdf:resource="#Lake"/>
+    <hasModelDimension rdf:resource="#Three_Dimensional"/>
+    <hasDomain rdf:resource="#Estuary"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=ch3dwes</infoPage>
+    <hasDeveloper rdf:resource="#USACE"/>
+    <rdfs:comment xml:lang="en">CH3D-WES (Curvilinear Hydrodynamics in 3-Dimensions - Waterways Experiment Station) is a time-varying three-dimensional numerical hydrodynamic, salinity, and temperature model.</rdfs:comment>
+    <hasDomain rdf:resource="#River"/>
+  </Model>
+  <Model rdf:ID="HSPF">
+    <hasDeveloper rdf:resource="#USGS"/>
+    <hasDomain rdf:resource="#Watershed"/>
+    <hasModelDimension rdf:resource="#Dimension_Not_Applicable"/>
+    <hasAvailability rdf:resource="#Public"/>
+    <hasDomain rdf:resource="#ChannelNetworks"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://water.usgs.gov/software/hspf.html</infoPage>
+    <rdfs:comment xml:lang="en">HSPF (Hydrologic Simulation Program-Fortran) is a distributed watershed model that simulates precipitation- and snowmelt-driven movement of water through the basin via overland flow, interflow, and baseflow. Kinematic routing of the unidirectional flow through a receiving network of well-mixed channel reaches is also simulated.</rdfs:comment>
+  </Model>
+  <FEM2D rdf:ID="wbsModel">
+    <hasDomain rdf:resource="#River"/>
+    <hasDomain rdf:resource="#ChannelNetworks"/>
+    <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Two dimensional finite element model to simulate flow in rivers, lakes and channel networks.</rdfs:comment>
+    <hasAvailability rdf:resource="#Public"/>
+    <hasDeveloper rdf:resource="#ND_Katopodes"/>
+    <hasDeveloper>
+      <Individual rdf:ID="M_Piasecki">
+        <hasCountry rdf:resource="#USA"/>
+      </Individual>
+    </hasDeveloper>
+  </FEM2D>
+  <Model rdf:ID="BLTM">
+    <rdfs:comment xml:lang="en">The Branched Lagrangian Transport Model (BLTM) is a dynamic, 1-dimensional Lagrangian transport model to simulate water quality in streams and rivers that can be assumed to be well-mixed. Suitable for unsteady and reversing flows</rdfs:comment>
+    <hasAvailability rdf:resource="#Public"/>
+    <hasDomain rdf:resource="#River"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=bltm</infoPage>
+    <hasDeveloper rdf:resource="#USGS"/>
+    <hasDomain rdf:resource="#Estuary"/>
+    <hasModelDimension rdf:resource="#One_Dimensional"/>
+  </Model>
+  <Model rdf:ID="SNTEMP">
+    <hasDeveloper rdf:resource="#USGS"/>
+    <hasModelDimension rdf:resource="#One_Dimensional"/>
+    <hasAvailability rdf:resource="#Public"/>
+    <rdfs:comment xml:lang="en">SNTEMP (Stream Network TEMPerature model) is a mechanistic, one-dimensional heat transport model for branched stream networks that predicts the daily mean and maximum water temperatures as a function of stream distance and environmental heat flux</rdfs:comment>
+    <hasDomain rdf:resource="#River"/>
+    <hasDomain rdf:resource="#ChannelNetworks"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=sntemp</infoPage>
+  </Model>
+  <Model rdf:ID="FourPt">
+    <hasDomain rdf:resource="#River"/>
+    <hasAvailability rdf:resource="#Public"/>
+    <hasModelDimension rdf:resource="#One_Dimensional"/>
+    <hasDeveloper rdf:resource="#USGS"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=fourpt</infoPage>
+    <rdfs:comment xml:lang="en">FourPt is a 1-dimensional model to simulate unsteady flow in networks of open channels</rdfs:comment>
+    <hasDomain rdf:resource="#ChannelNetworks"/>
+    <hasIntegrationMethod rdf:resource="#Finite_Difference"/>
+  </Model>
+  <Model rdf:ID="EFDC">
+    <rdfs:comment xml:lang="en">The EFDC (Environmental Fluid Dynmics Code) and HEM3D (Hydrodynamic-Eutrophication Model-3D) models are 3-dimensional surface water models for hydrodynamic and water quality simulations in rivers, lakes, reservoirs, wetland systems, estuaries, and the coastal ocean</rdfs:comment>
+    <hasDomain rdf:resource="#Reservoir"/>
+    <hasDomain rdf:resource="#CoastalArea"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.epa.gov/athens/research/modeling/efdc.html</infoPage>
+    <hasAvailability rdf:resource="#Public"/>
+    <hasDeveloper rdf:resource="#J_Hamrick"/>
+    <hasModelDimension rdf:resource="#Three_Dimensional"/>
+    <hasDomain rdf:resource="#River"/>
+    <hasDomain rdf:resource="#Lake"/>
+    <hasDomain rdf:resource="#Estuary"/>
+  </Model>
+  <Model rdf:ID="CE-QUAL-RIV1">
+    <hasDomain rdf:resource="#ChannelNetworks"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://smig.usgs.gov/cgi-bin/SMIC/model_home_pages/model_home?selection=cequalriv1</infoPage>
+    <rdfs:comment xml:lang="en">CE-QUAL-RIV1 is a dynamic, 1-dimensional (laterally-averaged) model to simulate flow and water quality in rivers and run-of-the-river reservoirs where variation along the axis of flow is important, but variation with depth and across the channel can be neglected.</rdfs:comment>
+    <hasDomain rdf:resource="#River"/>
+    <hasDeveloper rdf:resource="#USACE"/>
+    <hasModelDimension rdf:resource="#One_Dimensional"/>
+    <hasAvailability rdf:resource="#Public"/>
+  </Model>
+  <ModelingSystems rdf:ID="DELFT3D">
+    <rdfs:comment xml:lang="en">Delft3D is the Model System of the WL / Delft hydraulics where hydrodynamical, ecological and morphodynamical modules are integrated and is widely used all over the world</rdfs:comment>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.wldelft.nl/soft/d3d/intro/index.html</infoPage>
+  </ModelingSystems>
+  <Model rdf:ID="TELEMAC-2D">
+    <rdfs:comment xml:lang="en">TELEMAC-2D  is used to simulate free-surface flows in two dimensions of horizontal space. At each point of the mesh, the program calculates the depth of water and the two velocity components.
+</rdfs:comment>
+    <hasModelDimension rdf:resource="#Two_Dimensional"/>
+    <hasAvailability rdf:resource="#Commercial"/>
+    <infoPage rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >http://www.telemacsystem.com/gb/info/comm/telemac2d/telemac2d.html</infoPage>
+    <hasDeveloper rdf:resource="#EDF-DRD"/>
+  </Model>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 1.2 beta, Build 139)  http://protege.stanford.edu -->

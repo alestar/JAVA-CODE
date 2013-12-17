@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+<!-- Realms -->
+
+  <owl:Class rdf:ID="Plasma"/>
+  <owl:Class rdf:ID="Cycle"/>
+  <owl:Class rdf:ID="PhysicalPhenomena"/>
+  <owl:Class rdf:ID="Sun"/>
+  <owl:Class rdf:ID="Realm"/>
+  <owl:Class rdf:ID="Surface"/>
+
+  <owl:Class rdf:ID="ActiveRegion">
+    <rdfs:subClassOf rdf:resource="#StellarRealm"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Chromosphere">
+    <rdfs:subClassOf rdf:resource="#StellarRealm"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Corona">
+    <rdfs:subClassOf rdf:resource="#StellarRealm"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="CoronaHole">
+    <rdfs:subClassOf rdf:resource="#StellarPhenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Photosphere">
+    <rdfs:subClassOf rdf:resource="#StellarRealm"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="StellarInterior">
+    <rdfs:subClassOf rdf:resource="#StellarRealm"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="StellarRealm">
+    <rdfs:subClassOf rdf:resource="#Realm"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="StellarSurface">
+    <rdfs:subClassOf rdf:resource="#StellarRealm" />
+    <rdfs:subClassOf rdf:resource="#Surface" />
+  </owl:Class>
+
+
+<!-- Property -->
+  <owl:Class rdf:ID="SunspotNumber">
+    <rdfs:subClassOf rdf:resource="#SolarActivity"/>
+  </owl:Class>
+
+<!-- Phenomena -->
+  <owl:Class rdf:ID="CoronalMassEjection">
+    <rdfs:subClassOf rdf:resource="#StellarPhenomena"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>
+		<owl:ObjectProperty rdf:ID="hasStateOfMatter"/>   
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Plasma" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasStellarRealm" />
+        <owl:allValuesFrom rdf:resource="#Corona" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:equivalentClass rdf:resource="#CME"/>
+    <rdfs:comment>A coronal mass ejection (CME) is an ejection of material from the solar corona, usually observed with a white-light coronagraph. The ejected material is a plasma consisting primarily of electrons and protons (in addition to small quantities of heavier elements such as helium, oxygen, and iron), plus the entrained coronal magnetic field. </rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="CME"/>
+
+
+  <owl:Class rdf:ID="Filament">
+    <rdfs:subClassOf rdf:resource="#Prominence"/>
+    <rdfs:comment>If a solar prominence occurs on the disc of the sun it appears darker than its background (due to the lower temperature of the plasma). These are referred to as solar filaments. </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Flare">
+    <rdfs:subClassOf rdf:resource="#StellarPhenomena"/>
+    <rdfs:comment>A solar flare is a violent explosion in the atmosphere of the sun. Solar flares take place in the solar corona and chromosphere, heating plasma to tens of millions of kelvins and accelerating electrons, protons and heavier ions to near the speed of light. They produce electromagnetic radiation across the electromagnetic spectrum at all wavelengths from long-wave radio to the shortest wavelength gamma rays  Most flares occur in active regions around sunspots, where intense magnetic fields emerge from the Sun's surface into the corona. Flares are powered by the sudden (timescales of minutes to tens of minutes) release of magnetic energy stored in the corona. </rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Granule">
+    <rdfs:subClassOf rdf:resource="#StellarPhenomena"/>
+    <rdfs:comment>Granules on the photosphere of the Sun are caused by convection currents (thermal columns, Bénard cells) of plasma within the Sun's convective zone.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SolarActivity">
+    <rdfs:subClassOf rdf:resource="#SolarPhenomena"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SolarCycle">
+    <rdfs:subClassOf rdf:resource="#Cycle"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	  	<owl:onProperty>
+		<owl:ObjectProperty rdf:ID="hasPhenomena"/>   
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#SolarActivity" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SolarPhenomena">
+    <rdfs:subClassOf rdf:resource="#StellarPhenomena"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasStar" />
+        <owl:hasValue rdf:resource="#Sun" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Prominence">
+    <rdfs:subClassOf rdf:resource="#StellarRealm"/>
+    <rdfs:comment>A solar prominence is a large bright feature extending outwards from the sun's surface, often in a loop configuration. Prominences are anchored to the solar surface in the photosphere, and extend outwards into the solar corona. While the corona consists of extremely hot ionized gases, known as plasma, which do not emit much visible light, prominences contain much cooler plasma, similar in composition to that of the chromosphere. A prominence forms over timescales of about a day, and stable prominences may persist in the corona for several months. Some prominences break apart and give rise to coronal mass ejections</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="StellarPhenomena">
+    <rdfs:subClassOf rdf:resource="#PhysicalPhenomena"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#hasStellarRealm" />
+        <owl:someValuesFrom rdf:resource="#StellarRealm" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Sunspot">
+    <rdfs:subClassOf rdf:resource="#SolarPhenomena"/>
+  </owl:Class>
+
+<!-- Object Properties -->
+   <owl:ObjectProperty rdf:ID="hasStellarRealm"/>
+   <owl:ObjectProperty rdf:ID="hasStar"/>
+</rdf:RDF>

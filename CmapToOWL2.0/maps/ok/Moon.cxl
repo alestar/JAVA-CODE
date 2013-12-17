@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Moon</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Moon">
+                <sense domains="[astronomy]"
+                    gloss="the natural satellite of the Earth; &quot;the average distance to the moon is 384,400 kilometers&quot;; &quot;men first stepped on the moon in 1969&quot;"
+                    number="06765463" pos="n" words="[moon]"/>
+                <sense domains="[factotum]"
+                    gloss="any object resembling a moon; &quot;he made a moon lamp that he used as a night light&quot;; &quot;the clock had a moon that showed various phases&quot;"
+                    number="06668927" pos="n" words="[moon]"/>
+                <sense domains="[metrology, time_period]"
+                    gloss="the period between successive new moons (29.531 days)"
+                    number="10920638" pos="n" words="[lunar_month, moon, lunation, synodic_month]"/>
+                <sense domains="[physics]"
+                    gloss="the light of the moon; &quot;moonlight is the smuggler's enemy&quot;; &quot;the moon was bright enough to read by&quot;"
+                    number="07820113" pos="n" words="[moonlight, moonshine, moon]"/>
+                <sense domains="[astronomy]"
+                    gloss="any natural satellite of a planet; &quot;Jupiter has sixteen moons&quot;"
+                    number="06765228" pos="n" words="[moon]"/>
+                <sense domains="[factotum]"
+                    gloss="have dreamlike musings or fantasies while awake; &quot;She looked out the window, daydreaming&quot;"
+                    number="01646459" pos="v" words="[daydream, moon]"/>
+                <sense domains="[factotum]"
+                    gloss="be idle in a listless or dreamy way"
+                    number="01646170" pos="v" words="[moon, moon_around, moon_on]"/>
+                <sense domains="[factotum]"
+                    gloss="expose one's buttocks to; &quot;moon the audience&quot;"
+                    number="01466394" pos="v" words="[moon]"/>
+            </concept>
+            <concept id="2" label="Satellite">
+                <sense domains="[astronomy]"
+                    gloss="any celestial body orbiting around a planet or star"
+                    number="06765049" pos="n" words="[satellite]"/>
+            </concept>
+            <concept id="3" label="Solid body"/>
+            <concept id="4" label="Lunar movements"/>
+            <concept id="5" label="Physical influence on planet Earth"/>
+            <concept id="6" label="Tides">
+                <sense domains="[geography]"
+                    gloss="the periodic rise and fall of the sea level under the gravitational pull of the moon"
+                    number="05509682" pos="n" words="[tide]"/>
+            </concept>
+            <concept id="7" label="Shape">
+                <sense domains="[factotum]"
+                    gloss="any spatial attribute (especially as defined by outline); &quot;he could barely make out their shapes through the smoke&quot;"
+                    number="03952527" pos="n" words="[shape, form, configuration, contour]"/>
+                <sense domains="[factotum]"
+                    gloss="the spatial arrangement of something as distinct from its substance; &quot;geometry is the mathematical science of shape&quot;"
+                    number="00015185" pos="n" words="[shape, form]"/>
+                <sense domains="[anatomy]"
+                    gloss="alternative names for the body of a human being; &quot;Leonardo studied the human body&quot;; &quot;he has a strong physique&quot;; &quot;the spirit is willing but the flesh is weak&quot;"
+                    number="04055717" pos="n" words="[human_body, physical_body, material_body, soma, build, figure, physique, anatomy, shape, bod, chassis, frame, form, flesh]"/>
+                <sense domains="[factotum]"
+                    gloss="a concrete representation of an otherwise nebulous concept; &quot;a circle was the embodiment of his concept of life&quot;"
+                    number="04562135" pos="n" words="[shape, embodiment]"/>
+                <sense domains="[factotum]"
+                    gloss="the visual appearance of something or someone; &quot;the delicate cast of his features&quot;"
+                    number="03685812" pos="n" words="[form, shape, cast]"/>
+                <sense domains="[health, physiology]"
+                    gloss="the state of (good) health--especially in the phrases &quot;in condition&quot; or &quot;in shape&quot; or &quot;out of condition&quot; or &quot;out of shape&quot;"
+                    number="10430604" pos="n" words="[condition, shape]"/>
+                <sense domains="[factotum]"
+                    gloss="a perceptual structure; &quot;the composition presents problems for students of musical form&quot;; &quot;a visual pattern must include not only objects but the spaces between them&quot;"
+                    number="04554317" pos="n" words="[form, shape, pattern]"/>
+                <sense domains="[factotum]"
+                    gloss="shape or influence; give direction to; &quot;experience often determines ability&quot;"
+                    number="00474001" pos="v" words="[determine, shape, influence, regulate]"/>
+                <sense domains="[factotum]"
+                    gloss="make something, usually for a specific function; &quot;She molded the riceballs carefully&quot;; &quot;Form the dough into cylinders&quot;"
+                    number="01139594" pos="v" words="[shape, form, mold, mould, forge]"/>
+                <sense domains="[factotum]"
+                    gloss="cause to shape or form; &quot;shape a bun&quot;; &quot;shape a ball from the dough&quot;"
+                    number="00095506" pos="v" words="[shape, form]"/>
+            </concept>
+            <concept id="8" label="Diameter">
+                <sense domains="[geometry]"
+                    gloss="a straight line connecting the center of a circle with two points on its perimeter (or the center of a sphere with two points on its surface)"
+                    number="09994073" pos="n" words="[diameter]"/>
+            </concept>
+            <concept id="9" label="Density">
+                <sense domains="[chemistry]"
+                    gloss="the amount per unit size" number="03865563"
+                    pos="n" words="[density, denseness]"/>
+                <sense domains="[factotum]"
+                    gloss="the spatial property of being crowded together"
+                    number="03970585" pos="n" words="[concentration, density, denseness, compactness]"/>
+            </concept>
+            <concept id="10" label="Color">
+                <sense domains="[photography]"
+                    gloss="(photography) &quot;color film&quot;; &quot;he rented a color television&quot;; &quot;in glorious color&quot;; &quot;marvelous color illustrations&quot;"
+                    number="00368578" pos="a" words="[color, colour]"/>
+                <sense domains="[color]"
+                    gloss="a visual attribute of things that results from the light they emit or transmit or reflect; &quot;white is the coolest summer color&quot;"
+                    number="03875475" pos="n" words="[color, colour, coloring, colouring]"/>
+                <sense domains="[factotum]"
+                    gloss="interest and variety and intensity: &quot;the Puritan Period was lacking in color&quot;"
+                    number="04043575" pos="n" words="[color, colour, vividness]"/>
+                <sense domains="[music]"
+                    gloss="the timbre of a musical sound; &quot;the recording fails to capture the true color of the original music&quot;"
+                    number="03897800" pos="n" words="[color, colour]"/>
+                <sense domains="[anthropology]"
+                    gloss="a race with skin pigmentation different from the white race (especially Blacks)"
+                    number="05974460" pos="n" words="[color, colour, people_of_color, people_of_colour]"/>
+                <sense domains="[factotum]"
+                    gloss="outward or token appearance or form; &quot;he tried to give his actions a semblance of authenticity&quot;; &quot;the situation soon took on a different color&quot;"
+                    number="03686135" pos="n" words="[semblance, color, colour]"/>
+                <sense domains="[factotum]"
+                    gloss="add color to; &quot;The child colored the drawings&quot;; &quot;Fall colored the trees&quot;"
+                    number="00194912" pos="v" words="[color]"/>
+                <sense domains="[factotum]"
+                    gloss="distort; &quot;My personal feelings color my judgment in this case&quot;"
+                    number="00567230" pos="v" words="[color, distort]"/>
+                <sense domains="[factotum]"
+                    gloss="modify or bias; &quot;His political ideas color his lectures&quot;"
+                    number="01729632" pos="v" words="[color]"/>
+                <sense domains="[art, fashion]"
+                    gloss="decorate with colors" number="01163997"
+                    pos="v" words="[color, colour, emblazon]"/>
+                <sense domains="[drawing, painting]"
+                    gloss="add color to" number="01163518" pos="v" words="[color, colour, color_in, colour_in]"/>
+                <sense domains="[factotum]"
+                    gloss="gloss or excuse; &quot;color a lie&quot;"
+                    number="00567365" pos="v" words="[color, gloss]"/>
+            </concept>
+            <concept id="11" label="Lunar surface"/>
+            <concept id="12" label="Atmosphere">
+                <sense domains="[astronomy]"
+                    gloss="the mass of air surrounding the Earth; &quot;there was great heat as the comet entered the atmosphere&quot;"
+                    number="06270068" pos="n" words="[atmosphere]"/>
+            </concept>
+            <concept id="13" label="Sphere">
+                <sense domains="[astronomy]"
+                    gloss="the apparent surface of the imaginary sphere on which celestial bodies appear to be projected"
+                    number="06285184" pos="n" words="[celestial_sphere, sphere, empyrean, firmament, heavens, vault_of_heaven, welkin]"/>
+            </concept>
+            <concept id="14" label="Sun rays"/>
+            <concept id="15" label="Wet sand"/>
+            <concept id="16" label="Oceans">
+                <sense domains="[geography]"
+                    gloss="a large body of water constituting a principal part of the hydrosphere"
+                    number="06781694" pos="n" words="[ocean]"/>
+            </concept>
+            <concept id="17" label="Lunar rocks"/>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="18" label="is a"/>
+            <linking-phrase id="19" label="performs"/>
+            <linking-phrase id="20" label="exerts"/>
+            <linking-phrase id="21" label="has"/>
+            <linking-phrase id="22" label="does not have"/>
+            <linking-phrase id="23" label="performs"/>
+            <linking-phrase id="24" label="such as"/>
+            <linking-phrase id="25" label="of a"/>
+            <linking-phrase id="26" label="depends on the incidence of"/>
+            <linking-phrase id="27" label="is similar to"/>
+            <linking-phrase id="28" label="may have"/>
+            <linking-phrase id="29" label="has"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="18"/>
+            <connection from-id="18" to-id="2"/>
+            <connection from-id="18" to-id="3"/>
+            <connection from-id="1" to-id="19"/>
+            <connection from-id="19" to-id="4"/>
+            <connection from-id="1" to-id="20"/>
+            <connection from-id="20" to-id="5"/>
+            <connection from-id="1" to-id="21"/>
+            <connection from-id="21" to-id="7"/>
+            <connection from-id="21" to-id="8"/>
+            <connection from-id="21" to-id="9"/>
+            <connection from-id="21" to-id="10"/>
+            <connection from-id="21" to-id="11"/>
+            <connection from-id="1" to-id="22"/>
+            <connection from-id="22" to-id="12"/>
+            <connection from-id="3" to-id="23"/>
+            <connection from-id="23" to-id="4"/>
+            <connection from-id="5" to-id="24"/>
+            <connection from-id="24" to-id="6"/>
+            <connection from-id="7" to-id="25"/>
+            <connection from-id="25" to-id="13"/>
+            <connection from-id="10" to-id="26"/>
+            <connection from-id="26" to-id="14"/>
+            <connection from-id="11" to-id="27"/>
+            <connection from-id="27" to-id="15"/>
+            <connection from-id="11" to-id="28"/>
+            <connection from-id="28" to-id="16"/>
+            <connection from-id="28" to-id="17"/>
+            <connection from-id="15" to-id="29"/>
+            <connection from-id="29" to-id="10"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="330" y="45"/>
+            <concept-appearance id="2" x="166" y="136"/>
+            <concept-appearance id="3" x="284" y="140"/>
+            <concept-appearance id="4" x="135" y="245"/>
+            <concept-appearance id="5" x="532" y="78"/>
+            <concept-appearance id="6" x="689" y="213"/>
+            <concept-appearance id="7" x="273" y="255"/>
+            <concept-appearance id="8" x="339" y="313"/>
+            <concept-appearance id="9" x="402" y="330"/>
+            <concept-appearance id="10" x="468" y="310"/>
+            <concept-appearance id="11" x="532" y="286"/>
+            <concept-appearance id="12" x="458" y="168"/>
+            <concept-appearance id="13" x="194" y="400"/>
+            <concept-appearance id="14" x="390" y="446"/>
+            <concept-appearance id="15" x="549" y="426"/>
+            <concept-appearance id="16" x="614" y="415"/>
+            <concept-appearance id="17" x="670" y="332"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="18" x="241" y="104"/>
+            <linking-phrase id="19" x="75" y="93"/>
+            <linking-phrase id="20" x="427" y="76"/>
+            <linking-phrase id="21" x="361" y="225"/>
+            <linking-phrase id="22" x="390" y="120"/>
+            <linking-phrase id="23" x="246" y="226"/>
+            <linking-phrase id="24" x="625" y="169"/>
+            <linking-phrase id="25" x="227" y="343"/>
+            <linking-phrase id="26" x="417" y="396"/>
+            <linking-phrase id="27" x="545" y="381"/>
+            <linking-phrase id="28" x="595" y="325"/>
+            <linking-phrase id="29" x="499" y="403"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

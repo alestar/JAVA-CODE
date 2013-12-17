@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Recycling of water</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Recycling of water"/>
+            <concept id="2" label="Life support"/>
+            <concept id="3" label="Physical and chemical systems"/>
+            <concept id="4" label="Bioregenerative systems"/>
+            <concept id="5" label="Electrical power">
+                <sense domains="[electricity]"
+                    gloss="the product of voltage and current"
+                    number="07792565" pos="n" terms="[electrical_power, electric_power, wattage]"/>
+            </concept>
+            <concept id="6" label="Chemicals">
+                <sense domains="[chemistry]"
+                    gloss="relating to or used in chemistry; &quot;chemical engineer&quot;; &quot;chemical balance&quot;"
+                    number="02543445" pos="a" terms="[chemical, chemic]"/>
+                <sense domains="[chemistry]"
+                    gloss="of or made from or using substances produced by or used in reactions involving atomic or molecular changes; &quot;chemical fertilizer&quot;"
+                    number="02543733" pos="a" terms="[chemical]"/>
+                <sense domains="[chemistry]"
+                    gloss="produced by or used in a reaction involving changes in atoms or molecules"
+                    number="10622194" pos="n" terms="[chemical]"/>
+            </concept>
+            <concept id="7" label="Autonomous monitoring and control"/>
+            <concept id="8" label="De-humidification"/>
+            <concept id="9" label="Multi-filtration"/>
+            <concept id="10" label="Distillation">
+                <sense domains="[chemistry]"
+                    gloss="the process of boiling a liquid and condensing its vapors"
+                    number="09678869" pos="n" terms="[distillation, distillment]"/>
+                <sense domains="[chemistry]"
+                    gloss="a liquid produced by condensation from a vapor during distilling; the product of distilling"
+                    number="10643647" pos="n" terms="[distillate, distillation]"/>
+            </concept>
+            <concept id="11" label="Air">
+                <sense domains="[factotum]"
+                    gloss="the region above the ground; &quot;her hand stopped in mid air&quot;; &quot;the hanged man danced on air&quot;"
+                    number="06373203" pos="n" terms="[air]"/>
+            </concept>
+            <concept id="12" label="Photosynthesis">
+                <sense domains="[chemistry]"
+                    gloss="synthesis of compounds with the aid of radiant energy (especially in plants)"
+                    number="09705163" pos="n" terms="[photosynthesis]"/>
+            </concept>
+            <concept id="13" label="Respiration">
+                <sense domains="[physiology]"
+                    gloss="the process of taking in oxygen from the air and releasing carbon dioxide"
+                    number="00532749" pos="n" terms="[breathing, respiration]"/>
+            </concept>
+            <concept id="14" label="Plants">
+                <sense domains="[factotum]"
+                    gloss="place into a river; &quot;plant fish&quot;"
+                    number="01587731" pos="v" terms="[plant]"/>
+            </concept>
+            <concept id="15" label="Fresh food">
+                <sense domains="[gastronomy]"
+                    gloss="food that is not preserved by canning or dehydration or freezing or smoking"
+                    number="05627066" pos="n" terms="[fresh_food, fresh_foods]"/>
+            </concept>
+            <concept id="16" label="Natural greenery"/>
+            <concept id="17" label="Nutrients"/>
+            <concept id="18" label="Space">
+                <sense domains="[astrology]"
+                    gloss="any region in space outside the Earth's atmosphere; &quot;the astronauts walked in space without a tether&quot;"
+                    number="06270582" pos="n" terms="[outer_space, space]"/>
+            </concept>
+            <concept id="19" label="Sunlight">
+                <sense domains="[factotum]"
+                    gloss="the rays of the sun; &quot;the shingles were weathered by the sun and wind&quot;"
+                    number="07820384" pos="n" terms="[sunlight, sunshine, sun]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="20" label="used for"/>
+            <linking-phrase id="21" label="may use"/>
+            <linking-phrase id="22" label="requires"/>
+            <linking-phrase id="23" label="involves"/>
+            <linking-phrase id="24" label="involve"/>
+            <linking-phrase id="25" label="require"/>
+            <linking-phrase id="26" label="of"/>
+            <linking-phrase id="27" label="through"/>
+            <linking-phrase id="28" label="through"/>
+            <linking-phrase id="29" label="provide"/>
+            <linking-phrase id="30" label="to grow"/>
+            <linking-phrase id="31" label="or"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="20"/>
+            <connection from-id="20" to-id="2"/>
+            <connection from-id="1" to-id="21"/>
+            <connection from-id="21" to-id="3"/>
+            <connection from-id="21" to-id="4"/>
+            <connection from-id="3" to-id="22"/>
+            <connection from-id="22" to-id="5"/>
+            <connection from-id="22" to-id="6"/>
+            <connection from-id="22" to-id="7"/>
+            <connection from-id="3" to-id="23"/>
+            <connection from-id="23" to-id="8"/>
+            <connection from-id="23" to-id="9"/>
+            <connection from-id="23" to-id="10"/>
+            <connection from-id="4" to-id="24"/>
+            <connection from-id="24" to-id="12"/>
+            <connection from-id="24" to-id="13"/>
+            <connection from-id="4" to-id="25"/>
+            <connection from-id="25" to-id="17"/>
+            <connection from-id="25" to-id="7"/>
+            <connection from-id="25" to-id="18"/>
+            <connection from-id="25" to-id="19"/>
+            <connection from-id="8" to-id="26"/>
+            <connection from-id="26" to-id="11"/>
+            <connection from-id="12" to-id="27"/>
+            <connection from-id="27" to-id="14"/>
+            <connection from-id="13" to-id="28"/>
+            <connection from-id="28" to-id="14"/>
+            <connection from-id="14" to-id="29"/>
+            <connection from-id="29" to-id="15"/>
+            <connection from-id="29" to-id="16"/>
+            <connection from-id="18" to-id="30"/>
+            <connection from-id="30" to-id="14"/>
+            <connection from-id="19" to-id="31"/>
+            <connection from-id="31" to-id="5"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="258" y="-32"/>
+            <concept-appearance id="2" x="455" y="1"/>
+            <concept-appearance id="3" x="113" y="86"/>
+            <concept-appearance id="4" x="391" y="103"/>
+            <concept-appearance id="5" x="189" y="246"/>
+            <concept-appearance id="6" x="122" y="245"/>
+            <concept-appearance id="7" x="261" y="249"/>
+            <concept-appearance id="8" x="-123" y="250"/>
+            <concept-appearance id="9" x="-22" y="250"/>
+            <concept-appearance id="10" x="54" y="251"/>
+            <concept-appearance id="11" x="-121" y="372"/>
+            <concept-appearance id="12" x="362" y="244"/>
+            <concept-appearance id="13" x="451" y="248"/>
+            <concept-appearance id="14" x="424" y="350"/>
+            <concept-appearance id="15" x="369" y="463"/>
+            <concept-appearance id="16" x="492" y="459"/>
+            <concept-appearance id="17" x="544" y="257"/>
+            <concept-appearance id="18" x="607" y="261"/>
+            <concept-appearance id="19" x="679" y="264"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="20" x="350" y="0"/>
+            <linking-phrase id="21" x="256" y="64"/>
+            <linking-phrase id="22" x="170" y="197"/>
+            <linking-phrase id="23" x="-7" y="201"/>
+            <linking-phrase id="24" x="384" y="187"/>
+            <linking-phrase id="25" x="490" y="184"/>
+            <linking-phrase id="26" x="-117" y="334"/>
+            <linking-phrase id="27" x="381" y="321"/>
+            <linking-phrase id="28" x="448" y="320"/>
+            <linking-phrase id="29" x="417" y="428"/>
+            <linking-phrase id="30" x="518" y="352"/>
+            <linking-phrase id="31" x="564" y="434"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

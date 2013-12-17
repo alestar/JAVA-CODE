@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Atmosphere</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Atmosphere">
+                <sense domains="[meteorology]"
+                    gloss="the weather or climate at some place; &quot;the atmosphere was thick with fog&quot;"
+                    number="10414112" pos="n" words="[atmosphere, atmospheric_state]"/>
+            </concept>
+            <concept id="2" label="Gases">
+                <sense domains="[physics]"
+                    gloss="a fluid in the gaseous state having neither independent shape nor volume and being able to expand indefinitely"
+                    number="10671811" pos="n" words="[gas]"/>
+            </concept>
+            <concept id="3" label="Oxygen">
+                <sense domains="[chemistry, geography]"
+                    gloss="a nonmetallic bivalent element that is normally a colorless odorless tasteless nonflammable diatomic gas; constitutes 28 percent of the atmosphere by volume; the most abundant element in the earth's crust"
+                    number="10495237" pos="n" words="[oxygen, O, atomic_number_8]"/>
+            </concept>
+            <concept id="4" label="Wind">
+                <sense domains="[meteorology]"
+                    gloss="air moving (sometimes with considerable force) from an area of high pressure to an area of low pressure; &quot;trees bent under the fierce winds&quot;"
+                    number="07848889" pos="n" words="[wind]"/>
+            </concept>
+            <concept id="5" label="Thunderstorms">
+                <sense domains="[meteorology]"
+                    gloss="a storm resulting from strong rising air currents; heavy rain or hail along with thunder and lightning"
+                    number="07843377" pos="n" words="[thunderstorm, electrical_storm, electric_storm]"/>
+            </concept>
+            <concept id="6" label="Northern lights">
+                <sense domains="[meteorology]"
+                    gloss="the aurora of the northern hemisphere"
+                    number="07777421" pos="n" words="[aurora_borealis, northern_lights]"/>
+            </concept>
+            <concept id="7" label="Ultraviolet radiation">
+                <sense domains="[physics]"
+                    gloss="radiation lying in the ultraviolet range; wave lengths shorter than light but longer than X rays"
+                    number="07845712" pos="n" words="[ultraviolet, ultraviolet_radiation, ultraviolet_light, ultraviolet_illumination, UV]"/>
+            </concept>
+            <concept id="8" label="Rainbow">
+                <sense domains="[astronomy]"
+                    gloss="an arc of colored light in the sky caused by refraction of the sun's rays by rain"
+                    number="06747305" pos="n" words="[rainbow]"/>
+            </concept>
+            <concept id="9" label="Air pressure">
+                <sense domains="[physics]"
+                    gloss="the pressure exerted by the atmosphere"
+                    number="07825969" pos="n" words="[atmospheric_pressure, air_pressure]"/>
+            </concept>
+            <concept id="10" label="Small space"/>
+            <concept id="11" label="Sun shine"/>
+            <concept id="12" label="Rain">
+                <sense domains="[meteorology]"
+                    gloss="water falling in drops from vapor condensed in the atmosphere"
+                    number="07830260" pos="n" words="[rain, rainfall]"/>
+            </concept>
+            <concept id="13" label="Colors">
+                <sense domains="[art]"
+                    gloss="a flag that shows its nationality"
+                    number="02472674" pos="n" words="[colors, colours]"/>
+                <sense domains="[art]"
+                    gloss="a distinguishing emblem; &quot;his tie proclaimed his school colors&quot;"
+                    number="02472788" pos="n" words="[colors, colours]"/>
+            </concept>
+            <concept id="14" label="Sun light"/>
+            <concept id="15" label="Water drop"/>
+            <concept id="16" label="Dust particles from Sun"/>
+            <concept id="17" label="Hot day"/>
+            <concept id="18" label="Sky">
+                <sense domains="[astronomy]"
+                    gloss="outer space as viewed from the earth"
+                    number="06749007" pos="n" words="[sky]"/>
+            </concept>
+            <concept id="19" label="Clouds">
+                <sense domains="[meteorology]"
+                    gloss="a visible mass of water or ice particles suspended at a considerable altitude"
+                    number="06749470" pos="n" words="[cloud]"/>
+            </concept>
+            <concept id="20" label="Lightning">
+                <sense domains="[factotum]"
+                    gloss="the flash of light that accompanies an electric discharge in the atmosphere (or something resembling such a flash); can scintillate for a second or more"
+                    number="05517298" pos="n" words="[lightning]"/>
+            </concept>
+            <concept id="21" label="High point"/>
+            <concept id="22" label="Fire">
+                <sense domains="[psychological_features]"
+                    gloss="call forth; of emotions, feelings, and responses; &quot;arouse pity&quot;; &quot;raise a smile&quot;; &quot;evoke sympathy&quot;"
+                    number="01200852" pos="v" words="[arouse, elicit, enkindle, kindle, evoke, fire, raise, provoke]"/>
+            </concept>
+            <concept id="23" label="Warm air"/>
+            <concept id="24" label="Cool air"/>
+            <concept id="25" label="Carbon dioxide">
+                <sense domains="[chemistry]"
+                    gloss="a heavy odorless colorless gas formed during respiration and by the decomposition of organic substances; absorbed from the air by plants in photosynthesis"
+                    number="10613550" pos="n" words="[carbon_dioxide, CO, carbonic_acid_gas]"/>
+            </concept>
+            <concept id="26" label="Hydrogen">
+                <sense domains="[chemistry, geography, physics]"
+                    gloss="a nonmetallic univalent element that is normally a colorless and odorless highly flammable diatomic gas; the simplest and lightest and most abundant element in the universe"
+                    number="10488691" pos="n" words="[hydrogen, H, atomic_number_1]"/>
+            </concept>
+            <concept id="27" label="Life on Earth"/>
+            <concept id="28" label="Traffic">
+                <sense domains="[town_planning, transport]"
+                    gloss="the aggregation of things (pedestrians or vehicles or messages) coming and going in a particular locality"
+                    number="06231214" pos="n" words="[traffic]"/>
+                <sense domains="[commerce]"
+                    gloss="buying and selling; especially illicit trade"
+                    number="00722332" pos="n" words="[traffic]"/>
+                <sense domains="[factotum]"
+                    gloss="social or verbal interchange (usually followed by `with')"
+                    number="00023967" pos="n" words="[dealings, traffic]"/>
+                <sense domains="[factotum]"
+                    gloss="deal illegally; &quot;traffic drugs&quot;"
+                    number="01547004" pos="v" words="[traffic]"/>
+            </concept>
+            <concept id="29" label="Factories">
+                <sense domains="[enterprise, industry]"
+                    gloss="buildings with facilities for manufacturing"
+                    number="02662271" pos="n" words="[factory, mill, manufacturing_plant, manufactory]"/>
+            </concept>
+            <concept id="30" label="Oil">
+                <sense domains="[chemistry]"
+                    gloss="a slippery or viscous liquid or liquefiable substance not miscible with water"
+                    number="10738422" pos="n" words="[oil]"/>
+                <sense domains="[painting]"
+                    gloss="paint used by an artist" number="03053864"
+                    pos="n" words="[oil, oil_color]"/>
+                <sense domains="[factotum]"
+                    gloss="cover with oil, as if by rubbing; &quot;oil the wooden surface&quot;"
+                    number="00865480" pos="v" words="[oil]"/>
+                <sense domains="[transport]"
+                    gloss="apply lubricants to' &quot;lubricate my car engine&quot;"
+                    number="00335085" pos="v" words="[lubricate, lube, oil]"/>
+                <sense domains="[factotum]"
+                    gloss="administer a sacred oil or ointment to in a religious ceremony of blessing"
+                    number="00058325" pos="v" words="[anoint, oil, anele, ambrocate]"/>
+            </concept>
+            <concept id="31" label="Peat">
+                <sense domains="[chemistry]"
+                    gloss="partially carbonized vegetable matter saturated with water; used as a fuel when dried"
+                    number="10529587" pos="n" words="[peat]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="32" label="has"/>
+            <linking-phrase id="33" label="gives people"/>
+            <linking-phrase id="34" label="has"/>
+            <linking-phrase id="35" label="protects people from"/>
+            <linking-phrase id="36" label="has"/>
+            <linking-phrase id="37" label="contains"/>
+            <linking-phrase id="38" label="cause pollution wich can be diminished by reducing"/>
+            <linking-phrase id="39" label="cause pollution wich can be diminished by filtering pipes of"/>
+            <linking-phrase id="40" label="is created when"/>
+            <linking-phrase id="41" label="occur on a"/>
+            <linking-phrase id="42" label="are created when ice cristals touch each other in the"/>
+            <linking-phrase id="43" label="can be seen in the"/>
+            <linking-phrase id="44" label="are created when"/>
+            <linking-phrase id="45" label="are seen in the Winter nights in"/>
+            <linking-phrase id="46" label="has many"/>
+            <linking-phrase id="47" label="is created when"/>
+            <linking-phrase id="48" label="can be measured in"/>
+            <linking-phrase id="49" label="is created when there is at the same time both"/>
+            <linking-phrase id="50" label="goes through"/>
+            <linking-phrase id="51" label="collide in the"/>
+            <linking-phrase id="52" label="may be linked to"/>
+            <linking-phrase id="53" label="is often directed to"/>
+            <linking-phrase id="54" label="sometime begins to"/>
+            <linking-phrase id="55" label="is replaced by"/>
+            <linking-phrase id="56" label="needs"/>
+            <linking-phrase id="57" label="burn"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="32"/>
+            <connection from-id="32" to-id="2"/>
+            <connection from-id="1" to-id="33"/>
+            <connection from-id="33" to-id="3"/>
+            <connection from-id="1" to-id="34"/>
+            <connection from-id="34" to-id="4"/>
+            <connection from-id="34" to-id="5"/>
+            <connection from-id="1" to-id="35"/>
+            <connection from-id="35" to-id="7"/>
+            <connection from-id="1" to-id="36"/>
+            <connection from-id="36" to-id="8"/>
+            <connection from-id="36" to-id="9"/>
+            <connection from-id="2" to-id="37"/>
+            <connection from-id="37" to-id="3"/>
+            <connection from-id="37" to-id="25"/>
+            <connection from-id="37" to-id="26"/>
+            <connection from-id="2" to-id="38"/>
+            <connection from-id="38" to-id="28"/>
+            <connection from-id="2" to-id="39"/>
+            <connection from-id="39" to-id="29"/>
+            <connection from-id="4" to-id="40"/>
+            <connection from-id="40" to-id="23"/>
+            <connection from-id="5" to-id="41"/>
+            <connection from-id="41" to-id="17"/>
+            <connection from-id="5" to-id="42"/>
+            <connection from-id="42" to-id="19"/>
+            <connection from-id="6" to-id="43"/>
+            <connection from-id="43" to-id="1"/>
+            <connection from-id="6" to-id="44"/>
+            <connection from-id="44" to-id="16"/>
+            <connection from-id="6" to-id="45"/>
+            <connection from-id="45" to-id="18"/>
+            <connection from-id="8" to-id="46"/>
+            <connection from-id="46" to-id="13"/>
+            <connection from-id="8" to-id="47"/>
+            <connection from-id="47" to-id="14"/>
+            <connection from-id="9" to-id="48"/>
+            <connection from-id="48" to-id="10"/>
+            <connection from-id="9" to-id="49"/>
+            <connection from-id="49" to-id="11"/>
+            <connection from-id="49" to-id="12"/>
+            <connection from-id="14" to-id="50"/>
+            <connection from-id="50" to-id="15"/>
+            <connection from-id="16" to-id="51"/>
+            <connection from-id="51" to-id="1"/>
+            <connection from-id="19" to-id="52"/>
+            <connection from-id="52" to-id="20"/>
+            <connection from-id="20" to-id="53"/>
+            <connection from-id="53" to-id="21"/>
+            <connection from-id="21" to-id="54"/>
+            <connection from-id="54" to-id="22"/>
+            <connection from-id="23" to-id="55"/>
+            <connection from-id="55" to-id="24"/>
+            <connection from-id="27" to-id="56"/>
+            <connection from-id="56" to-id="2"/>
+            <connection from-id="29" to-id="57"/>
+            <connection from-id="57" to-id="30"/>
+            <connection from-id="57" to-id="31"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="422" y="-64"/>
+            <concept-appearance id="2" x="183" y="50"/>
+            <concept-appearance id="3" x="237" y="130"/>
+            <concept-appearance id="4" x="312" y="150"/>
+            <concept-appearance id="5" x="403" y="190"/>
+            <concept-appearance id="6" x="532" y="161"/>
+            <concept-appearance id="7" x="602" y="148"/>
+            <concept-appearance id="8" x="679" y="117"/>
+            <concept-appearance id="9" x="751" y="67"/>
+            <concept-appearance id="10" x="896" y="63"/>
+            <concept-appearance id="11" x="777" y="229"/>
+            <concept-appearance id="12" x="859" y="177"/>
+            <concept-appearance id="13" x="640" y="250"/>
+            <concept-appearance id="14" x="710" y="282"/>
+            <concept-appearance id="15" x="727" y="399"/>
+            <concept-appearance id="16" x="472" y="317"/>
+            <concept-appearance id="17" x="318" y="383"/>
+            <concept-appearance id="18" x="611" y="385"/>
+            <concept-appearance id="19" x="398" y="397"/>
+            <concept-appearance id="20" x="543" y="464"/>
+            <concept-appearance id="21" x="677" y="467"/>
+            <concept-appearance id="22" x="809" y="443"/>
+            <concept-appearance id="23" x="241" y="292"/>
+            <concept-appearance id="24" x="232" y="410"/>
+            <concept-appearance id="25" x="212" y="202"/>
+            <concept-appearance id="26" x="157" y="280"/>
+            <concept-appearance id="27" x="115" y="190"/>
+            <concept-appearance id="28" x="74" y="277"/>
+            <concept-appearance id="29" x="14" y="210"/>
+            <concept-appearance id="30" x="11" y="427"/>
+            <concept-appearance id="31" x="114" y="399"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="32" x="299" y="7"/>
+            <linking-phrase id="33" x="326" y="47"/>
+            <linking-phrase id="34" x="377" y="88"/>
+            <linking-phrase id="35" x="566" y="81"/>
+            <linking-phrase id="36" x="591" y="47"/>
+            <linking-phrase id="37" x="165" y="153"/>
+            <linking-phrase id="38" x="72" y="125"/>
+            <linking-phrase id="39" x="17" y="69"/>
+            <linking-phrase id="40" x="270" y="237"/>
+            <linking-phrase id="41" x="324" y="317"/>
+            <linking-phrase id="42" x="400" y="287"/>
+            <linking-phrase id="43" x="496" y="71"/>
+            <linking-phrase id="44" x="511" y="273"/>
+            <linking-phrase id="45" x="574" y="313"/>
+            <linking-phrase id="46" x="665" y="203"/>
+            <linking-phrase id="47" x="711" y="236"/>
+            <linking-phrase id="48" x="817" y="75"/>
+            <linking-phrase id="49" x="761" y="157"/>
+            <linking-phrase id="50" x="713" y="357"/>
+            <linking-phrase id="51" x="455" y="146"/>
+            <linking-phrase id="52" x="460" y="446"/>
+            <linking-phrase id="53" x="604" y="481"/>
+            <linking-phrase id="54" x="737" y="471"/>
+            <linking-phrase id="55" x="230" y="367"/>
+            <linking-phrase id="56" x="152" y="137"/>
+            <linking-phrase id="57" x="19" y="359"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

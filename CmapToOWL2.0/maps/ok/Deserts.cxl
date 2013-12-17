@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Deserts</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Desert">
+                <sense domains="[geography, tourism]"
+                    gloss="an arid region with little or no vegetation"
+                    number="06273995" pos="n" words="[desert]"/>
+            </concept>
+            <concept id="2" label="Aeolian landform"/>
+            <concept id="3" label="Arid climates"/>
+            <concept id="4" label="Composition">
+                <sense domains="[factotum]"
+                    gloss="the spatial property resulting from the arrangement of parts in relation to each other and to the whole; &quot;harmonious composition is essential in a serious work of art&quot;"
+                    number="03962359" pos="n" words="[composition, composing]"/>
+                <sense domains="[factotum]"
+                    gloss="the way in which someone or something is composed"
+                    number="03860186" pos="n" words="[constitution, composition, makeup]"/>
+                <sense domains="[chemistry]"
+                    gloss="a mixture of ingredients" number="10450503"
+                    pos="n" words="[composition]"/>
+                <sense domains="[music]"
+                    gloss="a musical work that has been created; &quot;the composition is written in four movements&quot;"
+                    number="05277178" pos="n" words="[musical_composition, opus, composition, piece, piece_of_music]"/>
+                <sense domains="[music]" gloss="musical creation"
+                    number="00600817" pos="n" words="[composing, composition]"/>
+                <sense domains="[literature]"
+                    gloss="the act of creating written works; &quot;writing was a form of therapy for him&quot;; &quot;it was a matter of disputed authorship&quot;"
+                    number="00596202" pos="n" words="[writing, authorship, composition, penning]"/>
+                <sense domains="[graphic_arts]"
+                    gloss="art and technique of printing with movable type"
+                    number="05006587" pos="n" words="[typography, composition]"/>
+                <sense domains="[literature]"
+                    gloss="an essay (especially one written as an assignment); &quot;he got an A on his composition&quot;"
+                    number="04831003" pos="n" words="[composition, paper, report, theme]"/>
+                <sense domains="[factotum]"
+                    gloss="something that is created by arranging several things to form a unified whole; &quot;he envied the composition of their faculty&quot;"
+                    number="02480311" pos="n" words="[composition]"/>
+            </concept>
+            <concept id="5" label="Desert varnish tones"/>
+            <concept id="6" label="Dunes">
+                <sense domains="[geography, geology]"
+                    gloss="a ridge of sand created by the wind; found in deserts or near lakes and oceans"
+                    number="06740000" pos="n" words="[dune, sand_dune]"/>
+            </concept>
+            <concept id="7" label="Gravel">
+                <sense domains="[factotum]"
+                    gloss="be a mystery or bewildering to: &quot;This beats me!&quot; &quot;Got me--I don't know the answer!&quot;"
+                    number="00421500" pos="v" words="[perplex, get, puzzle, mystify, baffle, beat, bewilder, flummox, stupefy, stupify, nonplus, gravel, amaze, dumbfound, trounce]"/>
+            </concept>
+            <concept id="8" label="Sand">
+                <sense domains="[geology]"
+                    gloss="a loose material consisting of grains of rock or coral"
+                    number="10779108" pos="n" words="[sand]"/>
+                <sense domains="[psychological_features, quality]"
+                    gloss="(informal) fortitude; &quot;he didn't have the guts to try it&quot;"
+                    number="03929314" pos="n" words="[backbone, grit, guts, sand, gumption]"/>
+                <sense domains="[factotum]"
+                    gloss="rub with sandpaper; &quot;sandpaper the wooden surface&quot;"
+                    number="00950685" pos="v" words="[sandpaper, sand]"/>
+            </concept>
+            <concept id="9" label="Silt">
+                <sense domains="[earth]"
+                    gloss="become chocked with silt, of rivers and lakes"
+                    number="01014575" pos="v" words="[silt_up, silt]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="10" label="is a type of"/>
+            <linking-phrase id="11" label="usually occurs in"/>
+            <linking-phrase id="12" label="have"/>
+            <linking-phrase id="13" label="usually include"/>
+            <linking-phrase id="14" label="includes"/>
+            <linking-phrase id="15" label="ocasionally includes"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="10"/>
+            <connection from-id="10" to-id="2"/>
+            <connection from-id="1" to-id="11"/>
+            <connection from-id="11" to-id="3"/>
+            <connection from-id="1" to-id="12"/>
+            <connection from-id="12" to-id="4"/>
+            <connection from-id="12" to-id="5"/>
+            <connection from-id="1" to-id="13"/>
+            <connection from-id="13" to-id="6"/>
+            <connection from-id="4" to-id="14"/>
+            <connection from-id="14" to-id="7"/>
+            <connection from-id="14" to-id="8"/>
+            <connection from-id="4" to-id="15"/>
+            <connection from-id="15" to-id="9"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="373" y="87"/>
+            <concept-appearance id="2" x="287" y="222"/>
+            <concept-appearance id="3" x="382" y="266"/>
+            <concept-appearance id="4" x="562" y="229"/>
+            <concept-appearance id="5" x="455" y="235"/>
+            <concept-appearance id="6" x="613" y="153"/>
+            <concept-appearance id="7" x="579" y="387"/>
+            <concept-appearance id="8" x="656" y="386"/>
+            <concept-appearance id="9" x="505" y="385"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="10" x="324" y="170"/>
+            <linking-phrase id="11" x="371" y="192"/>
+            <linking-phrase id="12" x="489" y="180"/>
+            <linking-phrase id="13" x="491" y="122"/>
+            <linking-phrase id="14" x="625" y="323"/>
+            <linking-phrase id="15" x="524" y="321"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

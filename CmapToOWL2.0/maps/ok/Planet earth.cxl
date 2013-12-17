@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Planet earth</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Earth">
+                <sense domains="[astronomy]"
+                    gloss="the 3rd planet from the sun; the planet on which we live; &quot;the Earth moves around the sun&quot;; &quot;he sailed around the world&quot;"
+                    number="06753779" pos="n" words="[Earth, world, globe]"/>
+            </concept>
+            <concept id="2" label="Atoms">
+                <sense domains="[chemistry, physics]"
+                    gloss="(physics and chemistry) the smallest component of an element having the chemical properties of the element"
+                    number="10471843" pos="n" words="[atom]"/>
+            </concept>
+            <concept id="3" label="Matter">
+                <sense domains="[physics]"
+                    gloss="that which has mass and occupies space; &quot;an atom is the smallest indivisible unit of matter&quot;"
+                    number="00010572" pos="n" words="[substance, matter]"/>
+            </concept>
+            <concept id="4" label="Lithosphere">
+                <sense domains="[astronomy]"
+                    gloss="the solid part of the earth"
+                    number="06778512" pos="n" words="[lithosphere, geosphere]"/>
+            </concept>
+            <concept id="5" label="Hydrosphere">
+                <sense domains="[astronomy]"
+                    gloss="the watery layer of the earth's surface; includes water vapor"
+                    number="06778157" pos="n" words="[hydrosphere]"/>
+            </concept>
+            <concept id="6" label="Atmosphere">
+                <sense domains="[astronomy]"
+                    gloss="the mass of air surrounding the Earth; &quot;there was great heat as the comet entered the atmosphere&quot;"
+                    number="06270068" pos="n" words="[atmosphere]"/>
+            </concept>
+            <concept id="7" label="Hydrogen">
+                <sense domains="[chemistry, geography, physics]"
+                    gloss="a nonmetallic univalent element that is normally a colorless and odorless highly flammable diatomic gas; the simplest and lightest and most abundant element in the universe"
+                    number="10488691" pos="n" words="[hydrogen, H, atomic_number_1]"/>
+            </concept>
+            <concept id="8" label="Oxygen">
+                <sense domains="[chemistry, geography]"
+                    gloss="a nonmetallic bivalent element that is normally a colorless odorless tasteless nonflammable diatomic gas; constitutes 28 percent of the atmosphere by volume; the most abundant element in the earth's crust"
+                    number="10495237" pos="n" words="[oxygen, O, atomic_number_8]"/>
+            </concept>
+            <concept id="9" label="Water molecules"/>
+            <concept id="10" label="Lakes and oceans"/>
+            <concept id="11" label="Soil and rock"/>
+            <concept id="12" label="Air">
+                <sense domains="[factotum]"
+                    gloss="the region above the ground; &quot;her hand stopped in mid air&quot;; &quot;the hanged man danced on air&quot;"
+                    number="06373203" pos="n" words="[air]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="13" label="has"/>
+            <linking-phrase id="14" label="is made of"/>
+            <linking-phrase id="15" label="such as"/>
+            <linking-phrase id="16" label="units are"/>
+            <linking-phrase id="17" label="is"/>
+            <linking-phrase id="18" label="is"/>
+            <linking-phrase id="19" label="is"/>
+            <linking-phrase id="20" label="formed by"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="13"/>
+            <connection from-id="13" to-id="4"/>
+            <connection from-id="13" to-id="5"/>
+            <connection from-id="13" to-id="6"/>
+            <connection from-id="1" to-id="14"/>
+            <connection from-id="14" to-id="2"/>
+            <connection from-id="14" to-id="3"/>
+            <connection from-id="2" to-id="15"/>
+            <connection from-id="15" to-id="7"/>
+            <connection from-id="15" to-id="8"/>
+            <connection from-id="3" to-id="16"/>
+            <connection from-id="16" to-id="2"/>
+            <connection from-id="4" to-id="17"/>
+            <connection from-id="17" to-id="11"/>
+            <connection from-id="5" to-id="18"/>
+            <connection from-id="18" to-id="10"/>
+            <connection from-id="6" to-id="19"/>
+            <connection from-id="19" to-id="12"/>
+            <connection from-id="9" to-id="20"/>
+            <connection from-id="20" to-id="7"/>
+            <connection from-id="20" to-id="8"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="324" y="61"/>
+            <concept-appearance id="2" x="147" y="171"/>
+            <concept-appearance id="3" x="289" y="164"/>
+            <concept-appearance id="4" x="380" y="168"/>
+            <concept-appearance id="5" x="484" y="168"/>
+            <concept-appearance id="6" x="576" y="168"/>
+            <concept-appearance id="7" x="91" y="297"/>
+            <concept-appearance id="8" x="201" y="302"/>
+            <concept-appearance id="9" x="155" y="409"/>
+            <concept-appearance id="10" x="482" y="276"/>
+            <concept-appearance id="11" x="385" y="273"/>
+            <concept-appearance id="12" x="584" y="274"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="13" x="410" y="113"/>
+            <linking-phrase id="14" x="240" y="120"/>
+            <linking-phrase id="15" x="138" y="257"/>
+            <linking-phrase id="16" x="216" y="213"/>
+            <linking-phrase id="17" x="381" y="238"/>
+            <linking-phrase id="18" x="476" y="236"/>
+            <linking-phrase id="19" x="577" y="235"/>
+            <linking-phrase id="20" x="146" y="376"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

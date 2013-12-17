@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmap xmlns="http://cmap.ihmc.us/xml/cmap/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <res-meta>
+        <dc:title>Universe2</dc:title>
+        <dc:description/>
+    </res-meta>
+    <map root-id="1">
+        <concept-list>
+            <concept id="1" label="Universe">
+                <sense domains="[astronomy, physics]"
+                    gloss="everything that exists anywhere; &quot;they study the evolution of the universe&quot;; &quot;the biggest tree in existence&quot;"
+                    number="06691078" pos="n" words="[universe, existence, nature, creation, world, cosmos, macrocosm]"/>
+            </concept>
+            <concept id="2" label="Bodies">
+                <sense domains="[chemistry]"
+                    gloss="the property of holding together and retaining its shape; &quot;when the dough has enough consistency it is ready to bake&quot;"
+                    number="03860698" pos="n" words="[consistency, consistence, body]"/>
+            </concept>
+            <concept id="3" label="Substances">
+                <sense domains="[physics]"
+                    gloss="that which has mass and occupies space; &quot;an atom is the smallest indivisible unit of matter&quot;"
+                    number="00010572" pos="n" words="[substance, matter]"/>
+            </concept>
+            <concept id="4" label="Mixtures">
+                <sense domains="[chemistry]"
+                    gloss="(chemistry) a substance consisting of two or more substances mixed together (not in fixed proportions and not with chemical bonding)"
+                    number="10449119" pos="n" words="[mixture]"/>
+            </concept>
+            <concept id="5" label="Ionic substances"/>
+            <concept id="6" label="Atomic substances"/>
+            <concept id="7" label="Molecular substances"/>
+            <concept id="8" label="Ions"/>
+            <concept id="9" label="Atomes"/>
+            <concept id="10" label="Molecules">
+                <sense domains="[chemistry, physics]"
+                    gloss="(physics and chemistry) the simplest structural unit of an element or compound"
+                    number="10472898" pos="n" words="[molecule]"/>
+            </concept>
+            <concept id="11" label="Gigantic structures"/>
+            <concept id="12" label="Protons"/>
+            <concept id="13" label="Neutrons">
+                <sense domains="[chemistry, physics]"
+                    gloss="an elementary particle with 0 charge and mass about equal to a proton; enters into the structure of the atomic nucleus"
+                    number="06681284" pos="n" words="[neutron]"/>
+            </concept>
+            <concept id="14" label="Electrons"/>
+            <concept id="15" label="Positive electric charge"/>
+            <concept id="16" label="Negative electric charge"/>
+            <concept id="17" label="Nucleus">
+                <sense domains="[chemistry, physics]"
+                    gloss="the positively charged dense center of an atom"
+                    number="06689681" pos="n" words="[nucleus]"/>
+            </concept>
+        </concept-list>
+        <linking-phrase-list>
+            <linking-phrase id="18" label="constituted by"/>
+            <linking-phrase id="19" label="can be"/>
+            <linking-phrase id="20" label="can be"/>
+            <linking-phrase id="21" label="composed by"/>
+            <linking-phrase id="22" label="composed by"/>
+            <linking-phrase id="23" label="composed by"/>
+            <linking-phrase id="24" label="join together giving"/>
+            <linking-phrase id="25" label="are constituted by"/>
+            <linking-phrase id="26" label="join together giving"/>
+            <linking-phrase id="27" label="have"/>
+            <linking-phrase id="28" label="have"/>
+            <linking-phrase id="29" label="forming the"/>
+            <linking-phrase id="30" label="traveling around the"/>
+        </linking-phrase-list>
+        <connection-list>
+            <connection from-id="1" to-id="18"/>
+            <connection from-id="18" to-id="2"/>
+            <connection from-id="2" to-id="19"/>
+            <connection from-id="19" to-id="3"/>
+            <connection from-id="19" to-id="4"/>
+            <connection from-id="3" to-id="20"/>
+            <connection from-id="20" to-id="5"/>
+            <connection from-id="20" to-id="6"/>
+            <connection from-id="20" to-id="7"/>
+            <connection from-id="5" to-id="21"/>
+            <connection from-id="21" to-id="8"/>
+            <connection from-id="6" to-id="22"/>
+            <connection from-id="22" to-id="9"/>
+            <connection from-id="7" to-id="23"/>
+            <connection from-id="23" to-id="10"/>
+            <connection from-id="8" to-id="24"/>
+            <connection from-id="24" to-id="11"/>
+            <connection from-id="9" to-id="25"/>
+            <connection from-id="25" to-id="12"/>
+            <connection from-id="25" to-id="13"/>
+            <connection from-id="25" to-id="14"/>
+            <connection from-id="9" to-id="26"/>
+            <connection from-id="26" to-id="11"/>
+            <connection from-id="12" to-id="27"/>
+            <connection from-id="27" to-id="15"/>
+            <connection from-id="14" to-id="28"/>
+            <connection from-id="28" to-id="16"/>
+            <connection from-id="15" to-id="29"/>
+            <connection from-id="29" to-id="17"/>
+            <connection from-id="16" to-id="30"/>
+            <connection from-id="30" to-id="17"/>
+        </connection-list>
+        <concept-appearance-list>
+            <concept-appearance id="1" x="384" y="11"/>
+            <concept-appearance id="2" x="384" y="121"/>
+            <concept-appearance id="3" x="252" y="199"/>
+            <concept-appearance id="4" x="499" y="192"/>
+            <concept-appearance id="5" x="144" y="295"/>
+            <concept-appearance id="6" x="246" y="295"/>
+            <concept-appearance id="7" x="360" y="295"/>
+            <concept-appearance id="8" x="142" y="406"/>
+            <concept-appearance id="9" x="253" y="398"/>
+            <concept-appearance id="10" x="377" y="397"/>
+            <concept-appearance id="11" x="177" y="504"/>
+            <concept-appearance id="12" x="267" y="508"/>
+            <concept-appearance id="13" x="385" y="511"/>
+            <concept-appearance id="14" x="498" y="516"/>
+            <concept-appearance id="15" x="226" y="608"/>
+            <concept-appearance id="16" x="460" y="611"/>
+            <concept-appearance id="17" x="389" y="685"/>
+        </concept-appearance-list>
+        <linking-phrase-appearance-list>
+            <linking-phrase id="18" x="372" y="89"/>
+            <linking-phrase id="19" x="380" y="200"/>
+            <linking-phrase id="20" x="250" y="259"/>
+            <linking-phrase id="21" x="132" y="374"/>
+            <linking-phrase id="22" x="230" y="370"/>
+            <linking-phrase id="23" x="357" y="370"/>
+            <linking-phrase id="24" x="103" y="476"/>
+            <linking-phrase id="25" x="313" y="470"/>
+            <linking-phrase id="26" x="207" y="476"/>
+            <linking-phrase id="27" x="262" y="577"/>
+            <linking-phrase id="28" x="493" y="584"/>
+            <linking-phrase id="29" x="289" y="676"/>
+            <linking-phrase id="30" x="456" y="676"/>
+        </linking-phrase-appearance-list>
+    </map>
+</cmap>

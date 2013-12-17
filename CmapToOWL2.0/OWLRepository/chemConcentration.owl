@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+
+<rdf:RDF 
+         xmlns:owl="&owl;"    
+         xmlns:rdf="&rdf;"
+         xmlns:rdfs="&rdfs;"
+		 xmlns:xsd = "&xsd;">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""
+                owl:versionInfo="2.0">
+  </owl:Ontology>
+
+<!-- Properties related to concentration -->
+
+  <owl:Class rdf:ID="Density"/>
+  <owl:Class rdf:ID="ChemicalProperty"/>
+  <owl:Class rdf:ID="Ratio"/>
+  <owl:Class rdf:ID="Mass"/>
+  <owl:Class rdf:ID="Area"/>
+  <owl:Class rdf:ID="kilogram_perMeterSquared"/>
+  <owl:Class rdf:ID="PhysicalProperty"/>
+  <owl:Class rdf:ID="dimensionlessUnit"/>
+  <owl:Class rdf:ID="mole"/>
+  <owl:Class rdf:ID="Saturation"/>
+  
+  
+  <owl:Class rdf:ID="BulkDensity">
+    <rdfs:subClassOf rdf:resource="#Density"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Composition">
+    <rdfs:subClassOf rdf:resource="#ChemicalProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="DissolvedConcentration">
+    <rdfs:subClassOf rdf:resource="#MassConcentration"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MassContent">
+    <rdfs:subClassOf rdf:resource="#Ratio"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+	  	<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasFirstOperand"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Mass"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasSecondOperand"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Area"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction>	  
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasDefaultUnit"/>	
+		</owl:onProperty>
+        <owl:hasValue rdf:resource="#kilogram_perMeterSquared"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MassConcentration">
+    <owl:equivalentClass rdf:resource="#Density"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MassFraction">
+    <rdfs:subClassOf rdf:resource="#PhysicalProperty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#dimensionlessUnit"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MeanMolecularWeight">
+    <rdfs:subClassOf rdf:resource="#MolecularWeight"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MixingRatio">
+    <rdfs:subClassOf rdf:resource="#Ratio" />
+    <rdfs:label>Mixing Ratio</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MoleConcentration">
+    <rdfs:subClassOf rdf:resource="#PhysicalProperty"/>
+    <owl:equivalentClass rdf:resource="#MolarConcentration"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#dimensionlessUnit"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="MolarConcentration"/>
+
+  <owl:Class rdf:ID="MoleFraction">
+    <rdfs:subClassOf rdf:resource="#PhysicalProperty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#dimensionlessUnit"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MoleRatio">
+    <rdfs:subClassOf rdf:resource="#PhysicalProperty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#dimensionlessUnit"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="MolecularWeight">
+    <rdfs:subClassOf rdf:resource="#MassConcentration"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="Moles">
+    <rdfs:subClassOf rdf:resource="#PhysicalProperty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#mole"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="NumberDensity">
+    <rdfs:subClassOf rdf:resource="#Density"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="PotentialDensity">
+    <rdfs:subClassOf rdf:resource="#Density"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SaturationPoint">
+    <rdfs:subClassOf rdf:resource="#SaturationProperty"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SaturationProperty">
+    <rdfs:subClassOf rdf:resource="#ChemicalProperty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+		<owl:onProperty>		
+		<owl:ObjectProperty rdf:ID="hasPhysicalProcess"/>	
+		</owl:onProperty>
+        <owl:allValuesFrom rdf:resource="#Saturation" />
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SaturationDeficit">
+    <rdfs:subClassOf rdf:resource="#SaturationProperty"/>
+    <rdfs:comment xml:lang="en">The amount by which the water vapor in the air must be increased to achieve saturation without changing the environmental temperature and pressure.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SaturationMixingRatio">
+    <rdfs:subClassOf rdf:resource="#MixingRatio" />
+    <rdfs:subClassOf rdf:resource="#SaturationProperty"/>
+    <rdfs:comment xml:lang="en">A thermodynamic function of state; the value of the mixing ratio of saturated air at the given temperature and pressure.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SigmaT">
+    <rdfs:subClassOf rdf:resource="#Density"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="SubstanceConcentration">
+    <rdfs:subClassOf rdf:resource="#MassConcentration"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="VolumeFraction">
+    <rdfs:subClassOf rdf:resource="#PhysicalProperty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#dimensionlessUnit"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+  <owl:Class rdf:ID="VolumeMixingRatio">
+    <rdfs:subClassOf rdf:resource="#PhysicalProperty"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:hasValue rdf:resource="#dimensionlessUnit"/>
+        <owl:onProperty rdf:resource="#hasDefaultUnit"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </owl:Class>
+
+</rdf:RDF>
